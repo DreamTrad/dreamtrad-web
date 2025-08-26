@@ -1,6 +1,16 @@
 @import "tailwindcss";
 
+
 :root {
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+}
+
+@theme static {
+  --color-bg: var(--colors-white);
+  --color-surface: var(--colors-gray-100);
+  --color-primary: var(colors-gray-900);
+  --color-secondary: var(--colors-gray-500);
+  --color-accent: var(--colors-indigo-600);
+  --color-hover: var(--colors-indigo-500);
 }
