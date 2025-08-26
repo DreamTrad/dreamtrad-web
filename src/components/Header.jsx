@@ -1,3 +1,4 @@
+import headerImage from "../assets/dreamtrad-header.jpg";
 
 export default function Header() {
 
@@ -5,7 +6,7 @@ export default function Header() {
         <header className="bg-(--color-bg) text-white">
         <div className="w-full h-64 overflow-hidden">
         <img
-          src="/header-image.jpg"
+          src={headerImage}
           alt="Header image"
           className="w-full h-full object-cover"
         />
