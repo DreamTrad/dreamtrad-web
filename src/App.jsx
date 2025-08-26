@@ -1,12 +1,14 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 
 function App() {
 
   return (
     <>
     <Header />
-      <p>Hello world</p>
+      <main className="flex-direction min-h-screen bg-bg text-text">
+        <div>hello</div>
+      </main>
     <Footer />
     </>
   )
