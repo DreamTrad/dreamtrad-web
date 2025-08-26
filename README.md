@@ -1,4 +1,3 @@
-# Site-web-DreamTrad
 La nouvelle version du site internet de l’équipe
 
 Pour run en local le site :
