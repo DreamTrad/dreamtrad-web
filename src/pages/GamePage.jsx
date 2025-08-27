@@ -1,5 +1,5 @@
 import { Routes, Route, NavLink } from "react-router-dom";
-import GameNavbar from "../components/game/GameNavbar";
+import GameNavBar from "../components/game/GameNavBar";
 import GameSidebar from "../components/game/GameSidebar";
 
 function GameOverview() {
@@ -14,10 +14,14 @@ function GameGuide() {
   return <div>Guide complet</div>;
 }
 
+function GameArticle() {
+  return <div>Articles liés</div>
+}
+
 export default function GamePage() {
   return (
     <div className="flex flex-col">
-      <GameNavbar />
+      <GameNavBar />
       <div className="flex flex-1">
         <aside className="w-64 bg-bg-tertiary text-text-secondary p-4 border-r border-bg-secondary">
           <GameSidebar />
@@ -28,6 +32,7 @@ export default function GamePage() {
             <Route path="/" element={<GameOverview />} />
             <Route path="jeu-fr" element={<GamePatch />} />
             <Route path="guide" element={<GameGuide />} />
+            <Route path="articles" element={<GameArticle />} />
           </Routes>
         </section>
       </div>

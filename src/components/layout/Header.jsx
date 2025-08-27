@@ -1,8 +1,6 @@
 import headerImage from "../../assets/dreamtrad-header.jpg";
 import NavLink from "../ui/NavLink";
-
-const modules = import.meta.glob('../../data/jeu/*/index.js', { eager: true });
-const games = Object.values(modules).map(m => m.game);
+import { games } from "../../data/jeu"
 
 const mainMenu = [
   { name: "Accueil", to: "/" },
