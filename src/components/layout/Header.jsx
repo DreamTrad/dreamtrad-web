@@ -1,33 +1,45 @@
 import headerImage from "../../assets/dreamtrad-header.jpg";
 import NavLink from "../ui/NavLink";
 
+const modules = import.meta.glob('../../data/jeu/*/index.js', { eager: true });
+const games = Object.values(modules).map(m => m.game);
+
+const mainMenu = [
+  { name: "Accueil", to: "/" },
+  { name: "Jeux", to: "/", subMenu: games },
+  { name: "Articles", to: "/" },
+  { name: "Équipe", to: "/" },
+  { name: "Contact", to: "/" },
+];
+
+
 export default function Header() {
   return (
     <header className="bg-bg-secondary text-text-secondary">
       <div className="w-full h-64 overflow-hidden">
-        <img
-          src={headerImage}
-          alt="Header image"
-          className="w-full h-full object-cover"
-        />
+        <img src={headerImage} alt="Header image" className="w-full h-full object-cover"/>
       </div>
 
       <nav className="mx-6">
         <ul className="flex justify-between max-w-6xl mx-auto">
-          <li><NavLink to="/">Accueil</NavLink></li>
 
-          <li className="relative group">
-            <NavLink to="/">Jeux</NavLink>
-            <ul className="absolute left-0 top-full w-32 bg-bg-tertiary rounded-md shadow-lg invisible group-hover:visible">
-              <li><NavLink to="/jeu/1" hoverType="tertiary" fullWidth>Jeu 1</NavLink></li>
-              <li><NavLink to="/jeu/2" hoverType="tertiary" fullWidth>Jeu 2</NavLink></li>
-              <li><NavLink to="/jeu/3" hoverType="tertiary" fullWidth>Jeu 3</NavLink></li>
-            </ul>
-          </li>
+          {mainMenu.map(item => (
+            <li key={item.name} className={item.subMenu ? "relative group" : ""}>
+              <NavLink to={item.to}>{item.name}</NavLink>
 
-          <li><NavLink to="/">Articles</NavLink></li>
-          <li><NavLink to="/">Équipe</NavLink></li>
-          <li><NavLink to="/">Contact</NavLink></li>
+              {item.subMenu && (
+                <ul className="absolute left-0 top-full w-fit bg-bg-tertiary rounded-md shadow-lg invisible group-hover:visible">
+                  {item.subMenu.map(sub => (
+                    <li key={sub.id}>
+                      <NavLink to={`/jeu/${sub.id}`} hoverType="tertiary" fullWidth>
+                        {sub.name}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
