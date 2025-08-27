@@ -1,36 +1,22 @@
 import { NavLink, useParams, useLocation } from "react-router-dom";
+import { games } from "../../data/jeu";
 
 export default function GameSidebar() {
   const { id } = useParams();
   const location = useLocation();
+  const game = games.find(g => g.id === id);
 
-  // Déterminer la catégorie active à partir de l'URL
+  if (!game) return null;
+
   const category = location.pathname.split("/")[3] || "overview";
-
-  // Sous-menus selon la catégorie
-  const subMenus = {
-    overview: [
-      { name: "Intro", path: `/jeu/${id}` },
-    ],
-    "patch-fr": [
-      { name: "Installation", path: `/jeu/${id}/jeu-fr` },
-      { name: "Notes de version", path: `/jeu/${id}/jeu-fr/notes` },
-    ],
-    guide: [
-      { name: "Introduction", path: `/jeu/${id}/guide/intro` },
-      { name: "Astuces", path: `/jeu/${id}/guide/tips` },
-      { name: "FAQ", path: `/jeu/${id}/guide/faq` },
-    ],
-  };
-
-  const currentMenu = subMenus[category] || [];
+  const sections = game.categories[category]?.sections || [];
 
   return (
     <ul className="space-y-2">
-      {currentMenu.map((item) => (
-        <li key={item.path}>
+      {sections.map((item, idx) => (
+        <li key={idx}>
           <NavLink
-            to={item.path}
+            to={`/jeu/${id}/${category}${item.path ? `/${item.path}` : ""}`}
             className={({ isActive }) =>
               `block px-4 py-2 rounded-md transition ${
                 isActive ? "bg-hover text-white" : "hover:bg-hover/70"

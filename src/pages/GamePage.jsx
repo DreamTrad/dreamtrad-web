@@ -1,24 +1,19 @@
-import { Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { games } from "../data/jeu";
 import GameNavBar from "../components/game/GameNavBar";
 import GameSidebar from "../components/game/GameSidebar";
 
-function GameOverview() {
-  return <div>Présentation du jeu</div>;
-}
-
-function GamePatch() {
-  return <div>Patch français disponible ici</div>;
-}
-
-function GameGuide() {
-  return <div>Guide complet</div>;
-}
-
-function GameArticle() {
-  return <div>Articles liés</div>
+function DefaultContent({ text }) {
+  return <div>{text}</div>;
 }
 
 export default function GamePage() {
+  const { id } = useParams();
+  const game = games.find(g => g.id === id);
+
+  if (!game) return <div>Jeu introuvable</div>;
+
   return (
     <div className="flex flex-col">
       <GameNavBar />
@@ -29,10 +24,31 @@ export default function GamePage() {
 
         <section className="flex-1 p-6">
           <Routes>
-            <Route path="/" element={<GameOverview />} />
-            <Route path="jeu-fr" element={<GamePatch />} />
-            <Route path="guide" element={<GameGuide />} />
-            <Route path="articles" element={<GameArticle />} />
+            {Object.entries(game.categories).map(([catKey, category]) => (
+              <Route
+                key={catKey}
+                path={catKey === "overview" ? "/" : `${catKey}/*`}
+              >
+                {/* 🔹 Route par défaut quand on clique juste sur l’onglet */}
+                <Route
+                  index
+                  element={<DefaultContent text={`${category.label}`} />}
+                />
+
+                {/* 🔹 Routes des sous-sections */}
+                {category.sections.map((section, idx) => (
+                  <Route
+                    key={idx}
+                    path={section.path}
+                    element={
+                      <DefaultContent
+                        text={`${category.label} - ${section.name}`}
+                      />
+                    }
+                  />
+                ))}
+              </Route>
+            ))}
           </Routes>
         </section>
       </div>
