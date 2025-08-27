@@ -29,13 +29,12 @@ export default function GamePage() {
                 key={catKey}
                 path={catKey === "overview" ? "/" : `${catKey}/*`}
               >
-                {/* 🔹 Route par défaut quand on clique juste sur l’onglet */}
                 <Route
                   index
                   element={<DefaultContent text={`${category.label}`} />}
                 />
 
-                {/* 🔹 Routes des sous-sections */}
+                {/* Routes des sous-sections */}
                 {category.sections.map((section, idx) => (
                   <Route
                     key={idx}
