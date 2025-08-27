@@ -13,8 +13,8 @@ export default function GameNavbar() {
     <nav className="bg-accent text-light">
       <ul className="flex justify-center max-w-6xl mx-auto">
         <li><NavLink to={`/jeu/${id}`} end className={linkClass}>Le Jeu</NavLink></li>
-        <li><NavLink to={`/jeu/${id}/game-fr`} className={linkClass}>Patch FR</NavLink></li>
         <li><NavLink to={`/jeu/${id}/guide`} className={linkClass}>Guide</NavLink></li>
+        <li><NavLink to={`/jeu/${id}/jeu-fr`} className={linkClass}>Patch FR</NavLink></li>
       </ul>
     </nav>
   );

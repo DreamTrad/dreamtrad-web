@@ -17,10 +17,7 @@ function GameGuide() {
 export default function GamePage() {
   return (
     <div className="flex flex-col">
-      {/* Navbar secondaire */}
       <GameNavbar />
-
-      {/* Layout sidebar + contenu */}
       <div className="flex flex-1">
         <aside className="w-64 bg-bg-tertiary text-text-secondary p-4 border-r border-bg-secondary">
           <GameSidebar />
@@ -29,7 +26,7 @@ export default function GamePage() {
         <section className="flex-1 p-6">
           <Routes>
             <Route path="/" element={<GameOverview />} />
-            <Route path="patch-fr" element={<GamePatch />} />
+            <Route path="jeu-fr" element={<GamePatch />} />
             <Route path="guide" element={<GameGuide />} />
           </Routes>
         </section>
