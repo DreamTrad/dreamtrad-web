@@ -14,20 +14,20 @@ export default function Header() {
 
       <nav className="mx-6">
         <ul className="flex justify-between max-w-6xl mx-auto">
-          <li><NavLink href="#">Accueil</NavLink></li>
+          <li><NavLink to="/">Accueil</NavLink></li>
 
           <li className="relative group">
             <NavLink href="">Jeux</NavLink>
             <ul className="absolute left-0 top-full w-32 bg-bg-tertiary rounded-md shadow-lg invisible group-hover:visible">
-              <li><NavLink href="#" hoverType="tertiary" fullWidth>Jeu 1</NavLink></li>
-              <li><NavLink href="#" hoverType="tertiary" fullWidth>Jeu 2</NavLink></li>
-              <li><NavLink href="#" hoverType="tertiary" fullWidth>Jeu 3</NavLink></li>
+              <li><NavLink to="/jeu/1" hoverType="tertiary" fullWidth>Jeu 1</NavLink></li>
+              <li><NavLink to="/jeu/2" hoverType="tertiary" fullWidth>Jeu 2</NavLink></li>
+              <li><NavLink to="/jeu/3" hoverType="tertiary" fullWidth>Jeu 3</NavLink></li>
             </ul>
           </li>
 
-          <li><NavLink href="#">Articles</NavLink></li>
-          <li><NavLink href="#">Équipe</NavLink></li>
-          <li><NavLink href="#">Contact</NavLink></li>
+          <li><NavLink to="/">Articles</NavLink></li>
+          <li><NavLink href="/">Équipe</NavLink></li>
+          <li><NavLink to="/">Contact</NavLink></li>
         </ul>
       </nav>
     </header>
