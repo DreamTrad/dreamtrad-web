@@ -3,22 +3,39 @@ import { useParams } from "react-router-dom";
 import { games } from "../data/jeu";
 import GameNavBar from "../components/game/GameNavBar";
 import GameSidebar from "../components/game/GameSidebar";
-import SuccessCard from "../components/game/SuccessCard";
+import AchievementsSection from "../components/game/AchievementsSection";
+import TeamRoleSection from "../components/game/TeamRoleSection";
+
 
 function DefaultContent({ text }) {
   return <div>{text}</div>;
 }
+
+
+// Function to return the right component for a section
+function renderSection(section, catKey, gameId) {
+  if (catKey === "guide") {
+    if(section.id === "achievements") {
+      return <AchievementsSection sectionData={section.data} gameId={gameId} />;
+    }
+  }
+  if (catKey === "gamefr") {
+    if(section.id === "team") {
+      return <TeamRoleSection data={section.data} />;
+    }
+  }
+
+  return <DefaultContent text={`${catKey} - ${section.name}`} />;
+}
+
+
+
 
 export default function GamePage() {
   const { id } = useParams();
   const game = games.find((g) => g.id === id);
 
   if (!game) return <div>Jeu introuvable</div>;
-
-  // Function to get image URL for a success
-  const getImageById = (successId) =>
-    `/jeu/${game.id}/achievements/${successId}.jpg`;
-
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -37,34 +54,14 @@ export default function GamePage() {
               >
                 <Route
                   index
-                  element={<DefaultContent text={`${category.name}`} />}
+                  element={<DefaultContent text={category.name} />}
                 />
 
-                {category.sections.map((section, idx) => (
+                {category.sections.map((section) => (
                   <Route
-                    key={idx}
+                    key={section.id}
                     path={section.id}
-                    element={
-                      section.id === "achievements" ? (
-                        <div className="grid gap-4">
-                          {section.data?.map((succ) => (
-                            <SuccessCard
-                              key={succ.id}
-                              image={getImageById(succ.id)}
-                              titleEn={succ.titleEn}
-                              titleFr={succ.titleFr}
-                              description={succ.descriptionEn}
-                              resolution={succ.resolution}
-                              hidden={succ.hidden}
-                            />
-                          ))}
-                        </div>
-                      ) : (
-                        <DefaultContent
-                          text={`${category.name} - ${section.name}`}
-                        />
-                      )
-                    }
+                    element={renderSection(section, catKey, game.id)}
                   />
                 ))}
               </Route>

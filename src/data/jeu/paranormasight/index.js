@@ -1,4 +1,5 @@
 import { achievements } from "./achievements";
+import { team } from "./team";
 
 
 export const game = {
@@ -22,12 +23,12 @@ export const game = {
         { id: "achievements", name: "succès",  data: achievements },
       ],
     },
-    "jeu-fr": {
+    gamefr: {
       name: "Patch FR",
       sections: [
         { id: "telechargement", name: "Télechargement" },
         { id: "installation", name: "Installation" },
-        { id: "remerciements", name: "Rermerciements" },
+        { id: "team", name: "Équipe", data: team },
       ],
     },
     articles: {
