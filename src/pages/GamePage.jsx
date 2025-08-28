@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { games } from "../data/jeu";
 import GameNavBar from "../components/game/GameNavBar";
 import GameSidebar from "../components/game/GameSidebar";
+import SuccessCard from "../components/game/SuccessCard";
 
 function DefaultContent({ text }) {
   return <div>{text}</div>;
@@ -10,12 +11,17 @@ function DefaultContent({ text }) {
 
 export default function GamePage() {
   const { id } = useParams();
-  const game = games.find(g => g.id === id);
+  const game = games.find((g) => g.id === id);
 
   if (!game) return <div>Jeu introuvable</div>;
 
+  // Function to get image URL for a success
+  const getImageById = (successId) =>
+    `/jeu/${game.id}/achievements/${successId}.jpg`;
+
+
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col min-h-screen">
       <GameNavBar />
       <div className="flex flex-1">
         <aside className="w-64 bg-bg-tertiary text-text-secondary p-4 border-r border-bg-secondary">
@@ -31,18 +37,33 @@ export default function GamePage() {
               >
                 <Route
                   index
-                  element={<DefaultContent text={`${category.label}`} />}
+                  element={<DefaultContent text={`${category.name}`} />}
                 />
 
-                {/* Routes des sous-sections */}
                 {category.sections.map((section, idx) => (
                   <Route
                     key={idx}
-                    path={section.path}
+                    path={section.id}
                     element={
-                      <DefaultContent
-                        text={`${category.label} - ${section.name}`}
-                      />
+                      section.id === "achievements" ? (
+                        <div className="grid gap-4">
+                          {section.data?.map((succ) => (
+                            <SuccessCard
+                              key={succ.id}
+                              image={getImageById(succ.id)}
+                              titleEn={succ.titleEn}
+                              titleFr={succ.titleFr}
+                              description={succ.descriptionEn}
+                              resolution={succ.resolution}
+                              hidden={succ.hidden}
+                            />
+                          ))}
+                        </div>
+                      ) : (
+                        <DefaultContent
+                          text={`${category.name} - ${section.name}`}
+                        />
+                      )
                     }
                   />
                 ))}

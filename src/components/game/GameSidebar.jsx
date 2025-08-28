@@ -16,7 +16,7 @@ export default function GameSidebar() {
       {sections.map((item, idx) => (
         <li key={idx}>
           <NavLink
-            to={`/jeu/${id}/${category}${item.path ? `/${item.path}` : ""}`}
+            to={`/jeu/${id}/${category}/${item.id}`}
             className={({ isActive }) =>
               `block px-4 py-2 rounded-md transition ${
                 isActive ? "bg-hover text-white" : "hover:bg-hover/70"

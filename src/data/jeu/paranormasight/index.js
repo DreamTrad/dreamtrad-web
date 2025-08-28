@@ -1,4 +1,6 @@
-// src/data/jeu/jeu1/index.js
+import { achievements } from "./achievements";
+
+
 export const game = {
   id: "paranormasight",
   name: "PARANORMASIGHT",
@@ -17,14 +19,14 @@ export const game = {
         { id: "solution", name: "Solution" },
         { id: "echappatoire", name: "Échappatoire" },
         { id: "galapiafs", name: "Galapiafs" },
-        { id: "succes", name: "succès" },
+        { id: "achievements", name: "succès",  data: achievements },
       ],
     },
     "jeu-fr": {
       name: "Patch FR",
       sections: [
         { id: "telechargement", name: "Télechargement" },
-        { id: "installation", name: "Installation", file: "jeu-fr/installation.md" },
+        { id: "installation", name: "Installation" },
         { id: "remerciements", name: "Rermerciements" },
       ],
     },
