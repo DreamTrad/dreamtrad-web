@@ -27,7 +27,7 @@ export const game = {
       name: "Patch FR",
       sections: [
         { id: "telechargement", name: "Télechargement" },
-        { id: "installation", name: "Installation" },
+        { id: "installation", name: "Installation", file: "installation" },
         { id: "team", name: "Équipe", data: team },
       ],
     },
