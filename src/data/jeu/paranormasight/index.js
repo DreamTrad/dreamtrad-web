@@ -26,8 +26,24 @@ export const game = {
     gamefr: {
       name: "Patch FR",
       sections: [
-        { id: "telechargement", name: "Télechargement" },
-        { id: "installation", name: "Installation", file: "installation" },
+        {
+          id: "telechargement",
+          name: "Télechargement",
+          platforms: [
+            { id: "windows", name: "Windows", file: "patch/installation/windows" },
+            { id: "steamdeck", name: "Steam Deck", file: "patch/installation/steamdeck" },
+            { id: "manuellement", name: "Manuellement", file: "patch/installation/manuellement" },
+          ],
+        },
+        {
+          id: "installation",
+          name: "Installation",
+          platforms: [
+            { id: "windows", name: "Windows", file: "patch/installation/windows" },
+            { id: "steamdeck", name: "Steam Deck", file: "patch/installation/steamdeck" },
+            { id: "manuellement", name: "Manuellement", file: "patch/installation/manuellement" },
+          ],
+        },
         { id: "team", name: "Équipe", data: team },
       ],
     },

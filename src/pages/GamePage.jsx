@@ -6,6 +6,7 @@ import GameSidebar from "../components/game/GameSidebar";
 import AchievementsSection from "../components/game/AchievementsSection";
 import TeamRoleSection from "../components/game/TeamRoleSection";
 import MarkdownSection from "../components/game/MarkdownSection";
+import PlateformsTabs from "../components/game/PlateformTabs";
 
 
 function DefaultContent({ text }) {
@@ -25,7 +26,7 @@ function renderSection(section, catKey, gameId) {
       return <TeamRoleSection data={section.data} />;
     }
     if(section.id === "installation") {
-      return <MarkdownSection gameId={gameId} file={section.file} />
+      return <PlateformsTabs gameId={gameId} platforms={section.platforms} />
     }
   }
 
