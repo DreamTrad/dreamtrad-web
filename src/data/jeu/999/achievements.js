@@ -77,7 +77,7 @@ export const achievements = [
     titleFr: "",
     descriptionEn: "Gained all trophies.",
     descriptionFr: "",
-    resolution: "Obtenir tous lse succès de 999 et VLR.",
+    resolution: "Obtenir tous les succès de 999 et VLR.",
     hidden: false,
   },
 ];
