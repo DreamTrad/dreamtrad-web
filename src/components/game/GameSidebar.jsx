@@ -8,25 +8,36 @@ export default function GameSidebar() {
 
   if (!game) return null;
 
-  const category = location.pathname.split("/")[3] || "overview";
-  const sections = game.categories[category]?.sections || [];
+  let categoryKey = location.pathname.split("/")[3] || "overview";
+  let category = game.categories[categoryKey];
+
+  if (!category) {
+    categoryKey = "overview";
+    category = game.categories[categoryKey];
+  }
+
+  const sections = category?.sections || [];
 
   return (
     <ul className="space-y-2">
-      {sections.map((item, idx) => (
-        <li key={idx}>
-          <NavLink
-            to={`/jeu/${id}/${category}/${item.id}`}
-            className={({ isActive }) =>
-              `block px-4 py-2 rounded-md transition ${
-                isActive ? "bg-hover text-white" : "hover:bg-hover/70"
-              }`
-            }
-          >
-            {item.name}
-          </NavLink>
-        </li>
-      ))}
+      {sections.map((item, idx) => {
+        const to = `/jeu/${id}/${categoryKey}/${item.id}`;
+        return (
+          <li key={idx}>
+            <NavLink
+              to={to}
+              end
+              className={({ isActive }) =>
+                `block px-4 py-2 rounded-md transition ${
+                  isActive ? "bg-hover text-white" : "hover:bg-hover/70"
+                }`
+              }
+            >
+              {item.name}
+            </NavLink>
+          </li>
+        );
+      })}
     </ul>
   );
 }

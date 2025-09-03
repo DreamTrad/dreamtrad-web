@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
 // Glob statique pour tous les md
-const allMarkdown = import.meta.glob('../../data/jeu/**/*.md', { as: 'raw' });
+const allMarkdown = import.meta.glob('../../data/jeu/**/*.md', { query: '?raw', import: 'default' });
 
 export default function MarkdownSection({ gameId, file }) {
   const [content, setContent] = useState('');

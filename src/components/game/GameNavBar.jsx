@@ -1,8 +1,9 @@
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useParams, useLocation } from "react-router-dom";
 import { games } from "../../data/jeu";
 
 export default function GameNavBar() {
   const { id } = useParams();
+  const location = useLocation();
   const game = games.find(g => g.id === id);
 
   if (!game) return null;
@@ -13,17 +14,25 @@ export default function GameNavBar() {
   return (
     <nav className="bg-accent text-light">
       <ul className="flex justify-center max-w-6xl mx-auto">
-        {Object.entries(game.categories).map(([key, category]) => (
-          <li key={key}>
-            <NavLink
-              to={key === "overview" ? `/jeu/${id}` : `/jeu/${id}/${key}`}
-              end={key === "overview"}
-              className={linkClass}
-            >
-              {category.name}
-            </NavLink>
-          </li>
-        ))}
+        {Object.entries(game.categories).map(([key, category]) => {
+          let to = `/jeu/${id}/${key}`;
+          let end = false;
+
+          // Special case for overview: link to first section
+          if (key === "overview") {
+            const firstSection = category.sections[0];
+            to = firstSection ? `/jeu/${id}/${key}/${firstSection.id}` : `/jeu/${id}/${key}`;
+            // End=false so the link stays active when navigating subsections
+          }
+
+          return (
+            <li key={key}>
+              <NavLink to={to} end={end} className={linkClass}>
+                {category.name}
+              </NavLink>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

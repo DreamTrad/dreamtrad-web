@@ -1,11 +1,11 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { games } from "../data/jeu";
 import GameNavBar from "../components/game/GameNavBar";
 import GameSidebar from "../components/game/GameSidebar";
 import AchievementsSection from "../components/game/AchievementsSection";
 import TeamRoleSection from "../components/game/TeamRoleSection";
-import MarkdownSection from "../components/game/MarkdownSection";
+import DownloadSection from "../components/game/DownloadSection";
 import PlateformsTabs from "../components/game/PlateformTabs";
 
 
@@ -22,11 +22,14 @@ function renderSection(section, catKey, gameId) {
     }
   }
   if (catKey === "gamefr") {
-    if(section.id === "team") {
-      return <TeamRoleSection data={section.data} />;
+    if(section.id === "telechargement") {
+      return <DownloadSection gameId={gameId} file={section.file} platforms={section.platforms} />;
     }
     if(section.id === "installation") {
       return <PlateformsTabs gameId={gameId} platforms={section.platforms} />
+    }
+    if(section.id === "team") {
+      return <TeamRoleSection data={section.data} />;
     }
   }
 
@@ -52,25 +55,40 @@ export default function GamePage() {
 
         <section className="flex-1 p-6">
           <Routes>
-            {Object.entries(game.categories).map(([catKey, category]) => (
-              <Route
-                key={catKey}
-                path={catKey === "overview" ? "/" : `${catKey}/*`}
-              >
-                <Route
-                  index
-                  element={<DefaultContent text={category.name} />}
-                />
+            <Route
+              path=""
+              element={<Navigate to={`overview/${game.categories.overview.sections[0].id}`} replace />}
+            />
+            {Object.entries(game.categories).map(([catKey, category]) => {
+              const firstSection = category.sections[0];
 
-                {category.sections.map((section) => (
-                  <Route
-                    key={section.id}
-                    path={section.id}
-                    element={renderSection(section, catKey, game.id)}
-                  />
-                ))}
-              </Route>
-            ))}
+              return (
+                <Route
+                    key={catKey}
+                    path={`${catKey}/*`}
+                  >
+                    {/* Redirection vers la première section */}
+                    <Route
+                      index
+                      element={
+                        firstSection ? (
+                          <Navigate to={firstSection.id} replace />
+                        ) : (
+                          <DefaultContent text={category.name} />
+                        )
+                      }
+                    />
+
+                    {category.sections.map((section) => (
+                      <Route
+                        key={section.id}
+                        path={section.id}
+                        element={renderSection(section, catKey, game.id)}
+                      />
+                    ))}
+                  </Route>
+              );
+            })}
           </Routes>
         </section>
       </div>

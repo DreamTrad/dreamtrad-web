@@ -1,12 +1,9 @@
-# Installation du patch FR
+# Instructions patch automatique windows
 
-## Étape 1
-Téléchargez le patch ici : [Lien](https://exemple.com).
+- Lancer PARANORMASIGHT_patch_automatique.exe.
+- Sélectionner le répertoire du jeu avec le bouton « Rechercher » s’il n’apparait pas automatiquement.
+- Cliquer sur « Patcher ».
+- Attendez un petit moment…
+- … Et c’est bon !
 
-## Étape 2
-Décompressez l’archive dans le dossier du jeu.
-
-![Exemple d’image](./install-guide.png)
-
-## Étape 3
-Lancez le jeu et vérifiez que la traduction s’affiche correctement.
+![Logiciel pour patcher automatiquement](/jeu/paranormasight/installation/windows_logiciel_auto.png)
