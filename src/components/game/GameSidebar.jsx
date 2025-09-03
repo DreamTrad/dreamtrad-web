@@ -8,11 +8,11 @@ export default function GameSidebar() {
 
   if (!game) return null;
 
-  let categoryKey = location.pathname.split("/")[3] || "overview";
+  let categoryKey = location.pathname.split("/")[3] || "general";
   let category = game.categories[categoryKey];
 
   if (!category) {
-    categoryKey = "overview";
+    categoryKey = "general";
     category = game.categories[categoryKey];
   }
 

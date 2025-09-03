@@ -18,8 +18,8 @@ export default function GameNavBar() {
           let to = `/jeu/${id}/${key}`;
           let end = false;
 
-          // Special case for overview: link to first section
-          if (key === "overview") {
+          // Special case for general: link to first section
+          if (key === "general") {
             const firstSection = category.sections[0];
             to = firstSection ? `/jeu/${id}/${key}/${firstSection.id}` : `/jeu/${id}/${key}`;
             // End=false so the link stays active when navigating subsections

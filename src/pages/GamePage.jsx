@@ -7,6 +7,7 @@ import AchievementsSection from "../components/game/AchievementsSection";
 import TeamRoleSection from "../components/game/TeamRoleSection";
 import DownloadSection from "../components/game/DownloadSection";
 import PlateformsTabs from "../components/game/PlateformTabs";
+import MarkdownSection from "../components/game/MarkdownSection";
 
 
 function DefaultContent({ text }) {
@@ -16,12 +17,15 @@ function DefaultContent({ text }) {
 
 // Function to return the right component for a section
 function renderSection(section, catKey, gameId) {
+  if (catKey === "general") {
+    return <MarkdownSection gameId={gameId} file={section.file} />;
+  }
   if (catKey === "guide") {
     if(section.id === "achievements") {
       return <AchievementsSection sectionData={section.data} gameId={gameId} />;
     }
   }
-  if (catKey === "gamefr") {
+  if (catKey === "jeufr") {
     if(section.id === "telechargement") {
       return <DownloadSection gameId={gameId} file={section.file} platforms={section.platforms} />;
     }
@@ -57,7 +61,7 @@ export default function GamePage() {
           <Routes>
             <Route
               path=""
-              element={<Navigate to={`overview/${game.categories.overview.sections[0].id}`} replace />}
+              element={<Navigate to={`general/${game.categories.general.sections[0].id}`} replace />}
             />
             {Object.entries(game.categories).map(([catKey, category]) => {
               const firstSection = category.sections[0];

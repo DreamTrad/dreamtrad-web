@@ -6,11 +6,11 @@ export const game = {
   id: "paranormasight",
   name: "PARANORMASIGHT",
   categories: {
-    overview: {
+    general: {
       name: "Le Jeu",
       sections: [
-        { id: "intro", name: "Introduction" },
-        { id: "auteurs", name: "Auteurs" },
+        { id: "Presentation", name: "Présentation", file: "presentation" },
+        { id: "auteurs", name: "Auteurs", file: "auteurs" },
       ],
     },
 
@@ -23,7 +23,7 @@ export const game = {
         { id: "achievements", name: "succès",  data: achievements },
       ],
     },
-    gamefr: {
+    jeufr: {
       name: "Patch FR",
       sections: [
         {
