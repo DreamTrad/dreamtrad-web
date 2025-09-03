@@ -31,8 +31,7 @@ export const game = {
           name: "Télechargement",
           file: "patch/informations",
           platforms: [
-            { id: "windows", name: "Windows", link: "https://drive.google.com/uc?export=download&id=1cdCUPpaq5xTrDPoqrCGARqPLOSqu_ud7" },
-            { id: "Switch", name: "Switch", link: "https://drive.google.com/uc?export=download&id=1cdCUPpaq5xTrDPoqrCGARqPLOSqu_ud7" },
+            { id: "PC", name: "PC (Windows, Steamdeck, Linux)", link: "https://drive.google.com/uc?export=download&id=1cdCUPpaq5xTrDPoqrCGARqPLOSqu_ud7" },
           ],
         },
         {
