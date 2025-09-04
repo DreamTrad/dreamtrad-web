@@ -1,11 +1,15 @@
-import { game as jeu1 } from "./paranormasight/index.js";
-import { game as jeu2 } from "./999/index.js"
-import { game as jeu3 } from "./vlr/index.js"
-import { game as jeu4 } from "./ztd/index.js"
+import { game as ai1 } from "./AI1/index.js"
+import { game as ai2 } from "./AINI/index.js"
+import { game as paranormasight } from "./paranormasight/index.js";
+import { game as ze1 } from "./999/index.js"
+import { game as ze2 } from "./vlr/index.js"
+import { game as ze3 } from "./ztd/index.js"
 
 export const games = [
-    jeu1,
-    jeu2,
-    jeu3,
-    jeu4
+    ai1,
+    ai2,
+    paranormasight,
+    ze1,
+    ze2,
+    ze3
 ];
