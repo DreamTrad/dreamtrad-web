@@ -4,7 +4,7 @@
 
 ![Étape 1](/jeu/paranormasight/installation/manuellement_1.webp)
 
-- Dézipper StreamingAsssets.zip pour accéder aux fichiers.
+- Dézippez StreamingAsssets.zip pour accéder aux fichiers.
 
 ![Étape 2](/jeu/paranormasight/installation/manuellement_2.webp)
 
