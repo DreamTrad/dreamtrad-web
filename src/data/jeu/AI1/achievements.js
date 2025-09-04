@@ -1,6 +1,6 @@
 export const achievements = [
     {
-        id: "1",
+        id: "000",
         titleEn: "AI: THE SOMNIUM FILES",
         titleFr: "",
         descriptionEn: "Obtained all other trophies.",
@@ -9,7 +9,7 @@ export const achievements = [
         hidden: false,
     },
     {
-        id: "2",
+        id: "001",
         titleEn: "BRaiN: Memories Hidden in Dreams",
         titleFr: "",
         descriptionEn: "Day 1: Friday - Cleared Date's Somnium.",
@@ -18,7 +18,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "3",
+        id: "002",
         titleEn: "PaiN: Mother, Blood, and Secrets",
         titleFr: "",
         descriptionEn: "Day 2: Saturday - Cleared Mizuki's Somnium.",
@@ -27,7 +27,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "4",
+        id: "003",
         titleEn: "VaiN: Disassociated Persona",
         titleFr: "",
         descriptionEn: "Day 3: Sunday - Cleared Iris's Somnium.",
@@ -36,7 +36,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "5",
+        id: "004",
         titleEn: "SWaiN: My Hero",
         titleFr: "",
         descriptionEn: "Day 4: Monday - Cleared Ota's Somnium.",
@@ -45,7 +45,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "6",
+        id: "005",
         titleEn: "SUSTaiN: Indelible Memories",
         titleFr: "",
         descriptionEn: "Day 5: Tuesday - Cleared Mayumi's Somnium.",
@@ -54,7 +54,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "7",
+        id: "006",
         titleEn: "CAPTaiN: Bonds Revealed",
         titleFr: "",
         descriptionEn: "Day 6: Wednesday - Cleared Date's Somnium.",
@@ -63,7 +63,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "8",
+        id: "007",
         titleEn: "CURTaiN: The Other Side of the Black Curtain",
         titleFr: "",
         descriptionEn: "Day 4: Monday - Cleared #89's Somnium.",
@@ -72,7 +72,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "9",
+        id: "008",
         titleEn: "REFRaiN: Echoes of Murder",
         titleFr: "",
         descriptionEn: "Day 5: Tuesday - Cleared Boss's Somnium.",
@@ -81,7 +81,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "10",
+        id: "009",
         titleEn: "VILLaiN: Evasive Memory",
         titleFr: "",
         descriptionEn: "Day 3: Sunday - Cleared So's Somnium.",
@@ -90,7 +90,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "11",
+        id: "010",
         titleEn: "MaiN1: Antinomic Conflict",
         titleFr: "",
         descriptionEn: "Day 4: Monday - Cleared Iris's Somnium.",
@@ -99,7 +99,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "12",
+        id: "011",
         titleEn: "MaiN2: The Eternal Ceremony",
         titleFr: "",
         descriptionEn: "Day 5: Tuesday - Cleared Iris's Somnium.",
@@ -108,7 +108,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "13",
+        id: "012",
         titleEn: "MOUNTaiN: Corpse Flower",
         titleFr: "",
         descriptionEn: "Day 5: Tuesday - Cleared Hitomi's Somnium.",
@@ -117,7 +117,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "14",
+        id: "013",
         titleEn: "CHaiN: % s ! n k",
         titleFr: "",
         descriptionEn: "Day 6: Wednesday - Cleared Saito's Somnium.",
@@ -126,7 +126,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "15",
+        id: "014",
         titleEn: "Dream Documentation Duty: Intern",
         titleFr: "",
         descriptionEn: "Found 1 hidden item in Somnium.",
@@ -135,7 +135,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "16",
+        id: "015",
         titleEn: "Dream Documentation Duty: Manager",
         titleFr: "",
         descriptionEn: "Found 6 hidden items in Somnium.",
@@ -144,7 +144,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "17",
+        id: "016",
         titleEn: "Dream Documentation Duty: CEO",
         titleFr: "",
         descriptionEn: "Found all hidden items in Somnium.",
@@ -153,7 +153,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "18",
+        id: "017",
         titleEn: "Ota Route: END",
         titleFr: "",
         descriptionEn: "Finished Ota's investigation.",
@@ -162,7 +162,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "19",
+        id: "018",
         titleEn: "Mizuki Route: END",
         titleFr: "",
         descriptionEn: "Finished Mizuki's investigation.",
@@ -171,7 +171,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "20",
+        id: "019",
         titleEn: "Annihilation Route: END",
         titleFr: "",
         descriptionEn: "Finished Annihilation Route investigation.",
@@ -180,7 +180,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "21",
+        id: "020",
         titleEn: "Iris Route: END",
         titleFr: "",
         descriptionEn: "Finished Iris's investigation.",
@@ -189,7 +189,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "22",
+        id: "021",
         titleEn: "Resolution Route: END",
         titleFr: "",
         descriptionEn: "Finished the final investigation.",
@@ -198,7 +198,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "23",
+        id: "022",
         titleEn: "Date's Atami Date Route: END",
         titleFr: "",
         descriptionEn: "Asked out the receptionist to Atami.",
@@ -207,7 +207,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "24",
+        id: "023",
         titleEn: "\"The Secret Lives of Yakuza Wives\"",
         titleFr: "",
         descriptionEn: "Cleared the shooting event at the Kumakura office with no misses.",
@@ -216,7 +216,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "25",
+        id: "024",
         titleEn: "\"The Congressman's Secretary's Warm Reception\"",
         titleFr: "",
         descriptionEn: "Cleared the shooting event at the Sejima residence with no misses.",
@@ -225,7 +225,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "26",
+        id: "025",
         titleEn: "\"H***y Housewives In H***\"",
         titleFr: "",
         descriptionEn: "Cleared the shooting event at the Sagan residence with no misses.",
@@ -234,7 +234,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "27",
+        id: "026",
         titleEn: "\"MUSCLES GALORE! Men's Gymnastics Routines\"",
         titleFr: "",
         descriptionEn: "Cleared the shooting event at Golden Yokocho with no misses.",
@@ -243,7 +243,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "28",
+        id: "027",
         titleEn: "\"The Erotic Legend of Atlantis\"",
         titleFr: "",
         descriptionEn: "Cleared the shooting event at the Warehouse District with no misses.",
@@ -252,7 +252,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "29",
+        id: "028",
         titleEn: "Interrogation: Implicate Iris",
         titleFr: "",
         descriptionEn: "Confronted Iris with the evidence with no mistakes.",
@@ -261,7 +261,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "30",
+        id: "029",
         titleEn: "Interrogation: Implicate Ota",
         titleFr: "",
         descriptionEn: "Confronted Ota with the evidence with no mistakes.",
@@ -270,7 +270,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "31",
+        id: "030",
         titleEn: "Interrogation: Implicate So",
         titleFr: "",
         descriptionEn: "Confronted So with the evidence with no mistakes.",
@@ -279,7 +279,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "32",
+        id: "031",
         titleEn: "Interrogation: Implicate Hitomi",
         titleFr: "",
         descriptionEn: "Confronted Hitomi with the evidence with no mistakes.",
@@ -288,7 +288,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "33",
+        id: "032",
         titleEn: "Persons Analyst",
         titleFr: "",
         descriptionEn: "Collected all the \"Persons\" files.",
@@ -297,7 +297,7 @@ export const achievements = [
         hidden: false,
     },
     {
-        id: "34",
+        id: "033",
         titleEn: "Appendix Analyst",
         titleFr: "",
         descriptionEn: "Collected 100 \"Appendix\" files.",
@@ -306,7 +306,7 @@ export const achievements = [
         hidden: false,
     },
     {
-        id: "35",
+        id: "034",
         titleEn: "Dream Album Analyst",
         titleFr: "",
         descriptionEn: "Collected all the \"Dream Album\" files.",
@@ -315,7 +315,7 @@ export const achievements = [
         hidden: false,
     },
     {
-        id: "36",
+        id: "035",
         titleEn: "Boss Mania",
         titleFr: "",
         descriptionEn: "Checked absolutely everything in Boss's office.",
@@ -324,7 +324,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "37",
+        id: "036",
         titleEn: "I Wish Mine Were That Glorious",
         titleFr: "",
         descriptionEn: "Admired the Sagan's stereo equipment.",
@@ -333,7 +333,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "38",
+        id: "037",
         titleEn: "Your Name?",
         titleFr: "",
         descriptionEn: "Enjoyed a fulfilling chat with Kagami.",
@@ -342,7 +342,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "39",
+        id: "038",
         titleEn: "Bonephilia",
         titleFr: "",
         descriptionEn: "X-rayed the Mermaid.",
@@ -351,7 +351,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "40",
+        id: "039",
         titleEn: "Cooler Heads Prevail",
         titleFr: "",
         descriptionEn: "Kept your cool and did not shoot Saito.",
@@ -360,7 +360,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "41",
+        id: "040",
         titleEn: "Surprisingly Good Together",
         titleFr: "",
         descriptionEn: "Discovered the marriage of the yakuza and the nurse.",
@@ -369,7 +369,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "42",
+        id: "041",
         titleEn: "The Dream Wanderer",
         titleFr: "",
         descriptionEn: "Saw This Man twice in Somnium.",
@@ -378,7 +378,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "43",
+        id: "042",
         titleEn: "Protect Your Head",
         titleFr: "",
         descriptionEn: "Had Aiba wear the basket and the pot in Somnium.",
@@ -387,7 +387,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "44",
+        id: "043",
         titleEn: "Crazy Awful Customers",
         titleFr: "",
         descriptionEn: "Saw three autographs of crazy customers in Somnium.",
@@ -396,7 +396,7 @@ export const achievements = [
         hidden: true,
     },
     {
-        id: "45",
+        id: "044",
         titleEn: "A...Do...Rab...Bit...",
         titleFr: "",
         descriptionEn: "Almost got cursed by Adorabbit in Somnium.",
