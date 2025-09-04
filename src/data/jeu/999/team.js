@@ -19,6 +19,26 @@ export const team = [
         ]
     },
     {
+        "category": "Programmeur",
+        "people": [
+            { "name": "Silous", "role": "Utilisation des outils", "link": "" },
+            { "name": "Floflosera", "role": "", "link": "Utilisation des outils" },
+            { "name": "Mxscr (Firo)", "role": "Portage Vita", "link": "https://twitter.com/Mxscr" },
+            { "name": "BlackSmith01", "role": "Outil coréen ayant servi au projet", "link": "" },
+        ]
+    },
+    {
+        "category": "Images",
+        "people": [
+            { "name": "Silous", "role": "Édition des images", "link": "" },
+            { "name": "NoFall", "role": "Édition des images", "link": "" },
+            { "name": "Ritsu", "role": "Édition des images", "link": "" },
+            { "name": "AlexisTGF", "role": "Édition des vidéos", "link": "" },
+            { "name": "it’s Bread", "role": "Édition des images", "link": "" },
+            { "name": "DaphneeZouGaming", "role": "Édition des images", "link": "" },
+        ]
+    },
+    {
         "category": "Relecteur",
         "people": [
             { "name": "Silous", "role": "Relecteur", "link": "" },
@@ -33,27 +53,6 @@ export const team = [
             { "name": "OokamiShiro", "role": "Béta-test", "link": "" },
             { "name": "Zackmo", "role": "Béta-test", "link": "" },
             { "name": "AlexisTGF", "role": "Béta-test", "link": "" },
-            { "name": "Ruby", "role": "Béta-test", "link": "" },
-        ]
-    },
-    {
-        "category": "Programmeur",
-        "people": [
-            { "name": "Silous", "role": "", "link": "" },
-            { "name": "Floflosera", "role": "", "link": "" },
-            { "name": "Mxscr (Firo)", "role": "Portage Vita", "link": "https://twitter.com/Mxscr" },
-            { "name": "BlackSmith01", "role": "Outil coréen ayant servi au projet", "link": "" },
-        ]
-    },
-    {
-        "category": "Images",
-        "people": [
-            { "name": "Silous", "role": "Édition des images", "link": "" },
-            { "name": "NoFall", "role": "Édition des images", "link": "" },
-            { "name": "Ritsu", "role": "Édition des images", "link": "" },
-            { "name": "AlexisTGF", "role": "Édition des vidéos", "link": "" },
-            { "name": "it’s Bread", "role": "Édition des images", "link": "" },
-            { "name": "DaphneeZouGaming", "role": "Édition des images", "link": "" },
         ]
     },
 ];
