@@ -5,17 +5,17 @@ export const team = [
         ]
     },
     {
-        "category": "Relecteur",
-        "people": [
-        ]
-    },
-    {
         "category": "Programmeur",
         "people": [
         ]
     },
     {
         "category": "Images",
+        "people": [
+        ]
+    },
+    {
+        "category": "Relecteur",
         "people": [
         ]
     },

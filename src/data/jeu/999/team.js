@@ -48,12 +48,12 @@ export const team = [
     {
         "category": "Images",
         "people": [
-            { "name": "Silous", "role": "Traduction des images", "link": "" },
-            { "name": "NoFall", "role": "Traduction des images", "link": "" },
-            { "name": "Ritsu", "role": "Traduction des images", "link": "" },
+            { "name": "Silous", "role": "Édition des images", "link": "" },
+            { "name": "NoFall", "role": "Édition des images", "link": "" },
+            { "name": "Ritsu", "role": "Édition des images", "link": "" },
             { "name": "AlexisTGF", "role": "Édition des vidéos", "link": "" },
-            { "name": "it’s Bread", "role": "Traduction des images", "link": "" },
-            { "name": "DaphneeZouGaming", "role": "Traduction des images", "link": "" },
+            { "name": "it’s Bread", "role": "Édition des images", "link": "" },
+            { "name": "DaphneeZouGaming", "role": "Édition des images", "link": "" },
         ]
     },
 ];
