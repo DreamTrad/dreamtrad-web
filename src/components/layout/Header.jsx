@@ -4,7 +4,7 @@ import { games } from "../../data/jeu"
 
 const mainMenu = [
   { name: "Accueil", to: "/" },
-  { name: "Jeux", to: "/", subMenu: games },
+  { name: "Jeux", to: "/jeux", subMenu: games },
   { name: "Articles", to: "/" },
   { name: "Équipe", to: "/" },
   { name: "Contact", to: "/" },

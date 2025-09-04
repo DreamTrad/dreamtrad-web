@@ -3,6 +3,7 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import HomePage from "./pages/HomePage";
 import GamePage from "./pages/GamePage";
+import GamesListPage from "./pages/GamesListPage";
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/jeu/:id/*" element={<GamePage />} />
+          <Route path="/jeux" element={<GamesListPage />} />
       </Routes>
       </main>
     <Footer />
