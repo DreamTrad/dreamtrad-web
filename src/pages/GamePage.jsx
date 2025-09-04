@@ -32,7 +32,7 @@ function renderSection(section, catKey, gameId) {
     if(section.id === "installation") {
       return <PlateformsTabs gameId={gameId} platforms={section.platforms} />
     }
-    if(section.id === "team") {
+    if(section.id === "equipe") {
       return <TeamRoleSection data={section.data} />;
     }
   }

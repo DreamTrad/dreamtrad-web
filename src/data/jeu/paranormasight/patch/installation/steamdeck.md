@@ -1,6 +1,6 @@
-# Instructions patch automatique Steamdeck
+# Instructions patch automatique Steamdeck et Linux
 
-- Aller en mode bureau et télécharger le patch.
+- Aller en mode bureau et télécharger le patch. (Steamdeck)
 - Clic droit sur l’exe, faire ajouter à steam.
 - Retourner en mode jeu, sur le “jeu” “PARANORMASIGHT_patch_automatique”, allez dans les propriétés, et cocher la case pour compatibilité.
 - Vous pouvez désormais lancer le patcheur automatique
