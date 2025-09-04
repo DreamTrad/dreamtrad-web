@@ -2,7 +2,7 @@ import SuccessCard from "./SuccessCard";
 
 
 const getImageById = (gameId, successId) =>
-    `/jeu/${gameId}/achievements/${successId}.jpg`;
+    `/jeu/${gameId}/achievements/${successId}.webp`;
 
 
 export default function AchievementsSection({ sectionData, gameId }) {
