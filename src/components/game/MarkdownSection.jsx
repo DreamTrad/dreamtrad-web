@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 
 // Glob statique pour tous les md
 const allMarkdown = import.meta.glob([
@@ -34,6 +35,7 @@ export default function MarkdownSection({ gameId, file }) {
   return (
     <div className="prose prose-invert max-w-none">
       <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]} // permet de parser le HTML dans le Markdown
         components={{
           iframe: ({ node, ...props }) => (
