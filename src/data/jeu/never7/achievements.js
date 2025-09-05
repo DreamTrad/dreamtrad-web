@@ -1,6 +1,6 @@
 export const achievements = [
   {
-    id: "1",
+    id: "ACH00",
     titleEn: "Complete",
     titleFr: "",
     descriptionEn: "Thoroughly Enjoy Never7",
@@ -9,7 +9,7 @@ export const achievements = [
     hidden: false,
   },
   {
-    id: "2",
+    id: "ACH01",
     titleEn: "Yuka Route Clear",
     titleFr: "",
     descriptionEn: "Reach Yuka Route Good Ending",
@@ -18,7 +18,7 @@ export const achievements = [
     hidden: false,
   },
   {
-    id: "3",
+    id: "ACH02",
     titleEn: "Yuka Route Bad End",
     titleFr: "",
     descriptionEn: "Reach Yuka Route Bad Ending",
@@ -27,7 +27,7 @@ export const achievements = [
     hidden: false,
   },
   {
-    id: "4",
+    id: "ACH03",
     titleEn: "Haruka Route Clear",
     titleFr: "",
     descriptionEn: "Reach Haruka Route Good Ending",
@@ -36,7 +36,7 @@ export const achievements = [
     hidden: false,
   },
   {
-    id: "5",
+    id: "ACH04",
     titleEn: "Haruka Route Bad End",
     titleFr: "",
     descriptionEn: "Reach Haruka Route Bad Ending",
@@ -45,7 +45,7 @@ export const achievements = [
     hidden: false,
   },
   {
-    id: "6",
+    id: "ACH05",
     titleEn: "Saki Route Clear",
     titleFr: "",
     descriptionEn: "Reach Saki Route Good Ending",
@@ -54,7 +54,7 @@ export const achievements = [
     hidden: false,
   },
   {
-    id: "7",
+    id: "ACH06",
     titleEn: "Saki Route Bad End",
     titleFr: "",
     descriptionEn: "Reach Saki Route Bad Ending",
@@ -63,7 +63,7 @@ export const achievements = [
     hidden: false,
   },
   {
-    id: "8",
+    id: "ACH07",
     titleEn: "Kurumi Route Clear",
     titleFr: "",
     descriptionEn: "Reach Kurumi Route Good Ending",
@@ -72,7 +72,7 @@ export const achievements = [
     hidden: false,
   },
   {
-    id: "9",
+    id: "ACH08",
     titleEn: "Kurumi Route Bad End",
     titleFr: "",
     descriptionEn: "Reach Kurumi Route Bad Ending",
@@ -81,7 +81,7 @@ export const achievements = [
     hidden: false,
   },
   {
-    id: "10",
+    id: "ACH09",
     titleEn: "Izumi Cure Route A Clear",
     titleFr: "",
     descriptionEn: "Reach Izumi Cure Route A Good Ending",
@@ -90,7 +90,7 @@ export const achievements = [
     hidden: true,
   },
   {
-    id: "11",
+    id: "ACH10",
     titleEn: "Izumi Cure Route B Clear",
     titleFr: "",
     descriptionEn: "Reach Izumi Cure Route B Normal Ending",
@@ -99,7 +99,7 @@ export const achievements = [
     hidden: true,
   },
   {
-    id: "12",
+    id: "ACH11",
     titleEn: "Izumi Cure Route Bad End",
     titleFr: "",
     descriptionEn: "Reach Izumi Cure Route Bad Ending",
@@ -108,7 +108,7 @@ export const achievements = [
     hidden: true,
   },
   {
-    id: "13",
+    id: "ACH12",
     titleEn: "Izumi Route Clear",
     titleFr: "",
     descriptionEn: "Izumi Route Good Ending",
@@ -117,7 +117,7 @@ export const achievements = [
     hidden: false,
   },
   {
-    id: "14",
+    id: "ACH13",
     titleEn: "Izumi Route Bad End 1",
     titleFr: "",
     descriptionEn: "Izumi Route Bad Ending 1",
@@ -126,7 +126,7 @@ export const achievements = [
     hidden: false,
   },
   {
-    id: "15",
+    id: "ACH14",
     titleEn: "Izumi Route Bad End 2",
     titleFr: "",
     descriptionEn: "Reach Izumi Route Bad Ending 2",
@@ -135,7 +135,7 @@ export const achievements = [
     hidden: false,
   },
   {
-    id: "16",
+    id: "ACH15",
     titleEn: "Yuka Cure Route 1 Clear",
     titleFr: "",
     descriptionEn: "Reach Yuka Cure Route Good Ending 1",
@@ -144,7 +144,7 @@ export const achievements = [
     hidden: true,
   },
   {
-    id: "17",
+    id: "ACH16",
     titleEn: "Yuka Cure Route 2 Clear",
     titleFr: "",
     descriptionEn: "Reach Yuka Cure Route Good Ending 2",
@@ -153,7 +153,7 @@ export const achievements = [
     hidden: true,
   },
   {
-    id: "18",
+    id: "ACH17",
     titleEn: "Yuka Cure Route Bad End",
     titleFr: "",
     descriptionEn: "Reach Yuka Cure Route Bad Ending",
@@ -162,7 +162,7 @@ export const achievements = [
     hidden: true,
   },
   {
-    id: "19",
+    id: "ACH18",
     titleEn: "Grand Finale",
     titleFr: "",
     descriptionEn: "Reach the Grand Finale",
@@ -171,7 +171,7 @@ export const achievements = [
     hidden: false,
   },
   {
-    id: "20",
+    id: "ACH19",
     titleEn: "Congratulations!",
     titleFr: "",
     descriptionEn: "Reach All Good Endings",
