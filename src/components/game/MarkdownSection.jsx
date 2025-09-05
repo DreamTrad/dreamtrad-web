@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
@@ -35,18 +36,31 @@ export default function MarkdownSection({ gameId, file }) {
                 {...props}
                 className="absolute top-0 left-0 w-full h-full"
                 allowFullScreen
-                frameBorder="0"
               />
             </div>
           ),
-          a: ({ node, ...props }) => (
-            <a
-              {...props}
-              className="text-accent hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            />
-          ),
+          a: ({ node, href, children, ...props }) => {
+            if (href?.startsWith("/")) {
+              // Lien interne -> react-router
+              return (
+                <Link to={href} className="text-accent hover:underline" {...props}>
+                  {children}
+                </Link>
+              );
+            }
+            // Lien externe
+            return (
+              <a
+                href={href}
+                className="text-accent hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+                {...props}
+              >
+                {children}
+              </a>
+            );
+          },
         }}
       >
         {content}
