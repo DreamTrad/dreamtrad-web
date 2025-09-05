@@ -1,5 +1,5 @@
-import { game as ai1 } from "./AI1/index.js"
-import { game as ai2 } from "./AINI/index.js"
+import { game as ai1 } from "./ai1/index.js"
+import { game as ai2 } from "./ai2/index.js"
 import { game as paranormasight } from "./paranormasight/index.js";
 import { game as ze1 } from "./999/index.js"
 import { game as ze2 } from "./vlr/index.js"
