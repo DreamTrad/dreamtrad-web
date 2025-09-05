@@ -4,6 +4,7 @@ Lors d'une nuit sombre, 7 artefact maudits apparaissent, et permettent à leurs 
 
 
 
-<iframe src="https://www.youtube.com/embed/fZH7TutdO9Y" />
+<iframe src="https://www.youtube.com/embed/fZH7TutdO9Y"></iframe>
 
-<iframe src="https://store.steampowered.com/widget/2106840/" />
+<iframe src="https://store.steampowered.com/widget/2106840/"></iframe>
+

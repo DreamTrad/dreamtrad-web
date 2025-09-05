@@ -26,7 +26,7 @@ export default function Header() {
               <NavLink to={item.to}>{item.name}</NavLink>
 
               {item.subMenu && (
-                <ul className="absolute left-0 top-full w-fit bg-bg-tertiary rounded-md shadow-lg invisible group-hover:visible">
+                <ul className="absolute left-0 top-full w-fit z-50 bg-bg-tertiary rounded-md shadow-lg invisible group-hover:visible">
                   {item.subMenu.map(sub => (
                     <li key={sub.id}>
                       <NavLink to={`/jeu/${sub.id}`} hoverType="tertiary" fullWidth>
