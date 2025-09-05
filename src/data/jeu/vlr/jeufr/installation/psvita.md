@@ -26,10 +26,8 @@ Une fois l’installation terminée, **redémarrez votre console.**
 
 Décompresser l'archive et transférer le contenu dans la partition ux0:
 
-
+![Image schéma arborescence fichiers](/jeu/999/jeufr/installation/patch_vita_1.webp)
 
 Si le jeu d'origine est **la version US, renommer le dossier** PSCB01063 en PCSE01006
-
-![Image schéma arborescence ficheirs](/jeu/999/jeufr/installation/patch_vita_1.webp)
 
 *Optionnel :* Vous pouvez supprimer les fichiers originaux pour économiser 1.2 Gb. Vous pouvez y accéder via ce chemin :  **ux0:/app/PCSB01063/[*].psarc**
