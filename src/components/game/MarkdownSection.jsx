@@ -4,7 +4,11 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
 // Glob statique pour tous les md
-const allMarkdown = import.meta.glob('../../data/jeu/**/*.md', { query: '?raw', import: 'default' });
+const allMarkdown = import.meta.glob([
+  '../../data/jeu/**/*.md',
+  '../../data/projet/**/*.md',
+], { query: '?raw', import: 'default' });
+
 
 export default function MarkdownSection({ gameId, file }) {
   const [content, setContent] = useState('');
@@ -13,7 +17,9 @@ export default function MarkdownSection({ gameId, file }) {
     if (!file) return;
 
     // Construire le chemin exact attendu par le glob
-    const key = `../../data/jeu/${gameId}/${file}.md`;
+    const key = gameId
+      ? `../../data/jeu/${gameId}/${file}.md`
+      : `${file}.md`;
     const importFile = allMarkdown[key];
 
     if (!importFile) {

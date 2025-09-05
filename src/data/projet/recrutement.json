@@ -1,0 +1,18 @@
+[
+    {
+        "id": "428",
+        "title": "428: Shibuya Scramble",
+        "image": "./src/assets/poster/428-poster.webp",
+        "roles": ["Traducteur EN → FR", "Graphiste"],
+        "contact": "AlexisTGF",
+        "description": "Le projet est actuellement porté par un seul traducteur, et nous recherchons d’autres traducteurs pour nous aider à avancer plus rapidement. La traduction est déjà bien avancée, mais il reste encore beaucoup de travail à faire. La traduction du japonais est possible mais complexe à cause de la structure des fichiers et du texte. Nous faisons tout de même au besoin des vérifications du japonais. Nous recherchons donc principalement des traducteurs de l’anglais vers le français. Pour les images, aucune n’est encore traduite, il y a environ une cinquantaine d’images à faire."
+    },
+    {
+        "id": "siteweb",
+        "title": "Site Web",
+        "image": "./src/assets/poster/siteweb-poster.webp",
+        "roles": ["Rédacteur solution", "Rédacteur articles"],
+        "contact": "Silous",
+        "description": "Notre site vise les choses en grand en terme de contenu, mais ça ne va pas se remplir tout seul ! Nous recherchons des rédacteurs pour nous aider à créer des solutions des jeux. Nous sommes également ouverts à des propositions d’arcticles en rapport avec les jeux présents sur le site, en rapport avec les visual novels en général, ou la traduction. N’hésitez pas à nous contacter pour en discuter !"
+    }
+]
