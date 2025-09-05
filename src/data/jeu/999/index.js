@@ -1,5 +1,5 @@
-import { achievements } from "./achievements";
-import { team } from "./team";
+import { achievements } from "./guide/achievements";
+import { team } from "./jeufr/team";
 
 
 export const game = {
@@ -9,8 +9,8 @@ export const game = {
     general: {
       name: "Le Jeu",
       sections: [
-        { id: "Presentation", name: "Présentation", file: "presentation" },
-        { id: "auteurs", name: "Auteurs", file: "auteurs" },
+        { id: "Presentation", name: "Présentation", file: "general/presentation" },
+        { id: "auteurs", name: "Auteurs", file: "general/auteurs" },
       ],
     },
 
@@ -29,7 +29,7 @@ export const game = {
         {
           id: "telechargement",
           name: "Télechargement",
-          file: "patch/informations",
+          file: "jeufr/informations",
           platforms: [
             { id: "pc", name: "PC (Windows, Steamdeck, Linux)", link: "https://drive.google.com/uc?export=download&id=1lt6tCbT6MPLAUA4TKTavmsR_uLfYjnxC" },
             { id: "psvita", name: "PS Vita", link: "https://drive.google.com/uc?export=download&id=15Pup7K3cQVm0QMf0-sh1yfWUrxTx1_66" },
@@ -39,10 +39,10 @@ export const game = {
           id: "installation",
           name: "Installation",
           platforms: [
-            { id: "windows", name: "Windows", file: "patch/installation/windows" },
-            { id: "steamdeck", name: "Steam Deck/Linux", file: "patch/installation/steamdeck" },
-            { id: "manuellement", name: "Manuellement PC", file: "patch/installation/manuellement" },
-            { id: "psvita", name: "PS Vita", file: "patch/installation/psvita" },
+            { id: "windows", name: "Windows", file: "jeufr/installation/windows" },
+            { id: "steamdeck", name: "Steam Deck/Linux", file: "jeufr/installation/steamdeck" },
+            { id: "manuellement", name: "Manuellement PC", file: "jeufr/installation/manuellement" },
+            { id: "psvita", name: "PS Vita", file: "jeufr/installation/psvita" },
           ],
         },
         { id: "equipe", name: "Équipe", data: team },

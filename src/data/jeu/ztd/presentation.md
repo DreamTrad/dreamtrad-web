@@ -5,3 +5,7 @@ Neuf personnes répartie en 3 équipes ont été enfermée par un certain Zéro.
 Il s’agit du troisième jeu de la série, que ça soit pour sa date de sortie que pour son histoire. Il faut le faire après avoir fait 999 puis VLR !
 
 Ce jeu est assez particulier. En effet, il a failli être annulé par manque de succès des deux jeux précédents. Il n’a été possible que grâce au soulèvement des fans connu sous le nom de "Blue Bird Project". Il en résulte un jeu avec des animations très sommaires et aucune synchronisation labiale par manque de moyens et donc de temps. Ce jeu est donc bien moins abouti techniquement que les autres pour cette raison, ce n’est en aucun cas à cause du patch ou de bugs. Ce jeu reste, cependant, le dernier de la série et est, à ce titre, important pour la compréhension de l’histoire globale.
+
+<iframe src="https://www.youtube.com/embed/woAgPkS5IIc"></iframe>
+
+<iframe src="https://store.steampowered.com/widget/311240/"></iframe>
