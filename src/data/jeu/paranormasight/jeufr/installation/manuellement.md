@@ -2,15 +2,15 @@
 
 - Le fichier présent dans PARANORMASIGHT_Data du dossier patch (sharedassets0.assets) est à remplacer dans PARANORMASIGHT_Data du dossier du jeu.
 
-![Image étape 1](/jeu/paranormasight/installation/manuellement_1.webp)
+![Image étape 1](/jeu/paranormasight/jeufr/installation/manuellement_1.webp)
 
 - Dézippez StreamingAsssets.zip pour accéder aux fichiers.
 
-![Image étape 2](/jeu/paranormasight/installation/manuellement_2.webp)
+![Image étape 2](/jeu/paranormasight/jeufr/installation/manuellement_2.webp)
 
 - Les fichiers présents dedans (a021, a024, a036, a038) sont à remplacer dans le dossier PARANORMASIGHT_Data\StreamingAssets\ du jeu.
 
-![Image étape 3](/jeu/paranormasight/installation/manuellement_3.webp)
+![Image étape 3](/jeu/paranormasight/jeufr/installation/manuellement_3.webp)
 
 
 Le patch est installé !

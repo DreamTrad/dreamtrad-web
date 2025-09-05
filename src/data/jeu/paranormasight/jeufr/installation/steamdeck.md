@@ -11,4 +11,4 @@
 
 Si vous avez des problèmes, tentez de patcher manuellement.
 
-![Image logiciel pour patcher automatiquement](/jeu/paranormasight/installation/logiciel_patch_auto.webp)
+![Image logiciel pour patcher automatiquement](/jeu/paranormasight/jeufr/installation/logiciel_patch_auto.webp)
