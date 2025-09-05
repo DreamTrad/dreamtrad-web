@@ -1,5 +1,5 @@
-import { achievements } from "./achievements";
-import { team } from "./team";
+import { achievements } from "./guide/achievements";
+import { team } from "./jeufr/team";
 
 
 export const game = {
@@ -9,8 +9,8 @@ export const game = {
     general: {
       name: "Le Jeu",
       sections: [
-        { id: "Presentation", name: "Présentation", file: "presentation" },
-        { id: "auteurs", name: "Auteurs", file: "auteurs" },
+        { id: "Presentation", name: "Présentation", file: "general/presentation" },
+        { id: "auteurs", name: "Auteurs", file: "general/auteurs" },
       ],
     },
 
@@ -29,7 +29,7 @@ export const game = {
         {
           id: "telechargement",
           name: "Télechargement",
-          file: "patch/informations",
+          file: "jeufr/informations",
           platforms: [
             { id: "pc", name: "PC (Windows, Steamdeck, Linux)", link: "https://drive.google.com/uc?export=download&id=1Jxjkpq6t6br8nbO64Bgu-kwlTNWBikkv" },
             { id: "xbox", name: "Xbox/Gamepass", link: "https://drive.google.com/uc?export=download&id=1HAV-uTRXZ7rxqjpGIGNV9MievMKk3eyU" },
@@ -39,10 +39,10 @@ export const game = {
           id: "installation",
           name: "Installation",
           platforms: [
-            { id: "windows", name: "Windows", file: "patch/installation/windows" },
-            { id: "steamdeck", name: "Steam Deck/Linux", file: "patch/installation/steamdeck" },
-            { id: "manuellement", name: "Manuellement PC", file: "patch/installation/manuellement" },
-            { id: "xbox", name: "Xbox", file: "patch/installation/xbox" },
+            { id: "windows", name: "Windows", file: "jeufr/installation/windows" },
+            { id: "steamdeck", name: "Steam Deck/Linux", file: "jeufr/installation/steamdeck" },
+            { id: "manuellement", name: "Manuellement PC", file: "jeufr/installation/manuellement" },
+            { id: "xbox", name: "Xbox", file: "jeufr/installation/xbox" },
           ],
         },
         { id: "equipe", name: "Équipe", data: team },
