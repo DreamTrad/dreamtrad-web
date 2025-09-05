@@ -4,7 +4,7 @@ import { team } from "./team";
 
 export const game = {
   id: "999",
-  name: "9 Heures, 9 Personnes, 9 Portes",
+  name: "9 Hours, 9 Persons, 9 Doors",
   categories: {
     general: {
       name: "Le Jeu",
@@ -31,7 +31,7 @@ export const game = {
           name: "Télechargement",
           file: "patch/informations",
           platforms: [
-            { id: "pc", name: "PC (Windows, Steamdeck, Linux)", link: "https://drive.google.com/file/d/1lt6tCbT6MPLAUA4TKTavmsR_uLfYjnxC/view?usp=sharing" },
+            { id: "pc", name: "PC (Windows, Steamdeck, Linux)", link: "https://drive.google.com/uc?export=download&id=1lt6tCbT6MPLAUA4TKTavmsR_uLfYjnxC" },
             { id: "psvita", name: "PS Vita", link: "https://drive.google.com/uc?export=download&id=15Pup7K3cQVm0QMf0-sh1yfWUrxTx1_66" },
           ],
         },

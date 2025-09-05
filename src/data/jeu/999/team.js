@@ -22,7 +22,7 @@ export const team = [
         "category": "Programmeur",
         "people": [
             { "name": "Silous", "role": "Utilisation des outils", "link": "" },
-            { "name": "Floflosera", "role": "", "link": "Utilisation des outils" },
+            { "name": "Floflosera", "role": "Utilisation des outils", "link": "" },
             { "name": "Mxscr (Firo)", "role": "Portage Vita", "link": "https://twitter.com/Mxscr" },
             { "name": "BlackSmith01", "role": "Outil coréen ayant servi au projet", "link": "" },
         ]

@@ -6,10 +6,10 @@ import { game as ze2 } from "./vlr/index.js"
 import { game as ze3 } from "./ztd/index.js"
 
 export const games = [
+    ze1,
     ai1,
     ai2,
     paranormasight,
-    ze1,
     ze2,
     ze3
 ];

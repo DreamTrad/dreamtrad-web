@@ -6,4 +6,4 @@
 - Attendez un petit moment…
 - … Et c’est bon !
 
-![Logiciel pour patcher automatiquement](/jeu/paranormasight/installation/logiciel_patch_auto.webp)
+![Image logiciel pour patcher automatiquement](/jeu/paranormasight/installation/logiciel_patch_auto.webp)
