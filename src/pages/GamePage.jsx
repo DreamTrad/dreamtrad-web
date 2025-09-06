@@ -1,5 +1,6 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { games } from "../data/jeu";
 import GameNavBar from "../components/game/GameNavBar";
 import GameSidebar from "../components/game/GameSidebar";
@@ -26,18 +27,18 @@ function renderSection(section, catKey, gameId, child = null) {
     return <MarkdownSection gameId={gameId} file={section.file} />;
   }
   if (catKey === "guide") {
-    if(section.id === "achievements") {
+    if (section.id === "achievements") {
       return <AchievementsSection sectionData={section.data} gameId={gameId} />;
     }
   }
   if (catKey === "jeufr") {
-    if(section.id === "telechargement") {
+    if (section.id === "telechargement") {
       return <DownloadSection gameId={gameId} file={section.file} platforms={section.platforms} />;
     }
-    if(section.id === "installation") {
+    if (section.id === "installation") {
       return <PlateformsTabs gameId={gameId} platforms={section.platforms} />
     }
-    if(section.id === "equipe") {
+    if (section.id === "equipe") {
       return <TeamRoleSection data={section.data} />;
     }
   }
@@ -51,6 +52,7 @@ function renderSection(section, catKey, gameId, child = null) {
 export default function GamePage() {
   const { id } = useParams();
   const game = games.find((g) => g.id === id);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
   if (!game) return <div>Jeu introuvable</div>;
 
@@ -58,8 +60,21 @@ export default function GamePage() {
     <div className="flex flex-col min-h-screen">
       <GameNavBar />
       <div className="flex flex-1">
-        <aside className="w-64 bg-bg-tertiary text-text-secondary p-4 border-r border-bg-secondary">
-          <GameSidebar />
+        {/* Sidebar */}
+        <aside
+          className={`relative bg-bg-tertiary text-text-secondary border-r border-bg-secondary transition-all duration-300 ${
+            sidebarOpen ? "w-64 p-4" : "w-4"
+          }`}
+        >
+          {/* Collapse toggle button collé à la bordure */}
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="absolute top-4 right-0 translate-x-1/2 bg-bg-secondary rounded-full p-1 shadow-md hover:bg-hover"
+          >
+            {sidebarOpen ? "←" : "→"}
+          </button>
+
+          {sidebarOpen && <GameSidebar />}
         </aside>
 
         <section className="flex-1 p-6">
