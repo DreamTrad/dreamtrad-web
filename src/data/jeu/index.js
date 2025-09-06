@@ -4,6 +4,7 @@ import { game as paranormasight } from "./paranormasight/index.js";
 import { game as ze1 } from "./999/index.js"
 import { game as ze2 } from "./vlr/index.js"
 import { game as ze3 } from "./ztd/index.js"
+import { game as zodiac_trial } from "./zodiac_trial/index.js"
 
 export const games = [
     ze1,
@@ -11,5 +12,6 @@ export const games = [
     ai2,
     paranormasight,
     ze2,
-    ze3
+    ze3,
+    zodiac_trial,
 ];
