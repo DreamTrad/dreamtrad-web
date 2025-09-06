@@ -15,7 +15,7 @@ export default function RecruitmentPage() {
       <div className="mt-16 mb-16">
           <MarkdownSection file={file} />
       </div>
-      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 grid-cols-[repeat(auto-fit,600px)] justify-center">
         {recruitmentData.map((project) => (
           <RecruitmentCard
             key={project.id}
