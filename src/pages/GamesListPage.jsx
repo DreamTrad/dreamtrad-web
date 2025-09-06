@@ -6,7 +6,7 @@ export default function GamesListPage() {
     <div className="min-h-screen bg-bg-primary text-text-primary p-10">
       <h1 className="text-3xl font-bold mb-8 text-center">Liste des jeux</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-[repeat(auto-fit,350px)] gap-8 justify-center">
         {games.map((game) => (
           <Link
             key={game.id}
