@@ -16,7 +16,12 @@ function DefaultContent({ text }) {
 
 
 // Function to return the right component for a section
-function renderSection(section, catKey, gameId) {
+function renderSection(section, catKey, gameId, child = null) {
+
+  if (child) {
+    return <MarkdownSection gameId={gameId} file={child.file} />;
+  }
+
   if (catKey === "general") {
     return <MarkdownSection gameId={gameId} file={section.file} />;
   }
@@ -59,38 +64,71 @@ export default function GamePage() {
 
         <section className="flex-1 p-6">
           <Routes>
+            {/* Redirection générale */}
             <Route
               path=""
-              element={<Navigate to={`general/${game.categories.general.sections[0].id}`} replace />}
+              element={
+                <Navigate
+                  to={`general/${game.categories.general.sections[0].id}`}
+                  replace
+                />
+              }
             />
+
             {Object.entries(game.categories).map(([catKey, category]) => {
               const firstSection = category.sections[0];
 
               return (
-                <Route
-                    key={catKey}
-                    path={`${catKey}/*`}
-                  >
-                    {/* Redirection vers la première section */}
-                    <Route
-                      index
-                      element={
-                        firstSection ? (
-                          <Navigate to={firstSection.id} replace />
-                        ) : (
-                          <DefaultContent text={category.name} />
-                        )
-                      }
-                    />
+                <Route key={catKey} path={`${catKey}/*`}>
+                  {/* Redirection vers la première section */}
+                  <Route
+                    index
+                    element={
+                      firstSection ? (
+                        <Navigate to={firstSection.id} replace />
+                      ) : (
+                        <DefaultContent text={category.name} />
+                      )
+                    }
+                  />
 
-                    {category.sections.map((section) => (
+                  {category.sections.map((section) => {
+                    // Cas avec sous-sections
+                    if (section.children) {
+                      const firstChild = section.children[0];
+                      return (
+                        <Route key={section.id} path={`${section.id}/*`}>
+                          <Route
+                            index
+                            element={
+                              firstChild ? (
+                                <Navigate to={firstChild.id} replace />
+                              ) : (
+                                <DefaultContent text={section.name} />
+                              )
+                            }
+                          />
+                          {section.children.map((child) => (
+                            <Route
+                              key={child.id}
+                              path={child.id}
+                              element={renderSection(section, catKey, game.id, child)}
+                            />
+                          ))}
+                        </Route>
+                      );
+                    }
+
+                    // Cas section simple
+                    return (
                       <Route
                         key={section.id}
                         path={section.id}
                         element={renderSection(section, catKey, game.id)}
                       />
-                    ))}
-                  </Route>
+                    );
+                  })}
+                </Route>
               );
             })}
           </Routes>

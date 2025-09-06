@@ -13,14 +13,20 @@ export const game = {
         { id: "auteurs", name: "Auteurs", file: "general/auteurs" },
       ],
     },
-
     guide: {
       name: "Guide",
       sections: [
         { id: "solution", name: "Solution" },
         { id: "flux", name: "Flux" },
-        { id: "echappatoires", name: "Échappatoires" },
-        { id: "achievements", name: "succès",  data: achievements },
+        {
+          id: "echappatoires",
+          name: "Échappatoires",
+          children: [
+            { id: "cabine_3e_classe", name: "Cabine de 3ème classe", file: "guide/echappatoires/cabine_3e_classe" },
+            { id: "cabines_2e_classe", name: "Cabines de 2ème classe", file: "guide/echappatoires/cabines_2e_classe" },
+          ],
+        },
+        { id: "achievements", name: "Succès", data: achievements },
       ],
     },
     jeufr: {
