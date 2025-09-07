@@ -1,11 +1,11 @@
 # Échappatoire cabine de 3ème classe
 
 :::spoiler[la position des objets]
-![Image interaction 1](/public/jeu/999/guide/echappatoires/cabine_de_3eme_classe/interaction_1.webp)
+![Image interaction 1](/jeu/999/guide/echappatoires/cabine_de_3eme_classe/interaction_1.webp)
 
-![Image interaction 2](/public/jeu/999/guide/echappatoires/cabine_de_3eme_classe/interaction_2.webp)
+![Image interaction 2](/jeu/999/guide/echappatoires/cabine_de_3eme_classe/interaction_2.webp)
 
-![Image interaction 3](/public/jeu/999/guide/echappatoires/cabine_de_3eme_classe/interaction_3.webp)
+![Image interaction 3](/jeu/999/guide/echappatoires/cabine_de_3eme_classe/interaction_3.webp)
 :::
 
 ## Récupération des objets

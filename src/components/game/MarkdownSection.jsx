@@ -58,7 +58,6 @@ function remarkCustomSpoiler() {
         }
 
         data.hProperties = { title };
-        console.log("DEBUG: Titre détecté =", title);
       }
     });
   };
