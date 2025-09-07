@@ -4,39 +4,63 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 
-// Glob statique pour tous les md
-const allMarkdown = import.meta.glob([
-  '../../data/jeu/**/*.md',
-  '../../data/projet/**/*.md',
-], { query: '?raw', import: 'default' });
+// -------- Markdown imports --------
+const allMarkdown = import.meta.glob(
+  [
+    "../../data/jeu/**/*.md",
+    "../../data/projet/**/*.md",
+  ],
+  { query: "?raw", import: "default" }
+);
 
+// -------- Custom components --------
+function Spoiler({ title = "spoiler", children }) {
+  const [open, setOpen] = useState(false);
 
+  return (
+    <div className="my-2">
+      <button
+        onClick={() => setOpen(!open)}
+        className="px-2 py-1 bg-accent text-white rounded-md text-sm"
+      >
+        {open ? `Cacher ${title}` : `Montrer ${title}`}
+      </button>
+      {open && (
+        <div className="mt-2 p-2 border rounded-md bg-neutral-800">
+          {children}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// -------- Main component --------
 export default function MarkdownSection({ gameId, file }) {
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState("");
 
+  // Load markdown file on props change
   useEffect(() => {
     if (!file) return;
 
-    // Construire le chemin exact attendu par le glob
     const key = gameId
       ? `../../data/jeu/${gameId}/${file}.md`
       : `${file}.md`;
     const importFile = allMarkdown[key];
 
     if (!importFile) {
-      setContent('# Fichier introuvable');
+      setContent("# Fichier introuvable");
       return;
     }
 
-    // Charger le Markdown
     importFile().then((text) => setContent(text));
   }, [gameId, file]);
 
+  // Rendering
   return (
     <div className="prose prose-invert max-w-none">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeRaw]} // permet de parser le HTML dans le Markdown
+        rehypePlugins={[rehypeRaw]}
         components={{
           iframe: ({ node, ...props }) => (
             <div className="my-4 relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
@@ -49,14 +73,16 @@ export default function MarkdownSection({ gameId, file }) {
           ),
           a: ({ node, href, children, ...props }) => {
             if (href?.startsWith("/")) {
-              // Lien interne -> react-router
               return (
-                <Link to={href} className="text-accent hover:underline" {...props}>
+                <Link
+                  to={href}
+                  className="text-accent hover:underline"
+                  {...props}
+                >
                   {children}
                 </Link>
               );
             }
-            // Lien externe
             return (
               <a
                 href={href}
@@ -69,6 +95,9 @@ export default function MarkdownSection({ gameId, file }) {
               </a>
             );
           },
+          spoiler: ({ node, ...props }) => (
+            <Spoiler title={props.title}>{props.children}</Spoiler>
+          ),
         }}
       >
         {content}
