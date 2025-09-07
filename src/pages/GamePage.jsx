@@ -30,6 +30,9 @@ function renderSection(section, catKey, gameId, child = null) {
     if (section.id === "achievements") {
       return <AchievementsSection sectionData={section.data} gameId={gameId} />;
     }
+    else {
+      return <MarkdownSection gameId={gameId} file={section.file} />;
+    }
   }
   if (catKey === "jeufr") {
     if (section.id === "telechargement") {

@@ -1,14 +1,12 @@
 # Échappatoire cabine de 3ème classe
 
-<spoiler title="la position des objets">
-
+:::spoiler[la position des objets]
 ![Image interaction 1](/public/jeu/999/guide/echappatoires/cabine_de_3eme_classe/interaction_1.webp)
 
 ![Image interaction 2](/public/jeu/999/guide/echappatoires/cabine_de_3eme_classe/interaction_2.webp)
 
 ![Image interaction 3](/public/jeu/999/guide/echappatoires/cabine_de_3eme_classe/interaction_3.webp)
-
-</spoiler>
+:::
 
 ## Récupération des objets
 
@@ -24,20 +22,25 @@ Récupérez les objets suivants :
 
 Commencez par combiner le tournevis et le cadre photo pour obtenir la photo d'un vieux bateau de croisière. Au dos de cette photo, il y a la correspondance pour trouver les codes des mallettes rouge et bleue.
 
-<spoiler title="les explications pour trouver les codes">
+:::spoiler[les explications pour trouver les codes]
 Les formes bleues sont pour la mallette bleue, et les formes rouges pour la mallette rouge. Il faut donc prendre en compte les deux mémos pour le code de chaque mallette.<br>
 Le sens de la flèche sur les mémos indique le sens de la combinaison. Ainsi, le carré bleu plein est le premier chiffre de la mallette bleue, et le carré rouge vide sur ce même mémo est le quatrième chiffre de la mallette rouge.
 Faites correspondre les formes au chiffres présent au dos de la photo, et vous pourrez obtenir les deux codes.
-</spoiler>
+:::
 
 <br>
-<spoiler title="le code de la mallette bleue">
+
+:::spoiler[le code de la mallette bleue]
 0263
-</spoiler>
+:::
+
 <br>
-<spoiler title="le code de la mallette rouge">
+
+:::spoiler[le code de la mallette rouge]
 7485
-</spoiler>
+:::
+
+<br>
 
 Une fois les codes obenues, vous pouvez déverrouiller les mallettes, avec les codes et les clés.
 
@@ -47,8 +50,9 @@ Vous pouvez maintenant vous diriger vers le lecteur à droite de la porte et uti
 
 Vous devez comprendre le concept de racine numérique pour résoudre l’énigme. Relisez le document accessible dans le menu "dossier" si besoin.
 
-<spoiler title="la bonne combinaison">
+
+:::spoiler[la bonne combinaison]
 1, 6 et 7
-</spoiler>
+:::
 
 Vous pouvez maintenant sortir de la salle pour terminer l’échappatoire.

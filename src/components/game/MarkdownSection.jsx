@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
+import remarkDirective from "remark-directive";
+import { visit } from "unist-util-visit";
 
 // -------- Markdown imports --------
 const allMarkdown = import.meta.glob(
@@ -34,11 +36,38 @@ function Spoiler({ title = "spoiler", children }) {
   );
 }
 
+// Plugin to transform ::spoiler blocks into JSX
+function remarkCustomSpoiler() {
+  return (tree) => {
+    visit(tree, (node) => {
+      if (node.type === "containerDirective" && node.name === "spoiler") {
+        const data = node.data || (node.data = {});
+        data.hName = "spoiler";
+
+        let title = "spoiler";
+
+        // Si le premier enfant est du texte, on le prend comme titre
+        if (node.children?.length > 0 && node.children[0].type === "paragraph") {
+          const firstChild = node.children[0].children?.[0];
+          if (firstChild?.type === "text") {
+            title = firstChild.value.trim();
+
+            // On retire ce premier enfant du contenu du spoiler
+            node.children.shift();
+          }
+        }
+
+        data.hProperties = { title };
+        console.log("DEBUG: Titre détecté =", title);
+      }
+    });
+  };
+}
+
 // -------- Main component --------
 export default function MarkdownSection({ gameId, file }) {
   const [content, setContent] = useState("");
 
-  // Load markdown file on props change
   useEffect(() => {
     if (!file) return;
 
@@ -55,11 +84,10 @@ export default function MarkdownSection({ gameId, file }) {
     importFile().then((text) => setContent(text));
   }, [gameId, file]);
 
-  // Rendering
   return (
     <div className="prose prose-invert max-w-none">
       <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
+        remarkPlugins={[remarkGfm, remarkDirective, remarkCustomSpoiler]}
         rehypePlugins={[rehypeRaw]}
         components={{
           iframe: ({ node, ...props }) => (
