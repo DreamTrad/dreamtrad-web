@@ -14,7 +14,7 @@ export default function AchievementsSection({ sectionData, gameId }) {
           image={getImageById(gameId, succ.id)}
           titleEn={succ.titleEn}
           titleFr={succ.titleFr}
-          description={succ.descriptionEn}
+          description={succ.descriptionFr}
           resolution={succ.resolution}
           hidden={succ.hidden}
         />
