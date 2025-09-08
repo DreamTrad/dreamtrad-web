@@ -18,28 +18,38 @@ function DefaultContent({ text }) {
 
 // Function to return the right component for a section
 function renderSection(section, catKey, gameId, child = null) {
-
   if (child) {
     return <MarkdownSection gameId={gameId} file={child.file} />;
+  }
+
+  // If section has no file → fallback
+  if (!section.file) {
+    return <DefaultContent text={`${catKey} - ${section.name}`} />;
   }
 
   if (catKey === "general") {
     return <MarkdownSection gameId={gameId} file={section.file} />;
   }
+
   if (catKey === "guide") {
     if (section.id === "achievements") {
       return <AchievementsSection sectionData={section.data} gameId={gameId} />;
     }
-    else {
-      return <MarkdownSection gameId={gameId} file={section.file} />;
-    }
+    return <MarkdownSection gameId={gameId} file={section.file} />;
   }
+
   if (catKey === "jeufr") {
     if (section.id === "telechargement") {
-      return <DownloadSection gameId={gameId} file={section.file} platforms={section.platforms} />;
+      return (
+        <DownloadSection
+          gameId={gameId}
+          file={section.file}
+          platforms={section.platforms}
+        />
+      );
     }
     if (section.id === "installation") {
-      return <PlateformsTabs gameId={gameId} platforms={section.platforms} />
+      return <PlateformsTabs gameId={gameId} platforms={section.platforms} />;
     }
     if (section.id === "equipe") {
       return <TeamRoleSection data={section.data} />;

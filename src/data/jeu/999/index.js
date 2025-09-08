@@ -40,7 +40,7 @@ export const game = {
             { id: "escape16", name: "Salle de torture", file: "guide/echappatoires/salle_de_torture" },
           ],
         },
-        { id: "enigme_final", name: "Énigme finale", file: "guide/enigme_final" },
+        { id: "enigme_final", name: "Énigme finale", file: "guide/enigme_finale" },
         { id: "fins", name: "Fins", file: "guide/fins" },
         { id: "achievements", name: "Succès", data: achievements },
       ],
