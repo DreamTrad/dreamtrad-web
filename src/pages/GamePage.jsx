@@ -23,7 +23,7 @@ function renderSection(section, catKey, gameId, child = null) {
   }
 
   // If section has no file → fallback
-  if (!section.file) {
+  if (!section.file && !section.data) {
     return <DefaultContent text={`${catKey} - ${section.name}`} />;
   }
 
