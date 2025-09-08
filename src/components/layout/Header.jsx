@@ -8,7 +8,7 @@ const mainMenu = [
   { name: "Recrutement", to: "/recrutement" },
   { name: "Articles", to: "/" },
   { name: "Équipe", to: "/" },
-  { name: "Contact", to: "/" },
+  { name: "Contact", to: "/contact" },
 ];
 
 
