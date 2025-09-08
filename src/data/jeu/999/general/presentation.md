@@ -13,7 +13,6 @@ Par la suite, le jeu est ressorti en remaster en 2017 dans une version regroupan
 Junpei, un étudiant, arrive dans son appartement et se fait enlever par une personne masquée nommée "Zéro". Il se retrouve enfermé dans un bateau avec 8 autres individus. Un message leur demande de participer au "jeu nonaire" dont le but est de trouver la porte qui arbore un "9", et cela en neuf heures avant que le bateau ne sombre. Tous les 9, ils vont devoir passer par des portes numérotées derrière lesquelles se cachent des salles dont il faudra trouver un moyen de déverrouiller la sortie. Tout en avançant dans ce jeu nonaire, ils tenteront de trouver des réponses à toutes leurs questions : *Qu’est-ce que le jeu nonaire ? Où sont-ils ? Pourquoi eux ? Qui est Zéro ?*
 
 
-La version la plus récente de ce jeu est dans la duologie The Nonary Games, développé et édité par Spike Chunsoft, sortie sur PC, Xbox One, et PS4.
 
 <iframe src="https://www.youtube.com/embed/tmatwxj-jFg"></iframe>
 
