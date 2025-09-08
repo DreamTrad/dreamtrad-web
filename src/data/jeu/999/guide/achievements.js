@@ -77,7 +77,7 @@ export const achievements = [
     titleFr: "Vous l'avez trouvée",
     descriptionEn: "Gained all trophies.",
     descriptionFr: "Obtenez tous les trophées.",
-    resolution: "Obtenez tous les succès des 2 jeux de la compilation",
+    resolution: "Obtenez tous les succès des 2 jeux de la compilation.",
     hidden: false,
   },
 ];
