@@ -1,3 +1,5 @@
+import MarkdownSection from "./MarkdownSection";
+
 export default function SuccessCard({ image, titleEn, titleFr, description, resolution }) {
   return (
     <div className="bg-bg-tertiary text-text-secondary rounded-lg shadow-md p-4 flex gap-4 items-start w-full max-w-5/6">
@@ -14,11 +16,11 @@ export default function SuccessCard({ image, titleEn, titleFr, description, reso
         <p className="text-sm italic text-text-tertiary">{titleEn}</p>
         <p className="">{description}</p>
         <p className="text-xs text-text-tertiary mt-2">
-        {resolution && (
-          <p className="text-xs text-text-tertiary mt-2">
-            <span className="font-semibold">Résolution :</span> {resolution}
-          </p>
-        )}
+          {resolution && (
+            <MarkdownSection
+              content={`:::spoiler[comment l’obtenir]\n${resolution}\n:::`}
+            />
+          )}
         </p>
       </div>
     </div>

@@ -14,7 +14,7 @@ export const achievements = [
     titleFr: "Les chances de perdre ne sont pas Zéro",
     descriptionEn: "Saw the Zero Lost ending in 999.",
     descriptionFr: "Avoir vu la fin de la défaite de Zéro dans 999.",
-    resolution: "",
+    resolution: "Obtenir la fin qu’on apelle coffre-fort (du fait de l’icône représentant la fin).",
     hidden: true,
   },
   {
@@ -50,7 +50,7 @@ export const achievements = [
     titleFr: "Un sixième sens voyant l'avenir",
     descriptionEn: "Saw all previews in 999.",
     descriptionFr: "Avoir vu les 2 aperçus dans 999.",
-    resolution: "",
+    resolution: "L’aperçu A se débloque avec la fin coffre-fort. L’aperçu B avec la fin cercueil ou la véritable fin.",
     hidden: false,
   },
   {
@@ -77,7 +77,7 @@ export const achievements = [
     titleFr: "Vous l'avez trouvée",
     descriptionEn: "Gained all trophies.",
     descriptionFr: "Obtenez tous les trophées.",
-    resolution: "",
+    resolution: "Obtenez tous les succès des 2 jeux de la compilation",
     hidden: false,
   },
 ];

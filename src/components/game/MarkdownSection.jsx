@@ -64,12 +64,16 @@ function remarkCustomSpoiler() {
 }
 
 // -------- Main component --------
-export default function MarkdownSection({ gameId, file }) {
+export default function MarkdownSection({ gameId, file, content: inlineContent }) {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    if (!file) return;
+    if (inlineContent) {
+      setContent(inlineContent);
+      return;
+    }
 
+    if (!file) return;
     const key = gameId
       ? `../../data/jeu/${gameId}/${file}.md`
       : `${file}.md`;
@@ -81,7 +85,8 @@ export default function MarkdownSection({ gameId, file }) {
     }
 
     importFile().then((text) => setContent(text));
-  }, [gameId, file]);
+  }, [gameId, file, inlineContent]);
+
 
   return (
     <div className="prose prose-invert max-w-none">
