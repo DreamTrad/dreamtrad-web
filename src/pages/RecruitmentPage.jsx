@@ -1,8 +1,16 @@
-import recruitmentData from "../data/projet/recrutement.json";
+import { useEffect, useState } from "react";
 import RecruitmentCard from "../components/game/RecruitmentCard";
 import MarkdownSection from "../components/game/MarkdownSection";
 
 export default function RecruitmentPage() {
+  const [recruitmentData, setRecruitmentData] = useState([]);
+
+  useEffect(() => {
+    fetch("/recrutement.json")
+      .then(res => res.json())
+      .then(data => setRecruitmentData(data))
+      .catch(err => console.error("Erreur chargement recrutement :", err));
+  }, []);
 
   const file = "../../data/projet/recrutement-global";
 
