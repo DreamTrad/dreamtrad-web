@@ -66,7 +66,7 @@ export default function DiscoverPage() {
   const [traductionFilter, setTraductionFilter] = useState("");
 
   useEffect(() => {
-    fetch("/decouvrir.json")
+    fetch("/vn_fr_list.json")
       .then((res) => res.json())
       .then((data) => setRecruitmentData(data))
       .catch((err) => console.error("Erreur chargement decouvrir :", err));
@@ -102,8 +102,8 @@ export default function DiscoverPage() {
     const projectGenres = Array.isArray(project.genre)
       ? project.genre
       : project.genre
-      ? project.genre.split(",").map((g) => g.trim())
-      : [];
+        ? project.genre.split(",").map((g) => g.trim())
+        : [];
 
     const projectDurees = project.duree ? [project.duree] : [];
 
@@ -122,8 +122,8 @@ export default function DiscoverPage() {
       traductionFilter === "officielle"
         ? isOfficial
         : traductionFilter === "non-officielle"
-        ? !isOfficial
-        : true;
+          ? !isOfficial
+          : true;
 
     return matchName && matchGenre && matchDuree && matchTraduction;
   });
@@ -174,20 +174,22 @@ export default function DiscoverPage() {
       </div>
 
       {/* Grille */}
-      <div className="grid gap-8 grid-cols-[repeat(auto-fit,600px)] justify-center">
-        {filteredData.map((project) => (
-          <RecruitmentCard
-            key={project.id}
-            titre={project.titre}
-            image={project.image}
-            genre={project.genre}
-            duree={project.duree}
-            plateforme={project.plateforme}
-            lien_jeu={project.lien_jeu}
-            patch_fr={project.patch_fr}
-            description={project.description}
-          />
-        ))}
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 w-full">
+        {filteredData
+          .sort((a, b) => a.titre.localeCompare(b.titre))
+          .map((project) => (
+            <RecruitmentCard
+              key={project.id}
+              titre={project.titre}
+              image={project.image}
+              genre={project.genre}
+              duree={project.duree}
+              plateforme={project.plateforme}
+              lien_jeu={project.lien_jeu}
+              patch_fr={project.patch_fr}
+              description={project.description}
+            />
+          ))}
       </div>
     </div>
   );

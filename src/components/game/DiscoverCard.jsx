@@ -1,5 +1,6 @@
 import LinkWithIcon from "../ui/LinkWithIcon";
 import PlatformIcons from "../ui/PlatformIcons";
+import ReactMarkdown from "react-markdown";
 
 export default function DiscoverCard({
   titre,
@@ -45,45 +46,35 @@ export default function DiscoverCard({
       {/* Contenu principal */}
       <div className="flex flex-row p-6 gap-6">
         {/* Image */}
-        <div className="flex-[2]">
+        <div className="flex-[2] flex items-center justify-center">
           <img
             src={image}
             alt={`Affiche de ${titre}`}
-            className="w-full h-[200px] object-cover rounded-md shadow-md"
+            className="w-full h-[400px] object-contain rounded-md shadow-md"
           />
         </div>
 
         {/* Description */}
-        <div className="flex-[3] text-text-secondary text-sm text-justify flex items-center">
-          <p>{description}</p>
+        <div className="flex-[3] bg-bg-secondary rounded-md p-4 prose prose-invert max-w-none text-text-secondary text-sm">
+          <ReactMarkdown>{description}</ReactMarkdown>
         </div>
       </div>
 
       {/* Footer */}
       <div className="bg-bg-secondary px-6 py-4 flex flex-col md:flex-row gap-4">
         {/* Patchs */}
-        {patch_fr.length > 0 && (
-          <div className="flex flex-col gap-2 p-3 border rounded-lg bg-bg-tertiary flex-1">
-            <span className="font-semibold text-accent text-sm uppercase tracking-wide">
-              Patch Français
-            </span>
-            <div className="flex gap-3">
-              {patch_fr.map((patch, idx) => (
-                <LinkWithIcon key={idx} url={patch} />
-              ))}
-            </div>
-          </div>
-        )}
-
         {/* Liens */}
         {lien_jeu.length > 0 && (
           <div className="flex flex-col gap-2 p-3 border rounded-lg bg-bg-tertiary flex-1">
             <span className="font-semibold text-accent text-sm uppercase tracking-wide">
-              Obtenir le jeu
+              Liens
             </span>
             <div className="flex gap-3">
               {lien_jeu.map((url, idx) => (
                 <LinkWithIcon key={idx} url={url} />
+              ))}
+              {patch_fr.map((patch, idx) => (
+                <LinkWithIcon key={idx} url={patch} />
               ))}
             </div>
           </div>
