@@ -1,23 +1,23 @@
 import { useEffect, useState } from "react";
-import RecruitmentCard from "../components/game/RecruitmentCard";
+import RecruitmentCard from "../components/game/DiscoverCard";
 import MarkdownSection from "../components/game/MarkdownSection";
 
-export default function RecruitmentPage() {
+export default function DiscoverPage() {
   const [recruitmentData, setRecruitmentData] = useState([]);
 
   useEffect(() => {
-    fetch("/recrutement.json")
+    fetch("/decouvrir.json")
       .then(res => res.json())
       .then(data => setRecruitmentData(data))
-      .catch(err => console.error("Erreur chargement recrutement :", err));
+      .catch(err => console.error("Erreur chargement decouvrir :", err));
   }, []);
 
-  const file = "../../data/recrutement-global";
+  const file = "../../data/decouvrir-global";
 
   return (
     <div className="p-8 max-w-9xl mx-auto">
       <h2 className="text-3xl font-bold text-accent mb-8 text-center">
-        Nos projets en recrutement
+        Découvrez des Visual Novel disponible en français
       </h2>
 
       <div className="mt-16 mb-16">

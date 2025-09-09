@@ -10,7 +10,7 @@ import { visit } from "unist-util-visit";
 const allMarkdown = import.meta.glob(
   [
     "../../data/jeu/**/*.md",
-    "../../data/projet/**/*.md",
+    "../../data/*.md",
   ],
   { query: "?raw", import: "default" }
 );
