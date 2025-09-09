@@ -149,14 +149,14 @@ export default function DiscoverPage() {
         />
 
         <MultiDropdown
-          label="Sélectionner genres"
+          label="Sélectionner des genres"
           options={genres}
           selected={selectedGenres}
           setSelected={setSelectedGenres}
         />
 
         <MultiDropdown
-          label="Sélectionner durées"
+          label="Sélectionner des durées"
           options={durees}
           selected={selectedDurees}
           setSelected={setSelectedDurees}
@@ -167,9 +167,9 @@ export default function DiscoverPage() {
           value={traductionFilter}
           onChange={(e) => setTraductionFilter(e.target.value)}
         >
-          <option value="">Toutes traductions</option>
+          <option value="">Toutes les traductions</option>
           <option value="officielle">Officielle</option>
-          <option value="non-officielle">Non-officielle</option>
+          <option value="non-officielle">Fantraduction</option>
         </select>
       </div>
 
