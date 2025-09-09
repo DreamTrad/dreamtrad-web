@@ -27,10 +27,13 @@ export default function DiscoverPage() {
         {recruitmentData.map((project) => (
           <RecruitmentCard
             key={project.id}
-            title={project.title}
+            titre={project.titre}
             image={project.image}
-            roles={project.roles}
-            contact={project.contact}
+            genre={project.genre}
+            duree={project.duree}
+            plateforme={project.plateforme}
+            lien_jeu={project.lien_jeu}
+            patch_fr={project.patch_fr}
             description={project.description}
           />
         ))}
