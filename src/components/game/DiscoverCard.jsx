@@ -1,3 +1,6 @@
+import LinkWithIcon from "../ui/LinkWithIcon";
+import PlatformIcons from "../ui/PlatformIcons";
+
 export default function DiscoverCard({ titre, image, genre = [], duree, plateforme = [], lien_jeu = [], patch_fr = [], description }) {
   return (
     <div className="bg-bg-tertiary rounded-2xl shadow-lg overflow-hidden border border-bg-secondary flex flex-col w-full max-w-5xl">
@@ -35,45 +38,22 @@ export default function DiscoverCard({ titre, image, genre = [], duree, platefor
           )}
 
           {/* Plateformes */}
-          {plateforme.length > 0 && (
-            <p>
-              <span className="font-semibold text-accent">Plateformes :</span>{" "}
-              {plateforme.join(", ")}
-            </p>
-          )}
+          {plateforme.length > 0 && <PlatformIcons platforms={plateforme} />}
+
 
           {/* Liens */}
-          {lien_jeu.length > 0 && (
-            <p>
-              <span className="font-semibold text-accent">Lien du jeu :</span>{" "}
-              {lien_jeu.map((lien, idx) => (
-                <a
-                  key={idx}
-                  href={lien.startsWith("http") ? lien : `https://${lien}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 hover:underline ml-1"
-                >
-                  {lien}
-                </a>
-              ))}
-            </p>
-          )}
+          <div className="flex gap-3 mt-2">
+            {lien_jeu.map((url, idx) => (
+              <LinkWithIcon key={idx} url={url} />
+            ))}
+          </div>
 
           {/* Patchs */}
           {patch_fr.length > 0 && (
             <p>
               <span className="font-semibold text-accent">Patch FR :</span>{" "}
               {patch_fr.map((patch, idx) => (
-                <a
-                  key={idx}
-                  href={patch.startsWith("http") ? patch : `https://${patch}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 hover:underline ml-1"
-                >
-                  {patch}
-                </a>
+                <LinkWithIcon key={idx} url={patch} />
               ))}
             </p>
           )}
