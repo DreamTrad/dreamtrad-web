@@ -6,7 +6,7 @@
         "genre": ["enquête"],
         "duree": "20h-30h",
         "note_vndb": "8.07",
-        "plateforme": ["PC", "DS"],
+        "plateforme": ["pc", "ds"],
         "lien_jeu": ["https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/"],
         "patch_fr": [],
         "description": "Premier VN de la série Ace Attorney.\n\nDans ce futur fictif, toute personne accusée d’un crime est immédiatement jugée lors d’un procès limité à trois jours. L’avocat de la défense doit prouver l’innocence de son client en trouvant des contradictions dans les témoignages des témoins et en rassemblant des preuves.\n\nLe joueur incarne Phoenix Wright, un jeune avocat débutant au cabinet dirigé par Mia Fey. Il est assisté par Maya Fey, la sœur de Mia, qui possède la capacité de canaliser les esprits pour aider Wright au tribunal. Tout au long de ses affaires, Wright se retrouve souvent en opposition avec Benjamin Hunter, un procureur brillant et redoutable, créant un affrontement récurrent entre défense et accusation."
@@ -18,7 +18,7 @@
         "genre": ["enquête", "gameplay", "killing game"],
         "duree": "30h-40h",
         "note_vndb": "7.63",
-        "plateforme": ["PC"],
+        "plateforme": ["pc"],
         "lien_jeu": ["https://store.steampowered.com/app/413410/Danganronpa_Trigger_Happy_Havoc/"],
         "patch_fr": ["https://equipemirai.com/dr1-patch-fr/"],
         "description": "Premier VN de la série Danganronpa.\n\nL’Académie du Pic de l’Espoir accueille les lycéens les plus brillants de tout le Japon, porteurs d'espoir pour l'avenir. Mais cet espoir s'éteint soudain lorsque Makoto Naegi et ses camarades de classe se retrouvent emprisonnés dans leur école, coupés du reste du monde et soumis aux caprices d'un étrange petit ours meurtrier du nom de Monokuma. Il monte les élèves les uns contre les autres, promettant la liberté à quiconque assassinera l'un ou l'une de ses pairs sans se faire prendre.\n\nC'est à vous de découvrir la véritable identité de Monokuma, ainsi que la raison pour laquelle on vous a arraché au monde qui était le vôtre. Mais prenez garde à ce que vous souhaitez, il n'y a parfois rien de plus dangereux que la vérité…"
@@ -30,7 +30,7 @@
         "genre": ["enquête", "mystère", "surnaturel"],
         "duree": "10h-20h",
         "note_vndb": "7.59",
-        "plateforme": ["PC"],
+        "plateforme": ["pc"],
         "lien_jeu": ["https://store.steampowered.com/app/2106840/PARANORMASIGHT_The_Seven_Mysteries_of_Honjo/"],
         "patch_fr": ["http://localhost:5173/jeu/paranormasight/jeufr/telechargement"],
         "description": "Shōgo Okiie, un employé de bureau comme les autres, se rend au parc de Kinshibori en pleine nuit avec son amie Yōko Fukunaga, pour enquêter sur une célèbre histoire de fantôme locale : les Sept mystères de Honjo.\n\nShōgo refuse de croire Yōko lorsqu'elle lui dit que les mystères sont liés au rituel de résurrection, et n'y prête pas attention... jusqu'à ce qu'il ne devienne témoin d'événements étranges.\n\nAu même moment, d'autres mènent leur propre enquête sur les Sept mystères...Des inspecteurs enquêtant sur une série de morts inexpliquées, une lycéenne en quête de la vérité sur le suicide de sa camarade, et une mère qui a juré de venger la mort de son fils.\n\nLeurs désirs et leurs motivation s'entrelacent et interagissent autour des Sept mystères de Honjo, et culmineront en une bataille d'esprit et de malédictions."
