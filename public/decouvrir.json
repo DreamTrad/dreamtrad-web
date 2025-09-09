@@ -4,10 +4,23 @@
         "titre": "Ace Attorney : Phoenix Wright",
         "image": "/poster/ace_attorney_1-poster.webp",
         "genre": ["enquête", "thriller"],
-        "duree": "20h",
+        "duree": "20h-30h",
+        "note_vndb": "7.85",
         "plateforme": ["PC", "DS"],
         "lien_jeu": ["www.store.steampowered.com/ace_attorney_1"],
         "patch_fr": [],
         "description": "Le premier ace attorney, 5 affaires."
+    },
+    {
+        "id": "danganronpa_1",
+        "titre": "Danganronpa: Trigger Happy Havoc",
+        "image": "/poster/danganronpa_1-poster.webp",
+        "genre": ["enquête", "gameplay"],
+        "duree": "30h-40h",
+        "note_vndb": "6.93",
+        "plateforme": ["PC", "PS Vita"],
+        "lien_jeu": ["www.store.steampowered.com/Dangan"],
+        "patch_fr": [],
+        "description": "Danganronpa 1, quand Kodaka était un auteur passable (son peak)."
     }
 ]
