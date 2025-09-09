@@ -1,1 +1,0 @@
-Si vous êtes intéressé pour travailler sur un projet, tout se passe sur notre [discord](https://discord.gg/FdyDJPSa6r) pour s’organiser entre les membres de l’équipe. Les projets de traduction sont faits sur google drive. Donc il vous faudra un compte google pour pouvoir travailler sur un projet.
