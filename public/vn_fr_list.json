@@ -7,7 +7,7 @@
         "duree": "10h-20h",
         "note_vndb": "",
         "plateforme": ["pc", "psvita"],
-        "lien_jeu": [],
+        "lien_jeu": ["https://store.steampowered.com/app/477740/Zero_Escape_The_Nonary_Games/"],
         "patch_fr": ["fr:http://localhost:5173/jeu/999/jeufr/telechargement"],
         "description": "Premier VN de la série Zero Escape.\n\n"
     },
@@ -55,7 +55,7 @@
         "duree": "20h-30h",
         "note_vndb": "",
         "plateforme": ["pc"],
-        "lien_jeu": [],
+        "lien_jeu": ["https://store.steampowered.com/app/948740/AI_The_Somnium_Files/"],
         "patch_fr": ["fr:http://localhost:5173/jeu/ai1/jeufr/telechargement"],
         "description": "Premier VN de la série AI: The Somnium Files.\n\n"
     },
@@ -67,7 +67,7 @@
         "duree": "20h-30h",
         "note_vndb": "",
         "plateforme": ["pc"],
-        "lien_jeu": [],
+        "lien_jeu": ["https://store.steampowered.com/app/1449200/AI_THE_SOMNIUM_FILES__nirvanA_Initiative/"],
         "patch_fr": ["fr:http://localhost:5173/jeu/ai2/jeufr/telechargement"],
         "description": "Deuxième VN de la série AI: The Somnium Files.\n\n"
     },
@@ -91,7 +91,7 @@
         "duree": "30h-40h",
         "note_vndb": "8.10",
         "plateforme": ["pc", "psvita"],
-        "lien_jeu": [""],
+        "lien_jeu": ["https://store.steampowered.com/app/413420/Danganronpa_2_Goodbye_Despair/"],
         "patch_fr": ["fr:https://equipemirai.com/danganronpa-2/"],
         "description": "Deuxième VN de la série Danganronpa.\n\n"
     },
@@ -103,7 +103,7 @@
         "duree": "30h-40h",
         "note_vndb": "7.70",
         "plateforme": ["pc", "ps4", "psvita"],
-        "lien_jeu": [""],
+        "lien_jeu": ["https://store.steampowered.com/app/567640/Danganronpa_V3_Killing_Harmony/"],
         "patch_fr": [],
         "description": "3ème VN de la série Danganronpa.\n\n"
     },
@@ -127,7 +127,7 @@
         "duree": "30h-40h",
         "note_vndb": "",
         "plateforme": ["pc", "psvita"],
-        "lien_jeu": [],
+        "lien_jeu": ["https://store.steampowered.com/app/477740/Zero_Escape_The_Nonary_Games/"],
         "patch_fr": ["fr:http://localhost:5173/jeu/vlr/jeufr/telechargement"],
         "description": "Deuxième VN de la série Zero Escape.\n\n"
     },
@@ -139,7 +139,7 @@
         "duree": "20h-30h",
         "note_vndb": "",
         "plateforme": ["pc"],
-        "lien_jeu": [],
+        "lien_jeu": ["https://store.steampowered.com/app/311240/Zero_Escape_Zero_Time_Dilemma/"],
         "patch_fr": ["fr:http://localhost:5173/jeu/ztd/jeufr/telechargement"],
         "description": "Troisième VN de la série Zero Escape.\n\n"
     }
