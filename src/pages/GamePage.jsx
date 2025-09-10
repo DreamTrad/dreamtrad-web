@@ -70,14 +70,12 @@ export default function GamePage() {
   if (!game) return <div>Jeu introuvable</div>;
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <><h2 className="text-3xl">{game.name}</h2><div className="flex flex-col min-h-screen">
       <GameNavBar />
       <div className="flex flex-1">
         {/* Sidebar */}
         <aside
-          className={`relative bg-bg-tertiary text-text-secondary border-r border-bg-secondary transition-all duration-300 ${
-            sidebarOpen ? "w-64 p-4" : "w-4"
-          }`}
+          className={`relative bg-bg-tertiary text-text-secondary border-r border-bg-secondary transition-all duration-300 ${sidebarOpen ? "w-64 p-4" : "w-4"}`}
         >
           {/* Collapse toggle button collé à la bordure */}
           <button
@@ -95,13 +93,9 @@ export default function GamePage() {
             {/* Redirection générale */}
             <Route
               path=""
-              element={
-                <Navigate
-                  to={`general/${game.categories.general.sections[0].id}`}
-                  replace
-                />
-              }
-            />
+              element={<Navigate
+                to={`general/${game.categories.general.sections[0].id}`}
+                replace />} />
 
             {Object.entries(game.categories).map(([catKey, category]) => {
               const firstSection = category.sections[0];
@@ -111,14 +105,11 @@ export default function GamePage() {
                   {/* Redirection vers la première section */}
                   <Route
                     index
-                    element={
-                      firstSection ? (
-                        <Navigate to={firstSection.id} replace />
-                      ) : (
-                        <DefaultContent text={category.name} />
-                      )
-                    }
-                  />
+                    element={firstSection ? (
+                      <Navigate to={firstSection.id} replace />
+                    ) : (
+                      <DefaultContent text={category.name} />
+                    )} />
 
                   {category.sections.map((section) => {
                     // Cas avec sous-sections
@@ -128,20 +119,16 @@ export default function GamePage() {
                         <Route key={section.id} path={`${section.id}/*`}>
                           <Route
                             index
-                            element={
-                              firstChild ? (
-                                <Navigate to={firstChild.id} replace />
-                              ) : (
-                                <DefaultContent text={section.name} />
-                              )
-                            }
-                          />
+                            element={firstChild ? (
+                              <Navigate to={firstChild.id} replace />
+                            ) : (
+                              <DefaultContent text={section.name} />
+                            )} />
                           {section.children.map((child) => (
                             <Route
                               key={child.id}
                               path={child.id}
-                              element={renderSection(section, catKey, game.id, child)}
-                            />
+                              element={renderSection(section, catKey, game.id, child)} />
                           ))}
                         </Route>
                       );
@@ -152,8 +139,7 @@ export default function GamePage() {
                       <Route
                         key={section.id}
                         path={section.id}
-                        element={renderSection(section, catKey, game.id)}
-                      />
+                        element={renderSection(section, catKey, game.id)} />
                     );
                   })}
                 </Route>
@@ -162,6 +148,6 @@ export default function GamePage() {
           </Routes>
         </section>
       </div>
-    </div>
+    </div></>
   );
 }
