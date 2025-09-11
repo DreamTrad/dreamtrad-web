@@ -36,7 +36,7 @@ function Spoiler({ title = "spoiler", children }) {
   );
 }
 
-// Plugin to transform ::spoiler blocks into JSX
+// Plugin pour ::spoiler
 function remarkCustomSpoiler() {
   return (tree) => {
     visit(tree, (node) => {
@@ -46,13 +46,10 @@ function remarkCustomSpoiler() {
 
         let title = "spoiler";
 
-        // Si le premier enfant est du texte, on le prend comme titre
         if (node.children?.length > 0 && node.children[0].type === "paragraph") {
           const firstChild = node.children[0].children?.[0];
           if (firstChild?.type === "text") {
             title = firstChild.value.trim();
-
-            // On retire ce premier enfant du contenu du spoiler
             node.children.shift();
           }
         }
@@ -74,19 +71,27 @@ export default function MarkdownSection({ gameId, file, content: inlineContent }
     }
 
     if (!file) return;
+
+    // 🔹 Cas 1 : Fichier dans src/data (import.meta.glob)
     const key = gameId
       ? `../../data/jeu/${gameId}/${file}.md`
       : `${file}.md`;
     const importFile = allMarkdown[key];
 
-    if (!importFile) {
-      setContent("# Fichier introuvable");
+    if (importFile) {
+      importFile().then((text) => setContent(text));
       return;
     }
 
-    importFile().then((text) => setContent(text));
+    // 🔹 Cas 2 : Fichier dans public (fetch)
+    fetch(file)
+      .then((res) => {
+        if (!res.ok) throw new Error("Fichier non trouvé");
+        return res.text();
+      })
+      .then((text) => setContent(text))
+      .catch(() => setContent("# Fichier introuvable"));
   }, [gameId, file, inlineContent]);
-
 
   return (
     <div className="prose prose-invert max-w-none">

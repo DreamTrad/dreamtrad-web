@@ -15,19 +15,17 @@ function DefaultContent({ text }) {
   return <div>{text}</div>;
 }
 
-
-// Function to return the right component for a section
-function renderSection(section, catKey, gameId, child = null) {
+// Fonction pour retourner le composant approprié pour une section
+export function renderSection(section, catKey, gameId, child = null) {
+  // Cas d'une sous-section
   if (child) {
+    if (!child.file) return <DefaultContent text={`Sous-section sans fichier`} />;
     return <MarkdownSection gameId={gameId} file={child.file} />;
   }
 
-  // If section has no file → fallback
-  if (!section.file && !section.data) {
-    return <DefaultContent text={`${catKey} - ${section.name}`} />;
-  }
-
+  // Cas spécifique pour chaque catégorie
   if (catKey === "general") {
+    if (!section.file) return <DefaultContent text={`Section générale sans fichier`} />;
     return <MarkdownSection gameId={gameId} file={section.file} />;
   }
 
@@ -35,10 +33,12 @@ function renderSection(section, catKey, gameId, child = null) {
     if (section.id === "achievements") {
       return <AchievementsSection sectionData={section.data} gameId={gameId} />;
     }
+    if (!section.file) return <DefaultContent text={`Guide sans fichier`} />;
     return <MarkdownSection gameId={gameId} file={section.file} />;
   }
 
   if (catKey === "jeufr") {
+    // Téléchargement
     if (section.id === "telechargement") {
       return (
         <DownloadSection
@@ -48,16 +48,27 @@ function renderSection(section, catKey, gameId, child = null) {
         />
       );
     }
+
+    // Installation (avec onglets plateformes)
     if (section.id === "installation") {
       return <PlateformsTabs gameId={gameId} platforms={section.platforms} />;
     }
+
+    // Équipe
     if (section.id === "equipe") {
       return <TeamRoleSection data={section.data} />;
     }
   }
 
-  return <DefaultContent text={`${catKey} - ${section.name}`} />;
+  // Fallback général si aucun cas spécifique
+  if (!section.file && !section.data) {
+    return <DefaultContent text={`${catKey} - ${section.name}`} />;
+  }
+
+  // Fallback Markdown générique
+  return <MarkdownSection gameId={gameId} file={section.file} />;
 }
+
 
 
 

@@ -7,6 +7,8 @@ import GamesListPage from "./pages/GamesListPage";
 import RecruitmentPage from "./pages/RecruitmentPage";
 import DiscoverPage from "./pages/DiscoverPage";
 import ContactPage from "./pages/ContactPage";
+import ArticleListPage from "./pages/ArticleListPage";
+import ArticlePage from "./pages/ArticlePage";
 
 function App() {
 
@@ -20,6 +22,8 @@ function App() {
           <Route path="/jeu/:id/*" element={<GamePage />} />
           <Route path="/jeux" element={<GamesListPage />} />
           <Route path="/decouvrir" element={<DiscoverPage />} />
+          <Route path="/articles" element={<ArticleListPage />} />
+          <Route path="/articles/:id" element={<ArticlePage />} />
           <Route path="/contact" element={<ContactPage />} />
       </Routes>
       </main>

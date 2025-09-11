@@ -6,7 +6,7 @@ const mainMenu = [
   { name: "Accueil", to: "/" },
   { name: "Jeux", to: "/jeux", subMenu: games },
   { name: "Recrutement", to: "/recrutement" },
-  { name: "Articles", to: "/" },
+  { name: "Articles", to: "/articles" },
   { name: "Découvrir", to: "/decouvrir"},
   { name: "Équipe", to: "/" },
   { name: "Contact", to: "/contact" },
