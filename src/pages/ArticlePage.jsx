@@ -7,14 +7,15 @@ export default function ArticlePage() {
   const [article, setArticle] = useState(null);
 
   useEffect(() => {
-    fetch("data/articles.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const found = data.find((a) => a.id === id);
-        setArticle(found);
-      })
-      .catch((err) => console.error("Erreur chargement article :", err));
-  }, [id]);
+  fetch("/data/articles.json")
+    .then(res => res.json())
+    .then(data => {
+      const found = data.find(a => a.id === id);
+      setArticle(found);
+    })
+    .catch(err => console.error("Erreur chargement article :", err));
+}, [id]);
+
 
   if (!article) {
     return <p className="text-center text-red-500 mt-8">Article introuvable</p>;

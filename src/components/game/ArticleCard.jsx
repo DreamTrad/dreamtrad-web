@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function ArticleCard({ id, title, author, date, tags, coverImage, excerpt }) {
   return (
     <Link
-      to={`data/articles/${id}`}
+      to={`/articles/${id}`}
       className="bg-bg-tertiary rounded-lg shadow-md overflow-hidden border border-bg-secondary flex flex-col hover:shadow-xl transition-shadow"
     >
       {/* Image */}
