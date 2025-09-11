@@ -2,7 +2,7 @@
     {
         "id": "999",
         "titre": "9 Hours, 9 Doors, 9 Persons",
-        "image": "/poster/999.webp",
+        "image": "assets/poster/999.webp",
         "genre": [],
         "duree": "10h-20h",
         "note_vndb": "",
@@ -14,7 +14,7 @@
     {
         "id": "ace_attorney_1",
         "titre": "Phoenix Wright : Ace Attorney",
-        "image": "/poster/ace_attorney_1.webp",
+        "image": "assets/poster/ace_attorney_1.webp",
         "genre": ["enquête"],
         "duree": "20h-30h",
         "note_vndb": "8.07",
@@ -26,7 +26,7 @@
     {
         "id": "ace_attorney_2",
         "titre": "Phoenix Wright : Ace Attorney - Justice For All",
-        "image": "/poster/ace_attorney_2.webp",
+        "image": "assets/poster/ace_attorney_2.webp",
         "genre": ["enquête"],
         "duree": "20h-30h",
         "note_vndb": "",
@@ -38,7 +38,7 @@
     {
         "id": "ace_attorney_3",
         "titre": "Phoenix Wright : Ace Attorney - Trials and Tribulations",
-        "image": "/poster/ace_attorney_3.webp",
+        "image": "assets/poster/ace_attorney_3.webp",
         "genre": ["enquête"],
         "duree": "20h-30h",
         "note_vndb": "",
@@ -50,7 +50,7 @@
     {
         "id": "ai1",
         "titre": "AI: THE SOMNIUM FILES",
-        "image": "/poster/ai1.webp",
+        "image": "assets/poster/ai1.webp",
         "genre": [],
         "duree": "20h-30h",
         "note_vndb": "",
@@ -62,7 +62,7 @@
     {
         "id": "ai2",
         "titre": "AI: THE SOMNIUM FILES - nrivanA Initiative",
-        "image": "/poster/ai2.webp",
+        "image": "assets/poster/ai2.webp",
         "genre": [],
         "duree": "20h-30h",
         "note_vndb": "",
@@ -74,7 +74,7 @@
     {
         "id": "danganronpa_1",
         "titre": "Danganronpa: Trigger Happy Havoc",
-        "image": "/poster/danganronpa_1.webp",
+        "image": "assets/poster/danganronpa_1.webp",
         "genre": ["enquête", "gameplay", "killing game"],
         "duree": "30h-40h",
         "note_vndb": "7.63",
@@ -86,7 +86,7 @@
     {
         "id": "danganronpa_2",
         "titre": "Danganronpa 2: Goodbye Despair",
-        "image": "/poster/danganronpa_2.webp",
+        "image": "assets/poster/danganronpa_2.webp",
         "genre": ["enquête", "gameplay", "killing game"],
         "duree": "30h-40h",
         "note_vndb": "8.10",
@@ -98,7 +98,7 @@
     {
         "id": "danganronpa_v3",
         "titre": "Danganronpa V3: Killing Harmony",
-        "image": "/poster/danganronpa_v3.webp",
+        "image": "assets/poster/danganronpa_v3.webp",
         "genre": ["enquête", "gameplay", "killing game"],
         "duree": "30h-40h",
         "note_vndb": "7.70",
@@ -110,7 +110,7 @@
     {
         "id": "paranormasight",
         "titre": "Paranormasight: The Seven Mysteries of Honjo",
-        "image": "/poster/paranormasight.webp",
+        "image": "assets/poster/paranormasight.webp",
         "genre": ["enquête", "mystère", "surnaturel"],
         "duree": "10h-20h",
         "note_vndb": "7.59",
@@ -122,7 +122,7 @@
     {
         "id": "vlr",
         "titre": "Virtue's Last Reward",
-        "image": "/poster/vlr.webp",
+        "image": "assets/poster/vlr.webp",
         "genre": [],
         "duree": "30h-40h",
         "note_vndb": "",
@@ -134,7 +134,7 @@
     {
         "id": "ztd",
         "titre": "Zero Time Dilemma",
-        "image": "/poster/ztd.webp",
+        "image": "assets/poster/ztd.webp",
         "genre": [],
         "duree": "20h-30h",
         "note_vndb": "",

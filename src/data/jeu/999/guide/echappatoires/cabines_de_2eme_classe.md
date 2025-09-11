@@ -1,21 +1,21 @@
 # Échappatoire cabines de 2ème classe
 
 :::spoiler[la position des objets]
-![Image interaction 1](/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_1.webp)
+![Image interaction 1](/assets/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_1.webp)
 
-![Image interaction 2](/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_2.webp)
+![Image interaction 2](/assets/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_2.webp)
 
-![Image interaction 3](/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_3.webp)
+![Image interaction 3](/assets/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_3.webp)
 
-![Image interaction 4](/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_4.webp)
+![Image interaction 4](/assets/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_4.webp)
 
-![Image interaction 5](/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_5.webp)
+![Image interaction 5](/assets/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_5.webp)
 
-![Image interaction 6](/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_6.webp)
+![Image interaction 6](/assets/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_6.webp)
 
-![Image interaction 7](/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_7.webp)
+![Image interaction 7](/assets/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_7.webp)
 
-![Image interaction 8](/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_8.webp)
+![Image interaction 8](/assets/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_8.webp)
 :::
 
 ## Récupération des objets
@@ -55,7 +55,7 @@ Il peut être résolu en 5 mouvements.
 - Échangez la plaque en bas à droite avec celle en haut à droite.
 - Pivotez 1 fois la plaque actuellement en haut à droite.
 
-![Image interaction 8](/jeu/999/guide/echappatoires/cabines_de_2eme_classe/puzzle.webp)
+![Image interaction 8](/assets/jeu/999/guide/echappatoires/cabines_de_2eme_classe/puzzle.webp)
 :::
 
 Une fois le tableau reconstruit, vous pouvez récupérer la clé dans la cavité.

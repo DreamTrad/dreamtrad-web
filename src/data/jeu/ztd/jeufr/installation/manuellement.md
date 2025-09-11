@@ -4,7 +4,7 @@ Si le patch automatique ne fonctionne pas pour vous, vous pouvez toujours appliq
 
 Vous pouvez trouvez ici une version graphique de l’utilitaire, récupérer la dernière version de exécutable compatible avec votre système : [DeltaPatcher](https://github.com/marco-calautti/DeltaPatcher/releases)
 
-![Image Delta Patcher](/jeu/999/jeufr/installation/deltapatcher.webp)
+![Image Delta Patcher](/assets/jeu/999/jeufr/installation/deltapatcher.webp)
 
 - Dans **"Original file"**, indiquez le chemin du **fichier du jeu 00000000.cfsi**.
 - Dans **"XDelta patch"**, indiquez le chemin du fichier de patch, donc **le fichier patch_ztd.xdelta**.

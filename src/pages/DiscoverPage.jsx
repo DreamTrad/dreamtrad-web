@@ -66,7 +66,7 @@ export default function DiscoverPage() {
   const [traductionFilter, setTraductionFilter] = useState("");
 
   useEffect(() => {
-    fetch("/vn_fr_list.json")
+    fetch("data/vn_fr_list.json")
       .then((res) => res.json())
       .then((data) => setRecruitmentData(data))
       .catch((err) => console.error("Erreur chargement decouvrir :", err));

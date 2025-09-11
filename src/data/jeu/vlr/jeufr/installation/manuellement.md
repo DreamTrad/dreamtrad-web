@@ -13,7 +13,7 @@ Vous pouvez trouvez ici une version graphique de l’utilitaire, récupérer la 
 | ze2_data_en_us.bin.xdelta     | ze2_data_en_us.bin        | Traduit tout VLR                                                                         |
 
 
-![Image Delta Patcher](/jeu/999/jeufr/installation/deltapatcher.webp)
+![Image Delta Patcher](/assets/jeu/999/jeufr/installation/deltapatcher.webp)
 
 Pour chaque fichier, il faut faire ceci :
 - Dans **"Original file"**, indiquez le chemin du **fichier du jeu** correspondant.

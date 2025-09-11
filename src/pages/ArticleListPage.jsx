@@ -5,7 +5,7 @@ export default function ArticleListPage() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch("/articles.json")
+    fetch("data/articles.json")
       .then((res) => res.json())
       .then((data) => setArticles(data))
       .catch((err) => console.error("Erreur chargement articles :", err));

@@ -16,7 +16,7 @@ export default function GamesListPage() {
             {/* Game image */}
             <div className="aspect-video overflow-hidden">
               <img
-                src={`/jeu/${game.id}/cover.webp`}
+                src={`assets/jeu/${game.id}/cover.webp`}
                 alt={game.name}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
               />

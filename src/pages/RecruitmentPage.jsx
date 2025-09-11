@@ -6,7 +6,7 @@ export default function RecruitmentPage() {
   const [recruitmentData, setRecruitmentData] = useState([]);
 
   useEffect(() => {
-    fetch("/recrutement.json")
+    fetch("data/recrutement.json")
       .then(res => res.json())
       .then(data => setRecruitmentData(data))
       .catch(err => console.error("Erreur chargement recrutement :", err));

@@ -7,7 +7,7 @@ export default function ArticlePage() {
   const [article, setArticle] = useState(null);
 
   useEffect(() => {
-    fetch("/articles.json")
+    fetch("data/articles.json")
       .then((res) => res.json())
       .then((data) => {
         const found = data.find((a) => a.id === id);
