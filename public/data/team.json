@@ -1,0 +1,11 @@
+[
+  {
+    "id": "silous",
+    "name": "Silous",
+    "avatar": "assets/team/silous.webp",
+    "bio": "Salut, moi c’est Silous. J’aime énormément beaucoup d’œuvres japonaises, et notamment des Visual Novel.\n\nPour ce qui des projets de traduction, j’ai d’abord commencé par reprendre le projet de traduction de 999 DS. Ce projet n’est pas terminé, et est en pause pour le moment.\nPar la suite, j’ai rejoint l’équipe quand on m’a proposé de travailler sur la traduction de la version PC de 999. Puis je suis resté pour travailler sur les projets suivant ; Les Zero Escape, mais pas que !\n\nSinon, je touche pas mal à la programmation, et l’ergonomie et l’automatisation sont des notions qui me tiennent à cœur, Donc, je travaille sur des outils, api, etc. pour essayer de faciliter la vie pour la traduction.",
+    "skills": ["Traduction anglais", "Traduction japonais", "programmation", "édition d’images"],
+    "projects": ["9 Hours 9 Doors 9 Persons", "Virtue's Last Reward", "Zero Time Dilemma"],
+    "links": ["https://twitter.com/silous", "https://github.com/silous"]
+  }
+]

@@ -10,7 +10,7 @@ const mainMenu = [
   { name: "Recrutement", to: "/recrutement" },
   { name: "Articles", to: "/articles" },
   { name: "Découvrir", to: "/decouvrir" },
-  { name: "Équipe", to: "/" },
+  { name: "Équipe", to: "/equipe" },
   { name: "Contact", to: "/contact" },
 ];
 
