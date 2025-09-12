@@ -3,6 +3,7 @@ import flagFrIcon from "../../assets/icons/website/flag_fr.svg";
 import githubIcon from "../../assets/icons/website/github.svg";
 import globeIcon from "../../assets/icons/website/globe.svg";
 import instagramIcon from "../../assets/icons/website/instagram.svg";
+import itchioIcon from "../../assets/icons/website/itchio.svg";
 import steamIcon from "../../assets/icons/website/steam.svg";
 import twitchIcon from "../../assets/icons/website/twitch.svg";
 import xitterIcon from "../../assets/icons/website/xitter.svg";
@@ -12,6 +13,7 @@ const iconMap = [
   { match: ["discord.gg", "discord.com"], icon: discordIcon, label: "Discord" },
   { match: ["github.com"], icon: githubIcon, label: "GitHub" },
   { match: ["instagram.com"], icon: instagramIcon, label: "Instagram" },
+  { match: ["itch.io"], icon: itchioIcon, label: "Itch.io"},
   { match: ["store.steampowered.com"], icon: steamIcon, label: "Steam" },
   { match: ["twitch.tv"], icon: twitchIcon, label: "Twitch" },
   { match: ["twitter.com", "x.com"], icon: xitterIcon, label: "X / Twitter" },
