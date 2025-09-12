@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import MarkdownSection from "../components/ui/MarkdownSection";
 
@@ -21,7 +21,11 @@ export default function ArticlePage() {
   }
 
   return (
+
     <div className="p-8 max-w-4xl mx-auto">
+      <Link to="/articles" className="inline-block mb-6 text-accent hover:underline">
+  ← Retour aux articles
+</Link>
       <div className="bg-bg-tertiary border border-bg-secondary rounded-xl shadow-lg p-6">
         {/* Titre */}
         <h1 className="text-3xl font-bold text-accent mb-4">{article.title}</h1>
