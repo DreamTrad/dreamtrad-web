@@ -18,7 +18,7 @@
         "genre": ["enquête"],
         "duree": "20h-30h",
         "note_vndb": "8.07",
-        "plateforme": ["pc", "ds", "switch"],
+        "plateforme": ["pc", "ds", "switch", "ps4", "xboxone", "android", "ios"],
         "lien_jeu": ["https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/"],
         "patch_fr": [],
         "description": "Premier VN de la série Ace Attorney.\n\nDans ce futur fictif, toute personne accusée d’un crime est immédiatement jugée lors d’un procès limité à trois jours. L’avocat de la défense doit prouver l’innocence de son client en trouvant des contradictions dans les témoignages des témoins et en rassemblant des preuves.\n\nLe joueur incarne Phoenix Wright, un jeune avocat débutant au cabinet dirigé par Mia Fey. Il est assisté par Maya Fey, la sœur de Mia, qui possède la capacité de canaliser les esprits pour aider Wright au tribunal. Tout au long de ses affaires, Wright se retrouve souvent en opposition avec Benjamin Hunter, un procureur brillant et redoutable, créant un affrontement récurrent entre défense et accusation."
@@ -30,7 +30,7 @@
         "genre": ["enquête"],
         "duree": "20h-30h",
         "note_vndb": "",
-        "plateforme": ["pc", "ds", "switch"],
+        "plateforme": ["pc", "ds", "switch", "ps4", "xboxone", "android", "ios"],
         "lien_jeu": ["https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/"],
         "patch_fr": [],
         "description": "Deuxième VN de la série Ace Attorney.\n\n"
@@ -42,10 +42,10 @@
         "genre": ["enquête"],
         "duree": "20h-30h",
         "note_vndb": "",
-        "plateforme": ["pc", "ds", "switch"],
+        "plateforme": ["pc", "ds", "switch", "ps4", "xboxone", "android", "ios"],
         "lien_jeu": ["https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/"],
         "patch_fr": [],
-        "description": "Deuxième VN de la série Ace Attorney.\n\n"
+        "description": "Troisième VN de la série Ace Attorney.\n\n"
     },
     {
         "id": "ai1",
@@ -105,7 +105,7 @@
         "plateforme": ["pc", "ps4", "psvita"],
         "lien_jeu": ["https://store.steampowered.com/app/567640/Danganronpa_V3_Killing_Harmony/"],
         "patch_fr": [],
-        "description": "3ème VN de la série Danganronpa.\n\n"
+        "description": "Troisième VN de la série Danganronpa.\n\n"
     },
     {
         "id": "paranormasight",
