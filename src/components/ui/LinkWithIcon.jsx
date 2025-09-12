@@ -1,9 +1,21 @@
-import steamIcon from "../../assets/icons/website/steam.svg";
-import globeIcon from "../../assets/icons/website/globe.svg";
+import discordIcon from "../../assets/icons/website/discord.svg";
 import flagFrIcon from "../../assets/icons/website/flag_fr.svg";
+import githubIcon from "../../assets/icons/website/github.svg";
+import globeIcon from "../../assets/icons/website/globe.svg";
+import instagramIcon from "../../assets/icons/website/instagram.svg";
+import steamIcon from "../../assets/icons/website/steam.svg";
+import twitchIcon from "../../assets/icons/website/twitch.svg";
+import xitterIcon from "../../assets/icons/website/xitter.svg";
+import youtubeIcon from "../../assets/icons/website/youtube.svg";
 
 const iconMap = [
+  { match: ["discord.gg", "discord.com"], icon: discordIcon, label: "Discord" },
+  { match: ["github.com"], icon: githubIcon, label: "GitHub" },
+  { match: ["instagram.com"], icon: instagramIcon, label: "Instagram" },
   { match: ["store.steampowered.com"], icon: steamIcon, label: "Steam" },
+  { match: ["twitch.tv"], icon: twitchIcon, label: "Twitch" },
+  { match: ["twitter.com", "x.com"], icon: xitterIcon, label: "X / Twitter" },
+  { match: ["youtube.com", "youtu.be"], icon: youtubeIcon, label: "YouTube" },
 ];
 
 export default function LinkWithIcon({ url }) {
