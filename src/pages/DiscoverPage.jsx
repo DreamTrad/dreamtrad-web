@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
-import RecruitmentCard from "../components/game/DiscoverCard";
-import MarkdownSection from "../components/game/MarkdownSection";
+import RecruitmentCard from "../components/card/DiscoverCard";
+import MarkdownSection from "../components/ui/MarkdownSection";
 
 // ----------------------
 // Composant MultiDropdown

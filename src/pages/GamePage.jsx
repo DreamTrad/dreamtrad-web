@@ -8,7 +8,7 @@ import AchievementsSection from "../components/game/AchievementsSection";
 import TeamRoleSection from "../components/game/TeamRoleSection";
 import DownloadSection from "../components/game/DownloadSection";
 import PlateformsTabs from "../components/game/PlateformTabs";
-import MarkdownSection from "../components/game/MarkdownSection";
+import MarkdownSection from "../components/ui/MarkdownSection";
 
 
 function DefaultContent({ text }) {

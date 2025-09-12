@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import RecruitmentCard from "../components/game/RecruitmentCard";
-import MarkdownSection from "../components/game/MarkdownSection";
+import RecruitmentCard from "../components/card/RecruitmentCard";
+import MarkdownSection from "../components/ui/MarkdownSection";
 
 export default function RecruitmentPage() {
   const [recruitmentData, setRecruitmentData] = useState([]);

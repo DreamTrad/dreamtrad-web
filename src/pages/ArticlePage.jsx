@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import MarkdownSection from "../components/game/MarkdownSection";
+import MarkdownSection from "../components/ui/MarkdownSection";
 
 export default function ArticlePage() {
   const { id } = useParams();

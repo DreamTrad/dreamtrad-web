@@ -1,4 +1,4 @@
-import MarkdownSection from "./MarkdownSection";
+import MarkdownSection from "../ui/MarkdownSection";
 import DownloadButton from "../ui/DownloadButton";
 
 export default function DownloadSection({ gameId, file, platforms }) {

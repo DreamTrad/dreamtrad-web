@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MarkdownSection from "./MarkdownSection";
+import MarkdownSection from "../ui/MarkdownSection";
 
 export default function PlateformsTabs({ gameId, platforms }) {
   const [active, setActive] = useState(platforms[0].id);

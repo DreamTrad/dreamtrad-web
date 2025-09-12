@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react"; // icônes burger & close
 import headerImage from "../../assets/dreamtrad-header.jpg";
 import NavLink from "../ui/NavLink";
 import { games } from "../../data/jeu";

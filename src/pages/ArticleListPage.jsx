@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ArticleCard from "../components/game/ArticleCard";
+import ArticleCard from "../components/card/ArticleCard";
 
 export default function ArticleListPage() {
   const [articles, setArticles] = useState([]);

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import TeamMemberCard from "../components/game/TeamMemberCard";
+import TeamMemberCard from "../components/card/TeamMemberCard";
 
 export default function TeamPage() {
     const [team, setTeam] = useState([]);

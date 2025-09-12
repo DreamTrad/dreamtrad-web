@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import MarkdownSection from "./MarkdownSection";
+import MarkdownSection from "../ui/MarkdownSection";
 
 export default function AchievementCard({ image, titleEn, titleFr, description, resolution, hidden }) {
   const [revealed, setRevealed] = useState(!hidden);
