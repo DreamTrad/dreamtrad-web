@@ -69,9 +69,5 @@ export const game = {
         { id: "equipe", name: "Équipe", data: team },
       ],
     },
-    articles: {
-      name: "Articles",
-      sections: [],
-    },
   },
 };
