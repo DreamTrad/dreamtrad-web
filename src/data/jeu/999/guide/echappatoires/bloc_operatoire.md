@@ -59,4 +59,4 @@ Il ne va rien se passer car les parties de corps de Lucy et John sont mélangés
 Échanger toutes les parties du corps, sauf le cœur.
 :::
 
-Vous pouvez maintenant récupérer la clé de Jupiter et ouvrir la porte de sortie et ainsi terminer l’échappatoire.
+Vous pouvez maintenant récupérer la clé de Jupiter dans le compartiment en bois devant la table de John et ouvrir la porte de sortie et ainsi terminer l’échappatoire.
