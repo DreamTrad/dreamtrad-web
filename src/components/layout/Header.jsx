@@ -1,11 +1,10 @@
 import { useState } from "react";
 import headerImage from "../../assets/dreamtrad-header.jpg";
 import NavLink from "../ui/NavLink";
-import { games } from "../../data/jeu";
 
 const mainMenu = [
   { name: "Accueil", to: "/" },
-  { name: "Jeux", to: "/jeux", subMenu: games },
+  { name: "Jeux", to: "/jeux"},
   { name: "Recrutement", to: "/recrutement" },
   { name: "Articles", to: "/articles" },
   { name: "Découvrir", to: "/decouvrir" },
