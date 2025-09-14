@@ -142,5 +142,17 @@
         "lien_jeu": ["https://store.steampowered.com/app/311240/Zero_Escape_Zero_Time_Dilemma/"],
         "patch_fr": ["fr:http://localhost:5173/jeu/ztd/jeufr/telechargement"],
         "description": "Troisième VN de la série Zero Escape.\n\n"
+    },
+    {
+        "id": "the_zodiac_trial",
+        "titre": "The Zodiac Trial",
+        "image": "assets/poster/zodiac_trial.webp",
+        "genre": [],
+        "duree": "20h-30h",
+        "note_vndb": "",
+        "plateforme": ["pc"],
+        "lien_jeu": ["https://store.steampowered.com/app/1513120/The_Zodiac_Trial/"],
+        "patch_fr": ["fr:http://localhost:5173/jeu/zodiac_trial/jeufr/telechargement"],
+        "description": "Premier jeu de la quadrilogie the shuffled deck games.\n\n"
     }
 ]
