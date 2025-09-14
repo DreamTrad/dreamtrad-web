@@ -16,9 +16,14 @@
 ## Récupération des objets
 
 Récupérez les objets suivants :
--
+- La boîte à musique sur la table de chevet.
+- Le document sur les bases dans le tiroir central où sont les 7 écrans.
 
 ## Résolution des énigmes
+
+Interagissez avec le clavier devant les écrans affichant "zero". Puis partez dans l’autre salle.
+
+
 
 
 
