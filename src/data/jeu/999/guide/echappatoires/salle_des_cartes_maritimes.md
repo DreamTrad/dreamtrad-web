@@ -9,23 +9,34 @@
 
 ![Image interaction 4](/assets/jeu/999/guide/echappatoires/salle_des_cartes_maritimes/interaction_4.webp)
 
-![Image interaction 5](/assets/jeu/999/guide/echappatoires/salle_des_cartes_maritimes/interaction_5.webp)
-
 :::
 
 ## Récupération des objets
 
 Récupérez les objets suivants :
--
+- Le tas de cartes maritimes dans le premier tiroir du meuble à tiroir.
+- La montre à gousset dan le tiroir central du bureau.
 
 ## Résolution des énigmes
 
+Utilisez le tas de cartes maritimes sur la carte du monde accroché au mur. Vous obtiendrez 2 documents qui vous serviront pour résoudre une énigme.
 
+Allez dans l’autre pièce, et examiner d’abord le transmetteur d’ordre, puis ensuite examinez le gouvernail, celui à droite du transmetteur d’ordre.
+
+Cela va déclencher un mini-jeu. Il faudra saisir les bons caps dans le bon ordre. Suivez ceux des documents que vous avez récupérés.
 
 :::spoiler[la solution]
+Sud -> Ouest -> Sud-Ouest -> Nord-Ouest -> Est -> Nord
 
+S -> W -> SW -> NW -> E -> N
 :::
 
+Vous obtiendrez une poignée du gouvernail, que vous pourrez installer sur le transmetteur d’ordre. Ce qui amène à une deuxième énigme. Cette fois-ci c’est la vitesse lors de chaque trajet qu’il faut renseigner. Aidez-vous encore des documents que vous avez récupérés.
 
+:::spoiler[la solution]
+FULL -> HALF -> SLOW -> FULL -> HALF -> DEAD SLOW -> STOP
+:::
 
-Utilisez-la pour ouvrir le porte de sortie et terminer l’échappatoire.
+Cela va allumer l’un des écrans d’affichage entre les deux portes. Utilisez la montre à gousset sur ce tableau d’affichage pour changer l’heure de la montre.
+
+Utilisez la montre sur la porte avec l’emplacement prévu pour, pour terminer l’échappatoire.
