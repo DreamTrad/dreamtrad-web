@@ -44,14 +44,14 @@ Combinez le couteau rouillé avec la pierre à aiguiser pour avoir un couteau qu
 
 Ce mémo est un indice pour déverrouiller le four.
 
-:::spoiler[un indice pour trouver le code]
+:::spoiler[un indice pour trouver le code du four]
 Étudier bien les piles d’assiette et le reçu à côté des assiettes. Les explications devraient vous guider sur la signification de l’addition.
 
-Si ce n’est toujours pas clair : l’addition est intégralement en hexadécimal.
+Si ce n’est toujours pas clair malgré les explications : l’addition est intégralement en hexadécimal.
 :::
 <br>
 
-:::spoiler[la solution]
+:::spoiler[la solution du code du four]
 C₁₆ = 12₁₀
 
 10₁₆ = 16₁₀
