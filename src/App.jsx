@@ -10,14 +10,15 @@ import ArticlePage from "./pages/ArticlePage";
 import DiscoverPage from "./pages/DiscoverPage";
 import TeamPage from "./pages/TeamPage";
 import ContactPage from "./pages/ContactPage";
+import ReglementationsPage from "./pages/ReglementationsPage";
 
 function App() {
-
   return (
-    <>
-    <Header />
-      <main className="flex-direction min-h-screen bg-bg text-text">
-      <Routes>
+    <div className="flex flex-col min-h-screen bg-bg text-text">
+      <Header />
+
+      <main className="flex-1">
+        <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/jeux" element={<GamesListPage />} />
           <Route path="/jeu/:id/*" element={<GamePage />} />
@@ -27,11 +28,14 @@ function App() {
           <Route path="/decouvrir" element={<DiscoverPage />} />
           <Route path="/equipe" element={<TeamPage />} />
           <Route path="/contact" element={<ContactPage />} />
-      </Routes>
+          <Route path="/mentions-legales" element={<ReglementationsPage />} />
+        </Routes>
       </main>
-    <Footer />
-    </>
-  )
+
+      <Footer />
+    </div>
+  );
 }
+
 
 export default App
