@@ -4,7 +4,7 @@ import { games } from "../../data/jeu";
 export default function GameNavBar() {
   const { id } = useParams();
   const location = useLocation();
-  const game = games.find(g => g.id === id);
+  const game = games.find((g) => g.id === id);
 
   if (!game) return null;
 
@@ -21,7 +21,9 @@ export default function GameNavBar() {
           // Special case for general: link to first section
           if (key === "general") {
             const firstSection = category.sections[0];
-            to = firstSection ? `/jeu/${id}/${key}/${firstSection.id}` : `/jeu/${id}/${key}`;
+            to = firstSection
+              ? `/jeu/${id}/${key}/${firstSection.id}`
+              : `/jeu/${id}/${key}`;
             // End=false so the link stays active when navigating subsections
           }
 

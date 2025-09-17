@@ -7,9 +7,9 @@ export default function RecruitmentPage() {
 
   useEffect(() => {
     fetch("data/recrutement.json")
-      .then(res => res.json())
-      .then(data => setRecruitmentData(data))
-      .catch(err => console.error("Erreur chargement recrutement :", err));
+      .then((res) => res.json())
+      .then((data) => setRecruitmentData(data))
+      .catch((err) => console.error("Erreur chargement recrutement :", err));
   }, []);
 
   const file = "../../data/recrutement-global";
@@ -23,23 +23,22 @@ export default function RecruitmentPage() {
       <div className="mt-16 mb-16">
         <MarkdownSection file={file} />
       </div>
-<div className="grid gap-8 justify-center
+      <div
+        className="grid gap-8 justify-center
                 grid-cols-1          /* mobile par défaut */
-                sm:grid-cols-[repeat(auto-fit,minmax(600px,1fr))]">
-  {recruitmentData.map((project) => (
-    <RecruitmentCard
-      key={project.id}
-      title={project.title}
-      image={project.image}
-      roles={project.roles}
-      contact={project.contact}
-      description={project.description}
-    />
-  ))}
-</div>
-
-
-
+                sm:grid-cols-[repeat(auto-fit,minmax(600px,1fr))]"
+      >
+        {recruitmentData.map((project) => (
+          <RecruitmentCard
+            key={project.id}
+            title={project.title}
+            image={project.image}
+            roles={project.roles}
+            contact={project.contact}
+            description={project.description}
+          />
+        ))}
+      </div>
     </div>
   );
 }

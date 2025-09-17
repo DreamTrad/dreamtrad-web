@@ -6,7 +6,10 @@ export default function PlatformIcons({ platforms = [] }) {
         const normalized = platform.toLowerCase();
 
         try {
-          const icon = new URL(`../../assets/icons/platforms/${normalized}.svg`, import.meta.url).href;
+          const icon = new URL(
+            `../../assets/icons/platforms/${normalized}.svg`,
+            import.meta.url
+          ).href;
           return (
             <img
               key={idx}

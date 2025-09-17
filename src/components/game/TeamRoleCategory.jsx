@@ -1,6 +1,5 @@
 import LinkWithIcon from "../ui/LinkWithIcon";
 
-
 export default function TeamRoleCategory({ category }) {
   return (
     <div className="bg-bg-secondary p-4 rounded-md shadow-md space-y-2">
@@ -11,14 +10,10 @@ export default function TeamRoleCategory({ category }) {
             <span className="font-medium">{person.name}</span>
 
             {/* External link icon if link exists */}
-           {person.link && (
-              <LinkWithIcon url={person.link} />
-            )}
+            {person.link && <LinkWithIcon url={person.link} />}
 
             {/* Role only if non-empty */}
-            {person.role && (
-              <span>— {person.role}</span>
-            )}
+            {person.role && <span>— {person.role}</span>}
           </li>
         ))}
       </ul>

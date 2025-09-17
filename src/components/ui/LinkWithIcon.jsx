@@ -13,7 +13,7 @@ const iconMap = [
   { match: ["discord.gg", "discord.com"], icon: discordIcon, label: "Discord" },
   { match: ["github.com"], icon: githubIcon, label: "GitHub" },
   { match: ["instagram.com"], icon: instagramIcon, label: "Instagram" },
-  { match: ["itch.io"], icon: itchioIcon, label: "Itch.io"},
+  { match: ["itch.io"], icon: itchioIcon, label: "Itch.io" },
   { match: ["store.steampowered.com"], icon: steamIcon, label: "Steam" },
   { match: ["twitch.tv"], icon: twitchIcon, label: "Twitch" },
   { match: ["twitter.com", "x.com"], icon: xitterIcon, label: "X / Twitter" },

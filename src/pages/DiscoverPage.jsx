@@ -102,8 +102,8 @@ export default function DiscoverPage() {
     const projectGenres = Array.isArray(project.genre)
       ? project.genre
       : project.genre
-        ? project.genre.split(",").map((g) => g.trim())
-        : [];
+      ? project.genre.split(",").map((g) => g.trim())
+      : [];
 
     const projectDurees = project.duree ? [project.duree] : [];
 
@@ -122,8 +122,8 @@ export default function DiscoverPage() {
       traductionFilter === "officielle"
         ? isOfficial
         : traductionFilter === "non-officielle"
-          ? !isOfficial
-          : true;
+        ? !isOfficial
+        : true;
 
     return matchName && matchGenre && matchDuree && matchTraduction;
   });

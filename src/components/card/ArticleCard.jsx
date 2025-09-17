@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
 
-export default function ArticleCard({ id, title, author, date, tags, coverImage, excerpt }) {
+export default function ArticleCard({
+  id,
+  title,
+  author,
+  date,
+  tags,
+  coverImage,
+  excerpt,
+}) {
   return (
     <Link
       to={`/articles/${id}`}

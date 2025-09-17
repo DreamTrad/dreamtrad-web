@@ -8,10 +8,7 @@ import { visit } from "unist-util-visit";
 
 // -------- Markdown imports --------
 const allMarkdown = import.meta.glob(
-  [
-    "../../data/jeu/**/*.md",
-    "../../data/*.md",
-  ],
+  ["../../data/jeu/**/*.md", "../../data/*.md"],
   { query: "?raw", import: "default" }
 );
 
@@ -46,7 +43,10 @@ function remarkCustomSpoiler() {
 
         let title = "spoiler";
 
-        if (node.children?.length > 0 && node.children[0].type === "paragraph") {
+        if (
+          node.children?.length > 0 &&
+          node.children[0].type === "paragraph"
+        ) {
           const firstChild = node.children[0].children?.[0];
           if (firstChild?.type === "text") {
             title = firstChild.value.trim();
@@ -61,7 +61,11 @@ function remarkCustomSpoiler() {
 }
 
 // -------- Main component --------
-export default function MarkdownSection({ gameId, file, content: inlineContent }) {
+export default function MarkdownSection({
+  gameId,
+  file,
+  content: inlineContent,
+}) {
   const [content, setContent] = useState("");
 
   useEffect(() => {
@@ -73,9 +77,7 @@ export default function MarkdownSection({ gameId, file, content: inlineContent }
     if (!file) return;
 
     // 🔹 Cas 1 : Fichier dans src/data (import.meta.glob)
-    const key = gameId
-      ? `../../data/jeu/${gameId}/${file}.md`
-      : `${file}.md`;
+    const key = gameId ? `../../data/jeu/${gameId}/${file}.md` : `${file}.md`;
     const importFile = allMarkdown[key];
 
     if (importFile) {

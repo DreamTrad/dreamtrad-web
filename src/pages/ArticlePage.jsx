@@ -8,12 +8,12 @@ export default function ArticlePage() {
 
   useEffect(() => {
     fetch("/data/articles.json")
-      .then(res => res.json())
-      .then(data => {
-        const found = data.find(a => a.id === id);
+      .then((res) => res.json())
+      .then((data) => {
+        const found = data.find((a) => a.id === id);
         setArticle(found);
       })
-      .catch(err => console.error("Erreur chargement article :", err));
+      .catch((err) => console.error("Erreur chargement article :", err));
   }, [id]);
 
   if (!article) {
@@ -21,11 +21,13 @@ export default function ArticlePage() {
   }
 
   return (
-
     <div className="p-8 max-w-4xl mx-auto">
-      <Link to="/articles" className="inline-block mb-6 text-accent hover:underline">
-  ← Retour aux articles
-</Link>
+      <Link
+        to="/articles"
+        className="inline-block mb-6 text-accent hover:underline"
+      >
+        ← Retour aux articles
+      </Link>
       <div className="bg-bg-tertiary border border-bg-secondary rounded-xl shadow-lg p-6">
         {/* Titre */}
         <h1 className="text-3xl font-bold text-accent mb-4">{article.title}</h1>
@@ -33,7 +35,8 @@ export default function ArticlePage() {
         {/* Auteur + date */}
         <p className="text-sm text-text-tertiary mb-6">
           {article.author} —{" "}
-          {new Date(article.date).toLocaleDateString("fr-FR")} · {article.readingTime}
+          {new Date(article.date).toLocaleDateString("fr-FR")} ·{" "}
+          {article.readingTime}
         </p>
 
         {/* Image de couverture */}
