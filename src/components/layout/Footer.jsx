@@ -21,13 +21,17 @@ export default function Footer() {
                     <h3 className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">
                         Navigation
                     </h3>
-                    <ul className="flex flex-col gap-2 text-sm">
+                    <ul className="grid grid-cols-2 gap-2 text-sm">
                         <li><Link to="/" className="hover:text-accent">Accueil</Link></li>
+                        <li><Link to="/jeux" className="hover:text-accent">Jeux</Link></li>
+                        <li><Link to="/recrutement" className="hover:text-accent">Recrutement</Link></li>
+                        <li><Link to="/decouvrir" className="hover:text-accent">Découvrir</Link></li>
                         <li><Link to="/articles" className="hover:text-accent">Articles</Link></li>
                         <li><Link to="/equipe" className="hover:text-accent">Équipe</Link></li>
                         <li><Link to="/contact" className="hover:text-accent">Contact</Link></li>
                     </ul>
                 </div>
+
 
                 {/* Colonne 3 - Réseaux */}
                 <div>
