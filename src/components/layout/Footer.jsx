@@ -50,14 +50,14 @@ export default function Footer() {
             Nous suivre
           </h3>
           <div className="flex gap-4">
-            <a href="https://discord.gg/xxxxx" target="_blank" rel="noreferrer">
+            <a href="https://t.co/O6tlFvR8wa" target="_blank" rel="noreferrer">
               <img
                 src={discordIcon}
                 alt="Discord"
                 className="w-6 h-6 hover:opacity-80"
               />
             </a>
-            <a href="https://github.com/xxxxx" target="_blank" rel="noreferrer">
+            <a href="https://github.com/DreamTrad/dreamtrad-web" target="_blank" rel="noreferrer">
               <img
                 src={githubIcon}
                 alt="GitHub"
@@ -65,7 +65,7 @@ export default function Footer() {
               />
             </a>
             <a
-              href="https://twitter.com/xxxxx"
+              href="https://x.com/DreamTeamTrad"
               target="_blank"
               rel="noreferrer"
             >
