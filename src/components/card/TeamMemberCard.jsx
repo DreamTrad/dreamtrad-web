@@ -1,7 +1,14 @@
 import LinkWithIcon from "../ui/LinkWithIcon";
 import ReactMarkdown from "react-markdown";
 
-export default function TeamMemberCard({ name, avatar, bio, skills, projects, links }) {
+export default function TeamMemberCard({
+  name,
+  avatar,
+  bio,
+  skills,
+  projects,
+  links,
+}) {
   return (
     <div className="bg-bg-tertiary border border-bg-secondary rounded-xl shadow-md overflow-hidden p-6 flex flex-col gap-6">
       {/* Header */}
@@ -51,7 +58,9 @@ export default function TeamMemberCard({ name, avatar, bio, skills, projects, li
         {/* Projets */}
         {projects?.length > 0 && (
           <div className="w-full md:w-1/3 bg-bg-secondary rounded-md p-4">
-            <h3 className="text-sm font-semibold text-accent mb-2">Projets :</h3>
+            <h3 className="text-sm font-semibold text-accent mb-2">
+              Projets :
+            </h3>
             <ul className="list-disc list-inside text-sm text-text-secondary space-y-1">
               {projects.map((proj, idx) => (
                 <li key={idx}>{proj}</li>

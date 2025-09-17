@@ -1,7 +1,14 @@
 import { useState, useEffect } from "react";
 import MarkdownSection from "../ui/MarkdownSection";
 
-export default function AchievementCard({ image, titleEn, titleFr, description, resolution, hidden }) {
+export default function AchievementCard({
+  image,
+  titleEn,
+  titleFr,
+  description,
+  resolution,
+  hidden,
+}) {
   const [revealed, setRevealed] = useState(!hidden);
 
   // Synchroniser avec le prop hidden si celui-ci change (ex: revealAll)
@@ -13,7 +20,6 @@ export default function AchievementCard({ image, titleEn, titleFr, description, 
     if (hidden) setRevealed(true);
   };
 
-
   return (
     <div
       className="relative bg-bg-tertiary text-text-secondary rounded-lg shadow-md p-4 flex gap-4 items-start w-full max-w-5/6 cursor-pointer"
@@ -23,7 +29,9 @@ export default function AchievementCard({ image, titleEn, titleFr, description, 
       <img
         src={image}
         alt={titleEn}
-        className={`w-16 h-16 object-cover rounded-md flex-shrink-0 ${revealed ? "" : "blur-sm"}`}
+        className={`w-16 h-16 object-cover rounded-md flex-shrink-0 ${
+          revealed ? "" : "blur-sm"
+        }`}
       />
 
       {/* content */}
@@ -35,13 +43,16 @@ export default function AchievementCard({ image, titleEn, titleFr, description, 
             <p>{description}</p>
             {resolution && (
               <p className="text-xs text-text-tertiary mt-2">
-                <MarkdownSection content={`:::spoiler[comment l’obtenir]\n${resolution}\n:::`} />
+                <MarkdownSection
+                  content={`:::spoiler[comment l’obtenir]\n${resolution}\n:::`}
+                />
               </p>
             )}
           </>
         ) : (
           <div className="flex items-center justify-center text-center w-full h-full text-text-tertiary rounded-md">
-            Succès caché<br />
+            Succès caché
+            <br />
             Cliquez pour le dévoiler
           </div>
         )}

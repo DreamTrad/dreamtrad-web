@@ -4,7 +4,7 @@ import NavLink from "../ui/NavLink";
 
 const mainMenu = [
   { name: "Accueil", to: "/" },
-  { name: "Jeux", to: "/jeux"},
+  { name: "Jeux", to: "/jeux" },
   { name: "Recrutement", to: "/recrutement" },
   { name: "Articles", to: "/articles" },
   { name: "Découvrir", to: "/decouvrir" },
@@ -31,7 +31,10 @@ export default function Header() {
         {/* Desktop nav */}
         <ul className="hidden md:flex justify-between max-w-6xl mx-auto">
           {mainMenu.map((item) => (
-            <li key={item.name} className={item.subMenu ? "relative group" : ""}>
+            <li
+              key={item.name}
+              className={item.subMenu ? "relative group" : ""}
+            >
               <NavLink to={item.to}>{item.name}</NavLink>
 
               {item.subMenu && (
@@ -55,26 +58,25 @@ export default function Header() {
 
         {/* Burger button (mobile only) */}
         {/* Bouton burger */}
-<button
-  onClick={() => setOpen(!open)}
-  className="md:hidden p-2 text-text-secondary"
->
-  ☰
-</button>
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden p-2 text-text-secondary"
+        >
+          ☰
+        </button>
 
-{/* Menu mobile */}
-{open && (
-  <ul className="absolute top-0 left-0 w-full bg-bg-tertiary shadow-lg z-50 flex flex-col">
-    {mainMenu.map((item) => (
-      <li key={item.name}>
-        <NavLink to={item.to} onClick={() => setOpen(false)} fullWidth>
-          {item.name}
-        </NavLink>
-      </li>
-    ))}
-  </ul>
-)}
-
+        {/* Menu mobile */}
+        {open && (
+          <ul className="absolute top-0 left-0 w-full bg-bg-tertiary shadow-lg z-50 flex flex-col">
+            {mainMenu.map((item) => (
+              <li key={item.name}>
+                <NavLink to={item.to} onClick={() => setOpen(false)} fullWidth>
+                  {item.name}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        )}
       </nav>
     </header>
   );

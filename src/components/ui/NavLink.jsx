@@ -18,10 +18,11 @@ export default function NavLink({
     <Link
       to={to}
       {...props}
-      className={`transition ${hoverClass} ${fullWidth
+      className={`transition ${hoverClass} ${
+        fullWidth
           ? "block w-full px-4 py-2 rounded-md"
           : "inline-block px-4 py-2 rounded-md"
-        } ${className}`}
+      } ${className}`}
     >
       {children}
     </Link>

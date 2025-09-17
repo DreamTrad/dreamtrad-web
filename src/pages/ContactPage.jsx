@@ -22,10 +22,10 @@ export default function ContactPage() {
 
     emailjs
       .send(
-        "service_ojinfwk",      // ID de service
-        "template_wgl7rth",     // ID du template
-        templateParams,         // variables envoyées
-        "4XQDzQMfhKf5nKZW9"     // clé publique
+        "service_ojinfwk", // ID de service
+        "template_wgl7rth", // ID du template
+        templateParams, // variables envoyées
+        "4XQDzQMfhKf5nKZW9" // clé publique
       )
       .then(() => setStatus("Message envoyé"))
       .catch(() => setStatus("Erreur, réessayez plus tard"));
