@@ -1,6 +1,6 @@
 # Échappatoire cabine de 3ème classe
 
-:::spoiler[la position des objets]
+:::spoiler[la position des objets et éléments importants]
 ![Image interaction 1](/assets/jeu/999/guide/echappatoires/cabine_de_3eme_classe/interaction_1.webp)
 
 ![Image interaction 2](/assets/jeu/999/guide/echappatoires/cabine_de_3eme_classe/interaction_2.webp)

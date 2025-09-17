@@ -1,6 +1,6 @@
 # Échappatoire cabines de 2ème classe
 
-:::spoiler[la position des objets]
+:::spoiler[la position des objets et éléments importants]
 ![Image interaction 1](/assets/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_1.webp)
 
 ![Image interaction 2](/assets/jeu/999/guide/echappatoires/cabines_de_2eme_classe/interaction_2.webp)
@@ -42,20 +42,20 @@ Retournez dans la cabine où se trouve Violette, et interragissez avec le carrea
 
 Vous pouvez désormais compléter le tableau présent dans la cabine où se trouvent Santa et Aranéa.
 
-:::spoiler[un indice pour le résoudre]
+:::spoiler[un indice reconstituer le tableau]
 Le tableau doit être identique à celui présent dans l’autre cabine.
 Il peut être résolu en 5 mouvements.
 :::
 
 <br>
 
-:::spoiler[la solution pas à pas]
+:::spoiler[la solution pas à pas pour reconstituer le tableau]
 - Échangez la plaque en haut à gauche avec celle en bas à droite.
 - Pivotez 2 fois la plaque actuellement en haut à gauche.
 - Échangez la plaque en bas à droite avec celle en haut à droite.
 - Pivotez 1 fois la plaque actuellement en haut à droite.
 
-![Image interaction 8](/assets/jeu/999/guide/echappatoires/cabines_de_2eme_classe/puzzle.webp)
+![Image puzzle](/assets/jeu/999/guide/echappatoires/cabines_de_2eme_classe/puzzle.webp)
 :::
 
 Une fois le tableau reconstruit, vous pouvez récupérer la clé dans la cavité.
