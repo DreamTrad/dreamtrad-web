@@ -3,10 +3,6 @@
 :::spoiler[la position des objets et éléments importants]
 ![Image interaction 1](/assets/jeu/999/guide/echappatoires/salle_des_douches/interaction_1.webp)
 
-![Image interaction 2](/assets/jeu/999/guide/echappatoires/salle_des_douches/interaction_2.webp)
-
-![Image interaction 3](/assets/jeu/999/guide/echappatoires/salle_des_douches/interaction_3.webp)
-
 :::
 
 ## Récupération des objets
