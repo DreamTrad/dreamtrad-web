@@ -9,23 +9,35 @@
 
 ![Image interaction 4](/assets/jeu/999/guide/echappatoires/salle_d_isolement/interaction_4.webp)
 
-![Image interaction 5](/assets/jeu/999/guide/echappatoires/salle_d_isolement/interaction_5.webp)
-
 :::
 
 ## Récupération des objets
 
 Récupérez les objets suivants :
--
+- Le tiroir du bureau de la chambre du milieu.
+- La poignée de la chasse d’eau des toilette de la chambre la plus proche.
+- La tige de tournevis du porte-papier toilettes de la chambre la plus proche.
+- Optionel (ne sert qu’à comprendre une énigme évidente) :
+    - La serviette à la position de l’oreiller sur le lit de la chambre du milieu.
 
 ## Résolution des énigmes
 
+Assemblez la poignée avec la tige de tournevis pour former un tournevis, puis servez-vous-en pour dévisser le tiroir de la chambre la plus proche. Utilisez également le tournevis sur le tiroir avec la poignée étrange qui était dans la chambre du milieu pour dévisser la poignée.
 
+Allez ensuite dans la chambre du milieu et insérez le tiroir avec les protubérences à l’arrière dans l’emplacement du tiroir, puis ouvrez le tiroir et récupérez la plaque.
 
-:::spoiler[la solution]
+Toujours dans la chambre du milieu, placez la poignée sur le robinet et ouvrez-le pour faire couler l’eau. Rendez-vous ensuite dans la chambre de gauche pour récupérez la plaque dans le lavabo. La serviette sert à vous faire comprendre que les deux lavabo communiquent.
 
+Si vous voulez connaitre par vous-même la solution de l’énigme suivante, allez dans la chambre du fond, et avec le miroir au dos du tiroir sans poignée, faite réfléchir la lumière sur les deux miroirs. Cela va faire apparaitre des symboles et des chiffres.
+
+Ces symboles sont sur les toilettes des deux premières chambres, et il faut associer les chiffres avec les symboles pour tirer la chasse d’eau le bon nombre de fois.
+
+Allez dans la chambre de gauche et tirez la chasse 4 fois. Ensuite, allez dans la chambre du milieu et tirez la chasse 7 fois. Cela va déverrouillez le tiroir de la chambre du fond. Ouvrez-le pour trouver 2 plaques.
+
+Vous avez désormais toutes les plaques, rendez-vous dans le couloir et résolvez l’énigme avec le mot "emergence" sur la porte de sortie. Il faut placer les 4 plaques à la place de celles du mot.
+
+:::spoiler[où placer les plaques]
+Il faut remplacer les 4 "E" du mot.
 :::
 
-
-
-Utilisez-la pour ouvrir le porte de sortie et terminer l’échappatoire.
+vous pouvez ouvrir la porte de sortie et terminer l’échappatoire.
