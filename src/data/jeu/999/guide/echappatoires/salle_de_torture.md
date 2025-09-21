@@ -5,27 +5,30 @@
 
 ![Image interaction 2](/assets/jeu/999/guide/echappatoires/salle_de_torture/interaction_2.webp)
 
-![Image interaction 3](/assets/jeu/999/guide/echappatoires/salle_de_torture/interaction_3.webp)
-
-![Image interaction 4](/assets/jeu/999/guide/echappatoires/salle_de_torture/interaction_4.webp)
-
-![Image interaction 5](/assets/jeu/999/guide/echappatoires/salle_de_torture/interaction_5.webp)
-
 :::
 
 ## Récupération des objets
 
-Récupérez les objets suivants :
--
+Récupérez l’objet suivant :
+- La clé de serrage sur la table avec un drap.
 
 ## Résolution des énigmes
 
+Utilisez la clé de serrage sur le hublot du réservoir, puis fouillez à l’intérieur pour obtenir la clé du soleil.
 
+Examinez ensuite l’appareil à droite de la chaise de torture. Il faudra trouvez quels interrupteurs mettre sur ON. Il faut reconstituer le même visuel que celui de l’indice
 
-:::spoiler[la solution]
-
+:::spoiler[quels interrupteur mettre sur ON]
+Les deux du haut et celui en bas à droite.
 :::
 
+Allez vers le panneau de contrôle et abaissez le levier jaune. Cela va faire apparaitre derrière le sol vitré des lettres. Ce sont les lettres des boutons du panneau de commande à enclencher. Appuyez sur les boutons B, D, E, F.
 
+Utilisez la clé du soleil pour ouvrir les attaches de la chaise de torture puis regardez l’écran à gauche de la chaise. Il faut faire une version plus poussé de l’énigme précédente.
 
-Utilisez-la pour ouvrir le porte de sortie et terminer l’échappatoire.
+:::spoiler[quels interrupteur mettre sur ON pour la deuxième version]
+- Flèche gauche : Il faut mettre les deux sur 2.
+- Flèche droite : Il faut mettre les deux sur 1.
+:::
+
+La porte de sortie est maintenant déverrouillée, ouvrez-la pour terminer l’échappatoire.
