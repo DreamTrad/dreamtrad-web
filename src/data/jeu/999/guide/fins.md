@@ -5,10 +5,10 @@
 :::spoiler[les conditions]
 Faite un de ces choix :
 
-- Porte 5 -> Porte 7 -> Porte 1
-- Porte 5 -> Porte 8 -> Porte 1
-- Porte 4 -> Porte 8 -> Porte 1
-- Porte 4 -> Porte 7 -> Porte 1 sans faire les bons choix nécessaire à la véritable fin
+- Porte 5 → Porte 7 → Porte 1
+- Porte 5 → Porte 8 → Porte 1
+- Porte 4 → Porte 8 → Porte 1
+- Porte 4 → Porte 7 → Porte 1 sans faire les bons choix nécessaire à la véritable fin
 :::
 
 
@@ -17,9 +17,9 @@ Faite un de ces choix :
 :::spoiler[les conditions]
 Faite un de ces choix :
 
-- Porte 5 -> Porte 7 -> Porte 6
-- Porte 4 -> Porte 8 -> Porte 6
-- Porte 4 -> Porte 7 -> Porte 6
+- Porte 5 → Porte 7 → Porte 6
+- Porte 4 → Porte 8 → Porte 6
+- Porte 4 → Porte 7 → Porte 6
 :::
 
 ## Fin sous-marin
@@ -27,18 +27,18 @@ Faite un de ces choix :
 :::spoiler[les conditions]
 Faite un de ces choix :
 
-- Porte 5 -> Porte 7 -> Porte 2
-- Porte 5 -> Porte 8 -> Porte 2
-- Porte 4 -> Porte 8 -> Porte 2
-- Porte 4 -> Porte 7 -> Porte 2
-- Porte 5 -> Porte 3 -> Porte 2
-- Porte 4 -> Porte 3 -> Porte 2
+- Porte 5 → Porte 7 → Porte 2
+- Porte 5 → Porte 8 → Porte 2
+- Porte 4 → Porte 8 → Porte 2
+- Porte 4 → Porte 7 → Porte 2
+- Porte 5 → Porte 3 → Porte 2
+- Porte 4 → Porte 3 → Porte 2
 :::
 
 ## Fin coffre-fort
 
 :::spoiler[les conditions]
-- Porte 5 -> Porte 8 -> Porte 6
+- Porte 5 → Porte 8 → Porte 6
 :::
 
 ## Fin cercueil

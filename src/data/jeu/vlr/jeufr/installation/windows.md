@@ -1,7 +1,7 @@
 # Instructions patch automatique windows
 
 - Si les fichiers de votre jeu ont été modifiés, allez dans les paramètres du jeu sur Steam, et faite :
-Propriétés -> Fichiers installés -> Vérifier l’intégrité des fichiers du jeu
+Propriétés → Fichiers installés → Vérifier l’intégrité des fichiers du jeu
 
 ![Image restoration des fichiers d’origine Steam](/assets/jeu/999/installation/jeufr/steam_restoration_fichiers.webp)
 
