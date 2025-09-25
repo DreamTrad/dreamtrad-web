@@ -1,3 +1,5 @@
+import RecentArticles from "../components/RecentArticles";
+
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-bg-primary text-white">
@@ -37,14 +39,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="border p-6 rounded-md">
-            <h2 className="text-lg font-semibold mb-2">Articles récents</h2>
-            <ul className="list-disc list-inside text-sm">
-              <li>Article 1</li>
-              <li>Article 2</li>
-              <li>Article 3</li>
-            </ul>
-          </div>
+             <RecentArticles limit={3} />
         </aside>
       </div>
 
