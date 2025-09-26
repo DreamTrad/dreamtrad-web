@@ -5,6 +5,7 @@ import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
 import remarkDirective from "remark-directive";
 import { visit } from "unist-util-visit";
+import LoaderOverlay from "../ui/LoaderOverlay";
 
 // -------- Markdown imports --------
 const allMarkdown = import.meta.glob(
@@ -67,7 +68,8 @@ export default function MarkdownSection({
   content: inlineContent,
 }) {
   const [content, setContent] = useState("");
-
+  const [loading, setLoading] = useState(false);
+  
   useEffect(() => {
     if (inlineContent) {
       setContent(inlineContent);
@@ -76,12 +78,15 @@ export default function MarkdownSection({
 
     if (!file) return;
 
+    setLoading(true);
+
     // 🔹 Cas 1 : Fichier dans src/data (import.meta.glob)
     const key = gameId ? `../../data/jeu/${gameId}/${file}.md` : `${file}.md`;
     const importFile = allMarkdown[key];
 
     if (importFile) {
-      importFile().then((text) => setContent(text));
+      importFile().then((text) => setContent(text))
+      .finally(() => setLoading(false));;
       return;
     }
 
@@ -92,8 +97,11 @@ export default function MarkdownSection({
         return res.text();
       })
       .then((text) => setContent(text))
-      .catch(() => setContent("# Fichier introuvable"));
+      .catch(() => setContent("# Fichier introuvable"))
+      .finally(() => setLoading(false));
   }, [gameId, file, inlineContent]);
+
+  if (loading) return <LoaderOverlay />;
 
   return (
     <div className="prose prose-invert max-w-none">
