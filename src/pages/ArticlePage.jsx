@@ -1,83 +1,50 @@
 import { useParams, Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 import MarkdownSection from "../components/ui/MarkdownSection";
 import LoaderOverlay from "../components/ui/LoaderOverlay";
+import useFetchWithLoader from "../hooks/useFetchWithLoader";
 
 export default function ArticlePage() {
   const { id } = useParams();
-  const [article, setArticle] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const { data: articles, loading, error } = useFetchWithLoader("/data/articles.json", []);
 
-  useEffect(() => {
-    setLoading(true);
-    fetch("/data/articles.json")
-      .then(res => res.json())
-      .then(data => {
-        const found = data.find(a => a.id === id);
-        setArticle(found);
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
-  }, [id]);
+  if (loading) return <LoaderOverlay />;
+  if (error) return <p className="text-red-500 text-center">Erreur : {error.message}</p>;
 
-  // Article introuvable
-  if (!loading && !article) {
-    return <p className="text-center text-red-500 mt-8">Article introuvable</p>;
-  }
+  const article = articles.find((a) => a.id === id);
+  if (!article) return <p className="text-center text-red-500 mt-8">Article introuvable</p>;
 
   return (
-    <div className="p-8 max-w-4xl mx-auto">
-      <Link
-        to="/articles"
-        className="inline-block mb-6 text-accent hover:underline"
-      >
+    <div className="relative p-8 max-w-4xl mx-auto">
+      <Link to="/articles" className="inline-block mb-6 text-accent hover:underline">
         ← Retour aux articles
       </Link>
 
-      {loading ? (
-        <LoaderOverlay className="w-full" />
-      ) : (
-        <div className="bg-bg-tertiary border border-bg-secondary rounded-xl shadow-lg p-6">
-          {/* Titre */}
-          <h1 className="text-3xl font-bold text-accent mb-4">{article.title}</h1>
+      <div className="bg-bg-tertiary border border-bg-secondary rounded-xl shadow-lg p-6">
+        <h1 className="text-3xl font-bold text-accent mb-4">{article.title}</h1>
+        <p className="text-sm text-text-tertiary mb-6">
+          {article.author} — {new Date(article.date).toLocaleDateString("fr-FR")} · {article.readingTime}
+        </p>
 
-          {/* Auteur + date */}
-          <p className="text-sm text-text-tertiary mb-6">
-            {article.author} — {new Date(article.date).toLocaleDateString("fr-FR")} · {article.readingTime}
-          </p>
+        {article.coverImage && (
+          <img src={article.coverImage} alt={article.title} className="w-full rounded-lg mb-6 shadow-md" />
+        )}
 
-          {article.coverImage && (
-            <img
-              src={article.coverImage}
-              alt={article.title}
-              className="w-full rounded-lg mb-6 shadow-md"
-            />
-          )}
+        {article.markdownPath ? (
+          <MarkdownSection file={article.markdownPath} />
+        ) : (
+          <p className="text-text-secondary italic">Aucun contenu disponible pour cet article.</p>
+        )}
 
-          {/* Contenu Markdown */}
-          {article.markdownPath ? (
-            <MarkdownSection file={article.markdownPath} />
-          ) : (
-            <p className="text-text-secondary italic">
-              Aucun contenu disponible pour cet article.
-            </p>
-          )}
-
-          {/* Tags */}
-          {article.tags?.length > 0 && (
-            <div className="flex gap-2 mt-6 flex-wrap">
-              {article.tags.map((tag, idx) => (
-                <span
-                  key={idx}
-                  className="bg-bg-secondary px-2 py-1 rounded text-xs text-text-secondary"
-                >
-                  #{tag}
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
-      )}
+        {article.tags?.length > 0 && (
+          <div className="flex gap-2 mt-6 flex-wrap">
+            {article.tags.map((tag, idx) => (
+              <span key={idx} className="bg-bg-secondary px-2 py-1 rounded text-xs text-text-secondary">
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

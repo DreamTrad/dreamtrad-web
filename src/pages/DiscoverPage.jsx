@@ -1,6 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import RecruitmentCard from "../components/card/DiscoverCard";
 import MarkdownSection from "../components/ui/MarkdownSection";
+import LoaderOverlay from "../components/ui/LoaderOverlay";
+import useFetchWithLoader from "../hooks/useFetchWithLoader";
 
 // ----------------------
 // Composant MultiDropdown
@@ -59,24 +61,20 @@ function MultiDropdown({ label, options, selected, setSelected }) {
 // Page principale
 // ----------------------
 export default function DiscoverPage() {
-  const [recruitmentData, setRecruitmentData] = useState([]);
+  const { data: recruitmentData, loading, error } = useFetchWithLoader(
+    "data/vn_fr_list.json",
+    []
+  );
+
+  const file = "../../data/decouvrir-global";
+
+  // Les states pour filtres
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedGenres, setSelectedGenres] = useState([]);
   const [selectedDurees, setSelectedDurees] = useState([]);
   const [traductionFilter, setTraductionFilter] = useState("");
 
-  useEffect(() => {
-    fetch("data/vn_fr_list.json")
-      .then((res) => res.json())
-      .then((data) => setRecruitmentData(data))
-      .catch((err) => console.error("Erreur chargement decouvrir :", err));
-  }, []);
-
-  const file = "../../data/decouvrir-global";
-
-  // ----------------------
-  // Extraire les options uniques
-  // ----------------------
+  // Options uniques
   const genres = Array.from(
     new Set(
       recruitmentData.flatMap((p) => {
@@ -91,6 +89,7 @@ export default function DiscoverPage() {
     new Set(recruitmentData.map((p) => p.duree).filter(Boolean))
   ).sort();
 
+
   // ----------------------
   // Filtrage
   // ----------------------
@@ -102,8 +101,8 @@ export default function DiscoverPage() {
     const projectGenres = Array.isArray(project.genre)
       ? project.genre
       : project.genre
-      ? project.genre.split(",").map((g) => g.trim())
-      : [];
+        ? project.genre.split(",").map((g) => g.trim())
+        : [];
 
     const projectDurees = project.duree ? [project.duree] : [];
 
@@ -117,16 +116,22 @@ export default function DiscoverPage() {
         ? true
         : selectedDurees.some((d) => projectDurees.includes(d));
 
-    const isOfficial = !project.patch_fr;
+    const hasFanTranslation =
+      Array.isArray(project.patch_fr) &&
+      project.patch_fr.some((link) => link.startsWith("fr:"));
+
     const matchTraduction =
       traductionFilter === "officielle"
-        ? isOfficial
+        ? !hasFanTranslation
         : traductionFilter === "non-officielle"
-        ? !isOfficial
-        : true;
+          ? hasFanTranslation
+          : true;
 
     return matchName && matchGenre && matchDuree && matchTraduction;
   });
+
+  if (loading) return <LoaderOverlay />; // Loader local sur la zone
+  if (error) return <p className="text-red-500 text-center">{error.message}</p>;
 
   return (
     <div className="p-8 max-w-9xl mx-auto">
