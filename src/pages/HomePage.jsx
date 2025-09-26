@@ -1,4 +1,5 @@
 import RecentArticles from "../components/RecentArticles";
+import DiscordCard from "../components/card/DiscordCard";
 
 export default function HomePage() {
   return (
@@ -10,7 +11,7 @@ export default function HomePage() {
           <section className="border p-6 rounded-md">
             <h2 className="text-lg font-semibold mb-2">Texte de présentation</h2>
             <p>
-              Placeholder : qui on est, ce qu&apos;on veut faire…
+              Placeholder : qui on est, ce qu’on veut faire…
             </p>
           </section>
 
@@ -27,15 +28,12 @@ export default function HomePage() {
 
         {/* Colonne secondaire */}
         <aside className="flex flex-col gap-6">
-          <div className="border p-6 rounded-md text-center">
-            <h2 className="text-lg font-semibold mb-2">Rejoindre le Discord</h2>
-            <p>Placeholder bouton / lien Discord</p>
-          </div>
+          <DiscordCard inviteUrl="https://t.co/O6tlFvR8wa"/>
 
           <div className="border p-6 rounded-md">
             <h2 className="text-lg font-semibold mb-2">Recrutement</h2>
             <p>
-              Placeholder : lien vers projets où il y a besoin d&apos;aide
+              Placeholder : lien vers projets où il y a besoin d’aide
             </p>
           </div>
 
