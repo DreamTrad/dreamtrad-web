@@ -6,8 +6,6 @@ export default function ProjectProgressCard({
   progress,
   recruiting,
 }) {
-  // progress est un objet du genre :
-  // { traduction: 40, images: 40, technique: 40, relecture: 40 }
 
   const bars = [
     { label: "Traduction", value: progress.traduction },

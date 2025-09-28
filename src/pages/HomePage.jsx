@@ -31,7 +31,7 @@ export default function HomePage() {
 <h2 className="text-lg font-semibold mb-4 text-center">
   Avancement des projets
 </h2>
-<div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+<div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(400px,1fr))]">
   {projects.length > 0 ? (
     projects.map((project) => (
       <ProjectProgressCard
