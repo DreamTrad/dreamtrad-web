@@ -1,5 +1,5 @@
 import { useState } from "react";
-import headerImage from "../../assets/dreamtrad-header.jpg";
+import { Link } from "react-router-dom";
 import NavLink from "../ui/NavLink";
 
 const mainMenu = [
@@ -16,68 +16,56 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-bg-secondary text-text-secondary">
-      {/* Image */}
-      <div className="w-full h-64 overflow-hidden">
-        <img
-          src={headerImage}
-          alt="Header image"
-          className="w-full h-full object-cover"
-        />
-      </div>
+    <header className="bg-bg-secondary text-text-secondary relative h-16 flex items-center">
+      <nav className="flex items-center justify-center w-full relative h-full">
 
-      {/* Navigation */}
-      <nav className="mx-6 relative">
-        {/* Desktop nav */}
-        <ul className="hidden md:flex justify-between max-w-6xl mx-auto">
+        {/* Logo + titre à gauche */}
+        <Link
+          to="/"
+          className="absolute left-4 flex items-center gap-2 h-full"
+        >
+          <img
+            src="/assets/dreamtrad-logo.ico"
+            alt="Logo DreamTrad"
+            className="h-10 w-10 object-contain"
+          />
+          <span className="text-xl font-bold text-accent">DreamTrad</span>
+        </Link>
+
+        {/* Menu desktop centré */}
+        <ul className="hidden menu:flex gap-6 justify-center max-w-6xl mx-auto h-full items-center">
           {mainMenu.map((item) => (
-            <li
-              key={item.name}
-              className={item.subMenu ? "relative group" : ""}
-            >
+            <li key={item.name}>
               <NavLink to={item.to}>{item.name}</NavLink>
-
-              {item.subMenu && (
-                <ul className="absolute left-0 top-full w-fit z-50 bg-bg-tertiary rounded-md shadow-lg invisible group-hover:visible">
-                  {item.subMenu.map((sub) => (
-                    <li key={sub.id}>
-                      <NavLink
-                        to={`/jeu/${sub.id}`}
-                        hoverType="tertiary"
-                        fullWidth
-                      >
-                        {sub.name}
-                      </NavLink>
-                    </li>
-                  ))}
-                </ul>
-              )}
             </li>
           ))}
         </ul>
 
-        {/* Burger button (mobile only) */}
-        {/* Bouton burger */}
+        {/* Burger menu */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden p-2 text-text-secondary"
+          className="absolute right-4 menu:hidden px-4 py-2 text-2xl rounded-md transition hover:bg-hover-secondary"
         >
           ☰
         </button>
-
-        {/* Menu mobile */}
-        {open && (
-          <ul className="absolute top-0 left-0 w-full bg-bg-tertiary shadow-lg z-50 flex flex-col">
-            {mainMenu.map((item) => (
-              <li key={item.name}>
-                <NavLink to={item.to} onClick={() => setOpen(false)} fullWidth>
-                  {item.name}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        )}
       </nav>
+
+      {/* Menu mobile */}
+      {open && (
+        <ul className="absolute top-full left-0 w-full bg-bg-tertiary shadow-lg z-50 flex flex-col">
+          {mainMenu.map((item) => (
+            <li key={item.name}>
+              <NavLink
+                to={item.to}
+                onClick={() => setOpen(false)}
+                fullWidth
+              >
+                {item.name}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      )}
     </header>
   );
 }
