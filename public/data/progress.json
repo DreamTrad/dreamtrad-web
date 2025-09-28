@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "428: Shibuya Scramble",
+    "image": "/assets/poster/428.webp",
+    "progress": {
+      "traduction": 42,
+      "images": 0,
+      "technique": 70,
+      "relecture": 15
+    },
+    "recruiting": true
+  },
+  {
+    "id": 2,
+    "title": "The Divine Deception",
+    "image": "/assets/poster/zodiac_trial.webp",
+    "progress": {
+      "traduction": 30,
+      "images": 70,
+      "technique": 100,
+      "relecture": 0
+    },
+    "recruiting": false
+  }
+]
