@@ -35,7 +35,7 @@ Il vous faut désormais ouvrir le coffre sur la table. Pour cela, une feuille a 
 :::spoiler[un indice pour trouver le code du coffre]
 Les chiffres correspondent au nombre d’atome dans chaque molécule. Le but est de trouvé combien il y en a dans les 3 molécules noté sur la feuille avec un "?".
 
-La réponse sera ces trois chiffre, de haut en bas -> (Dioxyde de carbone, Ammoniac, Éthanol)
+La réponse sera ces trois chiffre, de haut en bas → (Dioxyde de carbone, Ammoniac, Éthanol)
 :::
 <br>
 

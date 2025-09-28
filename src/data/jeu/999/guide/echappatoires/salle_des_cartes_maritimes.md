@@ -26,15 +26,15 @@ Allez dans l’autre pièce, et examiner d’abord le transmetteur d’ordre, pu
 Cela va déclencher un mini-jeu. Il faudra saisir les bons caps dans le bon ordre. Suivez ceux des documents que vous avez récupérés.
 
 :::spoiler[la solution]
-Sud -> Ouest -> Sud-Ouest -> Nord-Ouest -> Est -> Nord
+Sud → Ouest → Sud-Ouest → Nord-Ouest → Est → Nord
 
-S -> W -> SW -> NW -> E -> N
+S → W → SW → NW → E → N
 :::
 
 Vous obtiendrez une poignée du gouvernail, que vous pourrez installer sur le transmetteur d’ordre. Ce qui amène à une deuxième énigme. Cette fois-ci c’est la vitesse lors de chaque trajet qu’il faut renseigner. Aidez-vous encore des documents que vous avez récupérés.
 
 :::spoiler[la solution]
-FULL -> HALF -> SLOW -> FULL -> HALF -> DEAD SLOW -> STOP
+FULL → HALF → SLOW → FULL → HALF → DEAD SLOW → STOP
 :::
 
 Cela va allumer l’un des écrans d’affichage entre les deux portes. Utilisez la montre à gousset sur ce tableau d’affichage pour changer l’heure de la montre.

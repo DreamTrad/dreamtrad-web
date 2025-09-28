@@ -9,8 +9,6 @@
 
 ![Image interaction 4](/assets/jeu/999/guide/echappatoires/bar_casino/interaction_4.webp)
 
-![Image interaction 5](/assets/jeu/999/guide/echappatoires/bar_casino/interaction_5.webp)
-
 :::
 
 ## Récupération des objets
