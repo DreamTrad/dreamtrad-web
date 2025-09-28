@@ -1,19 +1,19 @@
 import RecentArticles from "../components/RecentArticles";
 import DiscordCard from "../components/card/DiscordCard";
+import MarkdownSection from "../components/ui/MarkdownSection";
 
 export default function HomePage() {
+
+  const file_presentation = "../../data/presentation-accueil";
+
   return (
     <div className="flex flex-col min-h-screen bg-bg-primary text-white">
 
       <div className="flex-1 container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+
         {/* Colonne principale */}
         <div className="lg:col-span-2 flex flex-col gap-6">
-          <section className="border p-6 rounded-md">
-            <h2 className="text-lg font-semibold mb-2">Texte de présentation</h2>
-            <p>
-              Placeholder : qui on est, ce qu’on veut faire…
-            </p>
-          </section>
+          <MarkdownSection file={file_presentation} />
 
           <section className="border p-6 rounded-md text-center">
             <h2 className="text-lg font-semibold mb-2">Avancement des projets</h2>
