@@ -179,7 +179,7 @@ export default function DiscoverPage() {
       </div>
 
       {/* Grille */}
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 w-full">
+      <div className="grid gap-8 w-full justify-center [grid-template-columns:repeat(auto-fit,minmax(320px,800px))]">
         {filteredData
           .sort((a, b) => a.titre.localeCompare(b.titre))
           .map((project) => (
