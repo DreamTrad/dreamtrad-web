@@ -44,7 +44,7 @@ export default function DiscoverCard({
       </div>
 
       {/* Contenu principal */}
-      <div className="flex flex-col md:flex-row p-6 gap-6">
+      <div className="flex flex-col md:flex-row p-6 gap-6 flex-grow">
         {/* Image */}
         <div className="flex-[2] flex items-center justify-center">
           <img
