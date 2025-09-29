@@ -140,7 +140,20 @@
         "plateforme": ["pc"],
         "lien_jeu": ["https://store.steampowered.com/app/303310/The_House_in_Fata_Morgana/"],
         "patch_fr": [],
-        "description": "Vous vous réveillez dans un vieux manoir délabré, face à une femme aux yeux de jade qui se présente comme votre servante. Elle vous apprend que vous êtes le maître de la maison, mais vous n’avez aucun souvenir de qui vous êtes, ni même si vous êtes vivant.\n\nElle vous invite à explorer les couloirs du manoir et à contempler les tragédies de ses habitants à travers quatre portes :\n\nEn 1603, l’art et le théâtre prospèrent, mais tous les enfants Rhodes ne trouvent pas leur bonheur dans ce jardin fleuri.\n\nEn 1707, le manoir en ruines abrite une bête dont la férocité provoque un massacre.\n\nEn 1869, époque de grandes avancées technologiques, le maître du manoir, un homme d’affaires ambitieux investi dans les chemins de fer, devient obsédé par l’argent et le pouvoir, négligeant et maltraitant son épouse.\n\nEn 1099, un jeune homme se croit maudit et une fille aux cheveux blancs, Giselle, est pourchassée pour sorcellerie.\n\nAprès avoir assisté à ces tragédies, vous pouvez choisir de clore votre histoire… ou de continuer. Mais une voix vous avertit : « Tu as pu les supporter parce que ce n’étaient pas tes tragédies. »"
+        "description": "Premier VN de la série Fata Morgana.\n\nVous vous réveillez dans un vieux manoir délabré, face à une femme aux yeux de jade qui se présente comme votre servante. Elle vous apprend que vous êtes le maître de la maison, mais vous n’avez aucun souvenir de qui vous êtes, ni même si vous êtes vivant.\n\nElle vous invite à explorer les couloirs du manoir et à contempler les tragédies de ses habitants à travers quatre portes :\n\nEn 1603, l’art et le théâtre prospèrent, mais tous les enfants Rhodes ne trouvent pas leur bonheur dans ce jardin fleuri.\n\nEn 1707, le manoir en ruines abrite une bête dont la férocité provoque un massacre.\n\nEn 1869, époque de grandes avancées technologiques, le maître du manoir, un homme d’affaires ambitieux investi dans les chemins de fer, devient obsédé par l’argent et le pouvoir, négligeant et maltraitant son épouse.\n\nEn 1099, un jeune homme se croit maudit et une fille aux cheveux blancs, Giselle, est pourchassée pour sorcellerie.\n\nAprès avoir assisté à ces tragédies, vous pouvez choisir de clore votre histoire… ou de continuer. Mais une voix vous avertit : « Tu as pu les supporter parce que ce n’étaient pas tes tragédies. »"
+    },
+    {
+        "id": "fata_morgana_requiem",
+        "titre": "The House in Fata Morgana: A Requiem for Innocence",
+        "image": "assets/poster/fata_morgana_requiem.webp",
+        "genre": [],
+        "duree": "20h-30h",
+        "note_vndb": "8,55",
+        "popularite_vndb": "133",
+        "plateforme": ["pc"],
+        "lien_jeu": ["https://store.steampowered.com/app/804700/The_House_in_Fata_Morgana_A_Requiem_for_Innocence/"],
+        "patch_fr": [],
+        "description": "Deuxième VN de la série Fata Morgana.\n\nUne jeune fille, dont on dit que le sang a des pouvoirs curatifs, est à genoux devant le seigneur des terres environnantes, mutilée et battue. Dans son village natal, elle était considérée comme la fille de Dieu. Et à présent, le seigneur brandit son épée, sur le point de lui couper la tête.\n\n« Tu es une foutue sorcière dans la peau d'une sainte ! »\n\n\nMais juste avant qu'il puisse abattre sa lame, un jeune homme surgit, sauvant la fille\n\nAinsi commence le premier chapitre « heureux » de la vie de cette fillette.\nDébute alors le premier acte d'une tragédie qui s'étendra sur près d'un millénaire."
     },
     {
         "id": "gnosia",
@@ -179,7 +192,7 @@
         "plateforme": ["ds"],
         "lien_jeu": [],
         "patch_fr": [],
-        "description": "Trois ans plus tôt, alors que son équipier Bradley espionne l'association de commerce illégal de tableaux Nile, Kyle Hyde, enquêteur, apprend que son ami a disparu et tente, pour des raisons inconnues, de s'enfuir. Kyle le poursuit en voiture à travers la ville et tous deux se retrouvent sur le port. Kyle crie au loin à son ami « Bradley ! Pourquoi ? », mais ce dernier, ne disant mot, se contente de courir, obligeant Kyle à l'abattre. Son corps tombe dans l'eau, mais n'est jamais retrouvé.\n\nTrois ans plus tard, Kyle, qui a quitté la police et travaille maintenant pour la vente de produits ménagers Red Crow, cherche depuis trois ans Bradley qu'il croit en vie afin de savoir pourquoi il l'a trahi. Son patron Ed Vincent se charge en fait également de retrouver des objets perdus. Il charge Kyle d'aller à l'hôtel Dusk sur demande d'un client afin de retrouver certains objets. Sur la route, il aperçoit une jeune fille aux cheveux blancs. Kyle ne va pas tarder à découvrir que tous les clients de l'hôtel sont tous liés par le destin, et à Bradley. "
+        "description": "Premier VN de la série des aventures de Kyle Hyde.\n\nTrois ans plus tôt, alors que son équipier Bradley espionne l'association de commerce illégal de tableaux Nile, Kyle Hyde, enquêteur, apprend que son ami a disparu et tente, pour des raisons inconnues, de s'enfuir. Kyle le poursuit en voiture à travers la ville et tous deux se retrouvent sur le port. Kyle crie au loin à son ami « Bradley ! Pourquoi ? », mais ce dernier, ne disant mot, se contente de courir, obligeant Kyle à l'abattre. Son corps tombe dans l'eau, mais n'est jamais retrouvé.\n\nTrois ans plus tard, Kyle, qui a quitté la police et travaille maintenant pour la vente de produits ménagers Red Crow, cherche depuis trois ans Bradley qu'il croit en vie afin de savoir pourquoi il l'a trahi. Son patron Ed Vincent se charge en fait également de retrouver des objets perdus. Il charge Kyle d'aller à l'hôtel Dusk sur demande d'un client afin de retrouver certains objets. Sur la route, il aperçoit une jeune fille aux cheveux blancs. Kyle ne va pas tarder à découvrir que tous les clients de l'hôtel sont tous liés par le destin, et à Bradley. "
     },
     {
         "id": "hungry_lamb",
@@ -205,7 +218,7 @@
         "plateforme": ["pc"],
         "lien_jeu": ["https://kawasoft.fr/2011/12/25/narcissu-side-2nd/", "https://kawasoft.fr/narcissu/telechargement.php"],
         "patch_fr": [],
-        "description": "Le protagoniste anonyme est diagnostiqué d’une maladie terminale peu après son vingtième anniversaire et est admis dans un hôpital à Mito, dans la préfecture d’Ibaraki. Là, il rencontre Setsumi, une femme un peu plus âgée, également atteinte d’une maladie terminale. Refusant tous deux de mourir à l’hôpital ou chez eux, ils volent une voiture et s’enfuient ensemble."
+        "description": "Premier VN de la série Narcissu.\n\nLe protagoniste anonyme est diagnostiqué d’une maladie terminale peu après son vingtième anniversaire et est admis dans un hôpital à Mito, dans la préfecture d’Ibaraki. Là, il rencontre Setsumi, une femme un peu plus âgée, également atteinte d’une maladie terminale. Refusant tous deux de mourir à l’hôpital ou chez eux, ils volent une voiture et s’enfuient ensemble."
     },
     {
         "id": "paranormasight",
@@ -231,7 +244,7 @@
         "plateforme": ["pc", "switch"],
         "lien_jeu": ["https://store.steampowered.com/app/623080/planetarian_HD/"],
         "patch_fr": [],
-        "description": "La pluie ne cesse de tomber sur une ville-sarcophage abandonnée depuis l’attaque bactériologique survenue trente ans plus tôt, désormais dominée par des machines de combat autonomes. Fatigué, il parvient jusqu’au planétarium, autrefois lieu où l’on venait admirer le ciel, et y décide de se reposer. Une jeune fille solitaire l’y accueille : Yumemi, l’animatrice du planétarium, un robot un peu cassé qui attendait une visite depuis trente ans. À sa demande, il remet en marche le projecteur immobile, oubliant le temps qui passe et la pluie qui tombe sans fin. Les jours s’écoulent lentement en sa compagnie, dans une vie empreinte de nostalgie qui bouleverse son cœur. Que pense-t-il en contemplant ce ciel artificiel, et quel sera le destin de Yumemi ?"
+        "description": "Premier VN de la série Planetarian.\n\nLa pluie ne cesse de tomber sur une ville-sarcophage abandonnée depuis l’attaque bactériologique survenue trente ans plus tôt, désormais dominée par des machines de combat autonomes. Fatigué, il parvient jusqu’au planétarium, autrefois lieu où l’on venait admirer le ciel, et y décide de se reposer. Une jeune fille solitaire l’y accueille : Yumemi, l’animatrice du planétarium, un robot un peu cassé qui attendait une visite depuis trente ans. À sa demande, il remet en marche le projecteur immobile, oubliant le temps qui passe et la pluie qui tombe sans fin. Les jours s’écoulent lentement en sa compagnie, dans une vie empreinte de nostalgie qui bouleverse son cœur. Que pense-t-il en contemplant ce ciel artificiel, et quel sera le destin de Yumemi ?"
     },
     {
         "id": "vlr",
