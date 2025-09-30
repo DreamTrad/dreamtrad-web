@@ -64,7 +64,7 @@ export default function DiscoverCard({
       <div className="bg-bg-secondary px-6 py-4 flex flex-col md:flex-row gap-4">
         {/* Patchs */}
         {/* Liens */}
-        {lien_jeu.length > 0 && (
+        {(lien_jeu.length + patch_fr.length) > 0 && (
           <div className="flex flex-col gap-2 p-3 border rounded-lg bg-bg-tertiary flex-1">
             <span className="font-semibold text-accent text-sm uppercase tracking-wide">
               Liens
