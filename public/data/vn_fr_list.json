@@ -19,9 +19,12 @@
         "genre": ["enquête"],
         "duree": "20h-30h",
         "note_vndb": "8,07",
-        "popularite_vndb": "",
+        "popularite_vndb": "20",
         "plateforme": ["pc", "ds", "switch", "ps4", "xboxone", "android", "ios"],
-        "lien_jeu": ["https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/"],
+        "lien_jeu": [
+            "https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/",
+            "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Phoenix-Wright-Ace-Attorney-Trilogy-1522564.html"
+        ],
         "patch_fr": [],
         "description": "Premier VN de la série Ace Attorney.\n\nDans ce futur fictif, toute personne accusée d’un crime est immédiatement jugée lors d’un procès limité à trois jours. L’avocat de la défense doit prouver l’innocence de son client en trouvant des contradictions dans les témoignages des témoins et en rassemblant des preuves.\n\nLe joueur incarne Phoenix Wright, un jeune avocat débutant au cabinet dirigé par Mia Fey. Il est assisté par Maya Fey, la sœur de Mia, qui possède la capacité de canaliser les esprits pour aider Wright au tribunal. Tout au long de ses affaires, Wright se retrouve souvent en opposition avec Benjamin Hunter, un procureur brillant et redoutable, créant un affrontement récurrent entre défense et accusation."
     },
@@ -31,10 +34,13 @@
         "image": "assets/poster/ace_attorney_2.webp",
         "genre": ["enquête"],
         "duree": "20h-30h",
-        "note_vndb": "",
-        "popularite_vndb": "",
+        "note_vndb": "7,58",
+        "popularite_vndb": "33",
         "plateforme": ["pc", "ds", "switch", "ps4", "xboxone", "android", "ios"],
-        "lien_jeu": ["https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/"],
+        "lien_jeu": [
+            "https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/",
+            "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Phoenix-Wright-Ace-Attorney-Trilogy-1522564.html"
+        ],
         "patch_fr": [],
         "description": "Deuxième VN de la série Ace Attorney.\n\n"
     },
@@ -44,12 +50,96 @@
         "image": "assets/poster/ace_attorney_3.webp",
         "genre": ["enquête"],
         "duree": "20h-30h",
-        "note_vndb": "",
-        "popularite_vndb": "",
+        "note_vndb": "8,56",
+        "popularite_vndb": "39",
         "plateforme": ["pc", "ds", "switch", "ps4", "xboxone", "android", "ios"],
-        "lien_jeu": ["https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/"],
+        "lien_jeu": [
+            "https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/",
+            "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Phoenix-Wright-Ace-Attorney-Trilogy-1522564.html"
+        ],
         "patch_fr": [],
         "description": "Troisième VN de la série Ace Attorney.\n\n"
+    },
+    {
+        "id": "ace_attorney_4",
+        "titre": "Apollo Justice: Ace Attorney",
+        "image": "assets/poster/ace_attorney_4.webp",
+        "genre": ["enquête"],
+        "duree": "20h-30h",
+        "note_vndb": "7,42",
+        "popularite_vndb": "65",
+        "plateforme": ["pc", "ds", "switch", "ps4", "xboxone"],
+        "lien_jeu": [
+            "https://store.steampowered.com/app/2187220/Apollo_Justice_Ace_Attorney_Trilogy/",
+            "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Apollo-Justice-Ace-Attorney-Trilogy-2489387.html"
+        ],
+        "patch_fr": [],
+        "description": "Quatrième VN de la série Ace Attorney.\n\n"
+    },
+    {
+        "id": "ace_attorney_5",
+        "titre": "Phoenix Wright: Ace Attorney - Dual Destinies",
+        "image": "assets/poster/ace_attorney_5.webp",
+        "genre": ["enquête"],
+        "duree": "30h-40h",
+        "note_vndb": "7,17",
+        "popularite_vndb": "119",
+        "plateforme": ["pc", "3ds", "switch", "ps4", "xboxone"],
+        "lien_jeu": [
+            "https://store.steampowered.com/app/2187220/Apollo_Justice_Ace_Attorney_Trilogy/",
+            "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Apollo-Justice-Ace-Attorney-Trilogy-2489387.html"
+        ],
+        "patch_fr": ["fr:https://aai-fr.keuf.net/t959-sortie-du-patch-vf-de-aa5-d-apres-vjaponaise"],
+        "description": "Cinquième VN de la série Ace Attorney.\n\nAce Attorney 5 marque le retour de Phoenix Wright comme protagoniste principal de la série depuis la trilogie originale. L’histoire se déroule un an après Apollo Justice: Ace Attorney, dont les événements ont permis à Wright d’être blanchi des circonstances de sa radiation et de reprendre sa carrière d’avocat. Il est désormais accompagné d’une nouvelle assistante, Athena Cykes, une jeune avocate de la défense et psychologue. La première affaire du jeu oppose Phoenix au frère cadet de Victor Boulay, personnage récurrent de la série, alors qu’il défend une lycéenne accusée d’avoir provoqué une explosion au tribunal."
+    },
+    {
+        "id": "ace_attorney_6",
+        "titre": "Phoenix Wright: Ace Attorney - Spirit of Justice",
+        "image": "assets/poster/ace_attorney_6.webp",
+        "genre": ["enquête"],
+        "duree": "30h-40h",
+        "note_vndb": "7,54",
+        "popularite_vndb": "178",
+        "plateforme": ["pc", "switch", "ps4", "xboxone"],
+        "lien_jeu": [
+            "https://store.steampowered.com/app/2187220/Apollo_Justice_Ace_Attorney_Trilogy/",
+            "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Apollo-Justice-Ace-Attorney-Trilogy-2489387.html"
+        ],
+        "patch_fr": [],
+        "description": "Sixième VN de la série Ace Attorney.\n\nDans le royaume de Khura’in, berceau de la technique de channeling Kurain, les procès sont décidés par de mystérieuses séances de divination, laissant aux accusés bien peu de chances de défendre leur sort. C’est à Phoenix Wright de renverser la situation et de découvrir la vérité cachée derrière les visions de la prêtresse royale, Rayfa Padma Khura’in. Pendant ce temps, Apollo Justice doit relever ses propres défis : gérer l’agence en l’absence de Phoenix tout en affrontant une affaire aux répercussions explosives. Rempli d’énigmes, d’humour et de personnages hauts en couleur, ce nouvel épisode vous entraîne aux côtés de Phoenix et Apollo dans leur quête de vérité."
+    },
+    {
+        "id": "ace_attorney_investigations_1",
+        "titre": "Ace Attorney Investigations: Benjamin Hunter",
+        "image": "assets/poster/ace_attorney_investigations_1.webp",
+        "genre": ["enquête"],
+        "duree": "20h-30h",
+        "note_vndb": "7.22",
+        "popularite_vndb": "107",
+        "plateforme": ["pc", "ds", "switch", "ps4", "xboxone"],
+        "lien_jeu":
+        [
+            "https://store.steampowered.com/app/2401970/Ace_Attorney_Investigations_Collection/",
+            "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Ace-Attorney-Investigations-Collection-2589276.html"
+        ],
+        "patch_fr": ["fr:https://aai-fr.keuf.net/t882-sortie-du-patch-complet"],
+        "description": "Premier VN du spin-off Investigations de la série Ace Attorney.\n\nDans ce spin-off d’Ace Attorney, se déroulant entre Phoenix Wright: Ace Attorney – Trials and Tribulations et Apollo Justice: Ace Attorney, le procureur Benjamin Hunter enquête sur une série d’affaires liées à un réseau international de contrebande. Il est assisté par le détective Dick Tektiv et la prétendue « Grande Voleuse » Cléa Faradet, tandis que ses investigations le conduisent également à croiser l’agent d’Interpol Shi-Long Lang."
+    },
+    {
+        "id": "ace_attorney_investigations_2",
+        "titre": "Ace Attorney Investigations 2: Le pari du procureur",
+        "image": "assets/poster/ace_attorney_investigations_2.webp",
+        "genre": ["enquête"],
+        "duree": "30h-40h",
+        "note_vndb": "8.48",
+        "popularite_vndb": "177",
+        "plateforme": ["pc", "switch", "ps4", "xboxone"],
+        "lien_jeu": [
+            "https://store.steampowered.com/app/2401970/Ace_Attorney_Investigations_Collection/",
+            "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Ace-Attorney-Investigations-Collection-2589276.html"
+        ],
+        "patch_fr": [],
+        "description": "Deuxième VN du spin-off Investigations de la série Ace Attorney.\n\nBenjamin Hunter s’interroge sur le sens de son métier et sur sa capacité à découvrir la vérité à travers les affaires qu’il traite. Ses doutes s’intensifient lorsqu’il devient la cible d’une commission chargée de remplacer les procureurs jugés incompétents ou inaptes.\n\nLa juge Justine Delcour est mystérieusement affectée aux affaires que Hunter enquête et tente de le remplacer par Eustache Victor, un jeune procureur moins compétent. Hunter risque son badge pour poursuivre sa quête de vérité.\n\nParallèlement, il doit gérer un conflit personnel avec Frédéric Lapointe, un avocat qui fut l’assistant du père de Hunter, Henri, et qui a repris son cabinet. Benjamin Hunter doit choisir entre continuer sa carrière de procureur ou accepter la proposition de Frédéric Lapointe et suivre les traces de son père en devenant avocat de la défense."
     },
     {
         "id": "ai1",
@@ -57,8 +147,8 @@
         "image": "assets/poster/ai1.webp",
         "genre": [],
         "duree": "20h-30h",
-        "note_vndb": "",
-        "popularite_vndb": "",
+        "note_vndb": "7,86",
+        "popularite_vndb": "71",
         "plateforme": ["pc"],
         "lien_jeu": ["https://store.steampowered.com/app/948740/AI_The_Somnium_Files/"],
         "patch_fr": ["fr:/jeu/ai1/jeufr/telechargement"],
@@ -70,8 +160,8 @@
         "image": "assets/poster/ai2.webp",
         "genre": [],
         "duree": "20h-30h",
-        "note_vndb": "",
-        "popularite_vndb": "",
+        "note_vndb": "7,27",
+        "popularite_vndb": "208",
         "plateforme": ["pc"],
         "lien_jeu": ["https://store.steampowered.com/app/1449200/AI_THE_SOMNIUM_FILES__nirvanA_Initiative/"],
         "patch_fr": ["fr:/jeu/ai2/jeufr/telechargement"],
@@ -97,7 +187,7 @@
         "genre": ["enquête", "gameplay", "killing game"],
         "duree": "30h-40h",
         "note_vndb": "7,63",
-        "popularite_vndb": "",
+        "popularite_vndb": "6",
         "plateforme": ["pc"],
         "lien_jeu": ["https://store.steampowered.com/app/413410/Danganronpa_Trigger_Happy_Havoc/"],
         "patch_fr": ["fr:https://equipemirai.com/dr1-patch-fr/"],
@@ -110,7 +200,7 @@
         "genre": ["enquête", "gameplay", "killing game"],
         "duree": "30h-40h",
         "note_vndb": "8,10",
-        "popularite_vndb": "",
+        "popularite_vndb": "10",
         "plateforme": ["pc", "psvita"],
         "lien_jeu": ["https://store.steampowered.com/app/413420/Danganronpa_2_Goodbye_Despair/"],
         "patch_fr": ["fr:https://equipemirai.com/danganronpa-2/"],
@@ -123,7 +213,7 @@
         "genre": ["enquête", "gameplay", "killing game"],
         "duree": "30h-40h",
         "note_vndb": "7,70",
-        "popularite_vndb": "",
+        "popularite_vndb": "25",
         "plateforme": ["pc", "ps4", "psvita"],
         "lien_jeu": ["https://store.steampowered.com/app/567640/Danganronpa_V3_Killing_Harmony/"],
         "patch_fr": [],
@@ -266,7 +356,7 @@
         "genre": ["enquête", "mystère", "surnaturel"],
         "duree": "10h-20h",
         "note_vndb": "7,59",
-        "popularite_vndb": "",
+        "popularite_vndb": "381",
         "plateforme": ["pc"],
         "lien_jeu": ["https://store.steampowered.com/app/2106840/PARANORMASIGHT_The_Seven_Mysteries_of_Honjo/"],
         "patch_fr": ["fr:/jeu/paranormasight/jeufr/telechargement"],
@@ -291,8 +381,8 @@
         "image": "assets/poster/vlr.webp",
         "genre": [],
         "duree": "30h-40h",
-        "note_vndb": "",
-        "popularite_vndb": "",
+        "note_vndb": "8,21",
+        "popularite_vndb": "43",
         "plateforme": ["pc", "psvita"],
         "lien_jeu": ["https://store.steampowered.com/app/477740/Zero_Escape_The_Nonary_Games/"],
         "patch_fr": ["fr:/jeu/vlr/jeufr/telechargement"],
@@ -317,8 +407,8 @@
         "image": "assets/poster/zodiac_trial.webp",
         "genre": [],
         "duree": "20h-30h",
-        "note_vndb": "",
-        "popularite_vndb": "",
+        "note_vndb": "7,11",
+        "popularite_vndb": "3710",
         "plateforme": ["pc"],
         "lien_jeu": ["https://store.steampowered.com/app/1513120/The_Zodiac_Trial/"],
         "patch_fr": ["fr:/jeu/zodiac_trial/jeufr/telechargement"],
