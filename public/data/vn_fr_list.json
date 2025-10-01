@@ -8,7 +8,10 @@
         "note_vndb": "",
         "popularite_vndb": "",
         "plateforme": ["pc", "psvita"],
-        "lien_jeu": ["https://store.steampowered.com/app/477740/Zero_Escape_The_Nonary_Games/"],
+        "lien_jeu": [
+            "https://vndb.org/v3112",
+            "https://store.steampowered.com/app/477740/Zero_Escape_The_Nonary_Games/"
+        ],
         "patch_fr": ["fr:/jeu/999/jeufr/telechargement"],
         "description": "Premier VN de la série Zero Escape.\n\nNeuf personnes se réveillent enfermées dans un bateau en pleine mer, sans aucun souvenir de la façon dont elles sont arrivées là. Elles découvrent rapidement qu'elles sont les participants d'un jeu mortel appelé le Jeu Nonaire, où elles doivent résoudre des énigmes pour s'échapper avant que 9 heures ne s'écoulent. Chaque participant porte un bracelet indiquant un chiffre de 1 à 9, qui joue un rôle crucial dans les énigmes et les décisions qu'ils doivent prendre.\n\nLe joueur incarne Junpei, l'un des participants, qui doit naviguer à travers les différentes salles du bateau, résoudre des puzzles et interagir avec les autres personnages pour découvrir la vérité derrière le Jeu Nonaire et trouver un moyen de s'échapper vivant."
     },
@@ -22,6 +25,7 @@
         "popularite_vndb": "20",
         "plateforme": ["pc", "ds", "switch", "ps4", "xboxone", "android", "ios"],
         "lien_jeu": [
+            "https://vndb.org/v711",
             "https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/",
             "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Phoenix-Wright-Ace-Attorney-Trilogy-1522564.html"
         ],
@@ -38,6 +42,7 @@
         "popularite_vndb": "33",
         "plateforme": ["pc", "ds", "switch", "ps4", "xboxone", "android", "ios"],
         "lien_jeu": [
+            "https://vndb.org/v715",
             "https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/",
             "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Phoenix-Wright-Ace-Attorney-Trilogy-1522564.html"
         ],
@@ -54,6 +59,7 @@
         "popularite_vndb": "39",
         "plateforme": ["pc", "ds", "switch", "ps4", "xboxone", "android", "ios"],
         "lien_jeu": [
+            "https://vndb.org/v716",
             "https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/",
             "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Phoenix-Wright-Ace-Attorney-Trilogy-1522564.html"
         ],
@@ -70,6 +76,7 @@
         "popularite_vndb": "65",
         "plateforme": ["pc", "ds", "switch", "ps4", "xboxone"],
         "lien_jeu": [
+            "https://vndb.org/v717",
             "https://store.steampowered.com/app/2187220/Apollo_Justice_Ace_Attorney_Trilogy/",
             "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Apollo-Justice-Ace-Attorney-Trilogy-2489387.html"
         ],
@@ -86,6 +93,7 @@
         "popularite_vndb": "119",
         "plateforme": ["pc", "3ds", "switch", "ps4", "xboxone"],
         "lien_jeu": [
+            "https://vndb.org/v9889",
             "https://store.steampowered.com/app/2187220/Apollo_Justice_Ace_Attorney_Trilogy/",
             "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Apollo-Justice-Ace-Attorney-Trilogy-2489387.html"
         ],
@@ -102,6 +110,7 @@
         "popularite_vndb": "178",
         "plateforme": ["pc", "switch", "ps4", "xboxone"],
         "lien_jeu": [
+            "https://vndb.org/v18267",
             "https://store.steampowered.com/app/2187220/Apollo_Justice_Ace_Attorney_Trilogy/",
             "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Apollo-Justice-Ace-Attorney-Trilogy-2489387.html"
         ],
@@ -119,6 +128,7 @@
         "plateforme": ["pc", "ds", "switch", "ps4", "xboxone"],
         "lien_jeu":
         [
+            "https://vndb.org/v1719",
             "https://store.steampowered.com/app/2401970/Ace_Attorney_Investigations_Collection/",
             "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Ace-Attorney-Investigations-Collection-2589276.html"
         ],
@@ -135,6 +145,7 @@
         "popularite_vndb": "177",
         "plateforme": ["pc", "switch", "ps4", "xboxone"],
         "lien_jeu": [
+            "https://vndb.org/v6639",
             "https://store.steampowered.com/app/2401970/Ace_Attorney_Investigations_Collection/",
             "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Ace-Attorney-Investigations-Collection-2589276.html"
         ],
@@ -150,7 +161,10 @@
         "note_vndb": "7,86",
         "popularite_vndb": "71",
         "plateforme": ["pc"],
-        "lien_jeu": ["https://store.steampowered.com/app/948740/AI_The_Somnium_Files/"],
+        "lien_jeu": [
+            "https://vndb.org/v26532",
+            "https://store.steampowered.com/app/948740/AI_The_Somnium_Files/"
+        ],
         "patch_fr": ["fr:/jeu/ai1/jeufr/telechargement"],
         "description": "Premier VN de la série AI: The Somnium Files.\n\nPar une nuit pluvieuse de novembre, le corps d’une femme est découvert dans un parc d’attractions abandonné, installé sur un cheval de manège. Elle a été poignardée à de multiples reprises, et son œil gauche a été arraché.r\nKaname Date, de la police métropolitaine, arrive sur les lieux. Il connaît la victime. Soudain, un bruit se fait entendre à l’intérieur du manège.\nIl force l’entrée de la colonne centrale et y trouve une jeune fille… serrant dans ses mains un pic à glace ensanglanté.\n\nAI: The Somnium Files se déroule dans un Tokyo futur technologiquement avancé. L’histoire suit Kaname Date et son équipe ultra-secrète au sein de la police métropolitaine, appelée l’ABIS (Agence Biotechnologique d'Investigation des Somnia). Leur mission : enquêter sur des crimes en explorant les rêves et l’inconscient de suspects grâce au procédé permettant de relier deux esprits dans un état onirique appelé Somnium. Les agents de l’ABIS qui pratiquent cette immersion sont appelés psynchroniseur. Ils agissent comme observateurs à l’intérieur des rêves et y découvrent des indices ou des vérités cachées, parfois ignorées même du sujet. Pour éviter tout effet néfaste, leur temps passé dans un Somnium ne peut dépasser six minutes."
     },
@@ -163,7 +177,10 @@
         "note_vndb": "7,27",
         "popularite_vndb": "208",
         "plateforme": ["pc"],
-        "lien_jeu": ["https://store.steampowered.com/app/1449200/AI_THE_SOMNIUM_FILES__nirvanA_Initiative/"],
+        "lien_jeu": [
+            "https://vndb.org/v31469",
+            "https://store.steampowered.com/app/1449200/AI_THE_SOMNIUM_FILES__nirvanA_Initiative/"
+        ],
         "patch_fr": ["fr:/jeu/ai2/jeufr/telechargement"],
         "description": "Deuxième VN de la série AI: The Somnium Files.\n\nIl y a six ans, on avait retrouvé la moitié droite d’un cadavre. L’autre moitié était introuvable… jusqu’à ce qu’elle réapparaisse six ans plus tard, parfaitement intacte, sans aucune trace de décomposition.\n\nAujourd’hui, les agents spéciaux Mizuki et Ryuki, accompagnés de leurs partenaires IA Aiba et Tama, doivent résoudre l’énigme des meurtres en série dits du « Diviseur », tout en levant le voile sur un complot mystérieux connu sous le nom de Nirvana Initiative…"
     },
@@ -176,7 +193,10 @@
         "note_vndb": "8,70",
         "popularite_vndb": "12",
         "plateforme": ["pc"],
-        "lien_jeu": ["https://store.steampowered.com/app/324160/CLANNAD/"],
+        "lien_jeu": [
+            "https://vndb.org/v4",
+            "https://store.steampowered.com/app/324160/CLANNAD/"
+        ],
         "patch_fr": ["fr:https://vnfr.fr/installation-du-patch"],
         "description": "Après la mort de sa mère, Tomoya Okazaki, un lycéen rebelle et renfermé de l’école Hikarizaka, peine à donner un sens à sa vie tout en supportant sa relation conflictuelle avec son père alcoolique. Un matin, en chemin pour les cours, il rencontre une fille intrigante, Nagisa. Comme lui, elle est considérée comme une « délinquante », mais seulement parce qu’elle redouble sa dernière année, contrairement à Okazaki toujours en retard. De leur brève rencontre naît une amitié : Nagisa décide qu’ils devraient se rapprocher et lui demande son aide pour relancer le club de théâtre. Sans réelle occupation, Tomoya accepte. Ensemble, ils se lient d’amitié avec d’autres élèves et cherchent, à travers leurs efforts communs, un sentiment de réconfort et d’appartenance."
     },
@@ -189,7 +209,10 @@
         "note_vndb": "7,63",
         "popularite_vndb": "6",
         "plateforme": ["pc"],
-        "lien_jeu": ["https://store.steampowered.com/app/413410/Danganronpa_Trigger_Happy_Havoc/"],
+        "lien_jeu": [
+            "https://vndb.org/v7014",
+            "https://store.steampowered.com/app/413410/Danganronpa_Trigger_Happy_Havoc/"
+        ],
         "patch_fr": ["fr:https://equipemirai.com/dr1-patch-fr/"],
         "description": "Premier VN de la série Danganronpa.\n\nL’Académie du Pic de l’Espoir accueille les lycéens les plus brillants de tout le Japon, porteurs d'espoir pour l'avenir. Mais cet espoir s'éteint soudain lorsque Makoto Naegi et ses camarades de classe se retrouvent emprisonnés dans leur école, coupés du reste du monde et soumis aux caprices d'un étrange petit ours meurtrier du nom de Monokuma. Il monte les élèves les uns contre les autres, promettant la liberté à quiconque assassinera l'un ou l'une de ses pairs sans se faire prendre.\n\nC'est à vous de découvrir la véritable identité de Monokuma, ainsi que la raison pour laquelle on vous a arraché au monde qui était le vôtre. Mais prenez garde à ce que vous souhaitez, il n'y a parfois rien de plus dangereux que la vérité…"
     },
@@ -202,7 +225,10 @@
         "note_vndb": "8,10",
         "popularite_vndb": "10",
         "plateforme": ["pc", "psvita"],
-        "lien_jeu": ["https://store.steampowered.com/app/413420/Danganronpa_2_Goodbye_Despair/"],
+        "lien_jeu": [
+            "https://vndb.org/v7679",
+            "https://store.steampowered.com/app/413420/Danganronpa_2_Goodbye_Despair/"
+        ],
         "patch_fr": ["fr:https://equipemirai.com/danganronpa-2/"],
         "description": "Deuxième VN de la série Danganronpa.\n\nUn ciel bleu, des nuages blancs, l’océan étincelant et une plage immense…\nL’Académie du Pic de l’Espoir organise un voyage scolaire sur l’île tropicale réputée pour être une station balnéaire prisée. Mais à cause des manigances de leur sinistre proviseur, les élèves comprennent vite qu’ils ne quitteront pas l’île de sitôt. Leur seule chance de s’échapper : assassiner un camarade de classe et survivre au procès sans être démasqué.\nLors de ces procès intenses et décisifs, il faut utiliser les preuves recueillies pendant l’enquête ainsi que les témoignages des autres élèves pour démolir les arguments adverses."
     },
@@ -215,7 +241,10 @@
         "note_vndb": "7,70",
         "popularite_vndb": "25",
         "plateforme": ["pc", "ps4", "psvita"],
-        "lien_jeu": ["https://store.steampowered.com/app/567640/Danganronpa_V3_Killing_Harmony/"],
+        "lien_jeu": [
+            "https://vndb.org/v18334",
+            "https://store.steampowered.com/app/567640/Danganronpa_V3_Killing_Harmony/"
+        ],
         "patch_fr": [],
         "description": "Troisième VN de la série Danganronpa.\n\nLa lycéenne Kaede Akamatsu est enlevée et se réveille prisonnière de l’Académie des Prodiges Condamnés, où elle rencontre 15 autres étudiants, dont Shuuichi Saihara. Le groupe est soudain confronté à une troupe d’ours robots, les Monokumers, qui les exposent à une lampe ressemblant à un neurolaser. Quand Kaede rouvre les yeux, tous se rappellent posséder des talents hors du commun : Kaede est l’ « Ultime Pianiste » et Shuuichi l’« Ultime Détective ». C’est alors que Monokuma, un ours robotique, fait son apparition et leur annonce que la seule façon de quitter l’académie est de réussir à tuer un camarade sans être désigné coupable lors du procès qui suivra."
     },
@@ -227,9 +256,12 @@
         "duree": "5h-10h",
         "note_vndb": "6,94",
         "popularite_vndb": "4",
-        "plateforme": ["pc"],
-        "lien_jeu": ["https://store.steampowered.com/app/1388880/Doki_Doki_Literature_Club_Plus/"],
-        "patch_fr": [],
+        "plateforme": ["pc", "ps4", "ps5", "switch", "xboxone", "xboxseries"],
+        "lien_jeu": [
+            "https://vndb.org/v21905",
+            "https://store.steampowered.com/app/1388880/Doki_Doki_Literature_Club_Plus/"
+        ],
+        "patch_fr": ["fr:https://www.yarashii.fr/2018/01/doki-doki-literature-club-vn-fr/"],
         "description": "Bienvenue dans un monde terrifiant de poésie romantique ! Écrivez des poèmes à l'élue de votre cœur et corrigez vos erreurs au fur et à mesure pour atteindre une fin idéale. C'est l'occasion ou jamais de découvrir pourquoi DDLC est l'un des jeux d'horreur psychologique les plus plébiscités de la décennie !\n\nVous incarnez le personnage principal qui rejoint, un peu malgré lui, un club de littérature par romantisme. Par les poèmes que vous écrirez et les choix que vous ferez, vous séduirez votre béguin et commencerez à découvrir les horreurs qui se cachent derrière cette amourette de lycée. Saurez-vous comprendre les rouages des simulations de rencontre pour atteindre une fin de jeu idéale ?"
     },
     {
@@ -242,13 +274,14 @@
         "popularite_vndb": "1524",
         "plateforme": ["pc", "ps4", "xboxone", "switch"],
         "lien_jeu": [
+            "https://vndb.org/v35280",
             "https://store.steampowered.com/app/871980/Digimon_Survive/",
             "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Digimon-Survive-2247959.html",
             "https://www.playstation.com/fr-fr/games/digimon-survive/",
             "https://www.xbox.com/fr-FR/games/store/digimon-survive/bwphj8lr0mg6"
         ],
         "patch_fr": [],
-        "description": ""
+        "description": "Takuma Momotsuka participe à un camp de vacances consacré à l’étude de l’histoire pendant le printemps.\n\nLe deuxième jour, lui et les autres enfants visitent un sanctuaire où doit se tenir un festival en l’honneur des bêtes divines. En explorant les lieux, Takuma tombe sur une étrange créature : Koromon. Peu après, un cri retentit et ils découvrent que leurs camarades sont attaqués par des monstres. Pour les sauver, Koromon évolue en Agumon et affronte l’ennemi.\n\nGrâce à lui, Takuma parvient à repousser les créatures, mais se rend vite compte que la zone est plongée dans un épais brouillard et qu’il s’est égaré… dans un monde inconnu."
     },
     {
         "id": "famicom_detective_club_emio",
@@ -259,9 +292,12 @@
         "note_vndb": "7,22",
         "popularite_vndb": "1625",
         "plateforme": ["switch"],
-        "lien_jeu": ["https://www.nintendo.com/fr-fr/Jeux/Jeux-Nintendo-Switch/Emio-L-Homme-au-sourire-Famicom-Detective-Club-2615498.html"],
+        "lien_jeu": [
+            "https://vndb.org/v51838",
+            "https://www.nintendo.com/fr-fr/Jeux/Jeux-Nintendo-Switch/Emio-L-Homme-au-sourire-Famicom-Detective-Club-2615498.html"
+        ],
         "patch_fr": [],
-        "description": ""
+        "description": "Un collégien nommé Eisuke Sasaki a été retrouvé mort, la tête couverte par un sac à papier sur lequel est dessiné un visage souriant.\n\nCe dessin étrange n'est pas sans rappeler ceux qui caractérisaient une série de meurtres non élucidés d'il y a 18 ans, ainsi que la légende urbaine d'Emio, ou « l'Homme au sourire », un tueur en série qui offre « un sourire pour l'éternité » à ses victimes.\n\nL'Homme a ourire existe-t-il vraiment... ou s'agit-il de quelqu'un qui cherche à poursuivre sa légende ?\n\nEn tant que détective de l'agence Utsugi, votre tâche consiste à enquêter sur les événements qui ont mené à la mort d'Eisuke Sasaki. Examinez les indice et témoignages que vous récoltez… peut-être trouverez-vous des liens avec les macabres affaires du passé."
     },
     {
         "id": "fata_morgana",
@@ -272,7 +308,10 @@
         "note_vndb": "8,81",
         "popularite_vndb": "32",
         "plateforme": ["pc"],
-        "lien_jeu": ["https://store.steampowered.com/app/303310/The_House_in_Fata_Morgana/"],
+        "lien_jeu": [
+            "https://vndb.org/v12402",
+            "https://store.steampowered.com/app/303310/The_House_in_Fata_Morgana/"
+        ],
         "patch_fr": [],
         "description": "Premier VN de la série Fata Morgana.\n\nVous vous réveillez dans un vieux manoir délabré, face à une femme aux yeux de jade qui se présente comme votre servante. Elle vous apprend que vous êtes le maître de la maison, mais vous n’avez aucun souvenir de qui vous êtes, ni même si vous êtes vivant.\n\nElle vous invite à explorer les couloirs du manoir et à contempler les tragédies de ses habitants à travers quatre portes :\n\nEn 1603, l’art et le théâtre prospèrent, mais tous les enfants Rhodes ne trouvent pas leur bonheur dans ce jardin fleuri.\n\nEn 1707, le manoir en ruines abrite une bête dont la férocité provoque un massacre.\n\nEn 1869, époque de grandes avancées technologiques, le maître du manoir, un homme d’affaires ambitieux investi dans les chemins de fer, devient obsédé par l’argent et le pouvoir, négligeant et maltraitant son épouse.\n\nEn 1099, un jeune homme se croit maudit et une fille aux cheveux blancs, Giselle, est pourchassée pour sorcellerie.\n\nAprès avoir assisté à ces tragédies, vous pouvez choisir de clore votre histoire… ou de continuer. Mais une voix vous avertit : « Tu as pu les supporter parce que ce n’étaient pas tes tragédies. »"
     },
@@ -285,7 +324,10 @@
         "note_vndb": "8,55",
         "popularite_vndb": "133",
         "plateforme": ["pc"],
-        "lien_jeu": ["https://store.steampowered.com/app/804700/The_House_in_Fata_Morgana_A_Requiem_for_Innocence/"],
+        "lien_jeu": [
+            "https://vndb.org/v18397",
+            "https://store.steampowered.com/app/804700/The_House_in_Fata_Morgana_A_Requiem_for_Innocence/"
+        ],
         "patch_fr": [],
         "description": "Deuxième VN de la série Fata Morgana.\n\nUne jeune fille, dont on dit que le sang a des pouvoirs curatifs, est à genoux devant le seigneur des terres environnantes, mutilée et battue. Dans son village natal, elle était considérée comme la fille de Dieu. Et à présent, le seigneur brandit son épée, sur le point de lui couper la tête.\n\n« Tu es une foutue sorcière dans la peau d'une sainte ! »\n\n\nMais juste avant qu'il puisse abattre sa lame, un jeune homme surgit, sauvant la fille\n\nAinsi commence le premier chapitre « heureux » de la vie de cette fillette.\nDébute alors le premier acte d'une tragédie qui s'étendra sur près d'un millénaire."
     },
@@ -311,7 +353,10 @@
         "note_vndb": "8,59",
         "popularite_vndb": "17",
         "plateforme": ["pc"],
-        "lien_jeu": ["https://www.hinamizawa.fr/"],
+        "lien_jeu": [
+            "https://vndb.org/v67",
+            "https://www.hinamizawa.fr/"
+        ],
         "patch_fr": [],
         "description": "Hinamizawa, un petit village rural du Japon, vers 1983. Le village est connu pour son festival annuel Watanagashi, en l’honneur de la divinité locale, Oyashiro.\n\nL’histoire suit Keiichi, un adolescent qui vient d’emménager à Hinamizawa avec sa famille. Il se lie rapidement d’amitié avec un groupe de filles du village : Rena, Mion, Satoko et Rika. À première vue, Hinamizawa est une communauté paisible et soudée. Mais Keiichi découvre vite que le village cache de sombres secrets, ainsi qu’un historique de disparitions mystérieuses et de meurtres horribles survenant chaque année à l’époque du festival Watanagashi."
     },
@@ -324,7 +369,7 @@
         "note_vndb": "7,75",
         "popularite_vndb": "286",
         "plateforme": ["ds"],
-        "lien_jeu": [],
+        "lien_jeu": ["https://vndb.org/v697"],
         "patch_fr": [],
         "description": "Premier VN de la série des aventures de Kyle Hyde.\n\nTrois ans plus tôt, alors que son équipier Bradley espionne l'association de commerce illégal de tableaux Nile, Kyle Hyde, enquêteur, apprend que son ami a disparu et tente, pour des raisons inconnues, de s'enfuir. Kyle le poursuit en voiture à travers la ville et tous deux se retrouvent sur le port. Kyle crie au loin à son ami « Bradley ! Pourquoi ? », mais ce dernier, ne disant mot, se contente de courir, obligeant Kyle à l'abattre. Son corps tombe dans l'eau, mais n'est jamais retrouvé.\n\nTrois ans plus tard, Kyle, qui a quitté la police et travaille maintenant pour la vente de produits ménagers Red Crow, cherche depuis trois ans Bradley qu'il croit en vie afin de savoir pourquoi il l'a trahi. Son patron Ed Vincent se charge en fait également de retrouver des objets perdus. Il charge Kyle d'aller à l'hôtel Dusk sur demande d'un client afin de retrouver certains objets. Sur la route, il aperçoit une jeune fille aux cheveux blancs. Kyle ne va pas tarder à découvrir que tous les clients de l'hôtel sont tous liés par le destin, et à Bradley. "
     },
@@ -363,9 +408,9 @@
         "note_vndb": "7,92",
         "popularite_vndb": "743",
         "plateforme": ["ds"],
-        "lien_jeu": [],
+        "lien_jeu": ["https://vndb.org/v4617"],
         "patch_fr": [],
-        "description": ""
+        "description": "Deuxième VN de la série des aventures de Kyle Hyde.\n\nUn an après les événements du premier, Kyle Hyde se retrouve impliqué dans une nouvelle affaire au sein des appartements Cape West. Bien que l’intrigue soit distincte de celle du premier opus, plusieurs liens subsistent avec les événements passés."
     },
     {
         "id": "narcissu",
@@ -376,7 +421,11 @@
         "note_vndb": "7,50",
         "popularite_vndb": "34",
         "plateforme": ["pc"],
-        "lien_jeu": ["https://kawasoft.fr/2011/12/25/narcissu-side-2nd/", "https://kawasoft.fr/narcissu/telechargement.php"],
+        "lien_jeu": [
+            "https://vndb.org/v10",
+            "https://kawasoft.fr/2011/12/25/narcissu-side-2nd/",
+            "https://kawasoft.fr/narcissu/telechargement.php"
+        ],
         "patch_fr": [],
         "description": "Premier VN de la série Narcissu.\n\nLe protagoniste anonyme est diagnostiqué d’une maladie terminale peu après son vingtième anniversaire et est admis dans un hôpital à Mito, dans la préfecture d’Ibaraki. Là, il rencontre Setsumi, une femme un peu plus âgée, également atteinte d’une maladie terminale. Refusant tous deux de mourir à l’hôpital ou chez eux, ils volent une voiture et s’enfuient ensemble."
     },
@@ -389,7 +438,10 @@
         "note_vndb": "7,54",
         "popularite_vndb": "114",
         "plateforme": ["pc"],
-        "lien_jeu": ["https://kawasoft.fr/2011/12/25/narcissu-side-2nd/"],
+        "lien_jeu": [
+            "https://vndb.org/v70",
+            "https://kawasoft.fr/2011/12/25/narcissu-side-2nd/"
+        ],
         "patch_fr": [],
         "description": "L’intrigue de Narcissu -SIDE 2nd- tourne autour de Setsumi, l’héroïne de Narcissu premier du nom, ainsi que des personnes et des circonstances qui ont façonné le personnage présenté dans le premier jeu. Elle partage ici la vedette avec de nouveaux personnages, dont Himeko, Yuka et Chihiro."
     },
@@ -402,7 +454,10 @@
         "note_vndb": "7,59",
         "popularite_vndb": "381",
         "plateforme": ["pc"],
-        "lien_jeu": ["https://store.steampowered.com/app/2106840/PARANORMASIGHT_The_Seven_Mysteries_of_Honjo/"],
+        "lien_jeu": [
+            "https://vndb.org/v42561",
+            "https://store.steampowered.com/app/2106840/PARANORMASIGHT_The_Seven_Mysteries_of_Honjo/"
+        ],
         "patch_fr": ["fr:/jeu/paranormasight/jeufr/telechargement"],
         "description": "Shōgo Okiie, un employé de bureau comme les autres, se rend au parc de Kinshibori en pleine nuit avec son amie Yōko Fukunaga, pour enquêter sur une célèbre histoire de fantôme locale : les Sept mystères de Honjo.\n\nShōgo refuse de croire Yōko lorsqu'elle lui dit que les mystères sont liés au rituel de résurrection, et n'y prête pas attention... jusqu'à ce qu'il ne devienne témoin d'événements étranges.\n\nAu même moment, d'autres mènent leur propre enquête sur les Sept mystères...Des inspecteurs enquêtant sur une série de morts inexpliquées, une lycéenne en quête de la vérité sur le suicide de sa camarade, et une mère qui a juré de venger la mort de son fils.\n\nLeurs désirs et leurs motivation s'entrelacent et interagissent autour des Sept mystères de Honjo, et culmineront en une bataille d'esprit et de malédictions."
     },
@@ -416,6 +471,7 @@
         "popularite_vndb": "23",
         "plateforme": ["pc", "switch"],
         "lien_jeu": [
+            "https://vndb.org/v34",
             "https://store.steampowered.com/app/623080/planetarian_HD/",
             "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/planetarian-1504255.html",
             "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/planetarian-Le-Reve-d-une-petite-etoile-Boule-a-neige-2583203.html"
@@ -433,12 +489,13 @@
         "popularite_vndb": "843",
         "plateforme": ["pc", "switch"],
         "lien_jeu": [
+            "https://vndb.org/v27747",
             "https://store.steampowered.com/app/2983350/planetarian_Boule__neige/",
             "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/planetarian-Snow-Globe-2580995.html",
             "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/planetarian-Le-Reve-d-une-petite-etoile-Boule-a-neige-2583203.html"
         ],
         "patch_fr": [],
-        "description": "Deuxième VN de la série Planetarian.\n\n"
+        "description": "Deuxième VN de la série Planetarian.\n\nCette histoire se déroule avant la guerre qui mènera le monde à sa perte. Yumemi travaille alors depuis dix ans au planétarium situé sur le toit du grand magasin. Un jour, elle commence à agir de façon étrange, jusqu’à quitter les lieux pour errer dans la ville. Déconcerté, le personnel charge Satomi Kurahashi de la suivre et de la ramener. Mais rapidement, Yumemi commence à manquer de batterie…"
     },
     {
         "id": "raincode",
@@ -448,10 +505,14 @@
         "duree": "30h-40h",
         "note_vndb": "6,89",
         "popularite_vndb": "764",
-        "plateforme": [],
-        "lien_jeu": [],
+        "plateforme": ["pc", "switch", "ps5", "xboxseries"],
+        "lien_jeu": [
+            "https://vndb.org/v45634",
+            "https://store.steampowered.com/app/2903950/Master_Detective_Archives_RAIN_CODE_Plus/",
+            "https://www.nintendo.com/fr-fr/Jeux/Jeux-Nintendo-Switch/Master-Detective-Archives-RAIN-CODE-2266897.html"
+        ],
         "patch_fr": [],
-        "description": ""
+        "description": "Yuma, un détective amnésique en formation, et Shinigami, l’esprit qui le hante, s’attaquent à une série d’affaires non résolues dans cette aventure policière au style noir et surréaliste. Dans Kanai Ward, la ville où la pluie ne cesse de tomber, d’innombrables mystères attendent d’être élucidés. Explorez ses rues en 3D et dénichez des « clés solutions » pour percer la vérité."
     },
     {
         "id": "silver_case",
@@ -462,9 +523,12 @@
         "note_vndb": "8,07",
         "popularite_vndb": "402",
         "plateforme": ["pc"],
-        "lien_jeu": [],
-        "patch_fr": [],
-        "description": ""
+        "lien_jeu": [
+            "https://vndb.org/v20032",
+            "https://store.steampowered.com/app/476650/The_Silver_Case/"
+        ],
+        "patch_fr": ["fr:http://projectsilver.free.fr/dl.html"],
+        "description": "1999, dans le 24e Arrondissement. Une série de meurtres mystérieux frappe la ville. Tous les regards de l’Unité de Crimes de Haine se tournent vers Kamui Uehara, tueur en série légendaire qui avait assassiné plusieurs hauts fonctionnaires vingt ans plus tôt lors de « l’affaire Silver ». Mais nul ne sait qui, ou ce qu’est réellement Kamui. Est-il vraiment de retour ? Qui est donc ce meurtrier devenu mythe ?"
     },
     {
         "id": "slay_the_princess",
@@ -475,9 +539,13 @@
         "note_vndb": "7,75",
         "popularite_vndb": "300",
         "plateforme": ["pc", "ps4", "ps5", "xboxone", "xboxseries", "switch"],
-        "lien_jeu": [],
+        "lien_jeu": [
+            "https://vndb.org/v37179",
+            "https://store.steampowered.com/app/1989270/Slay_the_Princess__The_Pristine_Cut/",
+            "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Slay-the-Princess-The-Pristine-Cut-2671625.html"
+        ],
         "patch_fr": [],
-        "description": ""
+        "description": "Vous êtes sur un chemin dans les bois et au bout de ce chemin se trouve une cabane. Et au sous-sol de cette cabane se trouve une princesse.\n\nVous êtes ici pour la tuer. Si vous ne le faites pas, ce sera la fin du monde.\n\nElle fera tout ce qui est en son pouvoir pour vous arrêter. Elle charmera, et elle mentira, et elle vous promettra le monde, et si vous la laissez faire, elle vous tuera une douzaine de fois. Vous ne pouvez pas laisser cela arriver.\n\nVous vous souciez du sort du monde, n'est-ce pas ?"
     },
     {
         "id": "vlr",
@@ -488,7 +556,10 @@
         "note_vndb": "8,21",
         "popularite_vndb": "43",
         "plateforme": ["pc", "psvita"],
-        "lien_jeu": ["https://store.steampowered.com/app/477740/Zero_Escape_The_Nonary_Games/"],
+        "lien_jeu": [
+            "https://vndb.org/v7809",
+            "https://kawasoft.fr/2011/12/25/narcissu-side-2nd/"
+        ],
         "patch_fr": ["fr:/jeu/vlr/jeufr/telechargement"],
         "description": "Deuxième VN de la série Zero Escape.\n\nNous suivons Sigma, enlevé et drogué alors qu’il se trouve à l’université. Il reprend connaissance dans un ascenseur aux côtés d’une jeune femme appelée Phi. Très vite, ils découvrent qu’ils ne peuvent pas sortir. C’est alors qu’un étrange lapin surgit et se présente sous le nom de « Zéro III ». Celui-ci leur annonce qu’ils vont participer au « Jeu Nonaire : Édition Ambidextre », un jeu cruel où leur vie est en jeu.\n\nQue va-t-il arriver à Sigma, Phi et aux sept autres personnes qu’ils rencontreront ? Pourquoi ont-ils été choisis, et surtout, à qui pourront-ils faire confiance et qui risque de les trahir ?"
     },
@@ -501,9 +572,13 @@
         "note_vndb": "5,68",
         "popularite_vndb": "1395",
         "plateforme": ["ios", "pc", "switch", "ps5"],
-        "lien_jeu": [],
+        "lien_jeu": [
+            "https://vndb.org/v31083",
+            "https://store.steampowered.com/app/1570020/Worlds_End_Club/",
+            "https://www.nintendo.com/fr-fr/Jeux/Jeux-Nintendo-Switch/World-s-End-Club-1923514.html"
+        ],
         "patch_fr": [],
-        "description": ""
+        "description": "Dans une école primaire de Tokyo, une bande d’élèves venus des quatre coins du pays se forme et se donne le nom de « Club des battants ».\nReycho et ses camarades sont des enfants quelque peu « différents » des autres.\nMais un beau jour d’été,\nalors qu’ils sont en route pour leur voyage scolaire annuel, leur bus se retrouve mêlé à un grave accident.\n\nÀ leur réveil, ils s’aperçoivent, sans comprendre la situation, qu’ils se trouvent dans un parc d’attractions aquatiques.\nReycho et ses amis sont désormais prisonniers de cet endroit étrange et abandonné.\nSoudain, une mystérieuse créature fait son apparition et les force à participer à un « jeu de survie » !"
     },
     {
         "id": "ztd",
@@ -514,7 +589,9 @@
         "note_vndb": "",
         "popularite_vndb": "",
         "plateforme": ["pc"],
-        "lien_jeu": ["https://store.steampowered.com/app/311240/Zero_Escape_Zero_Time_Dilemma/"],
+        "lien_jeu": [
+            "https://store.steampowered.com/app/311240/Zero_Escape_Zero_Time_Dilemma/"
+        ],
         "patch_fr": ["fr:/jeu/ztd/jeufr/telechargement"],
         "description": "Troisième VN de la série Zero Escape.\n\nL’expérience n’était pas censée se dérouler ainsi.\n\nNeuf participants se réveillent dans une installation souterraine, piégés avec un étrange bracelet noir au poignet. Pour s’échapper, ils doivent prendre part à un jeu aux conséquences mortelles. Les règles sont simples : une fois six personnes tuées, la trappe de sortie s’ouvrira. Qui survivra, et qui périra ? Le choix vous appartient. Un Jeu de Décision commence…"
     },
@@ -527,7 +604,10 @@
         "note_vndb": "7,11",
         "popularite_vndb": "3710",
         "plateforme": ["pc"],
-        "lien_jeu": ["https://store.steampowered.com/app/1513120/The_Zodiac_Trial/"],
+        "lien_jeu": [
+            "https://vndb.org/v30183",
+            "https://store.steampowered.com/app/1513120/The_Zodiac_Trial/"
+        ],
         "patch_fr": ["fr:/jeu/zodiac_trial/jeufr/telechargement"],
         "description": "Premier jeu de la quadrilogie The Shuffled Deck Games.\n\nMesdames et messieurs les jurés, bienvenue au Procès du Zodiaque, à la Course du Zodiaque. Vous êtes ici pour une seule et unique raison : être jugés. À vous de décider si vous allez coopérer, résoudre les énigmes ensemble et chercher la vérité en groupe, ou bien révéler votre vraie nature en trahissant les autres pour trouver une issue. Le choix vous appartient.\n\nVous incarnez Souris, une étudiante en droit complètement dépassée par les événements, aux côtés de onze autres jurés. Chacun peut devenir un allié de confiance… ou un ennemi redoutable. Du calme Bœuf au mystérieux Serpent, en passant par le maladroit Coq, tout un casting de personnages hauts en couleur se dresse devant vous, prêts à être découverts… ou redoutés.\n\nL’histoire regorge d’énigmes et de casse-têtes, allant de simples devinettes griffonnées sur une feuille à des affaires de meurtre complexes qui réclament toute votre logique. Mais attention : vos choix orienteront le déroulement de l’histoire. Treize routes différentes vous attendent, avec plus de cinquante fins possibles. Selon vos décisions, vous débloquerez une carte de mort unique, et peut-être, si vous parvenez à tout comprendre, réussirez-vous l’impossible : sauver tout le monde. Mais même alors, qui peut dire quand prendra fin le chaos ?"
     }
