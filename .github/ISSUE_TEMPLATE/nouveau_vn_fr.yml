@@ -1,0 +1,75 @@
+name: Proposer une nouvelle entrée JSON
+description: Ajouter une nouvelle entrée au fichier JSON du projet
+title: "[Entrée] : "
+labels: ["nouvelle entrée"]
+body:
+
+  - type: input
+    id: titre
+    attributes:
+      label: Titre
+      description: Titre complet du visual novel
+      placeholder: "Titre du visual novel"
+    validations:
+      required: true
+
+  - type: textarea
+    id: genre
+    attributes:
+      label: Genres
+      description: Liste des genres
+      placeholder: |
+        ["genre1", "genre2"]
+
+  - type: input
+    id: duree
+    attributes:
+      label: Durée
+      description: Temps moyen de jeu
+      placeholder: "30h-40h"
+
+  - type: input
+    id: note_vndb
+    attributes:
+      label: Note VNDB
+      placeholder: "8,10"
+
+  - type: input
+    id: popularite_vndb
+    attributes:
+      label: Rang de popularité VNDB
+      placeholder: "10"
+
+  - type: textarea
+    id: plateforme
+    attributes:
+      label: Plateformes
+      description: Liste des plateformes avec FR dispo
+      placeholder: |
+        ["pc", "psvita"]
+
+  - type: textarea
+    id: lien_jeu
+    attributes:
+      label: Liens
+      description: Liens VNDB et lien jeu avec FR dispo
+      placeholder: |
+        [
+          "https://vndb.org/vxxxx",
+          "https://store.steampowered.com/app/xxxxx/"
+        ]
+
+  - type: textarea
+    id: patch_fr
+    attributes:
+      label: Patch FR
+      description: Lien(s) vers patch(s) FR
+      placeholder: |
+        ["fr:https://equipemirai.com/..."]
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Résumé du jeu
+      placeholder: "Description longue"
