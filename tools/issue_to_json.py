@@ -24,8 +24,6 @@ body = resp.json()["body"]
 titre = extract_section(body, "Titre")
 genres = extract_section(body, "Genres")
 duree = extract_section(body, "Durée")
-note_vndb = extract_section(body, "Note VNDB")
-popularite = extract_section(body, "Rang de popularité VNDB")
 plateformes = extract_section(body, "Plateformes")
 liens = extract_section(body, "Liens")
 patch_fr = extract_section(body, "Patch FR")
@@ -50,8 +48,8 @@ entry = {
     "image": f"assets/poster/{id_value}.webp",
     "genre": genres_list,
     "duree": duree,
-    "note_vndb": note_vndb,
-    "popularite_vndb": popularite,
+    "note_vndb": "",
+    "popularite_vndb": "",
     "plateforme": plateformes_list,
     "lien_jeu": liens_list,
     "patch_fr": patch_list,
