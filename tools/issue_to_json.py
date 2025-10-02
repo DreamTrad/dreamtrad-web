@@ -16,12 +16,11 @@ def extract_section(body, field):
     match = re.search(pattern, body)
     return match.group(1).strip() if match else None
 
-# Récupération issue publique
+
 url = f"https://api.github.com/repos/{REPO}/issues/{ISSUE_NUMBER}"
 resp = requests.get(url)
 body = resp.json()["body"]
 
-# Extraction champs
 titre = extract_section(body, "Titre")
 genres = extract_section(body, "Genres")
 duree = extract_section(body, "Durée")

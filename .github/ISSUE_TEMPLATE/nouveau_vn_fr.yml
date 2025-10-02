@@ -19,12 +19,15 @@ body:
       label: Genres
       description: Coche un ou plusieurs genres
       options:
-        - label: enquête
-        - label: gameplay
-        - label: romance
-        - label: horreur
-        - label: science-fiction
+        - label: comédie
         - label: drame
+        - label: fantasy
+        - label: horreur
+        - label: gameplay
+        - label: mystère
+        - label: romance
+        - label: science-fiction
+        - label: tranche de vie
 
   - type: dropdown
     id: duree
@@ -32,23 +35,15 @@ body:
       label: Durée
       description: Temps moyen de jeu
       options:
-        - "Moins de 10h"
+        - "moins de 1h"
+        - "1h-5h"
+        - "5h-10h"
         - "10h-20h"
         - "20h-30h"
         - "30h-40h"
-        - "40h+"
-
-  - type: input
-    id: note_vndb
-    attributes:
-      label: Note VNDB
-      placeholder: "8,10"
-
-  - type: input
-    id: popularite_vndb
-    attributes:
-      label: Rang de popularité VNDB
-      placeholder: "14"
+        - "40h-50h"
+        - "50h-80h"
+        - "plus de 80h"
 
   - type: checkboxes
     id: plateforme
@@ -67,7 +62,7 @@ body:
     id: lien_jeu
     attributes:
       label: Liens
-      description: Fournis une liste en markdown (un lien par ligne, préfixé par `-`)
+      description: Lien vndb + Liens pour le VN où le français est disponible (un lien par ligne, préfixé par `-`)
       placeholder: |
         - https://vndb.org/vxxxx
         - https://store.steampowered.com/app/xxxxx/
@@ -76,7 +71,7 @@ body:
     id: patch_fr
     attributes:
       label: Patch FR
-      description: Fournis une liste en markdown (un lien par ligne, préfixé par `-`)
+      description: Liens des patchs FR (un lien par ligne, préfixé par `-`)
       placeholder: |
         - https://dreamtrad.com/...
 
@@ -84,7 +79,7 @@ body:
     id: description
     attributes:
       label: Description
-      description: Résumé du jeu
+      description: Résumé du VN, précisez la série et le numéro de l'épisode si besoin
       placeholder: "Description longue"
 
 
@@ -92,4 +87,4 @@ body:
     id: ticket
     attributes:
       label: explication
-      description: Si des points bloquent (manque le genre, champ pas clair…), explique ici
+      description: Si des points bloquent (manque le genre, champ pas clair…), expliquez ici
