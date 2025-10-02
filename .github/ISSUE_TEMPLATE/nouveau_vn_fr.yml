@@ -92,4 +92,4 @@ body:
     id: ticket
     attributes:
       label: explication
-      description: Si des points bloquent (manque le gerne, champ pas clair…), explique ici
+      description: Si des points bloquent (manque le genre, champ pas clair…), explique ici
