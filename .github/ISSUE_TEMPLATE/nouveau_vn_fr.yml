@@ -3,30 +3,55 @@ description: Ajouter une nouvelle entrée au fichier JSON du projet
 title: "[Entrée] : "
 labels: ["nouvelle entrée"]
 body:
+  - type: input
+    id: id
+    attributes:
+      label: Identifiant
+      description: ID unique de l'entrée (ex: danganronpa_2)
+      placeholder: "id_jeu"
+    validations:
+      required: true
 
   - type: input
     id: titre
     attributes:
       label: Titre
-      description: Titre complet du visual novel
-      placeholder: "Titre du visual novel"
+      description: Titre complet du jeu/visual novel
+      placeholder: "Titre du jeu"
     validations:
       required: true
 
-  - type: textarea
+  - type: input
+    id: image
+    attributes:
+      label: Image
+      description: Chemin vers l’image
+      placeholder: "assets/poster/xxx.webp"
+
+  - type: checkboxes
     id: genre
     attributes:
       label: Genres
-      description: Liste des genres
-      placeholder: |
-        ["genre1", "genre2"]
+      description: Coche un ou plusieurs genres
+      options:
+        - label: enquête
+        - label: gameplay
+        - label: romance
+        - label: horreur
+        - label: science-fiction
+        - label: drame
 
-  - type: input
+  - type: dropdown
     id: duree
     attributes:
       label: Durée
       description: Temps moyen de jeu
-      placeholder: "30h-40h"
+      options:
+        - "Moins de 10h"
+        - "10h-20h"
+        - "20h-30h"
+        - "30h-40h"
+        - "40h+"
 
   - type: input
     id: note_vndb
@@ -37,22 +62,27 @@ body:
   - type: input
     id: popularite_vndb
     attributes:
-      label: Rang de popularité VNDB
+      label: Popularité VNDB
       placeholder: "10"
 
-  - type: textarea
+  - type: checkboxes
     id: plateforme
     attributes:
       label: Plateformes
-      description: Liste des plateformes avec FR dispo
-      placeholder: |
-        ["pc", "psvita"]
+      description: Sélectionne les plateformes disponibles
+      options:
+        - label: pc
+        - label: psvita
+        - label: ps4
+        - label: switch
+        - label: android
+        - label: ios
 
   - type: textarea
     id: lien_jeu
     attributes:
       label: Liens
-      description: Liens VNDB et lien jeu avec FR dispo
+      description: Liens VNDB, Steam, etc. (format JSON array)
       placeholder: |
         [
           "https://vndb.org/vxxxx",
@@ -63,7 +93,7 @@ body:
     id: patch_fr
     attributes:
       label: Patch FR
-      description: Lien(s) vers patch(s) FR
+      description: Lien(s) vers patch(s) FR (format JSON array)
       placeholder: |
         ["fr:https://equipemirai.com/..."]
 
