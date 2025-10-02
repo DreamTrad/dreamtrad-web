@@ -1,32 +1,17 @@
-name: Proposer une nouvelle entrée JSON
-description: Ajouter une nouvelle entrée au fichier JSON du projet
-title: "[Entrée] : "
+name: Proposer une nouveau visual novel en français
+description: Ajouter une entrée sur la page découvrir
+title: "[VNFR] : "
 labels: ["nouvelle entrée"]
 body:
-  - type: input
-    id: id
-    attributes:
-      label: Identifiant
-      description: ID unique de l'entrée (ex: danganronpa_2)
-      placeholder: "id_jeu"
-    validations:
-      required: true
 
   - type: input
     id: titre
     attributes:
       label: Titre
-      description: Titre complet du jeu/visual novel
+      description: Titre complet du visual novel
       placeholder: "Titre du jeu"
     validations:
       required: true
-
-  - type: input
-    id: image
-    attributes:
-      label: Image
-      description: Chemin vers l’image
-      placeholder: "assets/poster/xxx.webp"
 
   - type: checkboxes
     id: genre
@@ -62,14 +47,14 @@ body:
   - type: input
     id: popularite_vndb
     attributes:
-      label: Popularité VNDB
-      placeholder: "10"
+      label: Rang de popularité VNDB
+      placeholder: "14"
 
   - type: checkboxes
     id: plateforme
     attributes:
       label: Plateformes
-      description: Sélectionne les plateformes disponibles
+      description: Plateformes où le français est disponible
       options:
         - label: pc
         - label: psvita
@@ -82,20 +67,18 @@ body:
     id: lien_jeu
     attributes:
       label: Liens
-      description: Liens VNDB, Steam, etc. (format JSON array)
+      description: Fournis une liste en markdown (un lien par ligne, préfixé par `-`)
       placeholder: |
-        [
-          "https://vndb.org/vxxxx",
-          "https://store.steampowered.com/app/xxxxx/"
-        ]
+        - https://vndb.org/vxxxx
+        - https://store.steampowered.com/app/xxxxx/
 
   - type: textarea
     id: patch_fr
     attributes:
       label: Patch FR
-      description: Lien(s) vers patch(s) FR (format JSON array)
+      description: Fournis une liste en markdown (un lien par ligne, préfixé par `-`)
       placeholder: |
-        ["fr:https://equipemirai.com/..."]
+        - https://dreamtrad.com/...
 
   - type: textarea
     id: description
@@ -103,3 +86,10 @@ body:
       label: Description
       description: Résumé du jeu
       placeholder: "Description longue"
+
+
+  - type: textarea
+    id: ticket
+    attributes:
+      label: explication
+      description: Si des points bloquent (manque le gerne, champ pas clair…), explique ici
