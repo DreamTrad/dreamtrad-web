@@ -1,6 +1,6 @@
 PARANORMASIGHT : The Seven Mysteries of Honjo est un Visual Novel de Square Enix sorti le 8 mars 2023.
 
-Lors d'une nuit sombre, 7 artefact maudits apparaissent, et permettent à leurs utilisateurs de tuer sans trace n'importe qui respectant les conditions de leur artefact. D'où viennent-ils, qui en sont les utilisateurs, quelles sont les histoires surnaturelles qui les entourent, et quel est votre rôle dans cette histoire ?
+Lors d'une nuit sombre, 7 artefact maudits apparaissent, et permettent à leurs utilisateurs de tuer sans trace n'importe qui respectant les conditions de leur artefact. D'où viennent-ils, qui en sont les utilisateurs, quelles sont les histoires surnaturelles qui les entourent, et quel est votre rôle dans cette histoire ?
 
 
 

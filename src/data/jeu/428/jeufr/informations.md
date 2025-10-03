@@ -1,1 +1,1 @@
-Le patch de la traduction française n’est pas encore disponible, suivez nous sur twitter et discord pour en savoir plus sur l’avancée du patch !
+Le patch de la traduction française n’est pas encore disponible, suivez nous sur twitter et discord pour en savoir plus sur l’avancée du patch !

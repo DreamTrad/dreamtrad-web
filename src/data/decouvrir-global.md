@@ -1,3 +1,3 @@
-Vous trouverez ici une liste de Visual Novel disponible en français. Elle sera mise à jour au fil du temps pour proposer de plus en plus de Visual Novel à découvrir. Si vous souhaitez rédiger la fiche pour un Visual Novel non-présent dans la liste, n’hésitez pas à le faire !
+Vous trouverez ici une liste de Visual Novel disponible en français. Elle sera mise à jour au fil du temps pour proposer de plus en plus de Visual Novel à découvrir. Si vous souhaitez rédiger la fiche pour un Visual Novel non-présent dans la liste, n’hésitez pas à le faire !
 
 Si l’anglais, le japonais (voire même d’autres langues) ne vous font pas peur, nous vous invitons à vous rendre sur [vndb](https://vndb.org/), la base de données des Visual Novel. Vous y trouverez une liste énorme de Visual Novel avec des tonnes d’informations. Cette page n’est en soit qu’une version légère en français avec des Visual Novel traduits en français.

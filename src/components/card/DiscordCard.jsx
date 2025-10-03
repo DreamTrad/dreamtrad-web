@@ -9,7 +9,7 @@ export default function DiscordCard({ inviteUrl }) {
 
       <p className="text-sm text-text-secondary mb-4">
         Rejoignez notre Discord pour discuter, participer aux beta-tests,
-        ou aider sur les différents projets !
+        ou aider sur les différents projets !
       </p>
 
       <a

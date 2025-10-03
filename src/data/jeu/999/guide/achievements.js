@@ -65,7 +65,7 @@ export const achievements = [
   {
     id: "ACH_SKPV_08",
     titleEn: "Is That Your Final Answer?",
-    titleFr: "Est-ce que c’est votre dernière réponse ?",
+    titleFr: "Est-ce que c’est votre dernière réponse ?",
     descriptionEn: "Solved the final question in 999.",
     descriptionFr: "Résolvez l’énigme finale dans 999.",
     resolution: "",

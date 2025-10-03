@@ -7,7 +7,7 @@
 - Sélectionnez le répertoire du jeu avec le bouton « Rechercher » s’il n’apparait pas automatiquement.
 - Cliquez sur « Patcher ».
 - Attendez un petit moment…
-- … Et c’est bon !
+- … Et c’est bon !
 
 Si vous avez des problèmes, tentez de patcher manuellement.
 

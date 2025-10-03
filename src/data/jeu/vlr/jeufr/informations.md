@@ -1,4 +1,4 @@
-Merci d’avoir téléchargé notre patch du jeu The Nonary Games ! Ce patch comprend la traduction des deux jeux de la collection : 9 Hours, 9 Doors, 9 Persons et Virtue’s Last Reward.
+Merci d’avoir téléchargé notre patch du jeu The Nonary Games ! Ce patch comprend la traduction des deux jeux de la collection : 9 Hours, 9 Doors, 9 Persons et Virtue’s Last Reward.
 
 
 Nous nous sommes appuyés sur une traduction de la version DS pour 999 qui n’est jamais sortie que nous avons entièrement réadaptée et corrigée.

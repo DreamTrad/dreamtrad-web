@@ -13,6 +13,6 @@ Propriétés → Fichiers installés → Vérifier l’intégrité des fichiers 
 
 - Si le chemin de votre jeu n’apparait pas, sélectionnez le avec le bouton "Rechercher".
 - Cochez les éléments que vous voulez patcher. Launcher correspond à la fenêtre permettant de choisir quel jeu on lance ainsi que la manette avec laquelle on joue.
-- Cliquez sur "Patcher". Attendez un peu, et ça sera bon, votre jeu sera patché !
+- Cliquez sur "Patcher". Attendez un peu, et ça sera bon, votre jeu sera patché !
 
 Si vous avez des problèmes, tentez de patcher manuellement.

@@ -29,7 +29,7 @@ export default function AchievementsSection({ sectionData, gameId }) {
             titleFr={succ.titleFr}
             description={succ.descriptionFr}
             resolution={succ.resolution}
-            hidden={succ.hidden && !revealAll}
+            hidden={succ.hidden && !revealAll}
           />
         ))}
       </div>

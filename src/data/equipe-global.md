@@ -1,6 +1,6 @@
 DreamTrad a débuté via un projet de traduction de AI: The Somnium Files le 22 août 2020 sous le nom DreamTeam Trad. Le fondateur, Foubou a fait un post sur Steam, dans la foulée un serveu Discord a été créé et dans l’année de sa création, certains des membres encore actifs aujourd’hui sont arrivés.
 
-Le 14 mars 2022, AI: The Somnium Files est disponible en français ! Le premier patch de l’équipe est disponible. Par la suite de nombreux vont suivre.
+Le 14 mars 2022, AI: The Somnium Files est disponible en français ! Le premier patch de l’équipe est disponible. Par la suite de nombreux vont suivre.
 
 Année après année, patch après patch, l’équipe a obtenu une expérience et une méthodologie suffisante pour porter de nombreux projets. 5 ans après la création de l’équipe, nous lançons un nouveau site internet avec un léger rebranding, et surtout avec une nouvelle ambition de pouvoir proposer encore plus de projets, et aider à la promotion du Visual Novel.
 

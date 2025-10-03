@@ -12,6 +12,6 @@ Propriétés → Fichiers installés → Vérifier l’intégrité des fichiers 
 ![Image logiciel pour patcher automatiquement](/assets/jeu/ztd/jeufr/installation/logiciel_patch_auto.webp)
 
 - Si le chemin de votre jeu n’apparait pas, sélectionnez le avec le bouton "Rechercher".
-- Cliquez sur "Patcher". Attendez un peu, et ça sera bon, votre jeu sera patché !
+- Cliquez sur "Patcher". Attendez un peu, et ça sera bon, votre jeu sera patché !
 
 Si vous avez des problèmes, tentez de patcher manuellement.

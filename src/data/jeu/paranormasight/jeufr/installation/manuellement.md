@@ -13,4 +13,4 @@
 ![Image étape 3](/assets/jeu/paranormasight/jeufr/installation/manuellement_3.webp)
 
 
-Le patch est installé !
+Le patch est installé !

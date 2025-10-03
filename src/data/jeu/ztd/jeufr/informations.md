@@ -1,4 +1,4 @@
-Merci d’avoir téléchargé notre patch du jeu Zero Escape : Zero Time Dilemma pour Steam ! Il est le troisième et dernier jeu de la trilogie des Zero Escape. Il est donc préférable de jouer aux jeux précédents avant. Ils possèdent déjà une traduction française faite par nos soins.
+Merci d’avoir téléchargé notre patch du jeu Zero Escape : Zero Time Dilemma pour Steam ! Il est le troisième et dernier jeu de la trilogie des Zero Escape. Il est donc préférable de jouer aux jeux précédents avant. Ils possèdent déjà une traduction française faite par nos soins.
 
 Nous nous sommes appuyés sur une ancienne traduction réalisée par certains membres de notre équipe que nous avons entièrement réadaptée et corrigée.
 Nous nous sommes basés sur le texte japonais, comme pour les deux jeux précédents. Il risque donc d’y avoir de nombreuses différences avec la version anglaise.
