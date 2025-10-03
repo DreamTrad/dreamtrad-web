@@ -1,7 +1,7 @@
 name: Proposer une nouveau visual novel en français
 description: Ajouter une entrée sur la page découvrir
 title: "[VNFR] : "
-labels: ["nouvelle entrée"]
+labels: ["contenu"]
 body:
 
   - type: input

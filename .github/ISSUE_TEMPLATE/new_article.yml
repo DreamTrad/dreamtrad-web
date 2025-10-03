@@ -1,0 +1,40 @@
+name: Proposer un nouvel article
+description: Création d’un article
+title: "[Article] : "
+labels: ["contenu"]
+body:
+
+  - type: input
+    id: titre
+    attributes:
+      label: Titre
+      description: Titre complet de l’article
+      placeholder: "Ex: Coment ça marche une fantraduction ?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: excerpt
+    attributes:
+      label: Extrait
+      description: Court résumé (1-2 phrases) qui servira de meta-description
+      placeholder: "Un retour d’expérience sur…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: contenu
+    attributes:
+      label: Contenu de l’article
+      description: Rédige le texte complet (titres, paragraphes, images, etc.)
+      placeholder: |
+        # Introduction
+        Texte ici...
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Image de couverture
+        Ajoute l’image de couverture comme **pièce jointe**.
