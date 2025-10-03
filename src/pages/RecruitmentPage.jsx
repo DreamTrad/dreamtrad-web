@@ -26,7 +26,7 @@ export default function RecruitmentPage() {
       <div
         className="grid gap-8 justify-center
                 grid-cols-1          /* mobile par défaut */
-                sm:grid-cols-[repeat(auto-fit,minmax(600px,1fr))]"
+                sm:grid-cols-[repeat(auto-fit,minmax(400px,1fr))]"
       >
         {recruitmentData.map((project) => (
           <RecruitmentCard

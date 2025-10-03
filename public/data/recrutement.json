@@ -1,7 +1,7 @@
 [
     {
         "id": "428",
-        "title": "428: Shibuya Scramble",
+        "title": "Traduction de 428: Shibuya Scramble",
         "image": "assets/poster/428.webp",
         "roles": ["Traducteur EN → FR", "Graphiste"],
         "contact": "AlexisTGF",
@@ -9,7 +9,7 @@
     },
     {
         "id": "paranormsight",
-        "title": "PARANORMASIGHT",
+        "title": "Patch Switch de PARANORMASIGHT",
         "image": "assets/poster/paranormasight.webp",
         "roles": ["Testeur patch switch"],
         "contact": "Silous",

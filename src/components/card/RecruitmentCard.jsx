@@ -15,22 +15,25 @@ export default function RecruitmentCard({
       {/* Middle: image + roles */}
       <div className="flex flex-col md:flex-row p-6 gap-6">
         {/* Image */}
-        <div className="flex-shrink-0 w-full md:w-60 lg:w-72">
+        <div className="flex-shrink-0 w-40 h-56">
           <img
             src={image}
             alt={`Affiche de ${title}`}
-            className="w-full h-auto object-cover rounded-md shadow-md"
+            className="w-full h-full object-cover rounded-md shadow-md"
           />
         </div>
 
         {/* Rôles / contenu */}
+        {/* Rôles / contenu */}
         <div className="flex-1 bg-bg-secondary rounded-md p-4">
           <h4 className="text-lg font-semibold mb-2">Nous recrutons :</h4>
-          <ul className="list-disc list-inside space-y-1 text-text-secondary">
-            {roles.map((role, idx) => (
-              <li key={idx}>{role}</li>
-            ))}
-          </ul>
+          <div className="flex items-center h-40">
+            <ul className="list-disc list-inside space-y-5 text-text-secondary">
+              {roles.map((role, idx) => (
+                <li key={idx}>{role}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 

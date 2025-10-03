@@ -9,7 +9,7 @@ body:
     attributes:
       label: Titre
       description: Titre complet du visual novel
-      placeholder: "Titre du jeu"
+      placeholder: "Titre"
     validations:
       required: true
 
@@ -81,7 +81,6 @@ body:
       label: Description
       description: Résumé du VN, précisez la série et le numéro de l'épisode si besoin
       placeholder: "Description longue"
-
 
   - type: textarea
     id: ticket
