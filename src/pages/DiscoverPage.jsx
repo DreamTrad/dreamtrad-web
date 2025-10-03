@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import RecruitmentCard from "../components/card/DiscoverCard";
+import DiscoverCard from "../components/card/DiscoverCard";
 import MarkdownSection from "../components/ui/MarkdownSection";
 import LoaderOverlay from "../components/ui/LoaderOverlay";
 import useFetchWithLoader from "../hooks/useFetchWithLoader";
@@ -61,7 +61,7 @@ function MultiDropdown({ label, options, selected, setSelected }) {
 // Page principale
 // ----------------------
 export default function DiscoverPage() {
-  const { data: recruitmentData, loading, error } = useFetchWithLoader(
+  const { data: DiscoverData, loading, error } = useFetchWithLoader(
     "data/vn_fr_list.json",
     []
   );
@@ -77,7 +77,7 @@ export default function DiscoverPage() {
   // Options uniques
   const genres = Array.from(
     new Set(
-      recruitmentData.flatMap((p) => {
+      DiscoverData.flatMap((p) => {
         if (!p.genre) return [];
         if (Array.isArray(p.genre)) return p.genre;
         return p.genre.split(",").map((g) => g.trim());
@@ -86,14 +86,14 @@ export default function DiscoverPage() {
   ).sort();
 
   const durees = Array.from(
-    new Set(recruitmentData.map((p) => p.duree).filter(Boolean))
+    new Set(DiscoverData.map((p) => p.duree).filter(Boolean))
   ).sort();
 
 
   // ----------------------
   // Filtrage
   // ----------------------
-  const filteredData = recruitmentData.filter((project) => {
+  const filteredData = DiscoverData.filter((project) => {
     const matchName = project.titre
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
@@ -218,7 +218,7 @@ export default function DiscoverPage() {
       {/* Grille */}
       <div className="grid gap-8 w-full justify-center [grid-template-columns:repeat(auto-fit,minmax(320px,800px))]">
         {sortedData.map((project) => (
-          <RecruitmentCard
+          <DiscoverCard
             key={project.id}
             titre={project.titre}
             image={project.image}

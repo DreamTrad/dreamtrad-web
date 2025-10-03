@@ -5,7 +5,7 @@
         "image": "assets/poster/999.webp",
         "genre": ["mystère", "science-fiction", "gameplay"],
         "duree": "10h-20h",
-        "note_vndb": "8,28",
+        "note_vndb": "8.28",
         "popularite_vndb": "21",
         "plateforme": ["pc", "psvita"],
         "lien_jeu": [
@@ -21,7 +21,7 @@
         "image": "assets/poster/ace_attorney_1.webp",
         "genre": ["mystère", "gameplay"],
         "duree": "20h-30h",
-        "note_vndb": "8,07",
+        "note_vndb": "8.07",
         "popularite_vndb": "20",
         "plateforme": ["pc", "ds", "switch", "ps4", "xboxone", "android", "ios"],
         "lien_jeu": [
@@ -38,7 +38,7 @@
         "image": "assets/poster/ace_attorney_2.webp",
         "genre": ["mystère", "gameplay"],
         "duree": "20h-30h",
-        "note_vndb": "7,58",
+        "note_vndb": "7.58",
         "popularite_vndb": "33",
         "plateforme": ["pc", "ds", "switch", "ps4", "xboxone", "android", "ios"],
         "lien_jeu": [
@@ -55,7 +55,7 @@
         "image": "assets/poster/ace_attorney_3.webp",
         "genre": ["mystère", "gameplay"],
         "duree": "20h-30h",
-        "note_vndb": "8,56",
+        "note_vndb": "8.56",
         "popularite_vndb": "39",
         "plateforme": ["pc", "ds", "switch", "ps4", "xboxone", "android", "ios"],
         "lien_jeu": [
@@ -72,7 +72,7 @@
         "image": "assets/poster/ace_attorney_4.webp",
         "genre": ["mystère", "gameplay"],
         "duree": "20h-30h",
-        "note_vndb": "7,42",
+        "note_vndb": "7.42",
         "popularite_vndb": "65",
         "plateforme": ["pc", "ds", "switch", "ps4", "xboxone"],
         "lien_jeu": [
@@ -89,7 +89,7 @@
         "image": "assets/poster/ace_attorney_5.webp",
         "genre": ["mystère", "gameplay"],
         "duree": "30h-40h",
-        "note_vndb": "7,17",
+        "note_vndb": "7.17",
         "popularite_vndb": "119",
         "plateforme": ["pc", "3ds", "switch", "ps4", "xboxone"],
         "lien_jeu": [
@@ -106,7 +106,7 @@
         "image": "assets/poster/ace_attorney_6.webp",
         "genre": ["mystère", "gameplay"],
         "duree": "30h-40h",
-        "note_vndb": "7,54",
+        "note_vndb": "7.54",
         "popularite_vndb": "178",
         "plateforme": ["pc", "switch", "ps4", "xboxone"],
         "lien_jeu": [
@@ -158,7 +158,7 @@
         "image": "assets/poster/ai1.webp",
         "genre": ["mystère", "science-fiction", "gameplay"],
         "duree": "20h-30h",
-        "note_vndb": "7,86",
+        "note_vndb": "7.86",
         "popularite_vndb": "71",
         "plateforme": ["pc"],
         "lien_jeu": [
@@ -174,7 +174,7 @@
         "image": "assets/poster/ai2.webp",
         "genre": ["mystère", "science-fiction", "gameplay"],
         "duree": "20h-30h",
-        "note_vndb": "7,27",
+        "note_vndb": "7.27",
         "popularite_vndb": "208",
         "plateforme": ["pc"],
         "lien_jeu": [
@@ -190,7 +190,7 @@
         "image": "assets/poster/clannad.webp",
         "genre": ["tranche de vie", "romance", "drame"],
         "duree": "50h-80h",
-        "note_vndb": "8,70",
+        "note_vndb": "8.70",
         "popularite_vndb": "12",
         "plateforme": ["pc"],
         "lien_jeu": [
@@ -206,7 +206,7 @@
         "image": "assets/poster/danganronpa_1.webp",
         "genre": ["mystère", "gameplay"],
         "duree": "30h-40h",
-        "note_vndb": "7,63",
+        "note_vndb": "7.63",
         "popularite_vndb": "6",
         "plateforme": ["pc"],
         "lien_jeu": [
@@ -222,7 +222,7 @@
         "image": "assets/poster/danganronpa_2.webp",
         "genre": ["mystère", "gameplay"],
         "duree": "30h-40h",
-        "note_vndb": "8,10",
+        "note_vndb": "8.10",
         "popularite_vndb": "10",
         "plateforme": ["pc", "psvita"],
         "lien_jeu": [
@@ -238,7 +238,7 @@
         "image": "assets/poster/danganronpa_v3.webp",
         "genre": ["mystère", "gameplay"],
         "duree": "30h-40h",
-        "note_vndb": "7,70",
+        "note_vndb": "7.70",
         "popularite_vndb": "25",
         "plateforme": ["pc", "ps4", "psvita"],
         "lien_jeu": [
@@ -254,7 +254,7 @@
         "image": "assets/poster/ddlc.webp",
         "genre": ["tranche de vie", "romance"],
         "duree": "5h-10h",
-        "note_vndb": "6,94",
+        "note_vndb": "6.94",
         "popularite_vndb": "4",
         "plateforme": ["pc", "ps4", "ps5", "switch", "xboxone", "xboxseries"],
         "lien_jeu": [
@@ -270,7 +270,7 @@
         "image": "assets/poster/digimon_survive.webp",
         "genre": ["gameplay"],
         "duree": "50h-80h",
-        "note_vndb": "7,01",
+        "note_vndb": "7.01",
         "popularite_vndb": "1524",
         "plateforme": ["pc", "ps4", "xboxone", "switch"],
         "lien_jeu": [
@@ -289,7 +289,7 @@
         "image": "assets/poster/famicom_detective_club_emio.webp",
         "genre": ["mystère", "gameplay"],
         "duree": "10h-20h",
-        "note_vndb": "7,22",
+        "note_vndb": "7.22",
         "popularite_vndb": "1625",
         "plateforme": ["switch"],
         "lien_jeu": [
@@ -305,7 +305,7 @@
         "image": "assets/poster/fata_morgana.webp",
         "genre": ["drame"],
         "duree": "30h-40h",
-        "note_vndb": "8,81",
+        "note_vndb": "8.81",
         "popularite_vndb": "32",
         "plateforme": ["pc"],
         "lien_jeu": [
@@ -321,7 +321,7 @@
         "image": "assets/poster/fata_morgana_requiem.webp",
         "genre": ["drame"],
         "duree": "20h-30h",
-        "note_vndb": "8,55",
+        "note_vndb": "8.55",
         "popularite_vndb": "133",
         "plateforme": ["pc"],
         "lien_jeu": [
@@ -350,7 +350,7 @@
         "image": "assets/poster/higurashi.webp",
         "genre": ["mystère", "horreur", "tranche de vie"],
         "duree": "plus de 80h",
-        "note_vndb": "8,59",
+        "note_vndb": "8.59",
         "popularite_vndb": "17",
         "plateforme": ["pc"],
         "lien_jeu": [
@@ -366,7 +366,7 @@
         "image": "assets/poster/hotel_dusk.webp",
         "genre": ["mystère", "gameplay"],
         "duree": "10h-20h",
-        "note_vndb": "7,75",
+        "note_vndb": "7.75",
         "popularite_vndb": "286",
         "plateforme": ["ds"],
         "lien_jeu": ["https://vndb.org/v697"],
@@ -379,7 +379,7 @@
         "image": "assets/poster/hungry_lamb.webp",
         "genre": [],
         "duree": "5h-10h",
-        "note_vndb": "7,86",
+        "note_vndb": "7.86",
         "popularite_vndb": "806",
         "plateforme": ["pc"],
         "lien_jeu": ["https://store.steampowered.com/app/2593370/LAgneau_affame__Un_voyage__la_fin_de_la_dynastie_Ming/"],
@@ -392,7 +392,7 @@
         "image": "assets/poster/kanon.webp",
         "genre": ["tranche de vie", "romance", "drame"],
         "duree": "30h-40h",
-        "note_vndb": "7,70",
+        "note_vndb": "7.70",
         "popularite_vndb": "63",
         "plateforme": ["pc"],
         "lien_jeu": [],
@@ -405,7 +405,7 @@
         "image": "assets/poster/last_window.webp",
         "genre": ["mystère", "gameplay"],
         "duree": "10h-20h",
-        "note_vndb": "7,92",
+        "note_vndb": "7.92",
         "popularite_vndb": "743",
         "plateforme": ["ds"],
         "lien_jeu": ["https://vndb.org/v4617"],
@@ -418,7 +418,7 @@
         "image": "assets/poster/narcissu.webp",
         "genre": ["drame"],
         "duree": "1h-5h",
-        "note_vndb": "7,50",
+        "note_vndb": "7.50",
         "popularite_vndb": "34",
         "plateforme": ["pc"],
         "lien_jeu": [
@@ -435,7 +435,7 @@
         "image": "assets/poster/narcissu_side_2nd.webp",
         "genre": ["drame"],
         "duree": "1h-5h",
-        "note_vndb": "7,54",
+        "note_vndb": "7.54",
         "popularite_vndb": "114",
         "plateforme": ["pc"],
         "lien_jeu": [
@@ -451,7 +451,7 @@
         "image": "assets/poster/paranormasight.webp",
         "genre": ["mystère", "horreur"],
         "duree": "10h-20h",
-        "note_vndb": "7,59",
+        "note_vndb": "7.59",
         "popularite_vndb": "381",
         "plateforme": ["pc"],
         "lien_jeu": [
@@ -467,7 +467,7 @@
         "image": "assets/poster/planetarian.webp",
         "genre": ["science-fiction"],
         "duree": "1h-5h",
-        "note_vndb": "7,86",
+        "note_vndb": "7.86",
         "popularite_vndb": "23",
         "plateforme": ["pc", "switch"],
         "lien_jeu": [
@@ -485,7 +485,7 @@
         "image": "assets/poster/planetarian_snow_globe.webp",
         "genre": ["science-fiction"],
         "duree": "1h-5h",
-        "note_vndb": "6,58",
+        "note_vndb": "6.58",
         "popularite_vndb": "843",
         "plateforme": ["pc", "switch"],
         "lien_jeu": [
@@ -503,7 +503,7 @@
         "image": "assets/poster/raincode.webp",
         "genre": ["mystère", "gameplay"],
         "duree": "30h-40h",
-        "note_vndb": "6,89",
+        "note_vndb": "6.89",
         "popularite_vndb": "764",
         "plateforme": ["pc", "switch", "ps5", "xboxseries"],
         "lien_jeu": [
@@ -520,7 +520,7 @@
         "image": "assets/poster/silver_case.webp",
         "genre": ["mystère"],
         "duree": "10h-20h",
-        "note_vndb": "8,07",
+        "note_vndb": "8.07",
         "popularite_vndb": "402",
         "plateforme": ["pc"],
         "lien_jeu": [
@@ -536,7 +536,7 @@
         "image": "assets/poster/slay_the_princess.webp",
         "genre": ["horreur", "fantasy"],
         "duree": "10h-20h",
-        "note_vndb": "7,75",
+        "note_vndb": "7.75",
         "popularite_vndb": "300",
         "plateforme": ["pc", "ps4", "ps5", "xboxone", "xboxseries", "switch"],
         "lien_jeu": [
@@ -553,7 +553,7 @@
         "image": "assets/poster/vlr.webp",
         "genre": ["mystère", "science-fiction", "gameplay"],
         "duree": "30h-40h",
-        "note_vndb": "8,21",
+        "note_vndb": "8.21",
         "popularite_vndb": "43",
         "plateforme": ["pc", "psvita"],
         "lien_jeu": [
@@ -569,7 +569,7 @@
         "image": "assets/poster/worlds_end_club.webp",
         "genre": ["mystère"],
         "duree": "10h-20h",
-        "note_vndb": "5,68",
+        "note_vndb": "5.68",
         "popularite_vndb": "1395",
         "plateforme": ["ios", "pc", "switch", "ps5"],
         "lien_jeu": [
@@ -601,7 +601,7 @@
         "image": "assets/poster/zodiac_trial.webp",
         "genre": ["mystère"],
         "duree": "20h-30h",
-        "note_vndb": "7,11",
+        "note_vndb": "7.11",
         "popularite_vndb": "3710",
         "plateforme": ["pc"],
         "lien_jeu": [
