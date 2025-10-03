@@ -46,14 +46,22 @@ export default function LinkWithIcon({ url }) {
     }
   }
 
-  return (
-    <a
-      href={normalizedUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center gap-2 text-accent hover:underline"
-    >
-      <img src={selected.icon} alt={selected.label} className="w-5 h-5" />
-    </a>
-  );
+ return (
+  <a
+    href={normalizedUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="relative group inline-flex items-center gap-2 text-accent"
+  >
+    <img src={selected.icon} alt={selected.label} className="w-5 h-5" />
+
+    {/* Tooltip custom */}
+    <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2
+                     opacity-0 group-hover:opacity-100
+                     bg-black text-white text-xs rounded px-2 py-1 whitespace-nowrap
+                     transition">
+      {selected.label}
+    </span>
+  </a>
+);
 }
