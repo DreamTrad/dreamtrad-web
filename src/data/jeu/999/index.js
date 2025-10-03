@@ -10,13 +10,12 @@ export const game = {
       name: "Le Jeu",
       sections: [
         { id: "Presentation", name: "Présentation", file: "general/presentation" },
-        { id: "auteurs", name: "Auteurs", file: "general/auteurs" },
       ],
     },
     guide: {
       name: "Guide",
       sections: [
-        { id: "solution", name: "Solution" },
+        // { id: "solution", name: "Solution" },
         { id: "flux", name: "Flux" },
         {
           id: "echappatoires",
@@ -40,7 +39,7 @@ export const game = {
             { id: "salle_de_torture", name: "Salle de torture", file: "guide/echappatoires/salle_de_torture" },
           ],
         },
-        { id: "enigme_final", name: "Énigme finale", file: "guide/enigme_finale" },
+        // { id: "enigme_final", name: "Énigme finale", file: "guide/enigme_finale" },
         { id: "fins", name: "Fins", file: "guide/fins" },
         { id: "achievements", name: "Succès", data: achievements },
       ],

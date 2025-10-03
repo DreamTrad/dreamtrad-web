@@ -10,16 +10,14 @@ export const game = {
       name: "Le Jeu",
       sections: [
         { id: "Presentation", name: "Présentation", file: "general/presentation" },
-        { id: "auteurs", name: "Auteurs", file: "general/auteurs" },
       ],
     },
 
     guide: {
       name: "Guide",
       sections: [
-        { id: "solution", name: "Solution" },
-        { id: "flux", name: "Flux" },
-        { id: "somnium", name: "Somnium" },
+        // { id: "flux", name: "Flux" },
+        // { id: "somnium", name: "Somnium" },
         { id: "achievements", name: "succès",  data: achievements },
       ],
     },

@@ -9,18 +9,17 @@ export const game = {
       name: "Le Jeu",
       sections: [
         { id: "Presentation", name: "Présentation", file: "general/presentation" },
-        { id: "auteurs", name: "Auteurs", file: "general/auteurs" },
       ],
     },
 
-    guide: {
-      name: "Guide",
-      sections: [
-        { id: "solution", name: "Solution" },
-        { id: "flux", name: "Flux" },
-        { id: "fins", name: "Fins" },
-      ],
-    },
+    // guide: {
+    //   name: "Guide",
+    //   sections: [
+    //     { id: "solution", name: "Solution" },
+    //     { id: "flux", name: "Flux" },
+    //     { id: "fins", name: "Fins" },
+    //   ],
+    // },
     jeufr: {
       name: "Patch FR",
       sections: [

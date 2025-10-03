@@ -10,16 +10,15 @@ export const game = {
       name: "Le Jeu",
       sections: [
         { id: "Presentation", name: "Présentation", file: "general/presentation" },
-        { id: "auteurs", name: "Auteurs", file: "general/auteurs" },
       ],
     },
 
     guide: {
       name: "Guide",
       sections: [
-        { id: "solution", name: "Solution" },
-        { id: "echappatoire", name: "Échappatoire" },
-        { id: "galapiafs", name: "Galapiafs" },
+        // { id: "solution", name: "Solution" },
+        // { id: "echappatoire", name: "Échappatoire" },
+        // { id: "galapiafs", name: "Galapiafs" },
         { id: "achievements", name: "succès",  data: achievements },
       ],
     },
