@@ -1,0 +1,1 @@
+C’est le texte de présentation et d’historique de l’équipe.
