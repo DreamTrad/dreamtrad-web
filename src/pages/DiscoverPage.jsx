@@ -130,6 +130,30 @@ export default function DiscoverPage() {
     return matchName && matchGenre && matchDuree && matchTraduction;
   });
 
+  const [sortOption, setSortOption] = useState("titre-asc");
+
+  const sortedData = [...filteredData].sort((a, b) => {
+    switch (sortOption) {
+      case "titre-asc":
+        return a.titre.localeCompare(b.titre);
+      case "titre-desc":
+        return b.titre.localeCompare(a.titre);
+
+      case "note-asc":
+        return parseFloat(a.note_vndb || 0) - parseFloat(b.note_vndb || 0);
+      case "note-desc":
+        return parseFloat(b.note_vndb || 0) - parseFloat(a.note_vndb || 0);
+
+      case "popularite-asc": // 1 est mieux → plus petit d’abord
+        return parseInt(a.popularite_vndb || 9999) - parseInt(b.popularite_vndb || 9999);
+      case "popularite-desc":
+        return parseInt(b.popularite_vndb || 9999) - parseInt(a.popularite_vndb || 9999);
+
+      default:
+        return 0;
+    }
+  });
+
   if (loading) return <LoaderOverlay />; // Loader local sur la zone
   if (error) return <p className="text-red-500 text-center">{error.message}</p>;
 
@@ -176,25 +200,36 @@ export default function DiscoverPage() {
           <option value="officielle">Officielle</option>
           <option value="non-officielle">Fantraduction</option>
         </select>
+
+        <select
+          className="p-2 rounded-xl border border-gray-300 bg-white text-black"
+          value={sortOption}
+          onChange={(e) => setSortOption(e.target.value)}
+        >
+          <option value="titre-asc">Titre (A → Z)</option>
+          <option value="titre-desc">Titre (Z → A)</option>
+          <option value="note-asc">Note VNDB (faible → fort)</option>
+          <option value="note-desc">Note VNDB (fort → faible)</option>
+          <option value="popularite-asc">Popularité (meilleure → pire)</option>
+          <option value="popularite-desc">Popularité (pire → meilleure)</option>
+        </select>
       </div>
 
       {/* Grille */}
       <div className="grid gap-8 w-full justify-center [grid-template-columns:repeat(auto-fit,minmax(320px,800px))]">
-        {filteredData
-          .sort((a, b) => a.titre.localeCompare(b.titre))
-          .map((project) => (
-            <RecruitmentCard
-              key={project.id}
-              titre={project.titre}
-              image={project.image}
-              genre={project.genre}
-              duree={project.duree}
-              plateforme={project.plateforme}
-              lien_jeu={project.lien_jeu}
-              patch_fr={project.patch_fr}
-              description={project.description}
-            />
-          ))}
+        {sortedData.map((project) => (
+          <RecruitmentCard
+            key={project.id}
+            titre={project.titre}
+            image={project.image}
+            genre={project.genre}
+            duree={project.duree}
+            plateforme={project.plateforme}
+            lien_jeu={project.lien_jeu}
+            patch_fr={project.patch_fr}
+            description={project.description}
+          />
+        ))}
       </div>
     </div>
   );

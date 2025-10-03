@@ -5,8 +5,8 @@
         "image": "assets/poster/999.webp",
         "genre": ["mystère", "science-fiction", "gameplay"],
         "duree": "10h-20h",
-        "note_vndb": "",
-        "popularite_vndb": "",
+        "note_vndb": "8,28",
+        "popularite_vndb": "21",
         "plateforme": ["pc", "psvita"],
         "lien_jeu": [
             "https://vndb.org/v3112",
