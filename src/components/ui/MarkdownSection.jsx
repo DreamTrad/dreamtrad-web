@@ -66,10 +66,11 @@ export default function MarkdownSection({
   gameId,
   file,
   content: inlineContent,
+  className = "",
 }) {
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
-  
+
   useEffect(() => {
     if (inlineContent) {
       setContent(inlineContent);
@@ -103,8 +104,8 @@ export default function MarkdownSection({
 
   if (loading) return <LoaderOverlay />;
 
-  return (
-    <div className="prose prose-invert max-w-none">
+return (
+    <div className={`prose prose-invert max-w-none ${className}`}>
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkDirective, remarkCustomSpoiler]}
         rehypePlugins={[rehypeRaw]}

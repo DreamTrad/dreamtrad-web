@@ -1,0 +1,50 @@
+[
+    {
+        "id": "vnfr",
+        "title": "Nouvelle entrée de VN en français",
+        "image": "assets/poster/siteweb.webp",
+        "roles": ["Rédacteur entrée pour la page **Découvrir**"],
+        "contact": "Silous",
+        "description": "Plusieurs VN disponibles en français sont déjà listés sur la page, mais si on fait une [recherche vndb](https://vndb.org/v?q=&ch=&f=2gfr&s=26w), il y a plus d’un millier de VN disponible en français. Libre à vous de proposer le VN que vous voulez. Et si vous estimez qu’une fiche actuelle n’est pas complète, ou que le résumé ne fait pas honneur à l’œuvre, n’hésitez pas à proposer une modification. Vous pouvez directement rédiger une entrée grâce au formulaire dédié des [issue](https://github.com/DreamTrad/dreamtrad-web/issues) sur Github. Vous pouvez regarder ce qui a été fait pour 999 pour vous faire une idée de ce que nous voulons faire."
+    },
+    {
+        "id": "ai1",
+        "title": "AI: The Somnium Files",
+        "image": "assets/poster/ai1.webp",
+        "roles": ["Rédacteur somnium", "Rédacteur guide", "Rédacteur guide succès"],
+        "contact": "Silous",
+        "description": "Nous voulons proposer une solution complète du jeu, avec des guides pour les somnium, et un guide pour obtenir tous les succès, et le tout basé sur la version française. Nous recherchons donc des rédacteurs pour nous aider à créer ces contenus. Vous pouvez directement rédiger du contenu via une [issue](https://github.com/DreamTrad/dreamtrad-web/issues) sur Github. Vous pouvez regarder ce qui a été fait pour 999 pour vous faire une idée de ce que nous voulons faire."
+    },
+    {
+        "id": "ai2",
+        "title": "AI: The Somnium Files - nirvanA Initiative",
+        "image": "assets/poster/ai2.webp",
+        "roles": ["Rédacteur somnium", "Rédacteur guide", "Rédacteur guide succès"],
+        "contact": "Silous",
+        "description": "Tout comme le 1, nous voulons proposer une solution complète du jeu basée sur la version française. Ça serait mieux de d’abord proposer des guides pour AI1, mais on ne va pas se plaindre si vous préférez AINI et que vous voulez aider pour ce jeu. Vous pouvez directement rédiger du contenu via une [issue](https://github.com/DreamTrad/dreamtrad-web/issues) sur Github."
+    },
+    {
+        "id": "vlr",
+        "title": "Virtue's Last Reward",
+        "image": "assets/poster/vlr.webp",
+        "roles": ["Rédacteur escape", "Rédacteur guide fins", "Rédacteur guide succès"],
+        "contact": "Silous",
+        "description": "Au lancement du site, nous avons fait en sorte d’au moins proposer des guides pour 999, il faut donc en faire pour VLR mainenant. Vous pouvez directement rédiger du contenu via une [issue](https://github.com/DreamTrad/dreamtrad-web/issues) sur Github. Ce qu’il faut pour VLR va être très semblable à 999, donc n’hésitez pas à vous en inspirer."
+    },
+    {
+        "id": "ztd",
+        "title": "Zero Time Dilemma",
+        "image": "assets/poster/ztd.webp",
+        "roles": ["Rédacteur escape", "Rédacteur guide fins", "Rédacteur guide succès"],
+        "contact": "Silous",
+        "description": "Cf VLR, il faut des guides en français dans le style de 999 pour les échappatoires. Vu la structure du jeu, il faudra sûrement réfléchir à comment présenter le guide pour débloquer les fragments. Vous pouvez directement rédiger du contenu via une [issue](https://github.com/DreamTrad/dreamtrad-web/issues) sur Github."
+    },
+    {
+        "id": "zodiac_trial",
+        "title": "The Zodiac Trial",
+        "image": "assets/poster/zodiac_trial.webp",
+        "roles": ["Rédacteur guide fins", "Rédacteur solution énigmes"],
+        "contact": "Silous",
+        "description": "Contrairement à Zero Escape et AI, Zodiac Trial est bien plus *visual novel*. Donc c’est avant tout un guide pour atteindre toutes les fins. Vous pouvez directement rédiger du contenu via une [issue](https://github.com/DreamTrad/dreamtrad-web/issues) sur Github."
+    }
+]

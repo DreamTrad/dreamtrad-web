@@ -1,3 +1,6 @@
+import ReactMarkdown from "react-markdown";
+import MarkdownSection from "../ui/MarkdownSection";
+
 export default function RecruitmentCard({
   title,
   image,
@@ -48,8 +51,11 @@ export default function RecruitmentCard({
       )}
 
       {/* Description */}
-      <div className="bg-bg-secondary p-4 rounded-b-2xl text-text-secondary text-sm flex-grow text-justify">
-        {description}
+      <div className="bg-bg-secondary p-4 rounded-b-2xl flex-grow">
+        <MarkdownSection
+          content={description}
+          className="text-sm text-text-secondary leading-relaxed text-justify"
+        />
       </div>
     </div>
   );

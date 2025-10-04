@@ -40,7 +40,6 @@ export default function HomePage() {
                   title={project.title}
                   image={project.image}
                   progress={project.progress}
-                  recruiting={project.recruiting}
                 />
               ))
             ) : (

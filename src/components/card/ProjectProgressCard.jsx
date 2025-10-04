@@ -4,7 +4,6 @@ export default function ProjectProgressCard({
   title,
   image,
   progress,
-  recruiting,
 }) {
 
   const bars = [
@@ -26,14 +25,6 @@ export default function ProjectProgressCard({
         {/* Header avec titre + recrutement */}
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-2xl font-bold">{title}</h3>
-          {recruiting && (
-            <Link
-              to="/recrutement"
-              className="text-accent font-semibold hover:underline hover:text-accent/80 transition"
-            >
-              Recrutement !
-            </Link>
-          )}
         </div>
 
         {/* Barres de progression */}
