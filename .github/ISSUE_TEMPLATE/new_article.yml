@@ -2,7 +2,7 @@ name: Proposer un nouvel article
 description: Création d’un article
 title: "[Article] : "
 labels: ["contenu"]
-projects: ["Site web contenu"]
+projects: ["DreamTrad/3"]
 body:
 
   - type: markdown
