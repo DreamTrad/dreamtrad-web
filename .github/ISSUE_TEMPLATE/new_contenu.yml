@@ -46,9 +46,11 @@ body:
     attributes:
      value: |
         Dans la section suivante, pour noter que quelque chose est un spoiler, écrit le ainsi :
+
         :::spoiler[le code secret]
         6719
         :::
+        
         C’est le format utilisé par le site web pour cacher les spoilers.
 
   - type: textarea
