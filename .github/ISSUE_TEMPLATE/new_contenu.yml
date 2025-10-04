@@ -42,7 +42,7 @@ body:
       label: questions, messages, etc.
       description: Si des points bloquent, si tu as des questions, ou juste besoin d’expliquer quelque chose.
 
-   - type: markdown
+  - type: markdown
     attributes:
      value: |
         Dans la section suivante, pour noter que quelque chose est un spoiler, écrit le ainsi :
