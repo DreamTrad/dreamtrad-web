@@ -1,0 +1,61 @@
+name: Rédiger du contenu pour le site web
+description: Rédiger soit une page de guide, une page d’un jeu, ou autre.
+title: "[Contenu] : "
+labels: ["contenu"]
+projects: ["DreamTrad/3"]
+body:
+
+  - type: dropdown
+    id: vn
+    attributes:
+      label: Visual Novel
+      description: Le visual novel concerné par ce contenu
+      options:
+        - "The 25th Ward: The Silver Case"
+        - "428: Shibuya Scramble"
+        - "9 Hours, 9 Persons, 9 Doors"
+        - "AI: The Somnium Files"
+        - "AI: The Somnium Files - Nirvana Initiative"
+        - "The Divine Deception"
+        - "Never 7 - The End of Infinity"
+        - "PARANORMASIGHT"
+        - "Virtue's Last Reward"
+        - "Zero Time Dilemma"
+        - "The Zodiac Trial"
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type de contenu
+      description: Le type de contenu que tu veux rédiger
+      options:
+        - "guide playthrough"
+        - "guide obtention des succès"
+        - "guide obtention des fins"
+        - "guide échappatoire/somnium"
+        - "page de jeu (auteurs, historique, etc.)"
+        - "autre"
+
+  - type: textarea
+    id: ticket
+    attributes:
+      label: questions, messages, etc.
+      description: Si des points bloquent, si tu as des questions, ou juste besoin d’expliquer quelque chose.
+
+   - type: markdown
+    attributes:
+     value: |
+        Dans la section suivante, pour noter que quelque chose est un spoiler, écrit le ainsi :
+        :::spoiler[le code secret]
+        6719
+        :::
+        C’est le format utilisé par le site web pour cacher les spoilers.
+
+  - type: textarea
+    id: contenu
+    attributes:
+      label: Contenu
+      description: Le contenu que tu veux ajouter (titres, paragraphes, images, etc.)
+      placeholder: "Description longue"
+
+
