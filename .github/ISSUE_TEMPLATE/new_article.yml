@@ -4,6 +4,17 @@ title: "[Article] : "
 labels: ["contenu"]
 body:
 
+  - type: markdown
+    attributes:
+     value: |
+        Les articles doivent être un minimum en lien avec soit les visual novels, soit le sujet de la traduction. Ça peut être une actualité, ou un dossier, un témoignage… Mais sentez-vous libre de proposer un article sur un sujet, juste le titre et l’explication de pourquoi cet article, et si on valide, pour pourrez rédiger l’article ensuite en modifiant l’issue.
+
+  - type: textarea
+    id: explication
+    attributes:
+      label: Explication
+      description: Explique en quelques lignes le sujet de l’article, et pourquoi tu veux écrire dessus. Ou pose tes questions si tu as besoin d’aide.
+
   - type: input
     id: titre
     attributes:
@@ -18,8 +29,6 @@ body:
     attributes:
       label: Image de couverture
       description: Ajoute ici l’image de couverture. Glisse l’image dans la zone, ou ajoute-la via le bouton pour ajouter une pièce jointe.
-    validations:
-      required: true
 
   - type: textarea
     id: excerpt
@@ -27,8 +36,6 @@ body:
       label: Extrait
       description: Court résumé (1-2 phrases) qui servira de meta-description
       placeholder: "Un retour d’expérience sur…"
-    validations:
-      required: true
 
   - type: textarea
     id: contenu
@@ -38,6 +45,4 @@ body:
       placeholder: |
         # Introduction
         Texte ici...
-    validations:
-      required: true
 

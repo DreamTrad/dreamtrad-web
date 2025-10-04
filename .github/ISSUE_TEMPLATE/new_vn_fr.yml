@@ -4,6 +4,13 @@ title: "[VNFR] : "
 labels: ["contenu"]
 body:
 
+  - type: markdown
+    attributes:
+     value: |
+       Merci de remplir ce formulaire pour proposer une nouvelle entrée de visual novel en français sur la page [Découvrir](https://dreamtrad.com/decouvrir). Plusieurs VN disponibles en français sont déjà listés sur la page, mais si on fait une [recherche vndb](https://vndb.org/v?q=&ch=&f=2gfr&s=26w), il y a plus d’un millier de VN disponible en français. Libre à vous de proposer le VN que vous voulez. Et si vous estimez qu’une fiche actuelle n’est pas complète, ou que le résumé ne fait pas honneur à l’œuvre, n’hésitez pas à proposer une modification.
+
+       Pour inclure les jeux qui ne sont pas sur vndb, donc qui ne sont pas considérés comme des visual novels par vndb. Ça sera au cas par cas si le jeu peut être ajouté ou non. Suivant si c’est lié à une série de VN (ZTD pour Zero Escape), ou quand on reste proche du format VN (GNOSIA), ça peut le faire.
+
   - type: input
     id: titre
     attributes:
@@ -33,7 +40,7 @@ body:
     id: duree
     attributes:
       label: Durée
-      description: Temps moyen de jeu
+      description: Temps moyen du visual novel
       options:
         - "moins de 1h"
         - "1h-5h"
@@ -62,7 +69,7 @@ body:
     id: lien_jeu
     attributes:
       label: Liens
-      description: Lien vndb + Liens pour le VN où le français est disponible (un lien par ligne, préfixé par `-`)
+      description: Lien vndb + Liens pour le VN où le français est disponible officiellemen ou par patch (un lien par ligne, préfixé par `-`)
       placeholder: |
         - https://vndb.org/vxxxx
         - https://store.steampowered.com/app/xxxxx/
@@ -86,4 +93,4 @@ body:
     id: ticket
     attributes:
       label: explication
-      description: Si des points bloquent (manque le genre, champ pas clair…), expliquez ici
+      description: Si des points bloquent (manque le genre, champ pas clair, questions…), expliquez ici.
