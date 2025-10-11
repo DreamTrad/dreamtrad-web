@@ -26,14 +26,14 @@ export const team = [
     {
         "category": "Relecteur",
         "people": [
-            { "name": "Floflosera", "role": "relecteur/béta-test", "link": "" },
-            { "name": "Nadechi", "role": "béta-test", "link": "" },
-            { "name": "Zeravica", "role": "béta-test", "link": "" },
-            { "name": "Zuzur", "role": "béta-test", "link": "" },
-            { "name": "Shadow", "role": "béta-test", "link": "" },
-            { "name": "Kikoro", "role": "béta-test", "link": "" },
-            { "name": "AlexisTGF", "role": "béta-test", "link": "" },
-            { "name": "Ronano", "role": "béta-test", "link": "" },
+            { "name": "Floflosera", "role": "relecteur/Bêta-test", "link": "" },
+            { "name": "Nadechi", "role": "Bêta-test", "link": "" },
+            { "name": "Zeravica", "role": "Bêta-test", "link": "" },
+            { "name": "Zuzur", "role": "Bêta-test", "link": "" },
+            { "name": "Shadow", "role": "Bêta-test", "link": "" },
+            { "name": "Kikoro", "role": "Bêta-test", "link": "" },
+            { "name": "AlexisTGF", "role": "Bêta-test", "link": "" },
+            { "name": "Ronano", "role": "Bêta-test", "link": "" },
         ]
     },
 ];

@@ -39,9 +39,9 @@ export const team = [
             { "name": "Floflosera", "role": "Relecteur", "link": "" },
             { "name": "jls", "role": "Relecteur", "link": "" },
             { "name": "AlexisTGF", "role": "Relecteur", "link": "" },
-            { "name": "Bedriol", "role": "Béta-test", "link": "" },
-            { "name": "Aclios", "role": "Béta-test", "link": "" },
-            { "name": "Ruby", "role": "Béta-test", "link": "" },
+            { "name": "Bedriol", "role": "Bêta-test", "link": "" },
+            { "name": "Aclios", "role": "Bêta-test", "link": "" },
+            { "name": "Ruby", "role": "Bêta-test", "link": "" },
         ]
     },
 ];

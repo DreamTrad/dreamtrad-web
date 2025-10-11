@@ -27,6 +27,11 @@ export const team = [
     {
         "category": "Relecteur",
         "people": [
+            { "name": "AlexisTGF", "role": "Bêta-test", "link": "" },
+            { "name": "Bedriol", "role": "Bêta-test", "link": "" },
+            { "name": "Ritsu", "role": "Bêta-test", "link": "" },
+            { "name": "Shadow", "role": "Bêta-test", "link": "" },
+            { "name": "Silous", "role": "Bêta-test", "link": "" },
         ]
     },
 ];

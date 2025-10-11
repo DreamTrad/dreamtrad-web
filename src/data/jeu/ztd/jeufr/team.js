@@ -34,10 +34,10 @@ export const team = [
             { "name": "Ritsu", "role": "Relecteur", "link": "" },
             { "name": "jls", "role": "Relecteur", "link": "" },
             { "name": "Floflosera", "role": "Relecteur", "link": "" },
-            { "name": "Silous", "role": "Béta-test", "link": "" },
-            { "name": "Ronano", "role": "Béta-test", "link": "" },
-            { "name": "Loloiiiiiou", "role": "Béta-test", "link": "" },
-            { "name": "AlexisTGF", "role": "Béta-test", "link": "" },
+            { "name": "Silous", "role": "Bêta-test", "link": "" },
+            { "name": "Ronano", "role": "Bêta-test", "link": "" },
+            { "name": "Loloiiiiiou", "role": "Bêta-test", "link": "" },
+            { "name": "AlexisTGF", "role": "Bêta-test", "link": "" },
         ]
     },
 ];
