@@ -6,7 +6,7 @@ Propriétés → Fichiers installés → Vérifier l’intégrité des fichiers 
 ![Image restoration des fichiers d’origine Steam](/assets/jeu/999/jeufr/installation/steam_restoration_fichiers.webp)
 
 - Allez en mode bureau et télécharger le patch. (Steamdeck)
-- Clic droit sur l’exe, faire ajouter à steam.
+- Clic droit sur l’exe, faire ajouter à Steam.
 - Retournez en mode jeu, sur le "jeu" "TheNonaryGames_patch_automatique", allez dans les propriétés, et cocher la case pour compatibilité.
 
 ![Image logiciel pour patcher automatiquement](/assets/jeu/999/jeufr/installation/logiciel_patch_auto.webp)

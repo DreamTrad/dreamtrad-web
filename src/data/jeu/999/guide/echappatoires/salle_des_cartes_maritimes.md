@@ -15,7 +15,7 @@
 
 Récupérez les objets suivants :
 - Le tas de cartes maritimes dans le premier tiroir du meuble à tiroir.
-- La montre à gousset dan le tiroir central du bureau.
+- La montre à gousset dans le tiroir central du bureau.
 
 ## Résolution des énigmes
 

@@ -8,11 +8,11 @@
         "description": "Le projet est actuellement porté par un seul traducteur, et nous recherchons d’autres traducteurs pour nous aider à avancer plus rapidement. La traduction est déjà bien avancée, mais il reste encore beaucoup de travail à faire. La traduction du japonais est possible mais complexe à cause de la structure des fichiers et du texte. Nous faisons tout de même au besoin des vérifications du japonais. Nous recherchons donc principalement des traducteurs de l’anglais vers le français. Pour les images, aucune n’est encore traduite, il y a environ une cinquantaine d’images à faire."
     },
     {
-        "id": "paranormsight",
+        "id": "paranormasight",
         "title": "Patch Switch de PARANORMASIGHT",
         "image": "assets/poster/paranormasight.webp",
-        "roles": ["Testeur patch switch"],
+        "roles": ["Testeur patch Switch"],
         "contact": "Silous",
-        "description": "L’outil utilisé pour créer le patch permet de créer un patch Switch. Mais nous n’avons pas de quoi tester ce patch. Si vous avez une Switch hackée et que vous souhaitez nous aider en testant le patch, n’hésitez pas à nous contacter ! Il faudra tester le patch en vérifiant certains éléments pour s’assurer que tous les fichiers sont pris en compte, et il faudrait aussi nous expliquer la démarche pour patcher un jeu sur switch pour pouvoir faire un guide."
+        "description": "L’outil utilisé pour créer le patch permet de créer un patch Switch. Mais nous n’avons pas de quoi tester ce patch. Si vous avez une Switch hackée et que vous souhaitez nous aider en testant le patch, n’hésitez pas à nous contacter ! Il faudra tester le patch en vérifiant certains éléments pour s’assurer que tous les fichiers sont pris en compte, et il faudrait aussi nous expliquer la démarche pour patcher un jeu sur Switch pour pouvoir faire un guide."
     }
 ]

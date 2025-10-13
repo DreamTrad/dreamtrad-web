@@ -33,7 +33,7 @@ Récupérez les objets suivants :
 
 Combinez le tournevis et la boîte à musique. Combinez le cylindre obtenu avec l’encre. Combinez le cylindre sale obtenu avec le papier.
 
-Vous avez désormais ce qu’il faut pour rentrer le code morse sur l’appareil poser sur la table. Un appui court pour un point, un appui long pour un trait.
+Vous avez ce qu’il faut pour rentrer le code morse sur l’appareil posé sur la table. Un appui court pour un point, un appui long pour un trait.
 
 Le tiroir relié au fil est désormais ouvert. Récupérer le document et la clé particulière.
 

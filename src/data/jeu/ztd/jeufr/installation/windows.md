@@ -1,4 +1,4 @@
-# Instructions patch automatique windows
+# Instructions patch automatique Windows
 
 - Si les fichiers de votre jeu ont été modifiés, allez dans les paramètres du jeu sur Steam, et faite :
 Propriétés → Fichiers installés → Vérifier l’intégrité des fichiers du jeu

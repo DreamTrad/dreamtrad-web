@@ -16,10 +16,10 @@ Redescendez tout en bas pour récupérer ce que vous venez de faire descendre (P
 
 Récupérez le bac où était le panneau de contrôle, qui est maintenant rempli de charbon. Depuis l’écran du tapis roulant, allez vers la gauche et sélectionnez les ouvertures de fourneau les plus proches de vous pour y mettre le charbon.
 
-Il faut désormais mettre en route la machine. Allez au pannau de contrôle avec les leviers, au niveau des escaliers que vous avez emprunté au début, et abaissez le levier de droite. Cela va faire tourne les roues d’or, d’argent et de bronze. Des disques vont être atteignables sur ces roues, récupérez les trois.
+Il faut désormais mettre en route la machine. Allez au panneau de contrôle avec les leviers, au niveau des escaliers que vous avez empruntés au début, et abaissez le levier de droite. Cela va faire tourne les roues d’or, d’argent et de bronze. Des disques vont être atteignables sur ces roues, récupérez les trois.
 
-Dirigez-vous vers l’escalier du fond et placez les trois disques sur le piedestal avec les 3 ronds creux.
-Il va falloir bien orienter et positionner les disques pour que les dessins s’assemble.
+Dirigez-vous vers l’escalier du fond et placez les trois disques sur le piédestal avec les 3 ronds creux.
+Il va falloir bien orienter et positionner les disques pour que les dessins s’assemblent.
 
 :::spoiler[la position que doivent avoir les disques]
 ![Image énigme disque](/assets/jeu/999/guide/echappatoires/salle_des_moteurs_a_vapeur/enigme.webp)

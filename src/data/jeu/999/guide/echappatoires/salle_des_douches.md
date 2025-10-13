@@ -29,9 +29,9 @@ Remplissez le sceau avec de l’eau chaude des douches, et versez cette eau chau
 
 Combinez le papier toilette avec le balai. En enroulant le papier toilette autour du balai, des symboles vont apparaitre. Examinez le balai pour voir qu’il s’agit de "634+".
 
-Dirigez vous vers la porte de sortie, et passez la la carte rouge, puis la carte bleue dans le lecteur de carte. Il ne vous restera plus qu’à rentrer le code.
+Dirigez-vous vers la porte de sortie, et passez la carte rouge, puis la carte bleue dans le lecteur de carte. Il ne vous restera plus qu’à rentrer le code.
 
-Avec toutes les marques vous pouvez former une équation, ce qui vous permettra de trouver le code.
+Avec toutes les marques, vous pouvez former une équation, ce qui vous permettra de trouver le code.
 
 
 :::spoiler[le code]

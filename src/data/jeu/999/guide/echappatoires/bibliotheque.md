@@ -41,15 +41,15 @@ Descendez et dirigez-vous vers l’armoire vitrée avec un cadenas. Déverrouill
 632415
 :::
 
-Vous pouvez récupérer la dernière ampoule. Vous avez désormais tous les objets de l’échappatoire. Examiner chaque livre d’images pour les ouvrir. Puis placez les livres et les ampoules sur les présentoir au centre du sous-sol. Cela va faire apparaitre quelque chose avec les ombres. Examinez ce qui est apparu.
+Vous pouvez récupérer la dernière ampoule. Vous avez désormais tous les objets de l’échappatoire. Examiner chaque livre d’images pour les ouvrir. Puis placez les livres et les ampoules sur les présentoirs au centre du sous-sol. Cela va faire apparaitre quelque chose avec les ombres. Examinez ce qui est apparu.
 
-Il ne vous reste plus qu’à vous dirigez vers l’étagère du sous-sol présentant plusieurs livres des mêmes auteurs, et intéragissz avec les livres de Sheldrake. Cela fera apparaitre un bouton. Appuyer dessus fera déplacer les étagères de l’étage, dévoilant la zone de sortie.
+Il ne vous reste plus qu’à vous diriger vers l’étagère du sous-sol présentant plusieurs livres des mêmes auteurs, et interagissez avec les livres de Sheldrake. Cela fera apparaitre un bouton. Appuyer dessus fera déplacer les étagères de l’étage, dévoilant la zone de sortie.
 
 Pour ouvrir la porte de sortie, il faut rentrer un code.
 
 
 :::spoiler[un indice pour le code de la porte de sortie]
-Sur le mur, ce sont des nombres romains. Il faut faire la conversion en nombre arabes. Puis, pour obtenir des lettres, c’est encore une fois de l’hexadécimal. Pour rappel, A=10, B=11, …
+Sur le mur, ce sont des nombres romains. Il faut faire la conversion en nombres arabes. Puis, pour obtenir des lettres, c’est encore une fois de l’hexadécimal. Pour rappel, A=10, B=11, …
 :::
 
 <br>
@@ -58,4 +58,4 @@ Sur le mur, ce sont des nombres romains. Il faut faire la conversion en nombre a
 DEAD
 :::
 
-La sortie est à droite, interragissez avec la porte pour l’ouvrir et terminer l’échappatoire.
+La sortie est à droite, interagissez avec la porte pour l’ouvrir et terminer l’échappatoire.

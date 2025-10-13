@@ -2,7 +2,7 @@
 
 ## Prérequis
 
-- Vous devez avoir le jeu “The Nonary Games” installé sur votre PS Vita
+- Vous devez avoir le jeu "The Nonary Games" installé sur votre PS Vita
 - Votre PS Vita doit être en [Custom Firmware](https://enso.henkaku.xyz/)
 - Vous devez avoir ces deux plugins installés :
     - [RePatch](https://github.com/dots-tb/rePatch-reDux0/releases)
@@ -30,4 +30,4 @@ Décompresser l'archive et transférer le contenu dans la partition ux0:
 
 Si le jeu d'origine est **la version US, renommer le dossier** PSCB01063 en PCSE01006
 
-*Optionnel :* Vous pouvez supprimer les fichiers originaux pour économiser 1.2 Gb. Vous pouvez y accéder via ce chemin :  **ux0:/app/PCSB01063/[*].psarc**
+*Optionnel :* Vous pouvez supprimer les fichiers originaux pour économiser 1.2 Go. Vous pouvez y accéder via ce chemin : **ux0:/app/PCSB01063/[*].psarc**

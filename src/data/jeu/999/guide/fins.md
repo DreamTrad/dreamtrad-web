@@ -58,7 +58,7 @@ Faite les choix suivants :
     - Faite la phase de narration ***"Dossier rouge"*** de l’échappatoire **Quartiers du capitaine**.
     - Faite la phase de narration ***"Écran"*** de l’échappatoire **Quartiers du capitaine**.
 
-Si vous avez déjà fait la fin coffre-fort, la fin sera débloqué automatiqument en même temps que la véritable fin
+Si vous avez déjà fait la fin coffre-fort, la fin sera débloqué automatiquement en même temps que la véritable fin
 :::
 
 ## Véritable fin

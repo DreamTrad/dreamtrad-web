@@ -19,13 +19,13 @@ Récupérez les objets suivants :
 - Une carte dans la petite boite sur la caisse noire à côté des escaliers.
 - Une carte dans le sac devant les boites bleues.
 - Deux cartes dans la caisse ouverte derrière les boites bleues.
-- Une carte en interragissant avec les boites bleues.
+- Une carte en interagissant avec les boites bleues.
 
 ## Résolution des énigmes
 
 Une fois que vous avez les 9 cartes, interagissez avec les boites bleues. Après une petite phase narration, vous obtiendrez 9 épingles. Allez tout en haut des escaliers, et examinez avec les épingles la partie basse du panneau de contrôle pour déclencher une énigme.
 
-Pour résoudre cette énigme, il faudra allumer chaque chiffre en faisant des racines numérique avec les épingles. C’est une racine numérique avec les trois trous du haut, et une autre avec les trois trous du bas. Si jamais vous faites une racine numérique dont la lumière est déjà allumée, elle va s’éteindre.
+Pour résoudre cette énigme, il faudra allumer chaque chiffre en faisant des racines numériques avec les épingles. C’est une racine numérique avec les trois trous du haut, et une autre avec les trois trous du bas. Si jamais vous faites une racine numérique dont la lumière est déjà allumée, elle va s’éteindre.
 
 :::spoiler[une solution pour allumer tous les voyants avec les épingles]
 
@@ -43,7 +43,7 @@ Pour résoudre cette énigme, il faudra allumer chaque chiffre en faisant des ra
     - 1, 3, 4 = 8
 :::
 
-Vous devez maintenant faire un carré magique où chaque ligne, colonne, et diagonale doivent faire 15 quand on additionne les chiffres.
+Vous devez maintenant faire un carré magique où chaque ligne, colonne et diagonale doivent faire 15 quand on additionne les chiffres.
 
 :::spoiler[un indice]
 La broche 5 doit aller au centre.
@@ -59,7 +59,7 @@ La broche 9 doit aller sur un côté, pas dans un coin.
 ![Image solution F](/assets/jeu/999/guide/echappatoires/cale/solution-f.webp)
 :::
 
-Cela va allumer le panneau de contrôle. Utilisez le leveir pour contrôler le Petit Pousseur et créer un chemin avec les caisses. Si vous n’y arrivez pas, sachez qu’en faisant retour puis en revenant sur le minijeu, vous pourrez augmenter de 1 le nombre de déplacement possible, jusqu’à 60 max au total. Mais c’est tout à fait possible de réussir avec 50. C’est même faisable en moins de 50 coup.
+Cela va allumer le panneau de contrôle. Utilisez le levier pour contrôler le Petit Pousseur et créer un chemin avec les caisses. Si vous n’y arrivez pas, sachez qu’en faisant retour puis en revenant sur le minijeu, vous pourrez augmenter de 1 le nombre de déplacements possibles, jusqu’à 60 max au total. Mais c’est tout à fait possible de réussir avec 50. C’est même faisable en moins de 50 coups.
 
 :::spoiler[un chemin que peut emprunter le petit pousseur]
 ![Image petit pousseur 1](/assets/jeu/999/guide/echappatoires/cale/petit_pousseur_1.webp)
@@ -74,4 +74,4 @@ Cela va allumer le panneau de contrôle. Utilisez le leveir pour contrôler le P
 
 Allez vers la grille et grimpez sur les caisses pour récupérer la clé rouillée que vous pouvez utiliser pour déverrouiller la porte situer sur un des paliers de l’escalier.
 
-Ouvrez la porte de sortiee pour terminer l’échappatoire.
+Ouvrez la porte de sortie pour terminer l’échappatoire.

@@ -32,17 +32,17 @@ Commencez par combiner les allumettes avec la chandelle pour pouvoir l’allumer
 
 Vous pouvez désormais récupérer le rideau de douche sur le lit. Et après cela, la bougie va s’éteindre et vous pourrez récupérer le pied de la chandelle qui est en fait une clé.
 
-Vous pouvez utiliser la clé de la coiffeuse sur la coiffeuse où vous avez poser la chandelle. Cela vous donnera accès à une plaque caché dans le tiroir.
+Vous pouvez utiliser la clé de la coiffeuse sur la coiffeuse où vous avez posé la chandelle. Cela vous donnera accès à une plaque cachée dans le tiroir.
 
 Avec la clé de la chandelle, ouvrez la vitrine du salon pour récupérer la 2ème plaque
 
 Dirigez-vous vers la salle de bains de la cabine. Accrochez le rideau sur la barre à rideau, puis retournez-vous vers la douche, et en fermant le rideau vous pourrez voir qu’un trou met en évidence un carreau beige, le 5ème en partant du haut, et 3ème en partant de la droite.
 
-Retournez dans la cabine où se trouve Violette, et interragissez avec le carreau de la douche positionné au même endroit. Vous obtiendrez la dernière plaque.
+Retournez dans la cabine où se trouve Violette, et interagissez avec le carreau de la douche positionné au même endroit. Vous obtiendrez la dernière plaque.
 
 Vous pouvez désormais compléter le tableau présent dans la cabine où se trouvent Santa et Aranéa.
 
-:::spoiler[un indice reconstituer le tableau]
+:::spoiler[un indice pour reconstituer le tableau]
 Le tableau doit être identique à celui présent dans l’autre cabine.
 Il peut être résolu en 5 mouvements.
 :::

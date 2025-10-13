@@ -1,8 +1,8 @@
-# Instructions pour patcher manuellement sur PC et steamdeck
+# Instructions pour patcher manuellement sur PC et Steamdeck
 
 Si le patch automatique ne fonctionne pas pour vous, vous pouvez toujours appliquer le patch manuellement. Vous aurez besoin xDelta pour appliquer les patchs sur les fichiers du jeu.
 
-Vous pouvez trouvez ici une version graphique de l’utilitaire, récupérer la dernière version de exécutable compatible avec votre système : [DeltaPatcher](https://github.com/marco-calautti/DeltaPatcher/releases)
+Vous pouvez trouver ici une version graphique de l’utilitaire, récupérer la dernière version de l’exécutable compatible avec votre système : [DeltaPatcher](https://github.com/marco-calautti/DeltaPatcher/releases)
 
 ![Image Delta Patcher](/assets/jeu/999/jeufr/installation/deltapatcher.webp)
 

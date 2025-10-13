@@ -28,7 +28,7 @@ Allez dans la salle de bain et remplissez le vase avec l’eau de la baignoire. 
 
 Allez dans le salon et éteignez le feu de la cheminée avec le vase rempli d’eau. Vous pouvez récupérer la plaque de partition présente dans la cheminée.
 
-Allez dans la chambre et placez sur le support de partitions du piano toutes les partitions que vous avez. Il faut maintenant jouez la musique de la partition au pianon. Mais les touches ne font pas les sons qu’elles devraient, donc il va falloir identifier quel touche correspond à quelle note.
+Allez dans la chambre et placez sur le support de partitions du piano toutes les partitions que vous avez. Il faut maintenant jouer la musique de la partition au piano. Mais les touches ne font pas les sons qu’elles devraient, donc il va falloir identifier quelle touche correspond à quelle note.
 
 :::spoiler[la solution de l’énigme du piano]
 ![Image piano solution](/assets/jeu/999/guide/echappatoires/cabine_de_1ere_classe/piano.webp)
@@ -36,4 +36,4 @@ Allez dans la chambre et placez sur le support de partitions du piano toutes les
 :::
 
 
-La porte de sortie est désormais déverrouillée, interragissez avec la porte pour terminer l’échappatoire.
+La porte de sortie est déverrouillée, interagissez avec la porte pour terminer l’échappatoire.

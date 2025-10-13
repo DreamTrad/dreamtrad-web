@@ -23,15 +23,15 @@ Récupérez les objets suivants :
 
 ## Résolution des énigmes
 
-Allumez les deux lampes sur la cheminée. Cela fera apparaitre des symbôles et des jetons vont tomber de la cheminée. Ramassez les jetons. Une fois cela fait, insérez un jeton dans la machine à sous du milieu, la n°2.
+Allumez les deux lampes sur la cheminée. Cela fera apparaitre des symboles et des jetons vont tomber de la cheminée. Ramassez les jetons. Une fois cela fait, insérez un jeton dans la machine à sous du milieu, la n°2.
 
 Appuyez sur le bouton "Tourner" puis appuyez dans le bon ordre sur les trois boutons jaune. C’était l’ordre affiché sur la cheminée.
 
 :::spoiler[l’ordre des boutons pour la machine à sous]
-Trêfle, Pique, Cœur
+Trèfle, Pique, Cœur
 :::
 
-Vous pouvez désormais récupérer la carte "2" et la clé avec le symbole de Vénus. Dirigez-vous vers la table de baccarat dans le coin, là où vous avez trouvé la carte "3", et intéragissez avec la vitre au centre, puis avec les emplacements pour carte pour déclencher le mini-jeu.
+Vous pouvez désormais récupérer la carte "2" et la clé avec le symbole de Vénus. Dirigez-vous vers la table de baccarat dans le coin, là où vous avez trouvé la carte "3", et interagissez avec la vitre au centre, puis avec les emplacements pour carte pour déclencher le mini-jeu.
 
 Il faut faire une combinaison qui bat un 8. Deux combinaisons sont possibles.
 
