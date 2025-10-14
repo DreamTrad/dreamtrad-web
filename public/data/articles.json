@@ -1,13 +1,13 @@
 [
   {
-    "id": "traduction-paranormasight",
-    "title": "La traduction de Paranormasight",
+    "id": "25-10-14-bienvenu",
+    "title": "Bienvenue sur notre nouveau site internet",
     "author": "Silous",
-    "date": "2025-09-09",
-    "tags": ["traduction", "visual novel", "patch"],
+    "date": "2025-10-14",
+    "tags": [],
     "coverImage": "/assets/articles-cover/paranormasight-cover.webp",
-    "markdownPath": "/data/articles/paranormasight.md",
-    "excerpt": "Un retour d’expérience sur la traduction française du visual novel Paranormasight...",
+    "markdownPath": "/data/articles/25-10-14-bienvenue.md",
+    "excerpt": "Le nouveau site est en ligne, et avec lui nos nouvelles ambitions.",
     "readingTime": "5 min"
   }
 ]
