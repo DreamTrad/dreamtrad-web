@@ -1,13 +1,24 @@
 [
   {
-    "id": "25-10-14-bienvenu",
+    "id": "0001",
     "title": "Bienvenue sur notre nouveau site internet",
     "author": "Silous",
     "date": "2025-10-14",
     "tags": [],
     "coverImage": "",
-    "markdownPath": "/data/articles/25-10-14-bienvenue.md",
+    "markdownPath": "/data/articles/0001-bienvenue.md",
     "excerpt": "Le nouveau site est en ligne, et avec lui nos nouvelles ambitions.",
+    "readingTime": "5 min"
+  },
+  {
+    "id": "0002",
+    "title": "Comment s’organise un projet",
+    "author": "Silous",
+    "date": "2025-10-15",
+    "tags": [],
+    "coverImage": "",
+    "markdownPath": "/data/articles/0002-fonctionnement_projet.md",
+    "excerpt": "Une explication détaillé de comment fonctionne un projet de traduction de A à Z.",
     "readingTime": "5 min"
   }
 ]
