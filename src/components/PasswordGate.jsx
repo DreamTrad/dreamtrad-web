@@ -59,14 +59,6 @@ export default function PasswordGate({
   if (accessGranted) {
     return (
       <>
-        <div className="fixed top-4 right-4 z-50">
-          <button
-            onClick={handleLogout}
-            className="px-3 py-1 rounded-md text-sm bg-bg-secondary hover:bg-hover-secondary"
-          >
-            Verrouiller
-          </button>
-        </div>
         {children}
       </>
     );

@@ -6,7 +6,6 @@ import MarkdownSection from "../components/ui/MarkdownSection";
 import ProjectProgressCard from "../components/card/ProjectProgressCard";
 
 export default function HomePage() {
-
   const file_presentation = "../../data/presentation-accueil";
   const [projects, setProjects] = useState([]);
 
@@ -14,16 +13,12 @@ export default function HomePage() {
     fetch("data/progress.json")
       .then((res) => res.json())
       .then((data) => setProjects(data))
-      .catch((err) =>
-        console.error("Erreur chargement progress.json :", err)
-      );
+      .catch((err) => console.error("Erreur chargement progress.json :", err));
   }, []);
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-primary text-white">
-
-      <div className="flex-1 container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
-
+      <div className="flex-1 mx-auto px-5 py-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Colonne principale */}
         <div className="lg:col-span-2 flex flex-col gap-6">
           <MarkdownSection file={file_presentation} />
@@ -32,7 +27,7 @@ export default function HomePage() {
           <h2 className="text-lg font-semibold mb-4 text-center">
             Avancement des projets
           </h2>
-          <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(400px,1fr))]">
+          <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(280px,450px))] justify-center">
             {projects.length > 0 ? (
               projects.map((project) => (
                 <ProjectProgressCard
@@ -48,7 +43,6 @@ export default function HomePage() {
               </p>
             )}
           </div>
-
 
           <section className="border p-6 rounded-md">
             <h2 className="text-lg font-semibold mb-2">Patches disponibles</h2>
@@ -77,7 +71,6 @@ export default function HomePage() {
           <RecentArticles limit={3} />
         </aside>
       </div>
-
     </div>
   );
 }
