@@ -123,4 +123,4 @@ Pour le format des fichiers du patch, il peut y avoir plusieurs cas. Soit le jeu
 
 Toute la technique est faite, le patch peut sortir !
 
-Nous avons vu toutes les étapes de comment faire un patch de traduction. Bien sûr, autour ça, il y a l’aspect communication qui n’a pas été évoqué, mais le cœur d’un patch de fantraduction est résumé ici.
+Nous avons vu toutes les étapes de comment faire un patch de traduction. Plus qu’à faire pleins de traductions de Visual Novel maintenant !
