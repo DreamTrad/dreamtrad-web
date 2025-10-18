@@ -2,6 +2,6 @@ DreamTrad a débuté via un projet de traduction de AI: The Somnium Files le 22 
 
 Le 14 mars 2022, AI: The Somnium Files est disponible en français ! Le premier patch de l’équipe est disponible. Par la suite de nombreux vont suivre.
 
-Année après année, patch après patch, l’équipe a obtenu une expérience et une méthodologie suffisante pour porter de nombreux projets. Cinq ans après la création de l’équipe, nous lançons un nouveau site internet avec un léger rebranding, et surtout avec une nouvelle ambition de pouvoir proposer encore plus de projets, et aider à la promotion du Visual Novel.
+Ces patchs ont pu être possible grâce à l’aide de nombreuses personnes dont vous retrouverez la liste complète sur chaque page des patchs des jeux. Ici, ce sont les personnes qui ont ont travaillé sur de nombreux patchs et ont abattu une grosse partie du travail, ou des personnes qui gèrent des points plus globaux de l’équipe comme la communication.
 
-Ci-dessous, vous trouverez certains des membres les plus importants de l’équipe au fil des années.
+Ci-dessous, vous trouverez donc certains des membres les plus importants de l’équipe au fil des années.

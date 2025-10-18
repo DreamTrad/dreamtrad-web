@@ -49,15 +49,11 @@ export default function TeamMemberCard({
       </div>
 
       {/* Body */}
-      <div className="flex flex-col md:flex-row gap-6">
-        {/* Bio */}
-        <div className="flex-1 bg-bg-secondary rounded-md p-4 prose prose-invert max-w-none text-text-secondary text-sm">
-          <ReactMarkdown>{bio}</ReactMarkdown>
-        </div>
+      <div className="flex flex-col md:flex-row gap-6 flex-grow">
 
         {/* Projets */}
         {projects?.length > 0 && (
-          <div className="w-full md:w-1/3 bg-bg-secondary rounded-md p-4">
+          <div className="w-full bg-bg-secondary rounded-md p-4">
             <h3 className="text-sm font-semibold text-accent mb-2">
               Projets :
             </h3>
