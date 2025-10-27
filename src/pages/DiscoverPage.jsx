@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import MetaTags from "../components/MetaTags";
 import DiscoverCard from "../components/card/DiscoverCard";
 import MarkdownSection from "../components/ui/MarkdownSection";
 import LoaderOverlay from "../components/ui/LoaderOverlay";
@@ -159,6 +160,12 @@ export default function DiscoverPage() {
 
   return (
     <div className="p-8 max-w-9xl mx-auto">
+      <MetaTags
+        title="Découverte"
+        description="Découvrez tous les Visual Novels disponibles en français, traduits ou officiels."
+        url="decouverte"
+      />
+
       <h2 className="text-3xl font-bold text-accent mb-8 text-center">
         Découvrez des Visual Novel disponible en français
       </h2>
