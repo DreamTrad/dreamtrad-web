@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { games } from "../data/jeu";
+import MetaTags from "../components/MetaTags";
 import GameNavBar from "../components/game/GameNavBar";
 import GameSidebar from "../components/game/GameSidebar";
 import AchievementsSection from "../components/game/AchievementsSection";
@@ -79,15 +80,20 @@ export default function GamePage() {
 
   return (
     <>
+      <MetaTags
+        title={game.name}
+        description={`Découvrez ${game.name} et téléchargez les patchs disponibles. Des guides peuvent être consultés.`}
+        image={`assets/jeu/${game.id}/cover.webp`}
+        url={`jeux/${game.id}`}
+      />
       <h2 className="text-3xl">{game.name}</h2>
       <div className="flex flex-col min-h-screen">
         <GameNavBar />
         <div className="flex flex-1">
           {/* Sidebar */}
           <aside
-            className={`relative bg-bg-tertiary text-text-secondary border-r border-bg-secondary transition-all duration-300 ${
-              sidebarOpen ? "w-64 p-4" : "w-4"
-            }`}
+            className={`relative bg-bg-tertiary text-text-secondary border-r border-bg-secondary transition-all duration-300 ${sidebarOpen ? "w-64 p-4" : "w-4"
+              }`}
           >
             {/* Collapse toggle button collé à la bordure */}
             <button

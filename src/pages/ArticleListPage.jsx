@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import MetaTags from "../components/MetaTags";
 import ArticleCard from "../components/card/ArticleCard";
 
 export default function ArticleListPage() {
@@ -13,6 +14,11 @@ export default function ArticleListPage() {
 
   return (
     <div className="p-8 max-w-6xl mx-auto">
+      <MetaTags
+        title="Liste des articles"
+        description="Articles sur nos projets, sur la traduction, ou sur les visual Novel"
+        url="articles"
+      />
       <h1 className="text-3xl font-bold text-accent mb-8 text-center">
         Nos Articles
       </h1>

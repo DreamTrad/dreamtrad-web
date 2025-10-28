@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import MetaTags from "../components/MetaTags";
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -33,6 +34,11 @@ export default function ContactPage() {
 
   return (
     <div className="max-w-2xl mx-auto p-6 bg-bg-tertiary rounded-xl shadow-lg text-text">
+      <MetaTags
+        title="Contact"
+        description="Envoyer nous un mail si vous avez une question ou un problème. Vous pouvez passer par nos autres réseaux aussi."
+        url="contact"
+      />
       <h1 className="text-2xl font-bold mb-4">Contactez-nous</h1>
       <form onSubmit={handleSubmit}>
         <input

@@ -162,7 +162,7 @@ export default function DiscoverPage() {
     <div className="p-8 max-w-9xl mx-auto">
       <MetaTags
         title="Découverte"
-        description="Découvrez tous les Visual Novels disponibles en français, traduits ou officiels."
+        description="Découvrez des Visual Novel disponibles en français."
         url="decouverte"
       />
 

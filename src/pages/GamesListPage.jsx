@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
 import { games } from "../data/jeu";
+import MetaTags from "../components/MetaTags";
 
 export default function GamesListPage() {
   return (
     <div className="min-h-screen bg-bg-primary text-text-primary p-10">
+      <MetaTags
+        title="Visual Novel"
+        description="La liste des Visual Novel traduit ou en cours de traduction par l’équipe. Téléchargez des patchs, consultez des guides ou découvrez simplement les jeux."
+        url="jeux"
+      />
       <h1 className="text-3xl font-bold mb-8 text-center">Liste des jeux</h1>
 
       <div className="grid grid-cols-[repeat(auto-fit,350px)] gap-8 justify-center">
