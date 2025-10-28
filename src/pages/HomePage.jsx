@@ -18,6 +18,12 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-bg-primary text-white">
+      <MetaTags
+        title="DreamTrad"
+        description={`Découvrez ${game.name} et téléchargez les patchs disponibles. Des guides peuvent être consultés.`}
+        image={`assets/jeu/${game.id}/cover.webp`}
+        url={`jeux/${game.id}`}
+      />
       <div className="flex-1 mx-auto px-5 py-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Colonne principale */}
         <div className="lg:col-span-2 flex flex-col gap-6">

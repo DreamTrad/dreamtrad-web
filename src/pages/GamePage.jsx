@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { games } from "../data/jeu";
+import MetaTags from "../components/MetaTags";
 import GameNavBar from "../components/game/GameNavBar";
 import GameSidebar from "../components/game/GameSidebar";
 import AchievementsSection from "../components/game/AchievementsSection";
@@ -15,7 +16,7 @@ function DefaultContent({ text }) {
 }
 
 // Fonction pour retourner le composant approprié pour une section
-export function renderSection(section, catKey, gameId, child = null) {
+export function renderSection(section, catKey, gameName, gameId, child = null) {
   // Cas d'une sous-section
   if (child) {
     if (!child.file)
@@ -42,22 +43,50 @@ export function renderSection(section, catKey, gameId, child = null) {
     // Téléchargement
     if (section.id === "telechargement") {
       return (
+        <>
+        <MetaTags
+          title={`${gameName} - téléchargement patch`}
+          description={`Télécharger les différents patchs de ${gameName}.`}
+          image={`assets/jeu/${gameId}/cover.webp`}
+          url={`jeux/${gameId}/telechargement`}
+        />
         <DownloadSection
           gameId={gameId}
           file={section.file}
           platforms={section.platforms}
         />
+        </>
       );
     }
 
     // Installation (avec onglets plateformes)
     if (section.id === "installation") {
-      return <PlateformsTabs gameId={gameId} platforms={section.platforms} />;
+      return (
+        <>
+        <MetaTags
+          title={`${gameName} - installation patch`}
+          description={`Explication étape par étape pour installer le patch de ${gameName} sur tous les supports.`}
+          image={`assets/jeu/${gameId}/cover.webp`}
+          url={`jeux/${gameId}/installation`}
+        />
+          <PlateformsTabs gameId={gameId} platforms={section.platforms} />
+        </>
+      );
     }
 
     // Équipe
     if (section.id === "equipe") {
-      return <TeamRoleSection data={section.data} />;
+      return (
+      <>
+        <MetaTags
+          title={`${gameName} - équipe patch`}
+          description={`Toutes les personnes ayant travailler sur les patchs de ${gameName}.`}
+          image={`assets/jeu/${gameId}/cover.webp`}
+          url={`jeux/${gameId}/equipe`}
+        />
+        <TeamRoleSection data={section.data} />
+        </>
+      );
     }
   }
 
@@ -85,9 +114,8 @@ export default function GamePage() {
         <div className="flex flex-1">
           {/* Sidebar */}
           <aside
-            className={`relative bg-bg-tertiary text-text-secondary border-r border-bg-secondary transition-all duration-300 ${
-              sidebarOpen ? "w-64 p-4" : "w-4"
-            }`}
+            className={`relative bg-bg-tertiary text-text-secondary border-r border-bg-secondary transition-all duration-300 ${sidebarOpen ? "w-64 p-4" : "w-4"
+              }`}
           >
             {/* Collapse toggle button collé à la bordure */}
             <button
@@ -153,6 +181,7 @@ export default function GamePage() {
                                 element={renderSection(
                                   section,
                                   catKey,
+                                  game.name,
                                   game.id,
                                   child
                                 )}
@@ -167,7 +196,7 @@ export default function GamePage() {
                         <Route
                           key={section.id}
                           path={section.id}
-                          element={renderSection(section, catKey, game.id)}
+                          element={renderSection(section, catKey, game.name, game.id)}
                         />
                       );
                     })}

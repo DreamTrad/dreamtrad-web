@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import MetaTags from "../components/MetaTags";
 import MarkdownSection from "../components/ui/MarkdownSection";
 import LoaderOverlay from "../components/ui/LoaderOverlay";
 import useFetchWithLoader from "../hooks/useFetchWithLoader";
@@ -15,6 +16,12 @@ export default function ArticlePage() {
 
   return (
     <div className="relative p-8 max-w-4xl mx-auto">
+      <MetaTags
+        title={article.title}
+        description={article.excerpt}
+        image={article.coverImage}
+        url={`articles/${article.id}`}
+      />
       <Link to="/articles" className="inline-block mb-6 text-accent hover:underline">
         ← Retour aux articles
       </Link>
