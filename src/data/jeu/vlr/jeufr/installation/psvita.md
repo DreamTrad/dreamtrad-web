@@ -1,5 +1,7 @@
 # Instructions patch PS Vita
 
+Une fois que vous avez téléchargé le patch, il faudra d’abord l’extraire car c’est un dossier compressé zip.
+
 ## Prérequis
 
 - Vous devez avoir le jeu “The Nonary Games” installé sur votre PS Vita

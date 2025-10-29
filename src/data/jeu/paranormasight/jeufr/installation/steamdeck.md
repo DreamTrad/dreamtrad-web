@@ -1,5 +1,7 @@
 # Instructions patch automatique Steamdeck et Linux
 
+Une fois que vous avez téléchargé le patch, il faudra d’abord l’extraire car c’est un dossier compressé zip.
+
 - Allez en mode bureau et télécharger le patch. (Steamdeck)
 - Clic droit sur l’exe, faire ajouter à Steam.
 - Retournez en mode jeu, sur le "jeu" "PARANORMASIGHT_patch_automatique", allez dans les propriétés, et cocher la case pour compatibilité.

@@ -1,5 +1,7 @@
 # Instructions pour patcher manuellement
 
+Une fois que vous avez téléchargé le patch, il faudra d’abord l’extraire car c’est un dossier compressé zip.
+
 - Le fichier présent dans PARANORMASIGHT_Data du dossier patch (sharedassets0.assets) est à remplacer dans PARANORMASIGHT_Data du dossier du jeu.
 
 ![Image étape 1](/assets/jeu/paranormasight/jeufr/installation/manuellement_1.webp)
