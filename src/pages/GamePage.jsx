@@ -32,8 +32,31 @@ export function renderSection(section, catKey, gameName, gameId, child = null) {
   }
 
   if (catKey === "guide") {
+    if (section.id === "flux") {
+      return (
+        <>
+          <MetaTags
+            title={`${gameName} - flux de jeu`}
+            description={`Découvrez le logigramme de ${gameName} pour mieux comprendre quels choix mênent où.`}
+            image={`assets/jeu/${gameId}/cover.webp`}
+            url={`jeux/${gameId}/guide/flux`}
+          />
+          <DefaultContent text={`Flux non disponible`} />
+        </>
+      );
+    }
     if (section.id === "achievements") {
-      return <AchievementsSection sectionData={section.data} gameId={gameId} />;
+      return (
+        <>
+          <MetaTags
+            title={`${gameName} - Succès`}
+            description={`Traduction des succès de ${gameName}. Vous pouvez aussi retrouver des guides pour les obtenir.`}
+            image={`assets/jeu/${gameId}/cover.webp`}
+            url={`jeux/${gameId}/guide/achievements`}
+          />
+          <AchievementsSection sectionData={section.data} gameId={gameId} />
+        </>
+      );
     }
     if (!section.file) return <DefaultContent text={`Guide sans fichier`} />;
     return <MarkdownSection gameId={gameId} file={section.file} />;
@@ -44,17 +67,17 @@ export function renderSection(section, catKey, gameName, gameId, child = null) {
     if (section.id === "telechargement") {
       return (
         <>
-        <MetaTags
-          title={`${gameName} - téléchargement patch`}
-          description={`Télécharger les différents patchs de ${gameName}.`}
-          image={`assets/jeu/${gameId}/cover.webp`}
-          url={`jeux/${gameId}/telechargement`}
-        />
-        <DownloadSection
-          gameId={gameId}
-          file={section.file}
-          platforms={section.platforms}
-        />
+          <MetaTags
+            title={`${gameName} - téléchargement patch`}
+            description={`Télécharger les différents patchs de ${gameName}.`}
+            image={`assets/jeu/${gameId}/cover.webp`}
+            url={`jeux/${gameId}/jeufr/telechargement`}
+          />
+          <DownloadSection
+            gameId={gameId}
+            file={section.file}
+            platforms={section.platforms}
+          />
         </>
       );
     }
@@ -63,12 +86,12 @@ export function renderSection(section, catKey, gameName, gameId, child = null) {
     if (section.id === "installation") {
       return (
         <>
-        <MetaTags
-          title={`${gameName} - installation patch`}
-          description={`Explication étape par étape pour installer le patch de ${gameName} sur tous les supports.`}
-          image={`assets/jeu/${gameId}/cover.webp`}
-          url={`jeux/${gameId}/installation`}
-        />
+          <MetaTags
+            title={`${gameName} - installation patch`}
+            description={`Explication étape par étape pour installer le patch de ${gameName} sur tous les supports.`}
+            image={`assets/jeu/${gameId}/cover.webp`}
+            url={`jeux/${gameId}/jeufr/installation`}
+          />
           <PlateformsTabs gameId={gameId} platforms={section.platforms} />
         </>
       );
@@ -77,14 +100,14 @@ export function renderSection(section, catKey, gameName, gameId, child = null) {
     // Équipe
     if (section.id === "equipe") {
       return (
-      <>
-        <MetaTags
-          title={`${gameName} - équipe patch`}
-          description={`Toutes les personnes ayant travailler sur les patchs de ${gameName}.`}
-          image={`assets/jeu/${gameId}/cover.webp`}
-          url={`jeux/${gameId}/equipe`}
-        />
-        <TeamRoleSection data={section.data} />
+        <>
+          <MetaTags
+            title={`${gameName} - équipe patch`}
+            description={`Toutes les personnes ayant travailler sur les patchs de ${gameName}.`}
+            image={`assets/jeu/${gameId}/cover.webp`}
+            url={`jeux/${gameId}/jeufr/equipe`}
+          />
+          <TeamRoleSection data={section.data} />
         </>
       );
     }
@@ -114,8 +137,9 @@ export default function GamePage() {
         <div className="flex flex-1">
           {/* Sidebar */}
           <aside
-            className={`relative bg-bg-tertiary text-text-secondary border-r border-bg-secondary transition-all duration-300 ${sidebarOpen ? "w-64 p-4" : "w-4"
-              }`}
+            className={`relative bg-bg-tertiary text-text-secondary border-r border-bg-secondary transition-all duration-300 ${
+              sidebarOpen ? "w-64 p-4" : "w-4"
+            }`}
           >
             {/* Collapse toggle button collé à la bordure */}
             <button
@@ -196,7 +220,12 @@ export default function GamePage() {
                         <Route
                           key={section.id}
                           path={section.id}
-                          element={renderSection(section, catKey, game.name, game.id)}
+                          element={renderSection(
+                            section,
+                            catKey,
+                            game.name,
+                            game.id
+                          )}
                         />
                       );
                     })}
