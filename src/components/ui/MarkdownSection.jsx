@@ -6,6 +6,7 @@ import remarkGfm from "remark-gfm";
 import remarkDirective from "remark-directive";
 import { visit } from "unist-util-visit";
 import LoaderOverlay from "../ui/LoaderOverlay";
+import MetaTags from "../MetaTags";
 
 // -------- Markdown imports --------
 const allMarkdown = import.meta.glob(
@@ -61,6 +62,22 @@ function remarkCustomSpoiler() {
   };
 }
 
+function extractMetadata(text) {
+  if (!text.startsWith("---")) return { description: "", body: text };
+
+  const end = text.indexOf("\n---", 3);
+  if (end === -1) return { description: "", body: text };
+
+  const description = text.slice(3, end).trim();
+  const body = text.slice(end + 4).trim();
+  return { description, body };
+}
+
+function extractFirstTitle(markdown) {
+  const match = markdown.match(/^#\s+(.+)/m);
+  return match ? match[1].trim() : "DreamTrad";
+}
+
 // -------- Main component --------
 export default function MarkdownSection({
   gameId,
@@ -70,10 +87,24 @@ export default function MarkdownSection({
 }) {
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
+  const [meta, setMeta] = useState({
+    title: "DreamTrad",
+    description: "DreamTrad — Traduction de Visual Novels en français.",
+    image: "",
+  });
 
   useEffect(() => {
+    const handleContent = (text) => {
+      const { description, body } = extractMetadata(text);
+      const title = extractFirstTitle(body);
+      const image = `/assets/jeu/${gameId}/cover.webp`
+
+      setMeta({ title, description, image });
+      setContent(body);
+    };
+
     if (inlineContent) {
-      setContent(inlineContent);
+      handleContent(inlineContent);
       return;
     }
 
@@ -81,17 +112,18 @@ export default function MarkdownSection({
 
     setLoading(true);
 
-    // 🔹 Cas 1 : Fichier dans src/data (import.meta.glob)
+    // Fichier dans src/data (import.meta.glob)
     const key = gameId ? `../../data/jeu/${gameId}/${file}.md` : `${file}.md`;
     const importFile = allMarkdown[key];
 
     if (importFile) {
-      importFile().then((text) => setContent(text))
-      .finally(() => setLoading(false));;
+      importFile()
+        .then((text) => setContent(text))
+        .finally(() => setLoading(false));
       return;
     }
 
-    // 🔹 Cas 2 : Fichier dans public (fetch)
+    // Fichier dans public (fetch)
     fetch(file)
       .then((res) => {
         if (!res.ok) throw new Error("Fichier non trouvé");
@@ -104,52 +136,60 @@ export default function MarkdownSection({
 
   if (loading) return <LoaderOverlay />;
 
-return (
-    <div className={`prose prose-invert max-w-none ${className}`}>
-      <ReactMarkdown
-        remarkPlugins={[remarkGfm, remarkDirective, remarkCustomSpoiler]}
-        rehypePlugins={[rehypeRaw]}
-        components={{
-          iframe: ({ node, ...props }) => (
-            <div className="my-4 relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
-              <iframe
-                {...props}
-                className="absolute top-0 left-0 w-full h-full"
-                allowFullScreen
-              />
-            </div>
-          ),
-          a: ({ node, href, children, ...props }) => {
-            if (href?.startsWith("/")) {
+  return (
+    <>
+      <MetaTags
+        title={meta.title}
+        description={meta.description}
+        image={meta.image}
+        url={file || ""}
+      />
+      <div className={`prose prose-invert max-w-none ${className}`}>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm, remarkDirective, remarkCustomSpoiler]}
+          rehypePlugins={[rehypeRaw]}
+          components={{
+            iframe: ({ node, ...props }) => (
+              <div className="my-4 relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+                <iframe
+                  {...props}
+                  className="absolute top-0 left-0 w-full h-full"
+                  allowFullScreen
+                />
+              </div>
+            ),
+            a: ({ node, href, children, ...props }) => {
+              if (href?.startsWith("/")) {
+                return (
+                  <Link
+                    to={href}
+                    className="text-accent hover:underline"
+                    {...props}
+                  >
+                    {children}
+                  </Link>
+                );
+              }
               return (
-                <Link
-                  to={href}
+                <a
+                  href={href}
                   className="text-accent hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   {...props}
                 >
                   {children}
-                </Link>
+                </a>
               );
-            }
-            return (
-              <a
-                href={href}
-                className="text-accent hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-                {...props}
-              >
-                {children}
-              </a>
-            );
-          },
-          spoiler: ({ node, ...props }) => (
-            <Spoiler title={props.title}>{props.children}</Spoiler>
-          ),
-        }}
-      >
-        {content}
-      </ReactMarkdown>
-    </div>
+            },
+            spoiler: ({ node, ...props }) => (
+              <Spoiler title={props.title}>{props.children}</Spoiler>
+            ),
+          }}
+        >
+          {content}
+        </ReactMarkdown>
+      </div>
+    </>
   );
 }
