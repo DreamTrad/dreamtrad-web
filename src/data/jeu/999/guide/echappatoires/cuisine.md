@@ -1,3 +1,6 @@
+---
+Solution de l’échappatoire de la cusine dans 9 Hours 9 Persons 9 Doors.
+---
 # Échappatoire cuisine
 
 :::spoiler[la position des objets et éléments importants]

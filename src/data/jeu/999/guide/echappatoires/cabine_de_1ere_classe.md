@@ -1,3 +1,6 @@
+---
+Solution de l’échappatoire de la cabine de 1ère classe dans 9 Hours 9 Persons 9 Doors.
+---
 # Échappatoire cabine de 1ère classe
 
 :::spoiler[la position des objets et éléments importants]

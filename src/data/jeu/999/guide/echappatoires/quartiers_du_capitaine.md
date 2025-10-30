@@ -1,3 +1,6 @@
+---
+Solution de l’échappatoire des quartiers du capitaine dans 9 Hours 9 Persons 9 Doors.
+---
 # Échappatoire quartiers du capitaine
 
 :::spoiler[la position des objets et éléments importants]

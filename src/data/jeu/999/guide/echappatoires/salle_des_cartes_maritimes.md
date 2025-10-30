@@ -1,3 +1,6 @@
+---
+Solution de l’échappatoire de la salle des cartes maritimes dans 9 Hours 9 Persons 9 Doors.
+---
 # Échappatoire salle des cartes maritimes
 
 :::spoiler[la position des objets et éléments importants]

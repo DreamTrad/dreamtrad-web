@@ -89,7 +89,7 @@ export default function MarkdownSection({
   const [loading, setLoading] = useState(false);
   const [meta, setMeta] = useState({
     title: "DreamTrad",
-    description: "DreamTrad — Traduction de Visual Novels en français.",
+    description: "Traduction de Visual Novels en français.",
     image: "",
   });
 
@@ -109,7 +109,6 @@ export default function MarkdownSection({
     }
 
     if (!file) return;
-
     setLoading(true);
 
     // Fichier dans src/data (import.meta.glob)
@@ -118,7 +117,7 @@ export default function MarkdownSection({
 
     if (importFile) {
       importFile()
-        .then((text) => setContent(text))
+        .then((text) => handleContent(text))
         .finally(() => setLoading(false));
       return;
     }
@@ -129,8 +128,8 @@ export default function MarkdownSection({
         if (!res.ok) throw new Error("Fichier non trouvé");
         return res.text();
       })
-      .then((text) => setContent(text))
-      .catch(() => setContent("# Fichier introuvable"))
+      .then((text) => handleContent(text))
+      .catch(() => handleContent("# Fichier introuvable"))
       .finally(() => setLoading(false));
   }, [gameId, file, inlineContent]);
 

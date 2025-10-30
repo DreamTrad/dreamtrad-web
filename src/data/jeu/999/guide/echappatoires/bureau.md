@@ -1,3 +1,6 @@
+---
+Solution de l’échappatoire du bureau dans 9 Hours 9 Persons 9 Doors.
+---
 # Échappatoire bureau
 
 :::spoiler[la position des objets et éléments importants]

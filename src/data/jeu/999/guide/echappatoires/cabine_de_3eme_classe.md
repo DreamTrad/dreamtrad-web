@@ -1,5 +1,5 @@
 ---
-Solution de l’échappatoire de la cabine de 3ème classe dans 9 Hours 9 Persons 9 Doors
+Solution de l’échappatoire de la cabine de 3ème classe dans 9 Hours 9 Persons 9 Doors.
 ---
 # Échappatoire cabine de 3ème classe
 

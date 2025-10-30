@@ -1,3 +1,6 @@
+---
+Solution de l’échappatoire du bar-casino dans 9 Hours 9 Persons 9 Doors.
+---
 # Échappatoire bar-casino
 
 :::spoiler[la position des objets et éléments importants]
