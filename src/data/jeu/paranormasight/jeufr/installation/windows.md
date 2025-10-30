@@ -1,5 +1,7 @@
 # Instructions patch automatique Windows
 
+Une fois que vous avez téléchargé le patch, il faudra d’abord l’extraire car c’est un dossier compressé zip.
+
 - Lancez PARANORMASIGHT_patch_automatique.exe.
 - Sélectionnez le répertoire du jeu avec le bouton "Rechercher" s’il n’apparait pas automatiquement.
 - Cliquez sur "Patcher".

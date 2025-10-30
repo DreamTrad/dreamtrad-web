@@ -1,3 +1,6 @@
+---
+Solution de l’échappatoire de la salle d’isolement dans 9 Hours 9 Persons 9 Doors.
+---
 # Échappatoire salle d’isolement
 
 :::spoiler[la position des objets et éléments importants]

@@ -1,3 +1,6 @@
+---
+Solution de l’échappatoire des cabines de 2ème classe dans 9 Hours 9 Persons 9 Doors.
+---
 # Échappatoire cabines de 2ème classe
 
 :::spoiler[la position des objets et éléments importants]

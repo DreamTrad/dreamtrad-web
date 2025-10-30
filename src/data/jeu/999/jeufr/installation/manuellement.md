@@ -4,6 +4,8 @@ Si le patch automatique ne fonctionne pas pour vous, vous pouvez toujours appliq
 
 Vous pouvez trouver ici une version graphique de l’utilitaire, récupérer la dernière version de l’exécutable compatible avec votre système : [DeltaPatcher](https://github.com/marco-calautti/DeltaPatcher/releases)
 
+Une fois que vous avez téléchargé le patch, il faudra d’abord l’extraire car c’est un dossier compressé zip.
+
 
 | Fichier de patch              | Fichier du jeu            | Fonction                                                                                 |
 |-------------------------------|---------------------------|------------------------------------------------------------------------------------------|

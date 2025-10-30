@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { games } from "../data/jeu";
+import MetaTags from "../components/MetaTags";
 import GameNavBar from "../components/game/GameNavBar";
 import GameSidebar from "../components/game/GameSidebar";
 import AchievementsSection from "../components/game/AchievementsSection";
@@ -15,7 +16,7 @@ function DefaultContent({ text }) {
 }
 
 // Fonction pour retourner le composant approprié pour une section
-export function renderSection(section, catKey, gameId, child = null) {
+export function renderSection(section, catKey, gameName, gameId, child = null) {
   // Cas d'une sous-section
   if (child) {
     if (!child.file)
@@ -31,8 +32,31 @@ export function renderSection(section, catKey, gameId, child = null) {
   }
 
   if (catKey === "guide") {
+    if (section.id === "flux") {
+      return (
+        <>
+          <MetaTags
+            title={`${gameName} - flux de jeu`}
+            description={`Découvrez le logigramme de ${gameName} pour mieux comprendre quels choix mênent où.`}
+            image={`assets/jeu/${gameId}/cover.webp`}
+            url={`jeux/${gameId}/guide/flux`}
+          />
+          <DefaultContent text={`Flux non disponible`} />
+        </>
+      );
+    }
     if (section.id === "achievements") {
-      return <AchievementsSection sectionData={section.data} gameId={gameId} />;
+      return (
+        <>
+          <MetaTags
+            title={`${gameName} - Succès`}
+            description={`Traduction des succès de ${gameName}. Vous pouvez aussi retrouver des guides pour les obtenir.`}
+            image={`assets/jeu/${gameId}/cover.webp`}
+            url={`jeux/${gameId}/guide/achievements`}
+          />
+          <AchievementsSection sectionData={section.data} gameId={gameId} />
+        </>
+      );
     }
     if (!section.file) return <DefaultContent text={`Guide sans fichier`} />;
     return <MarkdownSection gameId={gameId} file={section.file} />;
@@ -42,22 +66,50 @@ export function renderSection(section, catKey, gameId, child = null) {
     // Téléchargement
     if (section.id === "telechargement") {
       return (
-        <DownloadSection
-          gameId={gameId}
-          file={section.file}
-          platforms={section.platforms}
-        />
+        <>
+          <MetaTags
+            title={`${gameName} - téléchargement patch`}
+            description={`Télécharger les différents patchs de ${gameName}.`}
+            image={`assets/jeu/${gameId}/cover.webp`}
+            url={`jeux/${gameId}/jeufr/telechargement`}
+          />
+          <DownloadSection
+            gameId={gameId}
+            file={section.file}
+            platforms={section.platforms}
+          />
+        </>
       );
     }
 
     // Installation (avec onglets plateformes)
     if (section.id === "installation") {
-      return <PlateformsTabs gameId={gameId} platforms={section.platforms} />;
+      return (
+        <>
+          <MetaTags
+            title={`${gameName} - installation patch`}
+            description={`Explication étape par étape pour installer le patch de ${gameName} sur tous les supports.`}
+            image={`assets/jeu/${gameId}/cover.webp`}
+            url={`jeux/${gameId}/jeufr/installation`}
+          />
+          <PlateformsTabs gameId={gameId} platforms={section.platforms} />
+        </>
+      );
     }
 
     // Équipe
     if (section.id === "equipe") {
-      return <TeamRoleSection data={section.data} />;
+      return (
+        <>
+          <MetaTags
+            title={`${gameName} - équipe patch`}
+            description={`Toutes les personnes ayant travailler sur les patchs de ${gameName}.`}
+            image={`assets/jeu/${gameId}/cover.webp`}
+            url={`jeux/${gameId}/jeufr/equipe`}
+          />
+          <TeamRoleSection data={section.data} />
+        </>
+      );
     }
   }
 
@@ -153,6 +205,7 @@ export default function GamePage() {
                                 element={renderSection(
                                   section,
                                   catKey,
+                                  game.name,
                                   game.id,
                                   child
                                 )}
@@ -167,7 +220,12 @@ export default function GamePage() {
                         <Route
                           key={section.id}
                           path={section.id}
-                          element={renderSection(section, catKey, game.id)}
+                          element={renderSection(
+                            section,
+                            catKey,
+                            game.name,
+                            game.id
+                          )}
                         />
                       );
                     })}

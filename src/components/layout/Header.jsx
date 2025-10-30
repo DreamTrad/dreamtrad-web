@@ -25,7 +25,7 @@ export default function Header() {
           className="absolute left-4 flex items-center gap-2 h-full"
         >
           <img
-            src="/assets/dreamtrad-logo.ico"
+            src="/assets/dreamtrad-logo.png"
             alt="Logo DreamTrad"
             className="h-10 w-10 object-contain"
           />

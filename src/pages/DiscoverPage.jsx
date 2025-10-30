@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import MetaTags from "../components/MetaTags";
 import DiscoverCard from "../components/card/DiscoverCard";
 import MarkdownSection from "../components/ui/MarkdownSection";
 import LoaderOverlay from "../components/ui/LoaderOverlay";
@@ -158,79 +159,87 @@ export default function DiscoverPage() {
   if (error) return <p className="text-red-500 text-center">{error.message}</p>;
 
   return (
-    <div className="p-8 max-w-9xl mx-auto">
-      <h2 className="text-3xl font-bold text-accent mb-8 text-center">
-        Découvrez des Visual Novel disponible en français
-      </h2>
-
-      <div className="mt-16 mb-16">
-        <MarkdownSection file={file} />
-      </div>
-
-      {/* Barre de filtres */}
-      <div className="mb-8 flex flex-wrap gap-4 justify-center">
-        <input
-          type="text"
-          placeholder="Rechercher par nom..."
-          className="p-2 rounded-xl border border-gray-300 bg-white text-black"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+    <>
+      <div className="p-8 max-w-9xl mx-auto">
+        <MetaTags
+          title="Découverte"
+          description="Découvrez des Visual Novel disponibles en français."
+          url="decouverte"
         />
 
-        <MultiDropdown
-          label="Sélectionner des genres"
-          options={genres}
-          selected={selectedGenres}
-          setSelected={setSelectedGenres}
-        />
+        <h2 className="text-3xl font-bold text-accent mb-8 text-center">
+          Découvrez des Visual Novel disponible en français
+        </h2>
 
-        <MultiDropdown
-          label="Sélectionner des durées"
-          options={durees}
-          selected={selectedDurees}
-          setSelected={setSelectedDurees}
-        />
+        <div className="mt-16 mb-16">
+          <MarkdownSection file={file} />
+        </div>
 
-        <select
-          className="p-2 rounded-xl border border-gray-300 bg-white text-black"
-          value={traductionFilter}
-          onChange={(e) => setTraductionFilter(e.target.value)}
-        >
-          <option value="">Toutes les traductions</option>
-          <option value="officielle">Officielle</option>
-          <option value="non-officielle">Fantraduction</option>
-        </select>
-
-        <select
-          className="p-2 rounded-xl border border-gray-300 bg-white text-black"
-          value={sortOption}
-          onChange={(e) => setSortOption(e.target.value)}
-        >
-          <option value="titre-asc">Titre (A → Z)</option>
-          <option value="titre-desc">Titre (Z → A)</option>
-          <option value="note-asc">Note VNDB (faible → fort)</option>
-          <option value="note-desc">Note VNDB (fort → faible)</option>
-          <option value="popularite-asc">Popularité (meilleure → pire)</option>
-          <option value="popularite-desc">Popularité (pire → meilleure)</option>
-        </select>
-      </div>
-
-      {/* Grille */}
-      <div className="grid gap-8 w-full justify-center [grid-template-columns:repeat(auto-fit,minmax(320px,800px))]">
-        {sortedData.map((project) => (
-          <DiscoverCard
-            key={project.id}
-            titre={project.titre}
-            image={project.image}
-            genre={project.genre}
-            duree={project.duree}
-            plateforme={project.plateforme}
-            lien_jeu={project.lien_jeu}
-            patch_fr={project.patch_fr}
-            description={project.description}
+        {/* Barre de filtres */}
+        <div className="mb-8 flex flex-wrap gap-4 justify-center">
+          <input
+            type="text"
+            placeholder="Rechercher par nom..."
+            className="p-2 rounded-xl border border-gray-300 bg-white text-black"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
           />
-        ))}
+
+          <MultiDropdown
+            label="Sélectionner des genres"
+            options={genres}
+            selected={selectedGenres}
+            setSelected={setSelectedGenres}
+          />
+
+          <MultiDropdown
+            label="Sélectionner des durées"
+            options={durees}
+            selected={selectedDurees}
+            setSelected={setSelectedDurees}
+          />
+
+          <select
+            className="p-2 rounded-xl border border-gray-300 bg-white text-black"
+            value={traductionFilter}
+            onChange={(e) => setTraductionFilter(e.target.value)}
+          >
+            <option value="">Toutes les traductions</option>
+            <option value="officielle">Officielle</option>
+            <option value="non-officielle">Fantraduction</option>
+          </select>
+
+          <select
+            className="p-2 rounded-xl border border-gray-300 bg-white text-black"
+            value={sortOption}
+            onChange={(e) => setSortOption(e.target.value)}
+          >
+            <option value="titre-asc">Titre (A → Z)</option>
+            <option value="titre-desc">Titre (Z → A)</option>
+            <option value="note-asc">Note VNDB (faible → fort)</option>
+            <option value="note-desc">Note VNDB (fort → faible)</option>
+            <option value="popularite-asc">Popularité (meilleure → pire)</option>
+            <option value="popularite-desc">Popularité (pire → meilleure)</option>
+          </select>
+        </div>
+
+        {/* Grille */}
+        <div className="grid gap-8 w-full justify-center [grid-template-columns:repeat(auto-fit,minmax(320px,800px))]">
+          {sortedData.map((project) => (
+            <DiscoverCard
+              key={project.id}
+              titre={project.titre}
+              image={project.image}
+              genre={project.genre}
+              duree={project.duree}
+              plateforme={project.plateforme}
+              lien_jeu={project.lien_jeu}
+              patch_fr={project.patch_fr}
+              description={project.description}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

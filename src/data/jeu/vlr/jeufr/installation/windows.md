@@ -1,5 +1,7 @@
 # Instructions patch automatique windows
 
+Une fois que vous avez téléchargé le patch, il faudra d’abord l’extraire car c’est un dossier compressé zip.
+
 - Si les fichiers de votre jeu ont été modifiés, allez dans les paramètres du jeu sur Steam, et faite :
 Propriétés → Fichiers installés → Vérifier l’intégrité des fichiers du jeu
 

@@ -1,3 +1,6 @@
+---
+Solution de l’échappatoire de la salle des moteurs à vapeurs dans 9 Hours 9 Persons 9 Doors.
+---
 # Échappatoire salle des moteurs à vapeur
 
 :::spoiler[la position des objets et éléments importants]

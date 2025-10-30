@@ -1,5 +1,7 @@
 # Instructions pour patcher manuellement sur PC et steamdeck
 
+Une fois que vous avez téléchargé le patch, il faudra d’abord l’extraire car c’est un dossier compressé zip.
+
 Si le patch automatique ne fonctionne pas pour vous, vous pouvez toujours appliquer le patch manuellement. Vous aurez besoin xDelta pour appliquer les patchs sur les fichiers du jeu.
 
 Vous pouvez trouvez ici une version graphique de l’utilitaire, récupérer la dernière version de exécutable compatible avec votre système : [DeltaPatcher](https://github.com/marco-calautti/DeltaPatcher/releases)

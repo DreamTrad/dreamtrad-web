@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import MetaTags from "../components/MetaTags";
 import ArticleCard from "../components/card/ArticleCard";
 
 export default function ArticleListPage() {
@@ -12,16 +13,23 @@ export default function ArticleListPage() {
   }, []);
 
   return (
-    <div className="p-8 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-accent mb-8 text-center">
-        Nos Articles
-      </h1>
+    <>
+      <MetaTags
+        title="Liste des articles"
+        description="Articles sur nos projets, sur la traduction, ou sur les visual Novel"
+        url="articles"
+      />
+      <div className="p-8 max-w-6xl mx-auto">
+        <h1 className="text-3xl font-bold text-accent mb-8 text-center">
+          Nos Articles
+        </h1>
 
-      <div className="grid gap-8 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
-        {articles.map((article) => (
-          <ArticleCard key={article.id} {...article} />
-        ))}
+        <div className="grid gap-8 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+          {articles.map((article) => (
+            <ArticleCard key={article.id} {...article} />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
