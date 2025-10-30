@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
 import MarkdownSection from "../ui/MarkdownSection";
 
 export default function AchievementCard({
@@ -40,7 +41,7 @@ export default function AchievementCard({
           <>
             <h3 className="text-lg font-bold text-text">{titleFr}</h3>
             <p className="text-sm italic text-text-tertiary">{titleEn}</p>
-            <p>{description}</p>
+            <ReactMarkdown>{description}</ReactMarkdown>
             {resolution && (
               <p className="text-xs text-text-tertiary mt-2">
                 <MarkdownSection
