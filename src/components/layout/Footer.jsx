@@ -5,7 +5,7 @@ import xitterIcon from "../../assets/icons/website/xitter.svg";
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-secondary text-text-secondary mt-12">
+    <footer className="bg-bg-secondary text-text-secondary">
       <div className="max-w-6xl mx-auto px-6 py-10 grid gap-8 grid-cols-1 md:grid-cols-3">
         {/* Colonne 1 - Logo + description */}
         <div>
