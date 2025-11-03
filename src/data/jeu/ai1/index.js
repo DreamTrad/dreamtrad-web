@@ -30,7 +30,7 @@ export const game = {
           file: "jeufr/informations",
           platforms: [
             { id: "pc", name: "PC (Windows, Steamdeck, Linux)", link: "https://drive.google.com/uc?export=download&id=1Jxjkpq6t6br8nbO64Bgu-kwlTNWBikkv" },
-            { id: "xbox", name: "Xbox/Gamepass", link: "https://drive.google.com/uc?export=download&id=1HAV-uTRXZ7rxqjpGIGNV9MievMKk3eyU" },
+            { id: "xbox", name: "Xbox/Gamepass/Windows Store", link: "https://drive.google.com/uc?export=download&id=1HAV-uTRXZ7rxqjpGIGNV9MievMKk3eyU" },
           ],
         },
         {
