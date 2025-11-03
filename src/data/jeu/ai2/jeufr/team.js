@@ -44,6 +44,7 @@ export const team = [
             { "name": "Foubou", "role": "Relecteur", "link": "" },
             { "name": "Ailes Grises", "role": "Bêta-testeur", "link": "" },
             { "name": "cocobou", "role": "Bêta-testeur", "link": "" },
+            { "name": "Edael", "role": "Bêta-testeur", "link": "" },
             { "name": "Kevryu", "role": "Bêta-testeur", "link": "" },
             { "name": "kouacc", "role": "Bêta-testeur", "link": "" },
             { "name": "Kynne", "role": "Bêta-testeur", "link": "" },
