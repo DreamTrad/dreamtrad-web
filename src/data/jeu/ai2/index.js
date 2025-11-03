@@ -37,7 +37,7 @@ export const game = {
           name: "Installation",
           platforms: [
             { id: "windows", name: "Windows", file: "jeufr/installation/windows" },
-            { id: "steamdeck", name: "Steam Deck/Linux", file: "jeufr/installation/steamdeck" },
+            //{ id: "steamdeck", name: "Steam Deck/Linux", file: "jeufr/installation/steamdeck" },
             { id: "manuellement", name: "Manuellement PC", file: "jeufr/installation/manuellement" },
           ],
         },
