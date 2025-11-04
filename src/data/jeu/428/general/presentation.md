@@ -3,6 +3,8 @@ Cinq personnes vont être embarqués dans ces histoires, et ce sera à nous de s
 
 Originellement sorti sur Wii en 2008 uniquement au Japon, une version anglaise a vu le jour en 2018 avec un port sur PC.
 
+Il s’agit d’un œuvre culte de Chunsoft qui est un studio ayant défini les bases mêmes du Visual Novel.
+
 
 <iframe src="https://www.youtube.com/embed/6JclkoLuczI"></iframe>
 
