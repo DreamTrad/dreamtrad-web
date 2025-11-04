@@ -11,4 +11,6 @@ L’histoire regorge d’énigmes et de casse-têtes, allant de simples devinett
 
 <iframe src="https://www.youtube.com/embed/duXpCP0qVE4"></iframe>
 
+Si vous comptez acheter The Zodiac Trial, nous vous conseillons de le prendre en bundle avec The Divine Deception. En effet, pour 1 centime de moins, vous pouvez obtenir les 2 jeux au lieu d’un seul. C’est donc moins cher d’acheter les 2 jeux qu’un seul jeu.
+
 <iframe src="https://store.steampowered.com/widget/1513120/"></iframe>

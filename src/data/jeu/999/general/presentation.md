@@ -4,11 +4,9 @@
 
 Un roman nommé **9 Heures, 9 Personnes, 9 Portes Alterna** est sorti en 2010. Il reprend les grandes lignes du scénario tout en modifiant certains éléments.
 
-# version mobile (à faire)
+Par la suite, le jeu est ressorti en remaster en 2017 dans une version regroupant 999 : 9 Heures, 9 Personnes, 9 Portes et Les Remords des Vertueux (Virtue's Last Reward). Cette version nommée *The Nonary Games* est sortie sur Steam, PlayStation 4, Playstation Vita et en 2022 sur Xbox One. Une version mobile est également sortie. Cette version propose une présentation différente avec des bulles façon BD et tout le gameplay a été retiré. Le version mobile est également connue pour ajouter une nouvelle mauvaise fin.
 
-Par la suite, le jeu est ressorti en remaster en 2017 dans une version regroupant 999 : 9 Heures, 9 Personnes, 9 Portes et Les Remords des Vertueux (Virtue's Last Reward). Cette version nommée *The Nonary Games* est sortie sur Steam, PlayStation 4, Playstation Vita et en 2022 sur Xbox One.
-
-### L’histoire
+## Scénario
 
 Junpei, un étudiant, arrive dans son appartement et se fait enlever par une personne masquée nommée "Zéro". Il se retrouve enfermé dans un bateau avec 8 autres individus. Un message leur demande de participer au "jeu nonaire" dont le but est de trouver la porte qui arbore un "9", et cela en neuf heures avant que le bateau ne sombre. Tous les 9, ils vont devoir passer par des portes numérotées derrière lesquelles se cachent des salles dont il faudra trouver un moyen de déverrouiller la sortie. Tout en avançant dans ce jeu nonaire, ils tenteront de trouver des réponses à toutes leurs questions : *Qu’est-ce que le jeu nonaire ? Où sont-ils ? Pourquoi eux ? Qui est Zéro ?*
 
