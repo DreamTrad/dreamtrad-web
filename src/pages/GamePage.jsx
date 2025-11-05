@@ -8,6 +8,7 @@ import GameSidebar from "../components/game/GameSidebar";
 import AchievementsSection from "../components/game/AchievementsSection";
 import TeamRoleSection from "../components/game/TeamRoleSection";
 import DownloadSection from "../components/game/DownloadSection";
+import GameHeader from "../components/game/GameHeader";
 import PlateformsTabs from "../components/game/PlateformTabs";
 import MarkdownSection from "../components/ui/MarkdownSection";
 
@@ -131,7 +132,7 @@ export default function GamePage() {
 
   return (
     <>
-      <h2 className="text-3xl">{game.name}</h2>
+      <GameHeader game={game} />
       <div className="flex flex-col min-h-screen">
         <GameNavBar />
         <div className="flex flex-1">
