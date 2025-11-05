@@ -23,7 +23,7 @@ export const achievements = [
         titleFr: "Échappeur",
         descriptionEn: "Escaped on Hard difficulty in VLR.",
         descriptionFr: "S’être échappé en difficulté normale dans VLR",
-        resolution: "Finissez n’importe que échappatoire en difficulté normale.",
+        resolution: "Finissez n’importe quel échappatoire en difficulté normale.",
         hidden: false,
     },
     {
@@ -31,23 +31,23 @@ export const achievements = [
         titleEn: "Escapest",
         titleFr: "Échappeur suprême",
         descriptionEn: "Escaped everything on Hard difficulty in VLR.",
-        descriptionFr: "S’être échappé de tout en difficulté normale dans VLR.",
+        descriptionFr: "S’être échappé de toutes les échappatoires en difficulté normale dans VLR.",
         resolution: "",
         hidden: true,
     },
     {
         id: "ACH_SKP2_05",
         titleEn: "Redacted",
-        titleFr: "Redacted",
+        titleFr: "Tu en sais trop",
         descriptionEn: "Found ALL the secrets in VLR!",
         descriptionFr: "Trouver tous les secrets dans VLR.",
-        resolution: "Pour obtenir tous les secrets, il faut terminer toutes les échappatoire en difficulté normale.",
+        resolution: "Pour obtenir tous les secrets, il faut terminer toutes les échappatoires en difficulté normale.",
         hidden: true,
     },
     {
         id: "ACH_SKP2_06",
         titleEn: "A Consumate Collection",
-        titleFr: "Une collection qui prend du temps",
+        titleFr: "Collectionisme",
         descriptionEn: "Found ALL the files in VLR!",
         descriptionFr: "Trouver tous les fichiers de VLR !",
         resolution: "",
@@ -56,7 +56,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_07",
         titleEn: "To Each According to His Needle",
-        titleFr: "",
+        titleFr: "Comment sauver Phi et K ?!",
         descriptionEn: "Opened the first lock in VLR.",
         descriptionFr: "Déverrouillez le premier verrou de VLR.",
         resolution: "",
@@ -65,7 +65,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_08",
         titleEn: "I Can't Believe It's Not Murder!",
-        titleFr: "",
+        titleFr: "Quelle preuve a-t-on qu’il ne s’agit pas d’un meurtre ?!",
         descriptionEn: "Opened the second lock in VLR.",
         descriptionFr: "Déverrouillez le second verrou de VLR.",
         resolution: "",
@@ -74,7 +74,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_09",
         titleEn: "Gotta Hand It To You",
-        titleFr: "",
+        titleFr: "5 minutes avant la mort !",
         descriptionEn: "Opened the third lock in VLR.",
         descriptionFr: "Déverrouillez le troisième verrou de VLR.",
         resolution: "",
@@ -83,7 +83,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_10",
         titleEn: "If I Told You You Had A Nice Antibody...",
-        titleFr: "",
+        titleFr: "Pas assez d’antiviral !",
         descriptionEn: "Opened the fourth lock in VLR.",
         descriptionFr: "Déverrouillez le quatrième verrou de VLR.",
         resolution: "",
@@ -92,7 +92,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_11",
         titleEn: "He Was Convicted of a String of Numbers",
-        titleFr: "",
+        titleFr: "C’est quoi cette suite de chiffres interminables ?!",
         descriptionEn: "Opened the fifth lock in VLR.",
         descriptionFr: "Déverrouillez le cinquième verrou de VLR.",
         resolution: "",
@@ -101,7 +101,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_12",
         titleEn: "No Lying Down On the Job",
-        titleFr: "",
+        titleFr: "Où est Alice ?!",
         descriptionEn: " Opened the sixth lock in VLR.",
         descriptionFr: "Déverrouillez le sixième verrou de VLR.",
         resolution: "",
@@ -110,7 +110,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_13",
         titleEn: "Who Set Up Us The Bomb, Part 1",
-        titleFr: "",
+        titleFr: "Qui a posé la bombe ?! (A)",
         descriptionEn: "Opened the seventh lock in VLR.",
         descriptionFr: "Déverrouillez le septième verrou de VLR.",
         resolution: "",
@@ -119,7 +119,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_14",
         titleEn: "Why'd You Do That, You Dumas!",
-        titleFr: "",
+        titleFr: "Comment arrêter Phi ?!",
         descriptionEn: "Opened the eighth lock in VLR.",
         descriptionFr: "Déverrouillez le huitième verrou de VLR.",
         resolution: "",
@@ -128,7 +128,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_15",
         titleEn: "Who Set Up Us The Bomb, Part A",
-        titleFr: "",
+        titleFr: "Qui a posé la bombe ?! (B)",
         descriptionEn: "Opened the ninth lock in VLR.",
         descriptionFr: "Déverrouillez le neuvième verrou de VLR.",
         resolution: "",
@@ -137,7 +137,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_16",
         titleEn: "Some Days You Just Can't Get Rid of a Bomb",
-        titleFr: "",
+        titleFr: "Où se trouve la bombe [00] ?!",
         descriptionEn: "Opened the tenth lock in VLR.",
         descriptionFr: "Déverrouillez le dixième verrou de VLR.",
         resolution: "",
@@ -146,7 +146,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_17",
         titleEn: "Every Ending Begins Somewhere",
-        titleFr: "",
+        titleFr: "Un regard sur un chemin",
         descriptionEn: "Saw any of the endings in VLR.",
         descriptionFr: "Assistez à n’importe quelle fin de VLR.",
         resolution: "",
@@ -155,7 +155,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_18",
         titleEn: "Tears in the Rain",
-        titleFr: "",
+        titleFr: "Luna ; Fin",
         descriptionEn: "Saw Luna's ending in VLR.",
         descriptionFr: "Assistez à la fin de Luna.",
         resolution: "",
@@ -164,7 +164,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_19",
         titleEn: "Through the Looking Glass",
-        titleFr: "",
+        titleFr: "K ; Fin",
         descriptionEn: "Saw K's ending in VLR.",
         descriptionFr: "Assistez à la fin de K.",
         resolution: "",
@@ -173,7 +173,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_20",
         titleEn: "Behind Blue Eyes",
-        titleFr: "",
+        titleFr: "Dio ; Fin",
         descriptionEn: "Saw Dio's ending in VLR.",
         descriptionFr: "Assistez à la fin de Dio.",
         resolution: "",
@@ -182,7 +182,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_21",
         titleEn: "In Root Beer Veritas",
-        titleFr: "",
+        titleFr: "Tenmyouji ; Fin",
         descriptionEn: "Saw Tenmyouji's ending in VLR.",
         descriptionFr: "Assistez à la fin de Tenmyouji.",
         resolution: "",
@@ -191,7 +191,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_22",
         titleEn: "An Equal and Opposite Reaction",
-        titleFr: "",
+        titleFr: "Quark ; Fin",
         descriptionEn: "Saw Quark's ending in VLR.",
         descriptionFr: "Assistez à la fin de Quark.",
         resolution: "",
@@ -200,7 +200,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_23",
         titleEn: "Secret Agent Woman",
-        titleFr: "",
+        titleFr: "Yotsuba ; Fin",
         descriptionEn: "Saw Clover's ending in VLR.",
         descriptionFr: "Assistez à la fin de Yotsuba.",
         resolution: "",
@@ -209,7 +209,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_24",
         titleEn: "Best Served Cold",
-        titleFr: "",
+        titleFr: "Alice ; Fin",
         descriptionEn: "Saw Alice's ending in VLR.",
         descriptionFr: "Assistez à la fin d’Alice.",
         resolution: "",
@@ -219,7 +219,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_25",
         titleEn: "Arms Race",
-        titleFr: "",
+        titleFr: "Sigma ; Fin",
         descriptionEn: "Saw Sigma's ending in VLR.",
         descriptionFr: "Assistez à la fin de Sigma.",
         resolution: "",
@@ -228,7 +228,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_26",
         titleEn: "Time After Time",
-        titleFr: "",
+        titleFr: "Phi ; Fin",
         descriptionEn: "Saw Phi's ending in VLR.",
         descriptionFr: "Assistez à la fin de Phi.",
         resolution: "",
@@ -237,7 +237,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_27",
         titleEn: "Fire and Ice",
-        titleFr: "",
+        titleFr: "Fin ou Commencement",
         descriptionEn: "Saw the end. Or maybe the beginning?",
         descriptionFr: "Assistez à la fin, ou peut-être au commencement ?",
         resolution: "",
@@ -246,7 +246,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_28",
         titleEn: "A Certain Point of View",
-        titleFr: "Un certain point de vue",
+        titleFr: "ROUTE ALTERNATIVE ; Fin",
         descriptionEn: "Caught a glimpse of another time.",
         descriptionFr: "Ayez un aperçu d’une route alternative",
         resolution: "",
@@ -255,7 +255,7 @@ export const achievements = [
     {
         id: "ACH_SKP2_29",
         titleEn: "That Wasn't Supposed to Happen",
-        titleFr: "Ce n’était pas censé arriver",
+        titleFr: "Un chemin funeste",
         descriptionEn: "Saw any of the bad endings.",
         descriptionFr: "Assistez à n’importe quels mauvaise fins",
         resolution: "",
