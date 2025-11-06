@@ -14,7 +14,7 @@ export default function PlatformIcons({ platforms = [] }) {
             <div key={idx} className="group relative">
               <img src={icon} alt={platform} className="h-6 w-6" />
               {/* Tooltip */}
-              <span className="absolute bottom-full left-1/2 mb-2 -translate-x-1/2 rounded bg-black px-2 py-1 text-xs whitespace-nowrap text-white opacity-0 transition group-hover:opacity-100">
+              <span className="bg-accent-tertiary text-text absolute bottom-full left-1/2 mb-2 -translate-x-1/2 rounded px-2 py-1 text-xs whitespace-nowrap opacity-0 transition group-hover:opacity-100">
                 {platform}
               </span>
             </div>

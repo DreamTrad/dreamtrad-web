@@ -13,7 +13,7 @@ export default function DiscoverCard({
   description,
 }) {
   return (
-    <div className="bg-bg-tertiary border-bg-secondary flex w-full max-w-6xl flex-col overflow-hidden rounded-2xl border shadow-lg">
+    <div className="bg-bg-tertiary border-hover-secondary flex w-full max-w-6xl flex-col overflow-hidden rounded-2xl border">
       {/* Header */}
       <div className="bg-bg-secondary px-6 py-3">
         <h3 className="text-accent text-2xl font-bold">{titre}</h3>
@@ -21,14 +21,14 @@ export default function DiscoverCard({
           {/* Durée */}
           {duree && (
             <span>
-              <span className="text-accent font-semibold">Durée :</span> {duree}
+              <span className="label-secondary">Durée :</span> {duree}
             </span>
           )}
 
           {/* Plateformes */}
           {plateforme.length > 0 && (
             <div className="flex items-center gap-2">
-              <span className="text-accent font-semibold">Plateformes :</span>
+              <span className="label-secondary">Plateformes :</span>
               <PlatformIcons platforms={plateforme} />
             </div>
           )}
@@ -36,7 +36,7 @@ export default function DiscoverCard({
           {/* Genres */}
           {genre.length > 0 && (
             <span>
-              <span className="text-accent font-semibold">Genres :</span>{" "}
+              <span className="label-secondary">Genres :</span>{" "}
               {genre.join(", ")}
             </span>
           )}
@@ -50,7 +50,7 @@ export default function DiscoverCard({
           <img
             src={image}
             alt={`Affiche de ${titre}`}
-            className="h-[400px] w-full rounded-md object-contain shadow-md"
+            className="h-[400px] w-full rounded-md object-contain"
           />
         </div>
 

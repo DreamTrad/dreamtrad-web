@@ -56,7 +56,7 @@ export default function LinkWithIcon({ url }) {
       <img src={selected.icon} alt={selected.label} className="h-5 w-5" />
 
       {/* Tooltip custom */}
-      <span className="absolute bottom-full left-1/2 mb-2 -translate-x-1/2 rounded bg-black px-2 py-1 text-xs whitespace-nowrap text-white opacity-0 transition group-hover:opacity-100">
+      <span className="absolute bottom-full left-1/2 mb-2 -translate-x-1/2 rounded bg-accent-tertiary px-2 py-1 text-xs whitespace-nowrap text-text opacity-0 transition group-hover:opacity-100">
         {selected.label}
       </span>
     </a>

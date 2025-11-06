@@ -76,19 +76,19 @@ export default function PasswordGate({
           className="mb-3 w-full rounded-md p-2 text-white"
         />
 
-        {error && <div className="mb-3 text-sm text-red-500">{error}</div>}
+        {error && <div className="text-error mb-3 text-sm">{error}</div>}
 
         <div className="flex gap-2">
           <button
             type="submit"
-            className="bg-accent flex-1 rounded-md px-4 py-2 text-white hover:opacity-90"
+            className="bg-accent text-text flex-1 rounded-md px-4 py-2 hover:opacity-90"
           >
             Entrer
           </button>
           <button
             type="button"
             onClick={() => setPassword("")}
-            className="border-bg-primary rounded-md border px-4 py-2 text-white"
+            className="border-bg-primary text-text rounded-md border px-4 py-2"
           >
             Effacer
           </button>

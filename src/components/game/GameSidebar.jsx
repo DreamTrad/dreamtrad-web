@@ -37,7 +37,7 @@ export default function GameSidebar() {
               end
               className={({ isActive }) =>
                 `block rounded-md px-4 py-2 transition ${
-                  isActive ? "bg-hover text-white" : "hover:bg-hover/70"
+                  isActive ? "bg-hover text-text" : "hover:bg-hover-secondary"
                 }`
               }
             >
@@ -59,7 +59,7 @@ function CollapsibleSection({ item, baseTo }) {
       {/* bouton pour expand/collapse */}
       <button
         onClick={() => setOpen(!open)}
-        className="hover:bg-hover/70 flex w-full items-center justify-between rounded-md px-4 py-2"
+        className="hover:bg-hover-secondary flex w-full items-center justify-between rounded-md px-4 py-2"
       >
         <span>{item.name}</span>
         <span className="text-sm">{open ? "▾" : "▸"}</span>
@@ -75,7 +75,7 @@ function CollapsibleSection({ item, baseTo }) {
                 end
                 className={({ isActive }) =>
                   `block rounded-md px-3 py-1 text-sm transition ${
-                    isActive ? "bg-hover text-white" : "hover:bg-hover/50"
+                    isActive ? "bg-hover text-text" : "hover:bg-hover-tertiary"
                   }`
                 }
               >

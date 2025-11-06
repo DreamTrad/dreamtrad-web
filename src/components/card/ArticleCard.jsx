@@ -12,7 +12,7 @@ export default function ArticleCard({
   return (
     <Link
       to={`/articles/${id}`}
-      className="bg-bg-tertiary border-bg-secondary flex flex-col overflow-hidden rounded-lg border shadow-md transition-shadow hover:shadow-xl"
+      className="bg-bg-tertiary border-hover-tertiary flex flex-col overflow-hidden rounded-lg border shadow-md transition-shadow hover:shadow-xl"
     >
       {/* Image */}
       {coverImage && (
@@ -26,10 +26,10 @@ export default function ArticleCard({
       {/* Infos */}
       <div className="flex flex-grow flex-col gap-2 p-4">
         <h2 className="text-accent text-xl font-bold">{title}</h2>
-        <p className="text-text-tertiary text-sm">
+        <p className="text-text text-sm">
           {author} — {new Date(date).toLocaleDateString("fr-FR")}
         </p>
-        {excerpt && <p className="flex-grow text-sm">{excerpt}</p>}
+        {excerpt && <p className="text-text flex-grow text-sm">{excerpt}</p>}
 
         {/* Tags */}
         {tags?.length > 0 && (
@@ -37,7 +37,7 @@ export default function ArticleCard({
             {tags.map((tag, idx) => (
               <span
                 key={idx}
-                className="bg-bg-secondary rounded px-2 py-1 text-xs"
+                className="bg-bg-secondary text-text-secondary rounded px-2 py-1 text-xs"
               >
                 #{tag}
               </span>

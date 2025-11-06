@@ -8,7 +8,7 @@
 
   --color-text: #E0E0E0;
   --color-text-secondary: #A0A0A0;
-  ---color-text-tertiary: #707070;
+  --color-text-tertiary: #707070;
 
   --color-accent: #CBD51C;
   --color-accent-secondary: #FFB808;
@@ -18,9 +18,17 @@
   --color-hover-secondary: #383838;
   --color-hover-tertiary: #454545;
 
-  --color-border: #2A2A2A;
-  --color-error: #EF4444;
+  --color-info: #2A2A2A;
   --color-success: #22C55E;
+  --color-warning: #EF4444;
+  --color-error: #EF4444;
+}
+
+@layer components {
+  .label-secondary {
+    @apply text-accent-secondary font-semibold;
+  }
 }
 
 @custom-variant menu (@media (width >=70rem))
+

@@ -76,7 +76,7 @@ export default function ContactPage() {
           />
           <button
             type="submit"
-            className="bg-accent hover:bg-accent/80 mt-2 rounded-lg px-4 py-2 text-white"
+            className="bg-accent hover:bg-accent/80 mt-2 rounded-lg px-4 py-2 text-text"
           >
             Envoyer
           </button>

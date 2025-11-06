@@ -22,7 +22,7 @@ function Spoiler({ title = "spoiler", children }) {
     <div className="my-2">
       <button
         onClick={() => setOpen(!open)}
-        className="bg-accent rounded-md px-2 py-1 text-sm text-white"
+        className="bg-accent text-text rounded-md px-2 py-1 text-sm"
       >
         {open ? `Cacher ${title}` : `Montrer ${title}`}
       </button>

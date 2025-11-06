@@ -31,7 +31,7 @@ function MultiDropdown({ label, options, selected, setSelected }) {
     <div className="relative" ref={ref}>
       <button
         type="button"
-        className="w-48 rounded-xl border border-gray-300 bg-white p-2 text-left text-black"
+        className="border-hover-tertiary bg-bg-tertiary text-text-tertiary w-48 rounded-xl border p-2 text-left"
         onClick={() => setOpen((o) => !o)}
       >
         {selected.length > 0 ? selected.join(", ") : label}
@@ -162,7 +162,7 @@ export default function DiscoverPage() {
   });
 
   if (loading) return <LoaderOverlay />; // Loader local sur la zone
-  if (error) return <p className="text-center text-red-500">{error.message}</p>;
+  if (error) return <p className="text-error text-center">{error.message}</p>;
 
   return (
     <>
@@ -186,7 +186,7 @@ export default function DiscoverPage() {
           <input
             type="text"
             placeholder="Rechercher par nom..."
-            className="rounded-xl border border-gray-300 bg-white p-2 text-black"
+            className="border-hover-tertiary bg-bg-tertiary text-text-tertiary rounded-xl border p-2"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -206,7 +206,7 @@ export default function DiscoverPage() {
           />
 
           <select
-            className="rounded-xl border border-gray-300 bg-white p-2 text-black"
+            className="border-hover-tertiary bg-bg-tertiary text-text-tertiary rounded-xl border p-2"
             value={traductionFilter}
             onChange={(e) => setTraductionFilter(e.target.value)}
           >
@@ -216,7 +216,7 @@ export default function DiscoverPage() {
           </select>
 
           <select
-            className="rounded-xl border border-gray-300 bg-white p-2 text-black"
+            className="border-hover-tertiary bg-bg-tertiary text-text-tertiary rounded-xl border p-2"
             value={sortOption}
             onChange={(e) => setSortOption(e.target.value)}
           >
