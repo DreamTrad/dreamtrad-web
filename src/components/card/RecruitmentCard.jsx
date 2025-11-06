@@ -9,29 +9,29 @@ export default function RecruitmentCard({
   description,
 }) {
   return (
-    <div className="bg-bg-tertiary rounded-2xl shadow-lg overflow-hidden border border-bg-secondary flex flex-col w-full max-w-7xl">
+    <div className="bg-bg-tertiary border-bg-secondary flex w-full max-w-7xl flex-col overflow-hidden rounded-2xl border shadow-lg">
       {/* Title */}
       <div className="bg-bg-secondary px-6 py-3">
-        <h3 className="text-xl font-bold text-accent">{title}</h3>
+        <h3 className="text-accent text-xl font-bold">{title}</h3>
       </div>
 
       {/* Middle: image + roles */}
-      <div className="flex flex-col md:flex-row p-6 gap-6">
+      <div className="flex flex-col gap-6 p-6 md:flex-row">
         {/* Image */}
-        <div className="flex-shrink-0 w-40 h-56">
+        <div className="h-56 w-40 flex-shrink-0">
           <img
             src={image}
             alt={`Affiche de ${title}`}
-            className="w-full h-full object-cover rounded-md shadow-md"
+            className="h-full w-full rounded-md object-cover shadow-md"
           />
         </div>
 
         {/* Rôles / contenu */}
         {/* Rôles / contenu */}
-        <div className="flex-1 bg-bg-secondary rounded-md p-4">
-          <h4 className="text-lg font-semibold mb-2">Nous recrutons :</h4>
-          <div className="flex items-center h-40">
-            <ul className="list-disc list-inside space-y-5 text-text-secondary">
+        <div className="bg-bg-secondary flex-1 rounded-md p-4">
+          <h4 className="mb-2 text-lg font-semibold">Nous recrutons :</h4>
+          <div className="flex h-40 items-center">
+            <ul className="text-text-secondary list-inside list-disc space-y-5">
               {roles.map((role, idx) => (
                 <li key={idx}>{role}</li>
               ))}
@@ -42,8 +42,8 @@ export default function RecruitmentCard({
 
       {/* Contact */}
       {contact && (
-        <div className="bg-bg-secondary px-4 py-2 text-text-secondary text-sm">
-          <span className="font-semibold text-accent">
+        <div className="bg-bg-secondary text-text-secondary px-4 py-2 text-sm">
+          <span className="text-accent font-semibold">
             Contact du projet sur Discord :
           </span>{" "}
           {contact}
@@ -51,10 +51,10 @@ export default function RecruitmentCard({
       )}
 
       {/* Description */}
-      <div className="bg-bg-secondary p-4 rounded-b-2xl flex-grow">
+      <div className="bg-bg-secondary flex-grow rounded-b-2xl p-4">
         <MarkdownSection
           content={description}
-          className="text-sm text-text-secondary leading-relaxed text-justify"
+          className="text-text-secondary text-justify text-sm leading-relaxed"
         />
       </div>
     </div>

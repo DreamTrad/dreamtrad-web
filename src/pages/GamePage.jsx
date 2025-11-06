@@ -133,19 +133,19 @@ export default function GamePage() {
   return (
     <>
       <GameHeader game={game} />
-      <div className="flex flex-col min-h-screen">
+      <div className="flex min-h-screen flex-col">
         <GameNavBar />
         <div className="flex flex-1">
           {/* Sidebar */}
           <aside
-            className={`relative bg-bg-tertiary text-text-secondary border-r border-bg-secondary transition-all duration-300 ${
+            className={`bg-bg-tertiary text-text-secondary border-bg-secondary relative border-r transition-all duration-300 ${
               sidebarOpen ? "w-64 p-4" : "w-4"
             }`}
           >
             {/* Collapse toggle button collé à la bordure */}
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="absolute top-4 right-0 translate-x-1/2 bg-bg-secondary rounded-full p-1 shadow-md hover:bg-hover"
+              className="bg-bg-secondary hover:bg-hover absolute top-4 right-0 translate-x-1/2 rounded-full p-1 shadow-md"
             >
               {sidebarOpen ? "←" : "→"}
             </button>
@@ -208,7 +208,7 @@ export default function GamePage() {
                                   catKey,
                                   game.name,
                                   game.id,
-                                  child
+                                  child,
                                 )}
                               />
                             ))}
@@ -225,7 +225,7 @@ export default function GamePage() {
                             section,
                             catKey,
                             game.name,
-                            game.id
+                            game.id,
                           )}
                         />
                       );

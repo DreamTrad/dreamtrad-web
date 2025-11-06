@@ -16,24 +16,20 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-bg-secondary text-text-secondary relative h-16 flex items-center">
-      <nav className="flex items-center justify-center w-full relative h-full">
-
+    <header className="bg-bg-secondary text-text-secondary relative flex h-16 items-center">
+      <nav className="relative flex h-full w-full items-center justify-center">
         {/* Logo + titre à gauche */}
-        <Link
-          to="/"
-          className="absolute left-4 flex items-center gap-2 h-full"
-        >
+        <Link to="/" className="absolute left-4 flex h-full items-center gap-2">
           <img
             src="/assets/dreamtrad-logo.png"
             alt="Logo DreamTrad"
             className="h-10 w-10 object-contain"
           />
-          <span className="text-xl font-bold text-accent">DreamTrad</span>
+          <span className="text-accent text-xl font-bold">DreamTrad</span>
         </Link>
 
         {/* Menu desktop centré */}
-        <ul className="hidden menu:flex gap-6 justify-center max-w-6xl mx-auto h-full items-center">
+        <ul className="menu:flex mx-auto hidden h-full max-w-6xl items-center justify-center gap-6">
           {mainMenu.map((item) => (
             <li key={item.name}>
               <NavLink to={item.to}>{item.name}</NavLink>
@@ -44,7 +40,7 @@ export default function Header() {
         {/* Burger menu */}
         <button
           onClick={() => setOpen(!open)}
-          className="absolute right-4 menu:hidden px-4 py-2 text-2xl rounded-md transition hover:bg-hover-secondary"
+          className="menu:hidden hover:bg-hover-secondary absolute right-4 rounded-md px-4 py-2 text-2xl transition"
         >
           ☰
         </button>
@@ -52,14 +48,10 @@ export default function Header() {
 
       {/* Menu mobile */}
       {open && (
-        <ul className="absolute top-full left-0 w-full bg-bg-tertiary shadow-lg z-50 flex flex-col">
+        <ul className="bg-bg-tertiary absolute top-full left-0 z-50 flex w-full flex-col shadow-lg">
           {mainMenu.map((item) => (
             <li key={item.name}>
-              <NavLink
-                to={item.to}
-                onClick={() => setOpen(false)}
-                fullWidth
-              >
+              <NavLink to={item.to} onClick={() => setOpen(false)} fullWidth>
                 {item.name}
               </NavLink>
             </li>

@@ -9,12 +9,12 @@ export default function PlateformsTabs({ gameId, platforms }) {
   return (
     <div>
       {/* Tabs header */}
-      <div className="flex space-x-2 border-b border-bg-secondary mb-4">
+      <div className="border-bg-secondary mb-4 flex space-x-2 border-b">
         {platforms.map((p) => (
           <button
             key={p.id}
             onClick={() => setActive(p.id)}
-            className={`px-4 py-2 rounded-t-md transition ${
+            className={`rounded-t-md px-4 py-2 transition ${
               active === p.id
                 ? "bg-bg-tertiary text-accent"
                 : "bg-bg-secondary text-text-secondary hover:bg-hover-secondary"

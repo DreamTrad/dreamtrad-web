@@ -2,16 +2,16 @@
 @plugin "@tailwindcss/typography";
 
 @theme static {
-  --color-bg: #121212;
-  --color-bg-secondary: #1E1E1E;
-  --color-bg-tertiary: #242424;
+  --color-bg: #0A2939;
+  --color-bg-secondary: #1C6B82;
+  --color-bg-tertiary: #2897A7;
 
   --color-text: #E0E0E0;
   --color-text-secondary: #A0A0A0;
   ---color-text-tertiary: #707070;
 
-  --color-accent: #6366F1;
-  --color-accent-secondary: #06B6D4;
+  --color-accent: #CBD51C;
+  --color-accent-secondary: #FFB808;
   --color-accent-tertiary: #8B5CF6;
 
   --color-hover: #2D2D2D;
@@ -23,4 +23,4 @@
   --color-success: #22C55E;
 }
 
-@custom-variant menu (@media (width >= 70rem))
+@custom-variant menu (@media (width >=70rem))

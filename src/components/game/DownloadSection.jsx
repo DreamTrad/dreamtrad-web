@@ -6,7 +6,7 @@ export default function DownloadSection({ gameId, file, platforms }) {
     <div className="space-y-16">
       {file && <MarkdownSection gameId={gameId} file={file} />}
 
-      <div className="grid gap-10 justify-center">
+      <div className="grid justify-center gap-10">
         {platforms.map((p) => (
           <DownloadButton
             className="w-full max-w-md"

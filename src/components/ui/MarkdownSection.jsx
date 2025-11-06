@@ -11,7 +11,7 @@ import MetaTags from "../MetaTags";
 // -------- Markdown imports --------
 const allMarkdown = import.meta.glob(
   ["../../data/jeu/**/*.md", "../../data/*.md"],
-  { query: "?raw", import: "default" }
+  { query: "?raw", import: "default" },
 );
 
 // -------- Custom components --------
@@ -22,12 +22,12 @@ function Spoiler({ title = "spoiler", children }) {
     <div className="my-2">
       <button
         onClick={() => setOpen(!open)}
-        className="px-2 py-1 bg-accent text-white rounded-md text-sm"
+        className="bg-accent rounded-md px-2 py-1 text-sm text-white"
       >
         {open ? `Cacher ${title}` : `Montrer ${title}`}
       </button>
       {open && (
-        <div className="mt-2 p-2 border rounded-md bg-neutral-800">
+        <div className="mt-2 rounded-md border bg-neutral-800 p-2">
           {children}
         </div>
       )}
@@ -97,7 +97,7 @@ export default function MarkdownSection({
     const handleContent = (text) => {
       const { description, body } = extractMetadata(text);
       const title = extractFirstTitle(body);
-      const image = `/assets/jeu/${gameId}/cover.webp`
+      const image = `/assets/jeu/${gameId}/cover.webp`;
 
       setMeta({ title, description, image });
       setContent(body);
@@ -149,10 +149,10 @@ export default function MarkdownSection({
           rehypePlugins={[rehypeRaw]}
           components={{
             iframe: ({ node, ...props }) => (
-              <div className="my-4 relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-lg">
+              <div className="relative my-4 h-0 overflow-hidden rounded-lg pb-[56.25%] shadow-lg">
                 <iframe
                   {...props}
-                  className="absolute top-0 left-0 w-full h-full"
+                  className="absolute top-0 left-0 h-full w-full"
                   allowFullScreen
                 />
               </div>

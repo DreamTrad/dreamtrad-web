@@ -20,8 +20,8 @@ export default function NavLink({
       {...props}
       className={`transition ${hoverClass} ${
         fullWidth
-          ? "block w-full px-4 py-2 rounded-md"
-          : "inline-block px-4 py-2 rounded-md"
+          ? "block w-full rounded-md px-4 py-2"
+          : "inline-block rounded-md px-4 py-2"
       } ${className}`}
     >
       {children}

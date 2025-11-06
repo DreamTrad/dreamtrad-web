@@ -13,7 +13,7 @@ export default function GameNavBar() {
 
   return (
     <nav className="bg-accent text-light">
-      <ul className="flex justify-center max-w-6xl mx-auto">
+      <ul className="mx-auto flex max-w-6xl justify-center">
         {Object.entries(game.categories).map(([key, category]) => {
           let to = `/jeu/${id}/${key}`;
           let end = false;

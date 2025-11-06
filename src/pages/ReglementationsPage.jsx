@@ -18,7 +18,7 @@ export default function ReglementationsPage() {
     legalMarkdown[fileKey]()
       .then((text) => setContent(text))
       .catch((err) =>
-        console.error("Erreur chargement mentions légales :", err)
+        console.error("Erreur chargement mentions légales :", err),
       );
   }, []);
 
@@ -29,7 +29,7 @@ export default function ReglementationsPage() {
         description="Mentions légales du site."
         url="mentions-legales"
       />
-      <div className="p-8 max-w-4xl mx-auto bg-bg-tertiary border border-bg-secondary rounded-xl shadow-md">
+      <div className="bg-bg-tertiary border-bg-secondary mx-auto max-w-4xl rounded-xl border p-8 shadow-md">
         <MarkdownSection content={content} />
       </div>
     </>

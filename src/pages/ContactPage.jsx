@@ -26,7 +26,7 @@ export default function ContactPage() {
         "service_ojinfwk", // ID de service
         "template_wgl7rth", // ID du template
         templateParams, // variables envoyées
-        "4XQDzQMfhKf5nKZW9" // clé publique
+        "4XQDzQMfhKf5nKZW9", // clé publique
       )
       .then(() => setStatus("Message envoyé"))
       .catch(() => setStatus("Erreur, réessayez plus tard"));
@@ -39,13 +39,13 @@ export default function ContactPage() {
         description="Envoyer nous un mail si vous avez une question ou un problème. Vous pouvez passer par nos autres réseaux aussi."
         url="contact"
       />
-      <div className="max-w-2xl mx-auto p-6 bg-bg-tertiary rounded-xl shadow-lg text-text">
-        <h1 className="text-2xl font-bold mb-4">Contactez-nous</h1>
+      <div className="bg-bg-tertiary text-text mx-auto max-w-2xl rounded-xl p-6 shadow-lg">
+        <h1 className="mb-4 text-2xl font-bold">Contactez-nous</h1>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Nom"
-            className="w-full p-2 rounded-md bg-bg-secondary mb-2"
+            className="bg-bg-secondary mb-2 w-full rounded-md p-2"
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
             required
@@ -53,7 +53,7 @@ export default function ContactPage() {
           <input
             type="email"
             placeholder="Email"
-            className="w-full p-2 rounded-md bg-bg-secondary mb-2"
+            className="bg-bg-secondary mb-2 w-full rounded-md p-2"
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
             required
@@ -61,7 +61,7 @@ export default function ContactPage() {
           <input
             type="text"
             placeholder="Sujet du mail"
-            className="w-full p-2 rounded-md bg-bg-secondary mb-2"
+            className="bg-bg-secondary mb-2 w-full rounded-md p-2"
             value={form.title}
             onChange={(e) => setForm({ ...form, title: e.target.value })}
             required
@@ -69,14 +69,14 @@ export default function ContactPage() {
           <textarea
             placeholder="Message"
             rows="5"
-            className="w-full p-2 rounded-md bg-bg-secondary mb-2"
+            className="bg-bg-secondary mb-2 w-full rounded-md p-2"
             value={form.message}
             onChange={(e) => setForm({ ...form, message: e.target.value })}
             required
           />
           <button
             type="submit"
-            className="mt-2 px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent/80"
+            className="bg-accent hover:bg-accent/80 mt-2 rounded-lg px-4 py-2 text-white"
           >
             Envoyer
           </button>

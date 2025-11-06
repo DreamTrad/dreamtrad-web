@@ -13,7 +13,7 @@ export default function AchievementsSection({ sectionData, gameId }) {
     <div className="flex flex-col gap-4">
       {!revealAll && (
         <button
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 self-start"
+          className="self-start rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
           onClick={handleRevealAll}
         >
           Révéler tous les succès cachés
@@ -29,7 +29,7 @@ export default function AchievementsSection({ sectionData, gameId }) {
             titleFr={succ.titleFr}
             description={succ.descriptionFr}
             resolution={succ.resolution}
-            hidden={succ.hidden && !revealAll}
+            hidden={succ.hidden && !revealAll}
           />
         ))}
       </div>

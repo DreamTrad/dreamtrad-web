@@ -36,7 +36,7 @@ export default function GameSidebar() {
               to={to}
               end
               className={({ isActive }) =>
-                `block px-4 py-2 rounded-md transition ${
+                `block rounded-md px-4 py-2 transition ${
                   isActive ? "bg-hover text-white" : "hover:bg-hover/70"
                 }`
               }
@@ -59,7 +59,7 @@ function CollapsibleSection({ item, baseTo }) {
       {/* bouton pour expand/collapse */}
       <button
         onClick={() => setOpen(!open)}
-        className="flex justify-between items-center w-full px-4 py-2 rounded-md hover:bg-hover/70"
+        className="hover:bg-hover/70 flex w-full items-center justify-between rounded-md px-4 py-2"
       >
         <span>{item.name}</span>
         <span className="text-sm">{open ? "▾" : "▸"}</span>
@@ -67,14 +67,14 @@ function CollapsibleSection({ item, baseTo }) {
 
       {/* enfants affichés uniquement si open */}
       {open && (
-        <ul className="ml-4 mt-1 space-y-1">
+        <ul className="mt-1 ml-4 space-y-1">
           {item.children.map((child, idx) => (
             <li key={idx}>
               <NavLink
                 to={`${baseTo}/${child.id}`}
                 end
                 className={({ isActive }) =>
-                  `block px-3 py-1 rounded-md text-sm transition ${
+                  `block rounded-md px-3 py-1 text-sm transition ${
                     isActive ? "bg-hover text-white" : "hover:bg-hover/50"
                   }`
                 }

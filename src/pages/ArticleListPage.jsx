@@ -19,12 +19,12 @@ export default function ArticleListPage() {
         description="Articles sur nos projets, sur la traduction, ou sur les visual Novel"
         url="articles"
       />
-      <div className="p-8 max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold text-accent mb-8 text-center">
+      <div className="mx-auto max-w-6xl p-8">
+        <h1 className="text-accent mb-8 text-center text-3xl font-bold">
           Nos Articles
         </h1>
 
-        <div className="grid gap-8 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
           {articles.map((article) => (
             <ArticleCard key={article.id} {...article} />
           ))}

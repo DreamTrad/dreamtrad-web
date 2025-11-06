@@ -13,12 +13,7 @@ export default function DownloadButton({
     <a
       href={href}
       {...targetProps}
-      className={`inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3
-                  font-medium transition focus:outline-none focus:ring-2 focus:ring-offset-2
-                  focus:ring-offset-bg-secondary focus:ring-accent
-                  bg-accent text-white hover:bg-hover-secondary active:scale-[0.99]
-                  ${fullWidth ? "w-full max-w-md" : "w-64"}
-                  ${className}`}
+      className={`focus:ring-offset-bg-secondary focus:ring-accent bg-accent hover:bg-hover-secondary inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-medium text-white transition focus:ring-2 focus:ring-offset-2 focus:outline-none active:scale-[0.99] ${fullWidth ? "w-full max-w-md" : "w-64"} ${className}`}
     >
       {/* Download icon */}
       <svg

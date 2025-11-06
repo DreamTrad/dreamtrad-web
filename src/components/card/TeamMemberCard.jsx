@@ -10,25 +10,25 @@ export default function TeamMemberCard({
   links,
 }) {
   return (
-    <div className="bg-bg-tertiary border border-bg-secondary rounded-xl shadow-md overflow-hidden p-6 flex flex-col gap-6">
+    <div className="bg-bg-tertiary border-bg-secondary flex flex-col gap-6 overflow-hidden rounded-xl border p-6 shadow-md">
       {/* Header */}
       <div className="flex items-center justify-between gap-4">
         {/* Avatar + Infos */}
-        <div className="flex items-center gap-4 flex-1">
+        <div className="flex flex-1 items-center gap-4">
           <img
             src={avatar}
             alt={name}
-            className="w-20 h-20 object-cover rounded-lg border border-bg-secondary"
+            className="border-bg-secondary h-20 w-20 rounded-lg border object-cover"
           />
           <div>
-            <h2 className="text-xl font-bold text-accent">{name}</h2>
+            <h2 className="text-accent text-xl font-bold">{name}</h2>
             {/* Compétences */}
             {skills?.length > 0 && (
-              <div className="flex flex-wrap gap-2 mt-1">
+              <div className="mt-1 flex flex-wrap gap-2">
                 {skills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="bg-bg-secondary text-text-secondary text-xs px-2 py-1 rounded-md"
+                    className="bg-bg-secondary text-text-secondary rounded-md px-2 py-1 text-xs"
                   >
                     {skill}
                   </span>
@@ -49,15 +49,14 @@ export default function TeamMemberCard({
       </div>
 
       {/* Body */}
-      <div className="flex flex-col md:flex-row gap-6 flex-grow">
-
+      <div className="flex flex-grow flex-col gap-6 md:flex-row">
         {/* Projets */}
         {projects?.length > 0 && (
-          <div className="w-full bg-bg-secondary rounded-md p-4">
-            <h3 className="text-sm font-semibold text-accent mb-2">
+          <div className="bg-bg-secondary w-full rounded-md p-4">
+            <h3 className="text-accent mb-2 text-sm font-semibold">
               Projets :
             </h3>
-            <ul className="list-disc list-inside text-sm text-text-secondary space-y-1">
+            <ul className="text-text-secondary list-inside list-disc space-y-1 text-sm">
               {projects.map((proj, idx) => (
                 <li key={idx}>{proj}</li>
               ))}

@@ -1,9 +1,4 @@
-export default function ProjectProgressCard({
-  title,
-  image,
-  progress,
-}) {
-
+export default function ProjectProgressCard({ title, image, progress }) {
   const bars = [
     { label: "Traduction", value: progress.traduction },
     { label: "Images", value: progress.images },
@@ -12,16 +7,16 @@ export default function ProjectProgressCard({
   ];
 
   return (
-    <div className="flex items-start bg-bg-secondary p-6 rounded-xl shadow-lg">
+    <div className="bg-bg-secondary flex items-start rounded-xl p-6 shadow-lg">
       {/* Image alignée avec les barres */}
-      <div className="flex-shrink-0 w-32 h-full overflow-hidden rounded-md mr-6">
+      <div className="mr-6 h-full w-32 flex-shrink-0 overflow-hidden rounded-md">
         <img src={image} alt={title} className="h-full w-auto object-cover" />
       </div>
 
       {/* Contenu */}
       <div className="flex-1">
         {/* Header avec titre + recrutement */}
-        <div className="flex justify-between items-center mb-4">
+        <div className="mb-4 flex items-center justify-between">
           <h3 className="text-2xl font-bold">{title}</h3>
         </div>
 
@@ -29,13 +24,13 @@ export default function ProjectProgressCard({
         <div className="space-y-3">
           {bars.map((bar) => (
             <div key={bar.label}>
-              <div className="flex justify-between mb-1 text-sm">
+              <div className="mb-1 flex justify-between text-sm">
                 <span>{bar.label}</span>
                 <span>{bar.value}%</span>
               </div>
-              <div className="relative w-full h-4 bg-bg-tertiary rounded-md overflow-hidden">
+              <div className="bg-bg-tertiary relative h-4 w-full overflow-hidden rounded-md">
                 <div
-                  className="absolute left-0 top-0 h-full bg-accent"
+                  className="bg-accent absolute top-0 left-0 h-full"
                   style={{ width: `${bar.value}%` }}
                 />
               </div>

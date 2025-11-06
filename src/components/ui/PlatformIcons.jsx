@@ -1,34 +1,27 @@
 export default function PlatformIcons({ platforms = [] }) {
   return (
-    <div className="flex gap-2 items-center mt-2">
+    <div className="mt-2 flex items-center gap-2">
       {platforms.map((platform, idx) => {
         const normalized = platform.toLowerCase();
 
         try {
           const icon = new URL(
             `../../assets/icons/platforms/${normalized}.svg`,
-            import.meta.url
+            import.meta.url,
           ).href;
 
           return (
-            <div key={idx} className="relative group">
-              <img
-                src={icon}
-                alt={platform}
-                className="w-6 h-6"
-              />
+            <div key={idx} className="group relative">
+              <img src={icon} alt={platform} className="h-6 w-6" />
               {/* Tooltip */}
-              <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2
-                               opacity-0 group-hover:opacity-100
-                               bg-black text-white text-xs rounded px-2 py-1
-                               whitespace-nowrap transition">
+              <span className="absolute bottom-full left-1/2 mb-2 -translate-x-1/2 rounded bg-black px-2 py-1 text-xs whitespace-nowrap text-white opacity-0 transition group-hover:opacity-100">
                 {platform}
               </span>
             </div>
           );
         } catch {
           return (
-            <span key={idx} className="text-sm text-text-secondary">
+            <span key={idx} className="text-text-secondary text-sm">
               {platform}
             </span>
           );

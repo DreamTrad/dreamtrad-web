@@ -57,42 +57,38 @@ export default function PasswordGate({
   }
 
   if (accessGranted) {
-    return (
-      <>
-        {children}
-      </>
-    );
+    return <>{children}</>;
   }
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-bg-primary z-50">
+    <div className="bg-bg-primary fixed inset-0 z-50 flex items-center justify-center">
       <form
         onSubmit={handleSubmit}
-        className="bg-bg-secondary p-6 rounded-2xl shadow-lg w-full max-w-sm"
+        className="bg-bg-secondary w-full max-w-sm rounded-2xl p-6 shadow-lg"
       >
-        <h1 className="text-xl font-bold mb-4 text-accent">Accès restreint</h1>
+        <h1 className="text-accent mb-4 text-xl font-bold">Accès restreint</h1>
 
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Mot de passe"
-          className="w-full p-2 rounded-md mb-3 text-white"
+          className="mb-3 w-full rounded-md p-2 text-white"
         />
 
-        {error && <div className="text-red-500 mb-3 text-sm">{error}</div>}
+        {error && <div className="mb-3 text-sm text-red-500">{error}</div>}
 
         <div className="flex gap-2">
           <button
             type="submit"
-            className="flex-1 bg-accent text-white px-4 py-2 rounded-md hover:opacity-90"
+            className="bg-accent flex-1 rounded-md px-4 py-2 text-white hover:opacity-90"
           >
             Entrer
           </button>
           <button
             type="button"
             onClick={() => setPassword("")}
-            className="px-4 py-2 rounded-md border border-bg-primary text-white"
+            className="border-bg-primary rounded-md border px-4 py-2 text-white"
           >
             Effacer
           </button>

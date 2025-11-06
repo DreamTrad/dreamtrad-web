@@ -6,18 +6,16 @@ import xitterIcon from "../../assets/icons/website/xitter.svg";
 export default function Footer() {
   return (
     <footer className="bg-bg-secondary text-text-secondary">
-      <div className="max-w-6xl mx-auto px-6 py-10 grid gap-8 grid-cols-1 md:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 py-10 md:grid-cols-3">
         {/* Colonne 1 - Logo + description */}
         <div>
-          <h2 className="text-xl font-bold text-accent mb-3">DreamTrad</h2>
-          <p className="text-sm leading-relaxed">
-            Traduction de Visual Novel.
-          </p>
+          <h2 className="text-accent mb-3 text-xl font-bold">DreamTrad</h2>
+          <p className="text-sm leading-relaxed">Traduction de Visual Novel.</p>
         </div>
 
         {/* Colonne 2 - Navigation */}
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">
+          <h3 className="text-accent mb-3 text-sm font-semibold tracking-wide uppercase">
             Navigation
           </h3>
           <ul className="grid grid-cols-2 gap-2 text-sm">
@@ -61,7 +59,7 @@ export default function Footer() {
 
         {/* Colonne 3 - Réseaux */}
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-accent mb-3">
+          <h3 className="text-accent mb-3 text-sm font-semibold tracking-wide uppercase">
             Nous suivre
           </h3>
           <div className="flex gap-4">
@@ -69,7 +67,7 @@ export default function Footer() {
               <img
                 src={discordIcon}
                 alt="Discord"
-                className="w-6 h-6 hover:opacity-80"
+                className="h-6 w-6 hover:opacity-80"
               />
             </a>
             <a
@@ -80,7 +78,7 @@ export default function Footer() {
               <img
                 src={githubIcon}
                 alt="GitHub"
-                className="w-6 h-6 hover:opacity-80"
+                className="h-6 w-6 hover:opacity-80"
               />
             </a>
             <a
@@ -91,7 +89,7 @@ export default function Footer() {
               <img
                 src={xitterIcon}
                 alt="X/Twitter"
-                className="w-6 h-6 hover:opacity-80"
+                className="h-6 w-6 hover:opacity-80"
               />
             </a>
           </div>
@@ -99,7 +97,7 @@ export default function Footer() {
       </div>
 
       {/* Bas de page */}
-      <div className="border-t border-bg-tertiary py-4 text-xs flex justify-center items-center gap-6">
+      <div className="border-bg-tertiary flex items-center justify-center gap-6 border-t py-4 text-xs">
         <span>{new Date().getFullYear()} DreamTrad</span>
 
         <Link to="/mentions-legales" className="hover:text-accent transition">

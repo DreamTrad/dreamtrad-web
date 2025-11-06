@@ -16,26 +16,26 @@ import PasswordGate from "./components/PasswordGate";
 function App() {
   return (
     <PasswordGate>
-    <div className="flex flex-col min-h-screen bg-bg text-text">
-      <Header />
+      <div className="bg-bg text-text flex min-h-screen flex-col">
+        <Header />
 
-      <main className="flex-1">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/jeux" element={<GamesListPage />} />
-          <Route path="/jeu/:id/*" element={<GamePage />} />
-          <Route path="/recrutement" element={<RecruitmentPage />} />
-          <Route path="/articles" element={<ArticleListPage />} />
-          <Route path="/articles/:id" element={<ArticlePage />} />
-          <Route path="/decouvrir" element={<DiscoverPage />} />
-          <Route path="/equipe" element={<TeamPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/mentions-legales" element={<ReglementationsPage />} />
-        </Routes>
-      </main>
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/jeux" element={<GamesListPage />} />
+            <Route path="/jeu/:id/*" element={<GamePage />} />
+            <Route path="/recrutement" element={<RecruitmentPage />} />
+            <Route path="/articles" element={<ArticleListPage />} />
+            <Route path="/articles/:id" element={<ArticlePage />} />
+            <Route path="/decouvrir" element={<DiscoverPage />} />
+            <Route path="/equipe" element={<TeamPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/mentions-legales" element={<ReglementationsPage />} />
+          </Routes>
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
     </PasswordGate>
   );
 }

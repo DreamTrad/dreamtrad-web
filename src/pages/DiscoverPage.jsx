@@ -14,7 +14,7 @@ function MultiDropdown({ label, options, selected, setSelected }) {
 
   const toggleItem = (item) => {
     setSelected((prev) =>
-      prev.includes(item) ? prev.filter((i) => i !== item) : [...prev, item]
+      prev.includes(item) ? prev.filter((i) => i !== item) : [...prev, item],
     );
   };
 
@@ -31,17 +31,17 @@ function MultiDropdown({ label, options, selected, setSelected }) {
     <div className="relative" ref={ref}>
       <button
         type="button"
-        className="p-2 rounded-xl border border-gray-300 bg-white text-black w-48 text-left"
+        className="w-48 rounded-xl border border-gray-300 bg-white p-2 text-left text-black"
         onClick={() => setOpen((o) => !o)}
       >
         {selected.length > 0 ? selected.join(", ") : label}
       </button>
       {open && (
-        <div className="absolute z-10 mt-1 w-48 max-h-60 overflow-auto border border-gray-300 bg-white rounded-xl shadow-lg">
+        <div className="absolute z-10 mt-1 max-h-60 w-48 overflow-auto rounded-xl border border-gray-300 bg-white shadow-lg">
           {options.map((option) => (
             <label
               key={option}
-              className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer text-text-secondary"
+              className="text-text-secondary flex cursor-pointer items-center px-2 py-1 hover:bg-gray-100"
             >
               <input
                 type="checkbox"
@@ -62,10 +62,11 @@ function MultiDropdown({ label, options, selected, setSelected }) {
 // Page principale
 // ----------------------
 export default function DiscoverPage() {
-  const { data: DiscoverData, loading, error } = useFetchWithLoader(
-    "data/vn_fr_list.json",
-    []
-  );
+  const {
+    data: DiscoverData,
+    loading,
+    error,
+  } = useFetchWithLoader("data/vn_fr_list.json", []);
 
   const file = "../../data/decouvrir-global";
 
@@ -82,14 +83,13 @@ export default function DiscoverPage() {
         if (!p.genre) return [];
         if (Array.isArray(p.genre)) return p.genre;
         return p.genre.split(",").map((g) => g.trim());
-      })
-    )
+      }),
+    ),
   ).sort();
 
   const durees = Array.from(
-    new Set(DiscoverData.map((p) => p.duree).filter(Boolean))
+    new Set(DiscoverData.map((p) => p.duree).filter(Boolean)),
   ).sort();
-
 
   // ----------------------
   // Filtrage
@@ -146,9 +146,15 @@ export default function DiscoverPage() {
         return parseFloat(b.note_vndb || 0) - parseFloat(a.note_vndb || 0);
 
       case "popularite-asc": // 1 est mieux → plus petit d’abord
-        return parseInt(a.popularite_vndb || 9999) - parseInt(b.popularite_vndb || 9999);
+        return (
+          parseInt(a.popularite_vndb || 9999) -
+          parseInt(b.popularite_vndb || 9999)
+        );
       case "popularite-desc":
-        return parseInt(b.popularite_vndb || 9999) - parseInt(a.popularite_vndb || 9999);
+        return (
+          parseInt(b.popularite_vndb || 9999) -
+          parseInt(a.popularite_vndb || 9999)
+        );
 
       default:
         return 0;
@@ -156,18 +162,18 @@ export default function DiscoverPage() {
   });
 
   if (loading) return <LoaderOverlay />; // Loader local sur la zone
-  if (error) return <p className="text-red-500 text-center">{error.message}</p>;
+  if (error) return <p className="text-center text-red-500">{error.message}</p>;
 
   return (
     <>
-      <div className="p-8 max-w-9xl mx-auto">
+      <div className="max-w-9xl mx-auto p-8">
         <MetaTags
           title="Découverte"
           description="Découvrez des Visual Novel disponibles en français."
           url="decouverte"
         />
 
-        <h2 className="text-3xl font-bold text-accent mb-8 text-center">
+        <h2 className="text-accent mb-8 text-center text-3xl font-bold">
           Découvrez des Visual Novel disponible en français
         </h2>
 
@@ -176,11 +182,11 @@ export default function DiscoverPage() {
         </div>
 
         {/* Barre de filtres */}
-        <div className="mb-8 flex flex-wrap gap-4 justify-center">
+        <div className="mb-8 flex flex-wrap justify-center gap-4">
           <input
             type="text"
             placeholder="Rechercher par nom..."
-            className="p-2 rounded-xl border border-gray-300 bg-white text-black"
+            className="rounded-xl border border-gray-300 bg-white p-2 text-black"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -200,7 +206,7 @@ export default function DiscoverPage() {
           />
 
           <select
-            className="p-2 rounded-xl border border-gray-300 bg-white text-black"
+            className="rounded-xl border border-gray-300 bg-white p-2 text-black"
             value={traductionFilter}
             onChange={(e) => setTraductionFilter(e.target.value)}
           >
@@ -210,7 +216,7 @@ export default function DiscoverPage() {
           </select>
 
           <select
-            className="p-2 rounded-xl border border-gray-300 bg-white text-black"
+            className="rounded-xl border border-gray-300 bg-white p-2 text-black"
             value={sortOption}
             onChange={(e) => setSortOption(e.target.value)}
           >
@@ -218,13 +224,17 @@ export default function DiscoverPage() {
             <option value="titre-desc">Titre (Z → A)</option>
             <option value="note-asc">Note VNDB (faible → fort)</option>
             <option value="note-desc">Note VNDB (fort → faible)</option>
-            <option value="popularite-asc">Popularité (meilleure → pire)</option>
-            <option value="popularite-desc">Popularité (pire → meilleure)</option>
+            <option value="popularite-asc">
+              Popularité (meilleure → pire)
+            </option>
+            <option value="popularite-desc">
+              Popularité (pire → meilleure)
+            </option>
           </select>
         </div>
 
         {/* Grille */}
-        <div className="grid gap-8 w-full justify-center [grid-template-columns:repeat(auto-fit,minmax(320px,800px))]">
+        <div className="grid w-full [grid-template-columns:repeat(auto-fit,minmax(320px,800px))] justify-center gap-8">
           {sortedData.map((project) => (
             <DiscoverCard
               key={project.id}

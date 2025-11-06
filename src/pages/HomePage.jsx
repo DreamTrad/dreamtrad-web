@@ -24,17 +24,17 @@ export default function HomePage() {
         description="Équipe de traduction de Visual Novel. Suivez l’avancement des projets, téléchargez nos patchs, consultez des articles et des guides."
         url=""
       />
-      <div className="flex flex-col min-h-screen bg-bg-primary text-white">
-        <div className="flex-1 mx-auto px-5 py-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="bg-bg-primary flex min-h-screen flex-col text-white">
+        <div className="mx-auto grid flex-1 grid-cols-1 gap-6 px-5 py-8 lg:grid-cols-3">
           {/* Colonne principale */}
-          <div className="lg:col-span-2 flex flex-col gap-6">
+          <div className="flex flex-col gap-6 lg:col-span-2">
             <MarkdownSection file={file_presentation} />
 
             {/* Avancement des projets */}
-            <h2 className="text-lg font-semibold mb-4 text-center">
+            <h2 className="mb-4 text-center text-lg font-semibold">
               Avancement des projets
             </h2>
-            <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(280px,450px))] justify-center">
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,450px))] justify-center gap-6">
               {projects.length > 0 ? (
                 projects.map((project) => (
                   <ProjectProgressCard
@@ -45,14 +45,16 @@ export default function HomePage() {
                   />
                 ))
               ) : (
-                <p className="text-center text-text-secondary">
+                <p className="text-text-secondary text-center">
                   Aucun projet chargé
                 </p>
               )}
             </div>
 
-            <section className="border p-6 rounded-md">
-              <h2 className="text-lg font-semibold mb-2">Patches disponibles</h2>
+            <section className="rounded-md border p-6">
+              <h2 className="mb-2 text-lg font-semibold">
+                Patches disponibles
+              </h2>
               <p>Placeholder : liens vers pages de téléchargement</p>
             </section>
           </div>
@@ -61,15 +63,15 @@ export default function HomePage() {
           <aside className="flex flex-col gap-6">
             <DiscordCard inviteUrl="https://t.co/O6tlFvR8wa" />
 
-            <div className="bg-accent text-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
-              <h2 className="text-2xl font-bold mb-3">🚀 Nous recrutons !</h2>
-              <p className="text-sm mb-4 text-white/90">
+            <div className="bg-accent flex flex-col items-center rounded-xl p-6 text-center text-white shadow-lg">
+              <h2 className="mb-3 text-2xl font-bold">🚀 Nous recrutons !</h2>
+              <p className="mb-4 text-sm text-white/90">
                 Tu veux aider à traduire, relire ou contribuer aux projets ?
                 Rejoins-nous !
               </p>
               <Link
                 to="/recrutement"
-                className="inline-block bg-white text-accent font-semibold px-6 py-2 rounded-lg shadow hover:bg-gray-100 transition"
+                className="text-accent inline-block rounded-lg bg-white px-6 py-2 font-semibold shadow transition hover:bg-gray-100"
               >
                 Voir les projets →
               </Link>

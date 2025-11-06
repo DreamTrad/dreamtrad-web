@@ -12,32 +12,32 @@ export default function ArticleCard({
   return (
     <Link
       to={`/articles/${id}`}
-      className="bg-bg-tertiary rounded-lg shadow-md overflow-hidden border border-bg-secondary flex flex-col hover:shadow-xl transition-shadow"
+      className="bg-bg-tertiary border-bg-secondary flex flex-col overflow-hidden rounded-lg border shadow-md transition-shadow hover:shadow-xl"
     >
       {/* Image */}
       {coverImage && (
         <img
           src={coverImage}
           alt={title}
-          className="w-full h-48 object-cover"
+          className="h-48 w-full object-cover"
         />
       )}
 
       {/* Infos */}
-      <div className="p-4 flex flex-col gap-2 flex-grow">
-        <h2 className="text-xl font-bold text-accent">{title}</h2>
-        <p className="text-sm text-text-tertiary">
+      <div className="flex flex-grow flex-col gap-2 p-4">
+        <h2 className="text-accent text-xl font-bold">{title}</h2>
+        <p className="text-text-tertiary text-sm">
           {author} — {new Date(date).toLocaleDateString("fr-FR")}
         </p>
-        {excerpt && <p className="text-sm flex-grow">{excerpt}</p>}
+        {excerpt && <p className="flex-grow text-sm">{excerpt}</p>}
 
         {/* Tags */}
         {tags?.length > 0 && (
-          <div className="flex gap-2 mt-2 flex-wrap">
+          <div className="mt-2 flex flex-wrap gap-2">
             {tags.map((tag, idx) => (
               <span
                 key={idx}
-                className="bg-bg-secondary px-2 py-1 rounded text-xs"
+                className="bg-bg-secondary rounded px-2 py-1 text-xs"
               >
                 #{tag}
               </span>

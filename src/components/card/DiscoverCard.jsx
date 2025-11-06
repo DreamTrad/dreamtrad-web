@@ -13,22 +13,22 @@ export default function DiscoverCard({
   description,
 }) {
   return (
-    <div className="bg-bg-tertiary rounded-2xl shadow-lg overflow-hidden border border-bg-secondary flex flex-col w-full max-w-6xl">
+    <div className="bg-bg-tertiary border-bg-secondary flex w-full max-w-6xl flex-col overflow-hidden rounded-2xl border shadow-lg">
       {/* Header */}
       <div className="bg-bg-secondary px-6 py-3">
-        <h3 className="text-2xl font-bold text-accent">{titre}</h3>
-        <div className="flex flex-wrap items-center gap-4 text-sm text-text-secondary mt-2">
+        <h3 className="text-accent text-2xl font-bold">{titre}</h3>
+        <div className="text-text-secondary mt-2 flex flex-wrap items-center gap-4 text-sm">
           {/* Durée */}
           {duree && (
             <span>
-              <span className="font-semibold text-accent">Durée :</span> {duree}
+              <span className="text-accent font-semibold">Durée :</span> {duree}
             </span>
           )}
 
           {/* Plateformes */}
           {plateforme.length > 0 && (
             <div className="flex items-center gap-2">
-              <span className="font-semibold text-accent">Plateformes :</span>
+              <span className="text-accent font-semibold">Plateformes :</span>
               <PlatformIcons platforms={plateforme} />
             </div>
           )}
@@ -36,7 +36,7 @@ export default function DiscoverCard({
           {/* Genres */}
           {genre.length > 0 && (
             <span>
-              <span className="font-semibold text-accent">Genres :</span>{" "}
+              <span className="text-accent font-semibold">Genres :</span>{" "}
               {genre.join(", ")}
             </span>
           )}
@@ -44,29 +44,29 @@ export default function DiscoverCard({
       </div>
 
       {/* Contenu principal */}
-      <div className="flex flex-col md:flex-row p-6 gap-6 flex-grow">
+      <div className="flex flex-grow flex-col gap-6 p-6 md:flex-row">
         {/* Image */}
-        <div className="flex-[2] flex items-center justify-center">
+        <div className="flex flex-[2] items-center justify-center">
           <img
             src={image}
             alt={`Affiche de ${titre}`}
-            className="w-full h-[400px] object-contain rounded-md shadow-md"
+            className="h-[400px] w-full rounded-md object-contain shadow-md"
           />
         </div>
 
         {/* Description */}
-        <div className="flex-[3] bg-bg-secondary rounded-md p-4 prose prose-invert max-w-none text-text-secondary text-sm">
+        <div className="bg-bg-secondary prose prose-invert text-text-secondary max-w-none flex-[3] rounded-md p-4 text-sm">
           <ReactMarkdown>{description}</ReactMarkdown>
         </div>
       </div>
 
       {/* Footer */}
-      <div className="bg-bg-secondary px-6 py-4 flex flex-col md:flex-row gap-4">
+      <div className="bg-bg-secondary flex flex-col gap-4 px-6 py-4 md:flex-row">
         {/* Patchs */}
         {/* Liens */}
-        {(lien_jeu.length + patch_fr.length) > 0 && (
-          <div className="flex flex-col gap-2 p-3 border rounded-lg bg-bg-tertiary flex-1">
-            <span className="font-semibold text-accent text-sm uppercase tracking-wide">
+        {lien_jeu.length + patch_fr.length > 0 && (
+          <div className="bg-bg-tertiary flex flex-1 flex-col gap-2 rounded-lg border p-3">
+            <span className="text-accent text-sm font-semibold tracking-wide uppercase">
               Liens
             </span>
             <div className="flex gap-3">

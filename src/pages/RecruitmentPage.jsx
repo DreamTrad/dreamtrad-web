@@ -30,15 +30,15 @@ export default function RecruitmentPage() {
         description="Nous recrutons pour plusieurs projets de traductions. N’hésitez pas à vous manifester. Nous avons aussi besoin d’aide pour améliorer le contenu du site internet."
         url="recrutement"
       />
-      <div className="p-8 max-w-9xl mx-auto">
+      <div className="max-w-9xl mx-auto p-8">
         <div className="mt-6">
           <MarkdownSection file={file} />
         </div>
-        <h2 className="text-3xl font-bold text-accent mt-16 mb-8 text-center">
+        <h2 className="text-accent mt-16 mb-8 text-center text-3xl font-bold">
           Les projets de traduction en recrutement
         </h2>
 
-        <div className="grid gap-8 justify-center grid-cols-[repeat(auto-fit,minmax(400px,600px))]">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(400px,600px))] justify-center gap-8">
           {recruitmentProjectData.map((project) => (
             <RecruitmentCard
               key={project.id}
@@ -51,11 +51,11 @@ export default function RecruitmentPage() {
           ))}
         </div>
 
-        <h2 className="text-3xl font-bold text-accent  mt-16 mb-8 text-center">
+        <h2 className="text-accent mt-16 mb-8 text-center text-3xl font-bold">
           Les tâches pour le site internet
         </h2>
 
-        <div className="grid gap-8 justify-center grid-cols-[repeat(auto-fit,minmax(400px,600px))]">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(400px,600px))] justify-center gap-8">
           {recruitmentWebData.map((project) => (
             <RecruitmentCard
               key={project.id}
