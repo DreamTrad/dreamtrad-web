@@ -2,26 +2,31 @@
 @plugin "@tailwindcss/typography";
 
 @theme static {
-  --color-bg: #0A2939;
-  --color-bg-secondary: #1C6B82;
-  --color-bg-tertiary: #2897A7;
+  /* Background */
+  --color-bg: #0B1F33;              /* Primary background: bleu très sombre */
+  --color-bg-secondary: #153A5B;    /* Secondary: un peu plus clair */
+  --color-bg-tertiary: #1E5B84;     /* Tertiary: bleu moyen */
 
-  --color-text: #E0E0E0;
-  --color-text-secondary: #A0A0A0;
-  --color-text-tertiary: #707070;
+  /* Text */
+  --color-text: #F1F5F9;            /* Principal: très clair */
+  --color-text-secondary: #A8B3C1;  /* Moins contrasté */
+  --color-text-tertiary: #6B7280;   /* Désactivé / faible priorité */
 
-  --color-accent: #CBD51C;
-  --color-accent-secondary: #FFB808;
-  --color-accent-tertiary: #8B5CF6;
+  /* Accent (interactif, highlight) */
+  --color-accent: #3B82F6;          /* Bleu clair vif (action principale) */
+  --color-accent-secondary: #22D3EE;/* Cyan doux (survol ou lien) */
+  --color-accent-tertiary: #8B5CF6; /* Violet pour contraste décoratif */
 
-  --color-hover: #2D2D2D;
-  --color-hover-secondary: #383838;
-  --color-hover-tertiary: #454545;
+  /* Hover (tons gris bleutés) */
+  --color-hover: #1E293B;           /* Survol neutre */
+  --color-hover-secondary: #334155; /* Survol accentué */
+  --color-hover-tertiary: #475569;  /* Survol fort */
 
-  --color-info: #2A2A2A;
-  --color-success: #22C55E;
-  --color-warning: #EF4444;
-  --color-error: #EF4444;
+  /* Feedback (statuts) */
+  --color-info: #3B82F6;            /* Bleu vif */
+  --color-success: #10B981;         /* Vert */
+  --color-warning: #F59E0B;         /* Orange */
+  --color-error: #EF4444;           /* Rouge */
 }
 
 @layer components {
