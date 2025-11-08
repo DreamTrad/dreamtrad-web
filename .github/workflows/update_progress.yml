@@ -43,7 +43,9 @@ jobs:
 
           git add public/data/progress.json
           if git diff --cached --quiet; then
-            echo "No changes detected, skipping commit."
+              echo "No changes detected, skipping commit."
           else
-            git commit -m "Auto update progress.json from Google Sheet"
-            git push origin main
+              git commit -m "Auto update progress.json from Google Sheet"
+              git push origin main
+          fi
+
