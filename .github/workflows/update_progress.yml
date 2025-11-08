@@ -36,28 +36,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Create branch and check for changes
-        id: git_changes
+      - name: Commit and push changes to main
         run: |
           git fetch origin main
-          git checkout -B auto/update-progress origin/main
+          git checkout main
 
           git add public/data/progress.json
           if git diff --cached --quiet; then
-            echo "no_changes=true" >> $GITHUB_ENV
+            echo "No changes detected, skipping commit."
           else
             git commit -m "Auto update progress.json from Google Sheet"
-            git push origin auto/update-progress --force
-            echo "no_changes=false" >> $GITHUB_ENV
-          fi
-
-      - name: Create Pull Request
-        if: env.no_changes == 'false'
-        uses: peter-evans/create-pull-request@v7
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: auto/update-progress
-          base: main
-          title: "Auto update progress.json"
-          body: "Automated update from Google Sheet"
-          commit-message: "Update progress.json from Google Sheet"
+            git push origin main
