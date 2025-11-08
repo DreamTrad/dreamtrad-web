@@ -33,7 +33,7 @@ jobs:
           git checkout -b auto/update-progress || git checkout auto/update-progress
           git add public/data/progress.json
           git commit -m "Auto update progress.json from Google Sheet" || echo "No changes to commit"
-          git push origin auto/update-progress --force
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/DreamTrad/dreamtrad-web.git auto/update-progress --force
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
