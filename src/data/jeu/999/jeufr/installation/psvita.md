@@ -11,7 +11,8 @@ Une fois que vous avez téléchargé le patch, il faudra d’abord l’extraire 
     - [0syscall6](https://github.com/SKGleba/0syscall6/releases)
 
 Les plugins sont des fichiers .skprx à placer dans la partition ur0:
-Avec **Vitashell** (le gestionnaire de fichiers), copiez les fichiers SKPRX dans le dossier **ur0:tai/**
+
+Avec **Vitashell** (le gestionnaire de fichiers), copiez les fichiers SKPRX dans le dossier **ur0\:tai/**
 
 ![Image plugin vita 1](/assets/jeu/999/jeufr/installation/plugin_vita_1.webp)
 
