@@ -29,7 +29,7 @@ export default function RecruitmentCard({
         {/* Rôles / contenu */}
         {/* Rôles / contenu */}
         <div className="bg-bg-secondary flex-1 rounded-md p-4">
-          <h4 className="mb-2 text-lg font-semibold">Nous recrutons :</h4>
+          <h4 className="mb-2 text-lg font-semibold">Nous recherchons :</h4>
           <div className="flex h-40 items-center">
             <ul className="text-text-secondary list-inside list-disc space-y-5">
               {roles.map((role, idx) => (
