@@ -39,27 +39,27 @@
   /* --------- COLORS --------- */
 
   /* Background */
-  --color-bg: #0B1F33;              /* Primary background: bleu très sombre */
-  --color-bg-secondary: #153A5B;    /* Secondary: un peu plus clair */
-  --color-bg-tertiary: #1E5B84;     /* Tertiary: bleu moyen */
+  --color-bg: #020202;              /* Base: ton du fond */
+  --color-bg-secondary: #0B1722;    /* Subtile élévation */
+  --color-bg-tertiary: #132A3A;     /* Bloc surélevé */
 
   /* Text */
-  --color-text: #F1F5F9;            /* Principal: très clair */
-  --color-text-secondary: #A8B3C1;  /* Moins contrasté */
-  --color-text-tertiary: #6B7280;   /* Désactivé / faible priorité */
+  --color-text: #F5F6F7;            /* Texte principal */
+  --color-text-secondary: #A7B3BF;  /* Moins contrasté */
+  --color-text-tertiary: #6C7A86;   /* Désactivé */
 
-  /* Accent (interactif, highlight) */
-  --color-accent: #3B82F6;          /* Bleu clair vif (action principale) */
-  --color-accent-secondary: #22D3EE;/* Cyan doux (survol ou lien) */
-  --color-accent-tertiary: #8B5CF6; /* Violet pour contraste décoratif */
+  /* Accent (bleu froid + contraste) */
+  --color-accent: #3B82F6;          /* Action principale */
+  --color-accent-secondary: #22D3EE;/* Lien / Hover */
+  --color-accent-tertiary: #60A5FA; /* Survol clair */
 
-  /* Hover (tons gris bleutés) */
-  --color-hover: #1E293B;           /* Survol neutre */
-  --color-hover-secondary: #334155; /* Survol accentué */
-  --color-hover-tertiary: #475569;  /* Survol fort */
+  /* Hover (tons neutres froids) */
+  --color-hover: #1A1A1A;
+  --color-hover-secondary: #242424;
+  --color-hover-tertiary: #2E2E2E;
 
-  /* Feedback (statuts) */
-  --color-info: #3B82F6;            /* Bleu vif */
+  /* Feedback */
+  --color-info: #3B82F6;            /* Bleu */
   --color-success: #10B981;         /* Vert */
   --color-warning: #F59E0B;         /* Orange */
   --color-error: #EF4444;           /* Rouge */
@@ -74,6 +74,12 @@
 @layer base {
   body {
     font-family: var(--font-secondary);
+    background-image: url("/assets/background.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* optionnel pour effet "parallaxe" */
+    background-color: var(--color-bg); /* fallback */
   }
 
   h1, h2, h3, h4, h5, h6 {
