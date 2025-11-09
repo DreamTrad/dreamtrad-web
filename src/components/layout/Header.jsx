@@ -4,10 +4,10 @@ import NavLink from "../ui/NavLink";
 
 const mainMenu = [
   { name: "Accueil", to: "/" },
-  { name: "Jeux", to: "/jeux" },
+  { name: "Visual Novel", to: "/jeux" },
   { name: "Recrutement", to: "/recrutement" },
   { name: "Articles", to: "/articles" },
-  { name: "Visual Novel à Découvrir", to: "/decouvrir" },
+  { name: "VNDB-FR", to: "/decouvrir" },
   { name: "Équipe", to: "/equipe" },
   { name: "Contact", to: "/contact" },
 ];

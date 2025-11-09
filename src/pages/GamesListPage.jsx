@@ -11,7 +11,7 @@ export default function GamesListPage() {
         url="jeux"
       />
       <div className="bg-bg-primary text-text-primary min-h-screen p-10">
-        <h1 className="mb-8 text-center text-3xl font-bold">Liste des jeux</h1>
+        <h1 className="mb-8 text-center text-3xl font-bold">Liste des Visual Novel de l’équipe</h1>
 
         <div className="grid grid-cols-[repeat(auto-fit,350px)] justify-center gap-8">
           {games.map((game) => (
