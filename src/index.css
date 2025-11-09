@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Momo+Signature&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
@@ -24,10 +25,10 @@
   /* --font-primary: "Playfair Display", "serif"; */
   /* --font-secondary: "Source Sans 3", "sans-serif"; */
 
-  /* --font-primary: "Orbitron", "serif"; */
+  --font-primary: "Orbitron", "serif";
   /* --font-secondary: "Roboto", "sans-serif"; */
 
-  --font-primary: "Lora", "serif";
+  /* --font-primary: "Lora", "serif"; */
   /* --font-secondary: "Open Sans", "sans-serif"; */
 
   /* --font-primary: "Oswald", "serif"; */

@@ -7,7 +7,7 @@ const mainMenu = [
   { name: "Jeux", to: "/jeux" },
   { name: "Recrutement", to: "/recrutement" },
   { name: "Articles", to: "/articles" },
-  { name: "Découvrir", to: "/decouvrir" },
+  { name: "Visual Novel à Découvrir", to: "/decouvrir" },
   { name: "Équipe", to: "/equipe" },
   { name: "Contact", to: "/contact" },
 ];
