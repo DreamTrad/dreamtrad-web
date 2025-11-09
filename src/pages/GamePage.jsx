@@ -134,7 +134,6 @@ export default function GamePage() {
     <>
       <GameHeader game={game} />
       <div className="flex min-h-screen flex-col">
-        <GameNavBar />
         <div className="flex flex-1">
           {/* Sidebar */}
           <aside
