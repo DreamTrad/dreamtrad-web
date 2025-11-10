@@ -10,6 +10,8 @@ import twitchIcon from "../../assets/icons/website/twitch.svg";
 import vndbIcon from "../../assets/icons/website/vndb.ico";
 import xitterIcon from "../../assets/icons/website/xitter.svg";
 import youtubeIcon from "../../assets/icons/website/youtube.svg";
+import xboxIcon from "../../assets/icons/website/xbox.svg";
+import playstationIcon from "../../assets/icons/website/playstation.svg";
 
 const iconMap = [
   { match: ["discord.gg", "discord.com"], icon: discordIcon, label: "Discord" },
@@ -20,6 +22,8 @@ const iconMap = [
   { match: ["store.steampowered.com"], icon: steamIcon, label: "Steam" },
   { match: ["twitch.tv"], icon: twitchIcon, label: "Twitch" },
   { match: ["vndb.org"], icon: vndbIcon, label: "VNDB" },
+  { match: ["xbox.com"], icon: xboxIcon, label: "Xbox" },
+  { match: ["playstation.com"], icon: playstationIcon, label: "PlayStation" },
   { match: ["twitter.com", "x.com"], icon: xitterIcon, label: "X / Twitter" },
   { match: ["youtube.com", "youtu.be"], icon: youtubeIcon, label: "YouTube" },
 ];
@@ -28,7 +32,7 @@ export default function LinkWithIcon({ url }) {
   if (!url) return null;
 
   let normalizedUrl = url;
-  let selected = { icon: globeIcon, label: "Lien externe" }; // valeur par défaut
+  let selected;
 
   // Cas spécial : lien FR
   if (url.startsWith("fr:")) {
@@ -38,11 +42,17 @@ export default function LinkWithIcon({ url }) {
     normalizedUrl = url.startsWith("http") ? url : `https://${url}`;
 
     // Vérifie dans iconMap
-    for (const entry of iconMap) {
-      if (entry.match.some((m) => normalizedUrl.includes(m))) {
-        selected = entry;
-        break;
-      }
+    selected = iconMap.find((entry) =>
+      entry.match.some((m) => normalizedUrl.includes(m))
+    );
+
+    // Si non trouvé → globe par défaut avec label = racine du site sans https://
+    if (!selected) {
+      const origin = new URL(normalizedUrl).origin;
+      selected = {
+        icon: globeIcon,
+        label: origin.replace(/^https?:\/\//, ""),
+      };
     }
   }
 
