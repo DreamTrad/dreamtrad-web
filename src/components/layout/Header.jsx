@@ -36,9 +36,9 @@ export default function Header() {
             className="h-10 w-10 object-contain"
           />
           <img
-            src="/assets/dreamtrad-title.webp"
+            src="/assets/dreamtrad-title.png"
             alt="DreamTrad"
-            className="h-10 object-contain"
+            className="h-7 object-contain"
           />
         </Link>
 
