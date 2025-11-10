@@ -5,6 +5,7 @@ import MetaTags from "../components/MetaTags";
 import DiscordCard from "../components/card/DiscordCard";
 import MarkdownSection from "../components/ui/MarkdownSection";
 import ProjectProgressCard from "../components/card/ProjectProgressCard";
+import chibiAiba from "../assets/chibi/chibi-aiba.webp";
 
 export default function HomePage() {
   const file_presentation = "../../data/presentation-accueil";
@@ -63,18 +64,31 @@ export default function HomePage() {
           <aside className="flex flex-col gap-6">
             <DiscordCard inviteUrl="https://t.co/O6tlFvR8wa" />
 
-            <div className="bg-accent flex flex-col items-center rounded-xl p-6 text-center text-white shadow-lg">
-              <h2 className="mb-3 text-2xl font-bold">🚀 Nous recrutons !</h2>
-              <p className="mb-4 text-sm text-white/90">
-                Tu veux aider à traduire, relire ou contribuer aux projets ?
-                Rejoins-nous !
-              </p>
-              <Link
-                to="/recrutement"
-                className="text-accent inline-block rounded-lg bg-white px-6 py-2 font-semibold shadow transition hover:bg-gray-100"
-              >
-                Voir les projets →
-              </Link>
+            <div className="from-accent to-accent-tertiary flex flex-col items-center justify-between gap-6 overflow-hidden rounded-2xl bg-gradient-to-br p-6 text-white shadow-xl md:flex-row">
+              {/* Text & button */}
+              <div className="flex max-w-md flex-1 flex-col items-center space-y-4 text-center">
+                <h2 className="text-2xl font-bold">Nous recrutons !</h2>
+                <p className="text-sm text-white/90">
+                  Tu veux aider à traduire, relire ou contribuer aux projets ?{" "}
+                  <br />
+                  Rejoins-nous !
+                </p>
+                <Link
+                  to="/recrutement"
+                  className="text-accent inline-block rounded-lg bg-white px-6 py-2 font-semibold shadow-md transition hover:bg-gray-100 hover:shadow-lg"
+                >
+                  Voir les projets →
+                </Link>
+              </div>
+
+              {/* Chibi illustration */}
+              <div className="flex h-full flex-shrink-0 items-stretch justify-center md:h-auto md:justify-start">
+                <img
+                  src={chibiAiba}
+                  alt="Chibi Aiba"
+                  className="pointer-events-none h-50 object-contain drop-shadow-xl select-none"
+                />
+              </div>
             </div>
 
             <RecentArticles limit={3} />
