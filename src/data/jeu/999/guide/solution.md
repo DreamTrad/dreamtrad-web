@@ -1,8 +1,9 @@
 Nous vous proposons un guide en français se basant sur notre traduction. 999 n’est pas un jeu complexe. Mais il peut tout de même y avoir quelque passage bloquant dans les échappatoires. La version "The Nonary Games" rend plus simple et plus clair l’optention des fins, mais vous trouverez au besoin des guides pour obtenir chaque fin.
 
 Des traductions des succès sont également disponibles.
+## Pages du guide
 
-## Échappatoires
+### Échappatoires
 
 - [Cabine de 3ème classe](/jeu/999/guide/echappatoires/cabine_de_3eme_classe)
 - [Cabines de 2ème classe](/jeu/999/guide/echappatoires/cabines_de_2eme_classe)
@@ -21,10 +22,7 @@ Des traductions des succès sont également disponibles.
 - [Salle d’isolement](/jeu/999/guide/echappatoires/salle_d_isolement)
 - [Salle de torture](/jeu/999/guide/echappatoires/salle_de_torture)
 
-## Fins
+### Autres pages
 
 - [Fins](/jeu/999/guide/fins)
-
-## Succès
-
 - [Succès](/jeu/999/guide/achievements)
