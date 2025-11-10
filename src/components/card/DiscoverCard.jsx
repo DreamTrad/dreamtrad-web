@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import LinkWithIcon from "../ui/LinkWithIcon";
 import PlatformIcons from "../ui/PlatformIcons";
 import ReactMarkdown from "react-markdown";
 
 export default function DiscoverCard({
+  id,
   titre,
   image,
   genre = [],
@@ -12,11 +14,32 @@ export default function DiscoverCard({
   patch_fr = [],
   description,
 }) {
+  // Vérifie si patch_fr contient un lien interne
+  const internalPatch = patch_fr.find((p) => p.startsWith("fr:/"));
+  const internalPath = internalPatch
+    ? `/jeu/${internalPatch.split("/")[2]}/general/`
+    : null;
+
   return (
     <div className="bg-bg-tertiary border-hover-secondary flex w-full max-w-6xl flex-col overflow-hidden rounded-2xl border">
       {/* Header */}
       <div className="bg-bg-secondary px-6 py-3">
-        <h3 className="text-accent text-2xl font-bold">{titre}</h3>
+        {internalPath ? (
+          <div className="mb-4 flex items-center justify-between">
+            <Link
+              to={internalPath}
+              className="group"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              <h3 className="group-hover:text-accent text-2xl font-bold transition">
+                {titre}
+              </h3>
+            </Link>
+          </div>
+        ) : (
+          <h3 className="text-2xl font-bold">{titre}</h3>
+        )}
+
         <div className="text-text-secondary mt-2 flex flex-wrap items-center gap-4 text-sm">
           {/* Durée */}
           {duree && (
@@ -62,8 +85,7 @@ export default function DiscoverCard({
 
       {/* Footer */}
       <div className="bg-bg-secondary flex flex-col gap-4 px-6 py-4 md:flex-row">
-        {/* Patchs */}
-        {/* Liens */}
+        {/* Patchs / Liens */}
         {lien_jeu.length + patch_fr.length > 0 && (
           <div className="bg-bg-tertiary flex flex-1 flex-col gap-2 rounded-lg border p-3">
             <span className="text-accent text-sm font-semibold tracking-wide uppercase">
