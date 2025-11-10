@@ -1,4 +1,4 @@
-ZTD : Zero Time Dilemma ou Zero Escape : Le Temps du Dilemme est le troisième jeu de la trilogie Zero Escape, celui venant après 999 et VLR. Il est sorti le 28 juin 2016. Une fantraduction française avait déjà était réalisée, mais possède quelques problèmes au niveau de la traduction, et les images ne pouvaient pas être traduites. Nous avons décidé de reprendre ce projet de traduction, pour corriger le texte, traduire les images, et harmoniser nos fantraductions des 2 jeux précédents de la trilogie.
+ZTD : Zero Time Dilemma ou Zero Escape : Le Temps du Dilemme est le troisième jeu de la trilogie Zero Escape, celui venant après 999 et VLR. Il est sorti le 28 juin 2016. Une fantraduction française avait déjà été réalisée, mais possède quelques problèmes au niveau de la traduction, et les images ne pouvaient pas être traduites. Nous avons décidé de reprendre ce projet de traduction, pour corriger le texte, traduire les images, et harmoniser nos fantraductions des 2 jeux précédents de la trilogie.
 
 Il s’agit du troisième jeu de la série, que ça soit pour sa date de sortie que pour son histoire. Il faut le faire après avoir fait 999 puis VLR !
 
