@@ -54,7 +54,7 @@ export default function TeamMemberCard({
         {projects?.length > 0 && (
           <div className="bg-bg-secondary w-full rounded-md p-4">
             <h3 className="text-accent mb-2 text-sm font-semibold">
-              Projets :
+              Projets Principaux :
             </h3>
             <ul className="text-text-secondary list-inside list-disc space-y-1 text-sm">
               {projects.map((proj, idx) => (

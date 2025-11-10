@@ -1,0 +1,1 @@
+C’est un patch réalisé en collaboration avec l’équipe Mirai. Vous pouvez également trouver le patch sur leur [site](https://equipemirai.com/gnosia/).

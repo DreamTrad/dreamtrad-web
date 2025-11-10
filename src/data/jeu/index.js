@@ -15,6 +15,8 @@ import { game as paranormasight } from "./paranormasight/index.js";
 import { game as shibuya_scramble } from "./428/index.js"
 import { game as silver_case_25th_ward } from "./silver_case_25th_ward/index.js"
 
+import { game as gnosia } from "./gnosia/index.js"
+
 
 export const games = [
     silver_case_25th_ward,
@@ -23,6 +25,7 @@ export const games = [
     ai1,
     ai2,
     divine_deception,
+    gnosia,
     never7,
     paranormasight,
     ze2,

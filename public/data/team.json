@@ -20,6 +20,20 @@
     ]
   },
   {
+    "id": "bedriol",
+    "name": "Bedriol",
+    "avatar": "assets/team/bedriol.webp",
+    "skills": [
+      "Traduction anglais",
+      "édition d’images"
+    ],
+    "projects": [
+      "GNOSIA"
+    ],
+    "links": [
+    ]
+  },
+  {
     "id": "daphneezougaming",
     "name": "Daphnée Zoo Gaming",
     "avatar": "assets/team/daphneezougaming.webp",
@@ -71,7 +85,8 @@
       "Retraité"
     ],
     "projects": [
-      "AI: THE SOMNIUM FILES"
+      "AI: THE SOMNIUM FILES",
+      "AI: THE SOMNIUM FILES - nirvanA Initiative"
     ],
     "links": [
       "https://twitter.com/foubou73"
