@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "silver_case_25th_ward",
     "title": "The 25th Ward: The Silver Case",
     "image": "/assets/poster/silver_case_25th_ward.webp",
     "progress": {
@@ -11,7 +11,7 @@
     }
   },
   {
-    "id": 2,
+    "id": "428",
     "title": "428: Shibuya Scramble",
     "image": "/assets/poster/428.webp",
     "progress": {
@@ -22,7 +22,7 @@
     }
   },
   {
-    "id": 3,
+    "id": "divine_deception",
     "title": "The Divine Deception",
     "image": "/assets/poster/divine_deception.webp",
     "progress": {
@@ -33,7 +33,7 @@
     }
   },
   {
-    "id": 4,
+    "id": "never7",
     "title": "Never 7",
     "image": "/assets/poster/never7.webp",
     "progress": {

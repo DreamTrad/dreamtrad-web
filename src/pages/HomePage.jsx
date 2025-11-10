@@ -40,6 +40,7 @@ export default function HomePage() {
                 projects.map((project) => (
                   <ProjectProgressCard
                     key={project.id}
+                    id={project.id}
                     title={project.title}
                     image={project.image}
                     progress={project.progress}
@@ -76,6 +77,7 @@ export default function HomePage() {
                 <Link
                   to="/recrutement"
                   className="text-accent inline-block rounded-lg bg-white px-6 py-2 font-semibold shadow-md transition hover:bg-gray-100 hover:shadow-lg"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 >
                   Voir les projets →
                 </Link>

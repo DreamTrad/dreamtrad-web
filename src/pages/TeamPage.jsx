@@ -15,7 +15,7 @@ export default function TeamPage() {
   }, []);
 
   return (
-    <>
+    <div className="pb-16">
       <MetaTags
         title="Équipe"
         description="Les personnes qui ont beaucoup apportés aux projets et à l’équipe au fil des années."
@@ -38,6 +38,6 @@ export default function TeamPage() {
           <TeamMemberCard key={member.id} {...member} />
         ))}
       </div>
-    </>
+    </div>
   );
 }

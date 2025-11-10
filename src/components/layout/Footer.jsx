@@ -20,37 +20,37 @@ export default function Footer() {
           </h3>
           <ul className="grid grid-cols-2 gap-2 text-sm">
             <li>
-              <Link to="/" className="hover:text-accent">
+              <Link to="/" className="hover:text-accent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                 Accueil
               </Link>
             </li>
             <li>
-              <Link to="/jeux" className="hover:text-accent">
-                Jeux
+              <Link to="/jeux" className="hover:text-accent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                Visual Novel
               </Link>
             </li>
             <li>
-              <Link to="/recrutement" className="hover:text-accent">
+              <Link to="/recrutement" className="hover:text-accent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                 Recrutement
               </Link>
             </li>
             <li>
-              <Link to="/decouvrir" className="hover:text-accent">
-                Découvrir
+              <Link to="/decouvrir" className="hover:text-accent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                VNDB-FR
               </Link>
             </li>
             <li>
-              <Link to="/articles" className="hover:text-accent">
+              <Link to="/articles" className="hover:text-accent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                 Articles
               </Link>
             </li>
             <li>
-              <Link to="/equipe" className="hover:text-accent">
+              <Link to="/equipe" className="hover:text-accent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                 Équipe
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-accent">
+              <Link to="/contact" className="hover:text-accent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                 Contact
               </Link>
             </li>
@@ -100,7 +100,7 @@ export default function Footer() {
       <div className="border-bg-tertiary flex items-center justify-center gap-6 border-t py-4 text-xs">
         <span>{new Date().getFullYear()} DreamTrad</span>
 
-        <Link to="/mentions-legales" className="hover:text-accent transition">
+        <Link to="/mentions-legales" className="hover:text-accent transition" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           Mentions légales
         </Link>
       </div>

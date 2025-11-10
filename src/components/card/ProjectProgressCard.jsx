@@ -1,4 +1,6 @@
-export default function ProjectProgressCard({ title, image, progress }) {
+import { Link } from "react-router-dom";
+
+export default function ProjectProgressCard({ id, title, image, progress }) {
   const bars = [
     { label: "Traduction", value: progress.traduction },
     { label: "Images", value: progress.images },
@@ -15,9 +17,13 @@ export default function ProjectProgressCard({ title, image, progress }) {
 
       {/* Contenu */}
       <div className="flex-1">
-        {/* Header avec titre + recrutement */}
+        {/* Header avec titre cliquable */}
         <div className="mb-4 flex items-center justify-between">
-          <h3 className="text-2xl font-bold">{title}</h3>
+          <Link to={`/jeu/${id}/general/`} className="group" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+            <h3 className="group-hover:text-accent text-2xl font-bold transition">
+              {title}
+            </h3>
+          </Link>
         </div>
 
         {/* Barres de progression */}

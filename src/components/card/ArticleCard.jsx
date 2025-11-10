@@ -13,6 +13,7 @@ export default function ArticleCard({
     <Link
       to={`/articles/${id}`}
       className="bg-bg-tertiary border-hover-tertiary flex flex-col overflow-hidden rounded-lg border shadow-md transition-shadow hover:shadow-xl"
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
       {/* Image */}
       {coverImage && (

@@ -36,6 +36,7 @@ export default function RecentArticles({ limit = 3 }) {
               key={article.id}
               to={`/articles/${article.id}`}
               className="group flex items-center gap-3"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               {/* Image miniature */}
               {article.coverImage && (
@@ -61,7 +62,7 @@ export default function RecentArticles({ limit = 3 }) {
       </div>
 
       <div className="mt-4 text-right">
-        <Link to="/articles" className="text-accent text-xs hover:underline">
+        <Link to="/articles" className="text-accent text-xs hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           Voir tous les articles →
         </Link>
       </div>

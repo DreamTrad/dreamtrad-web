@@ -19,6 +19,7 @@ export default function GamesListPage() {
               key={game.id}
               to={`/jeu/${game.id}`}
               className="group bg-bg-secondary block overflow-hidden rounded-2xl shadow-lg transition-shadow hover:shadow-xl"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               {/* Game image */}
               <div className="aspect-video overflow-hidden">
