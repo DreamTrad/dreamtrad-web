@@ -40,10 +40,9 @@ export default function ArticlePage() {
           <h1 className="text-accent mb-4 text-3xl font-bold">
             {article.title}
           </h1>
-          <p className="text-text-tertiary mb-6 text-sm">
+          <p className="text-text-tertiary mb-6">
             {article.author} —{" "}
-            {new Date(article.date).toLocaleDateString("fr-FR")} ·{" "}
-            {article.readingTime}
+            {new Date(article.date).toLocaleDateString("fr-FR")}
           </p>
 
           {article.coverImage && (
