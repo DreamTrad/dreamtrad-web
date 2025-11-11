@@ -37,11 +37,11 @@ function MultiDropdown({ label, options, selected, setSelected }) {
         {selected.length > 0 ? selected.join(", ") : label}
       </button>
       {open && (
-        <div className="absolute z-10 mt-1 max-h-60 w-48 overflow-auto rounded-xl border border-gray-300 bg-white shadow-lg">
+        <div className="border-hover-tertiary bg-bg-tertiary text-text-tertiary absolute z-10 mt-1 max-h-75 w-48 overflow-auto rounded-xl border p-2 shadow-lg">
           {options.map((option) => (
             <label
               key={option}
-              className="text-text-secondary flex cursor-pointer items-center px-2 py-1 hover:bg-gray-100"
+              className="border-hover-tertiary bg-bg-tertiary text-text-tertiary flex cursor-pointer items-center px-2 py-1 hover:bg-hover-tertiary"
             >
               <input
                 type="checkbox"
@@ -211,7 +211,7 @@ export default function DiscoverPage() {
             onChange={(e) => setTraductionFilter(e.target.value)}
           >
             <option value="">Toutes les traductions</option>
-            <option value="officielle">Officielle</option>
+            <option value="officielle" className="">Officielle</option>
             <option value="non-officielle">Fantraduction</option>
           </select>
 
@@ -220,7 +220,7 @@ export default function DiscoverPage() {
             value={sortOption}
             onChange={(e) => setSortOption(e.target.value)}
           >
-            <option value="titre-asc">Titre (A → Z)</option>
+            <option value="titre-asc" className="font-secondary">Titre (A → Z)</option>
             <option value="titre-desc">Titre (Z → A)</option>
             <option value="note-asc">Note VNDB (faible → fort)</option>
             <option value="note-desc">Note VNDB (fort → faible)</option>

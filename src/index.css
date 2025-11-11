@@ -14,19 +14,28 @@
   /* --------- COLORS --------- */
 
   /* Background */
-  --color-bg: #020202;              /* Base: ton du fond */
-  --color-bg-secondary: #0B1722;    /* Subtile élévation */
-  --color-bg-tertiary: #132A3A;     /* Bloc surélevé */
+  --color-bg: #020202;
+  /* Base: ton du fond */
+  --color-bg-secondary: #0B1722;
+  /* Subtile élévation */
+  --color-bg-tertiary: #132A3A;
+  /* Bloc surélevé */
 
   /* Text */
-  --color-text: #F5F6F7;            /* Texte principal */
-  --color-text-secondary: #A7B3BF;  /* Moins contrasté */
-  --color-text-tertiary: #6C7A86;   /* Désactivé */
+  --color-text: #F5F6F7;
+  /* Texte principal */
+  --color-text-secondary: #A7B3BF;
+  /* Moins contrasté */
+  --color-text-tertiary: #6C7A86;
+  /* Désactivé */
 
   /* Accent (bleu froid + contraste) */
-  --color-accent: #3B82F6;          /* Action principale */
-  --color-accent-secondary: #22D3EE;/* Lien / Hover */
-  --color-accent-tertiary: #60A5FA; /* Survol clair */
+  --color-accent: #3B82F6;
+  /* Action principale */
+  --color-accent-secondary: #22D3EE;
+  /* Lien / Hover */
+  --color-accent-tertiary: #60A5FA;
+  /* Survol clair */
 
   /* Hover (tons neutres froids) */
   --color-hover: #1A1A1A;
@@ -34,10 +43,14 @@
   --color-hover-tertiary: #2E2E2E;
 
   /* Feedback */
-  --color-info: #3B82F6;            /* Bleu */
-  --color-success: #10B981;         /* Vert */
-  --color-warning: #F59E0B;         /* Orange */
-  --color-error: #EF4444;           /* Rouge */
+  --color-info: #3B82F6;
+  /* Bleu */
+  --color-success: #10B981;
+  /* Vert */
+  --color-warning: #F59E0B;
+  /* Orange */
+  --color-error: #EF4444;
+  /* Rouge */
 }
 
 @layer components {
@@ -53,8 +66,17 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* optionnel pour effet "parallaxe" */
-    background-color: var(--color-bg); /* fallback */
+    background-attachment: fixed;
+    /* optionnel pour effet "parallaxe" */
+    background-color: var(--color-bg);
+    /* fallback */
+  }
+
+  select, option {
+    font-family: 'Montserrat', var(--font-secondary), sans-serif !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -63,4 +85,3 @@
 }
 
 @custom-variant menu (@media (width >=85rem))
-
