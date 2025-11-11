@@ -24,9 +24,9 @@ export default function DiscoverCard({
   return (
     <div className="bg-bg-tertiary border-hover-secondary flex w-full max-w-6xl flex-col overflow-hidden rounded-2xl border">
       {/* Header */}
-      <div className="bg-bg-secondary px-6 py-3">
+      <div className="bg-bg-secondary flex flex-col gap-3 px-6 py-3">
         {internalPath ? (
-          <div className="mb-4 flex items-center justify-between">
+          <div className="mb-2 flex items-center justify-between">
             <Link
               to={internalPath}
               className="group"
@@ -41,7 +41,8 @@ export default function DiscoverCard({
           <h3 className="text-2xl font-bold">{titre}</h3>
         )}
 
-        <div className="text-text-secondary mt-2 flex flex-wrap items-center gap-4 text-sm">
+        {/* Première ligne : durée / genres / plateformes */}
+        <div className="text-text-secondary flex flex-wrap items-center gap-4 text-sm">
           {duree && (
             <span>
               <span className="label-secondary">Durée :</span> {duree}
@@ -62,6 +63,42 @@ export default function DiscoverCard({
             </span>
           )}
         </div>
+
+        {/* Deuxième ligne : note VNDB, popularité, liens */}
+        <div className="text-text-secondary flex flex-wrap items-center justify-between gap-6 text-sm">
+          {/* Note et popularité */}
+          <div className="flex items-center gap-4">
+            {note_vndb && (
+              <span>
+                <span className="label-secondary">Note VNDB :</span>{" "}
+                {parseFloat(note_vndb).toFixed(2)}
+              </span>
+            )}
+            {popularite_vndb && (
+              <span>
+                <span className="label-secondary">Popularité VNDB :</span>{" "}
+                {popularite_vndb}
+              </span>
+            )}
+          </div>
+
+          {/* Liens */}
+          {lien_jeu.length + patch_fr.length > 0 && (
+            <div className="bg-bg-tertiary border-hover-secondary flex flex-wrap items-center gap-3 rounded-xl border p-2">
+              <span className="text-accent text-xs font-semibold tracking-wide uppercase">
+                Liens
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {lien_jeu.map((url, idx) => (
+                  <LinkWithIcon key={idx} url={url} />
+                ))}
+                {patch_fr.map((patch, idx) => (
+                  <LinkWithIcon key={idx} url={patch} />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Contenu principal */}
@@ -77,42 +114,6 @@ export default function DiscoverCard({
         <div className="bg-bg-secondary prose prose-invert text-text-secondary max-w-none flex-[3] rounded-md p-4 text-sm">
           <ReactMarkdown>{description}</ReactMarkdown>
         </div>
-      </div>
-
-      {/* Footer */}
-      <div className="bg-bg-secondary flex flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between">
-        {/* Bloc infos (note + popularité) */}
-        <div className="flex items-center gap-6 text-sm text-text-secondary">
-          {note_vndb && (
-            <span>
-              <span className="label-secondary">Note VNDB :</span>{" "}
-              {parseFloat(note_vndb).toFixed(2)}
-            </span>
-          )}
-          {popularite_vndb && (
-            <span>
-              <span className="label-secondary">Popularité VNDB :</span>{" "}
-              {popularite_vndb}
-            </span>
-          )}
-        </div>
-
-        {/* Bloc liens */}
-        {(lien_jeu.length + patch_fr.length > 0) && (
-          <div className="bg-bg-tertiary flex flex-wrap items-center gap-3 rounded-xl border border-hover-secondary p-3">
-            <span className="text-accent text-xs font-semibold uppercase tracking-wide">
-              Liens
-            </span>
-            <div className="flex flex-wrap gap-3">
-              {lien_jeu.map((url, idx) => (
-                <LinkWithIcon key={idx} url={url} />
-              ))}
-              {patch_fr.map((patch, idx) => (
-                <LinkWithIcon key={idx} url={patch} />
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
