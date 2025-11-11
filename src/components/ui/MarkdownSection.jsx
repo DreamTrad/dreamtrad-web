@@ -84,6 +84,7 @@ export default function MarkdownSection({
   file,
   content: inlineContent,
   className = "",
+  imageClassName = "",
 }) {
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
@@ -143,7 +144,9 @@ export default function MarkdownSection({
         image={meta.image}
         url={file || ""}
       />
-      <div className={`prose prose-invert max-w-none ${className}`}>
+      <div
+        className={`prose prose-invert max-w-none ${className} prose-p:text-justify prose-a:no-underline prose-a:font-bold`}
+      >
         <ReactMarkdown
           remarkPlugins={[remarkGfm, remarkDirective, remarkCustomSpoiler]}
           rehypePlugins={[rehypeRaw]}
@@ -157,12 +160,18 @@ export default function MarkdownSection({
                 />
               </div>
             ),
+            img: ({ node, ...props }) => (
+              <img
+                {...props}
+                className={imageClassName || undefined} // <-- applique seulement si fourni
+              />
+            ),
             a: ({ node, href, children, ...props }) => {
               if (href?.startsWith("/")) {
                 return (
                   <Link
                     to={href}
-                    className="text-accent hover:underline"
+                    className="text-accent-secondary hover:text-accent-tertiary font-bold no-underline"
                     {...props}
                   >
                     {children}
@@ -172,7 +181,7 @@ export default function MarkdownSection({
               return (
                 <a
                   href={href}
-                  className="text-accent hover:underline"
+                  className="text-accent-secondary hover:text-accent-tertiary font-bold no-underline"
                   target="_blank"
                   rel="noopener noreferrer"
                   {...props}

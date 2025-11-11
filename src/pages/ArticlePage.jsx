@@ -54,7 +54,7 @@ export default function ArticlePage() {
           )}
 
           {article.markdownPath ? (
-            <MarkdownSection file={article.markdownPath} />
+            <MarkdownSection file={article.markdownPath} imageClassName="mx-auto block" />
           ) : (
             <p className="text-text-secondary italic">
               Aucun contenu disponible pour cet article.
