@@ -9,12 +9,13 @@ export default function DiscoverCard({
   image,
   genre = [],
   duree,
+  note_vndb,
+  popularite_vndb,
   plateforme = [],
   lien_jeu = [],
   patch_fr = [],
   description,
 }) {
-  // Vérifie si patch_fr contient un lien interne
   const internalPatch = patch_fr.find((p) => p.startsWith("fr:/"));
   const internalPath = internalPatch
     ? `/jeu/${internalPatch.split("/")[2]}/general/`
@@ -41,14 +42,12 @@ export default function DiscoverCard({
         )}
 
         <div className="text-text-secondary mt-2 flex flex-wrap items-center gap-4 text-sm">
-          {/* Durée */}
           {duree && (
             <span>
               <span className="label-secondary">Durée :</span> {duree}
             </span>
           )}
 
-          {/* Plateformes */}
           {plateforme.length > 0 && (
             <div className="flex items-center gap-2">
               <span className="label-secondary">Plateformes :</span>
@@ -56,7 +55,6 @@ export default function DiscoverCard({
             </div>
           )}
 
-          {/* Genres */}
           {genre.length > 0 && (
             <span>
               <span className="label-secondary">Genres :</span>{" "}
@@ -68,7 +66,6 @@ export default function DiscoverCard({
 
       {/* Contenu principal */}
       <div className="flex flex-grow flex-col gap-6 p-6 md:flex-row">
-        {/* Image */}
         <div className="flex flex-[2] items-center justify-center">
           <img
             src={image}
@@ -77,21 +74,36 @@ export default function DiscoverCard({
           />
         </div>
 
-        {/* Description */}
         <div className="bg-bg-secondary prose prose-invert text-text-secondary max-w-none flex-[3] rounded-md p-4 text-sm">
           <ReactMarkdown>{description}</ReactMarkdown>
         </div>
       </div>
 
       {/* Footer */}
-      <div className="bg-bg-secondary flex flex-col gap-4 px-6 py-4 md:flex-row">
-        {/* Patchs / Liens */}
-        {lien_jeu.length + patch_fr.length > 0 && (
-          <div className="bg-bg-tertiary flex flex-1 flex-col gap-2 rounded-lg border p-3">
-            <span className="text-accent text-sm font-semibold tracking-wide uppercase">
+      <div className="bg-bg-secondary flex flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between">
+        {/* Bloc infos (note + popularité) */}
+        <div className="flex items-center gap-6 text-sm text-text-secondary">
+          {note_vndb && (
+            <span>
+              <span className="label-secondary">Note VNDB :</span>{" "}
+              {parseFloat(note_vndb).toFixed(2)}
+            </span>
+          )}
+          {popularite_vndb && (
+            <span>
+              <span className="label-secondary">Popularité VNDB :</span>{" "}
+              {popularite_vndb}
+            </span>
+          )}
+        </div>
+
+        {/* Bloc liens */}
+        {(lien_jeu.length + patch_fr.length > 0) && (
+          <div className="bg-bg-tertiary flex flex-wrap items-center gap-3 rounded-xl border border-hover-secondary p-3">
+            <span className="text-accent text-xs font-semibold uppercase tracking-wide">
               Liens
             </span>
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               {lien_jeu.map((url, idx) => (
                 <LinkWithIcon key={idx} url={url} />
               ))}

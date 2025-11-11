@@ -242,6 +242,8 @@ export default function DiscoverPage() {
               image={project.image}
               genre={project.genre}
               duree={project.duree}
+              note_vndb={project.note_vndb}
+              popularite_vndb={project.popularite_vndb}
               plateforme={project.plateforme}
               lien_jeu={project.lien_jeu}
               patch_fr={project.patch_fr}
