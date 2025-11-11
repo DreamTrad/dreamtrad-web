@@ -103,6 +103,7 @@ export default function ContactPage() {
               className="bg-bg-secondary mt-2 w-full rounded-md p-2"
               value={form.captcha}
               onChange={(e) => setForm({ ...form, captcha: e.target.value })}
+              onInvalid={handleInvalid}
               required
             />
           </div>
