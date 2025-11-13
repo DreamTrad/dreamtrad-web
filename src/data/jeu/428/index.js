@@ -9,7 +9,7 @@ export const game = {
     general: {
       name: "Le Jeu",
       sections: [
-        { id: "Presentation", name: "Présentation", file: "general/presentation" },
+        { id: "presentation", name: "Présentation", file: "general/presentation" },
       ],
     },
 
