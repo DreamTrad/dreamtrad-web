@@ -1,9 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { games } from "../data/jeu";
 import MetaTags from "../components/MetaTags";
-import GameNavBar from "../components/game/GameNavBar";
 import GameSidebar from "../components/game/GameSidebar";
 import AchievementsSection from "../components/game/AchievementsSection";
 import TeamRoleSection from "../components/game/TeamRoleSection";
@@ -11,13 +10,14 @@ import DownloadSection from "../components/game/DownloadSection";
 import GameHeader from "../components/game/GameHeader";
 import PlateformsTabs from "../components/game/PlateformTabs";
 import MarkdownSection from "../components/ui/MarkdownSection";
+import StaffSection from "../components/game/StaffSection";
 
 function DefaultContent({ text }) {
   return <div>{text}</div>;
 }
 
 // Fonction pour retourner le composant approprié pour une section
-export function renderSection(section, catKey, gameName, gameId, child = null) {
+export function renderSection(section, catKey, gameName, gameId, child = null, staffData = []) {
   // Cas d'une sous-section
   if (child) {
     if (!child.file)
@@ -27,7 +27,12 @@ export function renderSection(section, catKey, gameName, gameId, child = null) {
 
   // Cas spécifique pour chaque catégorie
   if (catKey === "general") {
-    if (!section.file)
+    if (section.id === "staff") {
+      console.log("Rendering StaffSection with staffData:", staffData);
+      return <StaffSection section={section} staffList={staffData} />;
+    }
+
+    else if (!section.file)
       return <DefaultContent text={`Section générale sans fichier`} />;
     return <MarkdownSection gameId={gameId} file={section.file} />;
   }
@@ -59,7 +64,7 @@ export function renderSection(section, catKey, gameName, gameId, child = null) {
         </>
       );
     }
-    if (!section.file) return <DefaultContent text={`Guide sans fichier`} />;
+    else if (!section.file) return <DefaultContent text={`Guide sans fichier`} />;
     return <MarkdownSection gameId={gameId} file={section.file} />;
   }
 
@@ -127,6 +132,14 @@ export default function GamePage() {
   const { id } = useParams();
   const game = games.find((g) => g.id === id);
   const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth >= 768);
+  const [staffData, setStaffData] = useState([]);
+
+  useEffect(() => {
+    fetch("/data/vn_staff.json")
+      .then((res) => res.json())
+      .then(setStaffData)
+      .catch((err) => console.error(err));
+  }, []);
 
   if (!game) return <div>Jeu introuvable</div>;
 
@@ -144,7 +157,7 @@ export default function GamePage() {
             {/* Collapse toggle button collé à la bordure */}
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="bg-bg-secondary hover:bg-hover absolute top-4 right-[-1.25rem] z-50 flex h-10 w-10 items-center justify-center rounded-full border border-bg-tertiary text-lg shadow-lg transition md:right-[-1rem]"
+              className="bg-bg-secondary hover:bg-hover border-bg-tertiary absolute top-4 right-[-1.25rem] z-50 flex h-10 w-10 items-center justify-center rounded-full border text-lg shadow-lg transition md:right-[-1rem]"
             >
               {sidebarOpen ? "←" : "→"}
             </button>
@@ -214,6 +227,7 @@ export default function GamePage() {
                                   game.name,
                                   game.id,
                                   child,
+                                  staffData,
                                 )}
                               />
                             ))}
@@ -231,6 +245,8 @@ export default function GamePage() {
                             catKey,
                             game.name,
                             game.id,
+                            null,
+                            staffData
                           )}
                         />
                       );
