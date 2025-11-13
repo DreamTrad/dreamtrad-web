@@ -2,7 +2,7 @@ import { NavLink, useParams, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { games } from "../../data/jeu";
 
-export default function GameSidebar() {
+export default function GameSidebar({ onLinkClick }) {
   const { id } = useParams();
   const location = useLocation();
   const game = games.find((g) => g.id === id);
@@ -24,18 +24,23 @@ export default function GameSidebar() {
       {sections.map((item, idx) => {
         const to = `/jeu/${id}/${categoryKey}/${item.id}`;
 
-        // --- si la section a des enfants ---
         if (item.children && item.children.length > 0) {
-          return <CollapsibleSection key={idx} item={item} baseTo={to} />;
+          return (
+            <CollapsibleSection
+              key={idx}
+              item={item}
+              baseTo={to}
+              onLinkClick={onLinkClick}
+            />
+          );
         }
 
-        // --- section normale ---
         return (
           <li key={idx}>
             <NavLink
               to={to}
               end
-onClick={(e) => {
+              onClick={(e) => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
                 if (onLinkClick) onLinkClick(e);
               }}
@@ -54,13 +59,11 @@ onClick={(e) => {
   );
 }
 
-// --- composant pour gérer une section avec enfants ---
-function CollapsibleSection({ item, baseTo }) {
+function CollapsibleSection({ item, baseTo, onLinkClick }) {
   const [open, setOpen] = useState(false);
 
   return (
     <li>
-      {/* bouton pour expand/collapse */}
       <button
         onClick={() => setOpen(!open)}
         className="hover:bg-hover-secondary flex w-full items-center justify-between rounded-md px-4 py-2"
@@ -69,7 +72,6 @@ function CollapsibleSection({ item, baseTo }) {
         <span className="text-sm">{open ? "▾" : "▸"}</span>
       </button>
 
-      {/* enfants affichés uniquement si open */}
       {open && (
         <ul className="mt-1 ml-4 space-y-1">
           {item.children.map((child, idx) => (
@@ -77,7 +79,7 @@ function CollapsibleSection({ item, baseTo }) {
               <NavLink
                 to={`${baseTo}/${child.id}`}
                 end
-onClick={(e) => {
+                onClick={(e) => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                   if (onLinkClick) onLinkClick(e);
                 }}

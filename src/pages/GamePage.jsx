@@ -126,7 +126,7 @@ export function renderSection(section, catKey, gameName, gameId, child = null) {
 export default function GamePage() {
   const { id } = useParams();
   const game = games.find((g) => g.id === id);
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth >= 768);
 
   if (!game) return <div>Jeu introuvable</div>;
 
@@ -144,12 +144,18 @@ export default function GamePage() {
             {/* Collapse toggle button collé à la bordure */}
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="bg-bg-secondary hover:bg-hover absolute top-4 right-0 translate-x-1/2 rounded-full p-1 shadow-md"
+              className="bg-bg-secondary hover:bg-hover absolute top-4 right-[-1.25rem] z-50 flex h-10 w-10 items-center justify-center rounded-full border border-bg-tertiary text-lg shadow-lg transition md:right-[-1rem]"
             >
               {sidebarOpen ? "←" : "→"}
             </button>
 
-            {sidebarOpen && <GameSidebar />}
+            {sidebarOpen && (
+              <GameSidebar
+                onLinkClick={() => {
+                  if (window.innerWidth < 768) setSidebarOpen(false);
+                }}
+              />
+            )}
           </aside>
 
           <section className="flex-1 p-6">

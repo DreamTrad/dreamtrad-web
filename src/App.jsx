@@ -15,7 +15,7 @@ import PasswordGate from "./components/PasswordGate";
 
 function App() {
   return (
-    <PasswordGate>
+    // <PasswordGate>
       <div className="text-text flex min-h-screen flex-col">
         <Header />
 
@@ -36,7 +36,7 @@ function App() {
 
         <Footer />
       </div>
-    </PasswordGate>
+    // </PasswordGate>
   );
 }
 
