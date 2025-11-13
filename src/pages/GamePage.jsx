@@ -28,7 +28,6 @@ export function renderSection(section, catKey, gameName, gameId, child = null, s
   // Cas spécifique pour chaque catégorie
   if (catKey === "general") {
     if (section.id === "staff") {
-      console.log("Rendering StaffSection with staffData:", staffData);
       return <StaffSection section={section} staffList={staffData} />;
     }
 
