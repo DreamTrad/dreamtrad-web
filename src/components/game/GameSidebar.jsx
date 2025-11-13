@@ -35,6 +35,10 @@ export default function GameSidebar() {
             <NavLink
               to={to}
               end
+onClick={(e) => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                if (onLinkClick) onLinkClick(e);
+              }}
               className={({ isActive }) =>
                 `block rounded-md px-4 py-2 transition ${
                   isActive ? "bg-hover text-text" : "hover:bg-hover-secondary"
@@ -73,6 +77,10 @@ function CollapsibleSection({ item, baseTo }) {
               <NavLink
                 to={`${baseTo}/${child.id}`}
                 end
+onClick={(e) => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  if (onLinkClick) onLinkClick(e);
+                }}
                 className={({ isActive }) =>
                   `block rounded-md px-3 py-1 text-sm transition ${
                     isActive ? "bg-hover text-text" : "hover:bg-hover-tertiary"

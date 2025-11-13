@@ -172,6 +172,7 @@ export default function MarkdownSection({
                   <Link
                     to={href}
                     className="text-accent-secondary hover:text-accent-tertiary font-bold no-underline"
+                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                     {...props}
                   >
                     {children}
