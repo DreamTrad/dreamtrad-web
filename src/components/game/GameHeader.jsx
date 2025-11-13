@@ -48,9 +48,22 @@ export default function GameHeader() {
             }
 
             return (
-              <NavLink key={key} to={to} end={end} className={linkClass}>
-                {category.name}
-              </NavLink>
+              <NavLink
+  key={key}
+  to={to}
+  className={({ isActive, isPending }) => {
+    // Keep "general" active for all its sub-routes
+    const active =
+      key === "general"
+        ? window.location.pathname.startsWith(`/jeu/${id}/general`)
+        : isActive;
+    return `px-4 py-2 text-base font-semibold rounded-xl transition-colors duration-150
+      ${active ? "bg-accent text-white shadow-md" : "text-text hover:bg-hover hover:text-accent-secondary"}`;
+  }}
+>
+  {category.name}
+</NavLink>
+
             );
           })}
         </nav>
