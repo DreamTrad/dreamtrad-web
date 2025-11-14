@@ -1,3 +1,4 @@
+import { characters } from "./general/characters";
 import { achievements } from "./guide/achievements";
 import { team } from "./jeufr/team";
 
@@ -11,6 +12,7 @@ export const game = {
       sections: [
         { id: "presentation", name: "Présentation", file: "general/presentation" },
         { id: "staff", name: "Staff", staff: ["kotaro-uchikoshi"] },
+        { id: "characters", name: "Personnages", data: characters },
       ],
     },
     guide: {

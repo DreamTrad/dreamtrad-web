@@ -1,4 +1,4 @@
-[
+export const characters = [
   {
     "id": "junpei",
     "name": "Junpei",
@@ -52,5 +52,5 @@
     "name": "L’homme au bracelet 9",
     "image": "/assets/jeu/999/general/characters/homme9.webp",
     "text": ""
-  }
-]
+  },
+];

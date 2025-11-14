@@ -28,7 +28,30 @@ export function renderSection(section, catKey, gameName, gameId, child = null, s
   // Cas spécifique pour chaque catégorie
   if (catKey === "general") {
     if (section.id === "staff") {
-      return <StaffSection section={section} staffList={staffData} />;
+      return (
+        <>
+        <MetaTags
+        title={`${gameName} - Staff`}
+        description={`"Les personnes derrière ${gameName}."`}
+        url={`jeux/${gameId}/general/staff`}
+        />
+      <StaffSection section={section} title="Le staff" staffList={staffData} />;
+      </>
+      )
+    }
+
+    if (section.id === "characters") {
+      return (
+        <>
+          <MetaTags
+            title={`${gameName} - Personnages`}
+            description={`Découvrez les personnages de ${gameName}.`}
+            image={`assets/jeu/${gameId}/cover.webp`}
+            url={`jeux/${gameId}/guide/characters`}
+          />
+          <StaffSection section={section} title="Les personnages" staffList={section.data} />;
+        </>
+      );
     }
 
     else if (!section.file)
