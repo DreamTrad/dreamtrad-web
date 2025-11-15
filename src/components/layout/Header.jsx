@@ -7,7 +7,7 @@ const mainMenu = [
   { name: "Visual Novel", to: "/jeux" },
   { name: "Recrutement", to: "/recrutement" },
   { name: "Articles", to: "/articles" },
-  { name: "VNDB-FR", to: "/decouvrir" },
+  { name: "VNDB-FR", to: "/vndb-fr" },
   { name: "Équipe", to: "/equipe" },
   { name: "Contact", to: "/contact" },
 ];

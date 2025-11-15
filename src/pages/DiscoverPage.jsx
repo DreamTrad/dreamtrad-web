@@ -68,7 +68,7 @@ export default function DiscoverPage() {
     error,
   } = useFetchWithLoader("data/vn_fr_list.json", []);
 
-  const file = "../../data/decouvrir-global";
+  const file = "../../data/vndb-fr-global";
 
   // Les states pour filtres
   const [searchTerm, setSearchTerm] = useState("");

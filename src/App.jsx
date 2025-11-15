@@ -27,7 +27,7 @@ function App() {
             <Route path="/recrutement" element={<RecruitmentPage />} />
             <Route path="/articles" element={<ArticleListPage />} />
             <Route path="/articles/:id" element={<ArticlePage />} />
-            <Route path="/decouvrir" element={<DiscoverPage />} />
+            <Route path="/vndb-fr" element={<DiscoverPage />} />
             <Route path="/equipe" element={<TeamPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/mentions-legales" element={<ReglementationsPage />} />

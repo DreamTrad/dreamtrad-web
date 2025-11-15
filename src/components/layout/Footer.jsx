@@ -35,7 +35,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/decouvrir" className="hover:text-accent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+              <Link to="/vndb-fr" className="hover:text-accent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                 VNDB-FR
               </Link>
             </li>
