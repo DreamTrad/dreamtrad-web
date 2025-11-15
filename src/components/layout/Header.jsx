@@ -46,7 +46,12 @@ export default function Header() {
         <ul className="menu:flex mx-auto hidden h-full max-w-6xl items-center justify-center gap-6">
           {mainMenu.map((item) => (
             <li key={item.name}>
-              <NavLink to={item.to}>{item.name}</NavLink>
+              <NavLink
+                to={item.to}
+                className="hover:bg-bg-tertiary hover:text-accent after:bg-accent relative rounded-md px-4 py-2 text-base font-semibold transition after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 hover:after:w-full"
+              >
+                {item.name}
+              </NavLink>
             </li>
           ))}
         </ul>
