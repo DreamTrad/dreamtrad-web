@@ -9,7 +9,7 @@ export default function StaffSection({ section, title, staffList }) {
 
   return (
     <div className="pb-16">
-      <div className="mx-auto max-w-6xl p-8">
+      <div className="mx-auto max-w-9xl p-8">
         <h1 className="text-text mb-8 text-center text-3xl font-bold">{title}</h1>
 
         {section.file && (
