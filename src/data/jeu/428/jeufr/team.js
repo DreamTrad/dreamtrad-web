@@ -2,7 +2,6 @@ export const team = [
     {
         "category": "Chef de projet",
         "people": [
-            { "name": "AlexisTGF", "role": "", "link": "/equipe" },
         ]
     },
     {
