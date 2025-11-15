@@ -20,6 +20,7 @@ export const game = {
         { id: "general", name: "Général", file: "guide/general"},
         { id: "notes", name: "Débloquer les notes", file: "guide/notes"  },
         { id: "fins", name: "Fins du jeu", file: "guide/fins" },
+        { id: "plus_loin", name: "Pour aller plus loin", file: "guide/plus_loin" },
         { id: "achievements", name: "succès",  data: achievements },
       ],
     },
