@@ -42,17 +42,17 @@ export default function DiscordWidget({ inviteUrl }) {
 
       {/* Invite Card */}
       <div className="w-full">
-        <h3 className="text-accent mb-2 text-sm font-semibold">
+        <h3 className="text-accent mb-2 font-semibold">
           Rejoindre le Discord
         </h3>
-        <p className="text-text-secondary mb-4 text-xs">
-          Discutez, participez aux bêta-tests ou contribuez aux projets !
+        <p className="text-text-secondary mb-4 text-sm">
+          Discutez de Visual Novel, participez aux bêta-tests ou contribuez aux projets !
         </p>
         <a
           href={inviteUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-accent-tertiary text-accent-secondary inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-semibold shadow transition hover:opacity-90 hover:shadow-lg w-full"
+          className="bg-accent-tertiary text-text inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-semibold shadow transition hover:opacity-90 hover:shadow-lg w-full"
         >
           <img src={discordIcon} alt="Discord" className="h-5 w-5" />
           Rejoindre
