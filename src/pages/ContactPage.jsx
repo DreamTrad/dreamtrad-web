@@ -1,11 +1,23 @@
 import { useState, useEffect } from "react";
-import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from "react-simple-captcha";
+import {
+  loadCaptchaEnginge,
+  LoadCanvasTemplate,
+  validateCaptcha,
+} from "react-simple-captcha";
 import emailjs from "@emailjs/browser";
 import MetaTags from "../components/MetaTags";
+import MarkdownSection from "../components/ui/MarkdownSection";
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", title: "", message: "", captcha: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    title: "",
+    message: "",
+    captcha: "",
+  });
   const [status, setStatus] = useState("");
+  const file = "../../data/contact-global";
 
   useEffect(() => {
     loadCaptchaEnginge(6);
@@ -27,7 +39,12 @@ export default function ContactPage() {
     };
 
     emailjs
-      .send("service_ojinfwk", "template_wgl7rth", templateParams, "4XQDzQMfhKf5nKZW9")
+      .send(
+        "service_ojinfwk",
+        "template_wgl7rth",
+        templateParams,
+        "4XQDzQMfhKf5nKZW9",
+      )
       .then(() => {
         setStatus("Message envoyé");
         setForm({ name: "", email: "", title: "", message: "", captcha: "" }); // reset form
@@ -51,9 +68,24 @@ export default function ContactPage() {
 
   return (
     <>
-      <MetaTags title="Contact" description="Envoyez-nous un message." url="contact" />
-      <div className="bg-bg-tertiary text-text mx-auto max-w-2xl rounded-xl p-6 shadow-lg mt-8">
-        <h1 className="mb-4 text-2xl font-bold">Contactez-nous</h1>
+      <MetaTags
+        title="Contact"
+        description="Envoyez-nous un message."
+        url="contact"
+      />
+      <div className="mx-auto max-w-6xl p-8">
+        <h1 className="text-accent mb-8 text-center text-3xl font-bold">
+          Contact
+        </h1>
+        <div className="mt-16">
+          <MarkdownSection
+            file={file}
+            className="text-justify leading-relaxed"
+          />
+        </div>
+      </div>
+      <div className="bg-bg-tertiary text-text mx-auto mb-8 max-w-2xl rounded-xl p-6 shadow-lg">
+        <h1 className="mb-4 text-2xl font-bold">Contactez-nous par mail</h1>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -96,7 +128,10 @@ export default function ContactPage() {
             required
           />
           <div className="mb-2">
-            <LoadCanvasTemplate reloadText="Recharger le captcha" reloadColor="var(--color-accent-secondary)" />
+            <LoadCanvasTemplate
+              reloadText="Recharger le captcha"
+              reloadColor="var(--color-accent-secondary)"
+            />
             <input
               type="text"
               placeholder="Entrez le code"
@@ -109,7 +144,7 @@ export default function ContactPage() {
           </div>
           <button
             type="submit"
-            className="bg-accent hover:bg-accent/80 mt-2 rounded-lg px-4 py-2 text-text"
+            className="bg-accent hover:bg-accent/80 text-text mt-2 rounded-lg px-4 py-2"
           >
             Envoyer
           </button>
