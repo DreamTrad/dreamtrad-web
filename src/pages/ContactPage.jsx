@@ -52,7 +52,7 @@ export default function ContactPage() {
   return (
     <>
       <MetaTags title="Contact" description="Envoyez-nous un message." url="contact" />
-      <div className="bg-bg-tertiary text-text mx-auto max-w-2xl rounded-xl p-6 shadow-lg">
+      <div className="bg-bg-tertiary text-text mx-auto max-w-2xl rounded-xl p-6 shadow-lg mt-8">
         <h1 className="mb-4 text-2xl font-bold">Contactez-nous</h1>
         <form onSubmit={handleSubmit}>
           <input
