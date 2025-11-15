@@ -7,14 +7,14 @@ export const team = [
     {
         "category": "Traducteur",
         "people": [
-            { "name": "Ritsu", "role": "", "link": "" },
-            { "name": "Floflosera", "role": "", "link": "" },
+            { "name": "Ritsu", "role": "", "link": "/equipe" },
+            { "name": "Floflosera", "role": "", "link": "/equipe" },
         ]
     },
     {
         "category": "Programmeur",
         "people": [
-            { "name": "Floflosera", "role": "", "link": "" },
+            { "name": "Floflosera", "role": "", "link": "/equipe" },
         ]
     },
     {

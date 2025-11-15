@@ -7,13 +7,13 @@ export const team = [
     {
         "category": "Traducteur",
         "people": [
-            { "name": "Ritsu", "role": "Traducteur", "link": "" },
+            { "name": "Ritsu", "role": "Traducteur", "link": "/equipe" },
         ]
     },
     {
         "category": "Programmeur",
         "people": [
-            { "name": "Silous", "role": "Recodage table ouija, adaptation des outils", "link": "" },
+            { "name": "Silous", "role": "Recodage table ouija, adaptation des outils", "link": "/equipe" },
             { "name": "Xzonn", "role": "Outils chinois ayant servi au projet", "link": "" },
         ]
     },
@@ -26,13 +26,13 @@ export const team = [
     {
         "category": "Relecteur",
         "people": [
-            { "name": "Floflosera", "role": "relecteur/Bêta-test", "link": "" },
+            { "name": "Floflosera", "role": "relecteur/Bêta-test", "link": "/equipe" },
             { "name": "Nadechi", "role": "Bêta-test", "link": "" },
             { "name": "Zeravica", "role": "Bêta-test", "link": "" },
             { "name": "Zuzur", "role": "Bêta-test", "link": "" },
             { "name": "Shadow", "role": "Bêta-test", "link": "" },
             { "name": "Kikoro", "role": "Bêta-test", "link": "" },
-            { "name": "AlexisTGF", "role": "Bêta-test", "link": "" },
+            { "name": "AlexisTGF", "role": "Bêta-test", "link": "/equipe" },
             { "name": "Ronano", "role": "Bêta-test", "link": "" },
         ]
     },

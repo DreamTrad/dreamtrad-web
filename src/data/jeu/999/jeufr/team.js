@@ -7,8 +7,8 @@ export const team = [
     {
         "category": "Traducteur",
         "people": [
-            { "name": "Ritsu", "role": "Nouvelle version", "link": "" },
-            { "name": "Silous", "role": "Nouvelle version", "link": "" },
+            { "name": "Ritsu", "role": "Nouvelle version", "link": "/equipe" },
+            { "name": "Silous", "role": "Nouvelle version", "link": "/equipe" },
             { "name": "Corrigo", "role": "Ancienne version DS", "link": "" },
             { "name": "ShadF", "role": "Ancienne version DS", "link": "" },
             { "name": "Nerdjaken", "role": "Ancienne version DS", "link": "" },
@@ -26,8 +26,8 @@ export const team = [
     {
         "category": "Programmeur",
         "people": [
-            { "name": "Silous", "role": "Utilisation des outils", "link": "" },
-            { "name": "Floflosera", "role": "Utilisation des outils", "link": "" },
+            { "name": "Silous", "role": "Utilisation des outils", "link": "/equipe" },
+            { "name": "Floflosera", "role": "Utilisation des outils", "link": "/equipe" },
             { "name": "Mxscr (Firo)", "role": "Portage Vita", "link": "https://twitter.com/Mxscr" },
             { "name": "BlackSmith01", "role": "Outil coréen ayant servi au projet", "link": "" },
         ]
@@ -35,21 +35,21 @@ export const team = [
     {
         "category": "Images",
         "people": [
-            { "name": "Silous", "role": "Édition des images", "link": "" },
+            { "name": "Silous", "role": "Édition des images", "link": "/equipe" },
             { "name": "NoFall", "role": "Édition des images", "link": "" },
-            { "name": "Ritsu", "role": "Édition des images", "link": "" },
-            { "name": "AlexisTGF", "role": "Édition des vidéos", "link": "" },
+            { "name": "Ritsu", "role": "Édition des images", "link": "/equipe" },
+            { "name": "AlexisTGF", "role": "Édition des vidéos", "link": "/equipe" },
             { "name": "it’s Bread", "role": "Édition des images", "link": "" },
-            { "name": "DaphneeZouGaming", "role": "Édition des images", "link": "" },
+            { "name": "DaphneeZouGaming", "role": "Édition des images", "link": "/equipe" },
         ]
     },
     {
         "category": "Relecteur",
         "people": [
-            { "name": "Silous", "role": "Relecteur", "link": "" },
-            { "name": "Ritsu", "role": "Relecteur", "link": "" },
-            { "name": "Floflosera", "role": "Relecteur", "link": "" },
-            { "name": "Bedriol", "role": "Bêta-test", "link": "" },
+            { "name": "Silous", "role": "Relecteur", "link": "/equipe" },
+            { "name": "Ritsu", "role": "Relecteur", "link": "/equipe" },
+            { "name": "Floflosera", "role": "Relecteur", "link": "/equipe" },
+            { "name": "Bedriol", "role": "Bêta-test", "link": "/equipe" },
             { "name": "Aclios", "role": "Bêta-test", "link": "" },
             { "name": "LouDorée", "role": "Bêta-test", "link": "" },
             { "name": "Inkory", "role": "Bêta-test", "link": "" },
@@ -57,7 +57,7 @@ export const team = [
             { "name": "Jorgemon", "role": "Bêta-test", "link": "" },
             { "name": "OokamiShiro", "role": "Bêta-test", "link": "" },
             { "name": "Zackmo", "role": "Bêta-test", "link": "" },
-            { "name": "AlexisTGF", "role": "Bêta-test", "link": "" },
+            { "name": "AlexisTGF", "role": "Bêta-test", "link": "/equipe" },
         ]
     },
 ];

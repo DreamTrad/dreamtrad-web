@@ -13,7 +13,7 @@ export const team = [
     {
         "category": "Programmeur",
         "people": [
-            { "name": "Silous", "role": "", "link": "" },
+            { "name": "Silous", "role": "", "link": "/equipe" },
         ]
     },
     {

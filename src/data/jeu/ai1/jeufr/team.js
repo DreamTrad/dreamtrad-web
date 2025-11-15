@@ -7,11 +7,11 @@ export const team = [
     {
         "category": "Traducteur",
         "people": [
-            { "name": "jls", "role": "", "link": "" },
-            { "name": "Ritsu", "role": "", "link": "" },
-            { "name": "AlexisTGF", "role": "", "link": "" },
-            { "name": "Daphnée Zou Gaming", "role": "", "link": "" },
-            { "name": "Foubou", "role": "", "link": "" },
+            { "name": "jls", "role": "", "link": "/equipe" },
+            { "name": "Ritsu", "role": "", "link": "/equipe" },
+            { "name": "AlexisTGF", "role": "", "link": "/equipe" },
+            { "name": "Daphnée Zou Gaming", "role": "", "link": "/equipe" },
+            { "name": "Foubou", "role": "", "link": "/equipe" },
             { "name": "Dratui", "role": "", "link": "" },
             { "name": "Icaro", "role": "", "link": "" },
         ]
@@ -26,17 +26,17 @@ export const team = [
         "category": "Images",
         "people": [
             { "name": "roli300", "role": "", "link": "" },
-            { "name": "Daphnée Zou Gaming", "role": "", "link": "" },
+            { "name": "Daphnée Zou Gaming", "role": "", "link": "/equipe" },
         ]
     },
     {
         "category": "Relecteur",
         "people": [
-            { "name": "jls", "role": "relecteur", "link": "" },
-            { "name": "Ritsu", "role": "relecteur", "link": "" },
-            { "name": "AlexisTGF", "role": "relecteur", "link": "" },
-            { "name": "Daphnée Zou Gaming", "role": "relecteur", "link": "" },
-            { "name": "Foubou", "role": "relecteur", "link": "" },
+            { "name": "jls", "role": "relecteur", "link": "/equipe" },
+            { "name": "Ritsu", "role": "relecteur", "link": "/equipe" },
+            { "name": "AlexisTGF", "role": "relecteur", "link": "/equipe" },
+            { "name": "Daphnée Zou Gaming", "role": "relecteur", "link": "/equipe" },
+            { "name": "Foubou", "role": "relecteur", "link": "/equipe" },
             { "name": "Dratui", "role": "relecteur", "link": "" },
             { "name": "Icaro", "role": "relecteur", "link": "" },
         ]

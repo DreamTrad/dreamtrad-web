@@ -7,9 +7,9 @@ export const team = [
     {
         "category": "Traducteur",
         "people": [
-            { "name": "Ritsu", "role": "", "link": "" },
-            { "name": "jls", "role": "", "link": "" },
-            { "name": "Floflosera", "role": "", "link": "" },
+            { "name": "Ritsu", "role": "", "link": "/equipe" },
+            { "name": "jls", "role": "", "link": "/equipe" },
+            { "name": "Floflosera", "role": "", "link": "/equipe" },
             { "name": "Ana", "role": "", "link": "" },
             { "name": "Doudoussin", "role": "", "link": "" },
         ]
@@ -17,8 +17,8 @@ export const team = [
     {
         "category": "Programmeur",
         "people": [
-            { "name": "Silous", "role": "Utilisation des outils", "link": "" },
-            { "name": "Floflosera", "role": "Utilisation des outils", "link": "" },
+            { "name": "Silous", "role": "Utilisation des outils", "link": "/equipe" },
+            { "name": "Floflosera", "role": "Utilisation des outils", "link": "/equipe" },
             { "name": "Aclios", "role": "Extraction des textures", "link": "" },
             { "name": "Mxscr (Firo)", "role": "Portage Vita", "link": "https://twitter.com/Mxscr" },
             { "name": "BlackSmith01", "role": "Outil coréen ayant servi au projet", "link": "" },
@@ -27,19 +27,19 @@ export const team = [
     {
         "category": "Images",
         "people": [
-            { "name": "Silous", "role": "Édition des images", "link": "" },
-            { "name": "AlexisTGF", "role": "Édition des vidéos", "link": "" },
+            { "name": "Silous", "role": "Édition des images", "link": "/equipe" },
+            { "name": "AlexisTGF", "role": "Édition des vidéos", "link": "/equipe" },
         ]
     },
     {
         "category": "Relecteur",
         "people": [
-            { "name": "Silous", "role": "Relecteur", "link": "" },
-            { "name": "Ritsu", "role": "Relecteur", "link": "" },
-            { "name": "Floflosera", "role": "Relecteur", "link": "" },
-            { "name": "jls", "role": "Relecteur", "link": "" },
-            { "name": "AlexisTGF", "role": "Relecteur", "link": "" },
-            { "name": "Bedriol", "role": "Bêta-test", "link": "" },
+            { "name": "Silous", "role": "Relecteur", "link": "/equipe" },
+            { "name": "Ritsu", "role": "Relecteur", "link": "/equipe" },
+            { "name": "Floflosera", "role": "Relecteur", "link": "/equipe" },
+            { "name": "jls", "role": "Relecteur", "link": "/equipe" },
+            { "name": "AlexisTGF", "role": "Relecteur", "link": "/equipe" },
+            { "name": "Bedriol", "role": "Bêta-test", "link": "/equipe" },
             { "name": "Aclios", "role": "Bêta-test", "link": "" },
             { "name": "Ruby", "role": "Bêta-test", "link": "" },
         ]

@@ -2,19 +2,19 @@ export const team = [
     {
         "category": "Chef de projet",
         "people": [
-            { "name": "AlexisTGF", "role": "", "link": "" },
+            { "name": "AlexisTGF", "role": "", "link": "/equipe" },
         ]
     },
     {
         "category": "Traducteur",
         "people": [
-            { "name": "AlexisTGF", "role": "", "link": "" },
+            { "name": "AlexisTGF", "role": "", "link": "/equipe" },
         ]
     },
     {
         "category": "Programmeur",
         "people": [
-            { "name": "Silous", "role": "Utilisation des outils", "link": "" },
+            { "name": "Silous", "role": "Utilisation des outils", "link": "/equipe" },
             { "name": "miegir", "role": "Outil russe ayant servi au projet", "link": "https://github.com/miegir" },
         ]
     },

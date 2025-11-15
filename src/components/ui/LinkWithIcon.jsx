@@ -14,6 +14,9 @@ import youtubeIcon from "../../assets/icons/website/youtube.svg";
 import xboxIcon from "../../assets/icons/website/xbox.svg";
 import playstationIcon from "../../assets/icons/website/playstation.svg";
 
+// Custom internal-site icon
+const localSiteIcon = "/assets/dreamtrad-logo.png";
+
 const iconMap = [
   { match: ["discord.gg", "discord.com"], icon: discordIcon, label: "Discord" },
   { match: ["github.com"], icon: githubIcon, label: "GitHub" },
@@ -36,20 +39,28 @@ export default function LinkWithIcon({ url }) {
   let selected;
   let isInternal = false;
 
-  // Cas spécial : lien FR → interne
+  // Case 1 : FR-specific internal link
   if (url.startsWith("fr:")) {
-    normalizedUrl = url.replace(/^fr:/, ""); // enlève "fr:"
+    normalizedUrl = url.replace(/^fr:/, "");
     selected = { icon: flagFrIcon, label: "Patch FR" };
     isInternal = true;
-  } else {
+  }
+
+  // Case 2 : Generic internal path starting with "/"
+  else if (url.startsWith("/")) {
+    normalizedUrl = url;
+    selected = { icon: localSiteIcon, label: "DreamTrad" };
+    isInternal = true;
+  }
+
+  // Case 3 : External link
+  else {
     normalizedUrl = url.startsWith("http") ? url : `https://${url}`;
 
-    // Vérifie dans iconMap
     selected = iconMap.find((entry) =>
       entry.match.some((m) => normalizedUrl.includes(m))
     );
 
-    // Si non trouvé → globe par défaut avec label = racine du site sans https://
     if (!selected) {
       const origin = new URL(normalizedUrl).origin;
       selected = {
@@ -63,14 +74,13 @@ export default function LinkWithIcon({ url }) {
     <>
       <img src={selected.icon} alt={selected.label} className="h-5 w-5" />
 
-      {/* Tooltip custom */}
+      {/* Tooltip */}
       <span className="absolute bottom-full left-1/2 mb-2 -translate-x-1/2 rounded bg-accent-tertiary px-2 py-1 text-xs whitespace-nowrap text-text opacity-0 transition group-hover:opacity-100">
         {selected.label}
       </span>
     </>
   );
 
-  // Rend Link si interne, <a> sinon
   return isInternal ? (
     <Link
       to={normalizedUrl}
