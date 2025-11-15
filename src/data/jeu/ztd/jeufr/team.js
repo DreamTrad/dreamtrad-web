@@ -1,10 +1,5 @@
 export const team = [
     {
-        "category": "Chef de projet",
-        "people": [
-        ]
-    },
-    {
         "category": "Traducteur",
         "people": [
             { "name": "Ritsu", "role": "Nouvelle version", "link": "/equipe" },
@@ -17,7 +12,7 @@ export const team = [
         "people": [
             { "name": "Silous", "role": "Utilisation des outils", "link": "/equipe" },
             { "name": "Floflosera", "role": "Utilisation des outils", "link": "/equipe" },
-            { "name": "BlackSmith01", "role": "Outil coréen ayant servi au projet", "link": "" },
+            { "name": "BlackSmith01", "role": "Outil coréen ayant servi au projet", "link": "https://m.blog.naver.com/PostView.naver?blogId=hahakickkick&logNo=222514399062&navType=by" },
         ]
     },
     {

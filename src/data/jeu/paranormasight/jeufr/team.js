@@ -1,10 +1,5 @@
 export const team = [
     {
-        "category": "Chef de projet",
-        "people": [
-        ]
-    },
-    {
         "category": "Traducteur",
         "people": [
             { "name": "Ritsu", "role": "Traducteur", "link": "/equipe" },
@@ -14,7 +9,7 @@ export const team = [
         "category": "Programmeur",
         "people": [
             { "name": "Silous", "role": "Recodage table ouija, adaptation des outils", "link": "/equipe" },
-            { "name": "Xzonn", "role": "Outils chinois ayant servi au projet", "link": "" },
+            { "name": "Xzonn", "role": "Outils chinois ayant servi au projet", "link": "https://github.com/Xzonn/ParanormasightChsLocalizationHelper" },
         ]
     },
     {

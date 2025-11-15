@@ -1,10 +1,5 @@
 export const team = [
     {
-        "category": "Chef de projet",
-        "people": [
-        ]
-    },
-    {
         "category": "Traducteur",
         "people": [
             { "name": "Bedriol", "role": "", "link": "/equipe" },
