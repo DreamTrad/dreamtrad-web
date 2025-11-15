@@ -29,7 +29,7 @@ export default function ReglementationsPage() {
         description="Mentions légales du site."
         url="mentions-legales"
       />
-      <div className="bg-bg-tertiary border-bg-secondary mx-auto max-w-4xl rounded-xl border p-8 shadow-md">
+      <div className="bg-bg-tertiary border-bg-secondary mx-auto max-w-4xl rounded-xl border p-8 shadow-md mt-8 mb-8">
         <MarkdownSection content={content} />
       </div>
     </>
