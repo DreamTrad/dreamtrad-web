@@ -59,7 +59,7 @@ export default function HomePage() {
           </div>
 
           {/* Colonne secondaire */}
-          <aside className="flex flex-col gap-6">
+          <aside className="flex flex-col gap-16">
             <DiscordCard inviteUrl="https://t.co/O6tlFvR8wa" />
 
             <div className="from-accent to-accent-tertiary flex flex-col items-center justify-between gap-6 overflow-hidden rounded-2xl bg-gradient-to-br p-6 text-white shadow-xl md:flex-row">
