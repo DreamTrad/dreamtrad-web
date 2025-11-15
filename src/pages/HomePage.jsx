@@ -5,6 +5,7 @@ import MetaTags from "../components/MetaTags";
 import DiscordCard from "../components/card/DiscordCard";
 import MarkdownSection from "../components/ui/MarkdownSection";
 import ProjectProgressCard from "../components/card/ProjectProgressCard";
+import AvailablePatches from "../components/game/AvailablePatches";
 import chibiAiba from "../assets/chibi/chibi-aiba.webp";
 
 export default function HomePage() {
@@ -53,12 +54,8 @@ export default function HomePage() {
               )}
             </div>
 
-            <section className="rounded-md border p-6">
-              <h2 className="mb-2 text-lg font-semibold">
-                Patches disponibles
-              </h2>
-              <p>Placeholder : liens vers pages de téléchargement</p>
-            </section>
+           <AvailablePatches />
+
           </div>
 
           {/* Colonne secondaire */}
