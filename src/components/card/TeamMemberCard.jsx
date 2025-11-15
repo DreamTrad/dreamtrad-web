@@ -1,5 +1,4 @@
 import LinkWithIcon from "../ui/LinkWithIcon";
-import ReactMarkdown from "react-markdown";
 
 export default function TeamMemberCard({
   name,

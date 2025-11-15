@@ -35,7 +35,7 @@ export function renderSection(section, catKey, gameName, gameId, child = null, s
         description={`"Les personnes derrière ${gameName}."`}
         url={`jeux/${gameId}/general/staff`}
         />
-      <StaffSection section={section} title="Le staff" staffList={staffData} />;
+      <StaffSection section={section} title="Le staff" staffList={staffData} />
       </>
       )
     }
@@ -49,9 +49,9 @@ export function renderSection(section, catKey, gameName, gameId, child = null, s
             image={`assets/jeu/${gameId}/cover.webp`}
             url={`jeux/${gameId}/guide/characters`}
           />
-          <StaffSection section={section} title="Les personnages" staffList={section.data} />;
+          <StaffSection section={section} title="Les personnages" staffList={section.data} />
         </>
-      );
+      )
     }
 
     else if (!section.file)

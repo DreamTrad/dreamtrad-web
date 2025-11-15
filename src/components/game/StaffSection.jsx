@@ -1,11 +1,10 @@
-import MetaTags from "../MetaTags";
 import MarkdownSection from "../ui/MarkdownSection";
 import StaffCard from "../card/StaffCard";
 
 export default function StaffSection({ section, title, staffList }) {
   const filtered = section.staff
     ? staffList.filter((s) => section.staff.includes(s.id))
-    : staffList;
+    : staffList
 
   return (
     <div className="pb-16">
