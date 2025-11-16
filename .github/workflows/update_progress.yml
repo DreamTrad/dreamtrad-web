@@ -2,8 +2,8 @@ name: Update progress.json from Google Sheet
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 2 * * 1"  # 02:00 UTC tous les lundis
+  # schedule:
+  #   - cron: "0 2 * * 1"  # 02:00 UTC tous les lundis
 
 permissions:
   contents: write
