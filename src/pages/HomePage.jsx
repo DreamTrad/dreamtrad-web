@@ -33,7 +33,7 @@ export default function HomePage() {
             <MarkdownSection file={file_presentation} />
 
             {/* Avancement des projets */}
-            <h2 className="mb-4 text-center text-lg font-semibold">
+            <h2 className=" text-center text-lg font-semibold">
               Avancement des projets
             </h2>
             <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,450px))] justify-center gap-6">
@@ -53,6 +53,9 @@ export default function HomePage() {
                 </p>
               )}
             </div>
+            <p className="text-text-secondary text-center text-sm mb-4 leading-tight italic">
+              Mis à jour tous les lundis matin !
+            </p>
 
            <AvailablePatches />
 
