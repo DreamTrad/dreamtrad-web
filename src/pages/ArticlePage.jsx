@@ -37,13 +37,8 @@ export default function ArticlePage() {
         </Link>
 
         <div className="bg-bg-tertiary border-bg-secondary rounded-xl border p-6 shadow-lg">
-          <h1 className="text-accent mb-4 text-3xl font-bold">
-            {article.title}
-          </h1>
-          <p className="text-text-tertiary mb-6">
-            {article.author} —{" "}
-            {new Date(article.date).toLocaleDateString("fr-FR")}
-          </p>
+
+
 
           {article.coverImage && (
             <img
@@ -52,6 +47,14 @@ export default function ArticlePage() {
               className="mb-6 w-full rounded-lg shadow-md"
             />
           )}
+          <h1 className="text-text mb-4 text-3xl font-bold">
+            {article.title}
+          </h1>
+
+          <p className="text-text-tertiary mb-6">
+            {article.author} —{" "}
+            {new Date(article.date).toLocaleDateString("fr-FR")}
+          </p>
 
           {article.markdownPath ? (
             <MarkdownSection file={article.markdownPath} imageClassName="mx-auto block" />
