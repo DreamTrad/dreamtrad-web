@@ -1,10 +1,14 @@
 import MarkdownSection from "../ui/MarkdownSection";
 import DownloadButton from "../ui/DownloadButton";
+import ImageCarousel from "../game/ImageCarousel";
 
 export default function DownloadSection({ gameId, file, platforms }) {
   return (
     <div className="space-y-16">
       {file && <MarkdownSection gameId={gameId} file={file} />}
+
+      <ImageCarousel gameId={gameId} interval={15000} />
+
 
       <div className="grid justify-center gap-10">
         {platforms.map((p) => (
