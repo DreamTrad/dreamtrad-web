@@ -6,10 +6,18 @@ export default function ArticleListPage() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch("data/articles.json")
+    fetch("/data/articles.json")
       .then((res) => res.json())
-      .then((data) => setArticles(data))
-      .catch((err) => console.error("Erreur chargement articles :", err));
+      .then((data) => {
+        // Trier du plus récent au plus ancien
+        const sorted = [...data].sort(
+          (a, b) => new Date(b.date) - new Date(a.date),
+        );
+        setArticles(sorted);
+      })
+      .catch((err) =>
+        console.error("Erreur chargement articles :", err),
+      );
   }, []);
 
   return (
