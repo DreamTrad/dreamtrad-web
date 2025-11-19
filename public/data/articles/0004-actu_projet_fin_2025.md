@@ -2,7 +2,7 @@ Au lancement du site, deux nouveaux projets ont démarré, mais nous avons aussi
 
 ## 428: Shibuya Scramble
 
-Ce projet a été lancé l’année dernière. Il s’agit d’un Visual Novel de renom de Spike Chunsoft par Jiro Ishi. Ça particularité est de faire usage de photos et d’acteurs au lieu des traditionnels dessins, ou modèles 3D.
+Ce projet a été lancé l’année dernière. Il s’agit d’un Visual Novel de renom de Spike Chunsoft par Jiro Ishi. Sa particularité est de faire usage de photos et d’acteurs au lieu des traditionnels dessins, ou modèles 3D.
 
 *Dans le quartier de Shibuya, de drôles d’événements de passe pendant la journée du 28 avril : Un kidnapping, un virus, un journal dans le mal, un produit miracle pour mincir… Cinq personnes vont être embarqués dans ces histoires, et ce sera à nous de suivre chacune de leurs histoires et de faire les bons choix pour assurer le bon déroulement des cinq histoires !*
 
