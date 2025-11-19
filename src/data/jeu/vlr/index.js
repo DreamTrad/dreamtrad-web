@@ -41,6 +41,7 @@ export const game = {
         //     { id: "escape16", name: "Salle Q", file: "guide/echappatoires/salle_q" },
         //   ],
         // },
+        { id: "mots_de_passe", name: "Mots de passe français",  file: "guide/mots_de_passe" },
         { id: "achievements", name: "succès",  data: achievements },
       ],
     },
