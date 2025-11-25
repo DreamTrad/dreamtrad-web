@@ -38,7 +38,7 @@ export default function RecruitmentPage() {
           Les projets de traduction en recrutement
         </h2>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(400px,600px))] justify-center gap-8">
+        <div className="grid grid-cols-1 justify-center gap-8 sm:[grid-template-columns:repeat(auto-fit,minmax(400px,600px))]">
           {recruitmentProjectData.map((project) => (
             <RecruitmentCard
               key={project.id}
@@ -55,7 +55,7 @@ export default function RecruitmentPage() {
           Les tâches pour le site internet
         </h2>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(400px,600px))] justify-center gap-8">
+        <div className="grid grid-cols-1 justify-center gap-8 sm:[grid-template-columns:repeat(auto-fit,minmax(400px,600px))]">
           {recruitmentWebData.map((project) => (
             <RecruitmentCard
               key={project.id}
