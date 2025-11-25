@@ -28,7 +28,7 @@ export default function ArticlePage() {
         image={article.coverImage}
         url={`articles/${article.id}`}
       />
-      <div className="relative mx-auto max-w-4xl p-8">
+      <div className="relative mx-auto max-w-4xl p-2">
         <Link
           to="/articles"
           className="text-accent mb-6 inline-block hover:underline"
@@ -37,9 +37,6 @@ export default function ArticlePage() {
         </Link>
 
         <div className="bg-bg-tertiary border-bg-secondary rounded-xl border p-6 shadow-lg">
-
-
-
           {article.coverImage && (
             <img
               src={article.coverImage}
@@ -47,9 +44,7 @@ export default function ArticlePage() {
               className="mb-6 w-full rounded-lg shadow-md"
             />
           )}
-          <h1 className="text-text mb-4 text-3xl font-bold">
-            {article.title}
-          </h1>
+          <h1 className="text-text mb-4 text-3xl font-bold">{article.title}</h1>
 
           <p className="text-text-tertiary mb-6">
             {article.author} —{" "}
@@ -57,7 +52,10 @@ export default function ArticlePage() {
           </p>
 
           {article.markdownPath ? (
-            <MarkdownSection file={article.markdownPath} imageClassName="mx-auto block" />
+            <MarkdownSection
+              file={article.markdownPath}
+              imageClassName="mx-auto block"
+            />
           ) : (
             <p className="text-text-secondary italic">
               Aucun contenu disponible pour cet article.
