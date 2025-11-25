@@ -11,17 +11,21 @@ export default function TeamMemberCard({
   return (
     <div className="bg-bg-tertiary border-bg-secondary flex flex-col gap-6 overflow-hidden rounded-xl border p-6 shadow-md">
       {/* Header */}
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         {/* Avatar + Infos */}
-        <div className="flex flex-1 items-center gap-4">
+        <div className="flex min-w-0 flex-1 items-center gap-4">
           <img
             src={avatar}
             alt={name}
             className="border-bg-secondary h-20 w-20 rounded-lg border object-cover"
           />
-          <div>
-            <h2 className="text-accent text-xl font-bold">{name}</h2>
-            {/* Compétences */}
+
+          <div className="min-w-0 flex-1">
+            <h2 className="text-accent text-xl font-bold break-normal break-words whitespace-normal">
+              {name}
+            </h2>
+
+            {/* Skills */}
             {skills?.length > 0 && (
               <div className="mt-1 flex flex-wrap gap-2">
                 {skills.map((skill, idx) => (
@@ -39,7 +43,7 @@ export default function TeamMemberCard({
 
         {/* Réseaux */}
         {links?.length > 0 && (
-          <div className="flex gap-3">
+          <div className="flex min-w-0 flex-wrap gap-3">
             {links.map((url, idx) => (
               <LinkWithIcon key={idx} url={url} />
             ))}
@@ -49,12 +53,12 @@ export default function TeamMemberCard({
 
       {/* Body */}
       <div className="flex flex-grow flex-col gap-6 md:flex-row">
-        {/* Projets */}
         {projects?.length > 0 && (
           <div className="bg-bg-secondary w-full rounded-md p-4">
             <h3 className="text-accent mb-2 text-sm font-semibold">
-              Projets Principaux :
+              Projets Principaux :
             </h3>
+
             <ul className="text-text-secondary list-inside list-disc space-y-1 text-sm">
               {projects.map((proj, idx) => (
                 <li key={idx}>{proj}</li>

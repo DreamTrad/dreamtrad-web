@@ -33,7 +33,7 @@ export default function TeamPage() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 px-8 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 px-8 sm:[grid-template-columns:repeat(auto-fit,minmax(480px,1fr))]">
         {team.map((member) => (
           <TeamMemberCard key={member.id} {...member} />
         ))}
