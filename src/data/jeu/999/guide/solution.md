@@ -1,6 +1,7 @@
 Nous vous proposons un guide en français se basant sur notre traduction. 999 n’est pas un jeu complexe. Mais il peut tout de même y avoir quelque passage bloquant dans les échappatoires. La version "The Nonary Games" rend plus simple et plus clair l’optention des fins, mais vous trouverez au besoin des guides pour obtenir chaque fin.
 
 Des traductions des succès sont également disponibles.
+
 ## Pages du guide
 
 ### Échappatoires

@@ -1,0 +1,1 @@
+Les mots de passe des coffres des échappatoires, ceux avec des symboles de lunes, soleils et étoiles, sont aléatoire à chaque partie. Vous ne pourrez donc pas recopier les mots de passe d’un guide comme celui-là.

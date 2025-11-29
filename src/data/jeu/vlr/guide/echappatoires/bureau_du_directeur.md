@@ -20,3 +20,5 @@ Récupérez les objets suivants :
 
 
 Vous pouvez sortir de la salle pour terminer l’échappatoire.
+
+## Obtenir le 2nd mot de passe du coffre
