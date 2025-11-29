@@ -35,7 +35,7 @@
         "id": "vlr",
         "title": "Virtue's Last Reward",
         "image": "assets/poster/vlr.webp",
-        "roles": ["Rédacteur escape", "Rédacteur guide fins", "Rédacteur guide succès"],
+        "roles": ["Rédacteur escape", "Rédacteur guide fins"],
         "contact": "Silous",
         "description": "Au lancement du site, nous avons fait en sorte d’au moins proposer des guides pour 999, il faut donc en faire pour VLR mainenant. Vous pouvez directement rédiger du contenu via une [issue](https://github.com/DreamTrad/dreamtrad-web/issues) sur GitHub. Ce qu’il faut pour VLR va être très semblable à 999, donc n’hésitez pas à vous en inspirer."
     },
@@ -43,7 +43,7 @@
         "id": "ztd",
         "title": "Zero Time Dilemma",
         "image": "assets/poster/ztd.webp",
-        "roles": ["Rédacteur escape", "Rédacteur guide fins", "Rédacteur guide succès"],
+        "roles": ["Rédacteur escape", "Rédacteur guide fins"],
         "contact": "Silous",
         "description": "Cf. VLR, il faut des guides en français dans le style de 999 pour les échappatoires. Vu la structure du jeu, il faudra sûrement réfléchir à comment présenter le guide pour débloquer les fragments. Vous pouvez directement rédiger du contenu via une [issue](https://github.com/DreamTrad/dreamtrad-web/issues) sur GitHub."
     },

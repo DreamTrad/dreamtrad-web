@@ -145,7 +145,7 @@ export default function MarkdownSection({
         url={file || ""}
       />
       <div
-        className={`prose prose-invert max-w-none ${className} prose-p:text-justify prose-a:no-underline prose-a:font-bold`}
+        className={`prose prose-invert break-anywhere max-w-none break-words ${className} prose-p:text-justify prose-a:no-underline prose-a:font-bold`}
       >
         <ReactMarkdown
           remarkPlugins={[remarkGfm, remarkDirective, remarkCustomSpoiler]}
@@ -172,7 +172,9 @@ export default function MarkdownSection({
                   <Link
                     to={href}
                     className="text-accent-secondary hover:text-accent-tertiary font-bold no-underline"
-                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
                     {...props}
                   >
                     {children}

@@ -193,7 +193,7 @@ export default function GamePage() {
             )}
           </aside>
 
-          <section className="flex-1 p-6">
+          <section className="flex-1 min-w-0 p-6">
             <Routes>
               {/* Redirection générale */}
               <Route
