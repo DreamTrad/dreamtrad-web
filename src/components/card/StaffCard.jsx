@@ -1,3 +1,5 @@
+import MarkdownSection from "../ui/MarkdownSection";
+
 export default function StaffCard({ id, name, image, text, imageRight = false }) {
   return (
     <div
@@ -16,7 +18,10 @@ export default function StaffCard({ id, name, image, text, imageRight = false })
 
       <div className="flex flex-[3] flex-col gap-4 text-text-secondary md:order-2">
         <h3 className="text-2xl font-bold text-accent">{name}</h3>
-        <p className="text-justify">{text}</p>
+        <MarkdownSection
+                  content={text}
+                  className="text-text-secondary text-justify leading-relaxed"
+                />
       </div>
 
       {imageRight && (
