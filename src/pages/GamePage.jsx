@@ -11,9 +11,10 @@ import GameHeader from "../components/game/GameHeader";
 import PlateformsTabs from "../components/game/PlateformTabs";
 import MarkdownSection from "../components/ui/MarkdownSection";
 import StaffSection from "../components/game/StaffSection";
+import NotFoundPage from "./NotFoundPage";
 
-function DefaultContent({ text }) {
-  return <div>{text}</div>;
+function DefaultContent() {
+  return <NotFoundPage />;
 }
 
 // Fonction pour retourner le composant approprié pour une section
@@ -21,7 +22,7 @@ export function renderSection(section, catKey, gameName, gameId, child = null, s
   // Cas d'une sous-section
   if (child) {
     if (!child.file)
-      return <DefaultContent text={`Sous-section sans fichier`} />;
+      return <DefaultContent />;
     return <MarkdownSection gameId={gameId} file={child.file} />;
   }
 
@@ -55,7 +56,7 @@ export function renderSection(section, catKey, gameName, gameId, child = null, s
     }
 
     else if (!section.file)
-      return <DefaultContent text={`Section générale sans fichier`} />;
+      return <DefaultContent />;
     return <MarkdownSection gameId={gameId} file={section.file} />;
   }
 
@@ -69,7 +70,7 @@ export function renderSection(section, catKey, gameName, gameId, child = null, s
             image={`assets/jeu/${gameId}/cover.webp`}
             url={`jeux/${gameId}/guide/flux`}
           />
-          <DefaultContent text={`Flux non disponible`} />
+          <DefaultContent />
         </>
       );
     }
@@ -86,7 +87,7 @@ export function renderSection(section, catKey, gameName, gameId, child = null, s
         </>
       );
     }
-    else if (!section.file) return <DefaultContent text={`Guide sans fichier`} />;
+    else if (!section.file) return <DefaultContent />;
     return <MarkdownSection gameId={gameId} file={section.file} />;
   }
 
@@ -143,7 +144,7 @@ export function renderSection(section, catKey, gameName, gameId, child = null, s
 
   // Fallback général si aucun cas spécifique
   if (!section.file && !section.data) {
-    return <DefaultContent text={`${catKey} - ${section.name}`} />;
+    return <DefaultContent />;
   }
 
   // Fallback Markdown générique
@@ -218,7 +219,7 @@ export default function GamePage() {
                         firstSection ? (
                           <Navigate to={firstSection.id} replace />
                         ) : (
-                          <DefaultContent text={category.name} />
+                          <DefaultContent />
                         )
                       }
                     />
@@ -235,7 +236,7 @@ export default function GamePage() {
                                 firstChild ? (
                                   <Navigate to={firstChild.id} replace />
                                 ) : (
-                                  <DefaultContent text={section.name} />
+                                  <DefaultContent />
                                 )
                               }
                             />
