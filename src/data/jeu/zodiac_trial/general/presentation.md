@@ -1,6 +1,8 @@
+# The Zodiac Trial
+
 The Zodiac Trial est un Visual Novel indé anglais sorti le 21 janvier 2021.
 
-## Histoire
+## Scénario
 
 Mesdames et messieurs les jurés, bienvenue au Procès du Zodiaque, à la Course du Zodiaque. Vous êtes ici pour une seule et unique raison : être jugés. À vous de décider si vous allez coopérer, résoudre les énigmes ensemble et chercher la vérité en groupe, ou bien révéler votre vraie nature en trahissant les autres pour trouver une issue. Le choix vous appartient.
 

@@ -1,3 +1,5 @@
+# PARANORMASIGHT : The Seven Mysteries of Honjo
+
 PARANORMASIGHT : The Seven Mysteries of Honjo est un Visual Novel de Square Enix sorti le 8 mars 2023.
 
 # Scénario

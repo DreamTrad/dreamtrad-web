@@ -1,3 +1,5 @@
+# GNOSIA
+
 Gnosia est un RPG de déduction sociale dans un univers de science-fiction. Vous devez discuter avec divers personnages, collecter des indices et identifier les Gnosia avant de voter pour les envoyer en sommeil profond. Au fil du temps, vos compétences s’améliorent… tout comme celles des autres membres de l’équipage. À mesure que le nombre de Gnosia et de rôles spéciaux augmente, discerner la vérité devient de plus en plus difficile. Vous devrez collaborer ou trahir vos coéquipiers pour survivre.
 
 Vous rejouerez plusieurs « boucles », déclenchant des événements spéciaux qui font progresser l’histoire et débloquent de nouvelles commandes pour vos discussions. Vous pourrez aussi incarner différents rôles, influençant vos capacités à convaincre ou à mentir, et votre probabilité d’être choisi pour le sommeil profond. Chaque membre de l’équipage possède des événements uniques révélant des informations sous forme de « Notes », ajoutant profondeur et stratégie à l’expérience.
