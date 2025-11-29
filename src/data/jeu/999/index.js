@@ -11,7 +11,7 @@ export const game = {
       name: "Le Jeu",
       sections: [
         { id: "presentation", name: "Présentation", file: "general/presentation" },
-        { id: "staff", name: "Staff", staff: ["kotaro-uchikoshi"] },
+        { id: "staff", name: "Staff", staff: ["kotaro-uchikoshi", "jiro-ishii"] },
         // { id: "characters", name: "Personnages", data: characters },
       ],
     },
