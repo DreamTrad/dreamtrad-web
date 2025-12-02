@@ -57,7 +57,7 @@ Allez dans la cabine 3 et insérez la cassette dans le téléphone. Il faut main
 
 D’abord il faut appeler les autres cabines. Les chiffres au-dessus de l’affichage numérique sont fait pour appeler les cabines. Appuyer sur 2 pour appeler Alice dans la cabine 2, puis sur 4 pour appeler Phi dans la cabine 4.
 
-Les codes qu’elles vous donnent s’assemblent pour former *2592*. C’est le numéro de la cabine 3. En l’appelant, vous pourrez voir qu’il y a un numéro qui apparait en haut à gauche sur les miroirs au-dessus du téléphone : *2652*. Appelez ce numéro, et la zone pour cassette du téléphone s’ouvrira et vous pourrez récupérer la petite épingle métallique.
+Les codes qu’elles vous donnent s’assemblent pour former **2592**. C’est le numéro de la cabine 3. En l’appelant, vous pourrez voir qu’il y a un numéro qui apparait en haut à gauche sur les miroirs au-dessus du téléphone : **2652**. Appelez ce numéro, et la zone pour cassette du téléphone s’ouvrira et vous pourrez récupérer la petite épingle métallique.
 
 Utilisez-la sur la serrure du casier de la cabine et vous pourrez taper le code, donc 1986.
 
