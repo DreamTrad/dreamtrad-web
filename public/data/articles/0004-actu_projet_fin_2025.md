@@ -8,7 +8,7 @@ Ce projet a été lancé l’année dernière. Il s’agit d’un Visual Novel d
 
 Le projet en est actuellement à 50 % de traduit !
 
-Il reste encore beaucoup de travail, et pas que au niveau de la traduction. Il y aura l’édition des images à faire, et il y a aussi quelques bugs à inspecter. Mais nous pouvons dire que le projet est en bonne voie.
+Il reste encore beaucoup de travail, et pas qu’au niveau de la traduction. Il y aura l’édition des images à faire, et il y a aussi quelques bugs à inspecter. Mais nous pouvons dire que le projet est en bonne voie.
 
 Pour l’instant, une seule personne traduit et c’est un projet ouvert si d’autres personnes veulent travailler dessus. Nous vous invitons à aller sur la page [recrutement](/recrutement) pour plus d’information et à nous contacter sur discord ensuite si vous voulez aider.
 
@@ -30,10 +30,10 @@ De même, vous pouvez retrouver l’avancée sur la [page d’accueil](/) et avo
 
 Après avoir traduit les AI: The Somnium Files et les Zero Escape, nous nous attaquons à la série Infinity !
 
-Pour ceux qui ne connaitraient pas, c'est la première série de jeu vidéo de Kotaro Uchikoshi (Zero Escape, AI) de Nakazawa (AI, Shuten Order, I/O, Root letter) et de plusieurs personnes qui feront par la suite la série des Science Adventure (Steins Gate, Chaos;Head…). Cette série est donc fondatrice de beaucoup de VN connus à ce jour et en contient déjà la plupart des idées.
+Pour ceux qui ne connaitraient pas, c'est la première série de jeux vidéo de Kotaro Uchikoshi (Zero Escape, AI) de Nakazawa (AI, Shuten Order, I/O, Root letter) et de plusieurs personnes qui feront par la suite la série des Science Adventure (Steins Gate, Chaos;Head…). Cette série est donc fondatrice de beaucoup de VN connus à ce jour et en contient déjà la plupart des idées.
 Cette série est composée de 4 jeux : Never7 : The End of Infinity, Ever17 : The Out of Infinity, Remember 11 : The age of Infinity et 12Riven : The Psi-Climinal of Integral. Ces jeux possèdent des liens entre eux mais restent tout de même très indépendants.
 
-Never7 est le premier jeu à être sorti (2000). C'est un jeu de romance avec tout de même un soupçon de SF. Il a eu le droit a un récent portage (douteux) sur Steam qui conserve le texte original et est traduit en anglais.
+Never7 est le premier jeu à être sorti (2000). C'est un jeu de romance avec tout de même un soupçon de SF. Il a eu le droit à un récent portage (douteux) sur Steam qui conserve le texte original et est traduit en anglais.
 
 *Makoto, le protagoniste, fait un rêve étrange. Pour réussir à le comprendre, il devra apprendre à connaître les 6 personnes avec lesquelles il passe un séminaire sur une île paradisiaque.*
 
@@ -43,11 +43,11 @@ Ever17 est le second jeu à être sorti (2002) et est le jeu le plus connu de la
 
 Remember11 (2004) abandonne la romance pour ne se concentrer que sur la partie SF. Le jeu n'est pas ressorti sur Steam et ne possède qu'une fantraduction anglaise.
 
-*Satoru et Kokoro se retrouvent tous deux coincés dans une montagne enneigé à deux endroits différents. Cependant, un phénomène étrange les lie et ils se retrouvent tous les deux en danger de mort.*
+*Satoru et Kokoro se retrouvent tous deux coincés dans une montagne enneigée à deux endroits différents. Cependant, un phénomène étrange les lie et ils se retrouvent tous les deux en danger de mort.*
 
 Enfin, 12Riven (2008) continue sur de la SF. Le jeu n'est à ce jour pas encore traduit en anglais, ni disponible sur Steam.
 
-*Voulant sauver son amie d'anfance, Renmaru se retrouve dans un Tokyo désert. Il fait équipe avec les derniers survivants pour essayer de comprendre ce qui est arrivé au monde.*
+*Voulant sauver son amie d'enfance, Renmaru se retrouve dans un Tokyo désert. Il fait équipe avec les derniers survivants pour essayer de comprendre ce qui est arrivé au monde.*
 
 Pour la traduction, nous allons suivre l'ordre de sortie des jeux et allons donc commencer par Never7. La traduction en est à ce jour à plus de 5 % d'avancement"
 
@@ -67,7 +67,7 @@ Le script n’est pas trop gros en comparaison de nos autres projets, donc c’e
 
 # D’autres projets
 
-Au-delà des 4 projets listé ici, vous avez peut‑être remarqué que sur la page [recrutement](/recrutement) se trouvait une carte pour la traduction de AI 2.8: No Sleep For Kaname Date. C’est le spin-off de la série AI dont nous avons déjà traduit les 2 jeux principaux. Il est logique que nous prenions ce projet en main. Mais malheuresement, personne n’est motivé pour travailler en priorité sur projet parmi ceux ayant participé à la traduction des 2 premiers.
+Au-delà des 4 projets listés ici, vous avez peut‑être remarqué que sur la page [recrutement](/recrutement) se trouvait une carte pour la traduction de AI 2.8: No Sleep For Kaname Date. C’est le spin-off de la série AI dont nous avons déjà traduit les 2 jeux principaux. Il est logique que nous prenions ce projet en main. Mais malheureusement, personne n’est motivé pour travailler en priorité sur projet parmi ceux ayant participé à la traduction des 2 premiers.
 
 Nous recherchons donc des personnes voulant traduire le jeu. Tout est en place pour "traduire" déjà. Il y a encore des choses à mettre en place pour la police, les images, et les logiciels, mais ça n’empêchera pas de démarrer la traduction.
 
