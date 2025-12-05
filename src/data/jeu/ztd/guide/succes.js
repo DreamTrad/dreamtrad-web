@@ -1,4 +1,4 @@
-export const achievements = [
+export const succes = [
     {
         id: "A_Grain_of_Sand",
         titleEn: "A Grain of Sand",

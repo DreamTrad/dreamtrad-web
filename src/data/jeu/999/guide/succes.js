@@ -1,4 +1,4 @@
-export const achievements = [
+export const succes = [
   {
     id: "ACH_SKPV_01",
     titleEn: "Don't Forget Your Towel",

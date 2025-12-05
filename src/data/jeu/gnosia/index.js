@@ -1,4 +1,4 @@
-import { achievements } from "./guide/achievements";
+import { succes } from "./guide/succes";
 import { team } from "./jeufr/team";
 
 
@@ -21,7 +21,7 @@ export const game = {
         { id: "notes", name: "Débloquer les notes", file: "guide/notes"  },
         { id: "fins", name: "Fins du jeu", file: "guide/fins" },
         { id: "plus_loin", name: "Pour aller plus loin", file: "guide/plus_loin" },
-        { id: "achievements", name: "succès",  data: achievements },
+        { id: "succes", name: "succès",  data: succes },
       ],
     },
     jeufr: {

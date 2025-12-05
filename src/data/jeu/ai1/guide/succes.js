@@ -1,4 +1,4 @@
-export const achievements = [
+export const succes = [
     {
         id: "000",
         titleEn: "AI: THE SOMNIUM FILES",

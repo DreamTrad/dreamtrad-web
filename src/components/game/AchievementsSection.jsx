@@ -2,9 +2,9 @@ import { useState } from "react";
 import AchievementCard from "./AchievementCard";
 
 const getImageById = (gameId, AchievementId) =>
-  `/assets/jeu/${gameId}/guide/achievements/${AchievementId}.webp`;
+  `/assets/jeu/${gameId}/guide/succes/${AchievementId}.webp`;
 
-export default function AchievementsSection({ sectionData, gameId }) {
+export default function succesSection({ sectionData, gameId }) {
   const [revealAll, setRevealAll] = useState(false);
 
   const handleRevealAll = () => setRevealAll(true);

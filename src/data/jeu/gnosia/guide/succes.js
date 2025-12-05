@@ -1,4 +1,4 @@
-export const achievements = [
+export const succes = [
     {
         id: "ACHI_ACPLAY",
         titleEn: "Loyal Servant",

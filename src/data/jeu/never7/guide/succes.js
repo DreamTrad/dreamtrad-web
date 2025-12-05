@@ -1,4 +1,4 @@
-export const achievements = [
+export const succes = [
   {
     id: "ACH00",
     titleEn: "Complete",

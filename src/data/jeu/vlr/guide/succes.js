@@ -1,4 +1,4 @@
-export const achievements = [
+export const succes = [
     {
         id: "ACH_SKP2_01",
         titleEn: "Master of Escapology",

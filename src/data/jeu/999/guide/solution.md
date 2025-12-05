@@ -28,4 +28,4 @@ Des traductions des succès sont également disponibles.
 ### Autres pages
 
 - [Fins](/jeu/999/guide/fins)
-- [Succès](/jeu/999/guide/achievements)
+- [Succès](/jeu/999/guide/succes)

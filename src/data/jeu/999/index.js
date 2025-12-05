@@ -1,5 +1,5 @@
 import { characters } from "./general/characters";
-import { achievements } from "./guide/achievements";
+import { succes } from "./guide/succes";
 import { team } from "./jeufr/team";
 
 
@@ -44,7 +44,7 @@ export const game = {
         },
         // { id: "enigme_final", name: "Énigme finale", file: "guide/enigme_finale" },
         { id: "fins", name: "Fins", file: "guide/fins" },
-        { id: "achievements", name: "Succès", data: achievements },
+        { id: "succes", name: "Succès", data: succes },
       ],
     },
     jeufr: {

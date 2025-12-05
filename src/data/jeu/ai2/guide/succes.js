@@ -1,9 +1,9 @@
-export const achievements = [
+export const succes = [
     {
         id: "000",
         titleEn: "nirvanA Initiative",
         titleFr: "nirvanA Initiative",
-        descriptionEn: "Get all achievements",
+        descriptionEn: "Get all succes",
         descriptionFr: "Obtenez tous les succès",
         resolution: "",
         hidden: false,
@@ -111,7 +111,7 @@ export const achievements = [
         id: "012",
         titleEn: "Sisyphean",
         titleFr: "Difficultés",
-        descriptionEn: "Mizuki Chapter 4Clear Lien's SomniumThe suffering of unfulfilled dreams, achievements that can never be achieved.",
+        descriptionEn: "Mizuki Chapter 4Clear Lien's SomniumThe suffering of unfulfilled dreams, succes that can never be achieved.",
         descriptionFr: "Mizuki Chapitre 4\n\nA terminé le Somnium de Lien.\n\n\"Difficultés\"\n\nIncapacité d'obtenir ce que l'on poursuit.\n\nSouffrance de ne pas pouvoir réaliser ce que l'on veut, ce que l'on désire.",
         resolution: "",
         hidden: true,

@@ -65,7 +65,7 @@ Cliquez sur "preview" et "code" pour passer d’une vue à l’autre sur les exe
 
 Ce sont des textes qui vont être inséré de manière structuré dans la page.
 Il suffit de remplir tout ce qui est entre guillemet "" avec du texte. Et parfois mettre true ou false pour un argument.
-Ici vous aurez l’exemple de la [page des succès de 999](https://github.com/DreamTrad/dreamtrad-web/blob/contenu/src/data/jeu/999/guide/achievements.js)
+Ici vous aurez l’exemple de la [page des succès de 999](https://github.com/DreamTrad/dreamtrad-web/blob/contenu/src/data/jeu/999/guide/succes.js)
 
 ### Ajouter des fichiers
 

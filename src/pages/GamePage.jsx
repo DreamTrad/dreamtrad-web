@@ -18,11 +18,17 @@ function DefaultContent() {
 }
 
 // Fonction pour retourner le composant approprié pour une section
-export function renderSection(section, catKey, gameName, gameId, child = null, staffData = []) {
+export function renderSection(
+  section,
+  catKey,
+  gameName,
+  gameId,
+  child = null,
+  staffData = [],
+) {
   // Cas d'une sous-section
   if (child) {
-    if (!child.file)
-      return <DefaultContent />;
+    if (!child.file) return <DefaultContent />;
     return <MarkdownSection gameId={gameId} file={child.file} />;
   }
 
@@ -31,14 +37,18 @@ export function renderSection(section, catKey, gameName, gameId, child = null, s
     if (section.id === "staff") {
       return (
         <>
-        <MetaTags
-        title={`${gameName} - Staff`}
-        description={`"Les personnes derrière ${gameName}."`}
-        url={`jeux/${gameId}/general/staff`}
-        />
-      <StaffSection section={section} title="Le staff" staffList={staffData} />
-      </>
-      )
+          <MetaTags
+            title={`${gameName} - Staff`}
+            description={`"Les personnes derrière ${gameName}."`}
+            url={`jeux/${gameId}/general/staff`}
+          />
+          <StaffSection
+            section={section}
+            title="Le staff"
+            staffList={staffData}
+          />
+        </>
+      );
     }
 
     if (section.id === "characters") {
@@ -50,13 +60,14 @@ export function renderSection(section, catKey, gameName, gameId, child = null, s
             image={`assets/jeu/${gameId}/cover.webp`}
             url={`jeux/${gameId}/guide/characters`}
           />
-          <StaffSection section={section} title="Les personnages" staffList={section.data} />
+          <StaffSection
+            section={section}
+            title="Les personnages"
+            staffList={section.data}
+          />
         </>
-      )
-    }
-
-    else if (!section.file)
-      return <DefaultContent />;
+      );
+    } else if (!section.file) return <DefaultContent />;
     return <MarkdownSection gameId={gameId} file={section.file} />;
   }
 
@@ -74,20 +85,19 @@ export function renderSection(section, catKey, gameName, gameId, child = null, s
         </>
       );
     }
-    if (section.id === "achievements") {
+    if (section.id === "succes") {
       return (
         <>
           <MetaTags
             title={`${gameName} - Succès`}
             description={`Traduction des succès de ${gameName}. Vous pouvez aussi retrouver des guides pour les obtenir.`}
             image={`assets/jeu/${gameId}/cover.webp`}
-            url={`jeux/${gameId}/guide/achievements`}
+            url={`jeux/${gameId}/guide/succes`}
           />
           <AchievementsSection sectionData={section.data} gameId={gameId} />
         </>
       );
-    }
-    else if (!section.file) return <DefaultContent />;
+    } else if (!section.file) return <DefaultContent />;
     return <MarkdownSection gameId={gameId} file={section.file} />;
   }
 
@@ -180,7 +190,7 @@ export default function GamePage() {
             {/* Collapse toggle button collé à la bordure */}
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="bg-bg-secondary hover:bg-hover border-bg-tertiary absolute top-4 right-[-1.25rem] z-50 flex h-10 w-10 items-center justify-center rounded-full border text-lg shadow-lg transition md:right-[-1rem]"
+              className="bg-bg-secondary hover:bg-hover border-bg-tertiary absolute top-4 -right-5 z-50 flex h-10 w-10 items-center justify-center rounded-full border text-lg shadow-lg transition md:-right-4"
             >
               {sidebarOpen ? "←" : "→"}
             </button>
@@ -194,7 +204,7 @@ export default function GamePage() {
             )}
           </aside>
 
-          <section className="flex-1 min-w-0 p-6">
+          <section className="min-w-0 flex-1 p-6">
             <Routes>
               {/* Redirection générale */}
               <Route
@@ -269,7 +279,7 @@ export default function GamePage() {
                             game.name,
                             game.id,
                             null,
-                            staffData
+                            staffData,
                           )}
                         />
                       );

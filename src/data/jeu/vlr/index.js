@@ -1,4 +1,4 @@
-import { achievements } from "./guide/achievements";
+import { succes } from "./guide/succes";
 import { team } from "./jeufr/team";
 
 
@@ -43,7 +43,7 @@ export const game = {
         },
         { id: "mots_de_passe", name: "Mots de passe français",  file: "guide/mots_de_passe" },
         { id: "telephone_cabines", name: "Téléphone des cabines",  file: "guide/telephone_cabines" },
-        { id: "achievements", name: "succès",  data: achievements },
+        { id: "succes", name: "succès",  data: succes },
       ],
     },
     jeufr: {

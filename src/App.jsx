@@ -11,6 +11,7 @@ import DiscoverPage from "./pages/DiscoverPage";
 import TeamPage from "./pages/TeamPage";
 import ContactPage from "./pages/ContactPage";
 import ReglementationsPage from "./pages/ReglementationsPage";
+import NotFoundPage from "./pages/NotFoundPage";
 import PasswordGate from "./components/PasswordGate";
 
 function App() {
@@ -31,6 +32,8 @@ function App() {
             <Route path="/equipe" element={<TeamPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/mentions-legales" element={<ReglementationsPage />} />
+
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
 

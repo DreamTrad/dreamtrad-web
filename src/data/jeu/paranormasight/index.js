@@ -1,4 +1,4 @@
-import { achievements } from "./guide/achievements";
+import { succes } from "./guide/succes";
 import { team } from "./jeufr/team";
 
 
@@ -20,7 +20,7 @@ export const game = {
         // { id: "solution", name: "Solution" },
         // { id: "echappatoire", name: "Échappatoire" },
         // { id: "galapiafs", name: "Galapiafs" },
-        { id: "achievements", name: "succès",  data: achievements },
+        { id: "succes", name: "succès",  data: succes },
       ],
     },
     jeufr: {

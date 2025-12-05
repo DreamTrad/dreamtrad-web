@@ -1,9 +1,9 @@
-export const achievements = [
+export const succes = [
   {
     id: "AC01",
     titleEn: "PARANORMA SIGHT",
     titleFr: "",
-    descriptionEn: "Acquire all other achievements.",
+    descriptionEn: "Acquire all other succes.",
     descriptionFr: "",
     resolution: "",
     hidden: false,
