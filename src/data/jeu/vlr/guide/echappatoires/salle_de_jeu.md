@@ -6,6 +6,12 @@ Solution de l’échappatoire de la salle de jeu dans Virtue’s Last Reward.
 :::spoiler[la position des objets et éléments importants]
 ![Image interaction 1](/assets/jeu/vlr/guide/echappatoires/salle_de_jeu/interaction_1.webp)
 
+![Image interaction 2](/assets/jeu/vlr/guide/echappatoires/salle_de_jeu/interaction_2.webp)
+
+![Image interaction 3](/assets/jeu/vlr/guide/echappatoires/salle_de_jeu/interaction_3.webp)
+
+![Image interaction 4](/assets/jeu/vlr/guide/echappatoires/salle_de_jeu/interaction_4.webp)
+
 :::
 
 ## Récupération des objets
@@ -25,8 +31,9 @@ Récupérez les objets suivants :
 ## Résolution des énigmes
 
 
+Placez le morceau de tissu au niveau de la déchirure sur la table de billard. Aspergez la table de luminol. Il ne vous reste plus qu’à éteindre la lumière
 
-
+Donnez la hache double à la deuxième armure en partant de la gauche, puis appuyez sur le rond avec un triangle de la console devant les armures. Cela va briser la vitre du bouclier et vous pourrez récupérer la clé hexagonale.
 
 Vous pouvez sortir de la salle pour terminer l’échappatoire.
 

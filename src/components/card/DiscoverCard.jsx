@@ -102,8 +102,8 @@ export default function DiscoverCard({
       </div>
 
       {/* Contenu principal */}
-      <div className="flex flex-grow flex-col gap-6 p-6 md:flex-row">
-        <div className="flex flex-[2] items-center justify-center">
+      <div className="flex grow flex-col gap-6 p-6 md:flex-row">
+        <div className="flex flex-2 items-center justify-center">
           <img
             src={image}
             alt={`Affiche de ${titre}`}
@@ -111,7 +111,7 @@ export default function DiscoverCard({
           />
         </div>
 
-        <div className="bg-bg-secondary prose prose-invert text-text-secondary max-w-none flex-[3] rounded-md p-4 text-sm">
+        <div className="bg-bg-secondary prose prose-invert text-text-secondary max-w-none flex-3 rounded-md p-4 text-sm">
           <ReactMarkdown>{description}</ReactMarkdown>
         </div>
       </div>

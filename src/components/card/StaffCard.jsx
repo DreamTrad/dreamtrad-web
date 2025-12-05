@@ -9,7 +9,7 @@ export default function StaffCard({ id, name, image, text, imageRight = false })
       {/* Image */}
       <div
         className={`
-          flex flex-[2] items-center justify-center
+          flex flex-2 items-center justify-center
           ${imageRight ? "md:order-3" : "md:order-1"} order-1
         `}
       >
@@ -23,7 +23,7 @@ export default function StaffCard({ id, name, image, text, imageRight = false })
       {/* Texte */}
       <div
         className={`
-          flex flex-[3] flex-col gap-4 text-text-secondary
+          flex flex-3 flex-col gap-4 text-text-secondary
           ${imageRight ? "md:order-2" : "md:order-2"} order-2
         `}
       >

@@ -21,7 +21,7 @@ export default function TeamMemberCard({
           />
 
           <div className="min-w-0 flex-1">
-            <h2 className="text-accent text-xl font-bold break-normal break-words whitespace-normal">
+            <h2 className="text-accent text-xl font-bold break-normal wrap-break-word whitespace-normal">
               {name}
             </h2>
 
@@ -52,7 +52,7 @@ export default function TeamMemberCard({
       </div>
 
       {/* Body */}
-      <div className="flex flex-grow flex-col gap-6 md:flex-row">
+      <div className="flex grow flex-col gap-6 md:flex-row">
         {projects?.length > 0 && (
           <div className="bg-bg-secondary w-full rounded-md p-4">
             <h3 className="text-accent mb-2 text-sm font-semibold">

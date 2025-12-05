@@ -1,4 +1,3 @@
-import ReactMarkdown from "react-markdown";
 import MarkdownSection from "../ui/MarkdownSection";
 
 export default function RecruitmentCard({
@@ -18,7 +17,7 @@ export default function RecruitmentCard({
       {/* Middle: image + roles */}
       <div className="flex flex-col gap-6 p-6 md:flex-row">
         {/* Image */}
-        <div className="mx-auto h-56 w-40 flex-shrink-0 md:mx-0">
+        <div className="mx-auto h-56 w-40 shrink-0 md:mx-0">
           <img
             src={image}
             alt={`Affiche de ${title}`}
@@ -50,7 +49,7 @@ export default function RecruitmentCard({
       )}
 
       {/* Description */}
-      <div className="bg-bg-secondary flex-grow rounded-b-2xl p-4">
+      <div className="bg-bg-secondary grow rounded-b-2xl p-4">
         <MarkdownSection
           content={description}
           className="text-text-secondary text-justify text-sm leading-relaxed"

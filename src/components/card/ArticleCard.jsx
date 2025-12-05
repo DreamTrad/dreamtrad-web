@@ -25,12 +25,12 @@ export default function ArticleCard({
       )}
 
       {/* Infos */}
-      <div className="flex flex-grow flex-col gap-2 p-4">
+      <div className="flex grow flex-col gap-2 p-4">
         <h2 className="text-accent text-xl font-bold">{title}</h2>
         <p className="text-text text-sm">
           {author} — {new Date(date).toLocaleDateString("fr-FR")}
         </p>
-        {excerpt && <p className="text-text flex-grow text-sm">{excerpt}</p>}
+        {excerpt && <p className="text-text grow text-sm">{excerpt}</p>}
 
         {/* Tags */}
         {tags?.length > 0 && (

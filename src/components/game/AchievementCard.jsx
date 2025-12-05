@@ -30,7 +30,7 @@ export default function AchievementCard({
       <img
         src={image}
         alt={titleEn}
-        className={`h-16 w-16 flex-shrink-0 rounded-md object-cover ${
+        className={`h-16 w-16 shrink-0 rounded-md object-cover ${
           revealed ? "" : "blur-sm"
         }`}
       />

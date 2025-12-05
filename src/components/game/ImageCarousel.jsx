@@ -49,7 +49,7 @@ export default function ImageCarousel({ gameId, interval = 10000 }) {
           {images.map((src, i) => (
             <div
               key={i}
-              className="bg-bg-tertiary flex w-full flex-shrink-0 rounded-xl"
+              className="bg-bg-tertiary flex w-full shrink-0 rounded-xl"
             >
               <img
                 src={src}

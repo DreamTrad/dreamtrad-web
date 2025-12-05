@@ -234,7 +234,7 @@ export default function DiscoverPage() {
         </div>
 
         {/* Grille */}
-        <div className="grid w-full [grid-template-columns:repeat(auto-fit,minmax(320px,800px))] justify-center gap-8">
+        <div className="grid w-full grid-cols-[repeat(auto-fit,minmax(320px,800px))] justify-center gap-8">
           {sortedData.map((project) => (
             <DiscoverCard
               key={project.id}

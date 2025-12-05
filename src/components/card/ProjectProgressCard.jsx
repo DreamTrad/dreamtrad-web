@@ -11,7 +11,7 @@ export default function ProjectProgressCard({ id, title, image, progress }) {
   return (
     <div className="bg-bg-secondary flex items-start rounded-xl p-6 shadow-lg">
       {/* Image alignée avec les barres */}
-      <div className="mr-6 h-full w-32 flex-shrink-0 overflow-hidden rounded-md">
+      <div className="mr-6 h-full w-32 shrink-0 overflow-hidden rounded-md">
         <img src={image} alt={title} className="h-full w-auto object-cover" />
       </div>
 

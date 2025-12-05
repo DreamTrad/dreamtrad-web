@@ -48,7 +48,7 @@ export default function Header() {
             <li key={item.name}>
               <NavLink
                 to={item.to}
-                className="hover:bg-bg-tertiary hover:text-accent after:bg-accent relative rounded-md px-4 py-2 text-base font-semibold transition after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:transition-all after:duration-300 hover:after:w-full"
+                className="hover:bg-bg-tertiary hover:text-accent after:bg-accent relative rounded-md px-4 py-2 text-base font-semibold transition after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:transition-all after:duration-300 hover:after:w-full"
               >
                 {item.name}
               </NavLink>

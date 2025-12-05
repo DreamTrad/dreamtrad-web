@@ -65,7 +65,7 @@ export default function HomePage() {
           <aside className="flex flex-col gap-16">
             <DiscordCard inviteUrl="https://t.co/O6tlFvR8wa" />
 
-            <div className="from-accent to-accent-tertiary flex flex-col items-center justify-between gap-6 overflow-hidden rounded-2xl bg-gradient-to-br p-6 text-white shadow-xl md:flex-row">
+            <div className="from-accent to-accent-tertiary flex flex-col items-center justify-between gap-6 overflow-hidden rounded-2xl bg-linear-to-br p-6 text-white shadow-xl md:flex-row">
               {/* Text & button */}
               <div className="flex max-w-md flex-1 flex-col items-center space-y-4 text-center">
                 <h2 className="text-2xl font-bold">Nous recrutons !</h2>
@@ -84,7 +84,7 @@ export default function HomePage() {
               </div>
 
               {/* Chibi illustration */}
-              <div className="flex h-full flex-shrink-0 items-stretch justify-center md:h-auto md:justify-start">
+              <div className="flex h-full shrink-0 items-stretch justify-center md:h-auto md:justify-start">
                 <img
                   src={chibiAiba}
                   alt="Chibi Aiba"

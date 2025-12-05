@@ -16,7 +16,7 @@ export default function PlateformsTabs({ gameId, platforms }) {
             className={`
               flex-1 min-w-[110px] px-4 py-2 rounded-md text-sm font-medium text-center
               border transition
-              whitespace-normal break-words
+              whitespace-normal wrap-break-word
               ${active === p.id
                 ? "bg-bg-tertiary text-text border-accent"
                 : "bg-bg-secondary text-text-secondary border-bg-tertiary hover:bg-hover-secondary"}

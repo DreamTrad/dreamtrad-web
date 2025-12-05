@@ -57,7 +57,7 @@ export default function AvailablePatches() {
           {available.map((g) => (
             <div
               key={g.id}
-              className="bg-bg-tertiary flex w-full flex-shrink-0 flex-col overflow-hidden rounded-xl md:h-72 md:flex-row"
+              className="bg-bg-tertiary flex w-full shrink-0 flex-col overflow-hidden rounded-xl md:h-72 md:flex-row"
             >
               {/* Image */}
               <div className="w-full md:w-2/3 h-52 md:h-full">
