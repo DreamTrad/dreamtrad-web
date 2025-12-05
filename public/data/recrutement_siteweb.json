@@ -13,7 +13,7 @@
         "image": "assets/poster/siteweb.webp",
         "roles": ["Rédacteur d’articles"],
         "contact": "Silous",
-        "description": "Si vous avez un sujet potentiel d’article nous sommes totalement ouvert si vous voulez le proposer. Ça peut être un article en lien avec les Visual Novel traduits, avec Visual Novel en général, ou avec la traduction de manière général. Ça peut prendre la forme d’une actualité, d’un dossier, d’un témoignage. Nous sommes très ouvert sur le contenu, donc vous pouvez toujours proposer un sujet et nous verrons bien si c’est suffisament en rapport avec le contenu du site. Tout se passe sur Github, avec le formulaire d’[issue](https://github.com/DreamTrad/dreamtrad-web/issues/new?template=new_article.yml), mais n’hésitez pas à venir sur le discord pour discuter plus librement si besoin."
+        "description": "Si vous avez un sujet potentiel d’article nous sommes totalement ouvert si vous voulez le proposer. Ça peut être un article en lien avec les Visual Novel traduits, avec les Visual Novel en général, ou avec la traduction de manière générale. Ça peut prendre la forme d’une actualité, d’un dossier, d’un témoignage. Nous sommes très ouvert sur le contenu, donc vous pouvez toujours proposer un sujet et nous verrons bien si c’est suffisament en rapport avec le contenu du site. Tout se passe sur Github, avec le formulaire d’[issue](https://github.com/DreamTrad/dreamtrad-web/issues/new?template=new_article.yml), mais n’hésitez pas à venir sur le discord pour discuter plus librement si besoin."
     },
     {
         "id": "ai1",
