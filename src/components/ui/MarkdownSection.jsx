@@ -19,15 +19,22 @@ function Spoiler({ title = "spoiler", children }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="my-2">
+    <div className="my-4">
       <button
         onClick={() => setOpen(!open)}
-        className="bg-accent text-text rounded-md px-2 py-1 text-sm"
+        className="border-bg-secondary bg-bg-secondary text-text-secondary hover:bg-hover hover:text-text flex items-center gap-2 rounded-xl border px-3 py-1.5 text-sm font-medium transition"
       >
+        {/* Arrow */}
+        <span className={`transition-transform ${open ? "rotate-90" : ""}`}>
+          ▶
+        </span>
+
+        {/* Label */}
         {open ? `Cacher ${title}` : `Montrer ${title}`}
       </button>
+
       {open && (
-        <div className="mt-2 rounded-md border bg-neutral-800 p-2">
+        <div className="border-bg-secondary bg-bg-tertiary mt-3 rounded-xl border p-3">
           {children}
         </div>
       )}
