@@ -30,10 +30,25 @@ Récupérez les objets suivants :
 
 ## Résolution des énigmes
 
+Placez le morceau de tissu au niveau de la déchirure sur la table de billard. Aspergez la table de luminol. Il ne vous reste plus qu’à éteindre la lumière. Vous verrez des lettres sur le billard. Prenez notes de ces lettres et rallumez la lumière.
 
-Placez le morceau de tissu au niveau de la déchirure sur la table de billard. Aspergez la table de luminol. Il ne vous reste plus qu’à éteindre la lumière
+Munissez-vous des boules de billard et interragissez avec la table de billard pour commencer le minijeu. Sur l’écran en haut à droite, il y a des boules avec des lettres. Il y a à chaque fois une couleur et des bandes ou non. Regardez à quelles boules cela correspond sur le poster de boules de billard que vous avez récupéré. Il nombre sur la boule sera la boule à placer dans le trou correspondant à la lettre.
 
-Donnez la hache double à la deuxième armure en partant de la gauche, puis appuyez sur le rond avec un triangle de la console devant les armures. Cela va briser la vitre du bouclier et vous pourrez récupérer la clé hexagonale.
+Et il faut rentrer les boules dans l’ordre alphabétique. Donc d’abord la boule A, puis B…
+
+:::spoiler[quelle boule placer dans quel trou]
+![billard](/assets/jeu/vlr/guide/echappatoires/salle_de_jeu/billard.webp)
+:::
+
+Prenez les extrémités de fléchettes de la boule qui sort du billard.
+
+Donnez la hache double à la deuxième armure en partant de la gauche, puis appuyez sur le rond avec un triangle de la console devant les armures. Cela va briser la vitre du bouclier et vous pourrez récupérer la clé hexagonale. Combinez-la avec la queue de billard pour obtenir une clé à bout circulaire. Cela vous permettra d’ouvrir le compartiment à pièce du manège lapin, et vous pourrez récupérer toutes les pièces dedans. pour directement les insérer dans la machine pour lancer le manège.
+
+K va en profiter pour faire un tour de manège et une photo souvenir sera prise. Derrière, il est noté Z9 et D1.
+
+Allez vers le jukebox et branchez le fil d’alimentation. Insérez une pièce dedans et choisissez un piste. Donc une lettre et un chiffre, ce qui correspond au données derrière la photo. Rentrez Z9 puis D1 pour obtenir 2 disque d’or.
+
+Juste à droite du jukebox, il y des cadres au mur. Il faut placer les disques d’or dans celui de droite et celui de gauche. Cela va déverrouiller celui du centre et vous pourrez récupérer la boîte à fléchettes. Combinez-la avec les extrémité des fléchettes pour avec des fléchettes entières et la boîte à côté.
 
 Vous pouvez sortir de la salle pour terminer l’échappatoire.
 
