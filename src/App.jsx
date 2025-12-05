@@ -12,11 +12,9 @@ import TeamPage from "./pages/TeamPage";
 import ContactPage from "./pages/ContactPage";
 import ReglementationsPage from "./pages/ReglementationsPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import PasswordGate from "./components/PasswordGate";
 
 function App() {
   return (
-    <PasswordGate>
       <div className="text-text flex min-h-screen flex-col">
         <Header />
 
@@ -39,7 +37,6 @@ function App() {
 
         <Footer />
       </div>
-    </PasswordGate>
   );
 }
 
