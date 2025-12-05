@@ -152,7 +152,7 @@ export default function MarkdownSection({
         url={file || ""}
       />
       <div
-        className={`prose prose-invert break-anywhere max-w-none break-words ${className} prose-p:text-justify prose-a:no-underline prose-a:font-bold`}
+        className={`prose prose-invert break-anywhere max-w-none wrap-break-word ${className} prose-p:text-justify prose-a:no-underline prose-a:font-bold`}
       >
         <ReactMarkdown
           remarkPlugins={[remarkGfm, remarkDirective, remarkCustomSpoiler]}
