@@ -50,6 +50,22 @@ Allez vers le jukebox et branchez le fil d’alimentation. Insérez une pièce d
 
 Juste à droite du jukebox, il y des cadres au mur. Il faut placer les disques d’or dans celui de droite et celui de gauche. Cela va déverrouiller celui du centre et vous pourrez récupérer la boîte à fléchettes. Combinez-la avec les extrémité des fléchettes pour avec des fléchettes entières et la boîte à côté.
 
-Vous pouvez sortir de la salle pour terminer l’échappatoire.
+Vous pouvez maitenant jouer aux fléchettes. Prenez les fléchettes en main et aller faire le minijeu sur la cible de fléchettes. Dans la boite de fléchette, vous pouvez voir qu’il y a noté score 91. Et vous pouvez aussi voir que les cibles de couleurs ne sont pas de la même taille. La rouge est la plus petite, le bleue de taille moyenne, et la verte est la plus grande. Cela veut dire que non seulement vous devez faire 91 comme score final, mais il faut que le score avec couleur suit cette logique : rouge \< bleu \< vert.
+
+:::spoiler[zone à toucher sur la cible de fléchettes]
+![fléchette solution de base](/assets/jeu/vlr/guide/echappatoires/salle_de_jeu/flechette_1.webp)
+:::
+
+Vous obtiendrez le code du coffre, avec lequel vous allez pouvoir l’ouvrir
+
+Récupérez son contenu et vous pourrez sortir de la salle pour terminer l’échappatoire.
 
 ## Obtenir le 2nd mot de passe du coffre
+
+Si vous observez attentivement la boite de fléchettes, vous remarquerez que sur la vitre, il y a des signes \> \>. Cela veut dire qu’il faut faire 91, mais en respectant l’ordre inverse pour les points, donc rouge \> bleu \> vert.
+
+:::spoiler[zone à toucher sur la cible de fléchettes]
+![fléchette solution bonus](/assets/jeu/vlr/guide/echappatoires/salle_de_jeu/flechette_2.webp)
+:::
+
+Cela vous donnera le code bonus du coffre.
