@@ -12,4 +12,4 @@ Dans l’échappatoire des cabines, il y a un téléphone dans la cabine 1 se le
 - 3141
 - 2012
 
-Quand on appelle le numéro de la cabine 3, la cassette enregistré nous dit que les 4 chiffres au-dessus du lecteur sont des raccourcis pour appeler les cabines et que la cabine 2 et 4 ont aussi des vrais numéros : C’est faux, aucun numéro n’a été programmé en dehors des raccourcis.
+Quand on appelle le numéro de la cabine 3, la cassette enregistrée nous dit que les 4 chiffres au-dessus du lecteur sont des raccourcis pour appeler les cabines et que la cabine 2 et 4 ont aussi des vrais numéros : C’est faux, aucun numéro n’a été programmé en dehors des raccourcis.
