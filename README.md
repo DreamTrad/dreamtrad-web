@@ -26,17 +26,11 @@ Et tapez une des adresses qui n’est pas le localhost pour accéder au site dep
 
 ## Autour de la rédaction du contenu
 
-Premièrement, vous pouvez aller voir sur le [tableau des tâches](https://github.com/orgs/DreamTrad/projects/3) ce qu’il y a à faire.
+Vous pouvez aller sur le site, sur la page recrutement dans [la partie des tâches pour le site internet](https://dreamtrad.fr/recrutement) pour voir ce qu’il y a à faire.
 
-Vous pouvez créer des nouvelles tâches au besoin. Pensez bien à assigner un type pour pouvoir les filtrer par type.
+Si vous voulez proposer une amélioration ou proposer du contenu, vous pouvez passer par le [discord](https://t.co/O6tlFvR8wa) pour en discuter, et sinon directement faire via une [issue github](https://github.com/DreamTrad/dreamtrad-web/issues/new/choose)
 
-Dans les tâches, les chemins des fichiers concernés par la tâches sont indiqués. Si vous avez les droits pour, vous pouvez directement modifier les fichiers sur github. Parcourez les dossiers pour atteindre le chemin du fichier, cliquez sur le petit crayon pour éditer puis cliquer sur **Commit changes…** pour publier les changements.
-
-Pour le **commit message**, indiquez à la fin le numéro de la tâche liée de cette manière "Update README.md #24". Cela permettra d’automatiquement lié la modification à la tâche pour faciliter le suivi et la vérification. Vous pouvez modifier le message automatique "Update nom_fichier" au besoin.
-
-Si vous voulez faire vos modifications en local, notamment pour voir en direct le rendu sur le site, soit vous savez comment faire, sinon, demandez de l’aide pour mettre en place en local le projet.
-
-## Le contenu en lui-même
+## Si vous voulez ajouter du contenu via un pull request au lieu des issue
 
 Pour le contenu, il y a 3 actions que vous pourrez être amener à faire.
 1. Éditer des fichiers markdown
@@ -63,7 +57,7 @@ Cliquez sur "preview" et "code" pour passer d’une vue à l’autre sur les exe
 
 ### JSON/JS
 
-Ce sont des textes qui vont être inséré de manière structuré dans la page.
+Ce sont des textes qui vont être inséré de manière structuré dans la page. Suivant les champs, du markdown peut être accepté.
 Il suffit de remplir tout ce qui est entre guillemet "" avec du texte. Et parfois mettre true ou false pour un argument.
 Ici vous aurez l’exemple de la [page des succès de 999](https://github.com/DreamTrad/dreamtrad-web/blob/contenu/src/data/jeu/999/guide/succes.js)
 
