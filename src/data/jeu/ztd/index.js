@@ -4,7 +4,7 @@ import { team } from "./jeufr/team";
 
 export const game = {
   id: "ztd",
-  name: "Zero Time Dilemma",
+  name: "Zero Escape - Zero Time Dilemma",
   categories: {
     general: {
       name: "Le Jeu",

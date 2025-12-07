@@ -3,7 +3,7 @@ import { team } from "./jeufr/team";
 
 export const game = {
   id: "never7",
-  name: "Never 7 - The End of Infinity",
+  name: "Infinity - Never 7 : The End of Infinity",
   categories: {
     general: {
       name: "Le Jeu",

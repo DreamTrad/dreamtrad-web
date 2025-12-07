@@ -3,7 +3,7 @@ import { team } from "./jeufr/team";
 
 export const game = {
   id: "zodiac_trial",
-  name: "The Zodiac Trial",
+  name: "Shuffled deck - The Zodiac Trial",
   categories: {
     general: {
       name: "Le Jeu",

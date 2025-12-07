@@ -3,7 +3,7 @@ import { team } from "./jeufr/team";
 
 export const game = {
   id: "divine_deception",
-  name: "The Divine Deception",
+  name: "Shuffled deck - The Divine Deception",
   categories: {
     general: {
       name: "Le Jeu",

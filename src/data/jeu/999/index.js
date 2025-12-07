@@ -5,7 +5,7 @@ import { team } from "./jeufr/team";
 
 export const game = {
   id: "999",
-  name: "9 Hours, 9 Persons, 9 Doors",
+  name: "Zero Escape - 9 Hours, 9 Persons, 9 Doors",
   categories: {
     general: {
       name: "Le Jeu",

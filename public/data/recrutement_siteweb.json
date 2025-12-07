@@ -38,13 +38,5 @@
         "roles": ["Rédacteur escape", "Rédacteur guide fins"],
         "contact": "Silous",
         "description": "Cf. VLR, il faut des guides en français dans le style de 999 pour les échappatoires. Vu la structure du jeu, il faudra sûrement réfléchir à comment présenter le guide pour débloquer les fragments. Vous pouvez directement rédiger du contenu via une [issue](https://github.com/DreamTrad/dreamtrad-web/issues) sur GitHub."
-    },
-    {
-        "id": "zodiac_trial",
-        "title": "The Zodiac Trial",
-        "image": "assets/poster/zodiac_trial.webp",
-        "roles": ["Rédacteur guide fins", "Rédacteur solution énigmes"],
-        "contact": "Silous",
-        "description": "Contrairement à Zero Escape et AI, Zodiac Trial est bien plus *visual novel*. Donc c’est avant tout un guide pour atteindre toutes les fins. Vous pouvez directement rédiger du contenu via une [issue](https://github.com/DreamTrad/dreamtrad-web/issues) sur GitHub."
     }
 ]

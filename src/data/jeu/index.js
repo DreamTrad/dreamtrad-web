@@ -21,14 +21,14 @@ import { game as gnosia } from "./gnosia/index.js"
 export const games = [
     silver_case_25th_ward,
     shibuya_scramble,
-    ze1,
     ai1,
     ai2,
-    divine_deception,
     gnosia,
     never7,
     paranormasight,
+    zodiac_trial,
+    divine_deception,
+    ze1,
     ze2,
     ze3,
-    zodiac_trial,
 ];

@@ -4,7 +4,7 @@ import { team } from "./jeufr/team";
 
 export const game = {
   id: "vlr",
-  name: "Virtue's Last Reward",
+  name: "Zero Escape - Virtue's Last Reward",
   categories: {
     general: {
       name: "Le Jeu",
