@@ -20,13 +20,13 @@
     "excerpt": "Une explication détaillé de comment fonctionne un projet de traduction de A à Z."
   },
   {
-    "id": "0004",
+    "id": "0003",
     "title": "Actus des projets fin 2025",
     "author": "Silous, Ritsu",
     "date": "2025-12-01",
     "tags": [],
-    "coverImage": "/assets/articles-content/0004/cover.webp",
-    "markdownPath": "/data/articles/0004-actu_projet_fin_2025.md",
+    "coverImage": "/assets/articles-content/0003/cover.webp",
+    "markdownPath": "/data/articles/0003-actu_projet_fin_2025.md",
     "excerpt": "Un point sur l’état des projets en fin 2025 au moment de la sortie du site."
   }
 ]
