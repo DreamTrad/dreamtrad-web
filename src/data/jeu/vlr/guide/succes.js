@@ -41,7 +41,7 @@ export const succes = [
         titleFr: "Tu en sais trop",
         descriptionEn: "Found ALL the secrets in VLR!",
         descriptionFr: "Trouver tous les secrets dans VLR.",
-        resolution: "Pour obtenir tous les secrets, il faut terminer toutes les échappatoires en difficulté normale.",
+        resolution: "Pour obtenir tous les secrets, il faut ouvrir tous les coffres avec le code bleu dans toutes les échappatoires, et cela en difficulté normale.",
         hidden: true,
     },
     {
@@ -267,7 +267,7 @@ export const succes = [
         titleFr: "Vous l'avez trouvée",
         descriptionEn: "Gained all trophies.",
         descriptionFr: "Obtenez tous les trophées.",
-        resolution: "Obtenez tous les succès des 2 jeux de la compilation",
+        resolution: "Obtenez tous les succès des 2 jeux de la compilation.",
         hidden: false,
     },
 ];
