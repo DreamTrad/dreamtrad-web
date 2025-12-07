@@ -6,6 +6,10 @@ Solution de l’échappatoire de la salle de traitement dans Virtue’s Last Rew
 :::spoiler[la position des objets et éléments importants]
 ![Image interaction 1](/assets/jeu/vlr/guide/echappatoires/salle_de_traitement/interaction_1.webp)
 
+![Image interaction 2](/assets/jeu/vlr/guide/echappatoires/salle_de_traitement/interaction_2.webp)
+
+![Image interaction 3](/assets/jeu/vlr/guide/echappatoires/salle_de_traitement/interaction_3.webp)
+
 :::
 
 ## Récupération des objets
