@@ -49,7 +49,7 @@ Enfin, 12Riven (2008) continue sur de la SF. Le jeu n'est à ce jour pas encore 
 
 *Voulant sauver son amie d'enfance, Renmaru se retrouve dans un Tokyo désert. Il fait équipe avec les derniers survivants pour essayer de comprendre ce qui est arrivé au monde.*
 
-Pour la traduction, nous allons suivre l'ordre de sortie des jeux et allons donc commencer par Never7. La traduction en est à ce jour à plus de 5 % d'avancement"
+Pour la traduction, nous allons suivre l'ordre de sortie des jeux et allons donc commencer par Never7. La traduction en est à ce jour à 10 % d'avancement"
 
 Suivez l’avancée de la traduction de Never7 sur la [page d’accueil](/) et découvrez-le un peu plus sa [page dédiée](/jeu/never7).
 
