@@ -32,14 +32,6 @@
         "description": "Tout comme le 1, nous voulons proposer une solution complète du jeu basée sur la version française. Ça serait mieux de d’abord proposer des guides pour AI1, mais on ne va pas se plaindre si vous préférez AINI et que vous voulez aider pour ce jeu. Vous pouvez directement rédiger du contenu via une [issue](https://github.com/DreamTrad/dreamtrad-web/issues) sur GitHub."
     },
     {
-        "id": "vlr",
-        "title": "Virtue's Last Reward",
-        "image": "assets/poster/vlr.webp",
-        "roles": ["Rédacteur escape", "Rédacteur guide fins"],
-        "contact": "Silous",
-        "description": "Au lancement du site, nous avons fait en sorte d’au moins proposer des guides pour 999, il faut donc en faire pour VLR mainenant. Vous pouvez directement rédiger du contenu via une [issue](https://github.com/DreamTrad/dreamtrad-web/issues) sur GitHub. Ce qu’il faut pour VLR va être très semblable à 999, donc n’hésitez pas à vous en inspirer."
-    },
-    {
         "id": "ztd",
         "title": "Zero Time Dilemma",
         "image": "assets/poster/ztd.webp",
