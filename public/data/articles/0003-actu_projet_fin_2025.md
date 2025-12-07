@@ -30,7 +30,7 @@ De même, vous pouvez retrouver l’avancée sur la [page d’accueil](/) et avo
 
 Après avoir traduit les AI: The Somnium Files et les Zero Escape, nous nous attaquons à la série Infinity !
 
-Pour ceux qui ne connaitraient pas, c'est la première série de jeux vidéo de Kotaro Uchikoshi (Zero Escape, AI) de Nakazawa (AI, Shuten Order, I/O, Root letter) et de plusieurs personnes qui feront par la suite la série des Science Adventure (Steins Gate, Chaos;Head…). Cette série est donc fondatrice de beaucoup de VN connus à ce jour et en contient déjà la plupart des idées.
+Pour ceux qui ne connaitraient pas, c'est la première série de jeux vidéo de Kotaro Uchikoshi (Zero Escape, AI) de Nakazawa (AI, Shuten Order, I/O, Root Double) et de plusieurs personnes qui feront par la suite la série des Science Adventure (Steins Gate, Chaos;Head…). Cette série est donc fondatrice de beaucoup de VN connus à ce jour et en contient déjà la plupart des idées.
 Cette série est composée de 4 jeux : Never7 : The End of Infinity, Ever17 : The Out of Infinity, Remember 11 : The age of Infinity et 12Riven : The Psi-Climinal of Integral. Ces jeux possèdent des liens entre eux mais restent tout de même très indépendants.
 
 Never7 est le premier jeu à être sorti (2000). C'est un jeu de romance avec tout de même un soupçon de SF. Il a eu le droit à un récent portage (douteux) sur Steam qui conserve le texte original et est traduit en anglais.
