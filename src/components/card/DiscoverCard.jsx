@@ -76,7 +76,7 @@ export default function DiscoverCard({
             )}
             {popularite_vndb && (
               <span>
-                <span className="label-secondary">Popularité VNDB :</span>{" "}
+                <span className="label-secondary">TOP popularité VNDB :</span>{" "}
                 {popularite_vndb}
               </span>
             )}
