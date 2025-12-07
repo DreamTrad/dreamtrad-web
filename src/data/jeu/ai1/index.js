@@ -19,7 +19,7 @@ export const game = {
       sections: [
         // { id: "flux", name: "Flux" },
         // { id: "somnium", name: "Somnium" },
-        { id: "succes", name: "succès",  data: succes },
+        { id: "succes", name: "Succès",  data: succes },
       ],
     },
     jeufr: {

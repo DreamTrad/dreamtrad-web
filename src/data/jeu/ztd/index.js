@@ -38,7 +38,7 @@ export const game = {
         //     { id: "bureau", name: "Bureau", file: "guide/echappatoires/bureau" },
         //   ],
         // },
-        { id: "succes", name: "succès",  data: succes },
+        { id: "succes", name: "Succès",  data: succes },
       ],
     },
     jeufr: {

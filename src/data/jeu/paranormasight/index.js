@@ -20,7 +20,7 @@ export const game = {
         // { id: "sommaire", name: "Sommaire", file: "guide/sommaire" },
         // { id: "echappatoire", name: "Échappatoire" },
         // { id: "galapiafs", name: "Galapiafs" },
-        { id: "succes", name: "succès",  data: succes },
+        { id: "succes", name: "Succès",  data: succes },
       ],
     },
     jeufr: {

@@ -19,7 +19,7 @@ export const game = {
     //   sections: [
     //     { id: "sommaire", name: "Sommaire", file: "guide/sommaire" },
     //     { id: "bad_end", name: "Mauvaises fins" },
-    //     { id: "succes", name: "succès",  data: succes },
+    //     { id: "succes", name: "Succès",  data: succes },
     //   ],
     // },
     jeufr: {

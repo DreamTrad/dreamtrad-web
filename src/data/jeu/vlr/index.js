@@ -43,7 +43,7 @@ export const game = {
         },
         { id: "mots_de_passe", name: "Mots de passe français",  file: "guide/mots_de_passe" },
         { id: "telephone_cabines", name: "Téléphone des cabines",  file: "guide/telephone_cabines" },
-        { id: "succes", name: "succès",  data: succes },
+        { id: "succes", name: "Succès",  data: succes },
       ],
     },
     jeufr: {

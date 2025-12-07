@@ -21,7 +21,7 @@ export const game = {
         { id: "notes", name: "Débloquer les notes", file: "guide/notes"  },
         { id: "fins", name: "Fins du jeu", file: "guide/fins" },
         { id: "plus_loin", name: "Pour aller plus loin", file: "guide/plus_loin" },
-        { id: "succes", name: "succès",  data: succes },
+        { id: "succes", name: "Succès",  data: succes },
       ],
     },
     jeufr: {
