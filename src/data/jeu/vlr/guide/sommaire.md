@@ -1,4 +1,6 @@
-# Sommaire de la solution
+# Sommaire du guide
+
+Une fonctionnalité a été ajouté avec le patch français : Les déplacements sur la cartes peuvent être accélérés. Pour cela, il faut maintenir la touche servant à faire retour du périphérique avec lequel vous jouez (B, cercle, clic droit, échap).
 
 ## Pages du guide
 

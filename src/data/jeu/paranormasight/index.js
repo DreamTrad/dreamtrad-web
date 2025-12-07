@@ -17,7 +17,7 @@ export const game = {
     guide: {
       name: "Guide",
       sections: [
-        // { id: "solution", name: "Solution" },
+        // { id: "sommaire", name: "Sommaire", file: "guide/sommaire" },
         // { id: "echappatoire", name: "Échappatoire" },
         // { id: "galapiafs", name: "Galapiafs" },
         { id: "succes", name: "succès",  data: succes },

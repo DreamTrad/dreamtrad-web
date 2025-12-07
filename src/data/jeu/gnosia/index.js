@@ -17,7 +17,7 @@ export const game = {
     guide: {
       name: "Guide",
       sections: [
-        { id: "general", name: "Général", file: "guide/general"},
+        { id: "sommaire", name: "Sommaire", file: "guide/sommaire"},
         { id: "notes", name: "Débloquer les notes", file: "guide/notes"  },
         { id: "fins", name: "Fins du jeu", file: "guide/fins" },
         { id: "plus_loin", name: "Pour aller plus loin", file: "guide/plus_loin" },
