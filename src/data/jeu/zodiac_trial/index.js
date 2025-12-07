@@ -13,14 +13,12 @@ export const game = {
       ],
     },
 
-    // guide: {
-    //   name: "Guide",
-    //   sections: [
-    //     { id: "sommaire", name: "Sommaire", file: "guide/sommaire" },
-    //     { id: "flux", name: "Flux" },
-    //     { id: "fins", name: "Fins" },
-    //   ],
-    // },
+    guide: {
+      name: "Guide",
+      sections: [
+        { id: "fins", name: "Fins", file: "guide/fins" },
+      ],
+    },
     jeufr: {
       name: "Patch FR",
       sections: [
