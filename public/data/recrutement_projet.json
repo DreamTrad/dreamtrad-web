@@ -5,7 +5,7 @@
         "image": "assets/poster/428.webp",
         "roles": ["Traducteur EN → FR", "Graphiste"],
         "contact": "AlexisTGF",
-        "description": "Le projet est actuellement porté par un seul traducteur, et nous recherchons d’autres traducteurs pour nous aider à avancer plus rapidement. La traduction est déjà bien avancée, mais il reste encore beaucoup de travail à faire. La traduction du japonais est possible mais complexe à cause de la structure des fichiers et du texte. Nous faisons tout de même au besoin des vérifications du japonais. Nous recherchons donc principalement des traducteurs de l’anglais vers le français. Pour les images, aucune n’est encore traduite, il y a environ une cinquantaine d’images à faire."
+        "description": "Le projet est actuellement porté par un seul traducteur, et nous recherchons d’autres traducteurs pour nous aider à avancer plus rapidement. La traduction est déjà bien avancée, mais il reste encore beaucoup de travail à faire. La traduction du japonais est possible mais complexe à cause de la structure des fichiers et du texte. Nous faisons tout de même au besoin des vérifications du japonais. Nous recherchons donc principalement des traducteurs de l’anglais vers le français.\n\nPour les images, aucune n’est encore traduite, il y a environ une cinquantaine d’images à faire."
     },
     {
         "id": "ai2-8-nospleep",
@@ -13,7 +13,7 @@
         "image": "assets/poster/ai2-8-nosleep.webp",
         "roles": ["Traducteur EN → FR", "Traducteur JP → FR", "Graphiste"],
         "contact": "Floflosera",
-        "description": "Le projet n’est pas entièrement mis en place niveau technique, mais les Google Sheet pour traduire sont prêt, donc vous pouvez déjà venir traduire. Nous avons pour le moment pas de membres ayant travaillé sur les traduction de AI et AINI de motivé pour ce projet en priorité. Donc nous cherchons des nouveaux traducteurs. Il faudra évidemment rester dans la lignée des choix de traductions faits pour les patchs français de AI 1 et 2. Pour les images, tout est à faire, mais avant il reste encore un tri et la création d’une table avant que le travail des graphistes commencent véritablement."
+        "description": "Le projet n’est pas entièrement mis en place niveau technique, mais les Google Sheet pour traduire sont prêt, donc vous pouvez déjà venir traduire. Nous avons pour le moment pas de membres ayant travaillé sur les traduction de AI et AINI de motivé pour ce projet en priorité. Donc nous cherchons des nouveaux traducteurs. Il faudra évidemment rester dans la lignée des choix de traductions faits pour les patchs français de AI 1 et 2.\n\nPour les images, tout est à faire, mais avant il reste encore un tri et la création d’une table avant que le travail des graphistes commencent véritablement."
     },
     {
         "id": "never7",
@@ -21,7 +21,7 @@
         "image": "assets/poster/never7.webp",
         "roles": ["Traducteur JP → FR", "Graphiste"],
         "contact": "Ritsu",
-        "description": "Le projet est déjà en cours. Mais nous sommes ouverts pour de l’aide à la traduction, uniquement depuis le japonais. Le projet avance déjà à un bon rythme, mais ça peut aller encore plus vite avec des traducteurs en plus. Niveau images, il n’y a pas beaucoup d’images à faire, mais nous comptons faire des patchs pour plusieurs versions du jeu, donc il y aura des images spécifiques à chaque version à faire. Mais pour l’instant, seulement les images de la version Steam sont prêtes à être modifiées."
+        "description": "Le projet est déjà en cours. Mais nous sommes ouverts pour de l’aide à la traduction, uniquement depuis le japonais. Le projet avance déjà à un bon rythme, mais ça peut aller encore plus vite avec des traducteurs en plus. \n\nNiveau images, il n’y a pas beaucoup d’images à faire, mais nous comptons faire des patchs pour plusieurs versions du jeu, donc il y aura des images spécifiques à chaque version à faire. Mais pour l’instant, seulement les images de la version Steam sont prêtes à être modifiées."
     },
     {
         "id": "ever17",
@@ -29,7 +29,7 @@
         "image": "assets/poster/ever17.webp",
         "roles": ["Traducteur JP → FR", "Aide hacking"],
         "contact": "Ritsu",
-        "description": "Pour l’instant, le projet n’a pas encore commencé, mais tout est déjà mis en place pour débuter la traduction. Nous recherchons donc des traducteurs depuis le japonais pour commencer la traduction en parallèle de Ever17. C’est actuellement la version Remake du scénario qui est prête, mais nous comptons aussi faire un patch pour la version originale du jeu.\nSi vous avez des compétences en hacking, nous sommes aussi preneur d’aide pour avancer plus rapidement sur la partie technique du projet de la version originale, pour avoir un projet mis en place [comme nos autres projets](/articles/0002)."
+        "description": "Pour l’instant, le projet n’a pas encore commencé, mais tout est déjà mis en place pour débuter la traduction. Nous recherchons donc des traducteurs depuis le japonais pour commencer la traduction en parallèle de Never7. C’est actuellement la version Remake du scénario qui est prête, mais nous comptons aussi faire un patch pour la version originale du jeu.\n\nSi vous avez des compétences en hacking, nous sommes aussi preneur d’aide pour avancer plus rapidement sur la partie technique du projet de la version originale, pour avoir un projet mis en place [comme nos autres projets](/articles/0002)."
     },
     {
         "id": "paranormasight",
