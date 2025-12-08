@@ -38,5 +38,13 @@
         "roles": ["Testeur patch Switch"],
         "contact": "Silous",
         "description": "L’outil utilisé pour créer le patch permet de créer un patch Switch. Mais nous n’avons pas de quoi tester ce patch. Si vous avez une Switch hackée et que vous souhaitez nous aider en testant le patch, n’hésitez pas à nous contacter ! Il faudra tester le patch en vérifiant certains éléments pour s’assurer que tous les fichiers sont pris en compte, et il faudrait aussi nous expliquer la démarche pour patcher un jeu sur Switch pour pouvoir faire un guide."
+    },
+    {
+        "id": "divine_deception",
+        "title": "Traduction de Divine Deception",
+        "image": "assets/poster/divine_deception.webp",
+        "roles": ["Graphiste"],
+        "contact": "jls",
+        "description": "Il y a quelques images à traduire et aucune n’a pour le moment été faites. Nous recherchons donc des personnes pouvant aider à l’édition des images. Il y a quelques texte lié au scénario et des éléments d’UI."
     }
 ]
