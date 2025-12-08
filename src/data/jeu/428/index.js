@@ -27,7 +27,7 @@ export const game = {
       sections: [
         {
           id: "telechargement",
-          name: "Télechargement",
+          name: "Informations patch",
           file: "jeufr/informations",
           platforms: [
           ],

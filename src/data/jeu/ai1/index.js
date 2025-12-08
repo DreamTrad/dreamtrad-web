@@ -14,14 +14,14 @@ export const game = {
       ],
     },
 
-    guide: {
-      name: "Guide",
-      sections: [
-        // { id: "flux", name: "Flux" },
-        // { id: "somnium", name: "Somnium" },
-        { id: "succes", name: "Succès",  data: succes },
-      ],
-    },
+    // guide: {
+    //   name: "Guide",
+    //   sections: [
+    //     // { id: "flux", name: "Flux" },
+    //     // { id: "somnium", name: "Somnium" },
+    //     { id: "succes", name: "Succès",  data: succes },
+    //   ],
+    // },
     jeufr: {
       name: "Patch FR",
       sections: [

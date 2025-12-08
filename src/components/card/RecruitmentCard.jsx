@@ -11,7 +11,7 @@ export default function RecruitmentCard({
     <div className="bg-bg-tertiary border-bg-secondary flex w-full max-w-7xl flex-col overflow-hidden rounded-2xl border shadow-lg">
       {/* Title */}
       <div className="bg-bg-secondary px-6 py-3">
-        <h3 className="text-accent text-xl font-bold">{title}</h3>
+        <h3 className="text-xl font-bold">{title}</h3>
       </div>
 
       {/* Middle: image + roles */}
@@ -27,7 +27,7 @@ export default function RecruitmentCard({
 
         {/* Rôles / contenu */}
         <div className="bg-bg-secondary flex-1 rounded-md p-4">
-          <h4 className="mb-2 text-lg font-semibold">Nous recherchons :</h4>
+          <h4 className="text-accent mb-2 text-lg font-semibold">Nous recherchons :</h4>
           <div className="flex h-40 items-center">
             <ul className="text-text-secondary list-inside list-disc space-y-5">
               {roles.map((role, idx) => (

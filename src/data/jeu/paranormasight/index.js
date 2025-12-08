@@ -14,15 +14,15 @@ export const game = {
       ],
     },
 
-    guide: {
-      name: "Guide",
-      sections: [
-        // { id: "sommaire", name: "Sommaire", file: "guide/sommaire" },
-        // { id: "echappatoire", name: "Échappatoire" },
-        // { id: "galapiafs", name: "Galapiafs" },
-        { id: "succes", name: "Succès",  data: succes },
-      ],
-    },
+    // guide: {
+    //   name: "Guide",
+    //   sections: [
+    //     // { id: "sommaire", name: "Sommaire", file: "guide/sommaire" },
+    //     // { id: "echappatoire", name: "Échappatoire" },
+    //     // { id: "galapiafs", name: "Galapiafs" },
+    //     { id: "succes", name: "Succès",  data: succes },
+    //   ],
+    // },
     jeufr: {
       name: "Patch FR",
       sections: [
