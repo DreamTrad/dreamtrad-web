@@ -63,7 +63,7 @@ Il s’agit du 3e épisode d’une trilogie de Suda51 (Killer7, No More Heroes).
 
 Plus de 20 % du Visual Novel est déjà traduit. La liste des images à modifier n’a pas encore été étudiée et il reste des points techniques à corriger.
 
-Le script n’est pas trop gros en comparaison de nos autres projets, donc c’est un projet *relativement court*.
+Suivez l’avancée de la traduction du jeu sur la [page d’accueil](/) et découvrez-le un peu plus sa [page dédiée](/jeu/silver_case_25th_ward).
 
 # D’autres projets
 
