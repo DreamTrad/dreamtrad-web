@@ -71,7 +71,7 @@ export default function Footer() {
               />
             </a>
             <a
-              href="https://github.com/DreamTrad/dreamtrad-web"
+              href="https://github.com/DreamTrad"
               target="_blank"
               rel="noreferrer"
             >
