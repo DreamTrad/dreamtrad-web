@@ -6,6 +6,8 @@ Solution de l’échappatoire de la salle du générateur dans Virtue’s Last R
 :::spoiler[la position des objets et éléments importants]
 ![Image interaction 1](/assets/jeu/vlr/guide/echappatoires/salle_du_generateur/interaction_1.webp)
 
+![Image interaction 1](/assets/jeu/vlr/guide/echappatoires/salle_du_generateur/interaction_2.webp)
+
 :::
 
 ## Récupération des objets
