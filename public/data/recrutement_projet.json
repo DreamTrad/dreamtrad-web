@@ -32,6 +32,14 @@
         "description": "Pour l’instant, le projet n’a pas encore commencé, mais tout est déjà mis en place pour débuter la traduction. Nous recherchons donc des traducteurs depuis le japonais pour commencer la traduction en parallèle de Never7. C’est actuellement la version Remake du scénario qui est prête, mais nous comptons aussi faire un patch pour la version originale du jeu.\n\nSi vous avez des compétences en hacking, nous sommes aussi preneur d’aide pour avancer plus rapidement sur la partie technique du projet de la version originale, pour avoir un projet mis en place [comme nos autres projets](/articles/0002)."
     },
     {
+        "id": "remember11",
+        "title": "Traduction de Infinity : Remember 11",
+        "image": "assets/poster/remember11.webp",
+        "roles": ["Aide hacking"],
+        "contact": "Silous",
+        "description": "La traduction n’a pas encore commencé, mais pour préparer le terrain, il faudrait déjà mettren en place le projet pour que les traducteurs puissent commencer à traduire sans attendre. Un [outil existe déjà](https://github.com/arsym-dev/Remember11-Script-Editor), il dû servir pour le patch anglais, mais c’est un outil à interface graphique, ce qui n’est pas idéal, et après quelques tests rapides, nous avions eu des soucis, probablement dû aux caractères français. Nous n’avons pas encore trop poussé les tests, mais nous sommes preneur si quelqu’un veut se pencher sur la question pour préparer le projet."
+    },
+    {
         "id": "paranormasight",
         "title": "Patch Switch de PARANORMASIGHT",
         "image": "assets/poster/paranormasight.webp",
@@ -41,10 +49,18 @@
     },
     {
         "id": "divine_deception",
-        "title": "Traduction de Divine Deception",
+        "title": "Traduction de Shuffled Deck : Divine Deception",
         "image": "assets/poster/divine_deception.webp",
         "roles": ["Graphiste"],
         "contact": "jls",
         "description": "Il y a quelques images à traduire et aucune n’a pour le moment été faites. Nous recherchons donc des personnes pouvant aider à l’édition des images. Il y a quelques texte lié au scénario et des éléments d’UI."
+    },
+    {
+        "id": "setup_projet",
+        "title": "Mise en place de projet",
+        "image": "assets/poster/setup_projet.webp",
+        "roles": ["Hacking", "Programmation"],
+        "contact": "Silous, Floflosera",
+        "description": "Le but est d’avoir pleins de projets prêts pour accueillir des traducteurs. Si vous avez des compétences en hacking ou en programmation, n’hésitez pas à nous contacter pour nous aider à mettre en place des projets de traduction pour des visual novels. Il n’y aura pas forcément de traducteurs voulant travailler sur ces projets dans l’immédiat, mais cela rendra accessible la traduction si des personnes s’intéressent à traduire ces jeux plus tard. Et de manière générale, si vous voulez nous aidez sur le plan technique, nous sommes preneurs !"
     }
 ]
