@@ -37,7 +37,7 @@
         "image": "assets/poster/remember11.webp",
         "roles": ["Aide hacking"],
         "contact": "Silous",
-        "description": "La traduction n’a pas encore commencé, mais pour préparer le terrain, il faudrait déjà mettren en place le projet pour que les traducteurs puissent commencer à traduire sans attendre. Un [outil existe déjà](https://github.com/arsym-dev/Remember11-Script-Editor), il dû servir pour le patch anglais, mais c’est un outil à interface graphique, ce qui n’est pas idéal, et après quelques tests rapides, nous avions eu des soucis, probablement dû aux caractères français. Nous n’avons pas encore trop poussé les tests, mais nous sommes preneur si quelqu’un veut se pencher sur la question pour préparer le projet."
+        "description": "La traduction n’a pas encore commencé, mais pour préparer le terrain, il faudrait déjà mettre en place le projet pour que les traducteurs puissent commencer à traduire sans attendre. Un [outil existe déjà](https://github.com/arsym-dev/Remember11-Script-Editor), il dû servir pour le patch anglais, mais c’est un outil à interface graphique, ce qui n’est pas idéal, et après quelques tests rapides, nous avions eu des soucis, probablement dû aux caractères français. Nous n’avons pas encore trop poussé les tests, mais nous sommes preneur si quelqu’un veut se pencher sur la question pour préparer le projet."
     },
     {
         "id": "paranormasight",
