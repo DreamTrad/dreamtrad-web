@@ -15,7 +15,7 @@ import xboxIcon from "../../assets/icons/website/xbox.svg";
 import playstationIcon from "../../assets/icons/website/playstation.svg";
 
 // Custom internal-site icon
-const localSiteIcon = "/assets/dreamtrad-logo.png";
+const localSiteIcon = "/assets/dreamtrad-logo-rond.png";
 
 const iconMap = [
   { match: ["discord.gg", "discord.com"], icon: discordIcon, label: "Discord" },
