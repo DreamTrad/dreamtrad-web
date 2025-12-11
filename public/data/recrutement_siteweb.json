@@ -13,7 +13,7 @@
         "image": "assets/poster/article.webp",
         "roles": ["Rédacteur d’articles"],
         "contact": "Silous",
-        "description": "Si vous avez un sujet potentiel d’article nous sommes totalement ouvert si vous voulez le proposer. Ça peut être un article en lien avec les Visual Novel traduits, avec les Visual Novel en général, ou avec la traduction de manière générale. Ça peut prendre la forme d’une actualité, d’un dossier, d’un témoignage. Nous sommes très ouvert sur le contenu, donc vous pouvez toujours proposer un sujet et nous verrons bien si c’est suffisament en rapport avec le contenu du site. Tout se passe sur Github, avec le formulaire d’[issue](https://github.com/DreamTrad/dreamtrad-web/issues/new?template=new_article.yml), mais n’hésitez pas à venir sur le [discord](https://t.co/O6tlFvR8wa) pour discuter plus librement si besoin."
+        "description": "Si vous avez un sujet potentiel d’article nous sommes totalement ouverts si vous voulez le proposer. Ça peut être un article en lien avec les Visual Novel traduits, avec les Visual Novel en général, ou avec la traduction de manière générale. Ça peut prendre la forme d’une actualité, d’un dossier, d’un témoignage. Nous sommes très ouverts sur le contenu, donc vous pouvez toujours proposer un sujet et nous verrons bien si c’est suffisamment en rapport avec le contenu du site. Tout se passe sur GitHub, avec le formulaire d’[issue](https://github.com/DreamTrad/dreamtrad-web/issues/new?template=new_article.yml), mais n’hésitez pas à venir sur le [discord](https://t.co/O6tlFvR8wa) pour discuter plus librement si besoin."
     },
     {
         "id": "ai1",
@@ -37,7 +37,7 @@
         "image": "assets/poster/paranormasight.webp",
         "roles": ["Rédacteur solution", "Rédacteur guide Galapiaf", "Rédacteur/traducteur guide succès"],
         "contact": "Silous",
-        "description": "Paranormasight n’est pas un VN très complexe à compléter, malgré tout, il peut y avoir quelque passage bloquants, où on ne sait pas quoi faire. Et au-delà de ça, nous voulons tout simplement proposer une solution complète du jeu, avec un guide pour trouver les Galapiafs, et un guide pour obtenir tous les succès, le tout basé sur la version française. Vous pouvez directement rédiger du contenu via une [issue](https://github.com/DreamTrad/dreamtrad-web/issues) sur GitHub ou venir en discuter sur [discord](https://t.co/O6tlFvR8wa"
+        "description": "Paranormasight n’est pas un VN très complexe à compléter, malgré tout, il peut y avoir quelques passages bloquants, où on ne sait pas quoi faire. Et au-delà de ça, nous voulons tout simplement proposer une solution complète du jeu, avec un guide pour trouver les Galapiafs, et un guide pour obtenir tous les succès, le tout basé sur la version française. Vous pouvez directement rédiger du contenu via une [issue](https://github.com/DreamTrad/dreamtrad-web/issues) sur GitHub ou venir en discuter sur [discord](https://t.co/O6tlFvR8wa"
     },
     {
         "id": "ztd",
@@ -45,6 +45,6 @@
         "image": "assets/poster/ztd.webp",
         "roles": ["Rédacteur escape", "Rédacteur guide fins"],
         "contact": "Silous",
-        "description": "Il faut des guides en français dans le style de [999](/jeu/999/guide/sommaire) ou [VLR](/jeu/vlr/guide/sommaire) pour les échappatoires. Vu la structure du jeu, il faudra sûrement réfléchir à comment présenter le guide pour débloquer les fragments. Vous pouvez directement rédiger du contenu via une [issue](https://github.com/DreamTrad/dreamtrad-web/issues) sur GitHub ou venir d’abord en discuter sur [discord](https://t.co/O6tlFvR8wa)."
+        "description": "Il faut des guides en français dans le style de [999](/jeu/999/guide/sommaire) ou [VLR](/jeu/vlr/guide/sommaire) pour les échappatoires. Vu la structure du jeu, il faudra sûrement réfléchir comment présenter le guide pour débloquer les fragments. Vous pouvez directement rédiger du contenu via une [issue](https://github.com/DreamTrad/dreamtrad-web/issues) sur GitHub ou venir d’abord en discuter sur [discord](https://t.co/O6tlFvR8wa)."
     }
 ]
