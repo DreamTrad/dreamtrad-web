@@ -23,7 +23,7 @@ Vous pourrez récupérer la carte mémoire rouge et un document sur des règles 
 
 Allez prendre 3 fléchettes puis lancer le minijeu de la cible. Il faut faire 100 points, mais avec le premier lancer sur du vert, le deuxième sur du bleu et le troisième sur du rouge.
 
-::spoiler[où tirer les fléchettes]
+:::spoiler[où tirer les fléchettes]
 ![Énigme des fléchettes](/assets/jeu/vlr/guide/echappatoires/salle_q/flechettes.webp)
 :::
 
