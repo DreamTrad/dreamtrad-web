@@ -41,6 +41,7 @@ export const game = {
             { id: "salle_q", name: "Salle Q", file: "guide/echappatoires/salle_q" },
           ],
         },
+        { id: "verrous", name: "Verrous",  file: "guide/verrous" },
         { id: "mots_de_passe", name: "Mots de passe français",  file: "guide/mots_de_passe" },
         { id: "telephone_cabines", name: "Téléphone des cabines",  file: "guide/telephone_cabines" },
         { id: "succes", name: "Succès",  data: succes },
