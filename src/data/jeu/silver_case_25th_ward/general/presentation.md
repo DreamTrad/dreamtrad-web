@@ -1,6 +1,6 @@
 # The 25th Ward: The Silver Case
 
-Dernier jeu d’une trilogie de Suda51 (Killer7, No More Heroes), "The 25th Ward: The Silver Case" prend place après "The Silver Case" dont une fantraduction est [disponible ici](http://projectsilver.free.fr/dl.html) et après "Flower, Sun, and Rain" disponible officiellement en français sur DS.
+Dernier jeu d’une trilogie de Suda51 (Killer7, No More Heroes), "The 25th Ward: The Silver Case" prend place après "The Silver Case" dont une fantraduction est [disponible ici](https://sakimotor.fr/patches/projectsilver/) et après "Flower, Sun, and Rain" disponible officiellement en français sur DS.
 
 ## Scénario
 
