@@ -30,15 +30,15 @@ export default function Header() {
       <nav className="relative flex h-full w-full items-center justify-center px-20">
         {/* Logo + Nom site*/}
         <Link to="/" className="absolute left-4 flex h-full items-center gap-2">
-          <img
+          {/* <img
             src="/assets/dreamtrad-logo.png"
             alt="Logo DreamTrad"
             className="h-10 w-10 object-contain"
-          />
+          /> */}
           <img
-            src="/assets/dreamtrad-title.png"
+            src="/assets/dreamtrad-logo-title.svg"
             alt="DreamTrad"
-            className="h-7 object-contain"
+            className="h-10 object-contain"
           />
         </Link>
 
