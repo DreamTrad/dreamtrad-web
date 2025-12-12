@@ -26,7 +26,7 @@ Récupérez les objets suivants :
 
 Utilisez le scalpel sur la partie carré différente du reste du lit du milieu pour récupérer le drap sale.
 
-Combinez la pièce en métal avec le piquet en métal pour former une clé. Utilsez-la sur la serrure de droite du panneau à gauche de la porte de sortie. Et utilisez la vieille clé sur la serrure de gauche. Vous pouvez désormais résoudre le casse-tête avec les carrés.
+Combinez la pièce en métal avec le piquet en métal pour former une clé. Utilisez-la sur la serrure de droite du panneau à gauche de la porte de sortie. Et utilisez la vieille clé sur la serrure de gauche. Vous pouvez désormais résoudre le casse-tête avec les carrés.
 
 Il faut amener chaque carré de couleur à l’emplacement correspondant. Cela fonctionne comme le mini-jeu de l’ascenseur, avec la gravité.
 
@@ -34,7 +34,7 @@ Il faut amener chaque carré de couleur à l’emplacement correspondant. Cela f
 droite → haut → gauche → haut → droite → haut → gauche → bas → droite
 :::
 
-Tous les espaces vides affichent désormais des symboles comme les autres cases. Comptez le nombre de symbole de chaque couleur.
+Tous les espaces vides affichent désormais des symboles comme les autres cases. Comptez le nombre de symboles de chaque couleur.
 
 Au niveau de l’armoire, il y a un tiroir où il faut rentrer les bons nombres pour chaque couleur pour l’ouvrir.
 
@@ -46,9 +46,9 @@ Au niveau de l’armoire, il y a un tiroir où il faut rentrer les bons nombres 
 
 Vous pourrez récupérer à l’intérieur la note avec des chiffres colorés.
 
-insérez la carte mémoire dans la fente de la grande télé, là où sont les flèches. Interagissez avec l’écran pour une copie de son contenu dans vos archives.
+Insérez la carte mémoire dans la fente de la grande télé, là où sont les flèches. Interagissez avec l’écran pour une copie de son contenu dans vos archives.
 
-En vous aidant de la première notes trouvé dans l’armoire derrière la porte coulissante, vous devriez pouvoir nettoyer le drap sale.
+En vous aidant de la première note trouvée dans l’armoire derrière la porte coulissante, vous devriez pouvoir nettoyer le drap sale.
 
 D’abord, videz le flacon dans la bassine sur la table à droite de la télé. Ensuite, allez au niveau du lavabo et ouvrez le robinet et remplissez votre flacon désormais vide avec de l’eau et videz cette eau dans la bassine. Il ne vous reste plus qu’à nettoyer le drap dedans.
 
@@ -56,16 +56,16 @@ Maintenant que le drap est propre, placez-le sur le lit d’examination, celui q
 
 Allumez l’appareil juste à droite grâce au bouton rouge, puis prenez le scanner posé sur la machine.
 
-Il faut scanner chaque élément du drap dans le bon ordre. Pour cela il faut se servir de la note trouvé dans le tiroir que vous avez déverrouillé, celle avec les chiffres colorés. Chaque symbole peut être associé à une couleur, ce qui donnera son ordre de scannage. Puis les 2 autres éléments du drap qui sont déjà des chiffres vous indique directement leur ordre.
+Il faut scanner chaque élément du drap dans le bon ordre. Pour cela il faut se servir de la note trouvée dans le tiroir que vous avez déverrouillé, celle avec les chiffres colorés. Chaque symbole peut être associé à une couleur, ce qui donnera son ordre de scannage. Puis les 2 autres éléments du drap qui sont déjà des chiffres vous indique directement leur ordre.
 
 Vous pouvez aussi forcer l’énigme en essayant plusieurs fois et en devinant le mot (anglais) à produire.
 
 :::spoiler[l’ordre de scannage]
 - La pilule est bleu donc 1.
 - La bouteille est rouge donc 2.
-- la sorte d’enveloppe est jaune donc 3.
-- le symbole 4 en 4.
-- le symbole 5 en 5.
+- La sorte d’enveloppe est jaune donc 3.
+- Le symbole 4 en 4.
+- Le symbole 5 en 5.
 :::
 
 Vous obtiendrez le mot de passe qui vous permettra d’ouvrir le coffre, qui est en bas de l’armoire derrière la porte coulissante de gauche.
@@ -76,7 +76,7 @@ Récupérez son contenu et sortez de la salle pour terminer l’échappatoire.
 
 Il faut rentrer d’autres chiffres au niveau du tiroir de l’armoire, pour ouvrir le tiroir de gauche.
 
-Pour cela, comparez le drap que vous avez découpé du lit avec les symboles sur le mur à gauche de la porte. Le drap a des éléments à certains endroits de son quadrillage, il faut repérer ce qu’il y aurait en dessous si on placer le drap sur les symboles au mur. Comptez combien de symboles bleus, jaunes et rouges cela recouvre, et ça sera les chiffres à rentrer dans le tiroir.
+Pour cela, comparez le drap que vous avez découpé du lit avec les symboles sur le mur à gauche de la porte. Le drap a des éléments à certains endroits de son quadrillage, il faut repérer ce qu’il y aurait en dessous si on plaçait le drap sur les symboles au mur. Comptez combien de symboles bleus, jaunes et rouges cela recouvre, et ça seront les chiffres à rentrer dans le tiroir.
 
 :::spoiler[les chiffres à rentrer]
 - bleu : 2
@@ -84,4 +84,4 @@ Pour cela, comparez le drap que vous avez découpé du lit avec les symboles sur
 - rouge : 1
 :::
 
-Cela ouvrira le deuxième tiroir dans lequel vous trouverez un autre drap. Placez-le sur le lit pour le scanner. Les chiffres sont déjà inscrit directement dessus, donc vous n’avez qu’à scanner dans les chiffres dans l’ordre pour obtenir le nouveau mot de passe.
+Cela ouvrira le deuxième tiroir dans lequel vous trouverez un autre drap. Placez-le sur le lit pour le scanner. Les chiffres sont déjà inscrits directement dessus, donc vous n’avez qu’à scanner dans les chiffres dans l’ordre pour obtenir le nouveau mot de passe.

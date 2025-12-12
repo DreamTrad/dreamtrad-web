@@ -13,10 +13,10 @@ Le cube au centre fonctionne comme un démineur. Le chiffre de chaque case indiq
 ![Mur 4](/assets/jeu/vlr/guide/echappatoires/salle_q/mur_4.webp)
 :::
 
-Allez vers les héxagones. Comme vous pouvez le voir, ils sont tous rouges. Donc sur l’écran du minijeu il faut tous les passer en rouge.
+Allez vers les hexagones. Comme vous pouvez le voir, ils sont tous rouges. Donc sur l’écran du minijeu il faut tous les passer en rouge.
 
-:::spoiler[la solution des héxagones]
-![Énigme de héxagones](/assets/jeu/vlr/guide/echappatoires/salle_q/hexagones.webp)
+:::spoiler[la solution des hexagones]
+![Énigme de hexagones](/assets/jeu/vlr/guide/echappatoires/salle_q/hexagones.webp)
 :::
 
 Vous pourrez récupérer la carte mémoire rouge et un document sur des règles spécifiques du jeu AB.
@@ -35,22 +35,22 @@ Regardez les livres avec écrit "DICE". Dedans vous trouverez 3 images. Ce sont 
 ![Énigme des dés](/assets/jeu/vlr/guide/echappatoires/salle_q/des.webp)
 :::
 
-Vous pourrez récupéer la carte mémoire bleue une fois les dés placés.
+Vous pourrez récupérer la carte mémoire bleue une fois les dés placés.
 
-Insérez les cartes mémoires rouge, bleu et verte dans la machine à droite de la sortie.
+Insérez les cartes mémoires rouge, bleue et verte dans la machine à droite de la sortie.
 
 Vous pourrez jouer au jeu AB de la salle Q. Les règles et spécificités sont dans le document que vous avez récupéré avec la carte rouge.
 
-Les votes des autres suivront toujours la même logique. Si A fait parti de ceux qui coopère toujours durant 3 essais où vous ne trouvez pas la solution, A sera encore parmi ceux qui coopère dans les essais suivants. Donc vous pouvez faire des tests pour déterminer à quelle catégorie appartiennent chaque personne.
+Les votes des autres suivront toujours la même logique. Si A fait partie de ceux qui coopèrent toujours durant 3 essais où vous ne trouvez pas la solution, A sera encore parmi ceux qui coopèrent dans les essais suivants. Donc vous pouvez faire des tests pour déterminer à quelle catégorie appartient chaque groupe.
 
 La première solution, c’est d’obtenir 9 avec six personnes qui coopèrent entre elles. Il faut donc que 4 groupes atteignent 9.
 
-:::spoiler[les choix et les disposition à faire]
-Pour les trois round.
+:::spoiler[les choix et les dispositions à faire]
+Pour les trois rounds.
 ![Jeu AB solution 1](/assets/jeu/vlr/guide/echappatoires/salle_q/jeu_ab_1.webp)
 :::
 
-Vous obtiendrez le code qui permet d’ouvir le coffre. Récupérez son contenu et sortez de la salle pour terminer l’échappatoire.
+Vous obtiendrez le code qui permet d’ouvrir le coffre. Récupérez son contenu et sortez de la salle pour terminer l’échappatoire.
 
 ## Obtenir le 2nd mot de passe du coffre
 

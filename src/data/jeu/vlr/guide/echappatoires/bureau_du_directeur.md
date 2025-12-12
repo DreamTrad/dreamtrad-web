@@ -46,18 +46,18 @@ Au dos des cartes de visite, il est noté "Livre 334". Cela veut dire qu’il fa
 
 Mettez le brandy de haute qualité sur le cercle vert juste au-dessus des livres.
 
-Vous pouvez placer la tête de cerf au dessus du meuble où vous avez placé les livres. Au niveau du trait rouge qui dépasse en haut de l’écran. Il faut lever la tête.
+Vous pouvez placer la tête de cerf au-dessus du meuble où vous avez placé les livres. Au niveau du trait rouge qui dépasse en haut de l’écran. Il faut lever la tête.
 
 
-Utilisez la lance sur le tiroir du bureau pour l’ouvrir et récupérer la petit clé.
+Utilisez la lance sur le tiroir du bureau pour l’ouvrir et récupérer la petite clé.
 
-La clé sert à démarré l’appareil à reconnaissance faciale juste à gauche du bureau. Tenmyouji utilisera une photo pour valider la reconnaissance. Un pan du mur va se retourner faisant apparaitre un casque de chevalier. Prenez-le et placez-le sur l’armure.
+La clé sert à démarrer l’appareil à reconnaissance faciale juste à gauche du bureau. Tenmyouji utilisera une photo pour valider la reconnaissance. Un pan du mur va se retourner faisant apparaitre un casque de chevalier. Prenez-le et placez-le sur l’armure.
 
-Installez vous sur le siège puis éclater le ballon avec la fronde. Cela mets en évidence les trois lettres en peinture : H E L.
+Installez-vous sur le siège puis éclater le ballon avec la fronde. Cela met en évidence les trois lettres en peinture : H E L.
 
 Enclenchez le levier à droite pour faire pivoter le mur et vous retrouver de l’autre côté. Il y a une batterie sur une petite table. Et la lettre P est visible sur le mur. Prenez la batterie et retournez de l’autre côté.
 
-Combinez la batterie avec l’écran portable le rendre opérationel. Il ne reste plus qu’à rentrer le code. Donc les quatre lettres : HELP.
+Combinez la batterie avec l’écran portable le rendre opérationnel. Il ne reste plus qu’à rentrer le code. Donc les quatre lettres : HELP.
 
 Vous pouvez ouvrir le coffre, prendre son contenu et sortir de la salle pour terminer l’échappatoire.
 
@@ -67,7 +67,7 @@ Allez vers la vitrine, et placez le brandy de mauvaise qualité sous le coffre, 
 
 Interagissez avec la tablette jusqu’à que vous puissiez à nouveau entrer un mot de passe. Cela activera l’écran en bas de la vitrine.
 
-Il faudra déplacer et tourner les formes pour former un parallélogramme. Il y a plusieurs possibilités pour y arriver. Il faut que les formes soient bien collés.
+Il faudra déplacer et tourner les formes pour former un parallélogramme. Il y a plusieurs possibilités pour y arriver. Il faut que les formes soient bien collées.
 
 :::spoiler[comment former un parallélogramme avec les formes et montrer le code obtenu]
 IILP

@@ -1,14 +1,14 @@
 # Sommaire du guide
 
-Une fonctionnalité a été ajouté avec le patch français : Les déplacements sur la cartes peuvent être accélérés. Pour cela, il faut maintenir la touche servant à faire retour du périphérique avec lequel vous jouez (B, cercle, clic droit, échap).
+Une fonctionnalité a été ajouté avec le patch français : Les déplacements sur la carte peuvent être accélérés. Pour cela, il faut maintenir la touche servant à faire retour du périphérique avec lequel vous jouez (B, cercle, clic droit, échap).
 
 ## Pages du guide
 
 ### Échappatoires
 
-Les mots de passe des coffres des échappatoires, ceux avec des symboles de lunes, soleils et étoiles, sont aléatoire à chaque partie. Vous ne pourrez donc pas recopier les mots de passe d’un guide comme celui-là.
+Les mots de passe des coffres des échappatoires, ceux avec des symboles de lunes, soleils et étoiles, sont aléatoires à chaque partie. Vous ne pourrez donc pas recopier les mots de passe d’un guide comme celui-là.
 
-Si vous mettez un échappatoire en mode facile, les personnages présents avec vous donneront des indices à chaque fois que vous échouerez sur des énigmes. Par contre, vous ne pourrez pas obtenir les fichiers secrets d’or, il faudra recommencer en normal.
+Si vous mettez une échappatoire en mode facile, les personnages présents avec vous donneront des indices à chaque fois que vous échouerez sur des énigmes. Par contre, vous ne pourrez pas obtenir les fichiers secrets d’or, il faudra recommencer en normal.
 
 - [Ascenceur](/jeu/vlr/guide/echappatoires/ascenseur)
 - [Salon](/jeu/vlr/guide/echappatoires/salon)

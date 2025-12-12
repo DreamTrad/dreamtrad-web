@@ -25,20 +25,20 @@ Récupérez les objets suivants :
 
 ## Résolution des énigmes
 
-Penchez-vous sur les roues de l’armoire où vous avaz trouvé les tableaux sur la nutrition. Il y a des boutons rouges sur les roues. Appuyez sur chacun des boutons des 4 roues. Puis allez sur le çôté droit de l’armoire et faite la coulisser pour pouvoir ouvrir la partie droite de l’armoire. Vous y trouverez un document sur les tests pH et un test pH.
+Penchez-vous sur les roues de l’armoire où vous avez trouvé les tableaux sur la nutrition. Il y a des boutons rouges sur les roues. Appuyez sur chacun des boutons des 4 roues. Puis allez sur le côté droit de l’armoire et faite la coulisser pour pouvoir ouvrir la partie droite de l’armoire. Vous y trouverez un document sur les tests pH et un test pH.
 
-Combinez le morceau de bouton avec la pièce métallique pour avoir un bouton complet. Il faut le mettre sur la table avec les glaçon, au niveau des boutons vert et rouge. Appuyez ensuite sur le bouton.
+Combinez le morceau de bouton avec la pièce métallique pour avoir un bouton complet. Il faut le mettre sur la table avec les glaçons, au niveau des boutons vert et rouge. Appuyez ensuite sur le bouton.
 
-Vous pourrez soulever la partie supérieure avec les glaçons. Il faudra faire sortir un cube par un trou. Il faudra faire attention à ce que que le cube à faire sortir ne touche pas trop de bordure.
+Vous pourrez soulever la partie supérieure avec les glaçons. Il faudra faire sortir un cube par un trou. Il faudra faire attention à ce que le cube à faire sortir ne touche pas trop de bordure.
 
-:::spoiler[les direction à rentrer pour faire sortir le glaçon]
+:::spoiler[les directions à rentrer pour faire sortir le glaçon]
 droite → bas → gauche → bas → droite → bas → gauche → droite → bas → gauche → bas
 ![Énigme glaçon](/assets/jeu/vlr/guide/echappatoires/garde_manger/glace.webp)
 :::
 
 Placez le glaçon dans le tiroir chaud et remettez le tiroir là où il était. Cela fera fondre la glace et vous pourrez récupérer un badge visiteur, que vous pouvez déjà insérer dans la machine, juste au-dessus de l’emplacement pour le tiroir. Ça vous dira qu’il manque les réservoirs. Il va donc falloir les remplir.
 
-Dirigez vous vers la machine avec un robinet. Il y a plusieurs boutons, chacun donnera une eau d’un certain pH. Dans chaque réservoir il faudra mettre de l’eau du type écrit sur le réservoir. Pour savoir que bouton donne quel pH, vous pouvez remplir le bécher et utiliser le test pH dessus. Cela va colorer l’eau. Il faudra ensuite comparer avec le document sur le pH que vous avez obtenu pour déterminer l’acidité de l’eau.
+Dirigez-vous vers la machine avec un robinet. Il y a plusieurs boutons, chacun donnera une eau d’un certain pH. Dans chaque réservoir il faudra mettre de l’eau du type écrit sur le réservoir. Pour savoir que bouton donne quel pH, vous pouvez remplir le bécher et utiliser le test pH dessus. Cela va colorer l’eau. Il faudra ensuite comparer avec le document sur le pH que vous avez obtenu pour déterminer l’acidité de l’eau.
 
 :::[avec quel bouton remplir chaque réservoir]
 - +3 pour basique
@@ -46,9 +46,9 @@ Dirigez vous vers la machine avec un robinet. Il y a plusieurs boutons, chacun d
 - -2 pour acide
 :::
 
-Une fois cela fait, vous pourrez remettre les réservoir à leur place.
+Une fois cela fait, vous pourrez remettre les réservoirs à leur place.
 
-Maintenant, il faut mettre des boites sur la rangée du haut. Pour cela prenez en note les dates noté sous le tiroir. Ce sont des dates au format JOUR/MOIS. Avec l’aide du calendrier, il faut trouver où ces dates sur le mur de tiroir. Ensuite il faudra rentrer dans la machine à gauche du mur de tiroir la référence du tiroir, à savoir les 3 nombres correspondant aux mois présents sur le bloc, puis ensuite la position de type table de classeur (A3, B5, D1…) qui correspond à la case précise.
+Maintenant, il faut mettre des boites sur la rangée du haut. Pour cela prenez en note les dates notées sous le tiroir. Ce sont des dates au format JOUR/MOIS. Avec l’aide du calendrier, il faut trouver où sont ces dates sur le mur de tiroirs. Ensuite il faudra rentrer dans la machine à gauche du mur de tiroir la référence du tiroir, à savoir les 3 nombres correspondant aux mois présents sur le bloc, puis ensuite la position de type table de classeur (A3, B5, D1…) qui correspond à la case précise.
 
 :::[les références des tiroirs à rentrer]
 - 13/1 → 123-E-3
@@ -62,9 +62,9 @@ Une fois tous les tiroirs récupérés, il ne vous restera plus qu’à les ins�
 
 Regardez l’écran de la machine pour démarrer un minijeu où il faudra réarranger les boites.
 
-Sur le tableau de nutrition du personnel, il y a les apport que les repas doivent apporter par jour. Sur le tableau d’équilibre nutritionnel, il y a les apports de chaque plat. Il faut donc déplacer les plats pour que chaque jour ait les valeurs exactes d’apport nutritionnel nécessaire.
+Sur le tableau de nutrition du personnel, il y a les apports que les repas doivent apporter par jour. Sur le tableau d’équilibre nutritionnel, il y a les apports de chaque plat. Il faut donc déplacer les plats pour que chaque jour ait les valeurs exactes d’apport nutritionnel nécessaire.
 
-:::spoiler[comment les boites doivent être réorganisés]
+:::spoiler[comment les boites doivent être réorganisées]
 ![Énigme nutrition](/assets/jeu/vlr/guide/echappatoires/garde_manger/nutrition.webp)
 :::
 

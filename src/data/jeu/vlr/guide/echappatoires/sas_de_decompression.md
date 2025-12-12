@@ -28,9 +28,9 @@ Une fois rentré, regardez l’autre porte du sas pour que Yotsuba décide de pa
 
 Prenez l’écran portable sur le banc.
 
-Retournez-vous et interragissez avec l’énorme Zéro Lapin pour le faire éclater. Une peluche Zéro Lapin était à l’intérieur : prenez-la.
+Retournez-vous et interagissez avec l’énorme Zéro Lapin pour le faire éclater. Une peluche Zéro Lapin était à l’intérieur : prenez-la.
 
-Au niveau des tuyaux, vous pouvez enlever les plaques métallique entre chaque section. Cela fera apparaitre d’autres tuyaux ainsi que des petits modules jaunes et violets qui sont en fait des lasers. Il y en a 2 de chaque, ramassez-les tous.
+Au niveau des tuyaux, vous pouvez enlever les plaques métalliques entre chaque section. Cela fera apparaitre d’autres tuyaux ainsi que des petits modules jaunes et violets qui sont en fait des lasers. Il y en a 2 de chaque, ramassez-les tous.
 
 Il faut les remettre de manière à ce que le flux rouge aille jusqu’à la console avec les boutons.
 
@@ -43,25 +43,25 @@ Vous pouvez maintenant appuyer sur le bouton rouge de la machine pour arrêter l
 
 Avant de sortir, prenez note des chiffres sur le banc.
 
-Regardez à travers la vitre pour communiquer avec Yotsuba. Sélectionnez le bas du la machine avec les compteur pour récupérer le document sur la porte du sas intérieur et servez-vous-en pour rouvrir la porte.
+Regardez à travers la vitre pour communiquer avec Yotsuba. Sélectionnez le bas de la machine avec les compteurs pour récupérer le document sur la porte du sas intérieur et servez-vous-en pour rouvrir la porte.
 
 :::spoiler[la solution pour sortir dans le sas]
 ![schéma porte pour rentrer](/assets/jeu/vlr/guide/echappatoires/sas_de_decompression/porte_sortie.webp)
 :::
 
-La clé sert à ouvrir le casier de droite, dans lequel vous trouverez un papier avec des diagramme colorés.
+La clé sert à ouvrir le casier de droite, dans lequel vous trouverez un papier avec des diagrammes colorés.
 
 Remontez à l’étage pour enlever les combinaisons et regardez les formes sur le banc. En associant les formes ce banc avec les chiffres de l’autre banc, vous devriez pouvoir trouver le code pour récupérer la clé dans l’ascenseur.
 
-:::spoiler[le code pour la clé de l’ascenceur]
+:::spoiler[le code pour la clé de l’ascenseur]
 ![code pour la clé de l’ascenseur](/assets/jeu/vlr/guide/echappatoires/sas_de_decompression/code_cle.webp)
 :::
 
 Redescendez pour ouvrir le casier du milieu avec la clé. Dedans se trouve la petite combinaison. Combinez-la avec la peluche de Zéro Lapin.
 
-Remontez. Dans le sorte de photomaton, branchez la tablette au câble et placez Zéro Lapin en combinaison sur le tabouret.
+Remontez. Dans la sorte de photomaton, branchez la tablette au câble et placez Zéro Lapin en combinaison sur le tabouret.
 
-Vous pouvez maintenant lancer le minijeu sur la tablette. Sur la note que vous avez trouvez, il y a des suites de couleurs. chaque ligne va correspondre à un chiffre. Quand vous cliquez sur un segment, cela va correspondre à une couleur. Pour obtenir le chiffre d’une ligne il faut comprendre quel chiffre les segments des couleur de la ligne forment.
+Vous pouvez maintenant lancer le minijeu sur la tablette. Sur la note que vous avez trouvée, il y a des suites de couleurs. chaque ligne va correspondre à un chiffre. Quand vous cliquez sur un segment, cela va correspondre à une couleur. Pour obtenir le chiffre d’une ligne il faut comprendre quel chiffre les segments des couleurs de la ligne forment.
 
 :::spoiler[quel nombre est à rentrer]
 623

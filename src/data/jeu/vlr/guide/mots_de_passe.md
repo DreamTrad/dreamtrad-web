@@ -3,7 +3,7 @@ Comment trouver les mots de passe des phases de narration.
 ---
 # Mots de passe de la narration
 
-Quand vous êtes fasse à un mot de passe dans l’histoire et que vous n’avez aucune idée de quoi rentrer, il suffit généralement de revenir plus tard et continuer à explorer d’autres branches de l’histoire pour les trouver.
+Quand vous êtes face à un mot de passe dans l’histoire et que vous n’avez aucune idée de quoi rentrer, il suffit généralement de revenir plus tard et continuer à explorer d’autres branches de l’histoire pour les trouver.
 
 ## Biotope, Décryptons le code !
 

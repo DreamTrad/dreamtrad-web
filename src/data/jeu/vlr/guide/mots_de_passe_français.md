@@ -24,7 +24,7 @@ Numéros anglais invalides :
 
 ### Salle des Gaulems - Mots de passe secret du coffre
 
-C’est le mot de passe pour obtenir les documents supplémentaire dans le coffre. L’énigme se résout exactement de la même façon, c’est seulement les lettres sur l’image qui ont changé, mais l’emplacement des lettres corrects reste identique.
+C’est le mot de passe pour obtenir les documents supplémentaires dans le coffre. L’énigme se résout exactement de la même façon, c’est seulement les lettres sur l’image qui ont changé, mais l’emplacement des lettres correctes reste identique.
 
 :::spoiler[le mot de passe]
 LUEURDESPOIR
@@ -54,7 +54,7 @@ C’est l’équivalent de POUR en anglais.
 
 ### Déchiffrer le code secret avec Alice dans le Biotope
 
-La logique reste la même que l’anglais, seulement les lettres affichés aux emplacements sur l’image changent.
+La logique reste la même que l’anglais, seulement les lettres affichées aux emplacements sur l’image changent.
 
 :::spoiler[le mot de passe]
 ACCOMPLIE

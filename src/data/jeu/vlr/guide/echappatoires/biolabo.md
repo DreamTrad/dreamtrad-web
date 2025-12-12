@@ -43,7 +43,7 @@ Allez vers les tuyaux pour résoudre l’énigme. Il faut verser un volume corre
 ![Énigme tuyaux](/assets/jeu/vlr/guide/echappatoires/biolabo/tuyaux.webp)
 :::
 
-Munissez-vous d’un bocal de graines et interragissez avec les béchers pour démarrer l’énigme suivante. Il faut déterminer quelle graine pousse dans quel milieu. Pour cela, servez-vous de la deuxième note sur les milieux de culture. Des tests ont été faits avec différents type de graines, et avec ces indications, vous devez trouver les bonnes correspondances.
+Munissez-vous d’un bocal de graines et interagissez avec les béchers pour démarrer l’énigme suivante. Il faut déterminer quelle graine pousse dans quel milieu. Pour cela, servez-vous de la deuxième note sur les milieux de culture. Des tests ont été faits avec différents types de graines, et avec ces indications, vous devez trouver les bonnes correspondances.
 
 :::spoiler[quelle graine correspond à quel bécher]
 ![Énigme graines](/assets/jeu/vlr/guide/echappatoires/biolabo/graines.webp)
@@ -55,7 +55,7 @@ En suivant le manuel d’extraction d’ADN, allez vers le mixeur à gauche des 
 - Placez dans le mixeur des graines ou la racine.
 - Versez l’eau salée.
 - Versez l’éthanol présent dans le réservoir à déchets.
-- utilisez une capsule vide pour extraire la solution.
+- Utilisez une capsule vide pour extraire la solution.
 - Reproduisez ces étapes pour les graines ou la racine, suivant celui que vous avez déjà fait.
 
 Vous obtiendrez la capsule verte et la capsule jaune.

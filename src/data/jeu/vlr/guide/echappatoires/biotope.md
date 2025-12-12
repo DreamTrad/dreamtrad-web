@@ -33,15 +33,15 @@ Récupérez les objets suivants :
 ## Résolution des énigmes
 
 
-Avec le détecteur à métaux, trouvez dans chaque rangée du potager un légume qui fait bipper la machine (une tomate, un oignon et un concombre). Coupez chaque légume avec le couteau pour obtenir une pièce blanche, un pièce rouge et une pièce verte.
+Avec le détecteur à métaux, trouvez dans chaque rangée du potager un légume qui fait biper la machine (une tomate, un oignon et un concombre). Coupez chaque légume avec le couteau pour obtenir une pièce blanche, une pièce rouge et une pièce verte.
 
-Utilisez la pelle pour déterrer la boîte au couvercle cuivré sous la motte d’herbe faisant face à l’abri en bois, puis la boîte au couvercle argentée sous le champignon à côté de l’arbre près le la sortie, et enfin celle au couvercle dorée sous les fleurs près du bassin.
+Utilisez la pelle pour déterrer la boîte au couvercle cuivré sous la motte d’herbe faisant face à l’abri en bois, puis la boîte au couvercle argenté sous le champignon à côté de l’arbre près le la sortie, et enfin celle au couvercle doré sous les fleurs près du bassin.
 
 Combinez les clés cuivrée, argentée, dorée avec les boîtes correspondantes. Puis combinez les 3 morceaux de papiers déchirés pour former une note avec des points.
 
 Tenez la note pour avoir la flèche vers le bas. Cela vous donnera l’ordre des boutons sur la machine près de la cascade.
 
-:::spoiler[l’ordre d’appuie sur les boutons de la machine près de la cascade]
+:::spoiler[l’ordre d’appui sur les boutons de la machine près de la cascade]
 gauche → droite → droite → gauche → milieu → milieu → droite
 :::
 

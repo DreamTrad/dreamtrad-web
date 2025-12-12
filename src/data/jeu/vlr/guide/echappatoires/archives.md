@@ -13,7 +13,7 @@ Solution de l’échappatoire des archives dans Virtue’s Last Reward.
 ## Récupération des objets
 
 Récupérez les objets suivants :
-- Le dé vert sur le coffre cadenacé.
+- Le dé vert sur le coffre cadenassé.
 - Le dé bleu sur le bureau.
 - La boîte à musique sur le bureau.
 - La bouteille d’encre bleue sur le bureau.
@@ -21,7 +21,7 @@ Récupérez les objets suivants :
 - Le dé rouge sur la balance.
 - La masse sur la balance.
 - Le tournevis dans le tiroir de la balance.
-- Le livre vert dans le bibliothèque, vers le bas, à gauche de la porte d’entrée.
+- Le livre vert dans la bibliothèque, vers le bas, à gauche de la porte d’entrée.
 - Le livre rouge dans la bibliothèque, à gauche du livre vert.
 - Le livre bleu dans la bibliothèque, à gauche du livre rouge et à droite de la porte de sortie.
 
@@ -53,7 +53,7 @@ Il vous faut maintenant remettre les 4 livres à la bonne place. Pour cela regar
 
 Les meubles vont s’abaisser ce qui va vous permettre de récupérer la peluche de lion. Dans la peluche vous trouverez une puce électronique. Insérez-la dans la console au centre de la pièce.
 
-Cela va déclenchez une énigme où il faudra placer des dés aux bons endroits. Il faut à la fois faire correspondre les dés avec les couleurs de la note du marque-page, mais aussi avec les chiffres (inscrit sous forme de point) de la feuille de cahier. Attention, la forme dans le minijeu est tourné à 180° par rapport au marque-page et à la feuille de cahier.
+Cela va déclencher une énigme où il faudra placer des dés aux bons endroits. Il faut à la fois faire correspondre les dés avec les couleurs de la note du marque-page, mais aussi avec les chiffres (inscrit sous forme de point) de la feuille de cahier. Attention, la forme dans le minijeu est tourné à 180° par rapport au marque-page et à la feuille de cahier.
 
 :::spoiler[l’emplacement des chiffres et couleurs des dés]
 ![Énigme dés couleurs seulement](/assets/jeu/vlr/guide/echappatoires/archives/de_1.webp)

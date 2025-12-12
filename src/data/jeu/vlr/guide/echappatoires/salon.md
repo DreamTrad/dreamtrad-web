@@ -17,7 +17,7 @@ Solution de l’échappatoire du salon dans Virtue’s Last Reward.
 Récupérez les objets suivants :
 - Les 5 bouteilles d’alcools et les 5 bouteilles de liqueurs sur l’étagère de gauche derrière le comptoir.
 - Le demi-hémisphère sud sur l’étagère de droite derrière le comptoir.
-- Les 2 aiguilles et les 3 verres à pieds sur le comptoir.
+- Les 2 aiguilles et les 3 verres à pied sur le comptoir.
 - Le disque mystérieux sur la table ronde.
 - Le demi-hémisphère nord sur la table ronde.
 - Le fragment du journal du barman dans le placard de gauche sous le coffre.
@@ -33,11 +33,11 @@ Mettez les 2 aiguilles sur l’horloge en forme de soleil au-dessus du canapé. 
 Il faut les mettre sur 4h50, donc la petite sur GREEN et la grande sur SUN.
 :::
 
-Cela va allumer un faisceau de lumière qui pointe vers le support de globe. Combinez les deux demi-hémisphères nord ensemble, les deux demi-hémisphères sud ensemble, puis un des deux hémisphère avec le disque mystérieux, puis enfin le tout avec l’autre hémisphère qui reste. Vous obtiendrez un globe terrestre qui vous pouvez placer sur le support prévu sur la table.
+Cela va allumer un faisceau de lumière qui pointe vers le support de globe. Combinez les deux demi-hémisphères nord ensemble, les deux demi-hémisphères sud ensemble, puis un des deux hémisphères avec le disque mystérieux, puis enfin le tout avec l’autre hémisphère qui reste. Vous obtiendrez un globe terrestre qui vous pouvez placer sur le support prévu sur la table.
 
 Avec les lettres où pointent les aiguilles de l’horloge, on a GREEN SUN. Sur le globe on peut lire BLUE PLANET, et les lettres projetées sur le mur forment RED MOON.
 
-Avec les verres et les bouteilles, ce sont les 3 cocktails à préparer. Pour ce faire, placez un verre vide dans la machine sur le comptoir, puis placez les 2 bouteilles nécessaire au cocktail sur la machine. Il ne vous restera qu’à appuyer sur le bouton bleu pour remplir le verre. Si vous vous êtes trompés, vous pouvez vider le verre dans la poubelle juste en dessous de la machine.
+Avec les verres et les bouteilles, ce sont les 3 cocktails à préparer. Pour ce faire, placez un verre vide dans la machine sur le comptoir, puis placez les 2 bouteilles nécessaires au cocktail sur la machine. Il ne vous restera qu’à appuyer sur le bouton bleu pour remplir le verre. Si vous vous êtes trompés, vous pouvez vider le verre dans la poubelle juste en dessous de la machine.
 
 Une fois les 3 cocktails en main, il faut placer les verres remplis là où vous les avez trouvés sur le comptoir, mais dans un ordre précis. Il faut reproduire le schéma d’une éclipse totale avec le soleil (SUN), la lune (MOON) et la Terre (PLANET).
 

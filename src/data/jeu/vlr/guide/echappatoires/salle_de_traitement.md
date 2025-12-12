@@ -23,7 +23,7 @@ Récupérez les objets suivants :
 
 ## Résolution des énigmes
 
-La première étape est l’ouverture de la porte de la zone des modules. Il s’agit d’un mastermind. Il faut devenir le code exacte sachant que dès que vous testez une combinaison, le nombre de "CORRECT" vous dira combien de chiffres sont bien placés, et le nombre de "PRESQUE" vous dira combien de chiffres sont bien dans le mot de passe mais pas à la bonne place. Vous avez 10 essais pour trouver le code. Après cela, un nouveau code sera créé.
+La première étape est l’ouverture de la porte de la zone des modules. Il s’agit d’un mastermind. Il faut devenir le code exact sachant que dès que vous testez une combinaison, le nombre de "CORRECT" vous dira combien de chiffres sont bien placés, et le nombre de "PRESQUE" vous dira combien de chiffres sont bien dans le mot de passe mais pas à la bonne place. Vous avez 10 essais pour trouver le code. Après cela, un nouveau code sera créé.
 
 En effet, le code est aléatoire à chaque essai. Le mieux qu’on puisse faire pour vous aider est de vous remettre les explications de Yotsuba pour résoudre facilement le problème. Vous pouvez avoir ces explications après plusieurs échecs en mode facile.
 
@@ -63,7 +63,7 @@ En effet, le code est aléatoire à chaque essai. Le mieux qu’on puisse faire 
 
 Une fois à l’intérieur de la salle des modules, ouvrez le module du centre pour récupérer une clé argentée et ouvrez le module de gauche pour obtenir une clé blanche.
 
-Ressortez de la salle et utilisez la clé blanche sur l’horloge au-dessus du coffre et prenez la puce électronique posé au niveau du 6 de l’horloge.
+Ressortez de la salle et utilisez la clé blanche sur l’horloge au-dessus du coffre et prenez la puce électronique posée au niveau du 6 de l’horloge.
 
 Utilisez la clé argentée pour ouvrir l’aquarium, et démarrez le minijeu pour récupérer la méduse rose. Il faudra faire en sorte de ne pas récupérer les méduses jaunes avant.
 
@@ -71,7 +71,7 @@ Utilisez la clé argentée pour ouvrir l’aquarium, et démarrez le minijeu pou
 gauche → haut → bas → droite → bas → droite → gauche → haut → haut → droite → haut
 :::
 
-Interragissez avec la méduse récupéré pour en extraire une pièce circulaire. Cette pièce circulaire est à insérer dans le rond noir du tableau de lion.
+Interagissez avec la méduse récupéré pour en extraire une pièce circulaire. Cette pièce circulaire est à insérer dans le rond noir du tableau de lion.
 
 Utilisez la puce [NO1] que vous avez sur la console de commande du module 1, donc celui de gauche.
 
@@ -81,9 +81,9 @@ Avant de quitter la salle des modules, prenez note de l’heure sur le dessin d�
 
 Insérez les deux cartes mémoires dans l’horloge pour faire apparaitre l’heure.
 
-Utilisez la tablette pour rentrer le mot de passe. Le mot de passe s’obtient avec 4 pionts. Si vous reprenez le schéma du jeu de l’oie, vous pourrez observer que pour "m" (minute) il faut aller dans le sens horaire, et que pour "h" (heure), il faut aller dans le sens anti-horaire.
+Utilisez la tablette pour rentrer le mot de passe. Le mot de passe s’obtient avec 4 pions. Si vous reprenez le schéma du jeu de l’oie, vous pourrez observer que pour "m" (minute) il faut aller dans le sens horaire, et que pour "h" (heure), il faut aller dans le sens anti-horaire.
 
-En commençant du départ à chaque fois, pour chaque heure que vous avez obtenu sur les modules et sur l’horloge, il faut avancer en sens horaire du nombre de minutes puis reculer en sens anti-horaire du nombre d’heure. La case où le pion atterri est la lettre du mot de passe.
+En commençant du départ à chaque fois, pour chaque heure que vous avez obtenue sur les modules et sur l’horloge, il faut avancer en sens horaire du nombre de minutes puis reculer en sens anti-horaire du nombre d’heures. La case où le pion atterri est la lettre du mot de passe.
 
 Il faut commencer par le module 1, puis le 2, puis le 3, et enfin l’horloge qui est le 4.
 

@@ -20,20 +20,20 @@ Récupérez les objets suivants :
 
 ## Résolution des énigmes
 
-Assemblez le pièce métallique avec le morceau de clé pour former une petite clé. Utilisez-la pour déverouiller les menottes de la porte de la cabine 3.
+Assemblez la pièce métallique avec le morceau de clé pour former une petite clé. Utilisez-la pour déverrouiller les menottes de la porte de la cabine 3.
 
 Rentrez dans la cabine 3 et récupérer le cutter sur le bureau et le rouleau de papier d’aluminium dans le casier. Combinez les deux objets 4 fois pour obtenir 4 feuilles d’aluminium avec des formes.
 
-Ils faut placer ces feuilles d’alu sur les plateaux coulissants des bureaux pour former des éléments en combinant ceux des feuilles et ceux des murs. Il y a une feuille par salle, et il faut donc trouver où va chaque feuille, puis prendre en compte ce qui est obtenu.
+Il faut placer ces feuilles d’alu sur les plateaux coulissants des bureaux pour former des éléments en combinant ceux des feuilles et ceux des murs. Il y a une feuille par salle, et il faut donc trouver où va chaque feuille, puis prendre en compte ce qui est obtenu.
 
-:::spoiler[l’emplacement de chaque feuilles et les codes que ça forme]
+:::spoiler[l’emplacement de chaque feuille et les codes que ça forme]
 - Pour la cabine 1, c’est "formes", formant "Rond, Étoile, Losange, Triangle".
 - Pour la cabine 2, c’est "motif rayé 1", formant "4985".
 - Pour la cabine 3, c’est "rayures et diagonales", formant "LOCKER".
 - Pour la cabine 4, c’est "motif rayé 2", formant "3472".
 :::
 
-Allez dans la cabine 2, et ouvrez le casier avec le code obtenu via la feuille d’alumium du bureau de la cabine. Il faut faire les chiffres via des additions entre les chiffres des colonnes et ceux des lignes. Par exemple, appuyer sur le premier bouton en haut à gauche fera 8 car 6 + 2.
+Allez dans la cabine 2, et ouvrez le casier avec le code obtenu via la feuille d’aluminium du bureau de la cabine. Il faut faire les chiffres via des additions entre les chiffres des colonnes et ceux des lignes. Par exemple, appuyer sur le premier bouton en haut à gauche fera 8 car 6 + 2.
 
 :::spoiler[les boutons sur lesquels appuyer pour le casier cabine 2]
 ![code casier cabine 2](/assets/jeu/vlr/guide/echappatoires/cabines/code_casier_cabine_2.webp)
@@ -47,7 +47,7 @@ Allez dans la cabine 4, et ouvrez le casier avec le code du bureau.
 ![code casier cabine 4](/assets/jeu/vlr/guide/echappatoires/cabines/code_casier_cabine_4.webp)
 :::
 
-Dans le casier, vous trouverez une pièce qui vous permettra de gratter le poster juste à côté. Pous savoir quoi gratter, il faut ouvrir les lits de chaque cabines et des corps seront dessinés avec à chaque fois une zone mise en évidence. Ce sont les zones du corps qu’il faut gratter. Mais vous pouvez juste tout gratter le poster.
+Dans le casier, vous trouverez une pièce qui vous permettra de gratter le poster juste à côté. Pous savoir quoi gratter, il faut ouvrir les lits de chaque cabine et des corps seront dessinés avec à chaque fois une zone mise en évidence. Ce sont les zones du corps qu’il faut gratter. Mais vous pouvez juste tout gratter le poster.
 
 Ce qu’il faut avant tout gratter, ce sont les accessoires au niveau des bras et des jambes pour obtenir des formes avec des chiffres.
 

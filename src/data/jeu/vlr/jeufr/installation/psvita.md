@@ -33,4 +33,4 @@ Décompresser l'archive et transférer le contenu dans la partition ux0:
 
 Si le jeu d'origine est **la version US, renommer le dossier** PSCB01063 en PCSE01006
 
-*Optionnel :* Vous pouvez supprimer les fichiers originaux pour économiser 1.2 Gb. Vous pouvez y accéder via ce chemin :  **ux0:/app/PCSB01063/[*].psarc**
+*Optionnel :* Vous pouvez supprimer les fichiers originaux pour économiser 1.2 Go. Vous pouvez y accéder via ce chemin :  **ux0:/app/PCSB01063/[*].psarc**

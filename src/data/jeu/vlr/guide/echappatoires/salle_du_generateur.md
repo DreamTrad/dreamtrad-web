@@ -21,7 +21,7 @@ Récupérez les objets suivants :
 
 ## Résolution des énigmes
 
-Observez les deux horloges, bleue et rouge. Des valeurs sont notés : 510 minutes pour la bleue et 11400 secondes pour la rouge. Sur le casier de gauche, il faut rentrer les valeurs Heure/Minute pour chaque horloge. Il faut donc convertir les valeurs des horloges dans ce format puis additionner les nombres qui permettent d’atteindre ces sommes. Appuyez sur le + en haut à gauche pour faire 3 (2 + 1).
+Observez les deux horloges, bleue et rouge. Des valeurs sont notées : 510 minutes pour la bleue et 11400 secondes pour la rouge. Sur le casier de gauche, il faut rentrer les valeurs Heure/Minute pour chaque horloge. Il faut donc convertir les valeurs des horloges dans ce format puis additionner les nombres qui permettent d’atteindre ces sommes. Appuyez sur le + en haut à gauche pour faire 3 (2 + 1).
 
 :::spoiler[la solution du casier de gauche]
 - Horloge bleue → 510 minutes → 8 heures et 30 minutes
@@ -50,7 +50,7 @@ Il faut mettre sur ON le premier levier, et le troisième (celui qui est clair).
 
 Le troisième levier tombera et vous pourrez le récupérer. Il est à mettre sur la zone avec pleins de tuyaux sur le mur à droite du poster avec les ON/OFF. Cela vous permettra de résoudre l’énigme liée à cela.
 
-Il faut atteindre les bonnes valeurs en bas. Pour cela un flux descend des tuyaux d’en haut. Quand un levier est orienté à droite, tout le contenu au-dessus va à droite. Pour un levier à gauche, tout va à gauche. Et si le levier est vers le bas, alors le flux des divisé en deux entre à droite et à gauche.
+Il faut atteindre les bonnes valeurs en bas. Pour cela un flux descend des tuyaux d’en haut. Quand un levier est orienté à droite, tout le contenu au-dessus va à droite. Pour un levier à gauche, tout va à gauche. Et si le levier est vers le bas, alors le flux est divisé en deux entre à droite et à gauche.
 
 En bas, il n’y a que certains chiffres des valeurs. Donc pour 3??, il faut obtenir n’importe quelle valeur dans les 300, que ça soit 320, 318 ou 385.
 
@@ -58,7 +58,7 @@ En bas, il n’y a que certains chiffres des valeurs. Donc pour 3??, il faut obt
 ![Orientation leviers](/assets/jeu/vlr/guide/echappatoires/salle_du_generateur/leviers.webp)
 :::
 
-Cela va allumé la machine à droite. Placez-y la pièce en forme d’anneau et la racine d’arbre arc-en-ciel.
+Cela va allumer la machine à droite. Placez-y la pièce en forme d’anneau et la racine d’arbre arc-en-ciel.
 
 Regardez l’écran à gauche pour démarrer le mini-jeu. Il faut mettre les nombres pour que le total fasse 100 (base de la racine) et que chaque couleur fasse le pourcentage de 100 indiqué sur la couche centrale.
 

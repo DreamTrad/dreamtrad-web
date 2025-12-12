@@ -24,7 +24,7 @@ Rallumez la lumière puis approchez-vous de l’écran devant la chaise rouge.�
 
 Une fois le mot de passe rentré, il faut refaire la même organisation de couleurs que les étagères du même côté que le bureau de la chaise rouge.
 
-:::spoiler[les formes sur lesquels appuyer pour l’énigme de la chaise rouge]
+:::spoiler[les formes sur lesquelles appuyer pour l’énigme de la chaise rouge]
 ![Énigme formes 1](/assets/jeu/vlr/guide/echappatoires/salle_de_surveillance/formes_1.webp)
 :::
 
@@ -32,13 +32,13 @@ Cela allumera l’écran au-dessus.
 
 Faite de même pour la chaise verte. Donc le mot de passe est ADGB. Et il faut aussi reproduire l’organisation de couleur de l’étagère du même côté.
 
-:::spoiler[les formes sur lesquels appuyer pour l’énigme de la chaise verte]
+:::spoiler[les formes sur lesquelles appuyer pour l’énigme de la chaise verte]
 ![Énigme formes 2](/assets/jeu/vlr/guide/echappatoires/salle_de_surveillance/formes_2.webp)
 :::
 
 L’écran au-dessus s’allume. Il ne reste plus qu’à rentre le mot de passe lié à la chaise jaune. Donc SGDQNY.
 
-Il y aura un mini-jeu qui va pouvoir être lancé, mais avant ça, regaredez les sabliers que vous avez pour repérer les chiffres dessus. Puis lancez le mini-jeu.
+Il y aura un mini-jeu qui va pouvoir être lancé, mais avant ça, regardez les sabliers que vous avez pour repérer les chiffres dessus. Puis lancez le mini-jeu.
 
 Il faut dire le nombre de secondes de chaque sablier. Vous connaissez déjà la valeur du rouge et du jaune. En faisant des tests en retournant certains sabliers vous pouvez deviner le reste.
 
@@ -66,4 +66,4 @@ Après avoir trouvé le premier mot de passe, tous les écrans se sont éteints.
 ![Écran à rallumer](/assets/jeu/vlr/guide/echappatoires/salle_de_surveillance/ecrans_eteint_2.webp)
 :::
 
-Il faudra ensuite former la phrase "ELLE SAIT TOUT." avec les 3 écrans. **Attention : La phrase doit être faite sur les 3 écrans du bas.**.
+Il faudra ensuite former la phrase "ELLE SAIT TOUT." avec les 3 écrans. **Attention : La phrase doit être faite sur les 3 écrans du bas**.

@@ -47,7 +47,7 @@ export const succes = [
     {
         id: "ACH_SKP2_06",
         titleEn: "A Consumate Collection",
-        titleFr: "Collectionisme",
+        titleFr: "Collectionnite",
         descriptionEn: "Found ALL the files in VLR!",
         descriptionFr: "Trouver tous les fichiers de VLR !",
         resolution: "",
@@ -257,7 +257,7 @@ export const succes = [
         titleEn: "That Wasn't Supposed to Happen",
         titleFr: "Un chemin funeste",
         descriptionEn: "Saw any of the bad endings.",
-        descriptionFr: "Assistez à n’importe quels mauvaise fins",
+        descriptionFr: "Assistez à n’importe quelle mauvaise fin",
         resolution: "",
         hidden: false,
     },

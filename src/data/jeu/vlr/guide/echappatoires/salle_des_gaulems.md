@@ -30,7 +30,7 @@ Récupérez les objets suivants :
 
 ## Résolution des énigmes
 
-Allez tremper la clé rouillé dans l’huile à côté de la tête du robot, puis utilisez-la pour ouvrir la boite à outils. Vous trouverez à l’intérieur du détergent, un tournevis et une clé argentée.
+Allez tremper la clé rouillée dans l’huile à côté de la tête du robot, puis utilisez-la pour ouvrir la boite à outils. Vous trouverez à l’intérieur du détergent, un tournevis et une clé argentée.
 
 Combinez les trois blocs en V que vous avez pour former un bloc étoile. Avec la clé argentée, ouvrez le tiroir du haut en dessous du PC et insérez le bloc étoile à l’emplacement prévu pour. Cela va débloquer le tiroir du milieu dans lequel vous obtiendrez une poignée avec un embout en forme d’étoile.
 
@@ -48,7 +48,7 @@ Vous obtiendrez un plan de la pièce qui vous fait comprendre que les emplacemen
 
 Combinez le caleçon et la bouteille de détergent et nettoyez l’huile à côté de la tête du robot avec. Cela fera apparaitre 120V.
 
-À droite de la porte de sortie, il y a un écran allumé en jaune. Il faut former un chemin entr le côté gauche et le côté droit tout en atteignant 120V.
+À droite de la porte de sortie, il y a un écran allumé en jaune. Il faut former un chemin entre le côté gauche et le côté droit tout en atteignant 120V.
 
 :::spoiler[une solution possible à l’énigme du voltage]
 ![solution énigme voltage](/assets/jeu/vlr/guide/echappatoires/salle_des_gaulems/enigme_voltage.webp)
