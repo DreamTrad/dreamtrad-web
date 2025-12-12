@@ -1,5 +1,5 @@
 ---
-Solution de l’échappatoire de la blbliothèque dans 9 Hours 9 Persons 9 Doors.
+Solution de l’échappatoire de la bibliothèque dans 9 Hours 9 Persons 9 Doors.
 ---
 # Échappatoire bibliothèque
 

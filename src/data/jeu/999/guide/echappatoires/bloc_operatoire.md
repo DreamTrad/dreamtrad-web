@@ -1,7 +1,7 @@
 ---
 Solution de l’échappatoire du bloc opératoire dans 9 Hours 9 Persons 9 Doors.
 ---
-# Échappaoire bloc opératoire
+# Échappatoire bloc opératoire
 
 :::spoiler[la position des objets et éléments importants]
 ![Image interaction 1](/assets/jeu/999/guide/echappatoires/bloc_operatoire/interaction_1.webp)

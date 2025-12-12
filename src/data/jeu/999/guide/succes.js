@@ -14,7 +14,7 @@ export const succes = [
     titleFr: "Les chances de perdre ne sont pas Zéro",
     descriptionEn: "Saw the Zero Lost ending in 999.",
     descriptionFr: "Avoir vu la fin de la défaite de Zéro dans 999.",
-    resolution: "Obtenir la fin qu’on apelle coffre-fort (du fait de l’icône représentant la fin).",
+    resolution: "Obtenir la fin qu’on appelle coffre-fort (du fait de l’icône représentant la fin).",
     hidden: true,
   },
   {
