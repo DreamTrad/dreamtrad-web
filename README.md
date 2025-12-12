@@ -1,6 +1,6 @@
 # Lancer le site en local
 
-installer node.js : https://nodejs.org/fr
+installez node.js : https://nodejs.org/fr
 
 Si vous avez déjà nodejs, il vous faut **nodejs version 20** minimum.
 
@@ -14,7 +14,7 @@ Cette commande est nécessaire que la première fois, ou quand des modules ont �
 
     npm run dev
 
-Un fois la commande de npm run dev faite, vous pouvez allez sur le lien localhost qu’on vous propose dans l’invité de commande.
+Une fois la commande de npm run dev faite, vous pouvez aller sur le lien localhost qu’on vous propose dans l’invité de commande.
 
 Si vous voulez tester sur d’autres appareils de votre réseau, comme votre téléphone par exemple, faites :
 
@@ -32,7 +32,7 @@ Si vous voulez proposer une amélioration ou proposer du contenu, vous pouvez pa
 
 ## Si vous voulez ajouter du contenu via un pull request au lieu des issue
 
-Pour le contenu, il y a 3 actions que vous pourrez être amener à faire.
+Pour le contenu, il y a 3 actions que vous pourriez être amenées à faire.
 1. Éditer des fichiers markdown
 2. Éditer des fichiers json/js
 3. Ajouter des fichiers (images)
@@ -41,9 +41,9 @@ Pour le contenu, il y a 3 actions que vous pourrez être amener à faire.
 
 Ce sont les fichiers au format "article".
 
-La syntaxe du markdown est simple. Vous pourrez trouver des guides facilement sur internet, voire même des éditeurs de textes capable de convertir du texte type Word en Markdown.
+La syntaxe du markdown est simple. Vous pourrez trouver des guides facilement sur internet, voire des éditeurs de textes capables de convertir du texte type Word en Markdown.
 
-Il n’y a pour l’instant que 2 spécificités au Markdown du site. La première c’est qu’il est possible de mettre le l’HTML si besoin. La deuxième c’est la balise custom pour les spoilers :
+Il n’y a pour l’instant que 2 spécificités au Markdown du site. La première c’est qu’il est possible de mettre de l’HTML si besoin. La deuxième c’est la balise custom pour les spoilers :
 
 ```markdown
 :::spoiler[nom de l’élément à mettre dans le spoiler]
@@ -57,7 +57,7 @@ Cliquez sur "preview" et "code" pour passer d’une vue à l’autre sur les exe
 
 ### JSON/JS
 
-Ce sont des textes qui vont être inséré de manière structuré dans la page. Suivant les champs, du markdown peut être accepté.
+Ce sont des textes qui vont être inséré de manière structurée dans la page. Suivant les champs, du markdown peut être accepté.
 Il suffit de remplir tout ce qui est entre guillemet "" avec du texte. Et parfois mettre true ou false pour un argument.
 Ici vous aurez l’exemple de la [page des succès de 999](https://github.com/DreamTrad/dreamtrad-web/blob/contenu/src/data/jeu/999/guide/succes.js)
 
@@ -65,5 +65,5 @@ Ici vous aurez l’exemple de la [page des succès de 999](https://github.com/Dr
 
 S’il manque des fichiers Markdown ou JSON dont vous voulez rédiger le contenu : Demandez à ce qu’on créé la page, ça sera plus simple.
 
-Pour les images, Ça sera dans le dossier public qu’il faudra les mettre. Faite en sorte de respecter l’organisation des fichiers. Et pour indiquer le bon chemin pour vos images dans les fichiers Markdown, référez vous aux exemples de Markdown.
+Pour les images, Ça sera dans le dossier public qu’il faudra les mettre. Faite en sorte de respecter l’organisation des fichiers. Et pour indiquer le bon chemin pour vos images dans les fichiers Markdown, référez-vous aux exemples de Markdown.
 
