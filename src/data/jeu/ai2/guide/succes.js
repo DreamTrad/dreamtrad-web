@@ -31,7 +31,7 @@ export const succes = [
         titleEn: "Nirvana",
         titleFr: "Nirvana",
         descriptionEn: "Ryuki Chapter 2Clear Tokiko's SomniumReach true enlightenment.",
-        descriptionFr: "Ryuki Chapitre 2\n\nA terminé le Somnium de Shigure.\n\n\"Nirvana\"\n\nL'état ultime de perfection de la personalité. Pour être libre de toute distraction et atteindre immédiatement l'illumination parfaite.",
+        descriptionFr: "Ryuki Chapitre 2\n\nA terminé le Somnium de Shigure.\n\n\"Nirvana\"\n\nL'état ultime de perfection de la personnalité. Pour être libre de toute distraction et atteindre immédiatement l'illumination parfaite.",
         resolution: "",
         hidden: true,
     },
@@ -236,7 +236,7 @@ export const succes = [
     {
         id: "026",
         titleEn: "Case Closed: Horadori Institute's Holding Cell",
-        titleFr: "Enquête terminée : Salle mystèrieuse au sous-sol de l'institut",
+        titleFr: "Enquête terminée : Salle mystérieuse au sous-sol de l'institut",
         descriptionEn: "Mizuki Chapter 3Clear the VR section perfectly.",
         descriptionFr: "Mizuki Chapitre 3\n\nConcerne le mécanisme pour entrer dans la pièce mystérieuse du sous-sol de l'Institut Horadori.\n\nA terminé la partie VR sans erreur.",
         resolution: "",
