@@ -10,7 +10,7 @@ Shōgo refuse de croire Yōko lorsqu'elle lui dit que les mystères sont liés a
 
 Au même moment, d'autres mènent leur propre enquête sur les Sept mystères...Des inspecteurs enquêtant sur une série de morts inexpliquées, une lycéenne en quête de la vérité sur le suicide de sa camarade, et une mère qui a juré de venger la mort de son fils.
 
-Leurs désirs et leurs motivation s'entrelacent et interagissent autour des Sept mystères de Honjo, et culmineront en une bataille d'esprit et de malédictions.
+Leurs désirs et leurs motivations s'entrelacent et interagissent autour des Sept mystères de Honjo, et culmineront en une bataille d'esprit et de malédictions.
 
 
 

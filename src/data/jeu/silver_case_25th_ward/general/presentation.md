@@ -4,7 +4,7 @@ Dernier jeu d’une trilogie de Suda51 (Killer7, No More Heroes), "The 25th Ward
 
 ## Scénario
 
-Cinq ans se sont écoulés depuis les événements de The Silver Case, dans le nouveau 25e district apparu dans la zone côtière de Kanto. Dans une chambre du complexe résidentiel Bayside Tower Land, une femme est retrouvée assassinée dans des circonstances mystérieuses. Cet incident déclenche une série d’événements apparemment sans lien, réunissant plusieurs protagonistes, dont Tokio Morishima de The Silver Case. Une fois tous les points de vue rassemblés, un schéma véritablement choquant se révèle…
+Cinq ans se sont écoulés depuis les événements de The Silver Case, dans le nouvel Arrondissement 25 apparu dans la zone côtière de Kanto. Dans une chambre du complexe résidentiel Bayside Tower Land, une femme est retrouvée assassinée dans des circonstances mystérieuses. Cet incident déclenche une série d’événements apparemment sans lien, réunissant plusieurs protagonistes, dont Tokio Morishima de The Silver Case. Une fois tous les points de vue rassemblés, un schéma véritablement choquant se révèle…
 
 <iframe src="https://www.youtube.com/embed/OUOmQuNqwyA"></iframe>
 
