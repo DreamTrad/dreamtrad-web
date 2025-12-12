@@ -3,9 +3,9 @@
 Ce guide a pour objectif de vous aider à atteindre toutes les fins.  
 De plus, pour débloquer tout le contenu bonus, il vous faudra résoudre toutes les énigmes (signalé par un Alerte énigme).  
 Attention : ce jeu n’a pas de chronogramme. Pensez à sauvegarder régulièrement.  
-Evidemment, il y aura des spoilers, donc faites attention.  
+Évidemment, il y aura des spoilers, donc faites attention.  
 
-Les fins sont regroupées par valeur (les As, puis les 2, etc…).
+Les fins sont regroupées par valeur (les As, puis les 2, etc.).
 
 ## Partie commune
 
@@ -27,9 +27,12 @@ En allant avec Coq et Serpent, vous aurez une énigme. Pour y répondre, vous de
 Passons maintenant aux différentes routes
 
 ## Route As
-### il faut aller avec Mouton et Cheval, puis avec Lapin et Chien
 
-:::spoiler[la route As]
+Pour rentrer dans la route :
+- Aller avec Mouton et Cheval,
+- Puis avec Lapin et Chien
+
+:::spoiler[comment obtenir les fins de la route As]
 
 - **As de trèfle :**
     - Se tromper à la première question
@@ -49,9 +52,12 @@ Passons maintenant aux différentes routes
 
 
 ## Route 2
-### il ne faut pas aller avec Mouton et Cheval, puis aller avec Cochon et Singe
 
-:::spoiler[la route 2]
+Pour rentrer dans la route :
+- Ne pas aller avec Mouton et Cheval
+- Aller avec Cochon et Singe
+
+:::spoiler[comment obtenir les fins de la route 2]
 
 - **2 de trèfle :**
     - avouer
@@ -71,9 +77,14 @@ Passons maintenant aux différentes routes
 :::
 
 ## Route 3
-### ne pas aller avec Mouton et Cheval, aller avec Chien et Lapin, aller avec Bœuf et Dragon, C’est parti !
 
-:::spoiler[la route 3]
+Pour rentrer dans la route :
+- Ne pas aller avec Mouton et Cheval
+- Aller avec Chien et Lapin
+- Aller avec Bœuf et Dragon
+- C’est parti !
+
+:::spoiler[comment obtenir les fins de la route 3]
 
 Cette route est assez particulière, vous devez découvrir la vérité sur deux points : qui a empoisonné Bœuf et que voulait dire l’empereur de Jade.  
 Vous aurez le 3 de trèfle en échouant à répondre aux deux questions ; le 3 de carreau en ne résolvant que la première partie ; le 3 de cœur en ne résolvant que la deuxième et le 3 de pique en résolvant les deux parties.  
@@ -82,9 +93,13 @@ Pour savoir ce que voulait dire l’Empereur de Jade, il faut aller voir Tigre e
 :::
 
 ## Route 4
-### Ne pas aller avec Mouton et Cheval, aller avec Tigre et Dragon, faire le plan du garde
 
-:::spoiler[la route 4]
+Pour rentrer dans la route :
+- Ne pas aller avec Mouton et Cheval
+- Aller avec Tigre et Dragon
+- Faire le plan du garde
+
+:::spoiler[comment obtenir les fins de la route 4]
 
 **Alerte énigme**
 - La solution est 3589
@@ -105,9 +120,14 @@ Et maintenant, pour avoir la meilleure fin, il faut donc choisir Faire confiance
 :::
 
 ## Route 5
-### ne pas aller avec Mouton et Cheval, aller avec Chien et Lapin, aller avec Chien et Lapin, je pense à quelque chose
 
-:::spoiler[la route 5]
+Pour rentrer dans la route :
+- Ne pas aller avec Mouton et Cheval
+- Aller avec Chien et Lapin
+- Aller avec Chien et Lapin
+- Je pense à quelque chose
+
+:::spoiler[comment obtenir les fins de la route 5]
 
 - **5 de trèfle :**
     - ne pas utiliser la tablette
@@ -128,9 +148,14 @@ Et maintenant, pour avoir la meilleure fin, il faut donc choisir Faire confiance
 :::
 
 ## Route 6
-### ne pas aller avec Mouton et Cheval, aller avec Chien et Lapin, aller avec Bœuf et Dragon, Je pense à quelque chose
 
-:::spoiler[la route 6]
+Pour rentrer dans la route :
+- Ne pas aller avec Mouton et Cheval
+- Aller avec Chien et Lapin
+- Aller avec Bœuf et Dragon
+- Je pense à quelque chose
+
+:::spoiler[comment obtenir les fins de la route 6]
 
 - **6 de trèfle :**
     - Essaye de les frapper par la fenêtre quand ils refermeront la porte !
@@ -140,7 +165,7 @@ Et maintenant, pour avoir la meilleure fin, il faut donc choisir Faire confiance
 - **6 de cœur :**
     - Dégonde la porte !
     - Contre-attaquer !
-    - ne pas convaincre Dragon
+    - Ne pas convaincre Dragon
 - **6 de pique :**
     - Dégonde la porte !
     - Contre-attaquer !
@@ -151,8 +176,13 @@ Et maintenant, pour avoir la meilleure fin, il faut donc choisir Faire confiance
 :::
 
 ## Route 7
-### Ne pas aller avec Mouton et Cheval, aller avec Tigre et Dragon, faire le plan du verrou
-:::spoiler[la route 7]
+
+Pour rentrer dans la route :
+- Ne pas aller avec Mouton et Cheval
+- Aller avec Tigre et Dragon
+- Faire le plan du verrou
+
+:::spoiler[comment obtenir les fins de la route 7]
 
 - **7 de trèfle :**
     - Rester seule
@@ -174,9 +204,13 @@ Et maintenant, pour avoir la meilleure fin, il faut donc choisir Faire confiance
 :::
 
 ## Route 8
-### aller avec Cheval et Mouton, faire confiance, aller avec Tigre et Dragon
 
-:::spoiler[la route 8]
+Pour rentrer dans la route :
+- Aller avec Cheval et Mouton
+- Faire confiance
+- Aller avec Tigre et Dragon
+
+:::spoiler[comment obtenir les fins de la route 8]
 
 - **8 de trèfle :**
     - Foncer sur le pistolet !
@@ -199,15 +233,19 @@ Et maintenant, pour avoir la meilleure fin, il faut donc choisir Faire confiance
 :::
 
 ## Route 9
-### Aller avec Cheval et Mouton, ne pas faire confiance, aller avec Tigre et Dragon
 
-:::spoiler[la route 9]
+Pour rentrer dans la route :
+- Aller avec Cheval et Mouton
+- Ne pas faire confiance
+- Aller avec Tigre et Dragon
+
+:::spoiler[comment obtenir les fins de la route 9]
 
 - **9 de trèfle :**
     - Découvrir le cadavre de Chien (le placard est ouvert)
 - **9 de carreau :**
     - Le cadavre de Chien n’est pas découvert (Regarder les livres ou les stores)
-    - ne pas identifier le coupable
+    - Ne pas identifier le coupable
 - **9 de cœur :**
     - Le cadavre de Chien n’est pas découvert (Regarder les livres ou les stores)
     - Mouton
@@ -223,9 +261,14 @@ Et maintenant, pour avoir la meilleure fin, il faut donc choisir Faire confiance
 :::
 
 ## Route 10
-### aller avec Cheval et Mouton puis Singe et Cochon, Singe, le faire soi-même
 
-:::spoiler[la route 10]
+Pour rentrer dans la route :
+- Aller avec Cheval et Mouton
+- Aller avec Singe et Cochon
+- Singe
+- Le faire soi-même
+
+:::spoiler[comment obtenir les fins de la route 10]
 
 - **10 de trèfle :**
     - Puis-je vraiment ?
@@ -246,9 +289,13 @@ Et maintenant, pour avoir la meilleure fin, il faut donc choisir Faire confiance
 :::
 
 ## Route Valet
-### aller avec Cheval et Mouton puis Singe et Cochon, Bœuf
 
-:::spoiler[la route valet]
+Pour rentrer dans la route :
+- Aller avec Cheval et Mouton
+- Aller avec Singe et Cochon
+- Bœuf
+
+:::spoiler[comment obtenir les fins de la route valet]
 
 - **Alerte énigme :**
     - le paquet de carte contient la réponse
@@ -269,9 +316,14 @@ Et maintenant, pour avoir la meilleure fin, il faut donc choisir Faire confiance
 :::
 
 ## Route Dame
-### ne pas aller avec Mouton et Cheval, aller avec Chien et Lapin, aller avec Chien et Lapin, C’est parti !
 
-:::spoiler[la route dame]
+Pour rentrer dans la route :
+- Ne pas aller avec Mouton et Cheval
+- Aller avec Chien et Lapin
+- Aller avec Chien et Lapin
+- C’est parti !
+
+:::spoiler[comment obtenir les fins de la route dame]
 
 - **Dame de trèfle :**
     - chercher des babioles
@@ -291,9 +343,14 @@ Et maintenant, pour avoir la meilleure fin, il faut donc choisir Faire confiance
 :::
 
 ## Route Roi
-### aller avec Cheval et Mouton puis Singe et Cochon, Singe, laisser Cochon le faire
 
-:::spoiler[la route roi]
+Pour rentrer dans la route :
+- Aller avec Cheval et Mouton
+- Aller Singe et Cochon
+- Singe
+- Laisser Cochon le faire
+
+:::spoiler[comment obtenir les fins de la route roi]
 
 - **Roi de trèfle :**
     - Chevauchement furtif sur Cochon.
