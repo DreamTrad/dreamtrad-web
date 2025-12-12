@@ -30,6 +30,8 @@ Si vous mettez un échappatoire en mode facile, les personnages présents avec v
 
 ### Autres pages
 
-- [Mots de passe français](/jeu/vlr/guide/mots_de_passe)
+- [Verrous](/jeu/vlr/guide/verrous)
+- [Mots de passe](/jeu/vlr/guide/mots_de_passe)
+- [Mots de passe et codes différents en français](/jeu/vlr/guide/mots_de_passe_français)
 - [Le téléphone des cabines](/jeu/vlr/guide/telephone_cabines)
 - [Succès](/jeu/vlr/guide/succes)
