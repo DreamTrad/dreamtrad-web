@@ -14,6 +14,8 @@ Pour l’instant, une seule personne traduit et c’est un projet ouvert si d’
 
 Vous pouvez suivre l’avancée sur la [page d’accueil](/) et découvrir un peu plus l’œuvre sur sa [page dédiée](/jeu/428).
 
+![428 screenshot](/assets/articles-content/0003/428_image2.webp)
+
 # The Divine Deception
 
 The Divine Deception est un Visual Novel indépendant anglais. Il s’agit du 2e épisode d’une série contenant à l’heure actuelle 4 épisodes.
@@ -25,6 +27,9 @@ Le premier épisode, Zodiac Trial, a déjà été traduit et le patch est sorti 
 Pour la suite de série, Divine Deception, nous en sommes au 50 % également ! De plus la partie technique est faite. Il y aura quelques images à éditer, mais rien de très long. La traduction avance a un bon rythme malgré la longueur de script.
 
 De même, vous pouvez retrouver l’avancée sur la [page d’accueil](/) et avoir un peu plus de précision sur le Visual Novel sur sa [page dédiée](/jeu/divine_deception).
+
+![Divine Deception screenshot](/assets/articles-content/0003/divine_deception_image3.webp)
+
 
 # La série Infinity
 
@@ -53,17 +58,21 @@ Pour la traduction, nous allons suivre l'ordre de sortie des jeux et allons donc
 
 Suivez l’avancée de la traduction de Never7 sur la [page d’accueil](/) et découvrez-le un peu plus sa [page dédiée](/jeu/never7).
 
+![Never7 screenshot](/assets/articles-content/0003/never7_image1.webp)
+
 # 25th Ward: The Silver Case
 
 Une traduction de 25th Ward: The Silver Case a démarré !
 
-Il s’agit du 3e épisode d’une trilogie de Suda51 (Killer7, No More Heroes). Le premier épisode "The Silver Case" est disponible sur Steam et a été fantraduit via l’initiative du [projet silver](http://projectsilver.free.fr/dl.html). Le 2e épisode se nomme "Flower, Sun, and Rain". Il est initialement sorti sur PS2 uniquement au Japon, puis par la suite un portage a été réalisé sur Nintendo DS et cette version est disponible officiellement en français. 25th Ward: The Silver Case est donc le dernier jeu de la trilogie à ne pas être disponible en français.
+Il s’agit du troisième épisode d’une trilogie de Suda51 (connu pour Killer7, No More Heroes). Le premier épisode "The Silver Case" est disponible sur Steam et a été fantraduit via l’initiative du [projet silver](https://sakimotor.fr/patches/projectsilver/). Le second épisode se nomme "Flower, Sun, and Rain". Il est initialement sorti sur PS2 uniquement au Japon, puis par la suite un portage a été réalisé sur Nintendo DS et cette version est disponible officiellement en français. The 25th Ward: The Silver Case est donc le dernier jeu de la trilogie à ne pas être disponible en français. Originellement sorti sur flip phone (téléphone à clapet) au Japon en 2005, le reste du monde ne le connaîtra qu'en 2018 avec la sortie du remake localisé officiellement en anglais.
 
-*Cinq ans se sont écoulés depuis les événements de The Silver Case, dans le nouveau 25e district apparu dans la zone côtière de Kanto. Dans une chambre du complexe résidentiel Bayside Tower Land, une femme est retrouvée assassinée dans des circonstances mystérieuses. Cet incident déclenche une série d’événements apparemment sans lien, réunissant plusieurs protagonistes, dont Tokio Morishima de The Silver Case. Une fois tous les points de vue rassemblés, un schéma véritablement choquant se révèle…*
+*Cinq ans se sont écoulés depuis les événements de The Silver Case, dans le nouvel Arrondissement 25 apparu dans la zone côtière de Kanto. Dans une chambre du complexe résidentiel Bayside Tower Land, une femme est retrouvée assassinée dans des circonstances mystérieuses. Cet incident déclenche une série d’événements apparemment sans lien, réunissant plusieurs protagonistes, dont Tokio Morishima de The Silver Case. Une fois tous les points de vue rassemblés, un schéma véritablement choquant se révèle…*
 
 Plus de 20 % du Visual Novel est déjà traduit. La liste des images à modifier n’a pas encore été étudiée et il reste des points techniques à corriger.
 
 Suivez l’avancée de la traduction du jeu sur la [page d’accueil](/) et découvrez-le un peu plus sa [page dédiée](/jeu/silver_case_25th_ward).
+
+![25th ward silver case screenshot](/assets/articles-content/0003/silver_case_25th_ward_image1.webp)
 
 # D’autres projets
 
