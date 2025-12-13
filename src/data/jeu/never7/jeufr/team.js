@@ -10,6 +10,7 @@ export const team = [
         "category": "Programmeur",
         "people": [
             { "name": "Floflosera", "role": "", "link": "/equipe" },
+            { "name": "Aclios", "role": "", "link": "https://github.com/Aclios/MAGES-Tools" },
         ]
     },
     {
