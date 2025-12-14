@@ -1,12 +1,12 @@
 export const team = [
     {
-        "category": "Traducteur",
+        "category": "Traduction",
         "people": [
             { "name": "Bedriol", "role": "", "link": "/equipe" },
         ]
     },
     {
-        "category": "Programmeur",
+        "category": "Programmation",
         "people": [
             { "name": "Bedriol", "role": "Utilisation des outils", "link": "/equipe" },
             { "name": "Floflosera", "role": "Conversion, recherche", "link": "/equipe" },
@@ -14,7 +14,7 @@ export const team = [
         ]
     },
     {
-        "category": "Images",
+        "category": "Graphisme",
         "people": [
             { "name": "Bedriol", "role": "", "link": "/equipe" },
             { "name": "Darcol_Destolle", "role": "Aide pour l’intégration des images modifiées", "link": "" },
@@ -23,7 +23,7 @@ export const team = [
         ]
     },
     {
-        "category": "Relecteur",
+        "category": "Relecture",
         "people": [
             { "name": "Bedriol", "role": "Relecture", "link": "/equipe" },
             { "name": "jls", "role": "Bêta-test", "link": "/equipe" },

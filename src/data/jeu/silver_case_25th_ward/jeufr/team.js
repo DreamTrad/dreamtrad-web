@@ -1,23 +1,23 @@
 export const team = [
     {
-        "category": "Traducteur",
+        "category": "Traduction",
         "people": [
             { "name": "Parallelist", "role": "", "link": "" },
         ]
     },
     {
-        "category": "Programmeur",
+        "category": "Programmation",
         "people": [
             { "name": "Silous", "role": "", "link": "/equipe" },
         ]
     },
     {
-        "category": "Images",
+        "category": "Graphisme",
         "people": [
         ]
     },
     {
-        "category": "Relecteur",
+        "category": "Relecture",
         "people": [
         ]
     },

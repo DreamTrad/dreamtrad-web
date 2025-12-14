@@ -1,25 +1,25 @@
 export const team = [
     {
-        "category": "Traducteur",
+        "category": "Traduction",
         "people": [
             { "name": "jls", "role": "", "link": "/equipe" },
             { "name": "Floflosera", "role": "", "link": "/equipe" },
         ]
     },
     {
-        "category": "Programmeur",
+        "category": "Programmation",
         "people": [
             { "name": "Floflosera", "role": "", "link": "/equipe" },
         ]
     },
     {
-        "category": "Images",
+        "category": "Graphisme",
         "people": [
             { "name": "Floflosera", "role": "", "link": "/equipe" },
         ]
     },
     {
-        "category": "Relecteur",
+        "category": "Relecture",
         "people": [
             { "name": "AlexisTGF", "role": "Bêta-test", "link": "/equipe" },
             { "name": "Bedriol", "role": "Bêta-test", "link": "/equipe" },

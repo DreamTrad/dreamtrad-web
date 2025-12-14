@@ -1,25 +1,25 @@
 export const team = [
     {
-        "category": "Traducteur",
+        "category": "Traduction",
         "people": [
             { "name": "Ritsu", "role": "Traducteur", "link": "/equipe" },
         ]
     },
     {
-        "category": "Programmeur",
+        "category": "Progammation",
         "people": [
             { "name": "Silous", "role": "Recodage table ouija, adaptation des outils", "link": "/equipe" },
             { "name": "Xzonn", "role": "Outils chinois ayant servi au projet", "link": "https://github.com/Xzonn/ParanormasightChsLocalizationHelper" },
         ]
     },
     {
-        "category": "Images",
+        "category": "Graphisme",
         "people": [
             { "name": "sol", "role": "Traduction des images", "link": "" },
         ]
     },
     {
-        "category": "Relecteur",
+        "category": "Relecture",
         "people": [
             { "name": "Floflosera", "role": "relecteur/Bêta-test", "link": "/equipe" },
             { "name": "Nadechi", "role": "Bêta-test", "link": "" },

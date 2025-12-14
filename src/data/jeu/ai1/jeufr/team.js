@@ -1,6 +1,6 @@
 export const team = [
     {
-        "category": "Traducteur",
+        "category": "Traduction",
         "people": [
             { "name": "jls", "role": "", "link": "/equipe" },
             { "name": "Ritsu", "role": "", "link": "/equipe" },
@@ -12,20 +12,20 @@ export const team = [
         ]
     },
     {
-        "category": "Programmeur",
+        "category": "Programmation",
         "people": [
             { "name": "Lastdreamer", "role": "Outils d’extraction/importation", "link": "" },
         ]
     },
     {
-        "category": "Images",
+        "category": "Graphisme",
         "people": [
             { "name": "roli300", "role": "", "link": "" },
             { "name": "Daphnée Zou Gaming", "role": "", "link": "/equipe" },
         ]
     },
     {
-        "category": "Relecteur",
+        "category": "Relecture",
         "people": [
             { "name": "jls", "role": "relecteur", "link": "/equipe" },
             { "name": "Ritsu", "role": "relecteur", "link": "/equipe" },

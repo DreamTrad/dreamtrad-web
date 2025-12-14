@@ -1,6 +1,6 @@
 export const team = [
     {
-        "category": "Traducteur",
+        "category": "Traduction",
         "people": [
             { "name": "Ritsu", "role": "Nouvelle version", "link": "/equipe" },
             { "name": "Silous", "role": "Nouvelle version", "link": "/equipe" },
@@ -19,7 +19,7 @@ export const team = [
         ]
     },
     {
-        "category": "Programmeur",
+        "category": "Programmation",
         "people": [
             { "name": "Silous", "role": "Utilisation des outils", "link": "/equipe" },
             { "name": "Floflosera", "role": "Utilisation des outils", "link": "/equipe" },
@@ -28,7 +28,7 @@ export const team = [
         ]
     },
     {
-        "category": "Images",
+        "category": "Graphisme",
         "people": [
             { "name": "Silous", "role": "Édition des images", "link": "/equipe" },
             { "name": "NoFall", "role": "Édition des images", "link": "" },
@@ -39,7 +39,7 @@ export const team = [
         ]
     },
     {
-        "category": "Relecteur",
+        "category": "Relecture",
         "people": [
             { "name": "Silous", "role": "Relecteur", "link": "/equipe" },
             { "name": "Ritsu", "role": "Relecteur", "link": "/equipe" },

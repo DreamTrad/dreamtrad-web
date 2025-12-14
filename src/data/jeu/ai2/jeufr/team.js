@@ -1,6 +1,6 @@
 export const team = [
     {
-        "category": "Traducteur",
+        "category": "Traduction",
         "people": [
             { "name": "jls", "role": "", "link": "/equipe" },
             { "name": "Ritsu", "role": "", "link": "/equipe" },
@@ -11,7 +11,7 @@ export const team = [
         ]
     },
     {
-        "category": "Programmeur",
+        "category": "Programmation",
         "people": [
             { "name": "Floflosera", "role": "", "link": "/equipe" },
             { "name": "SutandoTsukai181", "role": "Outils d’extraction/importation", "link": "" },
@@ -21,7 +21,7 @@ export const team = [
         ]
     },
     {
-        "category": "Images",
+        "category": "Graphisme",
         "people": [
             { "name": "Daphnée Zou Gaming", "role": "", "link": "/equipe" },
             { "name": "Floflosera", "role": "", "link": "/equipe" },
@@ -29,7 +29,7 @@ export const team = [
         ]
     },
     {
-        "category": "Relecteur",
+        "category": "Relecture",
         "people": [
             { "name": "jls", "role": "Relecteur", "link": "/equipe" },
             { "name": "Ritsu", "role": "Relecteur", "link": "/equipe" },
