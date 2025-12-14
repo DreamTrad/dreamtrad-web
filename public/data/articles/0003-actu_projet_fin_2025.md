@@ -4,7 +4,7 @@ Au lancement du site, deux nouveaux projets ont démarré, mais nous avons aussi
 
 Ce projet a été lancé l’année dernière. Il s’agit d’un Visual Novel de renom de Spike Chunsoft par Jiro Ishi. Sa particularité est de faire usage de photos et d’acteurs au lieu des traditionnels dessins, ou modèles 3D.
 
-*Dans le quartier de Shibuya, de drôles d’événements de passe pendant la journée du 28 avril : Un kidnapping, un virus, un journal dans le mal, un produit miracle pour mincir… Cinq personnes vont être embarqués dans ces histoires, et ce sera à nous de suivre chacune de leurs histoires et de faire les bons choix pour assurer le bon déroulement des cinq histoires !*
+*Dans le quartier de Shibuya, durant la journée du 28 avril, plusieurs histoires s'entremêlent. Entre un kidnapping, les difficultés d'un journal, un virus mortel, un produit amincissant et un gang de voyous, le quartier et son croisement emblématique sont la scène d'un scénario haletant. Vont-ils réussir à s'échapper de cette journée infernale ? Par vos choix, leur sort, ainsi que celui de la ville, changera. Pour le pire ou pour le meilleur.*
 
 Le projet en est actuellement à 50 % de traduit !
 
