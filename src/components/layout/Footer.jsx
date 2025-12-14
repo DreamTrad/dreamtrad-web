@@ -83,7 +83,7 @@ export default function Footer() {
               />
             </a>
             <a
-              href="https://x.com/DreamTeamTrad"
+              href="https://x.com/DreamTradFR"
               target="_blank"
               rel="noreferrer"
             >
@@ -94,7 +94,7 @@ export default function Footer() {
               />
             </a>
              <a
-              href="https://bsky.app/profile/dreamteamtrad.bsky.social"
+              href="https://bsky.app/profile/dreamtrad.bsky.social"
               target="_blank"
               rel="noreferrer"
             >
