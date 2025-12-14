@@ -297,7 +297,7 @@
             "https://www.nintendo.com/fr-fr/Jeux/Jeux-Nintendo-Switch/Emio-L-Homme-au-sourire-Famicom-Detective-Club-2615498.html"
         ],
         "patch_fr": [],
-        "description": "Un collégien nommé Eisuke Sasaki a été retrouvé mort, la tête couverte par un sac à papier sur lequel est dessiné un visage souriant.\n\nCe dessin étrange n'est pas sans rappeler ceux qui caractérisaient une série de meurtres non élucidés d'il y a 18 ans, ainsi que la légende urbaine d'Emio, ou « l'Homme au sourire », un tueur en série qui offre « un sourire pour l'éternité » à ses victimes.\n\nL'Homme au sourire existe-t-il vraiment... ou s'agit-il de quelqu'un qui cherche à poursuivre sa légende ?\n\nEn tant que détective de l'agence Utsugi, votre tâche consiste à enquêter sur les événements qui ont mené à la mort d'Eisuke Sasaki. Examinez les indices et témoignages que vous récoltez… peut-être trouverez-vous des liens avec les macabres affaires du passé."
+        "description": "Un collégien nommé Eisuke Sasaki a été retrouvé mort, la tête couverte par un sac à papier sur lequel est dessiné un visage souriant.\n\nCe dessin étrange n'est pas sans rappeler ceux qui caractérisaient une série de meurtres non élucidés d'il y a 18 ans, ainsi que la légende urbaine d'Emio, ou « l'Homme au sourire », un tueur en série qui offre « un sourire pour l'éternité » à ses victimes.\n\nL'Homme au sourire existe-t-il vraiment… ou s'agit-il de quelqu'un qui cherche à poursuivre sa légende ?\n\nEn tant que détective de l'agence Utsugi, votre tâche consiste à enquêter sur les événements qui ont mené à la mort d'Eisuke Sasaki. Examinez les indices et témoignages que vous récoltez… peut-être trouverez-vous des liens avec les macabres affaires du passé."
     },
     {
         "id": "fata_morgana",
@@ -399,6 +399,23 @@
         "patch_fr": ["fr:http://zebdal.free.fr/whitedream/kanon.php"],
         "description": "En ce jour d’hiver, la neige tombe doucement…\nSur un banc devant la gare, je retrouve ma cousine, Nayuki Minase, pour la première fois depuis sept ans.\n\nNayuki et ma tante m’accueillent à nouveau dans cette ville où j’ai dû déménager brusquement autrefois. C’est aussi le lieu de souvenirs d’enfance flous. Dans cette ville recouverte d’un épais manteau de neige, moi et cinq jeunes filles allons vivre de petits miracles…"
     },
+        {
+        "id": "le_petit_prince",
+        "titre": "Le Petit Prince",
+        "image": "assets/poster/le_petit_prince.webp",
+        "genre": ["science-fiction", "tranche de vie"],
+        "duree": "moins de 1h",
+        "note_vndb": "7.38",
+        "popularite_vndb": "11637",
+        "plateforme": ["pc"],
+        "lien_jeu": [
+            "https://vndb.org/v27015"
+        ],
+        "patch_fr": [
+            "https://archive.org/details/le-petit-prince-onscripter"
+        ],
+        "description": "Une adaptation sous format vidéoludique de la fameuse œuvre de M.de Saint-Exupéry créée par le studio japonais indépendant [P.o.l.c.](https://polc.sakura.ne.jp/game/hosi/index.html).\n\n\"Le premier soir je me suis donc endormi sur le sable à mille milles de toute terre habitée. J'étais bien plus isolé qu'un naufragé sur un radeau au milieu de l'Océan. Alors vous imaginez ma surprise, au lever du jour, quand une drôle de petite voix m'a réveillé. Elle disait :\n\n\\- S'il vous plaît… dessine-moi un mouton !\n\n\\- Dessine-moi un mouton…\n\nJ'ai sauté sur mes pieds comme si j'avais été frappé par la foudre.\""
+    },
     {
         "id": "last_window",
         "titre": "Last Window: The Secret of Cape West",
@@ -459,7 +476,7 @@
             "https://store.steampowered.com/app/2106840/PARANORMASIGHT_The_Seven_Mysteries_of_Honjo/"
         ],
         "patch_fr": ["fr:/jeu/paranormasight/jeufr/telechargement"],
-        "description": "Shōgo Okiie, un employé de bureau comme les autres, se rend au parc de Kinshibori en pleine nuit avec son amie Yōko Fukunaga, pour enquêter sur une célèbre histoire de fantôme locale : les Sept mystères de Honjo.\n\nShōgo refuse de croire Yōko lorsqu'elle lui dit que les mystères sont liés au rituel de résurrection, et n'y prête pas attention... jusqu'à ce qu'il ne devienne témoin d'événements étranges.\n\nAu même moment, d'autres mènent leur propre enquête sur les Sept mystères… Des inspecteurs enquêtant sur une série de morts inexpliquées, une lycéenne en quête de la vérité sur le suicide de sa camarade, et une mère qui a juré de venger la mort de son fils.\n\nLeurs désirs et leurs motivations s'entrelacent et interagissent autour des Sept mystères de Honjo, et culmineront en une bataille d'esprit et de malédictions."
+        "description": "Shōgo Okiie, un employé de bureau comme les autres, se rend au parc de Kinshibori en pleine nuit avec son amie Yōko Fukunaga, pour enquêter sur une célèbre histoire de fantôme locale : les Sept mystères de Honjo.\n\nShōgo refuse de croire Yōko lorsqu'elle lui dit que les mystères sont liés au rituel de résurrection, et n'y prête pas attention… jusqu'à ce qu'il ne devienne témoin d'événements étranges.\n\nAu même moment, d'autres mènent leur propre enquête sur les Sept mystères… Des inspecteurs enquêtant sur une série de morts inexpliquées, une lycéenne en quête de la vérité sur le suicide de sa camarade, et une mère qui a juré de venger la mort de son fils.\n\nLeurs désirs et leurs motivations s'entrelacent et interagissent autour des Sept mystères de Honjo, et culmineront en une bataille d'esprit et de malédictions."
     },
     {
         "id": "planetarian",
