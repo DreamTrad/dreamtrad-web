@@ -7,6 +7,7 @@ import {
 import emailjs from "@emailjs/browser";
 import MetaTags from "../components/MetaTags";
 import MarkdownSection from "../components/ui/MarkdownSection";
+import InfoBox from "../components/ui/InfoBox";
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -73,17 +74,16 @@ export default function ContactPage() {
         description="Envoyez-nous un message."
         url="contact"
       />
-      <div className="mx-auto max-w-6xl p-8">
-        <h1 className="text-accent mb-8 text-center text-3xl font-bold">
-          Contact
-        </h1>
-        <div className="mt-16">
-          <MarkdownSection
-            file={file}
-            className="text-justify leading-relaxed"
-          />
-        </div>
-      </div>
+      <InfoBox
+  title="Nous contacter"
+  icon="✉️"
+>
+  <MarkdownSection
+    file={file}
+    className="text-justify leading-relaxed"
+  />
+</InfoBox>
+
       <div className="p-2">
         <div className="bg-bg-tertiary text-text mx-auto mb-8 max-w-2xl rounded-xl p-6 shadow-lg">
           <h1 className="mb-4 text-2xl font-bold">Contactez-nous par mail</h1>
