@@ -59,12 +59,17 @@ body:
       label: Plateformes
       description: Plateformes où le français est disponible
       options:
-        - label: pc
-        - label: psvita
-        - label: ps4
-        - label: switch
+        - label: 3ds
         - label: android
+        - label: ds
         - label: ios
+        - label: pc
+        - label: ps4
+        - label: ps5
+        - label: psvita
+        - label: switch
+        - label: xbox one
+        - label: xbox series
 
   - type: textarea
     id: lien_jeu
