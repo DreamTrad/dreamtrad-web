@@ -7,6 +7,7 @@ import MarkdownSection from "../components/ui/MarkdownSection";
 import ProjectProgressCard from "../components/card/ProjectProgressCard";
 import AvailablePatches from "../components/game/AvailablePatches";
 import chibiAiba from "../assets/chibi/chibi-aiba.webp";
+import InfoBox from "../components/ui/InfoBox";
 
 export default function HomePage() {
   const file_presentation = "../../data/presentation-accueil";
@@ -30,7 +31,9 @@ export default function HomePage() {
         <div className="mx-auto grid flex-1 grid-cols-1 gap-6 px-5 py-8 lg:grid-cols-3">
           {/* Colonne principale */}
           <div className="flex flex-col gap-6 lg:col-span-2">
-            <MarkdownSection file={file_presentation} />
+            <InfoBox title="Traduction et promotion du Visual Novel en français !" icon="✨" className="mt-2">
+                    <MarkdownSection file={file_presentation} className="text-justify leading-relaxed" />
+                  </InfoBox>
 
             {/* Avancement des projets */}
             <h2 className=" text-center text-lg font-semibold">

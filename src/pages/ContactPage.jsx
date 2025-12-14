@@ -74,15 +74,9 @@ export default function ContactPage() {
         description="Envoyez-nous un message."
         url="contact"
       />
-      <InfoBox
-  title="Nous contacter"
-  icon="✉️"
->
-  <MarkdownSection
-    file={file}
-    className="text-justify leading-relaxed"
-  />
-</InfoBox>
+      <InfoBox title="Nous contacter" icon="✉️">
+        <MarkdownSection file={file} className="text-justify leading-relaxed" />
+      </InfoBox>
 
       <div className="p-2">
         <div className="bg-bg-tertiary text-text mx-auto mb-8 max-w-2xl rounded-xl p-6 shadow-lg">

@@ -4,6 +4,7 @@ import DiscoverCard from "../components/card/DiscoverCard";
 import MarkdownSection from "../components/ui/MarkdownSection";
 import LoaderOverlay from "../components/ui/LoaderOverlay";
 import useFetchWithLoader from "../hooks/useFetchWithLoader";
+import InfoBox from "../components/ui/InfoBox";
 
 // ----------------------
 // Composant MultiDropdown
@@ -41,7 +42,7 @@ function MultiDropdown({ label, options, selected, setSelected }) {
           {options.map((option) => (
             <label
               key={option}
-              className="border-hover-tertiary bg-bg-tertiary text-text-tertiary flex cursor-pointer items-center px-2 py-1 hover:bg-hover-tertiary"
+              className="border-hover-tertiary bg-bg-tertiary text-text-tertiary hover:bg-hover-tertiary flex cursor-pointer items-center px-2 py-1"
             >
               <input
                 type="checkbox"
@@ -173,16 +174,15 @@ export default function DiscoverPage() {
           url="decouverte"
         />
 
-        <h2 className="text-accent mb-8 text-center text-3xl font-bold">
-          Découvrez des Visual Novel disponible en français
-        </h2>
-
-        <div className="mt-16 mb-16">
-          <MarkdownSection file={file} />
-        </div>
+        <InfoBox title="Découvrir des Visual Novel en français" icon="📚">
+          <MarkdownSection
+            file={file}
+            className="text-justify leading-relaxed"
+          />
+        </InfoBox>
 
         {/* Barre de filtres */}
-        <div className="mb-8 flex flex-wrap justify-center gap-4">
+        <div className="mb-8 mt-16 flex flex-wrap justify-center gap-4">
           <input
             type="text"
             placeholder="Rechercher par nom..."
@@ -211,7 +211,9 @@ export default function DiscoverPage() {
             onChange={(e) => setTraductionFilter(e.target.value)}
           >
             <option value="">Toutes les traductions</option>
-            <option value="officielle" className="">Officielle</option>
+            <option value="officielle" className="">
+              Officielle
+            </option>
             <option value="non-officielle">Fantraduction</option>
           </select>
 
@@ -220,7 +222,9 @@ export default function DiscoverPage() {
             value={sortOption}
             onChange={(e) => setSortOption(e.target.value)}
           >
-            <option value="titre-asc" className="font-secondary">Titre (A → Z)</option>
+            <option value="titre-asc" className="font-secondary">
+              Titre (A → Z)
+            </option>
             <option value="titre-desc">Titre (Z → A)</option>
             <option value="note-asc">Note VNDB (faible → fort)</option>
             <option value="note-desc">Note VNDB (fort → faible)</option>

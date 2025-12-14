@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import MetaTags from "../components/MetaTags";
 import TeamMemberCard from "../components/card/TeamMemberCard";
 import MarkdownSection from "../components/ui/MarkdownSection";
+import InfoBox from "../components/ui/InfoBox";
 
 export default function TeamPage() {
   const [team, setTeam] = useState([]);
@@ -25,12 +26,9 @@ export default function TeamPage() {
         <h1 className="text-accent mb-8 text-center text-3xl font-bold">
           Notre Équipe
         </h1>
-        <div className="mt-16 mb-16">
-          <MarkdownSection
-            file={file}
-            className="text-justify leading-relaxed"
-          />
-        </div>
+         <InfoBox title="L’histoire de DreamTrad" icon="🌟">
+                <MarkdownSection file={file} className="text-justify leading-relaxed" />
+              </InfoBox>
       </div>
 
       <div className="grid grid-cols-1 gap-8 px-8 sm:grid-cols-[repeat(auto-fit,minmax(480px,1fr))]">
