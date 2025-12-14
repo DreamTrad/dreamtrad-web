@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import discordIcon from "../../assets/icons/website/discord.svg";
 import githubIcon from "../../assets/icons/website/github.svg";
 import xitterIcon from "../../assets/icons/website/xitter.svg";
+import blueskyIcon from "../../assets/icons/website/bluesky.svg";
 
 export default function Footer() {
   return (
@@ -89,6 +90,17 @@ export default function Footer() {
               <img
                 src={xitterIcon}
                 alt="X/Twitter"
+                className="h-6 w-6 hover:opacity-80"
+              />
+            </a>
+             <a
+              href="https://bsky.app/profile/dreamteamtrad.bsky.social"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={blueskyIcon}
+                alt="Bluesky"
                 className="h-6 w-6 hover:opacity-80"
               />
             </a>

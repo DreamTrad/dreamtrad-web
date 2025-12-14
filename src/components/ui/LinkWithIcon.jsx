@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import discordIcon from "../../assets/icons/website/discord.svg";
+import blueskyIcon from "../../assets/icons/website/bluesky.svg";
 import flagFrIcon from "../../assets/icons/website/flag_fr.svg";
 import githubIcon from "../../assets/icons/website/github.svg";
 import globeIcon from "../../assets/icons/website/globe.svg";
@@ -19,6 +20,7 @@ const localSiteIcon = "/assets/dreamtrad-logo-rond.png";
 
 const iconMap = [
   { match: ["discord.gg", "discord.com"], icon: discordIcon, label: "Discord" },
+  { match: ["bsky.app"], icon: blueskyIcon, label: "Bluesky" },
   { match: ["github.com"], icon: githubIcon, label: "GitHub" },
   { match: ["instagram.com"], icon: instagramIcon, label: "Instagram" },
   { match: ["itch.io"], icon: itchioIcon, label: "Itch.io" },
