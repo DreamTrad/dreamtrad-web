@@ -55,7 +55,7 @@ export const game = {
           name: "Télechargement",
           file: "jeufr/informations",
           platforms: [
-            { id: "pc", name: "PC (Windows, Steamdeck, Linux)", link: "https://drive.google.com/uc?export=download&id=1Fuq6o7Szabu2bTlndMPKOk9S7vJmS9qg" },
+            { id: "pc", name: "PC (Windows, Steamdeck, Linux)", link: "https://drive.google.com/uc?export=download&id=1YSLUKmKwh3TW-8RVaQoWYuWyUaswOooC" },
             { id: "psvita", name: "PS Vita", link: "https://drive.google.com/uc?export=download&id=1HG9cuYO6NNgeNHoFeYnS4vjPWq_oxdOR" },
           ],
         },
