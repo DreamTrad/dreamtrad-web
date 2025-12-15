@@ -49,7 +49,7 @@ export const game = {
           name: "Télechargement",
           file: "jeufr/informations",
           platforms: [
-            { id: "pc", name: "PC (Windows, Steamdeck, Linux)", link: "https://drive.google.com/uc?export=download&id=1rRRVPCE1jbb1ZnrGZhQTKmlq4xt_ukjx" },
+            { id: "pc", name: "PC (Windows, Steamdeck, Linux)", link: "https://drive.google.com/uc?export=download&id=1k0mvR579KW3rlSDoMZt8UjHsTGXqiVq1" },
           ],
         },
         {
