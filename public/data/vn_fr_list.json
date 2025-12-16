@@ -1,7 +1,7 @@
 [
     {
         "id": "999",
-        "titre": "9 Hours, 9 Doors, 9 Persons",
+        "titre": "9 Hours, 9 Persons, 9 Doors",
         "image": "assets/poster/999.webp",
         "genre": ["mystère", "science-fiction", "gameplay"],
         "duree": "10h-20h",
