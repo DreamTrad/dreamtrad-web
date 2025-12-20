@@ -14,7 +14,7 @@ Car c’est bien le Visual Novel en général que nous souhaitons aider à faire
 
 ## Un nouveau site internet
 
-L’idée était de faire suivre notre partie publique (le site internet) le même parcours qu’a subi notre structure interne. Après 7 projets, notre méthodologie est très mature, avec une plutôt bonne organisation. Après 5 ans, notre discord prend de l’ampleur, et notre présence en tant qu’entité faisant partie de la très petite scène des acteurs francophone du VN commence aussi à être relativement importante.
+L’idée était de faire suivre notre partie publique (le site internet) le même parcours qu’a subi notre structure interne. Après 7 projets, notre méthodologie est très mature, avec une plutôt bonne organisation. Après 5 ans, notre Discord prend de l’ampleur, et notre présence en tant qu’entité faisant partie de la très petite scène des acteurs francophone du VN commence aussi à être relativement importante.
 
 Les motivations pour la création de ce site sont multiples.
 
@@ -32,7 +32,7 @@ D’abord, nous voulons tout simplement qu’un maximum de Visual Novel soit dis
 
 Comme j’ai pu le dire plus haut, après 7 projets, nous commençons à être bien rodés, donc l’organisation et la mise en place d’un projet, tout cela est devenu très fluide de notre côté. Nous avons également plusieurs outils pour aider à la traduction, et notamment à la correction. Bref, on est suffisamment aguerris pour porter divers projets de traduction.
 
-Un autre avantage, c’est que nous sommes bien en place, et cela procure plusieurs avantages. D’abord, nous avons un site web pour proposer le patch, ensuite, nous avons des réseaux qui peuvent servir à la promotion des projets et des patchs. Certes, nous restons relativement petits, mais 1000 followers sur Twitter reste toujours plus préférable qu’un projet qui n'a aucune portée de communicationn. Nous avons également un discord sur lequel tout se passe niveau équipe, mais aussi niveau communauté (actuellement plus de 400 personnes). Et parmi toutes ces personnes, ce sont aussi des potentiels bêta-testeurs de nos patchs.
+Un autre avantage, c’est que nous sommes bien en place, et cela procure plusieurs avantages. D’abord, nous avons un site web pour proposer le patch, ensuite, nous avons des réseaux qui peuvent servir à la promotion des projets et des patchs. Certes, nous restons relativement petits, mais 1000 followers sur Twitter reste toujours plus préférable qu’un projet qui n'a aucune portée de communicationn. Nous avons également un Discord sur lequel tout se passe niveau équipe, mais aussi niveau communauté (actuellement plus de 400 personnes). Et parmi toutes ces personnes, ce sont aussi des potentiels bêta-testeurs de nos patchs.
 
 Tout cela, c’est pour permettre de centraliser les efforts de traductions de Visual Novel, et éviter les traductions dans un coin sans grosse relecture et qui sortent dans l’anonymat total, pour éviter les patchs un peu trop amateur (nous le restons tous !) à cause de mauvais process par exemple. Donc, ce qu’on veut, c’est centraliser les efforts, proposer un environnement facile où les traducteurs ne font que traduire, et les questions techniques n’embêtent que les gens de la technique, et mettre le plus de lumière possible sur les projets avec la portée que nous pouvons avoir.
 

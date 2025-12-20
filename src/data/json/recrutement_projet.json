@@ -9,7 +9,7 @@
     },
     {
         "id": "ai2-8-nospleep",
-        "title": "Traduction de AI - No Sleep For Kaname Date",
+        "title": "Traduction d’AI - No Sleep For Kaname Date",
         "image": "/poster/ai2-8-nosleep.webp",
         "roles": ["Traducteur EN → FR", "Traducteur JP → FR", "Graphiste"],
         "contact": "Floflosera",
@@ -17,7 +17,7 @@
     },
     {
         "id": "never7",
-        "title": "Traduction de Infinity : Never 7",
+        "title": "Traduction d’Infinity : Never 7",
         "image": "/poster/never7.webp",
         "roles": ["Traducteur JP → FR", "Graphiste"],
         "contact": "Ritsu",
@@ -25,7 +25,7 @@
     },
     {
         "id": "ever17",
-        "title": "Traduction de Infinity : Ever 17 original et remake",
+        "title": "Traduction d’Infinity : Ever 17 original et remake",
         "image": "/poster/ever17.webp",
         "roles": ["Traducteur JP → FR", "Aide hacking"],
         "contact": "Ritsu, Floflosera",
@@ -33,7 +33,7 @@
     },
     {
         "id": "remember11",
-        "title": "Traduction de Infinity : Remember 11",
+        "title": "Traduction d’Infinity : Remember 11",
         "image": "/poster/remember11.webp",
         "roles": ["Aide hacking"],
         "contact": "Silous",

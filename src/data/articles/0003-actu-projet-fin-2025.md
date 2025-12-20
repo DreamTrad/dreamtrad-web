@@ -10,7 +10,7 @@ Le projet en est actuellement à 50 % de traduit !
 
 Il reste encore beaucoup de travail, et pas qu’au niveau de la traduction. Il y aura l’édition des images à faire, et il y a aussi quelques bugs à inspecter. Mais nous pouvons dire que le projet est en bonne voie.
 
-Pour l’instant, une seule personne traduit et c’est un projet ouvert si d’autres personnes veulent travailler dessus. Nous vous invitons à aller sur la page [recrutement](/recrutement) pour plus d’informations et à nous contacter sur discord ensuite si vous voulez aider.
+Pour l’instant, une seule personne traduit et c’est un projet ouvert si d’autres personnes veulent travailler dessus. Nous vous invitons à aller sur la page [recrutement](/recrutement) pour plus d’informations et à nous contacter sur Discord ensuite si vous voulez aider.
 
 Vous pouvez suivre l’avancée sur la [page d’accueil](/) et découvrir un peu plus l’œuvre sur sa [page dédiée](/jeux/428).
 

@@ -79,7 +79,7 @@ export default function ContactClient() {
 
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Adresse mail"
             className="bg-bg-secondary mb-2 w-full rounded-md p-2"
             value={form.email}
             onChange={handleChange}

@@ -7,7 +7,7 @@ export default function Footer() {
         {/* Colonne 1 - Logo + description */}
         <div>
           <h2 className="text-accent mb-3 text-xl font-bold">DreamTrad</h2>
-          <p className="text-sm leading-relaxed">Traduction de Visual Novel.</p>
+          <p className="text-sm leading-relaxed">Traductions de Visual Novel.</p>
         </div>
 
         {/* Colonne 2 - Navigation */}

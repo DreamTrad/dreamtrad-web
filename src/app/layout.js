@@ -21,7 +21,7 @@ const schemaOrg = {
   "@type": "WebSite",
   name: "DreamTrad",
   url: "https://dreamtrad.fr",
-  description: "Traduction de Visual Novel en français",
+  description: "Traductions de Visual Novel en français",
   inLanguage: "fr-FR",
 };
 
@@ -38,7 +38,7 @@ export const metadata = {
     default: "DreamTrad",
     template: "%s | DreamTrad",
   },
-  description: "DreamTrad — Traduction de Visual Novel en français",
+  description: "DreamTrad — Traductions de Visual Novel en français",
   openGraph: {
     type: "website",
     siteName: "DreamTrad",

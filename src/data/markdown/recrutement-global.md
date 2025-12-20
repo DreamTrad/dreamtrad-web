@@ -1,3 +1,3 @@
-Si vous êtes intéressé pour travailler sur un projet, tout se passe sur notre [discord](https://discord.gg/gsuAz4DK4p) pour s’organiser entre les membres de l’équipe. **Les projets de traduction sont faits sur Google Drive. Donc, il vous faudra un compte Google** pour pouvoir travailler sur un projet.
+Si vous êtes intéressé pour travailler sur un projet, tout se passe sur notre [Discord](https://discord.gg/gsuAz4DK4p) pour s’organiser entre les membres de l’équipe. **Les projets de traduction sont faits sur Google Drive. Donc, il vous faudra un compte Google** pour pouvoir travailler sur un projet.
 
-Pour pouvoir proposer son aide à la traduction sur les projets, **le seul pré-requis absolument obligatoire que nous demandons est d’avoir fait le jeu**. Pour les autres aspects (images, hacking), ce n’est pas nécessaire.
+Pour pouvoir proposer son aide à la traduction sur les projets, **le seul prérequis exigé que nous demandons est d’avoir fait le jeu**. Pour les autres aspects (images, hacking), ce n’est pas nécessaire.
