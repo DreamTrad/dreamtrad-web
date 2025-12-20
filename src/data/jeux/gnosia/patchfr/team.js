@@ -25,7 +25,7 @@ export const team = [
     {
         "category": "Relecture",
         "people": [
-            { "name": "Bedriol", "role": "Relecture", "link": "/equipe" },
+            { "name": "Bedriol", "role": "", "link": "/equipe" },
             { "name": "jls", "role": "Bêta-test", "link": "/equipe" },
             { "name": "Kinariha", "role": "Bêta-test", "link": "" },
             { "name": "Zirion", "role": "Bêta-test", "link": "" },
