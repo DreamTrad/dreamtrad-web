@@ -1,21 +1,37 @@
 // app/jeux/[id]/page.js
 import fs from "fs";
 import path from "path";
+import { games } from "@/data/jeux";
 import { extractMarkdownMetadata } from "@/lib/markdownMetadata";
 import MarkdownSection from "@/components/ui/MarkdownSection";
+import GameEmbeds from "./GameEmbeds";
 
 export default async function GamePage({ params }) {
   const id = (await params).id;
+
+  const game = games.find((g) => g.id === id);
+  if (!game) redirect("/");
+
+  const presentation = game.categories.general.sections.find(
+    (s) => s.id === "presentation",
+  );
+  if (!presentation?.file) redirect("/");
+
   const mdPath = path.join(
     process.cwd(),
     "src/data/jeux",
     id,
-    "general",
-    "presentation.md",
+    `${presentation.file}.md`,
   );
 
   const raw = fs.readFileSync(mdPath, "utf8");
   const { body } = extractMarkdownMetadata(raw);
 
-  return <MarkdownSection content={body} />;
+  return (
+    <div className="mx-auto max-w-5xl space-y-12 px-4 pb-20">
+      <MarkdownSection content={body} />
+
+      <GameEmbeds embeds={presentation.embeds} />
+    </div>
+  );
 }

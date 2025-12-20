@@ -1,6 +1,5 @@
 import { team } from "./patchfr/team";
 
-
 export const game = {
   id: "silver_case_25th_ward",
   name: "The 25th Ward: The Silver Case",
@@ -8,7 +7,22 @@ export const game = {
     general: {
       name: "Le Jeu",
       sections: [
-        { id: "presentation", name: "Présentation", file: "general/presentation" },
+        {
+          id: "presentation",
+          name: "Présentation",
+          file: "general/presentation",
+          embeds: [
+            {
+              type: "youtube",
+              id: "OUOmQuNqwyA",
+            },
+            {
+              type: "steam",
+              id: "697650",
+            },
+          ],
+        },
+
         { id: "staff", name: "Staff", staff: ["suda51"] },
       ],
     },
@@ -28,8 +42,7 @@ export const game = {
           id: "telechargement",
           name: "Informations patch",
           file: "patchfr/informations",
-          platforms: [
-          ],
+          platforms: [],
         },
         { id: "equipe", name: "Équipe", data: team },
       ],
