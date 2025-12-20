@@ -71,7 +71,7 @@ export default async function HomePage() {
         <aside className="flex flex-col gap-16">
           <DiscordCard inviteUrl="https://t.co/O6tlFvR8wa" />
 
-          <div className="from-accent to-accent-tertiary flex flex-col items-center justify-between gap-6 overflow-hidden rounded-2xl bg-linear-to-br p-6 text-white shadow-xl md:flex-row">
+          <div className="from-accent to-accent-tertiary flex flex-col items-center justify-center gap-4 overflow-hidden rounded-2xl bg-linear-to-br p-6 text-white shadow-xl md:flex-row md:justify-between">
             <div className="flex max-w-md flex-1 flex-col items-center space-y-4 text-center">
               <h2 className="text-2xl font-bold">Nous recrutons !</h2>
               <p className="text-sm text-white/90">
@@ -87,13 +87,13 @@ export default async function HomePage() {
               </Link>
             </div>
 
-            <div className="flex h-full shrink-0 items-stretch justify-center md:h-auto md:justify-start">
+            <div className="flex w-full justify-center md:w-auto md:justify-start">
               <Image
                 src={chibiAiba}
                 alt="Chibi Aiba"
                 width={200}
                 height={200}
-                className="pointer-events-none object-contain drop-shadow-xl select-none"
+                className="pointer-events-none max-w-37.5 object-contain drop-shadow-xl select-none md:max-w-none"
               />
             </div>
           </div>
