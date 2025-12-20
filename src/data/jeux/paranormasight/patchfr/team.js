@@ -21,7 +21,7 @@ export const team = [
     {
         "category": "Relecture",
         "people": [
-            { "name": "Floflosera", "role": "relecteur/Bêta-test", "link": "/equipe" },
+            { "name": "Floflosera", "role": "relect/Bêta-test", "link": "/equipe" },
             { "name": "Nadechi", "role": "Bêta-test", "link": "" },
             { "name": "Zeravica", "role": "Bêta-test", "link": "" },
             { "name": "Zuzur", "role": "Bêta-test", "link": "" },

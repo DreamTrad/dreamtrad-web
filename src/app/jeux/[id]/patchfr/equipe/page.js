@@ -50,7 +50,7 @@ export default async function TeamRoleSection({ params }) {
 
       <p className="mb-6 text-justify">
         Si une information est incorrecte, ou manquante, ou que vous souhaitez
-        transmettre un lien vers un réseau ou site internet en lien avec vous
+        transmettre un lien vers un réseau social ou site internet en lien avec vous
         qui sera affiché à côté de votre pseudo, n’hésitez pas à nous contacter
         !
       </p>

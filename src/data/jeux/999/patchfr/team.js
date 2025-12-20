@@ -41,9 +41,9 @@ export const team = [
     {
         "category": "Relecture",
         "people": [
-            { "name": "Silous", "role": "Relecteur", "link": "/equipe" },
-            { "name": "Ritsu", "role": "Relecteur", "link": "/equipe" },
-            { "name": "Floflosera", "role": "Relecteur", "link": "/equipe" },
+            { "name": "Silous", "role": "", "link": "/equipe" },
+            { "name": "Ritsu", "role": "", "link": "/equipe" },
+            { "name": "Floflosera", "role": "", "link": "/equipe" },
             { "name": "Bedriol", "role": "Bêta-test", "link": "/equipe" },
             { "name": "Aclios", "role": "Bêta-test", "link": "" },
             { "name": "LouDorée", "role": "Bêta-test", "link": "" },

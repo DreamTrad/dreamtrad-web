@@ -20,9 +20,9 @@ export const team = [
     {
         "category": "Relecture",
         "people": [
-            { "name": "Darcol_Destolle", "role": "Relecteur", "link": "" },
-            { "name": "Sakimotor", "role": "Relecteur", "link": "" },
-            { "name": "Kilga", "role": "Relecteur", "link": "" },
+            { "name": "Darcol_Destolle", "role": "", "link": "" },
+            { "name": "Sakimotor", "role": "", "link": "" },
+            { "name": "Kilga", "role": "", "link": "" },
         ]
     },
 ];

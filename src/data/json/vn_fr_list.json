@@ -395,7 +395,7 @@
         "note_vndb": "7.70",
         "popularite_vndb": "63",
         "plateforme": ["pc"],
-        "lien_jeu": [],
+        "lien_jeu": ["https://vndb.org/v33"],
         "patch_fr": ["fr:http://zebdal.free.fr/whitedream/kanon.php"],
         "description": "En ce jour d’hiver, la neige tombe doucement…\nSur un banc devant la gare, je retrouve ma cousine, Nayuki Minase, pour la première fois depuis sept ans.\n\nNayuki et ma tante m’accueillent à nouveau dans cette ville où j’ai dû déménager brusquement autrefois. C’est aussi le lieu de souvenirs d’enfance flous. Dans cette ville recouverte d’un épais manteau de neige, moi et cinq jeunes filles allons vivre de petits miracles…"
     },
@@ -574,7 +574,8 @@
         "popularite_vndb": "43",
         "plateforme": ["pc", "psvita"],
         "lien_jeu": [
-            "https://vndb.org/v7809"
+            "https://vndb.org/v7809",
+            "https://store.steampowered.com/app/477740/Zero_Escape_The_Nonary_Games/"
         ],
         "patch_fr": ["fr:/jeux/vlr/patchfr/telechargement"],
         "description": "Deuxième VN de la série Zero Escape.\n\nNous suivons Sigma, enlevé et drogué alors qu’il se trouve à l’université. Il reprend connaissance dans un ascenseur aux côtés d’une jeune femme appelée Phi. Très vite, ils découvrent qu’ils ne peuvent pas sortir. C’est alors qu’un étrange lapin surgit et se présente sous le nom de « Zéro III ». Celui-ci leur annonce qu’ils vont participer au « Jeu Nonaire : Édition Ambidextre », un jeu cruel où leur vie est en jeu.\n\nQue va-t-il arriver à Sigma, Phi et aux sept autres personnes qu’ils rencontreront ? Pourquoi ont-ils été choisis, et surtout, à qui pourront-ils faire confiance et qui risque de les trahir ?"

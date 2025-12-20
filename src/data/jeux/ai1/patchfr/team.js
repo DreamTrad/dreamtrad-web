@@ -27,13 +27,13 @@ export const team = [
     {
         "category": "Relecture",
         "people": [
-            { "name": "jls", "role": "relecteur", "link": "/equipe" },
-            { "name": "Ritsu", "role": "relecteur", "link": "/equipe" },
-            { "name": "AlexisTGF", "role": "relecteur", "link": "/equipe" },
-            { "name": "Daphnée Zou Gaming", "role": "relecteur", "link": "/equipe" },
-            { "name": "Foubou", "role": "relecteur", "link": "/equipe" },
-            { "name": "Dratui", "role": "relecteur", "link": "" },
-            { "name": "Icaro", "role": "relecteur", "link": "" },
+            { "name": "jls", "role": "", "link": "/equipe" },
+            { "name": "Ritsu", "role": "", "link": "/equipe" },
+            { "name": "AlexisTGF", "role": "", "link": "/equipe" },
+            { "name": "Daphnée Zou Gaming", "role": "", "link": "/equipe" },
+            { "name": "Foubou", "role": "", "link": "/equipe" },
+            { "name": "Dratui", "role": "", "link": "" },
+            { "name": "Icaro", "role": "", "link": "" },
         ]
     },
     {

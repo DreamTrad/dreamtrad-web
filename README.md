@@ -20,7 +20,7 @@ Cette commande est nécessaire que la première fois, ou quand des modules ont �
 
 Vous pouvez aller sur le site, sur la page recrutement dans [la partie des tâches pour le site internet](https://dreamtrad.fr/recrutement) pour voir ce qu’il y a à faire.
 
-Si vous voulez proposer une amélioration ou proposer du contenu, vous pouvez passer par le [discord](https://t.co/O6tlFvR8wa) pour en discuter, et sinon directement faire via une [issue github](https://github.com/DreamTrad/dreamtrad-web/issues/new/choose)
+Si vous voulez proposer une amélioration ou proposer du contenu, vous pouvez passer par le [discord](https://discord.gg/gsuAz4DK4p) pour en discuter, et sinon directement faire via une [issue github](https://github.com/DreamTrad/dreamtrad-web/issues/new/choose)
 
 ## Si vous voulez ajouter du contenu via un pull request au lieu des issue
 

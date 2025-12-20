@@ -31,12 +31,12 @@ export const team = [
     {
         "category": "Relecture",
         "people": [
-            { "name": "jls", "role": "Relecteur", "link": "/equipe" },
-            { "name": "Ritsu", "role": "Relecteur", "link": "/equipe" },
-            { "name": "Floflosera", "role": "Relecteur", "link": "/equipe" },
-            { "name": "AlexisTGF", "role": "Relecteur", "link": "/equipe" },
-            { "name": "Daphnée Zou Gaming", "role": "Relecteur", "link": "/equipe" },
-            { "name": "Foubou", "role": "Relecteur", "link": "/equipe" },
+            { "name": "jls", "role": "", "link": "/equipe" },
+            { "name": "Ritsu", "role": "", "link": "/equipe" },
+            { "name": "Floflosera", "role": "", "link": "/equipe" },
+            { "name": "AlexisTGF", "role": "", "link": "/equipe" },
+            { "name": "Daphnée Zou Gaming", "role": "", "link": "/equipe" },
+            { "name": "Foubou", "role": "", "link": "/equipe" },
             { "name": "Ailes Grises", "role": "Bêta-testeur", "link": "" },
             { "name": "cocobou", "role": "Bêta-testeur", "link": "" },
             { "name": "Edael", "role": "Bêta-testeur", "link": "" },

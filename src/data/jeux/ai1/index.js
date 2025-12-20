@@ -31,7 +31,7 @@ export const game = {
           file: "patchfr/informations",
           platforms: [
             { id: "pc", name: "PC (Windows, Steamdeck, Linux)", link: "https://drive.google.com/uc?export=download&id=1Jxjkpq6t6br8nbO64Bgu-kwlTNWBikkv" },
-            { id: "xbox", name: "Xbox/Gamepass/Windows Store", link: "https://drive.google.com/uc?export=download&id=1lVQCuaAdzCWa2wesm0k4TiTjXhA3_Ql_" },
+            { id: "xbox", name: "Xbox, Gamepass, Microsoft Store", link: "https://drive.google.com/uc?export=download&id=1lVQCuaAdzCWa2wesm0k4TiTjXhA3_Ql_" },
           ],
         },
         {
