@@ -1,6 +1,6 @@
 # The Divine Deception
 
-The Divine Deception est le 2ème épisode d’une quadrilogie nommé "The Shuffled Deck". Le premier épisode est [The Zodiac Trial](/jeux/zodiac_trial/general/Presentation) disponible en français via son patch.
+The Divine Deception est le 2ème épisode d’une quadrilogie nommé "The Shuffled Deck". Le premier épisode est [The Zodiac Trial](/jeux/zodiac_trial) disponible en français via son patch.
 
 ## Scénario
 

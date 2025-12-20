@@ -18,7 +18,7 @@ export default function DiscoverCard({
 }) {
   const internalPatch = patch_fr.find((p) => p.startsWith("fr:/"));
   const internalPath = internalPatch
-    ? `/jeux/${internalPatch.split("/")[2]}/general/`
+    ? `/jeux/${internalPatch.split("/")[2]}/`
     : null;
 
   return (
@@ -27,7 +27,7 @@ export default function DiscoverCard({
       <div className="bg-bg-secondary flex flex-col gap-3 px-6 py-3">
         {internalPath ? (
           <div className="mb-2 flex items-center justify-between">
-            <Link href={internalPath}>
+            <Link href={internalPath} className="group">
               <h3 className="group-hover:text-accent text-2xl font-bold transition">
                 {titre}
               </h3>

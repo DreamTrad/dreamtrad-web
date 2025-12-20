@@ -4,7 +4,7 @@ AI : The Somnium Files est un jeu vidéo d’aventure de type Visual Novel avec 
 
 Il s’agit d’un jeu d’enquête futuriste se déroulant à Tokyo dans lequel vous devrez explorer la mémoire de suspects. Aux commandes de Kaname Date et de sa partenaire Aiba, vous devrez utiliser une technologie sophistiquée pour résoudre une mystérieuse série de meurtres…
 
-C’est le premier jeu de la série AI: The Somnium Files. Il est suivi de [Nirvana Initiative](/jeux/ai2/general/Presentation) et d’un spin-off se passant entre les deux épisodes nommé "No Sleep For Kaname Date".
+C’est le premier jeu de la série AI: The Somnium Files. Il est suivi de [Nirvana Initiative](/jeux/ai2) et d’un spin-off se passant entre les deux épisodes nommé "No Sleep For Kaname Date".
 
 ## Scénario
 
