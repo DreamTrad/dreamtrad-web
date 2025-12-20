@@ -1,5 +1,7 @@
+"use client"; // nécessaire pour un composant avec useState/useEffect
+
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import NavLink from "../ui/NavLink";
 
 const mainMenu = [
@@ -15,12 +17,10 @@ const mainMenu = [
 export default function Header() {
   const [open, setOpen] = useState(false);
 
-  // Auto-close menu when switching to desktop view
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) setOpen(false); // 768px = md breakpoint par défaut
+      if (window.innerWidth >= 768) setOpen(false);
     };
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -28,15 +28,13 @@ export default function Header() {
   return (
     <header className="bg-bg-secondary text-text-secondary relative flex h-16 items-center">
       <nav className="relative flex h-full w-full items-center justify-center px-20">
-        {/* Logo + Nom site*/}
-        <Link to="/" className="absolute left-4 flex h-full items-center gap-2">
-          {/* <img
-            src="/assets/dreamtrad-logo.png"
-            alt="Logo DreamTrad"
-            className="h-10 w-10 object-contain"
-          /> */}
+        {/* Logo */}
+        <Link
+          href="/"
+          className="absolute left-4 flex h-full items-center gap-2"
+        >
           <img
-            src="/assets/dreamtrad-logo-title.svg"
+            src="/dreamtrad-logo-title.svg"
             alt="DreamTrad"
             className="h-10 object-contain"
           />

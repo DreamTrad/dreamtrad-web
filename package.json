@@ -1,40 +1,37 @@
 {
   "name": "dreamtrad-web",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "@tailwindcss/vite": "^4.1.12",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "^16.0.10",
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/mdx": "^2.0.13",
+    "next": "16.0.10",
+    "prettier": "^3.7.4",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
     "react-markdown": "^10.1.0",
-    "react-router-dom": "^7.8.2",
     "react-simple-captcha": "^9.3.1",
     "rehype-raw": "^7.0.0",
     "remark-directive": "^4.0.0",
     "remark-gfm": "^4.0.1",
-    "tailwindcss": "^4.1.12"
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.33.0",
-    "@tailwindcss/typography": "^0.5.16",
-    "@types/react": "^19.1.10",
-    "@types/react-dom": "^19.1.7",
-    "@vitejs/plugin-react": "^5.0.0",
-    "eslint": "^9.33.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "globals": "^16.3.0",
-    "prettier": "^3.6.2",
-    "prettier-plugin-tailwindcss": "^0.7.1",
-    "vite": "^7.1.2"
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.10",
+    "tailwindcss": "^4"
   },
   "prettier": {
     "plugins": [

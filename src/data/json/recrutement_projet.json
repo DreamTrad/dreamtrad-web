@@ -1,0 +1,82 @@
+[
+    {
+        "id": "428",
+        "title": "Traduction de 428: Shibuya Scramble",
+        "image": "/poster/428.webp",
+        "roles": ["Traducteur EN → FR", "Graphiste"],
+        "contact": "AlexisTGF",
+        "description": "Le projet est actuellement porté par un seul traducteur, et nous recherchons d’autres traducteurs pour nous aider à avancer plus rapidement. La traduction est déjà bien avancée, mais il reste encore beaucoup de travail à faire. La traduction du japonais est possible mais complexe à cause de la structure des fichiers et du texte. Nous faisons tout de même au besoin des vérifications du japonais. Nous recherchons donc principalement des traducteurs de l’anglais vers le français.\n\nPour les images, aucune n’est encore traduite, il y a environ une cinquantaine d’images à faire."
+    },
+    {
+        "id": "ai2-8-nospleep",
+        "title": "Traduction de AI - No Sleep For Kaname Date",
+        "image": "/poster/ai2-8-nosleep.webp",
+        "roles": ["Traducteur EN → FR", "Traducteur JP → FR", "Graphiste"],
+        "contact": "Floflosera",
+        "description": "Le projet n’est pas entièrement mis en place niveau technique, mais les Google Sheet pour traduire sont prêts, donc vous pouvez déjà venir traduire. Nous avons pour le moment pas de membres ayant travaillé sur les traductions de AI et AINI de motivé pour ce projet en priorité. Donc, nous cherchons des nouveaux traducteurs. Il faudra évidemment rester dans la lignée des choix de traductions faits pour les patchs français de AI 1 et 2.\n\nPour les images, tout est à faire, mais avant il reste encore un tri et la création d’une table avant que le travail des graphistes commence véritablement."
+    },
+    {
+        "id": "never7",
+        "title": "Traduction de Infinity : Never 7",
+        "image": "/poster/never7.webp",
+        "roles": ["Traducteur JP → FR", "Graphiste"],
+        "contact": "Ritsu",
+        "description": "Le projet est déjà en cours. Mais nous sommes ouverts pour de l’aide à la traduction, uniquement depuis le japonais. Le projet avance déjà à un bon rythme, mais ça peut aller encore plus vite avec des traducteurs en plus. \n\nNiveau images, il n’y a pas beaucoup d’images à faire, mais nous comptons faire des patchs pour plusieurs versions du jeu, donc il y aura des images spécifiques à chaque version à faire. Mais pour l’instant, seulement les images de la version Steam sont prêtes à être modifiées."
+    },
+    {
+        "id": "ever17",
+        "title": "Traduction de Infinity : Ever 17 original et remake",
+        "image": "/poster/ever17.webp",
+        "roles": ["Traducteur JP → FR", "Aide hacking"],
+        "contact": "Ritsu, Floflosera",
+        "description": "Pour l’instant, le projet n’a pas encore commencé, mais tout est déjà mis en place pour entamer la traduction. Nous recherchons donc des traducteurs depuis le japonais pour commencer la traduction en parallèle de Never7. C’est actuellement la version Remake du scénario qui est prête, mais nous comptons aussi faire un patch pour la version originale du jeu.\n\nSi vous avez des compétences en hacking, nous sommes aussi preneurs d’aide pour avancer plus rapidement sur la partie technique du projet de la version originale, pour avoir un projet mis en place [comme nos autres projets](/articles/0002)."
+    },
+    {
+        "id": "remember11",
+        "title": "Traduction de Infinity : Remember 11",
+        "image": "/poster/remember11.webp",
+        "roles": ["Aide hacking"],
+        "contact": "Silous",
+        "description": "La traduction n’a pas encore commencé, mais pour préparer le terrain, il faudrait déjà mettre en place le projet pour que les traducteurs puissent commencer à traduire sans attendre. Un [outil existe déjà](https://github.com/arsym-dev/Remember11-Script-Editor), il a dû servir pour le patch anglais, mais c’est un outil à interface graphique, ce qui n’est pas idéal, et après quelques tests rapides, nous avions eu des soucis, probablement dû aux caractères français. Nous n’avons pas encore trop poussé les tests, mais nous sommes preneurs si quelqu’un veut se pencher sur la question pour préparer le projet."
+    },
+    {
+        "id": "paranormasight",
+        "title": "Patch Switch de PARANORMASIGHT",
+        "image": "/poster/paranormasight.webp",
+        "roles": ["Testeur patch Switch"],
+        "contact": "Silous",
+        "description": "L’outil utilisé pour créer le patch permet de créer un patch Switch. Mais nous n’avons pas de quoi tester ce patch. Si vous avez une Switch hackée et que vous souhaitez nous aider en testant le patch, n’hésitez pas à nous contacter ! Il faudra tester le patch en vérifiant certains éléments pour s’assurer que tous les fichiers sont pris en compte, et il faudrait aussi nous expliquer la démarche pour patcher un jeu sur Switch pour pouvoir faire un guide."
+    },
+    {
+        "id": "divine_deception",
+        "title": "Traduction de Shuffled Deck : Divine Deception",
+        "image": "/poster/divine_deception.webp",
+        "roles": ["Graphiste"],
+        "contact": "jls",
+        "description": "Il y a quelques images à traduire et aucune n’a pour le moment n’a été faites. Nous recherchons donc des personnes pouvant aider à l’édition des images. Il y a quelques textes lié au scénario et des éléments d’UI."
+    },
+    {
+        "id": "raging_loop",
+        "title": "Traduction de Raging Loop",
+        "image": "/poster/raging_loop.webp",
+        "roles": ["Traducteur JP → FR", "Traducteur EN → FR"],
+        "contact": "Silous",
+        "description": "Tous les textes sont extraits. L’outil pour réinsérer le texte n’est pas encore prêt, mais il n’y a pas de difficulté particulière. Donc, dans les prochaines semaines, les outils devraient être operationnels. Il n’y a pas encore de traducteurs sur le projet. C’est donc prêt si jamais des traducteurs sont intéressés !"
+    },
+    {
+        "id": "shuten_order",
+        "title": "Traduction de Shuten Order",
+        "image": "/poster/shuten_order.webp",
+        "roles": ["Traducteur JP → FR"],
+        "contact": "Floflosera",
+        "description": "Les textes son extraits, mais il y aura sûrement une réorganisation des fichiers à faire car tout le scénario principal est dans un seul fichier. Les outils pour la réinsertion ne sont pas encore prêts, mais ça ne devrait pas tarder. Nous recherchons des traducteurs depuis le japonais pour commencer la traduction."
+    },
+    {
+        "id": "setup_projet",
+        "title": "Mise en place de projet",
+        "image": "/poster/setup_projet.webp",
+        "roles": ["Hacking", "Programmation", "Migration projet existant"],
+        "contact": "Silous, Floflosera",
+        "description": "Le but est d’avoir pleins de projets prêts pour accueillir des traducteurs. Si vous avez des compétences en hacking ou en programmation, n’hésitez pas à nous contacter pour nous aider à mettre en place des projets de traduction pour des visual novels. Il n’y aura pas forcément de traducteurs voulant travailler sur ces projets dans l’immédiat, mais cela rendra accessible la traduction si des personnes s’intéressent à traduire ces jeux plus tard. Et de manière générale, si vous voulez nous aider sur le plan technique, nous sommes preneurs !\n\nDe même, si vous avez déjà un projet de traduction en cours dans votre coin, nous pouvons héberger le projet pour profiter de l’organisation de l’équipe, permettre de trouver d’autres traducteurs plus facilement, et avoir une plus grosse visibilité pour la bêta-test et la sortie du patch."
+    }
+]

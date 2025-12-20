@@ -1,0 +1,29 @@
+[
+  {
+    "id": "0001",
+    "slug": "bienvenue",
+    "title": "Bienvenue sur notre nouveau site internet",
+    "author": "Silous",
+    "date": "2025-10-14",
+    "tags": ["actu"],
+    "excerpt": "Le nouveau site est en ligne, et avec lui nos nouvelles ambitions."
+  },
+  {
+    "id": "0002",
+    "slug": "fonctionnement-projet",
+    "title": "Comment s’organise un projet",
+    "author": "Silous",
+    "date": "2025-10-15",
+    "tags": ["dossier"],
+    "excerpt": "Une explication détaillée de comment fonctionne un projet de traduction de A à Z."
+  },
+  {
+    "id": "0003",
+    "slug": "actu-projet-fin-2025",
+    "title": "Actus des projets fin 2025",
+    "author": "Silous, Ritsu",
+    "date": "2025-12-01",
+    "tags": ["actu"],
+    "excerpt": "Un point sur l’état des projets en fin 2025 au moment de la sortie du site."
+  }
+]

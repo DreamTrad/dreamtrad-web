@@ -51,7 +51,7 @@ Le contenu du spoiler
 :::
 ```
 
-Vous pouvez regarder comment sont faits des Markdown déjà présents sur le site : la [page d’installation Vita du patch de 999](https://github.com/DreamTrad/dreamtrad-web/blob/contenu/src/data/jeu/999/jeufr/installation/psvita.md) ou la [page de l’échappatoire de la cabine de 3ème classe de 999](https://github.com/DreamTrad/dreamtrad-web/blob/contenu/src/data/jeu/999/guide/echappatoires/cabine_de_3eme_classe.md)
+Vous pouvez regarder comment sont faits des Markdown déjà présents sur le site : la [page d’installation Vita du patch de 999](https://github.com/DreamTrad/dreamtrad-web/blob/contenu/src/data/jeux/999/jeufr/installation/psvita.md) ou la [page de l’échappatoire de la cabine de 3ème classe de 999](https://github.com/DreamTrad/dreamtrad-web/blob/contenu/src/data/jeux/999/guide/echappatoires/cabine_de_3eme_classe.md)
 
 Cliquez sur "preview" et "code" pour passer d’une vue à l’autre sur les exemples, et sur vos modifications en cours d’un fichier.
 
@@ -59,7 +59,7 @@ Cliquez sur "preview" et "code" pour passer d’une vue à l’autre sur les exe
 
 Ce sont des textes qui vont être inséré de manière structurée dans la page. Suivant les champs, du markdown peut être accepté.
 Il suffit de remplir tout ce qui est entre guillemet "" avec du texte. Et parfois mettre true ou false pour un argument.
-Ici vous aurez l’exemple de la [page des succès de 999](https://github.com/DreamTrad/dreamtrad-web/blob/contenu/src/data/jeu/999/guide/succes.js)
+Ici vous aurez l’exemple de la [page des succès de 999](https://github.com/DreamTrad/dreamtrad-web/blob/contenu/src/data/jeux/999/guide/succes.js)
 
 ### Ajouter des fichiers
 

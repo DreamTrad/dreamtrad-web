@@ -1,8 +1,4 @@
-import { Link } from "react-router-dom";
-import discordIcon from "../../assets/icons/website/discord.svg";
-import githubIcon from "../../assets/icons/website/github.svg";
-import xitterIcon from "../../assets/icons/website/xitter.svg";
-import blueskyIcon from "../../assets/icons/website/bluesky.svg";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -21,37 +17,43 @@ export default function Footer() {
           </h3>
           <ul className="grid grid-cols-2 gap-2 text-sm">
             <li>
-              <Link to="/" className="hover:text-accent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+              <Link href="/" className="hover:text-accent scroll-smooth">
                 Accueil
               </Link>
             </li>
             <li>
-              <Link to="/jeux" className="hover:text-accent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+              <Link href="/jeux" className="hover:text-accent scroll-smooth">
                 Visual Novel
               </Link>
             </li>
             <li>
-              <Link to="/recrutement" className="hover:text-accent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+              <Link
+                href="/recrutement"
+                className="hover:text-accent scroll-smooth"
+              >
                 Recrutement
               </Link>
             </li>
             <li>
-              <Link to="/vndb-fr" className="hover:text-accent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+              <Link href="/vndb-fr" className="hover:text-accent scroll-smooth">
                 VNDB-FR
               </Link>
             </li>
             <li>
-              <Link to="/articles" className="hover:text-accent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+              <Link
+                href="/articles"
+                className="hover:text-accent scroll-smooth"
+              >
                 Articles
               </Link>
             </li>
             <li>
-              <Link to="/equipe" className="hover:text-accent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+              <Link href="/equipe" className="hover:text-accent scroll-smooth">
                 Équipe
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-accent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+              <Link href="/contact" className="hover:text-accent scroll-smooth">
                 Contact
               </Link>
             </li>
@@ -66,7 +68,7 @@ export default function Footer() {
           <div className="flex gap-4">
             <a href="https://t.co/O6tlFvR8wa" target="_blank" rel="noreferrer">
               <img
-                src={discordIcon}
+                src="/icons/website/discord.svg"
                 alt="Discord"
                 className="h-6 w-6 hover:opacity-80"
               />
@@ -77,7 +79,7 @@ export default function Footer() {
               rel="noreferrer"
             >
               <img
-                src={githubIcon}
+                src="/icons/website/github.svg"
                 alt="GitHub"
                 className="h-6 w-6 hover:opacity-80"
               />
@@ -88,18 +90,18 @@ export default function Footer() {
               rel="noreferrer"
             >
               <img
-                src={xitterIcon}
+                src="/icons/website/xitter.svg"
                 alt="X/Twitter"
                 className="h-6 w-6 hover:opacity-80"
               />
             </a>
-             <a
+            <a
               href="https://bsky.app/profile/dreamtrad.bsky.social"
               target="_blank"
               rel="noreferrer"
             >
               <img
-                src={blueskyIcon}
+                src="/icons/website/bluesky.svg"
                 alt="Bluesky"
                 className="h-6 w-6 hover:opacity-80"
               />
@@ -112,7 +114,10 @@ export default function Footer() {
       <div className="border-bg-tertiary flex items-center justify-center gap-6 border-t py-4 text-xs">
         <span>{new Date().getFullYear()} DreamTrad</span>
 
-        <Link to="/mentions-legales" className="hover:text-accent transition" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        <Link
+          href="/mentions-legales"
+          className="hover:text-accent scroll-smooth"
+        >
           Mentions légales
         </Link>
       </div>

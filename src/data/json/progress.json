@@ -1,0 +1,46 @@
+[
+  {
+    "id": "silver_case_25th_ward",
+    "title": "The 25th Ward: The Silver Case",
+    "image": "/poster/silver_case_25th_ward.webp",
+    "progress": {
+      "traduction": "24",
+      "images": "0",
+      "technique": "30",
+      "relecture": "0"
+    }
+  },
+  {
+    "id": "428",
+    "title": "428: Shibuya Scramble",
+    "image": "/poster/428.webp",
+    "progress": {
+      "traduction": "51",
+      "images": "0",
+      "technique": "50",
+      "relecture": "0"
+    }
+  },
+  {
+    "id": "divine_deception",
+    "title": "The Divine Deception",
+    "image": "/poster/divine_deception.webp",
+    "progress": {
+      "traduction": "58",
+      "images": "0",
+      "technique": "100",
+      "relecture": "0"
+    }
+  },
+  {
+    "id": "never7",
+    "title": "Never 7",
+    "image": "/poster/never7.webp",
+    "progress": {
+      "traduction": "10",
+      "images": "0",
+      "technique": "50",
+      "relecture": "0"
+    }
+  }
+]

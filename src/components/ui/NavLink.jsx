@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export default function NavLink({
   to,
@@ -6,6 +6,7 @@ export default function NavLink({
   hoverType = "secondary",
   fullWidth = false,
   className = "",
+  onClick,
   ...props
 }) {
   const hoverClass = {
@@ -16,13 +17,14 @@ export default function NavLink({
 
   return (
     <Link
-      to={to}
-      {...props}
+      href={to}
+      onClick={onClick}
       className={`transition ${hoverClass} ${
         fullWidth
           ? "block w-full rounded-md px-4 py-2"
           : "inline-block rounded-md px-4 py-2"
       } ${className}`}
+      {...props}
     >
       {children}
     </Link>

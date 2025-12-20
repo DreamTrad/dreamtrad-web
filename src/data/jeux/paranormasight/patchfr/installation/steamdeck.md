@@ -1,0 +1,16 @@
+# Instructions patch automatique Steamdeck et Linux
+
+Une fois que vous avez téléchargé le patch, il faudra d’abord l’extraire car c’est un dossier compressé zip.
+
+- Allez en mode bureau et télécharger le patch. (Steamdeck)
+- Clic droit sur l’exe, faire ajouter à Steam.
+- Retournez en mode jeu, sur le "jeu" "PARANORMASIGHT_patch_automatique", allez dans les propriétés, et cocher la case pour compatibilité.
+- Vous pouvez désormais lancer le patcheur automatique
+- Sélectionnez le répertoire du jeu avec le bouton "Rechercher" s’il n’apparait pas automatiquement.
+- Cliquez sur "Patcher".
+- Attendez un petit moment…
+- … Et c’est bon !
+
+Si vous avez des problèmes, tentez de patcher manuellement.
+
+![Image logiciel pour patcher automatiquement](/jeux/paranormasight/patchfr/installation/logiciel_patch_auto.webp)

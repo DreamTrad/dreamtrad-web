@@ -48,7 +48,7 @@ if not rows:
 print(f"Fetched {len(rows)} rows from worksheet")
 
 print("Loading local JSON data")
-with open("./public/data/progress.json", "r", encoding="utf-8") as f:
+with open("./src/data/json/progress.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 print(f"Loaded {len(data)} entries from progress.json")
 
@@ -65,7 +65,7 @@ for row in rows:
     print(f"Updated values: {data[idx]['progress']}")
 
 print("Writing updated JSON to file")
-with open("./public/data/progress.json", "w", encoding="utf-8") as f:
+with open("./src/data/json/progress.json", "w", encoding="utf-8") as f:
     json.dump(data, f, indent=2, ensure_ascii=False)
 
 print("=== Script finished successfully ===")
