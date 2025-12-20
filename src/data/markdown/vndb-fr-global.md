@@ -1,4 +1,4 @@
-[VNDB](https://vndb.org/) est un site servant de base de données pour les Visual Novel. Ce que nous cherchons à faire ici est de proposer une version allégée avec uniquement des Visual Novel disponible en français. Le but est de faire découvrir des Visual Novel à ceux qui ne pas très familier avec le genre et pour qui le français est nécessaire pour apprécier l’histoire.
+[VNDB](https://vndb.org/) est un site servant de base de données pour les Visual Novel. Ce que nous cherchons à faire ici est de proposer une version allégée avec uniquement des Visual Novel disponibles en français. Le but est de faire découvrir des Visual Novel à ceux qui ne pas très familier avec le genre et pour qui le français est nécessaire pour apprécier l’histoire.
 
 La liste sera mise à jour au fil du temps pour proposer de plus en plus de Visual Novel à découvrir. Si vous souhaitez rédiger la fiche pour un Visual Novel non-présent dans la liste, n’hésitez pas à [le faire](https://github.com/DreamTrad/dreamtrad-web/issues/new?template=new_vn_fr.yml) !
 

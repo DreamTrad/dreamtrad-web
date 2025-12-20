@@ -9,7 +9,7 @@ body:
     id: vn
     attributes:
       label: Visual Novel
-      description: Le visual novel concerné par ce contenu
+      description: Le Visual Novel concerné par ce contenu
       options:
         - "The 25th Ward: The Silver Case"
         - "428: Shibuya Scramble"
@@ -50,7 +50,7 @@ body:
         :::spoiler[le code secret]
         6719
         :::
-        
+
         C’est le format utilisé par le site web pour cacher les spoilers.
 
   - type: textarea

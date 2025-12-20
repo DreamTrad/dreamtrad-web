@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
     description: `Découvrez l’équipe ayant travaillé sur la traduction française de ${game.name}.`,
     openGraph: {
       title: `Équipe patchfr – ${game.name}`,
-      description: `Équipe de traduction française du visual novel ${game.name}.`,
+      description: `Équipe de traduction française du Visual Novel ${game.name}.`,
       url: `/jeux/${id}/patchfr/equipe`,
       images: [
         {

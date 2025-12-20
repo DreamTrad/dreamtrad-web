@@ -22,7 +22,7 @@ Si vous nous contactez via [le formulaire contact](/contact), les informations q
 
 ## Limitation de responsabilité
 DreamTrad s’efforce de fournir des informations fiables, mais ne garantit pas que le site soit exempt d’erreurs ni que le contenu soit toujours à jour.
-Nous ne pouvons pas être tenus pour responsable des dommages directs ou indirects résultant de l’accès, de l’utilisation ou de l’impossibilité d’utiliser le site.
+Nous ne pouvons pas être tenus pour responsables des dommages directs ou indirects résultant de l’accès, de l’utilisation ou de l’impossibilité d’utiliser le site.
 
 ## Liens externes
 Les liens vers d’autres sites sont fournis à titre informatif. DreamTrad ne peut pas garantir le contenu des sites tiers.

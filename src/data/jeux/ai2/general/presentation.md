@@ -1,6 +1,6 @@
 # AI : The Somnium Files – nirvanA Initiative
 
-AI : The Somnium Files – nirvanA Initiative est un jeu vidéo de type visual novel avec phases d’action développé et édité par Spike Chunsoft. Initialement sorti le 23 juin 2022 sur PC (Steam) et le 8 juillet 2022 sur Nintendo Switch, PS4 et Xbox One. Ce jeu est une continuation du premier [AI : The Somnium Files](/jeux/ai1/general/Presentation), même s’il n’est pas obligatoire de jouer au premier jeu.
+AI : The Somnium Files – nirvanA Initiative est un jeu vidéo de type Visual Novel avec phases d’action développé et édité par Spike Chunsoft. Initialement sorti le 23 juin 2022 sur PC (Steam) et le 8 juillet 2022 sur Nintendo Switch, PS4 et Xbox One. Ce jeu est une continuation du premier [AI : The Somnium Files](/jeux/ai1/general/Presentation), même s’il n’est pas obligatoire de jouer au premier jeu.
 
 ## Scénario
 

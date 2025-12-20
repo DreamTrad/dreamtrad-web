@@ -48,7 +48,7 @@ Combinez le compas et le rapporteur pour écarter le compas au bon angle, puis u
 
 Il faut mettre sur ON le premier levier, et le troisième (celui qui est clair).
 
-Le troisième levier tombera et vous pourrez le récupérer. Il est à mettre sur la zone avec pleins de tuyaux sur le mur à droite du poster avec les ON/OFF. Cela vous permettra de résoudre l’énigme liée à cela.
+Le troisième levier tombera et vous pourrez le récupérer. Il est à mettre sur la zone avec plein de tuyaux sur le mur à droite du poster avec les ON/OFF. Cela vous permettra de résoudre l’énigme liée à cela.
 
 Il faut atteindre les bonnes valeurs en bas. Pour cela un flux descend des tuyaux d’en haut. Quand un levier est orienté à droite, tout le contenu au-dessus va à droite. Pour un levier à gauche, tout va à gauche. Et si le levier est vers le bas, alors le flux est divisé en deux entre à droite et à gauche.
 

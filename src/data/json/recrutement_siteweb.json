@@ -5,7 +5,7 @@
         "image": "/poster/vndbfr.webp",
         "roles": ["Rédacteur entrée pour la page \"VNDB-FR\""],
         "contact": "Silous",
-        "description": "Plusieurs VN disponibles en français sont déjà listés sur la page, mais si on fait une [recherche vndb](https://vndb.org/v?q=&ch=&f=2gfr&s=26w), il y a plus d’un millier de VN disponible en français. Libre à vous de proposer le VN que vous voulez. Et si vous estimez qu’une fiche actuelle n’est pas complète, ou que le résumé ne fait pas honneur à l’œuvre, n’hésitez pas à proposer une modification. Vous pouvez directement rédiger une entrée grâce au formulaire dédié des [issue](https://github.com/DreamTrad/dreamtrad-web/issues/new?template=new_vn_fr.yml) sur GitHub."
+        "description": "Plusieurs VN disponibles en français sont déjà listés sur la page, mais si on fait une [recherche vndb](https://vndb.org/v?q=&ch=&f=2gfr&s=26w), il y a plus d’un millier de VN disponibles en français. Libre à vous de proposer le VN que vous voulez. Et si vous estimez qu’une fiche actuelle n’est pas complète, ou que le résumé ne fait pas honneur à l’œuvre, n’hésitez pas à proposer une modification. Vous pouvez directement rédiger une entrée grâce au formulaire dédié des [issue](https://github.com/DreamTrad/dreamtrad-web/issues/new?template=new_vn_fr.yml) sur GitHub."
     },
     {
         "id": "article",

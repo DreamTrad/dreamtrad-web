@@ -9,10 +9,10 @@ export const dynamic = "force-static";
 
 export const metadata = {
   title: "Recrutement",
-  description: "Nous recrutons pour plusieurs projets de traductions. N’hésitez pas à vous manifester. Nous avons aussi besoin d’aide pour améliorer le contenu du site.",
+  description: "Nous recrutons pour plusieurs projets de traduction. N’hésitez pas à vous manifester. Nous avons aussi besoin d’aide pour améliorer le contenu du site.",
   openGraph: {
     title: "Recrutement",
-    description: "Nous recrutons pour plusieurs projets de traductions. N’hésitez pas à vous manifester. Nous avons aussi besoin d’aide pour améliorer le contenu du site.",
+    description: "Nous recrutons pour plusieurs projets de traduction. N’hésitez pas à vous manifester. Nous avons aussi besoin d’aide pour améliorer le contenu du site.",
     url: "/recrutement",
     images: [
       {
