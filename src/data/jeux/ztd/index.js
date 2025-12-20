@@ -1,7 +1,6 @@
 import { succes } from "./guide/succes";
 import { team } from "./patchfr/team";
 
-
 export const game = {
   id: "ztd",
   name: "Zero Escape - Zero Time Dilemma",
@@ -9,7 +8,21 @@ export const game = {
     general: {
       name: "Le Jeu",
       sections: [
-        { id: "presentation", name: "Présentation", file: "general/presentation" },
+        {
+          id: "presentation",
+          name: "Présentation",
+          file: "general/presentation",
+          embeds: [
+            {
+              type: "youtube",
+              id: "woAgPkS5IIc",
+            },
+            {
+              type: "steam",
+              id: "311240",
+            },
+          ],
+        },
         { id: "staff", name: "Staff", staff: ["kotaro-uchikoshi"] },
       ],
     },
@@ -38,7 +51,7 @@ export const game = {
         //     { id: "bureau", name: "Bureau", file: "guide/echappatoires/bureau" },
         //   ],
         // },
-        { id: "succes", name: "Succès",  data: succes },
+        { id: "succes", name: "Succès", data: succes },
       ],
     },
     patchfr: {
@@ -49,16 +62,32 @@ export const game = {
           name: "Télechargement",
           file: "patchfr/informations",
           platforms: [
-            { id: "pc", name: "PC (Windows, Steamdeck, Linux)", link: "https://drive.google.com/uc?export=download&id=1k0mvR579KW3rlSDoMZt8UjHsTGXqiVq1" },
+            {
+              id: "pc",
+              name: "PC (Windows, Steamdeck, Linux)",
+              link: "https://drive.google.com/uc?export=download&id=1k0mvR579KW3rlSDoMZt8UjHsTGXqiVq1",
+            },
           ],
         },
         {
           id: "installation",
           name: "Installation",
           platforms: [
-            { id: "windows", name: "Windows", file: "patchfr/installation/windows" },
-            { id: "steamdeck", name: "Steam Deck/Linux", file: "patchfr/installation/steamdeck" },
-            { id: "manuellement", name: "Manuellement", file: "patchfr/installation/manuellement" },
+            {
+              id: "windows",
+              name: "Windows",
+              file: "patchfr/installation/windows",
+            },
+            {
+              id: "steamdeck",
+              name: "Steam Deck/Linux",
+              file: "patchfr/installation/steamdeck",
+            },
+            {
+              id: "manuellement",
+              name: "Manuellement",
+              file: "patchfr/installation/manuellement",
+            },
           ],
         },
         { id: "equipe", name: "Équipe", data: team },

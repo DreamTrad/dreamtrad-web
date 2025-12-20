@@ -9,8 +9,6 @@ L’élection à venir a vu apparaître un adversaire inattendu face au gouverne
 Un grand mensonge est raconté à tous, et si la vérité n’est pas révélée bientôt, Panthea finira en flammes.
 Envie de connaître la vérité ? Lisez The Divine Deception et découvrez-la.
 
-<iframe src="https://www.youtube.com/embed/AQwJuKajjsk"></iframe>
+### Achat du jeu
 
 Si vous comptez acheter The Divine Deception, nous vous conseillons de le prendre en bundle avec The Zodiac Trial. En effet, pour 1 centime de moins, vous pouvez obtenir les 2 jeux au lieu d’un seul. C’est donc moins cher d’acheter les 2 jeux qu’un seul jeu.
-
-<iframe src="https://store.steampowered.com/widget/1820720/"></iframe>

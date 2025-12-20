@@ -1,7 +1,6 @@
 import { succes } from "./guide/succes";
 import { team } from "./patchfr/team";
 
-
 export const game = {
   id: "428",
   name: "428: Shibuya Scramble",
@@ -9,7 +8,21 @@ export const game = {
     general: {
       name: "Le Jeu",
       sections: [
-        { id: "presentation", name: "Présentation", file: "general/presentation" },
+        {
+          id: "presentation",
+          name: "Présentation",
+          file: "general/presentation",
+          embeds: [
+            {
+              type: "youtube",
+              id: "6JclkoLuczI",
+            },
+            {
+              type: "steam",
+              id: "648580",
+            },
+          ],
+        },
         { id: "staff", name: "Staff", staff: ["jiro-ishii"] },
       ],
     },
@@ -29,8 +42,7 @@ export const game = {
           id: "telechargement",
           name: "Informations patch",
           file: "patchfr/informations",
-          platforms: [
-          ],
+          platforms: [],
         },
         // {
         //   id: "installation",

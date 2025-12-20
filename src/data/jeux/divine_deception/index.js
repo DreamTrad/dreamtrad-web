@@ -1,6 +1,5 @@
 import { team } from "./patchfr/team";
 
-
 export const game = {
   id: "divine_deception",
   name: "Shuffled deck - The Divine Deception",
@@ -8,7 +7,21 @@ export const game = {
     general: {
       name: "Le Jeu",
       sections: [
-        { id: "presentation", name: "Présentation", file: "general/presentation" },
+        {
+          id: "presentation",
+          name: "Présentation",
+          file: "general/presentation",
+          embeds: [
+            {
+              type: "youtube",
+              id: "AQwJuKajjsk",
+            },
+            {
+              type: "steam",
+              id: "1820720",
+            },
+          ],
+        },
         // { id: "staff", name: "Staff", staff: [] },
       ],
     },
@@ -28,8 +41,7 @@ export const game = {
           id: "telechargement",
           name: "Informations patch",
           file: "patchfr/informations",
-          platforms: [
-          ],
+          platforms: [],
         },
         { id: "equipe", name: "Équipe", data: team },
       ],

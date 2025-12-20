@@ -7,7 +7,3 @@ AI : The Somnium Files – nirvanA Initiative est un jeu vidéo de type Visual N
 Il y a six ans, on avait retrouvé la moitié droite d’un cadavre. L’autre moitié était introuvable… jusqu’à ce qu’elle réapparaisse six ans plus tard, parfaitement intacte, sans aucune trace de décomposition.
 
 Aujourd’hui, les agents spéciaux Mizuki et Ryuki, accompagnés de leurs partenaires IA Aiba et Tama, doivent résoudre l’énigme des meurtres en série dits du « Diviseur », tout en levant le voile sur un complot mystérieux connu sous le nom de Nirvana Initiative…
-
-<iframe src="https://www.youtube.com/embed/Zf0-IF2-sZg"></iframe>
-
-<iframe src="https://store.steampowered.com/widget/1449200/"></iframe>

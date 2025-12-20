@@ -2,7 +2,6 @@ import { characters } from "./general/characters";
 import { succes } from "./guide/succes";
 import { team } from "./patchfr/team";
 
-
 export const game = {
   id: "999",
   name: "Zero Escape - 9 Hours, 9 Persons, 9 Doors",
@@ -10,8 +9,26 @@ export const game = {
     general: {
       name: "Le Jeu",
       sections: [
-        { id: "presentation", name: "Présentation", file: "general/presentation" },
-        { id: "staff", name: "Staff", staff: ["kotaro-uchikoshi", "jiro-ishii"] },
+        {
+          id: "presentation",
+          name: "Présentation",
+          file: "general/presentation",
+          embeds: [
+            {
+              type: "youtube",
+              id: "tmatwxj-jFg",
+            },
+            {
+              type: "steam",
+              id: "477740",
+            },
+          ],
+        },
+        {
+          id: "staff",
+          name: "Staff",
+          staff: ["kotaro-uchikoshi", "jiro-ishii"],
+        },
         // { id: "characters", name: "Personnages", data: characters },
       ],
     },
@@ -24,22 +41,82 @@ export const game = {
           id: "echappatoires",
           name: "Échappatoires",
           children: [
-            { id: "cabine_de_3eme_classe", name: "Cabine de 3ème classe", file: "guide/echappatoires/cabine_de_3eme_classe" },
-            { id: "cabines_de_2eme_classe", name: "Cabines de 2ème classe", file: "guide/echappatoires/cabines_de_2eme_classe" },
-            { id: "cuisine", name: "Cuisine", file: "guide/echappatoires/cuisine" },
-            { id: "bloc_operatoire", name: "Bloc opératoire", file: "guide/echappatoires/bloc_operatoire" },
-            { id: "salle_des_cartes_maritimes", name: "Salle des cartes maritimes", file: "guide/echappatoires/salle_des_cartes_maritimes" },
-            { id: "quartiers_du_capitaine", name: "Quartiers du capitaine", file: "guide/echappatoires/quartiers_du_capitaine" },
-            { id: "bibliotheque", name: "Bibliothèque", file: "guide/echappatoires/bibliotheque" },
-            { id: "bureau", name: "Bureau", file: "guide/echappatoires/bureau" },
-            { id: "cabine_de_1ere_classe", name: "Cabine de 1ère classe", file: "guide/echappatoires/cabine_de_1ere_classe" },
-            { id: "bar_casino", name: "Bar-casino", file: "guide/echappatoires/bar_casino" },
-            { id: "laboratoire", name: "Laboratoire", file: "guide/echappatoires/laboratoire" },
-            { id: "salle_des_moteurs_a_vapeurs", name: "Salle des moteurs à vapeur", file: "guide/echappatoires/salle_des_moteurs_a_vapeurs" },
+            {
+              id: "cabine_de_3eme_classe",
+              name: "Cabine de 3ème classe",
+              file: "guide/echappatoires/cabine_de_3eme_classe",
+            },
+            {
+              id: "cabines_de_2eme_classe",
+              name: "Cabines de 2ème classe",
+              file: "guide/echappatoires/cabines_de_2eme_classe",
+            },
+            {
+              id: "cuisine",
+              name: "Cuisine",
+              file: "guide/echappatoires/cuisine",
+            },
+            {
+              id: "bloc_operatoire",
+              name: "Bloc opératoire",
+              file: "guide/echappatoires/bloc_operatoire",
+            },
+            {
+              id: "salle_des_cartes_maritimes",
+              name: "Salle des cartes maritimes",
+              file: "guide/echappatoires/salle_des_cartes_maritimes",
+            },
+            {
+              id: "quartiers_du_capitaine",
+              name: "Quartiers du capitaine",
+              file: "guide/echappatoires/quartiers_du_capitaine",
+            },
+            {
+              id: "bibliotheque",
+              name: "Bibliothèque",
+              file: "guide/echappatoires/bibliotheque",
+            },
+            {
+              id: "bureau",
+              name: "Bureau",
+              file: "guide/echappatoires/bureau",
+            },
+            {
+              id: "cabine_de_1ere_classe",
+              name: "Cabine de 1ère classe",
+              file: "guide/echappatoires/cabine_de_1ere_classe",
+            },
+            {
+              id: "bar_casino",
+              name: "Bar-casino",
+              file: "guide/echappatoires/bar_casino",
+            },
+            {
+              id: "laboratoire",
+              name: "Laboratoire",
+              file: "guide/echappatoires/laboratoire",
+            },
+            {
+              id: "salle_des_moteurs_a_vapeurs",
+              name: "Salle des moteurs à vapeur",
+              file: "guide/echappatoires/salle_des_moteurs_a_vapeurs",
+            },
             { id: "cale", name: "Cale", file: "guide/echappatoires/cale" },
-            { id: "salle_des_douches", name: "Salle des douches", file: "guide/echappatoires/salle_des_douches" },
-            { id: "salle_d_isolement", name: "Salle d’isolement", file: "guide/echappatoires/salle_d_isolement" },
-            { id: "salle_de_torture", name: "Salle de torture", file: "guide/echappatoires/salle_de_torture" },
+            {
+              id: "salle_des_douches",
+              name: "Salle des douches",
+              file: "guide/echappatoires/salle_des_douches",
+            },
+            {
+              id: "salle_d_isolement",
+              name: "Salle d’isolement",
+              file: "guide/echappatoires/salle_d_isolement",
+            },
+            {
+              id: "salle_de_torture",
+              name: "Salle de torture",
+              file: "guide/echappatoires/salle_de_torture",
+            },
           ],
         },
         // { id: "enigme_final", name: "Énigme finale", file: "guide/enigme_finale" },
@@ -55,18 +132,42 @@ export const game = {
           name: "Télechargement",
           file: "patchfr/informations",
           platforms: [
-            { id: "pc", name: "PC (Windows, Steamdeck, Linux)", link: "https://drive.google.com/uc?export=download&id=1YSLUKmKwh3TW-8RVaQoWYuWyUaswOooC" },
-            { id: "psvita", name: "PS Vita", link: "https://drive.google.com/uc?export=download&id=1HG9cuYO6NNgeNHoFeYnS4vjPWq_oxdOR" },
+            {
+              id: "pc",
+              name: "PC (Windows, Steamdeck, Linux)",
+              link: "https://drive.google.com/uc?export=download&id=1YSLUKmKwh3TW-8RVaQoWYuWyUaswOooC",
+            },
+            {
+              id: "psvita",
+              name: "PS Vita",
+              link: "https://drive.google.com/uc?export=download&id=1HG9cuYO6NNgeNHoFeYnS4vjPWq_oxdOR",
+            },
           ],
         },
         {
           id: "installation",
           name: "Installation",
           platforms: [
-            { id: "windows", name: "Windows", file: "patchfr/installation/windows" },
-            { id: "steamdeck", name: "Steam Deck/Linux", file: "patchfr/installation/steamdeck" },
-            { id: "manuellement", name: "Manuellement PC", file: "patchfr/installation/manuellement" },
-            { id: "psvita", name: "PS Vita", file: "patchfr/installation/psvita" },
+            {
+              id: "windows",
+              name: "Windows",
+              file: "patchfr/installation/windows",
+            },
+            {
+              id: "steamdeck",
+              name: "Steam Deck/Linux",
+              file: "patchfr/installation/steamdeck",
+            },
+            {
+              id: "manuellement",
+              name: "Manuellement PC",
+              file: "patchfr/installation/manuellement",
+            },
+            {
+              id: "psvita",
+              name: "PS Vita",
+              file: "patchfr/installation/psvita",
+            },
           ],
         },
         { id: "equipe", name: "Équipe", data: team },

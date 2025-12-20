@@ -9,8 +9,3 @@ Vous rejouerez plusieurs « boucles », déclenchant des événements spéciaux 
 Les Gnosia mentent. Ils se font passer pour des humains, s’approchent, trompent et éliminent leurs victimes, une par une…
 
 L’équipage d’un vaisseau spatial à la dérive doit faire face à cette menace mystérieuse et mortelle, sans savoir qui est réellement l’ennemi. Pour survivre, ils élaborent un plan désespéré : mettre les membres les plus suspects en « sommeil profond » un par un, dans l’espoir d’éradiquer les Gnosia.
-
-
-<iframe src="https://www.youtube.com/embed/UC0VZV5IAGo"></iframe>
-
-<iframe src="https://store.steampowered.com/widget/1608290/"></iframe>

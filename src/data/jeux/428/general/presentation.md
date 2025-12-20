@@ -6,7 +6,3 @@
 
 Dans le quartier de Shibuya, durant la journée du 28 avril, plusieurs histoires s'entremêlent. Entre un kidnapping, les difficultés d'un journal, un virus mortel, un produit amincissant et un gang de voyous, le quartier et son croisement emblématique sont la scène d'un scénario haletant. 
 Vont-ils réussir à s'échapper de cette journée infernale ? Par vos choix, leur sort, ainsi que celui de la ville, changera. Pour le pire ou pour le meilleur.
-
-<iframe src="https://www.youtube.com/embed/6JclkoLuczI"></iframe>
-
-<iframe src="https://store.steampowered.com/widget/648580/"></iframe>

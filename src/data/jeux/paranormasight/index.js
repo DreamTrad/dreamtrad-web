@@ -1,7 +1,6 @@
 import { succes } from "./guide/succes";
 import { team } from "./patchfr/team";
 
-
 export const game = {
   id: "paranormasight",
   name: "PARANORMASIGHT",
@@ -9,7 +8,21 @@ export const game = {
     general: {
       name: "Le Jeu",
       sections: [
-        { id: "presentation", name: "Présentation", file: "general/presentation" },
+        {
+          id: "presentation",
+          name: "Présentation",
+          file: "general/presentation",
+          embeds: [
+            {
+              type: "youtube",
+              id: "uxJ_r5e8TZw",
+            },
+            {
+              type: "steam",
+              id: "2106840",
+            },
+          ],
+        },
         // { id: "staff", name: "Staff", staff: [] },
       ],
     },
@@ -31,16 +44,32 @@ export const game = {
           name: "Télechargement",
           file: "patchfr/informations",
           platforms: [
-            { id: "PC", name: "PC (Windows, Steamdeck, Linux)", link: "https://drive.google.com/uc?export=download&id=1XY9L5J-gIwjrUgWX1hXn-y0sTBLo1xa3" },
+            {
+              id: "PC",
+              name: "PC (Windows, Steamdeck, Linux)",
+              link: "https://drive.google.com/uc?export=download&id=1XY9L5J-gIwjrUgWX1hXn-y0sTBLo1xa3",
+            },
           ],
         },
         {
           id: "installation",
           name: "Installation",
           platforms: [
-            { id: "windows", name: "Windows", file: "patchfr/installation/windows" },
-            { id: "steamdeck", name: "Steam Deck/Linux", file: "patchfr/installation/steamdeck" },
-            { id: "manuellement", name: "Manuellement", file: "patchfr/installation/manuellement" },
+            {
+              id: "windows",
+              name: "Windows",
+              file: "patchfr/installation/windows",
+            },
+            {
+              id: "steamdeck",
+              name: "Steam Deck/Linux",
+              file: "patchfr/installation/steamdeck",
+            },
+            {
+              id: "manuellement",
+              name: "Manuellement",
+              file: "patchfr/installation/manuellement",
+            },
           ],
         },
         { id: "equipe", name: "Équipe", data: team },

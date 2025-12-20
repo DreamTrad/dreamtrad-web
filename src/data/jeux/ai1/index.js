@@ -1,7 +1,6 @@
 import { succes } from "./guide/succes";
 import { team } from "./patchfr/team";
 
-
 export const game = {
   id: "ai1",
   name: "AI: The Somnium Files",
@@ -9,7 +8,21 @@ export const game = {
     general: {
       name: "Le Jeu",
       sections: [
-        { id: "presentation", name: "Présentation", file: "general/presentation" },
+        {
+          id: "presentation",
+          name: "Présentation",
+          file: "general/presentation",
+          embeds: [
+            {
+              type: "youtube",
+              id: "1H4f1eBeStU",
+            },
+            {
+              type: "steam",
+              id: "948740",
+            },
+          ],
+        },
         { id: "staff", name: "Staff", staff: ["kotaro-uchikoshi"] },
       ],
     },
@@ -30,8 +43,16 @@ export const game = {
           name: "Télechargement",
           file: "patchfr/informations",
           platforms: [
-            { id: "pc", name: "PC (Windows, Steamdeck, Linux)", link: "https://drive.google.com/uc?export=download&id=1Jxjkpq6t6br8nbO64Bgu-kwlTNWBikkv" },
-            { id: "xbox", name: "Xbox, Gamepass, Microsoft Store", link: "https://drive.google.com/uc?export=download&id=1lVQCuaAdzCWa2wesm0k4TiTjXhA3_Ql_" },
+            {
+              id: "pc",
+              name: "PC (Windows, Steamdeck, Linux)",
+              link: "https://drive.google.com/uc?export=download&id=1Jxjkpq6t6br8nbO64Bgu-kwlTNWBikkv",
+            },
+            {
+              id: "xbox",
+              name: "Xbox, Gamepass, Microsoft Store",
+              link: "https://drive.google.com/uc?export=download&id=1lVQCuaAdzCWa2wesm0k4TiTjXhA3_Ql_",
+            },
           ],
         },
         {
@@ -40,7 +61,11 @@ export const game = {
           platforms: [
             // { id: "windows", name: "Windows", file: "patchfr/installation/windows" },
             // { id: "steamdeck", name: "Steam Deck/Linux", file: "patchfr/installation/steamdeck" },
-            { id: "manuellement", name: "Manuellement PC", file: "patchfr/installation/manuellement" },
+            {
+              id: "manuellement",
+              name: "Manuellement PC",
+              file: "patchfr/installation/manuellement",
+            },
             // { id: "xbox", name: "Xbox", file: "patchfr/installation/xbox" },
           ],
         },

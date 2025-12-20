@@ -1,6 +1,5 @@
 import { team } from "./patchfr/team";
 
-
 export const game = {
   id: "never7",
   name: "Infinity - Never 7 : The End of Infinity",
@@ -8,8 +7,26 @@ export const game = {
     general: {
       name: "Le Jeu",
       sections: [
-        { id: "presentation", name: "Présentation", file: "general/presentation" },
-        { id: "staff", name: "Staff", staff: ["kotaro-uchikoshi", "takumi-nakazawa"] },
+        {
+          id: "presentation",
+          name: "Présentation",
+          file: "general/presentation",
+          embeds: [
+            {
+              type: "youtube",
+              id: "_L1m7YtGYdY",
+            },
+            {
+              type: "steam",
+              id: "2184620",
+            },
+          ],
+        },
+        {
+          id: "staff",
+          name: "Staff",
+          staff: ["kotaro-uchikoshi", "takumi-nakazawa"],
+        },
       ],
     },
 
@@ -28,8 +45,7 @@ export const game = {
           id: "telechargement",
           name: "Informations patch",
           file: "patchfr/informations",
-          platforms: [
-          ],
+          platforms: [],
         },
         { id: "equipe", name: "Équipe", data: team },
       ],

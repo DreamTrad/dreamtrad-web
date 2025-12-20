@@ -11,7 +11,3 @@ Ce jeu est assez particulier. En effet, il a failli être annulé par manque de 
 L’expérience n’était pas censée se dérouler ainsi.
 
 Neuf participants se réveillent dans une installation souterraine, piégés avec un étrange bracelet noir au poignet. Pour s’échapper, ils doivent prendre part à un jeu aux conséquences mortelles. Les règles sont simples : une fois six personnes tuées, la trappe de sortie s’ouvrira. Qui survivra, et qui périra ? Le choix vous appartient. Un Jeu de Décision commence…
-
-<iframe src="https://www.youtube.com/embed/woAgPkS5IIc"></iframe>
-
-<iframe src="https://store.steampowered.com/widget/311240/"></iframe>

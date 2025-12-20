@@ -9,7 +9,3 @@ Never7 est le premier Visual Novel de la série Infinity. Cette série a été r
 Vous incarnez Makoto, un étudiant qui ne participe jamais aux cours à l’école. En guise de punition, vous devez assister à un séminaire supplémentaire sur une île avec d’autres camarades. Cependant, dès votre arrivée, d’étranges événements commencent à se produire.
 Une fille est retrouvée morte le 6 avril, une petite clochette à la main. Immédiatement après, vous vous réveillez dans votre lit et voyez la date : le 1er avril !
 Était-ce simplement un rêve, ou possédez-vous le pouvoir de prédire les événements ? C’est ce que vous devrez découvrir, alors qu’une série de morts mystérieuses rend votre séminaire bien plus angoissant que vous ne l’imaginiez.
-
-<iframe src="https://www.youtube.com/embed/_L1m7YtGYdY"></iframe>
-
-<iframe src="https://store.steampowered.com/widget/2184620/"></iframe>

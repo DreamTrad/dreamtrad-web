@@ -10,9 +10,6 @@ Vous incarnez Souris, une étudiante en droit complètement dépassée par les �
 
 L’histoire regorge d’énigmes et de casse-têtes, allant de simples devinettes griffonnées sur une feuille à des affaires de meurtre complexes qui réclament toute votre logique. Mais attention : vos choix orienteront le déroulement de l’histoire. Treize routes différentes vous attendent, avec plus de cinquante fins possibles. Selon vos décisions, vous débloquerez une carte de mort unique, et peut-être, si vous parvenez à tout comprendre, réussirez-vous l’impossible : sauver tout le monde. Mais même alors, qui peut dire quand prendra fin le chaos ?
 
-
-<iframe src="https://www.youtube.com/embed/8EgEAGqiJ70"></iframe>
+### Achat du jeu
 
 Si vous comptez acheter The Zodiac Trial, nous vous conseillons de le prendre en bundle avec The Divine Deception. En effet, pour 1 centime de moins, vous pouvez obtenir les 2 jeux au lieu d’un seul. C’est donc moins cher d’acheter les 2 jeux qu’un seul jeu.
-
-<iframe src="https://store.steampowered.com/widget/1513120/"></iframe>
