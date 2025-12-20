@@ -12,15 +12,7 @@ Ouvrez un invité de commande dans le dossier racine du projet, puis tapez :
 
 Cette commande est nécessaire que la première fois, ou quand des modules ont été ajoutés. Puis faites cette commande :
 
-    npm run dev
-
-Une fois la commande de npm run dev faite, vous pouvez aller sur le lien localhost qu’on vous propose dans l’invité de commande.
-
-Si vous voulez tester sur d’autres appareils de votre réseau, comme votre téléphone par exemple, faites :
-
-    npm run dev -- --host
-
-Et tapez une des adresses qui n’est pas le localhost pour accéder au site depuis n’importe quel appareil de votre réseau.
+    npx next dev -p 3001
 
 # Participer à la rédaction du contenu
 
