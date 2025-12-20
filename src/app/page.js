@@ -45,7 +45,8 @@ export default async function HomePage() {
             />
           </InfoBox>
 
-          <h2 className="text-center text-lg font-semibold">
+            <AvailablePatches />
+          <h2 className="text-center text-lg font-semibold mt-6">
             Avancement des projets
           </h2>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,450px))] justify-center gap-6">
@@ -64,7 +65,6 @@ export default async function HomePage() {
             Mis à jour tous les lundis matin !
           </p>
 
-          <AvailablePatches />
         </div>
 
         {/* Sidebar */}
