@@ -21,7 +21,7 @@ export const metadata = {
     url: "/equipe",
     images: [
       {
-        url: "/dreamtrad-logo-title.svg",
+        url: "/dreamtrad-logo-title.webp",
         width: 1200,
         height: 630,
         alt: "DreamTrad",
