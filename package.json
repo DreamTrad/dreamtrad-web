@@ -28,6 +28,7 @@
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.15.3",
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "16.0.10",
