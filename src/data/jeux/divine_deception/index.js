@@ -2,7 +2,7 @@ import { team } from "./patchfr/team";
 
 export const game = {
   id: "divine_deception",
-  name: "Shuffled deck - The Divine Deception",
+  name: "Shuffled Deck - The Divine Deception",
   categories: {
     general: {
       name: "Le Jeu",

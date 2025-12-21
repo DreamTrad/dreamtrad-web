@@ -2,7 +2,7 @@ import { team } from "./patchfr/team";
 
 export const game = {
   id: "zodiac_trial",
-  name: "Shuffled deck - The Zodiac Trial",
+  name: "Shuffled Deck - The Zodiac Trial",
   categories: {
     general: {
       name: "Le Jeu",
