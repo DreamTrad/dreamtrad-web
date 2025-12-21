@@ -63,7 +63,11 @@ export const game = {
               name: "Windows",
               file: "patchfr/installation/windows",
             },
-            //{ id: "steamdeck", name: "Steam Deck/Linux", file: "patchfr/installation/steamdeck" },
+            {
+              id: "steamdeck",
+              name: "Steam Deck/Linux",
+              file: "patchfr/installation/steamdeck",
+            },
             {
               id: "manuellement",
               name: "Manuellement PC",
