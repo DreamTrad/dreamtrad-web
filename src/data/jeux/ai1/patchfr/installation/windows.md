@@ -2,11 +2,6 @@
 
 Une fois que vous avez téléchargé le patch, il faudra d’abord l’extraire car c’est un dossier compressé zip.
 
-- Si les fichiers de votre jeu ont été modifiés, allez dans les paramètres du jeu sur Steam, et faite :
-Propriétés → Fichiers installés → Vérifier l’intégrité des fichiers du jeu
-
-![Image restoration des fichiers d’origine Steam](/jeux/999/patchfr/installation/steam_restoration_fichiers.webp)
-
 - Lancez DreamTrad_patcheur_fr_AI_The_Somnium_Files.
 
 ![Image logiciel pour patcher automatiquement](/jeux/ai1/patchfr/installation/logiciel_patch_auto.webp)

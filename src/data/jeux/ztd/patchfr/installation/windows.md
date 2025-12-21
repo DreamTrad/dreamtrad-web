@@ -7,10 +7,9 @@ Propriétés → Fichiers installés → Vérifier l’intégrité des fichiers 
 
 ![Image restoration des fichiers d’origine Steam](/jeux/999/patchfr/installation/steam_restoration_fichiers.webp)
 
-
-- Lancez ZTD_patch_automatique.exe.
+- Lancez DreamTrad_patcheur_fr_ZeroTimeDilemma.
 
 ![Image logiciel pour patcher automatiquement](/jeux/ztd/patchfr/installation/logiciel_patch_auto.webp)
 
-- Si le chemin de votre jeu n’apparait pas, sélectionnez le avec le bouton "Rechercher".
+- Si le chemin de votre jeu n’apparait pas, sélectionnez le avec le bouton "Parcourir".
 - Cliquez sur "Patcher". Attendez un peu, et ça sera bon, votre jeu sera patché !

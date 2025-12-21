@@ -2,10 +2,9 @@
 
 Une fois que vous avez téléchargé le patch, il faudra d’abord l’extraire car c’est un dossier compressé zip.
 
-- Lancez PARANORMASIGHT_patch_automatique.exe.
-- Sélectionnez le répertoire du jeu avec le bouton "Rechercher" s’il n’apparait pas automatiquement.
-- Cliquez sur "Patcher".
-- Attendez un petit moment…
-- … Et c’est bon !
+- Lancez DreamTrad_patcheur_fr_PARANORMASIGHT.
 
 ![Image logiciel pour patcher automatiquement](/jeux/paranormasight/patchfr/installation/logiciel_patch_auto.webp)
+
+- Si le chemin de votre jeu n’apparait pas, sélectionnez le avec le bouton "Parcourir".
+- Cliquez sur "Patcher". Attendez un peu, et ça sera bon, votre jeu sera patché !
