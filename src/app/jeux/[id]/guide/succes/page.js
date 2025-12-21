@@ -39,9 +39,9 @@ export default async function SuccesPage({ params }) {
   if (!section) return <div>Section Succès introuvable</div>;
 
   return (
-    <>
-      <h1 className="text-text mb-4 text-4xl font-extrabold tracking-tight">Les succès de {game.name}</h1>
+    <div className="mx-auto max-w-7xl">
+      <h1 className="text-text mb-10 text-4xl font-extrabold tracking-tight">Les succès de {game.name}</h1>
       <SuccesClient sectionData={section.data} gameId={id} />
-    </>
+    </div>
   );
 }

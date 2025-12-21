@@ -21,7 +21,7 @@ export default function AchievementCard({
 
   return (
     <div
-      className="bg-bg-tertiary text-text-secondary relative flex w-full max-w-5/6 cursor-pointer items-start gap-4 rounded-lg p-4 shadow-md"
+      className="bg-bg-tertiary text-text-secondary relative flex w-full cursor-pointer items-start gap-4 rounded-lg p-4 shadow-md"
       onClick={handleClick}
     >
       {/* image */}
