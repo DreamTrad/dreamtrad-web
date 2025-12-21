@@ -1,5 +1,7 @@
 # Instructions patch automatique Windows
 
+C’est un patch pour **The Nonary Games**. Cela veut dire que c’est à la fois un patch pour **9 Hours, 9 Persons, 9 Doors** et pour **Virtue's Last Reward**.
+
 Une fois que vous avez téléchargé le patch, il faudra d’abord l’extraire car c’est un dossier compressé zip.
 
 - Si les fichiers de votre jeu ont été modifiés, allez dans les paramètres du jeu sur Steam, et faite :
@@ -8,10 +10,9 @@ Propriétés → Fichiers installés → Vérifier l’intégrité des fichiers 
 ![Image restoration des fichiers d’origine Steam](/jeux/999/patchfr/installation/steam_restoration_fichiers.webp)
 
 
-- Lancez TheNonaryGames_patch_automatique.exe.
+- Lancez DreamTrad_patcheur_fr_ZeroEscape_NonaryGames.
 
 ![Image logiciel pour patcher automatiquement](/jeux/999/patchfr/installation/logiciel_patch_auto.webp)
 
-- Si le chemin de votre jeu n’apparait pas, sélectionnez le avec le bouton "Rechercher".
-- Cochez les éléments que vous voulez patcher. Launcher correspond à la fenêtre permettant de choisir quel jeu on lance ainsi que la manette avec laquelle on joue.
+- Si le chemin de votre jeu n’apparait pas, sélectionnez le avec le bouton "Parcourir".
 - Cliquez sur "Patcher". Attendez un peu, et ça sera bon, votre jeu sera patché !
