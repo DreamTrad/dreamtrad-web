@@ -9,6 +9,6 @@ Vous pouvez trouver ici une version graphique de l’utilitaire, récupérer la 
 ![Image Delta Patcher](/jeux/999/patchfr/installation/deltapatcher.webp)
 
 - Dans **"Original file"**, indiquez le chemin du **fichier du jeu 00000000.cfsi**.
-- Dans **"XDelta patch"**, indiquez le chemin du fichier de patch, donc **le fichier patch_ztd.xdelta**.
+- Dans **"XDelta patch"**, indiquez le chemin du fichier de patch, donc **le fichier 00000000.cfsi.xdelta**.
 
 Le logiciel va peut-être être dans un état de plantage, c’est *normal*, le fichier est gros, attendez juste.
