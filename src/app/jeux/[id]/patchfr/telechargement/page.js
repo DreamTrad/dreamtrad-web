@@ -82,8 +82,10 @@ export default async function DownloadPage({ params }) {
   } catch {}
 
   return (
-    <div className="space-y-16">
-      <MarkdownSection content={content} />
+    <div className="mx-auto max-w-7xl space-y-12 px-4 pb-20">
+          <div className="bg-bg-secondary/60 rounded-2xl p-6 shadow-sm backdrop-blur-sm md:p-8">
+            <MarkdownSection content={content} />
+        </div>
       {project && (
         <div className="flex justify-center">
           <ProjectProgressCard
@@ -95,8 +97,8 @@ export default async function DownloadPage({ params }) {
           />
         </div>
       )}
-      {images.length > 0 && <ImageCarousel images={images} interval={15000} />}
       <DownloadSectionClient gameId={id} platforms={section.platforms} />
+      {images.length > 0 && <ImageCarousel images={images} interval={15000} />}
     </div>
   );
 }

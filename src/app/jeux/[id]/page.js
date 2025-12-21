@@ -28,8 +28,10 @@ export default async function GamePage({ params }) {
   const { body } = extractMarkdownMetadata(raw);
 
   return (
-    <div className="mx-auto max-w-5xl space-y-12 px-4 pb-20">
-      <MarkdownSection content={body} />
+    <div className="mx-auto max-w-7xl space-y-12 px-4 pb-20">
+      <div className="bg-bg-secondary/60 rounded-2xl p-6 shadow-sm backdrop-blur-sm md:p-8">
+        <MarkdownSection content={body} />
+      </div>
 
       <GameEmbeds embeds={presentation.embeds} />
     </div>

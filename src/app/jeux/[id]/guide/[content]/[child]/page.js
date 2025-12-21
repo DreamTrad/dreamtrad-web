@@ -106,5 +106,11 @@ export default async function GuideChildContentPage({ params }) {
 
   const { body } = extractMarkdownMetadata(markdown);
 
-  return <MarkdownSection content={body} />;
+  return (
+    <div className="mx-auto max-w-7xl px-4 pb-20">
+      <div className="bg-bg-secondary/60 rounded-2xl p-6 shadow-sm backdrop-blur-sm md:p-8">
+        <MarkdownSection content={body} />
+      </div>
+    </div>
+  );
 }
