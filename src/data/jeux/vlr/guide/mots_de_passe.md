@@ -26,7 +26,9 @@ ACCOMPLIE
 - Porte bleue
 - Trahir
 :::
-<br> 
+
+<br>
+
 :::spoiler[l’identifiant et le mot de passe]
 - Identifiant : GLTFMD016
 - Mot de passe : MILKEMIAJ
