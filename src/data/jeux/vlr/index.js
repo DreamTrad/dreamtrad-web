@@ -123,7 +123,7 @@ export const game = {
         {
           id: "mots_de_passe_francais",
           name: "Mots de passe et codes différents en français",
-          file: "guide/mots_de_passe_français",
+          file: "guide/mots_de_passe_francais",
         },
         {
           id: "telephone_cabines",
