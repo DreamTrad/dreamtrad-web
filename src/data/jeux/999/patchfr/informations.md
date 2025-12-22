@@ -10,3 +10,5 @@ Si vous en remarquez, n’hésitez pas à venir les communiquer sur notre [Disco
 
 
 Pour VLR, une fonctionnalité a été rajoutée. Lors des déplacements du curseur sur la carte, vous pouvez maintenir la touche de votre périphérique servant à faire retour (B, rond, clic droit, échap, c) pour accélérer.
+
+Si vous avez des difficultés à installer le patch, rendez-vous sur la page [installation](/jeux/999/patchfr/installation) pour plus d’informations. Sinon, nous pouvons vous aider sur notre [Discord](https://discord.gg/gsuAz4DK4p).
