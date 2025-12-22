@@ -34,7 +34,7 @@ export default function Header() {
           className="absolute left-4 flex h-full items-center gap-2"
         >
           <img
-            src="/dreamtrad-logo-title.svg"
+            src="/dreamtrad-logo-title.webp"
             alt="DreamTrad"
             className="h-10 object-contain"
           />
