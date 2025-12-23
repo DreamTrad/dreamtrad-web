@@ -14,7 +14,7 @@ import chibiAiba from "@/assets/chibi/chibi-aiba.webp";
 export const dynamic = "force-static";
 
 export const metadata = {
-  title: "Accueil",
+  title: "Accueil | Dreamtrad",
 };
 
 export default async function HomePage() {
