@@ -15,7 +15,7 @@ export const team = [
             { "name": "Silous", "role": "Utilisation des outils", "link": "/equipe" },
             { "name": "Floflosera", "role": "Utilisation des outils", "link": "/equipe" },
             { "name": "Aclios", "role": "Extraction des textures", "link": "" },
-            { "name": "Mxscr (Firo)", "role": "Portage Vita", "link": "https://twitter.com/Mxscr" },
+            { "name": "Mxscr (Firo)", "role": "Portage Vita", "link": "https://x.com/Mxscr" },
             { "name": "BlackSmith01", "role": "Outil coréen ayant servi au projet", "link": "https://m.blog.naver.com/PostView.naver?blogId=hahakickkick&logNo=222507208227&navType=by" },
         ]
     },

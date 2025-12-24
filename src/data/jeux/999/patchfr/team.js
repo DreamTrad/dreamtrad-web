@@ -23,7 +23,7 @@ export const team = [
         "people": [
             { "name": "Silous", "role": "Utilisation des outils", "link": "/equipe" },
             { "name": "Floflosera", "role": "Utilisation des outils", "link": "/equipe" },
-            { "name": "Mxscr (Firo)", "role": "Portage Vita", "link": "https://twitter.com/Mxscr" },
+            { "name": "Mxscr (Firo)", "role": "Portage Vita", "link": "https://x.com/Mxscr" },
             { "name": "BlackSmith01", "role": "Outil coréen ayant servi au projet", "link": "https://m.blog.naver.com/PostView.naver?blogId=hahakickkick&logNo=222076409323&navType=by" },
         ]
     },
