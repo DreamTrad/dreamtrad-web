@@ -69,7 +69,7 @@ export default async function HomePage() {
 
         {/* Sidebar */}
         <aside className="flex flex-col gap-16">
-          <DiscordCard inviteUrl="https://t.co/O6tlFvR8wa" />
+          <DiscordCard inviteUrl="https://discord.gg/gsuAz4DK4p" />
 
           <div className="from-accent to-accent-tertiary flex flex-col items-center justify-center gap-4 overflow-hidden rounded-2xl bg-linear-to-br p-6 text-white shadow-xl md:flex-row md:justify-between">
             <div className="flex max-w-md flex-1 flex-col items-center space-y-4 text-center">
