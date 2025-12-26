@@ -15,10 +15,10 @@ export async function generateMetadata({ params }) {
   if (!game) return {};
 
   return {
-    title: `Installation patchfr – ${game.name}`,
+    title: `Installation patch fr | ${game.name}`,
     description: `Guide d'installation pour le patch français de ${game.name}.`,
     openGraph: {
-      title: `Installation patchfr – ${game.name}`,
+      title: `Installation patch fr | ${game.name}`,
       description: `Guide d'installation pour le patch français de ${game.name}.`,
       url: `/jeux/${gameId}/patchfr/installation`,
       images: [

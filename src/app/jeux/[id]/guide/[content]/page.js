@@ -58,9 +58,29 @@ export async function generateMetadata({ params }) {
   const { description, body } = extractMarkdownMetadata(markdown);
   const title = extractFirstTitle(body) ?? section.name;
 
+  const image = `/jeux/${id}/cover.webp`; // conserve l'image actuelle
+
   return {
     title: `${title} | ${game.name}`,
     description,
+    openGraph: {
+      title: `${title} | ${game.name}`,
+      description,
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: game.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | ${game.name}`,
+      description,
+      images: [image],
+    },
   };
 }
 

@@ -17,10 +17,10 @@ export async function generateMetadata({ params }) {
   const image = `/jeux/${id}/cover.webp`;
 
   return {
-    title: `Téléchargement patch – ${game.name}`,
+    title: `Téléchargement patch fr | ${game.name}`,
     description: `Télécharger les différents patchs de ${game.name}`,
     openGraph: {
-      title: `Téléchargement patch – ${game.name}`,
+      title: `Téléchargement patch fr | ${game.name}`,
       description: `Télécharger les différents patchs de ${game.name}`,
       url: `/jeux/${id}/patchfr/telechargement`,
       images: [

@@ -17,6 +17,44 @@ export async function generateStaticParams() {
     }));
 }
 
+export async function generateMetadata({ params }) {
+  const id = (await params).id;
+  const game = games.find((g) => g.id === id);
+  if (!game) return {};
+
+  const section = game.categories?.guide?.sections?.find(
+    (s) => s.id === "succes"
+  );
+  if (!section) return {};
+
+  const title = `Succès | ${game.name}`;
+  const description = `Consultez la liste complète des succès pour ${game.name}.`;
+  const image = `/jeux/${id}/cover.webp`; // conserve l'image actuelle
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: game.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
+  };
+}
+
 export default async function SuccesPage({ params }) {
   const id = (await params).id;
   const game = games.find((g) => g.id === id);
