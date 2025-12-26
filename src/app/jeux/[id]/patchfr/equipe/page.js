@@ -1,3 +1,5 @@
+// app/jeux/[id]/patchfr/equipe/page.js
+
 import { games } from "@/data/jeux";
 import { notFound } from "next/navigation";
 import TeamRoleCategory from "./TeamRoleCategory";
