@@ -52,7 +52,7 @@ export const game = {
             {
               id: "pc",
               name: "PC (Windows, Steamdeck, Linux)",
-              link: "https://drive.google.com/uc?export=download&id=1qi8i8Qw2KbHpbYBA2tjC6AHSZBY7B2ka",
+              link: "https://drive.google.com/uc?export=download&id=1F-oWSxJYkCNYzE0DQESkCV9giRcwD7Cs",
             },
           ],
         },
