@@ -30,6 +30,10 @@ const image = `/dreamtrad-logo-title.webp`;
 export const metadata = {
   metadataBase: new URL("https://dreamtrad.fr"),
 
+  verification: {
+    google: "AujNdwkeh40h9GZHmebcEXe1At7PAnK11Xmjnqubs4A",
+  },
+
   alternates: {
     canonical: "./",
   },
