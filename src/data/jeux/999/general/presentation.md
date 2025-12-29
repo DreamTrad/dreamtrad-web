@@ -4,7 +4,7 @@
 
 Un roman nommé **9 Heures, 9 Personnes, 9 Portes Alterna** est sorti en 2010. Il reprend les grandes lignes du scénario tout en modifiant certains éléments.
 
-Par la suite, le jeu est ressorti en remaster en 2017 dans une version regroupant 999 : 9 Heures, 9 Personnes, 9 Portes et Les Remords des Vertueux (Virtue's Last Reward). Cette version nommée *The Nonary Games* est sortie sur Steam, PlayStation 4, Playstation Vita et en 2022 sur Xbox One. Une version mobile est également sortie. Elle propose une présentation différente avec des bulles façon BD et tout le gameplay a été retiré. La version mobile est également connue pour ajouter une nouvelle mauvaise fin.
+Par la suite, le jeu est ressorti en remaster en 2017 dans une version regroupant 999 : 9 Heures, 9 Personnes, 9 Portes et Les Remords des Vertueux (Virtue's Last Reward). Cette version nommée *The Nonary Games* est sortie sur Steam, PlayStation 4, PlayStation Vita et en 2022 sur Xbox One. Une version mobile est également sortie. Elle propose une présentation différente avec des bulles façon BD et tout le gameplay a été retiré. La version mobile est également connue pour ajouter une nouvelle mauvaise fin.
 
 ## Scénario
 

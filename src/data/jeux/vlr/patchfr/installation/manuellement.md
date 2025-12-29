@@ -1,4 +1,4 @@
-# Instructions pour patcher manuellement sur PC et steamdeck
+# Instructions pour patcher manuellement sur PC et Steam Deck
 
 Une fois que vous avez téléchargé le patch, il faudra d’abord l’extraire car c’est un dossier compressé zip.
 

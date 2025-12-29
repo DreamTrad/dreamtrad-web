@@ -52,7 +52,7 @@ Pour ouvrir la porte de sortie, il faut rentrer un code.
 
 
 :::spoiler[un indice pour le code de la porte de sortie]
-Sur le mur, ce sont des nombres romains. Il faut faire la conversion en nombres arabes. Puis, pour obtenir des lettres, c’est encore une fois de l’hexadécimal. Pour rappel, A=10, B=11, …
+Sur le mur, ce sont des nombres en chiffres romains. Il faut faire la conversion en chiffres arabes. Puis, pour obtenir des lettres, c’est encore une fois de l’hexadécimal. Pour rappel, A=10, B=11, …
 :::
 
 <br>

@@ -1,4 +1,4 @@
-# Instructions pour patcher manuellement sur PC et steamdeck
+# Instructions pour patcher manuellement sur PC et Steam Deck
 
 Si le patch automatique ne fonctionne pas pour vous, vous pouvez toujours appliquer le patch manuellement. Vous aurez besoin xDelta pour appliquer les patchs sur les fichiers du jeu.
 

@@ -23,7 +23,7 @@ Solution de l’échappatoire du bloc opératoire dans 9 Hours 9 Persons 9 Doors
 Récupérez les objets suivants :
 - Le scalpel sur la table d’outillage devant le buste aux organes apparents.
 - La pince de Kocher sur la table devant le drap cachant le corps de Lucy.
-- La poitrine de mannequin sur le bureau à côté du meuble rempli de flacons.
+- La poitrine du mannequin sur le bureau à côté du meuble rempli de flacons.
 
 ## Résolution des énigmes
 

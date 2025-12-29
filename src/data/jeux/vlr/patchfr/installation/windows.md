@@ -14,5 +14,5 @@ Propriétés → Fichiers installés → Vérifier l’intégrité des fichiers 
 
 ![Image logiciel pour patcher automatiquement](/jeux/999/patchfr/installation/logiciel_patch_auto.webp)
 
-- Si le chemin de votre jeu n’apparait pas, sélectionnez le avec le bouton "Parcourir".
+- Si le chemin de votre jeu n’apparait pas, sélectionnez-le avec le bouton "Parcourir".
 - Cliquez sur "Patcher". Attendez un peu, et ça sera bon, votre jeu sera patché !

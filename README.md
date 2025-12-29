@@ -6,7 +6,7 @@ Si vous avez déjà nodejs, il vous faut **nodejs version 20** minimum.
 
 Un redémarrage sera sûrement nécessaire pour avoir la commande npm reconnue par le système.
 
-Ouvrez un invité de commande dans le dossier racine du projet, puis tapez :
+Ouvrez un invite de commande dans le dossier racine du projet, puis tapez :
 
     npm install
 
