@@ -17,7 +17,7 @@ Prenez les escaliers à côté de la roue dorée pour aller sur la passerelle av
 
 Redescendez tout en bas pour récupérer ce que vous venez de faire descendre (Porte C puis porte A). C’est au bout du tapis roulant que vous trouverez le panneau de contrôle dans la caisse descendue. Il s’encastre parfaitement dans le compartiment ouvrable du tapis roulant. Insérez-le et du charbon va arriver via le convoyeur.
 
-Récupérez le bac où était le panneau de contrôle, qui est maintenant rempli de charbon. Depuis l’écran du tapis roulant, allez vers la gauche et sélectionnez les ouvertures de fourneau les plus proches de vous pour y mettre le charbon.
+Récupérez le bac où était le panneau de contrôle, qui est maintenant rempli de charbons. Depuis l’écran du tapis roulant, allez vers la gauche et sélectionnez les ouvertures de fourneau les plus proches de vous pour y mettre le charbon.
 
 Il faut désormais mettre en route la machine. Allez au panneau de contrôle avec les leviers, au niveau des escaliers que vous avez empruntés au début, et abaissez le levier de droite. Cela va faire tourne les roues d’or, d’argent et de bronze. Des disques vont être atteignables sur ces roues, récupérez les trois.
 

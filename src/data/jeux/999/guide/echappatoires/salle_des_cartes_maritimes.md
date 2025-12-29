@@ -22,9 +22,9 @@ Récupérez les objets suivants :
 
 ## Résolution des énigmes
 
-Utilisez le tas de cartes maritimes sur la carte du monde accroché au mur. Vous obtiendrez 2 documents qui vous serviront pour résoudre une énigme.
+Utilisez le tas de cartes maritimes sur la carte du monde accrochée au mur. Vous obtiendrez deux documents qui vous serviront pour résoudre une énigme.
 
-Allez dans l’autre pièce, et examiner d’abord le transmetteur d’ordre, puis ensuite examinez le gouvernail, celui à droite du transmetteur d’ordre.
+Allez dans l’autre pièce, et examinez d’abord le transmetteur d’ordre, puis ensuite examinez le gouvernail, celui à droite du transmetteur d’ordre.
 
 Cela va déclencher un mini-jeu. Il faudra saisir les bons caps dans le bon ordre. Suivez ceux des documents que vous avez récupérés.
 
@@ -40,6 +40,6 @@ Vous obtiendrez une poignée du gouvernail, que vous pourrez installer sur le tr
 FULL → HALF → SLOW → FULL → HALF → DEAD SLOW → STOP
 :::
 
-Cela va allumer l’un des écrans d’affichage entre les deux portes. Utilisez la montre à gousset sur ce tableau d’affichage pour changer l’heure de la montre.
+Cela va allumer l’un des tableaux d’affichage entre les deux portes. Utilisez la montre à gousset sur ce tableau d’affichage pour changer l’heure de la montre.
 
-Utilisez la montre sur la porte avec l’emplacement prévu pour, pour terminer l’échappatoire.
+Utilisez la montre sur la porte pour terminer l’échappatoire.

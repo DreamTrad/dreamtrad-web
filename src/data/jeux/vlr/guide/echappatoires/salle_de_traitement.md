@@ -65,7 +65,7 @@ Une fois à l’intérieur de la salle des modules, ouvrez le module du centre p
 
 Ressortez de la salle et utilisez la clé blanche sur l’horloge au-dessus du coffre et prenez la puce électronique posée au niveau du 6 de l’horloge.
 
-Utilisez la clé argentée pour ouvrir l’aquarium, et démarrez le minijeu pour récupérer la méduse rose. Il faudra faire en sorte de ne pas récupérer les méduses jaunes avant.
+Utilisez la clé argentée pour ouvrir l’aquarium, et démarrez le mini-jeu pour récupérer la méduse rose. Il faudra faire en sorte de ne pas récupérer les méduses jaunes avant.
 
 :::spoiler[les déplacements à effectuer pour faire sortir la méduse rose]
 gauche → haut → bas → droite → bas → droite → gauche → haut → haut → droite → haut

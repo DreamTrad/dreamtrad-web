@@ -60,7 +60,7 @@ En suivant le manuel d’extraction d’ADN, allez vers le mixeur à gauche des 
 
 Vous obtiendrez la capsule verte et la capsule jaune.
 
-Insérez la capsule rouge, bleue et verte dans le microscope pour déclencher un minijeu sur l’ADN.
+Insérez la capsule rouge, bleue et verte dans le microscope pour déclencher un mini-jeu sur l’ADN.
 
 Il faut que les A touchent des T et que les C touchent des G. Plusieurs lignes bougent en même temps, donc il faut faire attention.
 

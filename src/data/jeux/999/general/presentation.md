@@ -1,6 +1,6 @@
 # 9 Heures, 9 Personnes, 9 Portes
 
-**999 : 9 Heures, 9 Personnes, 9 Portes** (ou 999 : Nine Hours, Nine Persons, Nine Doors) est un jeu vidéo d’aventure de type Visual Novel avec emphase sur des escape games, sorti le 10 décembre 2009 sur Nintendo DS au Japon, puis un an plus tard, le 16 novembre 2010 en occident. Il a été développé par Chunsoft, et édité par Aksys Games en Amérique et Europe. Il est le premier jeu de la trilogie Zero Escape de Kōtarō Uchikoshi. 9 Heures, 9 Personnes, 9 Portes est un thriller proposant plusieurs fins et mêlant plusieurs thèmes autour de la science et de la science-fiction. Cette recette va définir ce que sont les trois jeux de la trilogie.
+**999 : 9 Heures, 9 Personnes, 9 Portes** (ou 999 : Nine Hours, Nine Persons, Nine Doors) est un jeu vidéo d’aventure de type Visual Novel avec emphase sur des escape games, sorti le 10 décembre 2009 sur Nintendo DS au Japon, puis un an plus tard, le 16 novembre 2010 en Occident. Il a été développé par Chunsoft, et édité par Aksys Games en Amérique et Europe. Il est le premier jeu de la trilogie Zero Escape de Kōtarō Uchikoshi. 9 Heures, 9 Personnes, 9 Portes est un thriller proposant plusieurs fins et mêlant plusieurs thèmes autour de la science et de la science-fiction. Cette recette va définir ce que seront les trois jeux de la trilogie.
 
 Un roman nommé **9 Heures, 9 Personnes, 9 Portes Alterna** est sorti en 2010. Il reprend les grandes lignes du scénario tout en modifiant certains éléments.
 

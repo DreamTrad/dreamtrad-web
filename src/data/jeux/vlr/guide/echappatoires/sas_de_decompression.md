@@ -61,7 +61,7 @@ Redescendez pour ouvrir le casier du milieu avec la clé. Dedans se trouve la pe
 
 Remontez. Dans la sorte de photomaton, branchez la tablette au câble et placez Zéro Lapin en combinaison sur le tabouret.
 
-Vous pouvez maintenant lancer le minijeu sur la tablette. Sur la note que vous avez trouvée, il y a des suites de couleurs. chaque ligne va correspondre à un chiffre. Quand vous cliquez sur un segment, cela va correspondre à une couleur. Pour obtenir le chiffre d’une ligne il faut comprendre quel chiffre les segments des couleurs de la ligne forment.
+Vous pouvez maintenant lancer le mini-jeu sur la tablette. Sur la note que vous avez trouvée, il y a des suites de couleurs. chaque ligne va correspondre à un chiffre. Quand vous cliquez sur un segment, cela va correspondre à une couleur. Pour obtenir le chiffre d’une ligne il faut comprendre quel chiffre les segments des couleurs de la ligne forment.
 
 :::spoiler[quel nombre est à rentrer]
 623

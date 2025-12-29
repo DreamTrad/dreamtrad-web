@@ -60,7 +60,7 @@ Maintenant, il faut mettre des boites sur la rangée du haut. Pour cela prenez e
 
 Une fois tous les tiroirs récupérés, il ne vous restera plus qu’à les insérer dans la machine, dans la rangée du haut.
 
-Regardez l’écran de la machine pour démarrer un minijeu où il faudra réarranger les boites.
+Regardez l’écran de la machine pour démarrer un mini-jeu où il faudra réarranger les boites.
 
 Sur le tableau de nutrition du personnel, il y a les apports que les repas doivent apporter par jour. Sur le tableau d’équilibre nutritionnel, il y a les apports de chaque plat. Il faut donc déplacer les plats pour que chaque jour ait les valeurs exactes d’apport nutritionnel nécessaire.
 

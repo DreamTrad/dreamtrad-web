@@ -32,7 +32,7 @@ Récupérez les objets suivants :
 
 Placez le morceau de tissu au niveau de la déchirure sur la table de billard. Aspergez la table de luminol. Il ne vous reste plus qu’à éteindre la lumière. Vous verrez des lettres sur le billard. Prenez notes de ces lettres et rallumez la lumière.
 
-Munissez-vous des boules de billard et interagissez avec la table de billard pour commencer le minijeu. Sur l’écran en haut à droite, il y a des boules avec des lettres. Il y a à chaque fois une couleur et des bandes ou non. Regardez à quelles boules cela correspond sur le poster de boules de billard que vous avez récupéré. Il nombre sur la boule sera la boule à placer dans le trou correspondant à la lettre.
+Munissez-vous des boules de billard et interagissez avec la table de billard pour commencer le mini-jeu. Sur l’écran en haut à droite, il y a des boules avec des lettres. Il y a à chaque fois une couleur et des bandes ou non. Regardez à quelles boules cela correspond sur le poster de boules de billard que vous avez récupéré. Il nombre sur la boule sera la boule à placer dans le trou correspondant à la lettre.
 
 Et il faut rentrer les boules dans l’ordre alphabétique. Donc d’abord la boule A, puis B…
 
@@ -50,7 +50,7 @@ Allez vers le jukebox et branchez le fil d’alimentation. Insérez une pièce d
 
 Juste à droite du jukebox, il y a des cadres au mur. Il faut placer les disques d’or dans celui de droite et celui de gauche. Cela va déverrouiller celui du centre et vous pourrez récupérer la boite à fléchettes. Combinez-la avec les extrémités des fléchettes pour avoir des fléchettes entières et la boite à côté.
 
-Vous pouvez maintenant jouer aux fléchettes. Prenez les fléchettes en main et aller faire le minijeu sur la cible de fléchettes. Dans la boite de fléchette, vous pouvez voir qu’il y a noté score 91. Et vous pouvez aussi voir que les cibles de couleurs ne sont pas de la même taille. La rouge est la plus petite, la bleue de taille moyenne, et la verte est la plus grande. Cela veut dire que non seulement vous devez faire 91 comme score final, mais il faut que le score avec couleur suive cette logique : rouge \< bleu \< vert.
+Vous pouvez maintenant jouer aux fléchettes. Prenez les fléchettes en main et aller faire le mini-jeu sur la cible de fléchettes. Dans la boite de fléchette, vous pouvez voir qu’il y a noté score 91. Et vous pouvez aussi voir que les cibles de couleurs ne sont pas de la même taille. La rouge est la plus petite, la bleue de taille moyenne, et la verte est la plus grande. Cela veut dire que non seulement vous devez faire 91 comme score final, mais il faut que le score avec couleur suive cette logique : rouge \< bleu \< vert.
 
 :::spoiler[zone à toucher sur la cible de fléchettes]
 ![fléchette solution de base](/jeux/vlr/guide/echappatoires/salle_de_jeu/flechette_1.webp)

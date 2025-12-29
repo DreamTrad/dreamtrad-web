@@ -3,7 +3,7 @@ Guide de 9 Hours, 9 Persons, 9 Doors en français. Comment finir chaque échappa
 ---
 # Guide
 
-Nous vous proposons un guide en français se basant sur notre traduction. 999 n’est pas un jeu complexe. Mais il peut tout de même y avoir quelque passage bloquant dans les échappatoires. La version "The Nonary Games" rend plus simple et plus clair l’obtention des fins, mais vous trouverez au besoin des guides pour obtenir chaque fin.
+Nous vous proposons un guide en français se basant sur notre traduction. 999 n’est pas un jeu complexe. Mais il peut tout de même y avoir quelques passages bloquants dans les échappatoires. La version "The Nonary Games" rend plus simple et plus clair l’obtention des fins, mais vous trouverez au besoin des guides pour obtenir chaque fin.
 
 Des traductions des succès sont également disponibles.
 

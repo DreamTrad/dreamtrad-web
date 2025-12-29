@@ -28,7 +28,7 @@ Récupérez les objets suivants :
 
 ## Résolution des énigmes
 
-Trouvez les livres avec des lettres sur la bande, sur l’étagère en bas à droite de l’écran où la table est visible.
+Trouvez les livres avec des lettres sur la tranche, sur l’étagère en bas à droite de l’écran où la table est visible.
 
 Il faut les remettre dans le bon ordre pour que les lettres forment une suite logique.
 
@@ -36,17 +36,17 @@ Il faut les remettre dans le bon ordre pour que les lettres forment une suite lo
 bleu, rouge, vert, mauve
 :::
 
-Récupérer l’ampoule dans le compartiment qui vient de s’ouvrir.
+Récupérez l’ampoule dans le compartiment qui vient de s’ouvrir.
 
-Descendez et dirigez-vous vers l’armoire vitrée avec un cadenas. Déverrouillez le code, la solution est triviale.
+Descendez et dirigez-vous vers l’armoire vitrée avec un cadenas. Renseignez le code, la solution est triviale.
 
 :::spoiler[le code du cadenas de l’armoire]
 632415
 :::
 
-Vous pouvez récupérer la dernière ampoule. Vous avez désormais tous les objets de l’échappatoire. Examiner chaque livre d’images pour les ouvrir. Puis placez les livres et les ampoules sur les présentoirs au centre du sous-sol. Cela va faire apparaitre quelque chose avec les ombres. Examinez ce qui est apparu.
+Vous pouvez récupérer la dernière ampoule. Vous avez désormais tous les objets de l’échappatoire. Examinez chaque livre d’images pour les ouvrir. Puis placez les livres et les ampoules sur les présentoirs au centre du sous-sol. Cela va faire apparaitre quelque chose avec les ombres. Examinez ce qui est apparu.
 
-Il ne vous reste plus qu’à vous diriger vers l’étagère du sous-sol présentant plusieurs livres des mêmes auteurs, et interagissez avec les livres de Sheldrake. Cela fera apparaitre un bouton. Appuyer dessus fera déplacer les étagères de l’étage, dévoilant la zone de sortie.
+Il ne vous reste plus qu’à vous diriger vers l’étagère du sous-sol présentant plusieurs livres des mêmes auteurs, et interagissez avec les livres de Sheldrake. Cela fera apparaitre un bouton. Appuyer dessus fera déplacer les étagères de l’étage, dévoilant la sortie.
 
 Pour ouvrir la porte de sortie, il faut rentrer un code.
 

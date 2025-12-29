@@ -25,7 +25,7 @@ Récupérez les objets suivants :
 
 ## Résolution des énigmes
 
-Utilisez l’huile sur le verrou de la porte bloquée pour pouvoir rentrer dans la pièce.
+Utilisez l’huile sur le verrou de la porte bloquée pour pouvoir entrer dans la pièce.
 
 
 ## Récupération des objets (congélateur)
@@ -33,7 +33,7 @@ Utilisez l’huile sur le verrou de la porte bloquée pour pouvoir rentrer dans 
 Récupérez les objets suivants :
 - La glace carbonique et le morceau de poulet dans le frigo à gauche.
 - Le morceau de viande de porc sur l’étagère du bas à droite du frigo.
-- La corde robuste et la bouteille en plastique sous la trappe au sol.
+- La corde robuste et la bouteille en plastique sous la trappe.
 
 ## Résolution des énigmes (suite)
 
@@ -43,7 +43,7 @@ Placez la bouteille sur la poignée de la porte de sortie pour vous échapper du
 
 Posez le morceau de viande de porc sur le grill pour l’attendrir.
 
-Combinez le couteau rouillé avec la pierre à aiguiser pour avoir un couteau qui coupe, ce qui vous permettra de découper la viande cuite pour récupérer le mémo de la viande de porc.
+Combinez le couteau rouillé avec la pierre à aiguiser pour avoir un couteau affuté, ce qui vous permettra de découper la viande cuite pour récupérer le mémo de la viande de porc.
 
 Ce mémo est un indice pour déverrouiller le four.
 

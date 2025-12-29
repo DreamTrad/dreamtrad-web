@@ -19,7 +19,7 @@ Solution de l’échappatoire du bureau dans 9 Hours 9 Persons 9 Doors.
 Récupérez les objets suivants :
 - La carte maritime à droite dès que vous arrivez dans l’échappatoire.
 - Le document sur l’énigme des 9 carrés dans le petit meuble dans le coin droit de la salle.
-- La table du code morse dans l’armoire dans le coin gauche de la salle.
+- La table du code Morse dans l’armoire dans le coin gauche de la salle.
 
 ## Résolution des énigmes
 
@@ -31,15 +31,15 @@ Sud → Ouest → Sud-Est → Nord-EST → Est → Nord → Est
 S → W → SE → NE → E → N → E
 :::
 
-Récupérez l’écusson dans le compartiment à droite qui vient de s’ouvrir.
+Récupérez l’écusson dans le compartiment de droite qui vient de s’ouvrir.
 
-Allez ensuite vers l’espèce de petit garage pour y trouver un cercueil avec noté "ALL-ICE". Dirigez-vous vers le panneau de contrôle juste derrière pour faire l’énigme du code morse. Il faut rentrer "ICE".
+Allez ensuite vers l’espèce de petit garage pour y trouver un cercueil avec noté "ALL-ICE". Dirigez-vous vers le panneau de contrôle juste derrière pour faire l’énigme du code Morse. Il faut rentrer "ICE".
 
-:::spoiler[la solution du code morse]
-![Image code morse](/jeux/999/guide/echappatoires/bureau/code_morse.webp)
+:::spoiler[la solution du code Morse]
+![Image code Morse](/jeux/999/guide/echappatoires/bureau/code_morse.webp)
 :::
 
-Prenez le nouvel écusson du compartiment à droite sur le panneau de contrôle.
+Prenez le nouvel écusson du compartiment de droite sur le panneau de contrôle.
 
 Allez maintenant au panneau de contrôle de l’autre côté de la salle, pour l’énigme des 9 carrés. Il faut que tous les ALL soient verts.
 

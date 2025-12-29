@@ -17,7 +17,7 @@ Récupérez l’objet suivant :
 
 ## Résolution des énigmes
 
-Utilisez la clé de serrage sur le hublot du réservoir, puis fouillez à l’intérieur pour obtenir la clé du soleil.
+Utilisez la clé de serrage sur le hublot du réservoir, puis fouillez à l’intérieur pour obtenir la clé du Soleil.
 
 Examinez ensuite l’appareil à droite de la chaise de torture. Il faudra trouver quels interrupteurs mettre sur ON. Il faut reconstituer le même visuel que celui de l’indice
 
@@ -25,9 +25,9 @@ Examinez ensuite l’appareil à droite de la chaise de torture. Il faudra trouv
 Les deux du haut et celui en bas à droite.
 :::
 
-Allez vers le panneau de contrôle et abaissez le levier jaune. Cela va faire apparaitre derrière le sol vitré des lettres. Ce sont les lettres des boutons du panneau de commande à enclencher. Appuyez sur les boutons B, D, E, F.
+Allez vers le panneau de contrôle et abaissez le levier jaune. Cela va faire apparaitre des lettres sous le sol vitré . Ce sont les lettres des boutons du panneau de contrôle à enclencher. Appuyez sur les boutons B, D, E, F.
 
-Utilisez la clé du soleil pour ouvrir les attaches de la chaise de torture puis regardez l’écran à gauche de la chaise. Il faut faire une version plus poussée de l’énigme précédente.
+Utilisez la clé du Soleil pour ouvrir les attaches de la chaise de torture puis regardez l’écran à gauche de la chaise. Il faut faire une version plus poussée de l’énigme précédente.
 
 :::spoiler[quels interrupteurs mettre sur ON pour la deuxième version]
 - Flèche gauche : Il faut mettre les deux sur 2.

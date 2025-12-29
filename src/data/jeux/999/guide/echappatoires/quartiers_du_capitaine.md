@@ -36,14 +36,14 @@ Récupérez les objets suivants :
 
 Combinez le tournevis et la boîte à musique. Combinez le cylindre obtenu avec l’encre. Combinez le cylindre sale obtenu avec le papier.
 
-Vous avez ce qu’il faut pour rentrer le code morse sur l’appareil posé sur la table. Un appui court pour un point, un appui long pour un trait.
+Vous avez ce qu’il faut pour entrer le code Morse sur l’appareil posé sur la table. Un appui court pour un point, un appui long pour un trait.
 
-Le tiroir relié au fil est désormais ouvert. Récupérer le document et la clé particulière.
+Le tiroir relié au fil est désormais ouvert. Récupérez le document et la clé particulière.
 
-Utilisez la clé sur le dispositif pour le code de la porte de sortie. Vous n’avez plus qu’à rentrer le code pour sortir.
+Utilisez la clé sur le dispositif pour obtenir le code de la porte de sortie. Vous n’avez plus qu’à entrer le code pour sortir.
 
 :::spoiler[un indice pour le code de la porte]
-Le code à mettre est ZERO, les lettres présentes sur les écrans. Mais il faut les convertir en nombre. Pour cela, regardez le document obtenu plus tôt pour comprendre comment convertir les lettres.
+Le code à mettre est ZERO, les lettres présentes sur les écrans. Mais il faut les convertir en nombres. Pour cela, regardez le document obtenu plus tôt pour comprendre comment convertir les lettres.
 
 C’est comme de l’hexadécimal, mais avec toutes les lettres de l’alphabet. Donc A=10, B=11, C=12…
 :::

@@ -19,7 +19,7 @@ Récupérez les objets suivants :
 
 ## Résolution des énigmes
 
-À travers la fenêtre centrale, interagissez avec la tâche et les deux serviettes pour que Yotsuba vous dise qu’il faudrait un produit pour faire nettoyer la tâche. Allez jusqu’à la grille pour donner l’éthanol à Yotsuba puis retournez examiner la tâche pour que Yotsuba la nettoie. Cela va dévoiler un dessin, qu’il faudra récupérer auprès de Yotsuba à travers la grille.
+À travers la fenêtre centrale, interagissez avec la tache et les deux serviettes pour que Yotsuba vous dise qu’il faudrait un produit pour faire nettoyer la tache. Allez jusqu’à la grille pour donner l’éthanol à Yotsuba puis retournez examiner la tache pour que Yotsuba la nettoie. Cela va dévoiler un dessin, qu’il faudra récupérer auprès de Yotsuba à travers la grille.
 
 Tentez ensuite d’utiliser le câble d’alimentation pour brancher l’ordinateur. Mais il faut une prise à 2 fiches. Examinez dans la salle de Yotsuba le module juste à côté de la table du mannequin. Yotsuba y trouvera un adaptateur à 2 fiches qu’elle pourra vous transmettre à travers la grille encore une fois.
 
@@ -32,6 +32,6 @@ Combinez le câble avec l’adaptateur, puis utilisez le câble pour alimenter l
 4. Le carré au centre.
 :::
 
-Cela va déverrouiller les casiers de droite. Dans celui du centre, vous trouverez la clé de la Terre et dans l’autre la clé d’activation. Vous pouvez utiliser cette clé sur l’emplacement en rouge de la zone de contrôle. Cela va alimenter de tableau électrique du côté de Yotsuba. Interagissez avec jusqu’à que le mannequin prenne feu. Cela va déverrouiller la porte d’évacuation de la salle de Yotsuba. Elle est à droite de la porte de sortie.
+Cela va déverrouiller les casiers de droite. Dans celui du centre, vous trouverez la clé de la Terre et dans l’autre la clé d’activation. Vous pouvez utiliser cette clé sur l’emplacement en rouge de la zone de contrôle. Cela va alimenter le tableau électrique du côté de Yotsuba. Interagissez avec jusqu’à que Yotsuba fasse des bétises et que le mannequin prenne feu. Cela va déverrouiller la porte d’évacuation de la salle de Yotsuba. Elle est à droite de la porte de sortie.
 
 Ouvrez-la pour que Yotsuba vous rejoigne, puis ouvrez le porte de sortie pour terminer l’échappatoire.

@@ -62,7 +62,7 @@ La broche 9 doit aller sur un côté, pas dans un coin.
 ![Image solution F](/jeux/999/guide/echappatoires/cale/solution-f.webp)
 :::
 
-Cela va allumer le panneau de contrôle. Utilisez le levier pour contrôler le Petit Pousseur et créer un chemin avec les caisses. Si vous n’y arrivez pas, sachez qu’en faisant retour puis en revenant sur le minijeu, vous pourrez augmenter de 1 le nombre de déplacements possibles, jusqu’à 60 max au total. Mais c’est tout à fait possible de réussir avec 50. C’est même faisable en moins de 50 coups.
+Cela va allumer le panneau de contrôle. Utilisez le levier pour contrôler le Petit Pousseur et créer un chemin avec les caisses. Si vous n’y arrivez pas, sachez qu’en faisant retour puis en revenant sur le mini-jeu, vous pourrez augmenter de 1 le nombre de déplacements possibles, jusqu’à 60 max au total. Mais c’est tout à fait possible de réussir avec 50. C’est même faisable en moins de 50 coups.
 
 :::spoiler[un chemin que peut emprunter le petit pousseur]
 ![Image petit pousseur 1](/jeux/999/guide/echappatoires/cale/petit_pousseur_1.webp)
@@ -75,6 +75,6 @@ Cela va allumer le panneau de contrôle. Utilisez le levier pour contrôler le P
 ![Image petit pousseur 8](/jeux/999/guide/echappatoires/cale/petit_pousseur_8.webp)
 :::
 
-Allez vers la grille et grimpez sur les caisses pour récupérer la clé rouillée que vous pouvez utiliser pour déverrouiller la porte situer sur un des paliers de l’escalier.
+Allez vers la grille et grimpez sur les caisses pour récupérer la clé rouillée que vous pouvez utiliser pour déverrouiller la porte située sur un des paliers de l’escalier.
 
 Ouvrez la porte de sortie pour terminer l’échappatoire.

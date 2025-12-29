@@ -53,7 +53,7 @@ Il vous faut maintenant remettre les 4 livres à la bonne place. Pour cela regar
 
 Les meubles vont s’abaisser ce qui va vous permettre de récupérer la peluche de lion. Dans la peluche vous trouverez une puce électronique. Insérez-la dans la console au centre de la pièce.
 
-Cela va déclencher une énigme où il faudra placer des dés aux bons endroits. Il faut à la fois faire correspondre les dés avec les couleurs de la note du marque-page, mais aussi avec les chiffres (inscrit sous forme de point) de la feuille de cahier. Attention, la forme dans le minijeu est tourné à 180° par rapport au marque-page et à la feuille de cahier.
+Cela va déclencher une énigme où il faudra placer des dés aux bons endroits. Il faut à la fois faire correspondre les dés avec les couleurs de la note du marque-page, mais aussi avec les chiffres (inscrit sous forme de point) de la feuille de cahier. Attention, la forme dans le mini-jeu est tourné à 180° par rapport au marque-page et à la feuille de cahier.
 
 :::spoiler[l’emplacement des chiffres et couleurs des dés]
 ![Énigme dés couleurs seulement](/jeux/vlr/guide/echappatoires/archives/de_1.webp)

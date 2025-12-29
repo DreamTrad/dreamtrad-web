@@ -23,7 +23,7 @@ Récupérez les objets suivants :
 
 ## Résolution des énigmes
 
-Commencez par combiner le tournevis et le cadre photo pour obtenir la photo d'un vieux bateau de croisière. Au dos de cette photo, il y a la correspondance pour trouver les codes des mallettes rouge et bleue.
+Commencez par combiner le tournevis et le cadre photo pour obtenir la photo d'un vieux bateau de croisière. Au dos de cette photo, il y a la correspondance pour trouver les codes des mallettes bleue et rouge.
 
 :::spoiler[les explications pour trouver les codes]
 Les formes bleues sont pour la mallette bleue et les formes rouges pour la mallette rouge. Il faut donc prendre en compte les deux mémos pour le code de chaque mallette.<br>
@@ -49,7 +49,7 @@ Une fois les codes obtenus, vous pouvez déverrouiller les mallettes, avec les c
 
 Dans les mallettes, vous trouverez des lots de cartes numérotées, et dans la mallette bleue il y aura également un document vous expliquant le concept de racine numérique.
 
-Vous pouvez maintenant vous diriger vers le lecteur à droite de la porte et utiliser les cartes pour sortir. Utilisez les cartes bleues puis les cartes rouges sur le lecteur pour déclencher le minijeu.
+Vous pouvez maintenant vous diriger vers le lecteur à droite de la porte et utiliser les cartes pour sortir. Utilisez les cartes bleues puis les cartes rouges sur le lecteur pour déclencher le mini-jeu.
 
 Vous devez comprendre le concept de racine numérique pour résoudre l’énigme. Relisez le document accessible dans le menu "dossier" si besoin.
 

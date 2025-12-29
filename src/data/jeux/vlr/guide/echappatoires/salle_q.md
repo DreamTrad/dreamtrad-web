@@ -13,7 +13,7 @@ Le cube au centre fonctionne comme un démineur. Le chiffre de chaque case indiq
 ![Mur 4](/jeux/vlr/guide/echappatoires/salle_q/mur_4.webp)
 :::
 
-Allez vers les hexagones. Comme vous pouvez le voir, ils sont tous rouges. Donc sur l’écran du minijeu il faut tous les passer en rouge.
+Allez vers les hexagones. Comme vous pouvez le voir, ils sont tous rouges. Donc sur l’écran du mini-jeu il faut tous les passer en rouge.
 
 :::spoiler[la solution des hexagones]
 ![Énigme de hexagones](/jeux/vlr/guide/echappatoires/salle_q/hexagones.webp)
@@ -21,7 +21,7 @@ Allez vers les hexagones. Comme vous pouvez le voir, ils sont tous rouges. Donc 
 
 Vous pourrez récupérer la carte mémoire rouge et un document sur des règles spécifiques du jeu AB.
 
-Allez prendre 3 fléchettes puis lancer le minijeu de la cible. Il faut faire 100 points, mais avec le premier lancer sur du vert, le deuxième sur du bleu et le troisième sur du rouge.
+Allez prendre 3 fléchettes puis lancer le mini-jeu de la cible. Il faut faire 100 points, mais avec le premier lancer sur du vert, le deuxième sur du bleu et le troisième sur du rouge.
 
 :::spoiler[où tirer les fléchettes]
 ![Énigme des fléchettes](/jeux/vlr/guide/echappatoires/salle_q/flechettes.webp)

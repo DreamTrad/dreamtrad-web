@@ -37,9 +37,9 @@ Vous pouvez désormais récupérer le rideau de douche sur le lit. Et après cel
 
 Vous pouvez utiliser la clé de la coiffeuse sur la coiffeuse où vous avez posé la chandelle. Cela vous donnera accès à une plaque cachée dans le tiroir.
 
-Avec la clé de la chandelle, ouvrez la vitrine du salon pour récupérer la 2ème plaque
+Avec la clé de la chandelle, ouvrez la vitrine du salon pour récupérer la 2ème plaque.
 
-Dirigez-vous vers la salle de bains de la cabine. Accrochez le rideau sur la barre à rideau, puis retournez-vous vers la douche, et en fermant le rideau vous pourrez voir qu’un trou met en évidence un carreau beige, le 5ème en partant du haut, et 3ème en partant de la droite.
+Dirigez-vous vers la salle de bain de la cabine. Accrochez le rideau sur la barre à rideau, puis retournez-vous vers la douche, et en fermant le rideau vous pourrez voir qu’un trou met en évidence un carreau beige, le 5ème en partant du haut, et 3ème en partant de la droite.
 
 Retournez dans la cabine où se trouve Violette, et interagissez avec le carreau de la douche positionné au même endroit. Vous obtiendrez la dernière plaque.
 

@@ -6,19 +6,19 @@ Comment obtenir chaque fin de 9 Hours, 9 Persons, 9 Doors.
 ## Fin hache
 
 :::spoiler[les conditions]
-Faite un de ces choix :
+Faites un de ces choix :
 
 - Porte 5 → Porte 7 → Porte 1
 - Porte 5 → Porte 8 → Porte 1
 - Porte 4 → Porte 8 → Porte 1
-- Porte 4 → Porte 7 → Porte 1 sans faire les bons choix nécessaire à la véritable fin
+- Porte 4 → Porte 7 → Porte 1 sans faire les bons choix nécessaires à la véritable fin
 :::
 
 
 ## Fin couteau
 
 :::spoiler[les conditions]
-Faite un de ces choix :
+Faites un de ces choix :
 
 - Porte 5 → Porte 7 → Porte 6
 - Porte 4 → Porte 8 → Porte 6
@@ -28,7 +28,7 @@ Faite un de ces choix :
 ## Fin sous-marin
 
 :::spoiler[les conditions]
-Faite un de ces choix :
+Faites un de ces choix :
 
 - Porte 5 → Porte 7 → Porte 2
 - Porte 5 → Porte 8 → Porte 2
@@ -61,7 +61,7 @@ Faite les choix suivants :
     - Faite la phase de narration ***"Dossier rouge"*** de l’échappatoire **Quartiers du capitaine**.
     - Faite la phase de narration ***"Écran"*** de l’échappatoire **Quartiers du capitaine**.
 
-Si vous avez déjà fait la fin coffre-fort, la fin sera débloqué automatiquement en même temps que la véritable fin
+Si vous avez déjà fait la fin coffre-fort, la fin sera débloquée automatiquement en même temps que la véritable fin
 :::
 
 ## Véritable fin
