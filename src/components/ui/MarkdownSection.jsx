@@ -1,25 +1,24 @@
-import Link from 'next/link';
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
-import remarkGfm from 'remark-gfm';
-import remarkDirective from 'remark-directive';
-import remarkCustomSpoiler from '@/lib/remarkCustomSpoiler';
-import Spoiler from './Spoiler.client';
+import Link from "next/link";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
+import remarkDirective from "remark-directive";
+import remarkCustomSpoiler from "@/lib/remarkCustomSpoiler";
+import Spoiler from "./Spoiler.client";
 
 function stripFrontmatter(markdown) {
-  if (!markdown.startsWith('---')) return markdown;
+  if (!markdown.startsWith("---")) return markdown;
 
-  const end = markdown.indexOf('\n---', 3);
+  const end = markdown.indexOf("\n---", 3);
   if (end === -1) return markdown;
 
   return markdown.slice(end + 4).trim();
 }
 
-
 export default function MarkdownSection({
   content,
-  className = '',
-  imageClassName = '',
+  className = "",
+  imageClassName = "",
 }) {
   return (
     <div
@@ -39,10 +38,15 @@ export default function MarkdownSection({
             </div>
           ),
           img: (props) => (
-            <img {...props} className={imageClassName || undefined} />
+            <img
+              {...props}
+              loading="lazy"
+              decoding="async"
+              className={imageClassName || undefined}
+            />
           ),
           a: ({ href, children, ...props }) =>
-            href?.startsWith('/') ? (
+            href?.startsWith("/") ? (
               <Link
                 href={href}
                 className="text-accent-secondary hover:text-accent-tertiary font-bold no-underline"
