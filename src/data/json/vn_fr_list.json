@@ -186,6 +186,22 @@
     "description": "Deuxième VN de la série AI: The Somnium Files.\n\nIl y a six ans, on avait retrouvé la moitié droite d’un cadavre. L’autre moitié était introuvable… jusqu’à ce qu’elle réapparaisse six ans plus tard, parfaitement intacte, sans aucune trace de décomposition.\n\nAujourd’hui, les agents spéciaux Mizuki et Ryuki, accompagnés de leurs partenaires IA Aiba et Tama, doivent résoudre l’énigme des meurtres en série dits du « Diviseur », tout en levant le voile sur un complot mystérieux connu sous le nom de Nirvana Initiative…"
   },
   {
+    "id": "amour_sucre_campus_life",
+    "titre": "Amour Sucré Campus Life",
+    "image": "/poster/amour_sucre_campus_life.webp",
+    "genre": ["romance", "tranche de vie"],
+    "duree": "plus de 80h",
+    "note_vndb": "5.42",
+    "popularite_vndb": "8478",
+    "plateforme": ["web", "ios", "android"],
+    "lien_jeu": [
+      "https://vndb.org/v45797",
+      "https://www.amoursucre.com/campus-life"
+    ],
+    "patch_fr": [],
+    "description": "Second VN de la série Amour Sucré.\n\nVotre Sucrette a bien grandi depuis Sweet Amoris (votre ancien lycée), il est temps de découvrir la vie de campus et de jeune adulte !  \nRetrouvez vos anciens amis du lycée et de nouveaux personnages tel que Rayan, votre professeur d'art ou bien Hyun, un jeune serveur du Cosy Bear Café."
+  },
+  {
     "id": "amour_sucre_high_school_life",
     "titre": "Amour Sucré High School Life",
     "image": "/poster/amour_sucre_high_school_life.webp",
