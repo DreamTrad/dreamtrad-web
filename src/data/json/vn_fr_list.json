@@ -509,6 +509,23 @@
     "description": "Deuxième VN de la série des aventures de Kyle Hyde.\n\nUn an après les événements du premier, Kyle Hyde se retrouve impliqué dans une nouvelle affaire au sein des appartements Cape West. Bien que l’intrigue soit distincte de celle du premier opus, plusieurs liens subsistent avec les événements passés."
   },
   {
+    "id": "marco_et_le_dragon_galaxie",
+    "titre": "Marco et le dragon-galaxie",
+    "image": "/poster/marco_et_le_dragon_galaxie.webp",
+    "genre": ["aventure", "comédie"],
+    "duree": "5h-10h",
+    "note_vndb": "7.62",
+    "popularite_vndb": "274",
+    "plateforme": ["pc", "switch"],
+    "lien_jeu": [
+      "https://vndb.org/v26902",
+      "https://store.steampowered.com/app/1202540/Marco_et_le_dragongalaxie/",
+      "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Marco-The-Galaxy-Dragon-2190781.html"
+    ],
+    "patch_fr": [],
+    "description": "Marco, une orpheline qui a perdu la mémoire, et Arco, le dragon régnant sur la galaxie. Ensemble, elles parcourent l'univers à la recherche de trésors ! Pendant son périple, Marco obtient un indice sur la localisation de sa mère. Prochaine étape : la Terre !"
+  },
+  {
     "id": "narcissu",
     "titre": "narcissu",
     "image": "/poster/narcissu.webp",
