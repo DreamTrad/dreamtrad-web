@@ -107,7 +107,7 @@ export default function DiscoverCard({
           />
         </div>
 
-        <div className="bg-bg-secondary prose prose-invert text-text-secondary max-w-none flex-3 rounded-md p-4 text-sm">
+        <div className="bg-bg-secondary prose prose-invert text-text-secondary text-justify max-w-none flex-3 rounded-md p-4 text-sm">
           <ReactMarkdown>{description}</ReactMarkdown>
         </div>
       </div>

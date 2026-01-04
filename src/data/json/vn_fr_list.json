@@ -186,6 +186,22 @@
     "description": "Deuxième VN de la série AI: The Somnium Files.\n\nIl y a six ans, on avait retrouvé la moitié droite d’un cadavre. L’autre moitié était introuvable… jusqu’à ce qu’elle réapparaisse six ans plus tard, parfaitement intacte, sans aucune trace de décomposition.\n\nAujourd’hui, les agents spéciaux Mizuki et Ryuki, accompagnés de leurs partenaires IA Aiba et Tama, doivent résoudre l’énigme des meurtres en série dits du « Diviseur », tout en levant le voile sur un complot mystérieux connu sous le nom de Nirvana Initiative…"
   },
   {
+    "id": "amour_sucre_high_school_life",
+    "titre": "Amour Sucré High School Life",
+    "image": "/poster/amour_sucre_high_school_life.webp",
+    "genre": ["romance", "tranche de vie"],
+    "duree": "30h-40h",
+    "note_vndb": "5.74",
+    "popularite_vndb": "1172",
+    "plateforme": ["web", "ios", "android"],
+    "lien_jeu": [
+      "https://vndb.org/v12546",
+      "https://www.amoursucre.com/high-school-life"
+    ],
+    "patch_fr": [],
+    "description": "Premier VN de la série Amour Sucré.\n\nUn déménagement, une nouvelle ville, un nouveau lycée et une nouvelle vie !  \nBienvenue à Sweet Amoris, votre nouveau lycée.  \nVous y incarnez Sucrette, un personnage personnalisable (sauf pour le genre), découvrant son nouveau lycée et faisant la connaissance de ses nouveaux camarades dont deux garçons : Nathaniel, le délégué principal, un mec plutôt sympa, très sérieux et droit et Castiel le rebelle du lycée, pas si évident à approcher. Il y a aussi Ken, un ami de votre ancienne école très amoureux de vous et qui vous a suivi jusqu'ici !"
+  },
+  {
     "id": "clannad",
     "titre": "CLANNAD",
     "image": "/poster/clannad.webp",
