@@ -303,6 +303,22 @@
     "description": "Takuma Momotsuka participe à un camp de vacances consacré à l’étude de l’histoire pendant le printemps.\n\nLe deuxième jour, lui et les autres enfants visitent un sanctuaire où doit se tenir un festival en l’honneur des bêtes divines. En explorant les lieux, Takuma tombe sur une étrange créature : Koromon. Peu après, un cri retentit et ils découvrent que ses camarades sont attaqués par des monstres. Pour les sauver, Koromon évolue en Agumon et affronte l’ennemi.\n\nGrâce à lui, Takuma parvient à repousser les créatures, mais se rend vite compte que la zone est plongée dans un épais brouillard et qu’il s’est égaré… dans un monde inconnu."
   },
   {
+    "id": "eldarya_the_origins",
+    "titre": "Eldarya The Origins",
+    "image": "/poster/eldarya_the_origins.webp",
+    "genre": ["romance", "fantasy"],
+    "duree": "plus de 80h",
+    "note_vndb": "5.41",
+    "popularite_vndb": "3579",
+    "plateforme": ["web", "ios", "android"],
+    "lien_jeu": [
+      "https://vndb.org/v16451",
+      "https://www.eldarya.fr/origins/register"
+    ],
+    "patch_fr": [],
+    "description": "Premier VN de la série Eldarya.\n\n“Le cristal a été brisé…”  \nLa cité d'Eldarya doit être sauvée. Tu sembles être liée à son protecteur, bien que tu n'appartiennes pas à ce monde…  \nPourras-tu sauver Eldarya et préserver ton cœur ?\n\nIncarnez Erika (un personnage personnalisable (sauf pour le genre)), une humaine de la bourgeoisie qui se fait téléporter dans le monde d'Eldarya après avoir marché dans un cercle de champignons."
+  },
+  {
     "id": "famicom_detective_club_emio",
     "titre": "Emio – L'Homme au sourire : Famicom Detective Club",
     "image": "/poster/famicom_detective_club_emio.webp",
