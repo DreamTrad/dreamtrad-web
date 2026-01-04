@@ -186,6 +186,21 @@
     "description": "Deuxième VN de la série AI: The Somnium Files.\n\nIl y a six ans, on avait retrouvé la moitié droite d’un cadavre. L’autre moitié était introuvable… jusqu’à ce qu’elle réapparaisse six ans plus tard, parfaitement intacte, sans aucune trace de décomposition.\n\nAujourd’hui, les agents spéciaux Mizuki et Ryuki, accompagnés de leurs partenaires IA Aiba et Tama, doivent résoudre l’énigme des meurtres en série dits du « Diviseur », tout en levant le voile sur un complot mystérieux connu sous le nom de Nirvana Initiative…"
   },
   {
+    "id": "amour_sucre_alternate_life",
+    "titre": "Amour Sucré Alternate Life",
+    "image": "/poster/amour_sucre_alternate_life.webp",
+    "genre": ["romance", "tranche de vie"],
+    "duree": "5h-10h",
+    "note_vndb": "",
+    "popularite_vndb": "",
+    "plateforme": ["web", "ios", "android"],
+    "lien_jeu": [
+      "https://www.amoursucre.com/alternate-life"
+    ],
+    "patch_fr": [],
+    "description": "VN alternatif du jeu \"Amour Sucré Campus Life\".  \nCe VN se concentre sur Lysandre, Kentin et Armin, trois partenaires potentiels d’Amour Sucré High School Life.\n\nEt si ta dernière année à Antéros Academy s’était passée différemment ? Et si ton premier amour était toujours à Amoris ?  \nRetrouve ton amour de jeunesse et développe une nouvelle romance avec lui ! Retrouveras-tu l’homme que tu connais et aimes ou vous serez-vous trop éloignés pour reprendre là où vous vous êtes arrêtés ? Entre amour et problèmes de jeunes adultes, cette nouvelle aventure s’annonce surprenante !"
+  },
+  {
     "id": "amour_sucre_campus_life",
     "titre": "Amour Sucré Campus Life",
     "image": "/poster/amour_sucre_campus_life.webp",
