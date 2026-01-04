@@ -234,6 +234,22 @@
     "description": "Troisième VN de la série Amour Sucré.\n\nAprès l’université, tu explores ce nouveau monde aux côtés de la personne que tu aimes ! Choisis l’élu de ton cœur et pars à la conquête de ton futur ! Arriveras-tu à entretenir la flamme et vivre une passion sans embûches ? Les choix que tu fais définissent ton futur amoureux !"
   },
   {
+    "id": "amour_sucre_new_gen",
+    "titre": "Amour Sucré NewGen",
+    "image": "/poster/amour_sucre_new_gen.webp",
+    "genre": ["romance", "tranche de vie"],
+    "duree": "20h-30h",
+    "note_vndb": "5.28",
+    "popularite_vndb": "14515",
+    "plateforme": ["web", "ios", "android"],
+    "lien_jeu": [
+      "https://vndb.org/v51607",
+      "https://www.amoursucre-newgen.com"
+    ],
+    "patch_fr": [],
+    "description": "Side story de la série Amour Sucré.\n\nExplore les rues colorées d'Amoris et découvre le bureau le plus fun de toute la ville, mais surtout, fait la connaissance de tes séduisants collègues et plus si affinités…  \nOu peut-être te laisseras-tu tenter par ton ennemi ?"
+  },
+  {
     "id": "clannad",
     "titre": "CLANNAD",
     "image": "/poster/clannad.webp",
