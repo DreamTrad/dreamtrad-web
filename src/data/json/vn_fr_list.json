@@ -401,14 +401,15 @@
     "id": "fata_morgana",
     "titre": "The House in Fata Morgana",
     "image": "/poster/fata_morgana.webp",
-    "genre": ["drame"],
+    "genre": ["drame", "mystère"],
     "duree": "30h-40h",
     "note_vndb": "8.81",
     "popularite_vndb": "32",
     "plateforme": ["pc"],
     "lien_jeu": [
       "https://vndb.org/v12402",
-      "https://store.steampowered.com/app/303310/The_House_in_Fata_Morgana/"
+      "https://store.steampowered.com/app/303310/The_House_in_Fata_Morgana/",
+      "https://www.mangagamer.com/detail.php?goods_type=1&product_code=143"
     ],
     "patch_fr": [],
     "description": "Premier VN de la série Fata Morgana.\n\nVous vous réveillez dans un vieux manoir délabré, face à une femme aux yeux de jade qui se présente comme votre servante. Elle vous apprend que vous êtes le maître du manoir, mais vous n’avez aucun souvenir de qui vous êtes, ni même si vous êtes vivant.\n\nElle vous invite à explorer les couloirs du manoir et à contempler les tragédies de ses habitants à travers quatre portes :\n\nEn 1603, l’art et le théâtre prospèrent, mais tous les enfants Rhodes ne trouvent pas leur bonheur dans ce jardin fleuri.\n\nEn 1707, le manoir en ruines abrite une bête dont la férocité provoque un massacre.\n\nEn 1869, époque de grandes avancées technologiques, le maître du manoir, un homme d’affaires ambitieux investi dans les chemins de fer, devient obsédé par l’argent et le pouvoir, négligeant et maltraitant son épouse.\n\nEn 1099, un jeune homme se croit maudit et une fille aux cheveux blancs, Giselle, est pourchassée pour sorcellerie.\n\nAprès avoir assisté à ces tragédies, vous pouvez choisir de clore votre histoire… ou de continuer. Mais une voix vous avertit : « Tu as pu les supporter parce que ce n’étaient pas tes tragédies. »"
@@ -641,6 +642,24 @@
     ],
     "patch_fr": [],
     "description": "Yuma, un détective amnésique en formation, et Shinigami, l’esprit qui le hante, s’attaquent à une série d’affaires non résolues dans cette aventure policière au style noir et surréaliste. Dans Kanai Ward, la ville où la pluie ne cesse de tomber, d’innombrables mystères attendent d’être élucidés. Explorez ses rues en 3D et dénichez des « clés solutions » pour percer la vérité."
+  },
+  {
+    "id": "seventh_lair",
+    "titre": "Seventh Lair",
+    "image": "/poster/seventh_lair.webp",
+    "genre": ["mystère", "drame"],
+    "duree": "1h-5h",
+    "note_vndb": "7.25",
+    "popularite_vndb": "1020",
+    "plateforme": ["pc", "switch"],
+    "lien_jeu": [
+      "https://vndb.org/v14878",
+      "https://store.steampowered.com/app/1909810/Seventh_Lair/",
+      "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Seventh-Lair-2331996.html",
+      "https://www.mangagamer.com/detail.php?goods_type=1&product_code=1276"
+    ],
+    "patch_fr": [],
+    "description": "Spin-off du jeu The House in Fata Morgana. Le scénario de Seventh Lair est indépendant de The House in Fata Morgana, mais plusieurs éléments divulgâchent le jeu original.\n\nDark†Knight est un développeur de jeux vidéo indépendant sans grand succès, jeux qu'il publie sur son site Royaume Heven. \"Je vais sortir un nouveau jeu le 1er avril.\" annonce-t-il sur le forum du site. Mais au moment de télécharger le jeu, lui et les habitués de Royaume Heven se retrouvent tous transportés dans un jeu vidéo. Quel est ce monde, et comment en sortir ?  \nLe site de Royaume Heven est [disponible ici](https://novect.net/royaume_fr/royaume.html)."
   },
   {
     "id": "silver_case",
