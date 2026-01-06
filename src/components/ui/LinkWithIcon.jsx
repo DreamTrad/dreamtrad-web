@@ -45,6 +45,7 @@ const iconMap = [
     icon: "/icons/website/youtube.svg",
     label: "YouTube",
   },
+  { match: ["gog.com"], icon: "/icons/website/gog.svg", label: "GOG" },
 ];
 
 export default function LinkWithIcon({ url }) {
