@@ -432,6 +432,24 @@
     "description": "Deuxième VN de la série Fata Morgana.\n\nUne jeune fille, dont on dit que le sang a des pouvoirs curatifs, est à genoux devant le seigneur des terres environnantes, mutilée et battue. Dans son village natal, elle était considérée comme la fille de Dieu. Et à présent, le seigneur brandit son épée, sur le point de lui couper la tête.\n\n« Tu es une foutue sorcière dans la peau d'une sainte ! »\n\n\nMais juste avant qu'il puisse abattre sa lame, un jeune homme surgit, sauvant la fille\n\nAinsi commence le premier chapitre « heureux » de la vie de cette fillette.\nDébute alors le premier acte d'une tragédie qui s'étendra sur près d'un millénaire."
   },
   {
+    "id": "gare_saihate",
+    "titre": "La Gare Saihate",
+    "image": "/poster/gare_saihate.webp",
+    "genre": ["aventure", "horreur"],
+    "duree": "1h-5h",
+    "note_vndb": "7.23",
+    "popularite_vndb": "1922",
+    "plateforme": ["pc", "ios", "android"],
+    "lien_jeu": [
+      "https://vndb.org/v50880",
+      "https://store.steampowered.com/app/3079280/La_Gare_Saihate/",
+      "https://apps.apple.com/fr/app/la-gare-saihate/id6743648252",
+      "https://play.google.com/store/apps/details?id=com.viv.saihate"
+    ],
+    "patch_fr": [],
+    "description": "*Après m'être assoupi dans le dernier train de la journée, je me réveille dans un endroit étrange : la gare Saihate…*\n\nUn jeu d'horreur et d'aventure-exploration sous fond de relation de codépendance et d'amour-haine entre deux hommes."
+  },
+  {
     "id": "gnosia",
     "titre": "Gnosia",
     "image": "/poster/gnosia.webp",
