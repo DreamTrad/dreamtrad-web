@@ -595,6 +595,24 @@
     "description": "Deuxième VN de la série Narcissu.\n\nL’intrigue de Narcissu -SIDE 2nd- tourne autour de Setsumi, l’héroïne de Narcissu premier du nom, ainsi que des personnes et des circonstances qui ont façonné le personnage présenté dans le premier jeu. Elle partage ici la vedette avec de nouveaux personnages, dont Himeko, Yuka et Chihiro."
   },
   {
+    "id": "noexistencen",
+    "titre": "The NOexistenceN of you AND me",
+    "image": "/poster/noexistencen.webp",
+    "genre": [],
+    "duree": "1h-5h",
+    "note_vndb": "6.94",
+    "popularite_vndb": "596",
+    "plateforme": ["pc", "android", "ios"],
+    "lien_jeu": [
+      "https://vndb.org/v49859",
+      "https://store.steampowered.com/app/2873080/The_NOexistenceN_of_you_AND_me/",
+      "https://play.google.com/store/apps/details?id=com.nino.tulpa.google",
+      "https://apps.apple.com/fr/app/the-noexistencen-of-you-and-me/id6746189288"
+    ],
+    "patch_fr": [],
+    "description": "Utilisez le « jeu » comme support pour présenter le monde de « toi/elle ». Explorez la vérité sur « toi/elle/monde » sous la forme d'un « roman visuel »"
+  },
+  {
     "id": "paranormasight",
     "titre": "Paranormasight: The Seven Mysteries of Honjo",
     "image": "/poster/paranormasight.webp",
