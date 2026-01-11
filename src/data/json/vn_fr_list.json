@@ -545,6 +545,25 @@
     "description": "Deuxième VN de la série des aventures de Kyle Hyde.\n\nUn an après les événements du premier, Kyle Hyde se retrouve impliqué dans une nouvelle affaire au sein des appartements Cape West. Bien que l’intrigue soit distincte de celle du premier opus, plusieurs liens subsistent avec les événements passés."
   },
   {
+    "id": "looking_up_i_see_only_a_celling",
+    "titre": "Looking Up I See Only A Ceiling",
+    "image": "/poster/looking_up_i_see_only_a_celling.webp",
+    "genre": ["gameplay", "horreur"],
+    "duree": "moins de 1h",
+    "note_vndb": "6.00",
+    "popularite_vndb": "1935",
+    "plateforme": ["pc", "switch", "android", "ios"],
+    "lien_jeu": [
+      "https://vndb.org/v44312",
+      "https://store.steampowered.com/app/1742930/Looking_Up_I_See_Only_A_Ceiling/",
+      "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Looking-Up-I-See-Only-A-Ceiling-2512456.html",
+      "https://play.google.com/store/apps/details?id=com.silver978.luisoac",
+      "https://apps.apple.com/fr/app/luisoac/id6451037627"
+    ],
+    "patch_fr": [],
+    "description": "La courte aventure psychologique d'une fille anxieuse qui décide d'explorer son grenier."
+  },
+  {
     "id": "marco_et_le_dragon_galaxie",
     "titre": "Marco et le dragon-galaxie",
     "image": "/poster/marco_et_le_dragon_galaxie.webp",
