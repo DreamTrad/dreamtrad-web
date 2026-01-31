@@ -564,6 +564,21 @@
     "description": "La courte aventure psychologique d'une fille anxieuse qui décide d'explorer son grenier."
   },
   {
+    "id": "mahoyo",
+    "titre": "Witch on the Holy Night",
+    "image": "/poster/mahoyo.webp",
+    "genre": ["fantasy"],
+    "duree": "30h-40h",
+    "note_vndb": "8.64",
+    "popularite_vndb": "58",
+    "plateforme": ["pc"],
+    "lien_jeu": [
+      " https://vndb.org/v777"
+    ],
+    "patch_fr": ["fr:https://github.com/IDerr/mahoyo-french"],
+    "description": "À la fin de l'ère Showa, Aoko Aozaki continue sa formation en arts magiques dans un manoir qu'elle occupe avec une autre mage, Alice Kuonji. Mais l'arrivée d'un jeune homme Soujuurou Shizuki en ville va perturber le quotidien des deux sorcières.\n\nLe visual novel se déroule dans le même univers que The Garden of Sinners, Tsukihime ou encore Fate/Stay night."
+  },
+  {
     "id": "marco_et_le_dragon_galaxie",
     "titre": "Marco et le dragon-galaxie",
     "image": "/poster/marco_et_le_dragon_galaxie.webp",
