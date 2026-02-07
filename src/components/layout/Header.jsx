@@ -6,7 +6,7 @@ import NavLink from "../ui/NavLink";
 
 const mainMenu = [
   { name: "Accueil", to: "/" },
-  { name: "Visual Novel", to: "/jeux" },
+  { name: "Visual novel", to: "/jeux" },
   { name: "Recrutement", to: "/recrutement" },
   { name: "Articles", to: "/articles" },
   { name: "VNDB-FR", to: "/vndb-fr" },

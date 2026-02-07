@@ -2,7 +2,7 @@ Au lancement du site, deux nouveaux projets ont démarré, mais nous avons aussi
 
 ## 428: Shibuya Scramble
 
-Ce projet a été lancé l’année dernière. Il s’agit d’un Visual Novel de renom de Spike Chunsoft par Jiro Ishi. Sa particularité est de faire usage de photos et d’acteurs au lieu des traditionnels dessins, ou modèles 3D.
+Ce projet a été lancé l’année dernière. Il s’agit d’un visual novel de renom de Spike Chunsoft par Jiro Ishi. Sa particularité est de faire usage de photos et d’acteurs au lieu des traditionnels dessins, ou modèles 3D.
 
 *Dans le quartier de Shibuya, durant la journée du 28 avril, plusieurs histoires s'entremêlent. Entre un kidnapping, les difficultés d'un journal, un virus mortel, un produit amincissant et un gang de voyous, le quartier et son croisement emblématique sont la scène d'un scénario haletant. Vont-ils réussir à s'échapper de cette journée infernale ? Par vos choix, leur sort, ainsi que celui de la ville, changera. Pour le pire ou pour le meilleur.*
 
@@ -18,7 +18,7 @@ Vous pouvez suivre l’avancée sur la [page d’accueil](/) et découvrir un pe
 
 ## The Divine Deception
 
-The Divine Deception est un Visual Novel indépendant anglais. Il s’agit du 2e épisode d’une série contenant à l’heure actuelle 4 épisodes.
+The Divine Deception est un visual novel indépendant anglais. Il s’agit du 2e épisode d’une série contenant à l’heure actuelle 4 épisodes.
 
 *Quelque chose se passe à Panthea… La plupart des gens n’en ont aucune idée et vivent leur quotidien sans rien remarquer. Mais pour ceux qui voient plus loin, les vents du changement sont impossibles à ignorer. L’élection à venir a vu apparaître un adversaire inattendu face au gouverneur sortant. La plus grande entreprise de la ville traverse une phase de restructuration. Le milieu criminel semble lentement s’effondrer sur lui-même. Et pendant ce temps, une série mystérieuse de meurtres met toute la population sur les nerfs. Un grand mensonge est raconté à tous, et si la vérité n’est pas révélée bientôt, Panthea finira en flammes. Envie de connaître la vérité ? Lisez The Divine Deception et découvrez-la.*
 
@@ -26,7 +26,7 @@ Le premier épisode, Zodiac Trial, a déjà été traduit et le patch est sorti 
 
 Pour la suite de la série, Divine Deception, nous en sommes aux 50 % également ! De plus la partie technique est faite. Il y aura quelques images à éditer, mais rien de très long. La traduction avance à un bon rythme malgré la longueur de script.
 
-De même, vous pouvez retrouver l’avancée sur la [page d’accueil](/) et avoir un peu plus de précision sur le Visual Novel sur sa [page dédiée](/jeux/divine_deception).
+De même, vous pouvez retrouver l’avancée sur la [page d’accueil](/) et avoir un peu plus de précision sur le visual novel sur sa [page dédiée](/jeux/divine_deception).
 
 ![Divine Deception screenshot](/articles-content/0003/divine_deception_image3.webp)
 
@@ -68,7 +68,7 @@ Il s’agit du troisième épisode d’une trilogie de Suda51 (connu pour Killer
 
 *Cinq ans se sont écoulés depuis les événements de The Silver Case, dans le nouvel Arrondissement 25 apparu dans la zone côtière du Kanto. Dans une chambre du complexe résidentiel Bayside Tower Land, une femme est retrouvée assassinée dans des circonstances mystérieuses. Cet incident déclenche une série d’événements apparemment sans lien, réunissant plusieurs protagonistes, dont Tokio Morishima de The Silver Case. Une fois tous les points de vue rassemblés, un schéma véritablement choquant se révèle…*
 
-Plus de 20 % du Visual Novel est déjà traduit. La liste des images à modifier n’a pas encore été étudiée et il reste des points techniques à corriger.
+Plus de 20 % du visual novel est déjà traduit. La liste des images à modifier n’a pas encore été étudiée et il reste des points techniques à corriger.
 
 Suivez l’avancée de la traduction du jeu sur la [page d’accueil](/) et découvrez-le un peu plus sa [page dédiée](/jeux/silver_case_25th_ward).
 

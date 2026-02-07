@@ -7,11 +7,11 @@ export const dynamic = "force-static";
 export const metadata = {
   title: "Liste des jeux",
   description:
-    "Liste des Visual Novel traduits ou en cours de traduction par l’équipe. Téléchargez des patchs, consultez des guides ou découvrez simplement les jeux.",
+    "Liste des visual novels traduits ou en cours de traduction par l’équipe. Téléchargez des patchs, consultez des guides ou découvrez simplement les jeux.",
   openGraph: {
     title: "Liste des jeux",
     description:
-      "Liste des Visual Novel traduits ou en cours de traduction par l’équipe.",
+      "Liste des visual novels traduits ou en cours de traduction par l’équipe.",
     url: "/jeux",
     images: [
       {
@@ -28,7 +28,7 @@ export default function GamesListPage() {
   return (
       <div className="bg-bg-primary text-text-primary min-h-screen p-10">
         <h1 className="mb-8 text-center text-3xl font-bold">
-          Visual Novel
+          visual novels
         </h1>
 
         <div className="grid grid-cols-[repeat(auto-fit,350px)] justify-center gap-8">

@@ -1,6 +1,6 @@
 # 428 : Shibuya Scramble
 
-428 : Shibuya Scramble (428 ～封鎖された渋谷で～) est un jeu hybride, mêlant Visual Novel et FMV. Ce jeu de Jiro Ishii, sorti originellement sur Wii en 2008 au Japon, a été adulé par la critique, ayant même eu la note parfaite du 40/40 chez Famitsu, étant le seul Visual Novel à avoir eu ce prestige. Une version internationale anglaise existe depuis 2018 sur PS4 & PC. Publié originellement par SEGA et développé par Chunsoft avant la fusion avec Spike, ce jeu, connu pour son univers et ses 87 fins, est un jeu ayant inspiré beaucoup d'autres.
+428 : Shibuya Scramble (428 ～封鎖された渋谷で～) est un jeu hybride, mêlant visual novel et FMV. Ce jeu de Jiro Ishii, sorti originellement sur Wii en 2008 au Japon, a été adulé par la critique, ayant même eu la note parfaite du 40/40 chez Famitsu, étant le seul visual novel à avoir eu ce prestige. Une version internationale anglaise existe depuis 2018 sur PS4 & PC. Publié originellement par SEGA et développé par Chunsoft avant la fusion avec Spike, ce jeu, connu pour son univers et ses 87 fins, est un jeu ayant inspiré beaucoup d'autres.
 
 ## Scénario
 

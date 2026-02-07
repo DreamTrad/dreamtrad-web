@@ -12,12 +12,12 @@ export async function generateMetadata(_, parent) {
     ...parentMetadata,
 
     title: 'vndb-fr',
-    description: 'Découvrez des Visual Novel disponibles en français.',
+    description: 'Découvrez des visual novels disponibles en français.',
 
     openGraph: {
       ...parentMetadata.openGraph,
       title: 'vndb-fr',
-      description: 'Découvrez des Visual Novel disponibles en français.',
+      description: 'Découvrez des visual novels disponibles en français.',
       url: '/vndb-fr',
     },
   };

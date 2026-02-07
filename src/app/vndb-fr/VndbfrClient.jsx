@@ -167,7 +167,7 @@ export default function VndbfrClient({ initialData, markdownContent }) {
 
   return (
     <div className="max-w-9xl mx-auto p-8">
-      <InfoBox title="Découvrir des Visual Novel en français" icon="📚">
+      <InfoBox title="Découvrir des visual novels en français" icon="📚">
         <MarkdownSection content={markdownContent} />
       </InfoBox>
 
@@ -210,8 +210,8 @@ export default function VndbfrClient({ initialData, markdownContent }) {
           value={vndbLinkFilter}
           onChange={(e) => setVndbLinkFilter(e.target.value)}
         >
-          <option value="">Visual Novel et jeux semblables</option>
-          <option value="with">Visual Novel uniquement</option>
+          <option value="">Visual novels et jeux semblables</option>
+          <option value="with">Visual novels uniquement</option>
           <option value="without">Jeux semblables uniquement</option>
         </select>
 

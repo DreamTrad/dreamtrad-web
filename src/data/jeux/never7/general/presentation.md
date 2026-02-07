@@ -1,6 +1,6 @@
 # Never7 - The End of Infinity
 
-Never7 est le premier Visual Novel de la série Infinity. Cette série a été réalisée par Uchikoshi avant qu’il ne fasse Zero Escape et AI: The Somnium Files. On y retrouve aussi Nakazawa qui a à maintes reprises travaillé avec Uchikoshi.
+Never7 est le premier visual novel de la série Infinity. Cette série a été réalisée par Uchikoshi avant qu’il ne fasse Zero Escape et AI: The Somnium Files. On y retrouve aussi Nakazawa qui a à maintes reprises travaillé avec Uchikoshi.
 
 À la base, Never7 est sorti sur PlayStation puis sur plusieurs vieilles consoles dans tout un tas d’itérations différentes. En 2025, un remaster sur PS4, Switch et Steam est sorti.
 

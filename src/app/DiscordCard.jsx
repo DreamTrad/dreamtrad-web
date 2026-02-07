@@ -47,7 +47,7 @@ export default function DiscordWidget({ inviteUrl }) {
       <div className="w-full">
         <h3 className="text-accent mb-2 font-semibold">Rejoindre le Discord</h3>
         <p className="text-text-secondary mb-4 text-sm">
-          Discutez de Visual Novel, participez aux bêta-tests ou contribuez aux
+          Discutez de visual novels, participez aux bêta-tests ou contribuez aux
           projets !
         </p>
         <a

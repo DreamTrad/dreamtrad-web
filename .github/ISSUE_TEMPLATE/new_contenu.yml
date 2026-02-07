@@ -8,8 +8,8 @@ body:
   - type: dropdown
     id: vn
     attributes:
-      label: Visual Novel
-      description: Le Visual Novel concerné par ce contenu
+      label: visual novel
+      description: Le visual novel concerné par ce contenu
       options:
         - "The 25th Ward: The Silver Case"
         - "428: Shibuya Scramble"

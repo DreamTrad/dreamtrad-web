@@ -1,6 +1,6 @@
 # The Zodiac Trial
 
-The Zodiac Trial est un Visual Novel indé anglais sorti le 21 janvier 2021.
+The Zodiac Trial est un visual novel indé anglais sorti le 21 janvier 2021.
 
 ## Scénario
 

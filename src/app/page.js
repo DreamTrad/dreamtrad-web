@@ -35,7 +35,7 @@ export default async function HomePage() {
         {/* Main column */}
         <div className="flex flex-col gap-6 lg:col-span-2">
           <InfoBox
-            title="Traduction et promotion du Visual Novel en français !"
+            title="Traduction et promotion du visual novel en français !"
             icon="✨"
             className="mt-2"
           >

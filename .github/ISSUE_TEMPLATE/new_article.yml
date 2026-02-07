@@ -8,7 +8,7 @@ body:
   - type: markdown
     attributes:
      value: |
-        Les articles doivent être un minimum en lien avec soit les Visual Novel traduits par l’équipe, soit sur les Visual Novel en général, soit sur le sujet de la traduction. Ça peut être une actualité, ou un dossier, un témoignage… Mais sentez-vous libre de proposer un article sur un sujet, juste le titre et l’explication de pourquoi cet article, et si on valide, pour pourrez rédiger l’article ensuite en modifiant l’issue.
+        Les articles doivent être un minimum en lien avec soit les visual novels traduits par l’équipe, soit sur les visual novels en général, soit sur le sujet de la traduction. Ça peut être une actualité, ou un dossier, un témoignage… Mais sentez-vous libre de proposer un article sur un sujet, juste le titre et l’explication de pourquoi cet article, et si on valide, pour pourrez rédiger l’article ensuite en modifiant l’issue.
 
   - type: textarea
     id: explication
