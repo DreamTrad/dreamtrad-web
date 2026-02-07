@@ -4,7 +4,7 @@
     "title": "The 25th Ward: The Silver Case",
     "image": "/poster/silver_case_25th_ward.webp",
     "progress": {
-      "traduction": "24",
+      "traduction": "25",
       "images": "0",
       "technique": "30",
       "relecture": "0"
@@ -26,7 +26,7 @@
     "title": "The Divine Deception",
     "image": "/poster/divine_deception.webp",
     "progress": {
-      "traduction": "72",
+      "traduction": "74",
       "images": "0",
       "technique": "100",
       "relecture": "0"
@@ -39,7 +39,7 @@
     "progress": {
       "traduction": "11",
       "images": "0",
-      "technique": "50",
+      "technique": "60",
       "relecture": "0"
     }
   }
