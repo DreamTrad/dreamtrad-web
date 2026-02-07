@@ -66,6 +66,7 @@ export default function VndbfrClient({ initialData, markdownContent }) {
   const [selectedGenres, setSelectedGenres] = useState([]);
   const [selectedDurees, setSelectedDurees] = useState([]);
   const [traductionFilter, setTraductionFilter] = useState("");
+  const [vndbLinkFilter, setVndbLinkFilter] = useState("");
   const [sortOption, setSortOption] = useState("titre-asc");
 
   const data = initialData ?? [];
@@ -121,9 +122,27 @@ export default function VndbfrClient({ initialData, markdownContent }) {
             ? !hasFanTrad
             : hasFanTrad;
 
-      return nameMatch && genreMatch && dureeMatch && tradMatch;
+      const hasVndbLink =
+        Array.isArray(p.lien_jeu) &&
+        p.lien_jeu.some((l) => l.includes("vndb.org"));
+
+      const vndbMatch =
+        vndbLinkFilter === ""
+          ? true
+          : vndbLinkFilter === "with"
+            ? hasVndbLink
+            : !hasVndbLink;
+
+      return nameMatch && genreMatch && dureeMatch && tradMatch && vndbMatch;
     });
-  }, [data, searchTerm, selectedGenres, selectedDurees, traductionFilter]);
+  }, [
+    data,
+    searchTerm,
+    selectedGenres,
+    selectedDurees,
+    traductionFilter,
+    vndbLinkFilter,
+  ]);
 
   const sorted = useMemo(() => {
     return [...filtered].sort((a, b) => {
@@ -184,6 +203,16 @@ export default function VndbfrClient({ initialData, markdownContent }) {
           <option value="">Toutes traductions</option>
           <option value="officielle">Officielle</option>
           <option value="non-officielle">Fantraduction</option>
+        </select>
+
+        <select
+          className="border-hover-tertiary bg-bg-tertiary text-text-tertiary rounded-xl border p-2"
+          value={vndbLinkFilter}
+          onChange={(e) => setVndbLinkFilter(e.target.value)}
+        >
+          <option value="">Visual Novel et jeux semblables</option>
+          <option value="with">Visual Novel uniquement</option>
+          <option value="without">Jeux semblables uniquement</option>
         </select>
 
         <select
