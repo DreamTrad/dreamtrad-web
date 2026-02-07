@@ -3,3 +3,5 @@
 La liste sera mise à jour au fil du temps pour proposer de plus en plus de Visual Novel à découvrir. Si vous souhaitez rédiger la fiche pour un Visual Novel non-présent dans la liste, n’hésitez pas à [le faire](https://github.com/DreamTrad/dreamtrad-web/issues/new?template=new_vn_fr.yml) !
 
 Si l’anglais, le japonais (voire d’autres langues) ne vous font pas peur, nous vous invitons à vous rendre directement sur [vndb](https://vndb.org/) pour y trouver une tonne d’information sur chaque Visual Novel, et pouvoir aussi découvrir des Visual Novel qui ne sont pas traduits en français.
+
+En plus des visual novels présents sur VNDB, nous proposons également quelques jeux vidéo qui ne sont pas suffisamment des visual novels pour y être référencés, mais qui devraient plaire aux fans de visual novels. Et inversement, si ces jeux vous plaisent, peut-être aimerez-vous aussi les visual novels !
