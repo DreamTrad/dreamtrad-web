@@ -3,7 +3,7 @@ import { team } from "./patchfr/team";
 
 export const game = {
   id: "paranormasight",
-  name: "PARANORMASIGHT",
+  name: "PARANORMASIGHT: The Seven Mysteries of Honjo",
   categories: {
     general: {
       name: "Le Jeu",
