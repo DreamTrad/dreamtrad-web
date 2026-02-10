@@ -1,4 +1,4 @@
-Lors du Nintendo Direct du 5 février, nous avons pu découvrir un nouveau jeu Paranormasight intitulé **PARANORMASIGHT: The Mermaid's Curse**. Bien que le titre anglais l’omette, ça sera le dossier 38. Nous pouvons donc supposer que ce jeu se passe après le premier jeu.
+Lors du Nintendo Direct du 5 février, nous avons pu découvrir un nouveau jeu PARANORMASIGHT intitulé **PARANORMASIGHT: The Mermaid's Curse**. Bien que le titre anglais l’omette, ça sera le dossier 38. D’ailleurs le titre japonais est "パラノマサイト FILE38 伊勢人魚物語" qui pourrait se traduire par **"PARANORMASIGHT : Dossier 38 - La légende de la sirène d’Ise"**.
 
 ## PARANORMASIGHT: Dossier 23 - Les sept mystères de Honjo
 
@@ -24,7 +24,11 @@ L’histoire se passera donc dans un tout nouveau décor plus chaleureux que les
 
 Lors de l’annonce, il y a eu deux trailers différents, celui du direct, puis un autre directement trouvable sur la chaine YouTube de Nintendo.
 
-<iframe src="https://www.youtube.com/embed/gkGzHbm0Irc"></iframe>
+<iframe
+  src="https://www.youtube.com/embed/CsVrPX_opH0?start=1796"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+</iframe>
+
 
 <iframe src="https://www.youtube.com/embed/Q_Xf9RxOAh8"></iframe>
 
