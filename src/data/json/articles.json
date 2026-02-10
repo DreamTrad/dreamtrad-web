@@ -25,5 +25,14 @@
     "date": "2025-12-01",
     "tags": ["actu", "428", "25th Ward: Silver Case", "Never7", "Divine Deception"],
     "excerpt": "Un point sur l’état des projets en fin 2025 au moment de la sortie du site."
+  },
+  {
+    "id": "0004",
+    "slug": "nouveau-paranormasight",
+    "title": "Un nouveau paranormasight arrive !",
+    "author": "Silous",
+    "date": "2026-01-09",
+    "tags": ["actu", "paranormasight"],
+    "excerpt": "Un deuxième jeu Paranormasight a été annoncé, et il sort bientôt !"
   }
 ]
