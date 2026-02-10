@@ -18,14 +18,14 @@ Le jeu est disponible, en plus du japonais, en anglais et chinois sur Steam, té
 
 *L’île isolée de Kameshima se trouve nichée dans la baie d’Ise.
 Yuza Minakuchi est un jeune pêcheur de perles vivant sur l’île, passant ses journées en récolte sous-marine en compagnie de son meilleur ami, Azami Kumoi. Après un face à face troublant et inexplicable avec une autre version de lui-même dans les fonds marins, une série de malédictions se met à frapper l’île…
-Une jeune fille d’origine inconnue, un chasseur de trésor venu d’un pays lointain, et une mystérieuse femme au foyer mènent l’enquête sur une noyade. Leurs chemins et leurs destins se rencontrent à mesure qu’ils dévoilent mystère des sirènes d’Ise, une légende depuis longtemps noyée dans les méandres de l’Histoire.*
+Une jeune fille d’origine inconnue, un chasseur de trésor venu d’un pays lointain, et une mystérieuse femme au foyer mènent l’enquête sur une noyade. Leurs chemins et leurs destins se rencontrent à mesure qu’ils dévoilent les mystères des sirènes d’Ise, une légende depuis longtemps noyée dans les méandres de l’Histoire.*
 
 L’histoire se passera donc dans un tout nouveau décor plus chaleureux que les rues sombres de Honjo du premier, avec des nouveaux personnages. Dans les nouveautés par rapport au précédent titre, nous pouvons voir qu’il y a une volonté d’ajouter quelques éléments de gameplay en plus, il y aura notamment des phases d’exploration sous-marine.
 
 Lors de l’annonce, il y a eu deux trailers différents, celui du direct, puis un autre directement trouvable sur la chaine YouTube de Nintendo.
 
 <iframe
-  src="https://www.youtube.com/embed/CsVrPX_opH0?start=1796"
+  src="https://www.youtube.com/embed/CsVrPX_opH0?start=1790"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
 </iframe>
 
