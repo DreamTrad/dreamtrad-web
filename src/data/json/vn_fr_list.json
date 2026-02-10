@@ -733,6 +733,23 @@
     "description": "Spin-off du jeu The House in Fata Morgana. Le scénario de Seventh Lair est indépendant de The House in Fata Morgana, mais plusieurs éléments divulgâchent le jeu original.\n\nDark†Knight est un développeur de jeux vidéo indépendant sans grand succès, jeux qu'il publie sur son site Royaume Heven. \"Je vais sortir un nouveau jeu le 1er avril.\" annonce-t-il sur le forum du site. Mais au moment de télécharger le jeu, lui et les habitués de Royaume Heven se retrouvent tous transportés dans un jeu vidéo. Quel est ce monde, et comment en sortir ?  \nLe site de Royaume Heven est [disponible ici](https://novect.net/royaume_fr/royaume.html)."
   },
   {
+    "id": "shironagasu",
+    "titre": "Retour sur l'île de Shironagasu",
+    "image": "/poster/shironagasu.webp",
+    "genre": ["mystère", "aventure"],
+    "duree": "5h-10h",
+    "note_vndb": "7.00",
+    "popularite_vndb": "540",
+    "plateforme": ["pc"],
+    "lien_jeu": [
+      "https://vndb.org/v25413",
+      "https://store.steampowered.com/app/1156990/Retour_sur_lle_de_Shironagasu/",
+      "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/Retour-sur-l-ile-de-Shironagasu-2304481.html"
+    ],
+    "patch_fr": [],
+    "description": "Sen Ikeda, détective à New York, reçoit une mystérieuse invitation pour l'île de Shironagasu dans le testament d'un millionnaire. Accompagné par son assistante Neneko Izumozaki, une fille quelque peu étrange qui possède des pouvoirs spéciaux, cap sur l'île isolée de Shironagasu !\n\nRésolvez de nombreux meurtres et mystères !  \nRencontrez des personnages énigmatiques et captivants !  \nDécouvrez les secrets cachés de Shironagasu !  \nRestez en vie et échappez-vous de cette île sinistre !"
+  },
+  {
     "id": "silver_case",
     "titre": "The Silver Case",
     "image": "/poster/silver_case.webp",
