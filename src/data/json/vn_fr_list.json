@@ -1,5 +1,21 @@
 [
   {
+    "id": "13sentinels",
+    "titre": "13 Sentinels: Aegis Rim",
+    "image": "/poster/13sentinels.webp",
+    "genre": ["mystère", "science-fiction", "gameplay"],
+    "duree": "30h-40h",
+    "note_vndb": "",
+    "popularite_vndb": "",
+    "plateforme": ["ps4", "switch"],
+    "lien_jeu": [
+      "https://www.playstation.com/fr-fr/games/13-sentinels-aegis-rim/",
+      "https://www.nintendo.com/fr-fr/Jeux/Jeux-Nintendo-Switch/13-Sentinels-Aegis-Rim-2173867.html"
+    ],
+    "patch_fr": [],
+    "description": "13 adolescents protègent leur ville d'attaques de Kaiju en pilotant des méchas capables de voyager dans le temps, nommés Sentinels. Le jeu se découpe en plusieurs modes, un mode narratif où l'on suit les histoires de chacun des personnages principaux, jouables dans l'ordre de son choix, et un mode avec un gameplay de stratégie en temps réel où l'on contrôle les pilotes aux commandes de leur Sentinels."
+  },
+  {
     "id": "999",
     "titre": "9 Hours, 9 Persons, 9 Doors",
     "image": "/poster/999.webp",
