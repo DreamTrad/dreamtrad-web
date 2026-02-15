@@ -20,9 +20,12 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const slug = (await params).slug;
+  const slug = params.slug;
 
-  const articlesPath = path.join(process.cwd(), "src/data/json/articles.json");
+  const articlesPath = path.join(
+    process.cwd(),
+    "src/data/json/articles.json"
+  );
 
   const articles = JSON.parse(fs.readFileSync(articlesPath, "utf8"));
   const article = articles.find((a) => a.slug === slug);
@@ -37,26 +40,43 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  const baseUrl = "https://dreamtrad.fr";
+  const articleUrl = `${baseUrl}/articles/${article.slug}`;
+  const imageUrl = `${baseUrl}/articles-content/${article.id}/cover.webp`;
+
   return {
+    metadataBase: new URL(baseUrl),
+
     title: article.title,
     description: article.excerpt || "",
+
     alternates: {
-      canonical: `/articles/${article.slug}`,
+      canonical: articleUrl,
     },
+
     openGraph: {
       type: "article",
+      url: articleUrl,
       title: article.title,
       description: article.excerpt || "",
       images: [
         {
-          url: `/articles-content/${article.id}/cover.webp`,
+          url: imageUrl,
           width: 1200,
           height: 675,
         },
       ],
     },
+
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt || "",
+      images: [imageUrl],
+    },
   };
 }
+
 
 export default async function ArticlePage({ params }) {
   const slug = (await params).slug;
