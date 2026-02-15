@@ -265,6 +265,22 @@
     "description": "Side story de la série Amour Sucré.\n\nExplore les rues colorées d'Amoris et découvre le bureau le plus fun de toute la ville, mais surtout, fait la connaissance de tes séduisants collègues et plus si affinités…  \nOu peut-être te laisseras-tu tenter par ton ennemi ?"
   },
   {
+    "id": "and_roger",
+    "titre": "and Roger",
+    "image": "/poster/and_roger.webp",
+    "genre": ["drame", "mystère"],
+    "duree": "1h-5h",
+    "note_vndb": "",
+    "popularite_vndb": "",
+    "plateforme": ["pc", "switch"],
+    "lien_jeu": [
+      "https://store.steampowered.com/app/3308870/and_Roger/",
+      "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/and-Roger-2870712.html"
+    ],
+    "patch_fr": [],
+    "description": "C'était un matin comme les autres, jusqu'à ce qu'elle réalise que son père n'était pas là. À sa place, elle tombe sur un inconnu qui essaie de la forcer à prendre un étrange médicament. Qui est-il ? Et où est son père ?"
+  },
+  {
     "id": "clannad",
     "titre": "CLANNAD",
     "image": "/poster/clannad.webp",
