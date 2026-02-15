@@ -15,9 +15,7 @@ export const metadata = {
     url: "/jeux",
     images: [
       {
-        url: "/dreamtrad-logo-title.webp",
-        width: 1200,
-        height: 630,
+        url: "/dreamtrad-cover.png",
         alt: "DreamTrad",
       },
     ],

@@ -23,9 +23,7 @@ export const metadata = {
     siteName: "DreamTrad",
     images: [
       {
-        url: "/dreamtrad-logo-title.wepb",
-        width: 1200,
-        height: 630,
+        url: "/dreamtrad-cover.png",
         alt: "DreamTrad",
       },
     ],

@@ -25,7 +25,7 @@ const schemaOrg = {
   inLanguage: "fr-FR",
 };
 
-const image = `/dreamtrad-logo-title.webp`;
+const image = `/dreamtrad-cover.png`;
 
 export const metadata = {
   metadataBase: new URL("https://dreamtrad.fr"),
@@ -50,8 +50,6 @@ export const metadata = {
     images: [
       {
         url: image,
-        width: 1200,
-        height: 630,
         alt: "DreamTrad",
       },
     ],
