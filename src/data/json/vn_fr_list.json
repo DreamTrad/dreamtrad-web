@@ -294,7 +294,24 @@
       "https://store.steampowered.com/app/324160/CLANNAD/"
     ],
     "patch_fr": ["fr:https://vnfr.fr/installation-du-patch"],
-    "description": "Après la mort de sa mère, Tomoya Okazaki, un lycéen rebelle et renfermé de l’école Hikarizaka, peine à donner un sens à sa vie tout en supportant sa relation conflictuelle avec son père alcoolique. Un matin, en chemin vers l’école, il rencontre une fille intrigante, Nagisa. Comme lui, elle est considérée comme une « délinquante », mais seulement parce qu’elle redouble sa dernière année, contrairement à Okazaki toujours en retard. De leur brève rencontre naît une amitié : Nagisa décide qu’ils devraient se rapprocher et lui demande son aide pour relancer le club de théâtre. Sans réelle occupation, Tomoya accepte. Ensemble, ils se lient d’amitié avec d’autres élèves et cherchent, à travers leurs efforts communs, un sentiment de réconfort et d’appartenance."
+    "description": "Après la mort de sa mère, Tomoya Okazaki, un lycéen rebelle et renfermé de l’école Hikarizaka, peine à donner un sens à sa vie tout en supportant sa relation conflictuelle avec son père alcoolique. Un matin, en chemin vers l’école, il rencontre une fille intrigante, Nagisa. Comme lui, elle est considérée comme une « délinquante », mais seulement parce qu’elle redouble sa dernière année, contrairement à Okazaki toujours en retard. De leur brève rencontre naît une amitié : Nagisa décide qu’ils devraient se rapprocher et lui demande son aide pour relancer le club de théâtre. Sans réelle occupation, Tomoya accepte. Ensemble, ils se lient d’amitié avec d’autres élèves et cherchent, à travers leurs efforts communs, un sentiment de réconfort et d’appartenance."
+  },
+  {
+    "id": "the_centennial_case_a_shijima_story",
+    "titre": "The Centennial Case : A Shijima Story",
+    "image": "/poster/the_centennial_case_a_shijima_story.webp",
+    "genre": ["mystère"],
+    "duree": "10h-20h",
+    "note_vndb": "",
+    "popularite_vndb": "",
+    "plateforme": ["pc", "switch", "ps4"],
+    "lien_jeu": [
+      "https://store.steampowered.com/app/1612780/The_Centennial_Case__A_Shijima_Story/",
+      "https://www.playstation.com/fr-fr/games/the-centennial-case-a-shijima-story/",
+      "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/The-Centennial-Case-A-Shijima-Story-2205574.html"
+    ],
+    "patch_fr": [],
+    "description": "Une série de morts inexplicables secoue la famille Shijima depuis un siècle. Lors d'une visite aux Shijima, l'autrice de romans policiers Haruka Kagami se retrouve à devoir élucider quatre affaires de meurtre, se déroulant à des époques différentes."
   },
   {
     "id": "danganronpa_1",
