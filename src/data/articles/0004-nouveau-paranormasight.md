@@ -22,7 +22,7 @@ Une jeune fille d’origine inconnue, un chasseur de trésor venu d’un pays lo
 
 L’histoire se passera donc dans un tout nouveau décor plus chaleureux que les rues sombres de Honjo du premier, avec des nouveaux personnages. Dans les nouveautés par rapport au précédent titre, nous pouvons voir qu’il y a une volonté d’ajouter quelques éléments de gameplay en plus, il y aura notamment des phases d’exploration sous-marine.
 
-Lors de l’annonce, il y a eu deux trailers différents, celui du direct, puis un autre directement trouvable sur la chaine YouTube de Nintendo.
+Lors de l’annonce, il y a eu deux trailers différents, celui du direct, puis un autre directement trouvable sur la chaîne YouTube de Nintendo.
 
 <iframe
   src="https://www.youtube.com/embed/CsVrPX_opH0?start=1790"
@@ -38,7 +38,7 @@ Le jeu sort seulement deux semaines après son annonce. Comme le premier, il ser
 
 ## Interview Famitsu
 
-Le lendemain de l’annonce, une interview des créateurs du jeu est sorti sur le [site de Famitsu (en japonais)](https://www.famitsu.com/article/202602/64954). Bien que brève, on peut y trouver quelques informations supplémentaires. On y trouve la confirmation que les deux jeux n’ont pas de lien direct entre eux, mais ils conseillent tout de même de d’abord faire le premier avant le nouveau jeu. Par contre, le manga (パラノマサイト FILE25 霊感少女・黒鈴ミヲの邂逅 上巻) aurait quelques personnages en commun avec le jeu. La version complète du manga est disponible à l’achat depuis l’annonce du nouveau jeu, mais il n’est sorti qu’en japonais.
+Le lendemain de l’annonce, une interview des créateurs du jeu est sorti sur le [site de Famitsu (en japonais)](https://www.famitsu.com/article/202602/64954). Bien que brève, on peut y trouver quelques informations supplémentaires. On y trouve la confirmation que les deux jeux n’ont pas de lien direct entre eux, mais ils conseillent tout de même de d’abord faire le premier avant le nouveau jeu. Par contre, le manga (パラノマサイト FILE25 霊感少女・黒鈴ミヲの邂逅 上巻) aurait quelques personnages en commun avec le jeu. La version complète du manga est disponible à l’achat depuis l’annonce de la suite, mais il n’est sorti qu’en japonais.
 
 D’après l’équipe de test, le deuxième épisode sera 1,5 fois plus long que le premier.
 
