@@ -9,7 +9,7 @@ import MarkdownSection from "@/components/ui/MarkdownSection";
 export const dynamic = "force-static";
 export const dynamicParams = false;
 
-// --- Static paths for Next.js dynamic route ---
+
 export async function generateStaticParams() {
   const articlesPath = path.join(process.cwd(), "src/data/json/articles.json");
   const articles = JSON.parse(fs.readFileSync(articlesPath, "utf8"));
@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const slug = params.slug;
+  const slug = (await params).slug;
 
   const articlesPath = path.join(
     process.cwd(),
