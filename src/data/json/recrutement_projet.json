@@ -32,14 +32,6 @@
         "description": "Pour l’instant, le projet n’a pas encore commencé, mais tout est déjà mis en place pour entamer la traduction. Nous recherchons donc des traducteurs depuis le japonais pour commencer la traduction en parallèle de Never7. C’est actuellement la version Remake du scénario qui est prête, mais nous comptons aussi faire un patch pour la version originale du jeu."
     },
     {
-        "id": "remember11",
-        "title": "Traduction d’Infinity : Remember 11",
-        "image": "/poster/remember11.webp",
-        "roles": ["Aide hacking"],
-        "contact": "Silous",
-        "description": "La traduction n’a pas encore commencé, mais pour préparer le terrain, il faudrait déjà mettre en place le projet pour que les traducteurs puissent commencer à traduire sans attendre. Un [outil existe déjà](https://github.com/arsym-dev/Remember11-Script-Editor), il a dû servir pour le patch anglais, mais c’est un outil à interface graphique, ce qui n’est pas idéal, et après quelques tests rapides, nous avions eu des soucis, probablement dû aux caractères français. Nous n’avons pas encore trop poussé les tests, mais nous sommes preneurs si quelqu’un veut se pencher sur la question pour préparer le projet."
-    },
-    {
         "id": "paranormasight",
         "title": "Patch Switch de PARANORMASIGHT",
         "image": "/poster/paranormasight.webp",
