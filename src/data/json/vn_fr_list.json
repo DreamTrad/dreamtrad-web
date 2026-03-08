@@ -202,6 +202,26 @@
     "description": "Deuxième VN de la série AI: The Somnium Files.\n\nIl y a six ans, on avait retrouvé la moitié droite d’un cadavre. L’autre moitié était introuvable… jusqu’à ce qu’elle réapparaisse six ans plus tard, parfaitement intacte, sans aucune trace de décomposition.\n\nAujourd’hui, les agents spéciaux Mizuki et Ryuki, accompagnés de leurs partenaires IA Aiba et Tama, doivent résoudre l’énigme des meurtres en série dits du « Diviseur », tout en levant le voile sur un complot mystérieux connu sous le nom de Nirvana Initiative…"
   },
   {
+    "id": "altdeus_beyond_chronos",
+    "titre": "ALTDEUS: Beyond Chronos",
+    "image": "/poster/altdeus.webp",
+    "genre": ["mystère", "science-fiction"],
+    "duree": "10h-20h",
+    "note_vndb": "7.85",
+    "popularite_vndb": "8142",
+    "plateforme": ["pc", "ps4", "switch", "android", "ios"],
+    "lien_jeu": [
+      "https://vndb.org/v28835",
+      "https://store.steampowered.com/app/1502080/ALTDEUS_Beyond_Chronos",
+      "https://store.playstation.com/fr-fr/product/EP5361-CUSA26564_00-5226104772781242",
+      "https://www.nintendo.com/fr-fr/Jeux/Jeux-a-telecharger-sur-Nintendo-Switch/TOKYO-CHRONOS-ALTDEUS-Beyond-Chronos-TWIN-PACK-2597810.html",
+      "https://play.google.com/store/apps/details?id=jp.co.izanagigames.altdeusbeyondchronos",
+      "https://apps.apple.com/us/app/altdeus-beyond-chronos/id6476523909"
+    ],
+    "patch_fr": [],
+    "description": "Le jeu est originellement en réalité virtuelle (VR) excepté pour la version Switch adaptée pour être joué sans VR.\n\nLe jeu est dans la même série que Tokyo Chronos, sorti avant mais sans traduction en français, néanmoins les deux jeux peuvent être joués indépendamment.\n\nEn l'an 2080, l'humanité, chassée sous terre par l'apparition soudaine des êtres colossaux connus sous le nom de \"Meteoras\", a cherché refuge dans la ville souterraine de Tokyo Augmenté. Deux siècles plus tard, en 2280, Chloé, membre de l'organisation Prometheus, qui s'oppose aux Meteoras, pilote l'arme de défense de la ville humanoïde Makhia, survivant aux dures batailles aux côtés de ses camarades. Tout ce qu'elle fait est pour venger sa chère amie, Coco."
+  },
+  {
     "id": "amour_sucre_alternate_life",
     "titre": "Amour Sucré Alternate Life",
     "image": "/poster/amour_sucre_alternate_life.webp",
