@@ -5,7 +5,7 @@
     "image": "/poster/silver_case_25th_ward.webp",
     "progress": {
       "traduction": "28",
-      "images": "0",
+      "images": "0,0",
       "technique": "50",
       "relecture": "0"
     }
@@ -15,8 +15,8 @@
     "title": "428: Shibuya Scramble",
     "image": "/poster/428.webp",
     "progress": {
-      "traduction": "56",
-      "images": "0",
+      "traduction": "57",
+      "images": "0,0",
       "technique": "70",
       "relecture": "0"
     }
@@ -26,8 +26,8 @@
     "title": "The Divine Deception",
     "image": "/poster/divine_deception.webp",
     "progress": {
-      "traduction": "83",
-      "images": "0",
+      "traduction": "84",
+      "images": "2,0",
       "technique": "100",
       "relecture": "0"
     }
@@ -38,7 +38,7 @@
     "image": "/poster/never7.webp",
     "progress": {
       "traduction": "12",
-      "images": "0",
+      "images": "0,0",
       "technique": "60",
       "relecture": "0"
     }
