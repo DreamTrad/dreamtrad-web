@@ -67,6 +67,7 @@ export default function AvailablePatches() {
                   src={g.image}
                   alt={g.name}
                   fill
+                  sizes="(max-width: 768px) 100vw, 44vw"
                   className="object-cover"
                   priority
                 />

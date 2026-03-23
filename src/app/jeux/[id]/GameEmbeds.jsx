@@ -26,6 +26,20 @@ export default function GameEmbeds({ embeds }) {
           );
         }
 
+        if (embed.type === "itch") {
+          return (
+            <div
+              key={i}
+              className="bg-bg-secondary/60 overflow-hidden rounded-xl"
+            >
+              <iframe
+                src={`https://itch.io/embed/${embed.id}`}
+                className="w-full"
+                allowFullScreen
+              />
+            </div>
+          );
+        }
         return null;
       })}
     </div>

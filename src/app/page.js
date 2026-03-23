@@ -45,8 +45,8 @@ export default async function HomePage() {
             />
           </InfoBox>
 
-            <AvailablePatches />
-          <h2 className="text-center text-lg font-semibold mt-6">
+          <AvailablePatches />
+          <h2 className="mt-6 text-center text-lg font-semibold">
             Avancements des projets
           </h2>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,450px))] justify-center gap-6">
@@ -64,7 +64,6 @@ export default async function HomePage() {
           <p className="text-text-secondary mb-4 text-center text-sm leading-tight italic">
             Mis à jour tous les lundis matin !
           </p>
-
         </div>
 
         {/* Sidebar */}
@@ -93,7 +92,7 @@ export default async function HomePage() {
                 alt="Chibi Aiba"
                 width={200}
                 height={200}
-                className="pointer-events-none max-w-37.5 object-contain drop-shadow-xl select-none md:max-w-none"
+                className="pointer-events-none w-auto max-w-37.5 object-contain drop-shadow-xl select-none md:max-w-none"
               />
             </div>
           </div>

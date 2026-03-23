@@ -1,9 +1,11 @@
 name: Update progress.json from Google Sheet
-
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 2 * * 1"  # 02:00 UTC tous les lundis
+    - cron: "0 2 * * 1"
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 permissions:
   contents: write
@@ -11,11 +13,11 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
         with:
+          ref: main
           persist-credentials: true
 
       - name: Set up Python
@@ -38,14 +40,10 @@ jobs:
 
       - name: Commit and push changes to main
         run: |
-          git fetch origin main
-          git checkout main
-
           git add src/data/json/progress.json
           if git diff --cached --quiet; then
-              echo "No changes detected, skipping commit."
+            echo "No changes detected, skipping commit."
           else
-              git commit -m "Auto update progress.json from Google Sheet"
-              git push origin main
+            git commit -m "Auto update progress.json from Google Sheet"
+            git push origin main
           fi
-

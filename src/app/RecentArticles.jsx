@@ -41,7 +41,7 @@ export default function RecentArticles({ limit = 3 }) {
                   alt={article.title}
                   width={80}
                   height={80}
-                  className="rounded-md object-cover shadow-sm transition group-hover:opacity-90"
+                  className="h-20 w-20 shrink-0 rounded-md object-cover shadow-sm transition group-hover:opacity-90"
                 />
 
                 <div className="flex flex-1 flex-col">
