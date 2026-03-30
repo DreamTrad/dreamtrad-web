@@ -350,6 +350,22 @@
     "description": "Une série de morts inexplicables secoue la famille Shijima depuis un siècle. Lors d'une visite aux Shijima, l'autrice de romans policiers Haruka Kagami se retrouve à devoir élucider quatre affaires de meurtre, se déroulant à des époques différentes."
   },
   {
+    "id": "crimson_debt",
+    "titre": "The Crimson Debt",
+    "image": "/poster/crimson_debt.webp",
+    "genre": ["mystère"],
+    "duree": "1h-5h",
+    "note_vndb": "7.00",
+    "popularite_vndb": "18732",
+    "plateforme": ["pc"],
+    "lien_jeu": [
+      "https://vndb.org/v51643",
+      "https://themis729.itch.io/the-crimson-debt"
+    ],
+    "patch_fr": ["fr:/jeux/crimson_debt/patchfr/telechargement"],
+    "description": "Dans the Crimson Debt, six personnes font la fête dans une grande maison. Malheureusement, la fête tourne au cauchemar, tant et si bien qu’à la fin, il semble que tout le monde est soit mort, soit parti… À l’exception de vous, le sixième « invité ». Vous avez été emprisonné avant la fête et vous trouvez au matin votre cage ouverte. Vous pourriez bien sûr fuir les lieux, mais la police pensera que vous êtes coupable. Menez l’enquête et découvrez la vérité pour échapper aux suspicions."
+  },
+  {
     "id": "danganronpa_1",
     "titre": "Danganronpa: Trigger Happy Havoc",
     "image": "/poster/danganronpa_1.webp",
