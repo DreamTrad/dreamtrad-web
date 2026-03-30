@@ -10,6 +10,7 @@ import { game as never7 } from "./never7/index.js"
 
 import { game as zodiac_trial } from "./zodiac_trial/index.js"
 import { game as divine_deception } from "./divine_deception/index.js"
+import { game as crimson_debt } from "./crimson_debt/index.js"
 
 import { game as paranormasight } from "./paranormasight/index.js";
 import { game as shibuya_scramble } from "./428/index.js"
@@ -28,6 +29,7 @@ export const games = [
     paranormasight,
     zodiac_trial,
     divine_deception,
+    crimson_debt,
     ze1,
     ze2,
     ze3,
