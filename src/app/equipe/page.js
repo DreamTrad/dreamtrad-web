@@ -4,8 +4,9 @@ import path from "path";
 import TeamMemberCard from "@/app/equipe/TeamMemberCard";
 import InfoBox from "@/components/ui/InfoBox";
 import MarkdownSection from "@/components/ui/MarkdownSection";
+import { supabase } from "@/lib/supabase";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Équipe",
@@ -28,15 +29,29 @@ export const metadata = {
   },
 };
 
-export default function TeamPage() {
-  const teamPath = path.join(process.cwd(), "src/data/json/team.json");
+export default async function TeamPage() {
   let team = [];
 
-  try {
-    const teamJson = fs.readFileSync(teamPath, "utf8");
-    team = JSON.parse(teamJson);
-  } catch (err) {
-    console.error("Erreur lecture team.json :", err);
+  const { data, error } = await supabase.from("members").select(`
+      id,
+      name,
+      skills,
+      links,
+      member_projects (
+        projects (
+          name
+        )
+      )
+    `)
+    .eq("is_important", true);
+
+  if (error) {
+    console.error("Erreur Supabase:", error);
+  } else {
+    team = data.map((member) => ({
+      ...member,
+      projects: member.member_projects.map((mp) => mp.projects.name),
+    }));
   }
 
   // Load markdown

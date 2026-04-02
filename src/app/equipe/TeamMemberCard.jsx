@@ -2,8 +2,8 @@ import Image from "next/image";
 import LinkWithIcon from "../../components/ui/LinkWithIcon";
 
 export default function TeamMemberCard({
+  id,
   name,
-  avatar,
   skills,
   projects,
   links,
@@ -15,7 +15,7 @@ export default function TeamMemberCard({
         {/* Avatar + Infos */}
         <div className="flex min-w-0 flex-1 items-center gap-4">
           <Image
-            src={avatar}
+            src={`/team/${id}.webp`}
             alt={name}
             width={80}
             height={80}
