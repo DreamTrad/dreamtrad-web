@@ -1,20 +1,6 @@
-// app/layout.js
-import { Montserrat, Orbitron } from "next/font/google";
-import "@/app/globals.css";
+// app/(site)/layout.js
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-secondary",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
-
-const orbitron = Orbitron({
-  subsets: ["latin"],
-  variable: "--font-primary",
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
 
 const schemaOrg = {
   "@context": "https://schema.org",
@@ -60,18 +46,16 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function SiteLayout({ children }) {
   return (
-    <html lang="fr" className={`${montserrat.variable} ${orbitron.variable}`}>
-      <body className="text-text flex min-h-screen flex-col">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
-        />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+      />
+      <Header />
+      <main className="flex-1">{children}</main>
+      <Footer />
+    </>
   );
 }

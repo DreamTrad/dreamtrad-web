@@ -8,12 +8,12 @@ export const metadata = {
   },
 };
 
-export default function AdminLayout({ children }) {
+export default function AdminAndLoginLayout({ children }) {
   return (
     <html lang="fr">
       <body className="min-h-screen bg-gray-100 text-gray-900">
         <div className="flex min-h-screen flex-col">
-          <main className="flex-1 p-6">{children}</main>
+          <main className="flex-1">{children}</main>
         </div>
       </body>
     </html>
