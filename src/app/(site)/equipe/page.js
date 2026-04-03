@@ -39,7 +39,7 @@ export default async function TeamPage() {
       links,
       member_projects (
         projects (
-          name
+          title
         )
       )
     `)
@@ -50,7 +50,7 @@ export default async function TeamPage() {
   } else {
     team = data.map((member) => ({
       ...member,
-      projects: member.member_projects.map((mp) => mp.projects.name),
+      projects: member.member_projects.map((mp) => mp.projects.title),
     }));
   }
 
