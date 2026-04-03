@@ -1,18 +1,18 @@
-import fs from "fs";
-import path from "path";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
-export default function RecentArticles({ limit = 3 }) {
-  const articlesPath = path.join(process.cwd(), "src/data/json/articles.json");
-  let articles = [];
-  try {
-    const articlesJson = fs.readFileSync(articlesPath, "utf8");
-    articles = JSON.parse(articlesJson)
-      .sort((a, b) => new Date(b.date) - new Date(a.date))
-      .slice(0, limit);
-  } catch (err) {
-    console.error("Erreur lecture articles.json :", err);
+export default async function RecentArticles({ limit = 3 }) {
+  const supabase = await createSupabaseServerClient();
+
+  const { data: articles, error } = await supabase
+    .from("articles")
+    .select("id, title, date")
+    .order("date", { ascending: false })
+    .limit(limit);
+
+  if (error) {
+    console.error("Erreur Supabase articles :", error);
   }
 
   return (
@@ -22,17 +22,18 @@ export default function RecentArticles({ limit = 3 }) {
       </h2>
 
       <div className="flex flex-col gap-4">
-        {articles.length === 0 ? (
+        {!articles || articles.length === 0 ? (
           <p className="text-text-tertiary text-center text-sm">
             Aucun article disponible.
           </p>
         ) : (
           articles.map((article) => {
             const coverImage = `/articles-content/${article.id}/cover.webp`;
+
             return (
               <Link
                 key={article.id}
-                href={`/articles/${article.slug}`}
+                href={`/articles/${article.id}`}
                 scroll={true}
                 className="group flex items-center gap-3"
               >

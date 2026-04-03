@@ -46,7 +46,7 @@ export default async function TeamPage() {
     .eq("is_important", true);
 
   if (error) {
-    console.error("Erreur Supabase:", error);
+    console.error("Supabase error:", JSON.stringify(error, null, 2));
   } else {
     team = data.map((member) => ({
       ...member,

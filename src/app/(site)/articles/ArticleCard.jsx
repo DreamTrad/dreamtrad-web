@@ -3,9 +3,8 @@ import Image from "next/image";
 
 export default function ArticleCard({
   id,
-  slug,
   title,
-  author,
+  authors,
   date,
   tags = [],
   excerpt,
@@ -14,7 +13,7 @@ export default function ArticleCard({
 
   return (
     <Link
-      href={`/articles/${slug}`}
+      href={`/articles/${id}`}
       className="group bg-bg-tertiary border-hover-tertiary flex flex-col overflow-hidden rounded-lg border shadow-md transition-shadow hover:shadow-xl"
     >
       {/* Image */}
@@ -33,7 +32,8 @@ export default function ArticleCard({
         </h2>
 
         <p className="text-text text-sm">
-          {author} — {new Date(date).toLocaleDateString("fr-FR")}
+          {Array.isArray(authors) ? authors.join(", ") : authors} —{" "}
+          {new Date(date).toLocaleDateString("fr-FR")}
         </p>
 
         {excerpt && <p className="text-text grow text-sm">{excerpt}</p>}

@@ -1,34 +1,38 @@
-// app/articles/[slug]/page.js
-import fs from "fs";
-import path from "path";
+// app/articles/[id]/page.js
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 import Link from "next/link";
 import Image from "next/image";
+import fs from "fs";
+import path from "path";
 import { notFound } from "next/navigation";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
 
-
 export async function generateStaticParams() {
-  const articlesPath = path.join(process.cwd(), "src/data/json/articles.json");
-  const articles = JSON.parse(fs.readFileSync(articlesPath, "utf8"));
+  const supabase = createSupabaseServerClient();
 
-  return articles.map((article) => ({
-    slug: article.slug,
-  }));
+  const { data: articles } = await supabase
+    .from("articles")
+    .select("id");
+
+  return (
+    articles?.map((article) => ({
+      id: article.id,
+    })) || []
+  );
 }
 
 export async function generateMetadata({ params }) {
-  const slug = (await params).slug;
+  const id = (await params).id;
+  const supabase = createSupabaseServerClient();
 
-  const articlesPath = path.join(
-    process.cwd(),
-    "src/data/json/articles.json"
-  );
+  const { data: articles } = await supabase
+    .from("articles")
+    .select("id, title, excerpt");
 
-  const articles = JSON.parse(fs.readFileSync(articlesPath, "utf8"));
-  const article = articles.find((a) => a.slug === slug);
+  const article = articles?.find((a) => a.id === id);
 
   if (!article) {
     return {
@@ -41,7 +45,7 @@ export async function generateMetadata({ params }) {
   }
 
   const baseUrl = "https://dreamtrad.fr";
-  const articleUrl = `${baseUrl}/articles/${article.slug}`;
+  const articleUrl = `${baseUrl}/articles/${article.id}`;
   const imageUrl = `${baseUrl}/articles-content/${article.id}/cover.webp`;
 
   return {
@@ -77,37 +81,33 @@ export async function generateMetadata({ params }) {
   };
 }
 
-
 export default async function ArticlePage({ params }) {
-  const slug = (await params).slug;
-  const articlesPath = path.join(process.cwd(), "src/data/json/articles.json");
+  const id = (await params).id;
+  const supabase = createSupabaseServerClient();
 
-  let articles = [];
-  try {
-    const articlesJson = fs.readFileSync(articlesPath, "utf8");
-    articles = JSON.parse(articlesJson);
-  } catch {
-    console.error("Erreur lecture articles.json :");
-  }
+  const { data: articles } = await supabase
+    .from("articles")
+    .select("*");
 
-  const article = articles.find((a) => a.slug === slug);
+  const article = articles?.find((a) => a.id === id);
+
   if (!article) return notFound();
 
   const markdownPath = path.join(
     process.cwd(),
     "src/data/articles",
-    `${article.id}-${article.slug}.md`,
+    `${article.id}.md`
   );
 
   let markdownContent = "";
+
   try {
     markdownContent = fs.readFileSync(markdownPath, "utf8");
-  } catch {
-    console.error("Markdown introuvable pour l'article", slug);
+  } catch (err) {
+    console.error("Markdown introuvable :", err);
   }
 
   const coverImage = `/articles-content/${article.id}/cover.webp`;
-  const canonicalUrl = `https://tondomaine.com/articles/${article.slug}`;
 
   return (
     <div className="relative mx-auto max-w-4xl p-2">
@@ -128,10 +128,12 @@ export default async function ArticlePage({ params }) {
           priority
         />
 
-        <h1 className="text-text mb-4 text-3xl font-bold">{article.title}</h1>
+        <h1 className="text-text mb-4 text-3xl font-bold">
+          {article.title}
+        </h1>
 
         <p className="text-text-tertiary mb-6">
-          {article.author} —{" "}
+          {article.authors?.join(", ")} —{" "}
           {new Date(article.date).toLocaleDateString("fr-FR")}
         </p>
 
