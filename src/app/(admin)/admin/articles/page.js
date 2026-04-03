@@ -1,4 +1,4 @@
-// app/articles/page.js
+// src\app\(admin)\admin\articles\page.js
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import ArticleCard from "@/components/ArticleCard";
 

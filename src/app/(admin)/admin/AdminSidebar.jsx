@@ -21,6 +21,13 @@ export default function AdminSidebar() {
         >
           Équipe
         </Link>
+
+        <Link
+          href="/admin/articles"
+          className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
+        >
+          Articles
+        </Link>
       </nav>
     </aside>
   );
