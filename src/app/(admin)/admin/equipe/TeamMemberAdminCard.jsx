@@ -1,0 +1,183 @@
+"use client";
+
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { supabase } from "@/lib/supabase/client";
+
+export default function TeamMemberAdminCard({ member, onUpdated }) {
+  const [draft, setDraft] = useState(member);
+  const [original, setOriginal] = useState(member);
+  const [isDirty, setIsDirty] = useState(false);
+
+  useEffect(() => {
+    setDraft(member);
+    setOriginal(member);
+  }, [member]);
+
+  useEffect(() => {
+    // detect changes
+    setIsDirty(JSON.stringify(draft) !== JSON.stringify(original));
+  }, [draft, original]);
+
+  const updateField = (field, value) => {
+    setDraft((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const updateSkill = (index, value) => {
+    const updated = [...(draft.skills || [])];
+    updated[index] = value;
+    updateField("skills", updated);
+  };
+
+  const addSkill = () => {
+    updateField("skills", [...(draft.skills || []), ""]);
+  };
+
+  const removeSkill = (index) => {
+    const updated = draft.skills.filter((_, i) => i !== index);
+    updateField("skills", updated);
+  };
+
+  const updateLink = (index, value) => {
+    const updated = [...(draft.links || [])];
+    updated[index] = value;
+    updateField("links", updated);
+  };
+
+  const addLink = () => {
+    updateField("links", [...(draft.links || []), ""]);
+  };
+
+  const removeLink = (index) => {
+    const updated = draft.links.filter((_, i) => i !== index);
+    updateField("links", updated);
+  };
+
+  const save = async () => {
+    await supabase.from("members").upsert(draft, {
+      onConflict: "id",
+    });
+
+    setOriginal(draft);
+    setIsDirty(false);
+    onUpdated?.();
+  };
+
+  const reset = () => {
+    setDraft(original);
+  };
+
+  return (
+    <div className="bg-bg-tertiary border-bg-secondary flex flex-col gap-6 rounded-xl border p-6 shadow-md">
+      {/* Header */}
+      <div className="flex items-start justify-between gap-4">
+        <div className="flex gap-4">
+          <div className="h-20 w-20 shrink-0">
+            <Image
+              src={`/team/${draft.id}.webp`}
+              alt={draft.name}
+              width={80}
+              height={80}
+              className="border-bg-secondary h-full w-full rounded-lg border object-cover"
+            />
+          </div>
+
+          <div>
+            {/* ID */}
+            <div className="flex gap-6">
+              <div className="text-text-tertiary text-xs">{draft.id}</div>
+
+              {/* is_important */}
+              <div className="flex items-center gap-2">
+                <span className="text-sm">Visible sur la page équipe</span>
+                <input
+                  type="checkbox"
+                  checked={draft.is_important || false}
+                  onChange={(e) =>
+                    updateField("is_important", e.target.checked)
+                  }
+                />
+              </div>
+            </div>
+            {/* Name */}
+            <input
+              value={draft.name || ""}
+              onChange={(e) => updateField("name", e.target.value)}
+              className="text-accent focus:border-accent border-b border-transparent bg-transparent text-xl font-bold transition outline-none"
+            />
+
+            {/* Skills */}
+            <div className="mt-2 flex flex-wrap gap-2">
+              {draft.skills?.map((skill, i) => (
+                <div
+                  key={i}
+                  className="bg-bg-secondary text-text-secondary flex items-center gap-1 rounded-md px-2 py-1 text-xs"
+                >
+                  <input
+                    value={skill}
+                    onChange={(e) => updateSkill(i, e.target.value)}
+                    className="bg-transparent outline-none"
+                  />
+                  <button onClick={() => removeSkill(i)} className="text-error">
+                    ✕
+                  </button>
+                </div>
+              ))}
+
+              <button
+                onClick={addSkill}
+                className="bg-accent rounded px-2 py-1 text-xs text-white"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Links (bottom) */}
+      <div className="flex flex-col gap-2">
+        {draft.links?.map((link, i) => (
+          <div key={i} className="flex gap-2">
+            <input
+              value={link}
+              onChange={(e) => updateLink(i, e.target.value)}
+              className="bg-bg-secondary flex-1 rounded px-2 py-1 text-sm"
+            />
+            <button
+              onClick={() => removeLink(i)}
+              className="bg-error rounded px-2 text-white"
+            >
+              ✕
+            </button>
+          </div>
+        ))}
+
+        <button
+          onClick={addLink}
+          className="bg-accent w-fit rounded px-3 py-1 text-sm text-white"
+        >
+          + Ajouter un lien
+        </button>
+      </div>
+
+      {/* Actions */}
+      {isDirty && (
+        <div className="flex justify-end gap-2">
+          <button
+            onClick={reset}
+            className="bg-text-tertiary rounded px-4 py-2 text-sm"
+          >
+            Reset
+          </button>
+          <button
+            onClick={save}
+            className="bg-success rounded px-4 py-2 text-sm text-white"
+          >
+            Valider
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
