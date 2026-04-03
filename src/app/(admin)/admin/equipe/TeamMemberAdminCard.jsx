@@ -162,22 +162,36 @@ export default function TeamMemberAdminCard({ member, onUpdated }) {
       </div>
 
       {/* Actions */}
-      {isDirty && (
-        <div className="flex justify-end gap-2">
+        <div className="flex justify-between gap-2 mt-auto">
           <button
-            onClick={reset}
-            className="bg-text-tertiary rounded px-4 py-2 text-sm"
-          >
-            Reset
+            onClick={async () => {
+              if (!confirm("Supprimer ce membre ?")) return;
+
+              await supabase.from("members").delete().eq("id", original.id);
+              onUpdated?.();
+            }}
+            className="bg-error rounded px-4 py-2 text-sm text-white"
+            >
+            Supprimer
           </button>
-          <button
-            onClick={save}
-            className="bg-success rounded px-4 py-2 text-sm text-white"
-          >
-            Valider
-          </button>
+
+            {isDirty && (
+          <div className="flex gap-2">
+            <button
+              onClick={reset}
+              className="bg-text-tertiary rounded px-4 py-2 text-sm"
+            >
+              Reset
+            </button>
+            <button
+              onClick={save}
+              className="bg-success rounded px-4 py-2 text-sm text-white"
+            >
+              Valider
+            </button>
+          </div>
+          )}
         </div>
-      )}
     </div>
   );
 }
