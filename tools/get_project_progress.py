@@ -1,18 +1,25 @@
 import os
 import json
 
+from supabase import Client, create_client
+from dotenv import load_dotenv
+
+load_dotenv(".env.local")
+
+
+SUPABASE_URL: str | None = os.getenv("NEXT_PUBLIC_SUPABASE_URL")
+SUPABASE_KEY: str | None = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
+
+if not SUPABASE_URL or not SUPABASE_KEY:
+    print("Supabase credentials not found in environment variables, exiting.")
+    exit(1)
+
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
+
 from tools.dependencies import google_sheet_api as gsa
 
 print("=== Start update script ===")
 
-# ------- Valeurs à modifier --------------------------------------------------
-title_to_index: dict[str, int] = {
-    "The 25th Ward: The Silver Case": 0,
-    "428: Shibuya Scramble": 1,
-    "Shuffled deck : The Divine Deception": 2,
-    "Infinity : Never7": 3,
-}
-# -----------------------------------------------------------------------------
 
 creds_json: str | None = os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON")
 if not creds_json:
@@ -47,25 +54,32 @@ if not rows:
     exit(1)
 print(f"Fetched {len(rows)} rows from worksheet")
 
-print("Loading local JSON data")
-with open("./src/data/json/progress.json", "r", encoding="utf-8") as f:
-    data = json.load(f)
-print(f"Loaded {len(data)} entries from progress.json")
-
-for row in rows:
-    idx = title_to_index.get(row[0])
-    if idx is None:
-        print(f"Skipping unknown title: {row[0]}")
+for row_id, row in enumerate(rows):
+    if row_id == 0:
         continue
-    print(f"Updating '{row[0]}' at index {idx}")
-    data[idx]["progress"]["traduction"] = row[8].removesuffix("%")
-    data[idx]["progress"]["images"] = row[9].removesuffix("%")
-    data[idx]["progress"]["technique"] = row[10].removesuffix("%")
-    data[idx]["progress"]["relecture"] = row[11].removesuffix("%")
-    print(f"Updated values: {data[idx]['progress']}")
+    project_id: str = row[0]
 
-print("Writing updated JSON to file")
-with open("./src/data/json/progress.json", "w", encoding="utf-8") as f:
-    json.dump(data, f, indent=2, ensure_ascii=False)
+    if not project_id:
+        print("Skipping empty id")
+        continue
+
+    traduction = int(row[9].replace("%", ""))
+    images = int(row[10].replace("%", ""))
+    technique = int(row[11].replace("%", ""))
+    relecture = int(row[12].replace("%", ""))
+
+    print(f"Updating project '{project_id}'")
+
+    supabase.table("projects").update(
+    {
+        "progress":
+        {
+            "traduction": traduction,
+            "images": images,
+            "technique": technique,
+            "relecture": relecture,
+        }
+    }
+    ).eq("id", project_id).execute()
 
 print("=== Script finished successfully ===")
