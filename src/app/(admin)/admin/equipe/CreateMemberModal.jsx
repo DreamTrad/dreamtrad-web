@@ -7,11 +7,41 @@ export default function CreateMemberModal({ onClose, onCreated }) {
   const [id, setId] = useState("");
   const [name, setName] = useState("");
 
+  const generateId = async (name) => {
+    let base = name
+      .toLowerCase()
+      .normalize("NFD") // remove accents
+      .replace(/[\u0300-\u036f]/g, "") // strip diacritics
+      .replace(/[^a-z0-9\s-]/g, "") // remove special chars
+      .trim()
+      .replace(/\s+/g, "-"); // spaces → dash
+
+    let finalId = base;
+    let counter = 1;
+
+    while (true) {
+      const { data } = await supabase
+        .from("members")
+        .select("id")
+        .eq("id", finalId)
+        .maybeSingle();
+
+      if (!data) break;
+
+      finalId = `${base}-${counter}`;
+      counter++;
+    }
+
+    return finalId;
+  };
+
   const handleCreate = async () => {
-    if (!id || !name) return;
+    if (!name.trim()) return;
+
+    const generatedId = await generateId(name);
 
     const { error } = await supabase.from("members").insert({
-      id,
+      id: generatedId,
       name,
       is_important: false,
       skills: [],
@@ -34,23 +64,13 @@ export default function CreateMemberModal({ onClose, onCreated }) {
           Nouveau membre
         </h2>
 
-        <div className="flex flex-col gap-4">
-          {/* ID */}
-          <input
-            placeholder="id (unique)"
-            value={id}
-            onChange={(e) => setId(e.target.value)}
-            className="bg-bg-secondary rounded px-3 py-2 text-sm"
-          />
-
-          {/* Name */}
-          <input
-            placeholder="Nom"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="bg-bg-secondary rounded px-3 py-2 text-sm"
-          />
-        </div>
+        {/* Name */}
+        <input
+        placeholder="Nom"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        className="bg-bg-secondary rounded px-3 py-2 text-sm"
+        />
 
         {/* Actions */}
         <div className="mt-6 flex justify-end gap-2">
