@@ -10,24 +10,34 @@ import ProjectProgressCard from "@/components/ProjectProgressCard";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import InfoBox from "@/components/ui/InfoBox";
 import chibiAiba from "@/assets/chibi/chibi-aiba.webp";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
-export const dynamic = "force-static";
+export const revalidate = 60 * 60 * 24;
 
 export const metadata = {
   title: "Accueil | Dreamtrad",
 };
 
 export default async function HomePage() {
+  const supabase = await createSupabaseServerClient();
   // paths to your data
   const presentationPath = path.join(
     process.cwd(),
     "src/data/markdown/presentation-accueil.md",
   );
-  const projectsPath = path.join(process.cwd(), "src/data/json/progress.json");
 
   // read data
   const presentationContent = fs.readFileSync(presentationPath, "utf8");
-  const projects = JSON.parse(fs.readFileSync(projectsPath, "utf8"));
+
+  const { data: projects, error } = await supabase
+    .from("projects")
+    .select("id, title, progress")
+    .eq("show_progress", true)
+    .order("title");
+
+  if (error) {
+    console.error("Supabase error:", error);
+  }
 
   return (
     <div className="bg-bg-primary flex min-h-screen flex-col text-white">
@@ -50,7 +60,7 @@ export default async function HomePage() {
             Avancements des projets
           </h2>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,450px))] justify-center gap-6">
-            {projects.map((project) => (
+            {projects?.map((project) => (
               <ProjectProgressCard
                 key={project.id}
                 id={project.id}

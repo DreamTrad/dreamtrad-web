@@ -6,8 +6,9 @@ import DownloadSectionClient from "./DownloadClient";
 import ImageCarousel from "./ImageCarousel";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import ProjectProgressCard from "@/components/ProjectProgressCard";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
-export const dynamic = "force-static";
+export const revalidate = 60 * 60 * 24;
 
 export async function generateMetadata({ params }) {
   const id = (await params).id;
@@ -57,9 +58,13 @@ export default async function DownloadPage({ params }) {
     i++;
   }
 
-  const projectsPath = path.join(process.cwd(), "src/data/json/progress.json");
-  const projects = JSON.parse(fs.readFileSync(projectsPath, "utf8"));
-  const project = projects.find((p) => p.id === id);
+  const supabase = await createSupabaseServerClient();
+
+  const { data: project, error } = await supabase
+    .from("projects")
+    .select("id, title, progress, show_progress")
+    .eq("id", id)
+    .single();
 
   const game = games.find((g) => g.id === id);
   if (!game) return <div>Jeu introuvable</div>;
@@ -83,21 +88,23 @@ export default async function DownloadPage({ params }) {
 
   return (
     <div className="mx-auto max-w-7xl space-y-12 px-4 pb-20">
-          <div className="bg-bg-secondary/60 rounded-2xl p-6 shadow-sm backdrop-blur-sm md:p-8">
-            <MarkdownSection content={content} />
-        </div>
-      {project && (
+      <div className="bg-bg-secondary/60 rounded-2xl p-6 shadow-sm backdrop-blur-sm md:p-8">
+        <MarkdownSection content={content} />
+      </div>
+
+      {project?.show_progress && (
         <div className="flex justify-center">
           <ProjectProgressCard
-            key={project.id}
             id={project.id}
             title={project.title}
-            image={project.image}
+            image={`/poster/${project.id}.webp`}
             progress={project.progress}
           />
         </div>
       )}
+
       <DownloadSectionClient gameId={id} platforms={section.platforms} />
+
       {images.length > 0 && <ImageCarousel images={images} interval={15000} />}
     </div>
   );
