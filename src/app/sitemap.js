@@ -1,11 +1,16 @@
 // app/sitemap.js
 
 import { games } from "@/data/jeux";
-import articles from "@/data/json/articles.json";
+import { createClient } from "@supabase/supabase-js";
 
 const SITE_URL = "https://dreamtrad.fr";
 
-export default function sitemap() {
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+);
+
+export default async function sitemap() {
   const staticPages = [
     "",
     "/jeux",
@@ -22,10 +27,22 @@ export default function sitemap() {
     lastModified: new Date(),
   }));
 
-  const articleEntries = articles.map((article) => ({
-    url: `${SITE_URL}/articles/${article.slug}`,
-    lastModified: article.date ? new Date(article.date) : new Date(),
-  }));
+  const { data: articles, error } = await supabase
+    .from("articles")
+    .select("id, date")
+    .eq("is_visible", true);
+a
+  if (error) {
+    console.error("Erreur sitemap articles:", error);
+  }
+
+  const articleEntries =
+    articles?.map((article) => ({
+      url: `${SITE_URL}/articles/${article.id}`,
+      lastModified: article.date
+        ? new Date(article.date)
+        : new Date(),
+    })) || [];
 
   const gameEntries = games.map((game) => ({
     url: `${SITE_URL}/jeux/${game.id}`,

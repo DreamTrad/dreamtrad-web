@@ -13,12 +13,13 @@ export const dynamicParams = false;
 export async function generateStaticParams() {
   const supabase = createSupabaseServerClient();
 
-  const { data: articles } = await supabase
+  const { data } = await supabase
     .from("articles")
-    .select("id");
+    .select("id")
+    .eq("is_visible", true);
 
   return (
-    articles?.map((article) => ({
+    data?.map((article) => ({
       id: article.id,
     })) || []
   );
@@ -28,13 +29,13 @@ export async function generateMetadata({ params }) {
   const id = (await params).id;
   const supabase = createSupabaseServerClient();
 
-  const { data: articles } = await supabase
+  const { data: article } = await supabase
     .from("articles")
-    .select("id, title, excerpt");
+    .select("id, title, excerpt, is_visible")
+    .eq("id", id)
+    .single();
 
-  const article = articles?.find((a) => a.id === id);
-
-  if (!article) {
+  if (!article || !article.is_visible) {
     return {
       title: "Article introuvable",
       robots: {
@@ -71,7 +72,6 @@ export async function generateMetadata({ params }) {
         },
       ],
     },
-
     twitter: {
       card: "summary_large_image",
       title: article.title,
@@ -85,18 +85,18 @@ export default async function ArticlePage({ params }) {
   const id = (await params).id;
   const supabase = createSupabaseServerClient();
 
-  const { data: articles } = await supabase
+  const { data: article } = await supabase
     .from("articles")
-    .select("*");
+    .select("*")
+    .eq("id", id)
+    .single();
 
-  const article = articles?.find((a) => a.id === id);
-
-  if (!article) return notFound();
+  if (!article || !article.is_visible) return notFound();
 
   const markdownPath = path.join(
     process.cwd(),
     "src/data/articles",
-    `${article.id}.md`
+    `${article.id}.md`,
   );
 
   let markdownContent = "";
@@ -145,12 +145,12 @@ export default async function ArticlePage({ params }) {
         {article.tags?.length > 0 && (
           <div className="mt-6 flex flex-wrap gap-2">
             {article.tags.map((tag, idx) => (
-              <ul
+              <span
                 key={idx}
                 className="bg-bg-secondary text-text-secondary rounded px-2 py-1 text-xs"
               >
                 #{tag}
-              </ul>
+              </span>
             ))}
           </div>
         )}
