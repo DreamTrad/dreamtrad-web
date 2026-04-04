@@ -2,20 +2,13 @@
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import ArticleCard from "@/components/ArticleCard";
 
-export const dynamic = "force-static";
 
-export const metadata = {
-  title: "Articles",
-  description:
-    "Articles sur nos projets, sur la traduction, ou sur les visual Novel.",
-};
-
-export default async function ArticleListPage() {
+export default async function ArticleListAdminPage() {
   const supabase = createSupabaseServerClient();
 
   const { data: articles, error } = await supabase
     .from("articles")
-    .select("id, title, authors, date, tags, excerpt")
+    .select("id, title, authors, date, tags, excerpt, is_visible")
     .order("date", { ascending: false });
 
   if (error) {
@@ -30,7 +23,7 @@ export default async function ArticleListPage() {
 
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
         {articles?.map((article) => (
-          <ArticleCard key={article.id} {...article} />
+          <ArticleCard isAdmin="true" key={article.id} {...article} />
         ))}
       </div>
     </div>

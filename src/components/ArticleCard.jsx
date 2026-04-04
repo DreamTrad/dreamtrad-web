@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { supabase } from "@/lib/supabase/client";
+import { useState } from "react";
 
 export default function ArticleCard({
   id,
@@ -8,14 +12,30 @@ export default function ArticleCard({
   date,
   tags = [],
   excerpt,
+  is_visible,
+  isAdmin = false,
 }) {
   const coverImage = `/articles-content/${id}/cover.webp`;
+  const linkref = `/articles/${id}`;
+
+  const [visible, setVisible] = useState(is_visible || false);
+
+  const toggleVisible = async (val) => {
+    setVisible(val);
+
+    await supabase.from("articles").update({ is_visible: val }).eq("id", id);
+  };
+
+  const deleteArticle = async () => {
+    if (!confirm("Supprimer cet article ?")) return;
+
+    await supabase.from("articles").delete().eq("id", id);
+  };
 
   return (
-    <Link
-      href={`/articles/${id}`}
-      className="group bg-bg-tertiary border-hover-tertiary flex flex-col overflow-hidden rounded-lg border shadow-md transition-shadow hover:shadow-xl"
-    >
+    <div className="group bg-bg-tertiary border-hover-tertiary flex flex-col overflow-hidden rounded-lg border shadow-md transition-shadow hover:shadow-xl">
+      <Link href={isAdmin ? `/admin/articles/${id}` : linkref}>
+
       {/* Image */}
       <Image
         src={coverImage}
@@ -50,7 +70,39 @@ export default function ArticleCard({
             ))}
           </div>
         )}
+        </div>
+        </Link>
+        {/* ADMIN */}
+        {isAdmin && (
+          <div className="mt-auto flex flex-col gap-3 p-4">
+            {/* Checkbox */}
+            <div className="flex gap-2">
+              <span className="text-sm">Visible sur le site</span>
+              <input
+                type="checkbox"
+                checked={visible}
+                onChange={(e) => toggleVisible(e.target.checked)}
+              />
+            </div>
+
+            {/* Actions */}
+            <div className="flex justify-between gap-2">
+              <button
+                onClick={deleteArticle}
+                className="bg-error rounded px-3 py-1 text-sm text-white"
+              >
+                Supprimer
+              </button>
+
+              <Link
+                href={`/admin/articles/${id}`}
+                className="bg-accent rounded px-3 py-1 text-sm text-white"
+              >
+                Modifier
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
-    </Link>
   );
 }

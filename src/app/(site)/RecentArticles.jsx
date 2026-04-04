@@ -9,7 +9,8 @@ export default async function RecentArticles({ limit = 3 }) {
     .from("articles")
     .select("id, title, date")
     .order("date", { ascending: false })
-    .limit(limit);
+    .limit(limit)
+    .eq("is_visible", true);
 
   if (error) {
     console.error("Erreur Supabase articles :", error);
