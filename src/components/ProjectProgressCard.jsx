@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-export default function ProjectProgressCard({ id, title, image, progress }) {
+export default function ProjectProgressCard({ id, title, progress}) {
   const bars = [
     { label: "Traduction", value: progress.traduction },
     { label: "Images", value: progress.images },
