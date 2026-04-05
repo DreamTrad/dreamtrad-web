@@ -2,11 +2,19 @@
 
 import AdminSidebar from "./AdminSidebar";
 import AdminHeader from "./AdminHeader";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
-export default function AdminLayout({ children }) {
+export default async function AdminLayout({ children }) {
+  const supabase = createSupabaseServerClient();
+
+  const { data: projects } = await supabase
+    .from("projects")
+    .select("id, title")
+    .order("title");
+
   return (
     <div className="flex min-h-screen bg-bg text-text">
-      <AdminSidebar />
+      <AdminSidebar projects={projects || []} />
 
       <div className="flex flex-1 flex-col">
         <AdminHeader />
