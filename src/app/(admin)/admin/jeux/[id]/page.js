@@ -78,7 +78,7 @@ export default function AdminGamePage() {
 
   return (
     <div className="mx-auto flex max-w-5xl flex-col gap-6 p-6">
-      <GameHeader title={game.title} />
+      <GameHeader title={game.title} sheet_table={game.sheet_table} drive={game.drive} />
 
       <GameToggles game={game} onChange={updateGameField} />
 
