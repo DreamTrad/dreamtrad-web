@@ -8,6 +8,7 @@ import GameHeader from "./GameHeader";
 import GameToggles from "./GameToggles";
 import GameProgress from "./GameProgress";
 import RecruitmentsSection from "./RecruitmentsSection";
+import PatchesSection from "./PatchesSection";
 
 export default function AdminGamePage() {
   const { id } = useParams();
@@ -83,6 +84,8 @@ export default function AdminGamePage() {
       <GameToggles game={game} onChange={updateGameField} />
 
       <GameProgress game={game} />
+
+      <PatchesSection projectId={id} />
 
       <RecruitmentsSection
         recruitments={recruitments}

@@ -56,7 +56,7 @@ export default function RecruitmentForm({ data, onSave, label, onSaved }) {
       <h2 className="text-lg font-bold">{label}</h2>
 
       <label className="flex items-center gap-2">
-        <span>Actif</span>
+        <span>Affiché sur le site</span>
         <input
           type="checkbox"
           checked={localData.is_active || false}
