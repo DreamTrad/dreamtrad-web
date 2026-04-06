@@ -1,8 +1,8 @@
 import MarkdownSection from "@/components/ui/MarkdownSection";
 
 export default function RecruitmentCard({
+  id,
   title,
-  image,
   roles,
   contact,
   description,
@@ -19,7 +19,7 @@ export default function RecruitmentCard({
         {/* Image */}
         <div className="mx-auto h-56 w-40 shrink-0 md:mx-0">
           <img
-            src={image}
+            src={`/poster/${id}.webp`}
             alt={`Affiche de ${title}`}
             className="h-full w-full rounded-md object-cover shadow-md"
           />
