@@ -29,13 +29,13 @@ export default function RecruitmentsSection({ recruitments }) {
   return (
     <div className="grid grid-cols-2 gap-6">
       <RecruitmentForm
-        label="Recrutement principal"
+        label="Recrutement projet"
         data={recruitments.project}
         onSave={(data) => save("project", data)}
       />
 
       <RecruitmentForm
-        label="Autres contributions"
+        label="Recrutement site"
         data={recruitments.other}
         onSave={(data) => save("other", data)}
       />
