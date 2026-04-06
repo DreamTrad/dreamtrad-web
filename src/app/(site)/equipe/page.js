@@ -43,7 +43,8 @@ export default async function TeamPage() {
         )
       )
     `)
-    .eq("is_important", true);
+    .eq("is_important", true)
+    .order("name", { ascending: true });
 
   if (error) {
     console.error("Supabase error:", JSON.stringify(error, null, 2));
