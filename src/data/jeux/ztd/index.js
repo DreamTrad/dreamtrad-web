@@ -61,13 +61,6 @@ export const game = {
           id: "telechargement",
           name: "Télechargement",
           file: "patchfr/informations",
-          platforms: [
-            {
-              id: "pc",
-              name: "PC (Windows, Steamdeck, Linux)",
-              link: "https://drive.google.com/uc?export=download&id=1k0mvR579KW3rlSDoMZt8UjHsTGXqiVq1",
-            },
-          ],
         },
         {
           id: "installation",

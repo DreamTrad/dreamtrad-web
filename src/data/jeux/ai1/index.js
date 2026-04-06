@@ -42,18 +42,6 @@ export const game = {
           id: "telechargement",
           name: "Télechargement",
           file: "patchfr/informations",
-          platforms: [
-            {
-              id: "pc",
-              name: "PC (Windows, Steam Deck, Linux)",
-              link: "https://drive.google.com/uc?export=download&id=1ZXVIqy4coFZSbIxfylLaUZ-wt44caz-N",
-            },
-            {
-              id: "xbox",
-              name: "Xbox, Gamepass, Microsoft Store",
-              link: "https://drive.google.com/uc?export=download&id=1lVQCuaAdzCWa2wesm0k4TiTjXhA3_Ql_",
-            },
-          ],
         },
         {
           id: "installation",

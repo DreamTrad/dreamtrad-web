@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 
 import { games } from "@/data/jeux";
-import DownloadSectionClient from "./DownloadClient";
+import DownloadClient from "./DownloadClient";
 import ImageCarousel from "./ImageCarousel";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import ProjectProgressCard from "@/components/ProjectProgressCard";
@@ -66,15 +66,21 @@ export default async function DownloadPage({ params }) {
     .eq("id", id)
     .single();
 
-  const game = games.find((g) => g.id === id);
-  if (!game) return <div>Jeu introuvable</div>;
+  if (error) {
+    console.error("Error fetching project:", error);
+  }
 
-  const section = game.categories.patchfr?.sections?.find(
-    (s) => s.id === "telechargement",
-  );
-  if (!section) return <div>Section Téléchargement introuvable</div>;
+  const { data: patches, error: patchesError } = await supabase
+    .from("patches")
+    .select("id, name, link")
+    .eq("project_id", id);
+
+  if (patchesError) {
+    console.error("Error fetching patches:", patchesError);
+  }
 
   let content = "Informations indisponibles.";
+  
   try {
     const markdownPath = path.join(
       process.cwd(),
@@ -103,7 +109,7 @@ export default async function DownloadPage({ params }) {
         </div>
       )}
 
-      <DownloadSectionClient gameId={id} platforms={section.platforms} />
+      <DownloadClient patches={patches} />
 
       {images.length > 0 && <ImageCarousel images={images} interval={15000} />}
     </div>

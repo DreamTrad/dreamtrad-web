@@ -45,7 +45,6 @@ export const game = {
           id: "telechargement",
           name: "Informations patch",
           file: "patchfr/informations",
-          platforms: [],
         },
         { id: "equipe", name: "Équipe", data: team },
       ],

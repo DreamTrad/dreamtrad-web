@@ -131,18 +131,6 @@ export const game = {
           id: "telechargement",
           name: "Télechargement",
           file: "patchfr/informations",
-          platforms: [
-            {
-              id: "pc",
-              name: "PC (Windows, Steam Deck, Linux)",
-              link: "https://drive.google.com/uc?export=download&id=1YSLUKmKwh3TW-8RVaQoWYuWyUaswOooC",
-            },
-            {
-              id: "psvita",
-              name: "PS Vita",
-              link: "https://drive.google.com/uc?export=download&id=1HG9cuYO6NNgeNHoFeYnS4vjPWq_oxdOR",
-            },
-          ],
         },
         {
           id: "installation",
