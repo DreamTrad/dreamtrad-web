@@ -1,34 +1,60 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { games } from "@/data/jeux";
+import { supabase } from "@/lib/supabase/client";
 
 export default function AvailablePatches() {
-  const available = useMemo(() => {
-    return games
-      .map((game) => {
-        const patchfr = game.categories?.patchfr;
-        if (!patchfr) return null;
-
-        const tele = patchfr.sections?.find((s) => s.id === "telechargement");
-        if (!tele?.platforms?.length) return null;
-
-        return {
-          id: game.id,
-          name: game.name,
-          image: `/jeux/${game.id}/cover.webp`,
-          platforms: tele.platforms,
-          link: `/jeux/${game.id}/patchfr/telechargement`,
-        };
-      })
-      .filter(Boolean);
-  }, []);
-
+  const [available, setAvailable] = useState([]);
   const [index, setIndex] = useState(0);
 
-  // Auto-slide every 6s
+  useEffect(() => {
+    const fetchPatches = async () => {
+      const { data, error } = await supabase.from("patches").select(`
+          id,
+          project_id,
+          name,
+          link,
+          projects!patches_project_id_fkey (
+            title
+          )
+        `);
+
+      if (error) {
+        console.error("Fetch patches error:", error);
+        return;
+      }
+
+      if (!data?.length) return;
+
+      // group by project_id
+      const grouped = data.reduce((acc, p) => {
+        if (!acc[p.project_id]) {
+          acc[p.project_id] = [];
+        }
+        acc[p.project_id].push(p);
+        return acc;
+      }, {});
+
+      // format for UI
+      const formatted = Object.entries(grouped).map(
+        ([project_id, platforms]) => ({
+          id: project_id,
+          name: platforms[0]?.projects?.title || project_id,
+          image: `/jeux/${project_id}/cover.webp`,
+          platforms,
+          link: `/jeux/${project_id}/patchfr/telechargement`,
+        }),
+      );
+
+      setAvailable(formatted);
+    };
+
+    fetchPatches();
+  }, []);
+
+  // Auto-slide
   useEffect(() => {
     if (!available.length) return;
     const timer = setInterval(
