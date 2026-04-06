@@ -10,7 +10,7 @@ export default function GameHeader({ title, sheet_table, drive }) {
             href={sheet_table}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent rounded px-3 py-1 text-white transition hover:bg-accent/80"
+            className="bg-accent rounded px-3 py-1 text-white transition hover:bg-accent/80 text-center"
           >
             Table du projet
           </a>
@@ -21,7 +21,7 @@ export default function GameHeader({ title, sheet_table, drive }) {
             href={drive}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent rounded px-3 py-1 text-white transition hover:bg-accent/80"
+            className="bg-accent rounded px-3 py-1 text-white transition hover:bg-accent/80 text-center"
           >
             Drive du projet
           </a>
