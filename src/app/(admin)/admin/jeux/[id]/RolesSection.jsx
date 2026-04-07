@@ -14,7 +14,6 @@ const ROLE_OPTIONS = [
 export default function RolesSection({ projectId }) {
   const [roles, setRoles] = useState([]);
   const [members, setMembers] = useState([]);
-
   const [newMember, setNewMember] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -86,8 +85,8 @@ export default function RolesSection({ projectId }) {
     if (data) {
       setRoles((prev) =>
         prev.map((r) =>
-          r.member_id === member_id && r.role === role ? data : r
-        )
+          r.member_id === member_id && r.role === role ? data : r,
+        ),
       );
     }
   };
@@ -107,21 +106,13 @@ export default function RolesSection({ projectId }) {
             r.member_id === member_id &&
             r.project_id === projectId &&
             r.role === role
-          )
-      )
+          ),
+      ),
     );
   };
 
-  // Group roles by role instead of member
-  const rolesByCategory = ROLE_OPTIONS.map((role) => {
-    return {
-      role,
-      members: roles.filter((r) => r.role === role),
-    };
-  }).filter((group) => group.members.length > 0);
-
   return (
-    <div className="space-y-6 rounded-xl bg-bg-secondary p-6">
+    <div className="bg-bg-secondary space-y-6 rounded-xl p-6">
       <h2 className="text-xl font-bold">Équipe du projet</h2>
 
       {/* Create member */}
@@ -135,81 +126,73 @@ export default function RolesSection({ projectId }) {
         <button
           onClick={createMember}
           disabled={loading}
-          className="rounded bg-primary px-4 py-2 text-white"
+          className="bg-primary rounded px-4 py-2 text-white"
         >
           Ajouter member
         </button>
       </div>
 
-      {/* Roles grouped by role */}
-      <div className="space-y-6">
-        {rolesByCategory.map((group) => (
-          <div key={group.role} className="rounded border p-4">
-            <h3 className="text-accent text-lg font-bold">
-              {group.role}
-            </h3>
+      {/* Members list */}
+      <div className="space-y-4">
+        {members.map((member) => {
+          const memberRoles = roles.filter((r) => r.member_id === member.id);
 
-            <div className="mt-3 space-y-3">
-              {group.members.map((r) => (
-                <div
-                  key={`${r.member_id}-${r.project_id}-${r.role}`}
-                  className="flex items-center gap-2"
+          const availableRoles = ROLE_OPTIONS.filter(
+            (role) => !memberRoles.some((r) => r.role === role),
+          );
+
+          return (
+            <div key={member.id} className="rounded border p-4">
+              <div className="font-semibold">{member.id}</div>
+
+              {/* Add role */}
+              <div className="mt-2 flex gap-2">
+                <select
+                  className="rounded border p-2"
+                  defaultValue=""
+                  onChange={(e) => addRole(member.id, e.target.value)}
                 >
-                  <span className="w-40">{r.member_id}</span>
+                  <option value="" disabled>
+                    Ajouter un rôle
+                  </option>
 
-                  <input
-                    className="flex-1 rounded border p-1"
-                    value={r.comment || ""}
-                    onChange={(e) =>
-                      updateComment(
-                        r.member_id,
-                        r.role,
-                        e.target.value
-                      )
-                    }
-                  />
-
-                  <button
-                    onClick={() =>
-                      deleteRole(r.member_id, r.role)
-                    }
-                    className="text-red-500"
-                  >
-                    ✕
-                  </button>
-                </div>
-              ))}
-            </div>
-
-            {/* Add role to existing members */}
-            <div className="mt-3 flex gap-2">
-              <select
-                className="rounded border p-2"
-                defaultValue=""
-                onChange={(e) =>
-                  addRole(e.target.value, group.role)
-                }
-              >
-                <option value="" disabled>
-                  Ajouter un member
-                </option>
-
-                {members
-                  .filter(
-                    (m) =>
-                      !group.members.some(
-                        (r) => r.member_id === m.id
-                      )
-                  )
-                  .map((m) => (
-                    <option key={m.id} value={m.id}>
-                      {m.id}
+                  {availableRoles.map((role) => (
+                    <option key={role} value={role}>
+                      {role}
                     </option>
                   ))}
-              </select>
+                </select>
+              </div>
+
+              {/* Roles */}
+              <div className="mt-3 space-y-2">
+                {memberRoles.map((role) => (
+                  <div
+                    key={`${role.member_id}-${role.project_id}-${role.role}`}
+                    className="flex items-center gap-2"
+                  >
+                    <span className="w-40">{role.role}</span>
+
+                    <input
+                      className="flex-1 rounded border p-1"
+                      value={role.comment || ""}
+                      onChange={(e) =>
+                        updateComment(member.id, role.role, e.target.value)
+                      }
+                    />
+
+                    <button
+                      onClick={() => deleteRole(member.id, role.role)}
+                      className="text-red-500"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

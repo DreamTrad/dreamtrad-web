@@ -9,6 +9,7 @@ import GameToggles from "./GameToggles";
 import GameProgress from "./GameProgress";
 import RecruitmentsSection from "./RecruitmentsSection";
 import PatchesSection from "./PatchesSection";
+import RolesSection from "./RolesSection";
 
 export default function AdminGamePage() {
   const { id } = useParams();
@@ -20,9 +21,11 @@ export default function AdminGamePage() {
   });
 
   useEffect(() => {
+    if (!id) return;
+
     fetchGame();
     fetchRecruitments();
-  }, []);
+  }, [id]);
 
   const fetchGame = async () => {
     const { data } = await supabase
@@ -40,26 +43,8 @@ export default function AdminGamePage() {
       .select("*")
       .eq("project_id", id);
 
-    let project = data?.find((r) => r.type === "project");
-    let other = data?.find((r) => r.type === "other");
-
-    if (!project) {
-      const { data: created } = await supabase
-        .from("project_recruitments")
-        .insert({ project_id: id, type: "project" })
-        .select()
-        .single();
-      project = created;
-    }
-
-    if (!other) {
-      const { data: created } = await supabase
-        .from("project_recruitments")
-        .insert({ project_id: id, type: "other" })
-        .select()
-        .single();
-      other = created;
-    }
+    const project = data?.find((r) => r.type === "project");
+    const other = data?.find((r) => r.type === "other");
 
     setRecruitments({ project, other });
   };
@@ -79,7 +64,11 @@ export default function AdminGamePage() {
 
   return (
     <div className="mx-auto flex max-w-5xl flex-col gap-6 p-6">
-      <GameHeader title={game.title} sheet_table={game.sheet_table} drive={game.drive} />
+      <GameHeader
+        title={game.title}
+        sheet_table={game.sheet_table}
+        drive={game.drive}
+      />
 
       <GameToggles game={game} onChange={updateGameField} />
 
@@ -91,6 +80,8 @@ export default function AdminGamePage() {
         recruitments={recruitments}
         setRecruitments={setRecruitments}
       />
+
+      <RolesSection projectId={id} />
     </div>
   );
 }
