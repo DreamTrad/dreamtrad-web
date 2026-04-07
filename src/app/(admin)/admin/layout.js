@@ -35,7 +35,7 @@ export default async function AdminLayout({ children }) {
     projects = data || [];
   } else {
     const { data } = await supabase
-      .from("projet_users")
+      .from("project_users")
       .select("project_id, projects(id, title)")
       .eq("user_id", user.id);
 
