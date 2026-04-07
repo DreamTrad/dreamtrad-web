@@ -1,5 +1,5 @@
 // app/articles/page.js
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createClient } from "@/lib/supabase/server";
 import ArticleCard from "@/components/ArticleCard";
 
 export const dynamic = "force-static";
@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 export default async function ArticleListPage() {
-  const supabase = createSupabaseServerClient();
+  const supabase = createClient();
 
   const { data: articles, error } = await supabase
     .from("articles")

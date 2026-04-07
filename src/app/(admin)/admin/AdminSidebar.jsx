@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-export default function AdminSidebar({ projects }) {
+export default function AdminSidebar({ projects, role }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -17,20 +17,23 @@ export default function AdminSidebar({ projects }) {
         >
           Accueil
         </Link>
+        {(role === "admin" || role === "super_admin") && (
+          <>
+            <Link
+              href="/admin/equipe"
+              className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
+            >
+              Équipe
+            </Link>
 
-        <Link
-          href="/admin/equipe"
-          className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
-        >
-          Équipe
-        </Link>
-
-        <Link
-          href="/admin/articles"
-          className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
-        >
-          Articles
-        </Link>
+            <Link
+              href="/admin/articles"
+              className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
+            >
+              Articles
+            </Link>
+          </>
+        )}
 
         {/* Projets */}
         <div>
@@ -43,7 +46,7 @@ export default function AdminSidebar({ projects }) {
           </div>
 
           {open && (
-            <div className="ml-3 mt-1 flex flex-col gap-1 border-l border-white/10 pl-2">
+            <div className="mt-1 ml-3 flex flex-col gap-1 border-l border-white/10 pl-2">
               <Link
                 href="/admin/jeux"
                 className="hover:bg-hover rounded px-2 py-1 text-xs"
@@ -53,9 +56,9 @@ export default function AdminSidebar({ projects }) {
 
               {projects.map((project) => (
                 <Link
+                  className="hover:bg-hover rounded px-2 py-1 text-xs"
                   key={project.id}
                   href={`/admin/jeux/${project.id}`}
-                  className="hover:bg-hover rounded px-2 py-1 text-xs"
                 >
                   {project.title}
                 </Link>

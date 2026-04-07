@@ -6,7 +6,7 @@ import DownloadClient from "./DownloadClient";
 import ImageCarousel from "./ImageCarousel";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import ProjectProgressCard from "@/components/ProjectProgressCard";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createClient } from "@/lib/supabase/server";
 
 export const revalidate = 60 * 60 * 24;
 
@@ -58,7 +58,7 @@ export default async function DownloadPage({ params }) {
     i++;
   }
 
-  const supabase = await createSupabaseServerClient();
+  const supabase = await createClient();
 
   const { data: project, error } = await supabase
     .from("projects")
@@ -80,7 +80,7 @@ export default async function DownloadPage({ params }) {
   }
 
   let content = "Informations indisponibles.";
-  
+
   try {
     const markdownPath = path.join(
       process.cwd(),

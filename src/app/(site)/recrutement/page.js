@@ -1,12 +1,12 @@
 // app/recrutement/page.js
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createClient } from "@/lib/supabase/server";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import InfoBox from "@/components/ui/InfoBox";
 import RecruitmentCard from "@/components/RecruitmentCard";
 import fs from "fs";
 import path from "path";
 
-export const dynamic = "force-static";
+export const revalidate = 60 * 60 * 24;
 
 export const metadata = {
   title: "Recrutement",
@@ -29,9 +29,8 @@ export const metadata = {
 };
 
 export default async function RecruitmentPage() {
-  const supabase = createSupabaseServerClient();
+  const supabase = await createClient();
 
-  // Project recruitments (main)
   const { data: projectRecruitments } = await supabase
     .from("project_recruitments")
     .select(

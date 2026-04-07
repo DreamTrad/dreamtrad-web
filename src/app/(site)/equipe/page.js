@@ -4,7 +4,7 @@ import path from "path";
 import TeamMemberCard from "@/app/(site)/equipe/TeamMemberCard";
 import InfoBox from "@/components/ui/InfoBox";
 import MarkdownSection from "@/components/ui/MarkdownSection";
-import { supabase } from "@/lib/supabase/client";
+import { createClient } from "@/lib/supabase/server";
 
 export const dynamic = "force-dynamic";
 
@@ -32,16 +32,13 @@ export const metadata = {
 export default async function TeamPage() {
   let team = [];
 
-  const { data, error } = await supabase.from("members").select(`
+  const supabase = await createClient();;
+  const { data, error } = await supabase
+  .from("members").select(`
       id,
       name,
       skills,
-      links,
-      member_projects (
-        projects (
-          title
-        )
-      )
+      links
     `)
     .eq("is_important", true)
     .order("name", { ascending: true });
@@ -51,7 +48,7 @@ export default async function TeamPage() {
   } else {
     team = data.map((member) => ({
       ...member,
-      projects: member.member_projects.map((mp) => mp.projects.title),
+      // projects: member.member_projects.map((mp) => mp.projects.title),
     }));
   }
 
