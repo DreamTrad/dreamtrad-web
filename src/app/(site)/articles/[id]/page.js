@@ -7,7 +7,7 @@ import path from "path";
 import { notFound } from "next/navigation";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 
-export const dynamic = "force-static";
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const supabase = createStaticClient();
