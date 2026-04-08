@@ -1,216 +1,54 @@
-"use client";
+import LinkWithIcon from "@/components/ui/LinkWithIcon";
 
-import { useEffect, useState } from "react";
-import { supabase } from "@/lib/supabase/client";
+export const dynamic = "force-static";
 
-const ROLE_OPTIONS = [
-  "traduction",
-  "relecture",
-  "graphisme",
-  "programmation",
-  "autre",
-];
+export default function TeamRoleCategory({ role, items }) {
+  if (!items?.length) return null;
 
-export default function RolesSection({ projectId }) {
-  const [roles, setRoles] = useState([]);
-  const [members, setMembers] = useState([]);
-
-  const [newMember, setNewMember] = useState("");
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    fetchRoles();
-    fetchMembers();
-  }, [projectId]);
-
-  const fetchRoles = async () => {
-    const { data } = await supabase
-      .from("project_roles")
-      .select("*")
-      .eq("project_id", projectId);
-
-    if (data) setRoles(data);
+  const roleLabels = {
+    traduction: "Traduction",
+    programmation: "Programmation",
+    graphisme: "Graphisme",
+    relecture: "Relecture",
+    autre: "Autre",
   };
-
-  const fetchMembers = async () => {
-    const { data } = await supabase.from("members").select("*");
-
-    if (data) setMembers(data);
-  };
-
-  const createMember = async () => {
-    if (!newMember) return;
-
-    setLoading(true);
-
-    const { data } = await supabase
-      .from("members")
-      .insert({ id: newMember })
-      .select()
-      .single();
-
-    if (data) {
-      setMembers((prev) => [...prev, data]);
-      setNewMember("");
-    }
-
-    setLoading(false);
-  };
-
-  const addRole = async (memberId, role) => {
-    const { data } = await supabase
-      .from("project_roles")
-      .insert({
-        member_id: memberId,
-        project_id: projectId,
-        role,
-      })
-      .select()
-      .single();
-
-    if (data) {
-      setRoles((prev) => [...prev, data]);
-    }
-  };
-
-  const updateComment = async (member_id, role, comment) => {
-    const { data } = await supabase
-      .from("project_roles")
-      .update({ comment })
-      .eq("member_id", member_id)
-      .eq("project_id", projectId)
-      .eq("role", role)
-      .select()
-      .maybeSingle();
-
-    if (data) {
-      setRoles((prev) =>
-        prev.map((r) =>
-          r.member_id === member_id && r.role === role ? data : r
-        )
-      );
-    }
-  };
-
-  const deleteRole = async (member_id, role) => {
-    await supabase
-      .from("project_roles")
-      .delete()
-      .eq("member_id", member_id)
-      .eq("project_id", projectId)
-      .eq("role", role);
-
-    setRoles((prev) =>
-      prev.filter(
-        (r) =>
-          !(
-            r.member_id === member_id &&
-            r.project_id === projectId &&
-            r.role === role
-          )
-      )
-    );
-  };
-
-  // Group roles by role instead of member
-  const rolesByCategory = ROLE_OPTIONS.map((role) => {
-    return {
-      role,
-      members: roles.filter((r) => r.role === role),
-    };
-  }).filter((group) => group.members.length > 0);
 
   return (
-    <div className="space-y-6 rounded-xl bg-bg-secondary p-6">
-      <h2 className="text-xl font-bold">Équipe du projet</h2>
+    <div className="bg-bg-secondary space-y-3 rounded-md p-5 shadow-md">
+      <h3 className="text-accent text-xl font-bold">
+        {roleLabels[role] || role}
+      </h3>
 
-      {/* Create member */}
-      <div className="flex gap-2">
-        <input
-          className="flex-1 rounded border p-2"
-          placeholder="ID du member"
-          value={newMember}
-          onChange={(e) => setNewMember(e.target.value)}
-        />
-        <button
-          onClick={createMember}
-          disabled={loading}
-          className="rounded bg-primary px-4 py-2 text-white"
-        >
-          Ajouter member
-        </button>
-      </div>
+      <ul className="space-y-2">
+        {items.map((item) => {
+          const member = item.members;
 
-      {/* Roles grouped by role */}
-      <div className="space-y-6">
-        {rolesByCategory.map((group) => (
-          <div key={group.role} className="rounded border p-4">
-            <h3 className="text-accent text-lg font-bold">
-              {group.role}
-            </h3>
+          const link = member?.is_important
+            ? "/equipe"
+            : member?.links?.[0] || "";
 
-            <div className="mt-3 space-y-3">
-              {group.members.map((r) => (
-                <div
-                  key={`${r.member_id}-${r.project_id}-${r.role}`}
-                  className="flex items-center gap-2"
-                >
-                  <span className="w-40">{r.member_id}</span>
+          return (
+            <li
+              key={`${member?.id}-${item.comment}`}
+              className="flex flex-col gap-1"
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-text text-lg font-semibold">
+                  {member?.name}
+                </span>
 
-                  <input
-                    className="flex-1 rounded border p-1"
-                    value={r.comment || ""}
-                    onChange={(e) =>
-                      updateComment(
-                        r.member_id,
-                        r.role,
-                        e.target.value
-                      )
-                    }
-                  />
+                {link && <LinkWithIcon url={link} />}
+              </div>
 
-                  <button
-                    onClick={() =>
-                      deleteRole(r.member_id, r.role)
-                    }
-                    className="text-red-500"
-                  >
-                    ✕
-                  </button>
-                </div>
-              ))}
-            </div>
-
-            {/* Add role to existing members */}
-            <div className="mt-3 flex gap-2">
-              <select
-                className="rounded border p-2"
-                defaultValue=""
-                onChange={(e) =>
-                  addRole(e.target.value, group.role)
-                }
-              >
-                <option value="" disabled>
-                  Ajouter un member
-                </option>
-
-                {members
-                  .filter(
-                    (m) =>
-                      !group.members.some(
-                        (r) => r.member_id === m.id
-                      )
-                  )
-                  .map((m) => (
-                    <option key={m.id} value={m.id}>
-                      {m.id}
-                    </option>
-                  ))}
-              </select>
-            </div>
-          </div>
-        ))}
-      </div>
+              {item.comment && (
+                <span className="text-text-secondary ml-1 text-sm">
+                  {item.comment}
+                </span>
+              )}
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }

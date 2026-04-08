@@ -1,32 +1,38 @@
 // app/jeux/[id]/patchfr/equipe/page.js
 
-import { games } from "@/data/jeux";
-import { notFound } from "next/navigation";
 import TeamRoleCategory from "./TeamRoleCategory";
+import { createClient } from "@/lib/supabase/server";
 
 export const dynamic = "force-static";
 
 
 export async function generateMetadata({ params }) {
+
   const id = (await params).id;
   const image = `/jeux/${id}/cover.webp`;
 
-  const game = games.find((g) => g.id === id);
-  if (!game) return {};
+  const supabase = await createClient();
+
+  const { data: game } = await supabase
+    .from("projects")
+    .select("title")
+    .eq("id", id)
+    .single();
+
 
   return {
-    title: `Équipe patch fr | ${game.name}`,
-    description: `Découvrez l’équipe ayant travaillé sur la traduction française de ${game.name}.`,
+    title: `Équipe patch fr | ${game.title}`,
+    description: `Découvrez l’équipe ayant travaillé sur la traduction française de ${game.title}.`,
     openGraph: {
-      title: `Équipe patch fr | ${game.name}`,
-      description: `Équipe de traduction française du visual novel ${game.name}.`,
+      title: `Équipe patch fr | ${game.title}`,
+      description: `Équipe de traduction française du visual novel ${game.title}.`,
       url: `/jeux/${id}/patchfr/equipe`,
       images: [
         {
           url: image,
           width: 1200,
           height: 630,
-          alt: game.name,
+          alt: game.title,
         },
       ],
     },
@@ -36,13 +42,24 @@ export async function generateMetadata({ params }) {
 export default async function TeamRoleSection({ params }) {
   const id = (await params).id;
 
-  const game = games.find((g) => g.id === id);
-  if (!game) notFound();
+   const supabase = await createClient();
 
-  const section = game.categories.patchfr.sections.find(
-    (s) => s.id === "equipe",
-  );
-  if (!section) notFound();
+  const { data } = await supabase
+    .from("project_roles")
+    .select(`
+      role,
+      comment,
+      members (
+        id,
+        name,
+        is_important,
+        links
+      )
+    `)
+    .eq("project_id", id);
+
+    const groupedRoles = Object.groupBy(data || [], (item) => item.role);
+
 
   return (
     <>
@@ -60,7 +77,9 @@ export default async function TeamRoleSection({ params }) {
             </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        {section.data .filter((cat) => cat.people && cat.people.length > 0) .map((cat, idx) => ( <TeamRoleCategory key={idx} category={cat} /> ))}
+        {Object.entries(groupedRoles).map(([role, items]) => (
+  <TeamRoleCategory key={role} role={role} items={items} />
+))}
       </div>
       </div>
     </>
