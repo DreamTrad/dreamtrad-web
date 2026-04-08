@@ -4,7 +4,7 @@ import ArticleCard from "@/components/ArticleCard";
 
 
 export default async function ArticleListAdminPage() {
-  const supabase = createClient();
+  const supabase = await createClient();
 
   const { data: articles, error } = await supabase
     .from("articles")

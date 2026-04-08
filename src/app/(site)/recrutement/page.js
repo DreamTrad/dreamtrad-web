@@ -78,6 +78,14 @@ export default async function RecruitmentPage() {
     ...(siteRecruitments || []),
   ];
 
+  const sortedProjectRecruitments = [...(projectRecruitments || [])].sort(
+    (a, b) => (a.projects?.id || "").localeCompare(b.projects?.id || ""),
+  );
+
+  const sortedMergedRecruitments = [...(mergedRecruitments || [])].sort(
+    (a, b) => (a.projects?.id || "").localeCompare(b.projects?.id || ""),
+  );
+
   // Markdown
   const filePath = path.join(
     process.cwd(),
@@ -104,7 +112,7 @@ export default async function RecruitmentPage() {
         </h2>
 
         <div className="grid grid-cols-1 justify-center gap-8 sm:grid-cols-[repeat(auto-fit,minmax(400px,600px))]">
-          {projectRecruitments?.map((item) => (
+          {sortedProjectRecruitments?.map((item) => (
             <RecruitmentCard
               key={item.id}
               id={item.projects?.id}
@@ -122,7 +130,7 @@ export default async function RecruitmentPage() {
         </h2>
 
         <div className="grid grid-cols-1 justify-center gap-8 sm:grid-cols-[repeat(auto-fit,minmax(400px,600px))]">
-          {mergedRecruitments.map((item) => (
+          {sortedMergedRecruitments.map((item) => (
             <RecruitmentCard key={item.id} {...item} />
           ))}
         </div>

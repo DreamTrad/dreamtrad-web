@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 export default async function ArticleListPage() {
-  const supabase = createClient();
+  const supabase = await createClient();
 
   const { data: articles, error } = await supabase
     .from("articles")

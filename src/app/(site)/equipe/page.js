@@ -32,7 +32,7 @@ export const metadata = {
 export default async function TeamPage() {
   let team = [];
 
-  const supabase = await createClient();;
+  const supabase = await createClient();
   const { data, error } = await supabase
   .from("members").select(`
       id,

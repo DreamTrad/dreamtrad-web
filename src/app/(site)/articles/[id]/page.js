@@ -1,5 +1,6 @@
 // app/articles/[id]/page.js
 import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/static";
 import Link from "next/link";
 import Image from "next/image";
 import fs from "fs";
@@ -11,7 +12,7 @@ export const dynamic = "force-static";
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const supabase = createClient();
+  const supabase = createStaticClient();
 
   const { data } = await supabase
     .from("articles")
@@ -27,7 +28,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const id = (await params).id;
-  const supabase = createClient();
+  const supabase = await createClient();
 
   const { data: article } = await supabase
     .from("articles")
@@ -83,7 +84,7 @@ export async function generateMetadata({ params }) {
 
 export default async function ArticlePage({ params }) {
   const id = (await params).id;
-  const supabase = createClient();
+  const supabase = await createClient();
 
   const { data: article } = await supabase
     .from("articles")
