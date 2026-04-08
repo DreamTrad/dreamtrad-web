@@ -13,6 +13,11 @@ export default function TeamRoleCategory({ role, items }) {
     autre: "Autre",
   };
 
+  // Sort items by member name
+  const sortedItems = [...items].sort((a, b) =>
+    (a.members?.name || "").localeCompare(b.members?.name || "")
+  );
+
   return (
     <div className="bg-bg-secondary space-y-3 rounded-md p-5 shadow-md">
       <h3 className="text-accent text-xl font-bold">
@@ -20,7 +25,7 @@ export default function TeamRoleCategory({ role, items }) {
       </h3>
 
       <ul className="space-y-2">
-        {items.map((item) => {
+        {sortedItems.map((item) => {
           const member = item.members;
 
           const link = member?.is_important
