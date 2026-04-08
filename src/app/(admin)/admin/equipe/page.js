@@ -18,6 +18,9 @@ export default function TeamAdminPage() {
     fetchMembers();
   }, []);
 
+  const importantMembers = members.filter((m) => m.is_important);
+  const otherMembers = members.filter((m) => !m.is_important);
+
   return (
     <>
       <div className="mb-6 flex items-center justify-between">
@@ -31,11 +34,36 @@ export default function TeamAdminPage() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-        {members.map((m) => (
-          <TeamMemberAdminCard key={m.id} member={m} onUpdated={fetchMembers} />
-        ))}
+      {/* IMPORTANT */}
+      <div className="mb-10">
+        <h2 className="mb-4 text-lg font-semibold">Membres importants</h2>
+
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          {importantMembers.map((m) => (
+            <TeamMemberAdminCard
+              key={m.id}
+              member={m}
+              onUpdated={fetchMembers}
+            />
+          ))}
+        </div>
       </div>
+
+      {/* AUTRES */}
+      <div>
+        <h2 className="mb-4 text-lg font-semibold">Autres membres</h2>
+
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          {otherMembers.map((m) => (
+            <TeamMemberAdminCard
+              key={m.id}
+              member={m}
+              onUpdated={fetchMembers}
+            />
+          ))}
+        </div>
+      </div>
+
       {isOpen && (
         <CreateMemberModal
           onClose={() => setIsOpen(false)}

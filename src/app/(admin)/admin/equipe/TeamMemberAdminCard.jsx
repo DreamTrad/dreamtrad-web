@@ -9,13 +9,15 @@ export default function TeamMemberAdminCard({ member, onUpdated }) {
   const [original, setOriginal] = useState(member);
   const [isDirty, setIsDirty] = useState(false);
 
+  const [imgSrc, setImgSrc] = useState(`/team/${member.id}.webp`);
+
   useEffect(() => {
     setDraft(member);
     setOriginal(member);
+    setImgSrc(`/team/${member.id}.webp`);
   }, [member]);
 
   useEffect(() => {
-    // detect changes
     setIsDirty(JSON.stringify(draft) !== JSON.stringify(original));
   }, [draft, original]);
 
@@ -74,20 +76,19 @@ export default function TeamMemberAdminCard({ member, onUpdated }) {
         <div className="flex gap-4">
           <div className="h-20 w-20 shrink-0">
             <Image
-              src={`/team/${draft.id}.webp`}
+              src={imgSrc}
               alt={draft.name}
               width={80}
               height={80}
               className="border-bg-secondary h-full w-full rounded-lg border object-cover"
+              onError={() => setImgSrc("/team/default_avatar.webp")}
             />
           </div>
 
           <div>
-            {/* ID */}
             <div className="flex gap-6">
               <div className="text-text-tertiary text-xs">{draft.id}</div>
 
-              {/* is_important */}
               <div className="flex items-center gap-2">
                 <span className="text-sm">Visible sur la page équipe</span>
                 <input
@@ -99,14 +100,13 @@ export default function TeamMemberAdminCard({ member, onUpdated }) {
                 />
               </div>
             </div>
-            {/* Name */}
+
             <input
               value={draft.name || ""}
               onChange={(e) => updateField("name", e.target.value)}
               className="text-accent focus:border-accent border-b border-transparent bg-transparent text-xl font-bold transition outline-none"
             />
 
-            {/* Skills */}
             <div className="mt-2 flex flex-wrap gap-2">
               {draft.skills?.map((skill, i) => (
                 <div
@@ -135,7 +135,7 @@ export default function TeamMemberAdminCard({ member, onUpdated }) {
         </div>
       </div>
 
-      {/* Links (bottom) */}
+      {/* Links */}
       <div className="flex flex-col gap-2">
         {draft.links?.map((link, i) => (
           <div key={i} className="flex gap-2">
@@ -162,20 +162,20 @@ export default function TeamMemberAdminCard({ member, onUpdated }) {
       </div>
 
       {/* Actions */}
-        <div className="flex justify-between gap-2 mt-auto">
-          <button
-            onClick={async () => {
-              if (!confirm("Supprimer ce membre ?")) return;
+      <div className="flex justify-between gap-2 mt-auto">
+        <button
+          onClick={async () => {
+            if (!confirm("Supprimer ce membre ?")) return;
 
-              await supabase.from("members").delete().eq("id", original.id);
-              onUpdated?.();
-            }}
-            className="bg-error rounded px-4 py-2 text-sm text-white"
-            >
-            Supprimer
-          </button>
+            await supabase.from("members").delete().eq("id", original.id);
+            onUpdated?.();
+          }}
+          className="bg-error rounded px-4 py-2 text-sm text-white"
+        >
+          Supprimer
+        </button>
 
-            {isDirty && (
+        {isDirty && (
           <div className="flex gap-2">
             <button
               onClick={reset}
@@ -190,8 +190,8 @@ export default function TeamMemberAdminCard({ member, onUpdated }) {
               Valider
             </button>
           </div>
-          )}
-        </div>
+        )}
+      </div>
     </div>
   );
 }
