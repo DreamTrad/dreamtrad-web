@@ -63,7 +63,7 @@ export default function TeamMemberCard({
 
             <ul className="text-text-secondary list-inside list-disc space-y-1 text-sm">
               {projects.map((proj, idx) => (
-                <li key={idx}>{proj}</li>
+                <li key={proj.id}>{proj.title}</li>
               ))}
             </ul>
           </div>

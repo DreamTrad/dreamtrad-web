@@ -34,22 +34,43 @@ export default async function TeamPage() {
 
   const supabase = await createClient();
   const { data, error } = await supabase
-  .from("members").select(`
-      id,
-      name,
-      skills,
-      links
-    `)
-    .eq("is_important", true)
-    .order("name", { ascending: true });
+  .from("members")
+  .select(`
+    id,
+    name,
+    skills,
+    links,
+    project_roles (
+      role,
+      comment,
+      projects:project_id (
+        id,
+        title,
+        is_visible
+      )
+    )
+  `)
+  .eq("is_important", true)
+  .order("name", { ascending: true });
 
   if (error) {
     console.error("Supabase error:", JSON.stringify(error, null, 2));
   } else {
-    team = data.map((member) => ({
-      ...member,
-      // projects: member.member_projects.map((mp) => mp.projects.title),
-    }));
+   team = (data || []).map((member) => {
+  const projects = (member.project_roles || [])
+    .map((pr) => pr.projects)
+    .filter((p) => p && p.is_visible); // keep only visible
+
+  // remove duplicates (same project appearing multiple times)
+  const uniqueProjects = Array.from(
+    new Map(projects.map((p) => [p.id, p])).values()
+  );
+
+  return {
+    ...member,
+    projects: uniqueProjects,
+  };
+});
   }
 
   // Load markdown
