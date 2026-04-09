@@ -31,7 +31,7 @@ export default async function sitemap() {
     .from("articles")
     .select("id, date")
     .eq("is_visible", true);
-a
+
   if (error) {
     console.error("Erreur sitemap articles:", error);
   }

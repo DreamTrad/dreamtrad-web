@@ -6,8 +6,6 @@ import RecruitmentCard from "@/components/RecruitmentCard";
 import fs from "fs";
 import path from "path";
 
-export const revalidate = 60 * 60 * 24;
-
 export const metadata = {
   title: "Recrutement",
   description:
