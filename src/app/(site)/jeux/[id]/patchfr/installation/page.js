@@ -4,8 +4,7 @@ import path from "path";
 import PlateformsTabs from "./PlateformsTabs";
 import { games } from "@/data/jeux";
 
-export const dynamic = "force-static";
-
+export const revalidate = 60 * 60;
 
 export async function generateMetadata({ params }) {
   const gameId = (await params).id;

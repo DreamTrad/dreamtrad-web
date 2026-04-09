@@ -3,8 +3,7 @@
 import TeamRoleCategory from "./TeamRoleCategory";
 import { createClient } from "@/lib/supabase/server";
 
-export const dynamic = "force-static";
-
+export const revalidate = 60 * 60;
 
 export async function generateMetadata({ params }) {
 

@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import fs from "fs";
 import path from "path";
 
-export const dynamic = "force-static";
+export const revalidate = 3600;
 
 export async function generateMetadata({ params }) {
   const id = (await params).id;

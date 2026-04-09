@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { games } from "@/data/jeux";
 
-export const dynamic = "force-static";
+export const revalidate = 60 * 60; // 1 heure
 
 export const metadata = {
   title: "Liste des jeux",

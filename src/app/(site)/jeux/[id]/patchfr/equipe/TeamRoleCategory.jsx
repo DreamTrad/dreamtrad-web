@@ -1,6 +1,5 @@
 import LinkWithIcon from "@/components/ui/LinkWithIcon";
 
-export const dynamic = "force-static";
 
 export default function TeamRoleCategory({ role, items }) {
   if (!items?.length) return null;

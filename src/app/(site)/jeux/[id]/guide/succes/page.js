@@ -2,7 +2,7 @@
 import { games } from "@/data/jeux";
 import SuccesClient from "./SuccesClient";
 
-export const dynamic = "force-static";
+export const revalidate = 60 * 60;
 
 export async function generateStaticParams() {
   return games

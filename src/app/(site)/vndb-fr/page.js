@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 import DiscoverClient from "./VndbfrClient";
 
-export const dynamic = "force-static";
+export const revalidate = 60 * 60 * 24;
 
 export async function generateMetadata(_, parent) {
   const parentMetadata = await parent;

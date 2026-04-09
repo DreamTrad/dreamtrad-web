@@ -12,6 +12,7 @@ import InfoBox from "@/components/ui/InfoBox";
 import chibiAiba from "@/assets/chibi/chibi-aiba.webp";
 import { createClient } from "@/lib/supabase/server";
 
+export const revalidate = 60;
 
 export const metadata = {
   title: "Accueil | Dreamtrad",

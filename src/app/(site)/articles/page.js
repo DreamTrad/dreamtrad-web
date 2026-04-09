@@ -2,7 +2,7 @@
 import { createClient } from "@/lib/supabase/server";
 import ArticleCard from "@/components/ArticleCard";
 
-export const dynamic = "force-static";
+export const revalidate = 60;
 
 export const metadata = {
   title: "Articles",

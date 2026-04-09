@@ -9,7 +9,7 @@ import {
   extractFirstTitle,
 } from "@/lib/markdownMetadata";
 
-export const dynamic = "force-static";
+export const revalidate = 60 * 60;
 
 function findGuideChild(game, contentId, childId) {
   const section = game.categories?.guide?.sections?.find(

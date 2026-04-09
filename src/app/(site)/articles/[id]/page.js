@@ -7,7 +7,7 @@ import path from "path";
 import { notFound } from "next/navigation";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 
-export const dynamicParams = false;
+export const revalidate = 60;
 
 export async function generateStaticParams() {
   const supabase = createStaticClient();
