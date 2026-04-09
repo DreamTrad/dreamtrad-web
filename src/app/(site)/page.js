@@ -1,6 +1,4 @@
 // app/page.js
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
 import Image from "next/image";
 import AvailablePatches from "./AvailablePatches";
@@ -12,7 +10,7 @@ import InfoBox from "@/components/ui/InfoBox";
 import chibiAiba from "@/assets/chibi/chibi-aiba.webp";
 import { createClient } from "@/lib/supabase/server";
 
-export const revalidate = 60;
+export const revalidate = 60 * 60;
 
 export const metadata = {
   title: "Accueil | Dreamtrad",
@@ -20,14 +18,17 @@ export const metadata = {
 
 export default async function HomePage() {
   const supabase = await createClient();
-  // paths to your data
-  const presentationPath = path.join(
-    process.cwd(),
-    "src/data/markdown/presentation-accueil.md",
-  );
 
-  // read data
-  const presentationContent = fs.readFileSync(presentationPath, "utf8");
+  const { data: page, error: pageError } = await supabase
+    .from("pages")
+    .select("content, title")
+    .eq("slug", "/")
+    .eq("file", "infobox")
+    .single();
+
+  if (pageError) {
+    console.error("Supabase page error:", pageError);
+  }
 
   const { data: projects, error } = await supabase
     .from("projects")
@@ -45,12 +46,12 @@ export default async function HomePage() {
         {/* Main column */}
         <div className="flex flex-col gap-6 lg:col-span-2">
           <InfoBox
-            title="Traduction et promotion du visual novel en français !"
+            title={page?.title || ""}
             icon="✨"
             className="mt-2"
           >
             <MarkdownSection
-              content={presentationContent}
+              content={page?.content || ""}
               className="text-justify leading-relaxed"
             />
           </InfoBox>

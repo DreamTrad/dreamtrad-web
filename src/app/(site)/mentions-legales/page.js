@@ -1,9 +1,8 @@
 // app/mentions-legales/page.js
-import fs from "fs";
-import path from "path";
 import MarkdownSection from "@/components/ui/MarkdownSection";
+import { createClient } from "@/lib/supabase/server";
 
-export const dynamic = "force-static";
+export const revalidate = 60 * 60 * 24; 
 
 export const metadata = {
   title: "Mentions légales",
@@ -21,19 +20,23 @@ export const metadata = {
   },
 };
 
-export default function MentionsLegalesPage() {
-  const markdownPath = path.join(
-    process.cwd(),
-    "src/data/markdown/mentions-legales.md",
-  );
+export default async function MentionsLegalesPage() {
+  const supabase = await createClient();
 
-  const markdownContent = fs.existsSync(markdownPath)
-    ? fs.readFileSync(markdownPath, "utf8")
-    : "# Mentions légales indisponibles";
+  const { data: page, error: pageError } = await supabase
+    .from("pages")
+    .select("content")
+    .eq("slug", "mentions-legales")
+    .eq("file", "page")
+    .single();
+
+  if (pageError) {
+    console.error("Supabase page error:", pageError);
+  }
 
   return (
     <div className="border-bg-secondary bg-bg-tertiary mx-auto mt-8 mb-8 max-w-4xl rounded-xl border p-8 shadow-md">
-      <MarkdownSection content={markdownContent} />
+      <MarkdownSection content={page?.content || ""} />
     </div>
   );
 }

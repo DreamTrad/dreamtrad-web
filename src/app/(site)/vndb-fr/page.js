@@ -2,6 +2,9 @@
 import fs from "fs";
 import path from "path";
 import DiscoverClient from "./VndbfrClient";
+import { createClient } from "@/lib/supabase/server";
+import MarkdownSection from "@/components/ui/MarkdownSection";
+import InfoBox from "@/components/ui/InfoBox";
 
 export const revalidate = 60 * 60 * 24;
 
@@ -23,7 +26,7 @@ export async function generateMetadata(_, parent) {
   };
 }
 
-export default function VndbfrPage() {
+export default async function VndbfrPage() {
   // Read JSON
   let jsonData = [];
   try {
@@ -33,16 +36,25 @@ export default function VndbfrPage() {
     console.error("Erreur lecture vn_fr_list.json :", err);
   }
 
-  let markdown = "";
-  try {
-    const mdPath = path.join(
-      process.cwd(),
-      "src/data/markdown/vndb-fr-global.md",
-    );
-    markdown = fs.readFileSync(mdPath, "utf8");
-  } catch {
-    console.error("Markdown introuvable pour vndb-fr");
+  const supabase = await createClient();
+
+  const { data: page, error: pageError } = await supabase
+    .from("pages")
+    .select("content, title")
+    .eq("slug", "vndb-fr")
+    .eq("file", "infobox")
+    .single();
+
+  if (pageError) {
+    console.error("Supabase page error:", pageError);
   }
 
-  return <DiscoverClient initialData={jsonData} markdownContent={markdown} />;
+  return (
+  <div className="max-w-9xl mx-auto p-8">
+  <InfoBox title={page?.title || ""} icon="📚">
+    <MarkdownSection content={page?.content || ""} />
+  </InfoBox>
+  <DiscoverClient initialData={jsonData} />;
+  </div>
+  )
 }

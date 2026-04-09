@@ -1,6 +1,4 @@
 // app/equipe/page.js
-import fs from "fs";
-import path from "path";
 import TeamMemberCard from "@/app/(site)/equipe/TeamMemberCard";
 import InfoBox from "@/components/ui/InfoBox";
 import MarkdownSection from "@/components/ui/MarkdownSection";
@@ -73,27 +71,23 @@ export default async function TeamPage() {
 });
   }
 
-  // Load markdown
-  const markdownPath = path.join(
-    process.cwd(),
-    "src/data/markdown/equipe-global.md",
-  );
+  const { data: page, error: pageError } = await supabase
+    .from("pages")
+    .select("content, title")
+    .eq("slug", "/")
+    .eq("file", "infobox")
+    .single();
 
-  let markdownContent = "";
-
-  try {
-    markdownContent = fs.readFileSync(markdownPath, "utf8");
-  } catch (err) {
-    console.error("Erreur lecture equipe-global.md :", err);
-    markdownContent = "# Contenu indisponible";
+  if (pageError) {
+    console.error("Supabase page error:", pageError);
   }
 
   return (
     <div className="pb-16">
       <div className="mx-auto max-w-6xl p-8">
-        <InfoBox title="L’histoire de DreamTrad" icon="🌟">
+        <InfoBox title={page?.title} icon="🌟">
           <MarkdownSection
-            content={markdownContent}
+            content={page?.content || ""}
             className="text-justify leading-relaxed"
           />
         </InfoBox>

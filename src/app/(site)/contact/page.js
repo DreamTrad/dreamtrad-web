@@ -1,11 +1,10 @@
 // app/contact/page.js
-import fs from "fs";
-import path from "path";
 import InfoBox from "@/components/ui/InfoBox";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import ContactClient from "./ContactClient";
+import { createClient } from "@/lib/supabase/server";
 
-export const dynamic = "force-static";
+export const revalidate = 60 * 60 * 24;
 
 export const metadata = {
   title: "Contact",
@@ -30,24 +29,26 @@ export const metadata = {
   },
 };
 
-export default function ContactPage() {
-  const markdownPath = path.join(
-    process.cwd(),
-    "src/data/markdown/contact-global.md",
-  );
+export default async function ContactPage() {
+  const supabase = await createClient();
 
-  let markdownContent = "";
-  try {
-    markdownContent = fs.readFileSync(markdownPath, "utf8");
-  } catch (err) {
-    markdownContent = "Contenu introuvable.";
+  const { data: page, error: pageError } = await supabase
+    .from("pages")
+    .select("content, title")
+    .eq("slug", "contact")
+    .eq("file", "infobox")
+    .single();
+
+  if (pageError) {
+    console.error("Supabase page error:", pageError);
   }
+
 
   return (
     <>
-      <InfoBox title="Nous contacter" icon="✉️">
+      <InfoBox title={page?.title || ""} icon="✉️">
         <MarkdownSection
-          content={markdownContent}
+          content={page?.content || ""}
           className="text-justify leading-relaxed"
         />
       </InfoBox>

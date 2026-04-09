@@ -3,8 +3,8 @@ import { createClient } from "@/lib/supabase/server";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import InfoBox from "@/components/ui/InfoBox";
 import RecruitmentCard from "@/components/RecruitmentCard";
-import fs from "fs";
-import path from "path";
+
+export const revalidate = 60 * 60 * 24;
 
 export const metadata = {
   title: "Recrutement",
@@ -28,6 +28,17 @@ export const metadata = {
 
 export default async function RecruitmentPage() {
   const supabase = await createClient();
+
+  const { data: page, error: pageError } = await supabase
+    .from("pages")
+    .select("content, title")
+    .eq("slug", "/")
+    .eq("file", "infobox")
+    .single();
+
+  if (pageError) {
+    console.error("Supabase page error:", pageError);
+  }
 
   const { data: projectRecruitments } = await supabase
     .from("project_recruitments")
@@ -84,21 +95,12 @@ export default async function RecruitmentPage() {
     (a, b) => (a.projects?.id || "").localeCompare(b.projects?.id || ""),
   );
 
-  // Markdown
-  const filePath = path.join(
-    process.cwd(),
-    "src/data/markdown/recrutement-global.md",
-  );
-
-  const fileContent = fs.existsSync(filePath)
-    ? fs.readFileSync(filePath, "utf8")
-    : "# Contenu indisponible";
 
   return (
     <>
-      <InfoBox title="Rejoindre un projet de traduction" icon="👥">
+      <InfoBox title={page?.title || ""} icon="👥">
         <MarkdownSection
-          content={fileContent}
+          content={page?.content || ""}
           className="text-justify leading-relaxed"
         />
       </InfoBox>
