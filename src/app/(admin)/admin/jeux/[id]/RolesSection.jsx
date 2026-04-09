@@ -43,8 +43,17 @@ export default function RolesSection({ projectId }) {
     setMembers(data || []);
   };
 
-  const grouped = Object.groupBy(roles, (r) => r.role);
+  const grouped = roles.reduce((acc, r) => {
+    const key = r.role;
 
+    if (!acc[key]) {
+      acc[key] = [];
+    }
+
+    acc[key].push(r);
+    return acc;
+  }, {});
+  
   return (
     <div className="space-y-6">
       {Object.entries(roleLabels).map(([roleKey, label]) => (

@@ -58,7 +58,16 @@ export default async function TeamRoleSection({ params }) {
     `)
     .eq("project_id", id);
 
-    const groupedRoles = Object.groupBy(data || [], (item) => item.role);
+    const groupedRoles = (data || []).reduce((acc, item) => {
+    const key = item.role;
+
+    if (!acc[key]) {
+      acc[key] = [];
+    }
+
+    acc[key].push(item);
+    return acc;
+  }, {});
 
 
   return (
