@@ -5,14 +5,13 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { games } from "@/data/jeux";
 
-export default function GameHeader({ gameId }) {
-  const game = games.find((g) => g.id === gameId);
+export default function GameHeader({ project }) {
+  const game = games.find((g) => g.id === project.id);
   const pathname = usePathname();
   const [logoError, setLogoError] = useState(false);
 
-  if (!game) return null;
 
-  const logoPath = `/jeux/${game.id}/logo.webp`;
+  const logoPath = `/jeux/${project.id}/logo.webp`;
 
   const linkClass = (active) =>
     `px-4 py-2 text-base font-semibold rounded-xl transition-colors ${
@@ -29,28 +28,28 @@ export default function GameHeader({ gameId }) {
           {!logoError ? (
             <img
               src={logoPath}
-              alt={`Logo ${game.name}`}
+              alt={`Logo ${project.title}`}
               className="h-24 object-contain"
               onError={() => setLogoError(true)}
             />
           ) : (
-            <h2 className="text-text text-3xl font-bold">{game.name}</h2>
+            <h2 className="text-text text-3xl font-bold">{project.title}</h2>
           )}
         </div>
 
         {/* Menu */}
         <nav className="flex flex-1 flex-wrap justify-center gap-2 sm:justify-end">
           {Object.entries(game.categories).map(([key, category]) => {
-            let href = `/jeux/${game.id}/${key}`;
+            let href = `/jeux/${project.id}/${key}`;
 
             if (key === "general") {
-              href = `/jeux/${game.id}`;
+              href = `/jeux/${project.id}`;
             }
 
             const active =
               key === "general"
-                ? pathname === `/jeux/${game.id}`
-                : pathname.startsWith(`/jeux/${game.id}/${key}`);
+                ? pathname === `/jeux/${project.id}`
+                : pathname.startsWith(`/jeux/${project.id}/${key}`);
 
             return (
               <Link key={key} href={href} className={linkClass(active)}>

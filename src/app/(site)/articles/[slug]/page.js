@@ -1,31 +1,17 @@
-// app/(site)articles/[id]/page.js
+// app/(site)articles/[slug]/page.js
 
-import { createStaticClient } from "@/lib/supabase/static";
+import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 
 export const revalidate = 60 * 60;
-
-export async function generateStaticParams() {
-  const supabase = createStaticClient();
-
-  const { data } = await supabase
-    .from("articles")
-    .select("slug")
-    .eq("is_visible", true);
-
-  return (
-    data?.map((article) => ({
-      slug: article.slug,
-    })) || []
-  );
-}
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }) {
   const slug = (await params).slug;
-  const supabase = createStaticClient();
+  const supabase = await createClient();
 
   const { data: article } = await supabase
     .from("articles")

@@ -1,33 +1,45 @@
-// app/jeux/[id]/layout.js
+// app/(site)/jeux/[id]/layout.js
+
 import GameHeader from "./GameHeader";
 import GameClient from "./GameClient";
-import { games } from "@/data/jeux";
+import { createClient } from "@/lib/supabase/server";
 
-export async function generateStaticParams() {
-  return games.map((game) => ({
-    id: game.id,
-  }));
-}
+export const dynamicParams = true;
+export const revalidate = 60 * 60; // 1 heure
 
 export async function generateMetadata({ params }) {
   const id = (await params).id;
-  const game = games.find((g) => g.id === id);
-  if (!game) return {};
+
+  const supabase = await createClient();
+
+  const { data: project, error } = await supabase
+    .from("projects")
+    .select("title")
+    .eq("id", id)
+    .eq("is_visible", true)
+    .single();
+
+  if (error) {
+    console.error("Error fetching project:", error);
+    return {};
+  }
+
+  if (!project) return {};
 
   const image = `/jeux/${id}/cover.webp`;
 
   return {
-    title: game.name,
-    description: `Découvrez ${game.name}, téléchargez ou renseignez-vous le patch français ou consultez les guides.`,
+    title: project.title,
+    description: `Découvrez ${project.title}, téléchargez ou renseignez-vous le patch français ou consultez les guides.`,
     openGraph: {
-      title: game.name,
-      description: `Découvrez ${game.name}, téléchargez ou renseignez-vous le patch français ou consultez les guides.`,
+      title: project.title,
+      description: `Découvrez ${project.title}, téléchargez ou renseignez-vous le patch français ou consultez les guides.`,
       images: [
         {
           url: image,
           width: 1200,
           height: 630,
-          alt: game.name,
+          alt: project.title,
         },
       ],
     },
@@ -41,9 +53,23 @@ export async function generateMetadata({ params }) {
 export default async function GameLayout({ children, params }) {
   const id = (await params).id;
 
+  const supabase = await createClient();
+
+  const { data: project, error } = await supabase
+    .from("projects")
+    .select("*")
+    .eq("id", id)
+    .eq("is_visible", true)
+    .single();
+
+  if (error) {
+    console.error("Error fetching project:", error);
+    return {};
+  }
+
   return (
     <div className="flex min-h-screen flex-col">
-      <GameHeader gameId={id} />
+      <GameHeader project={project} />
       <GameClient gameId={id}>{children}</GameClient>
     </div>
   );
