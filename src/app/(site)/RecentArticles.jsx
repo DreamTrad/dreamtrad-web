@@ -7,7 +7,7 @@ export default async function RecentArticles({ limit = 3 }) {
 
   const { data: articles, error } = await supabase
     .from("articles")
-    .select("id, title, date")
+    .select("id, slug, title, date")
     .order("date", { ascending: false })
     .limit(limit)
     .eq("is_visible", true);
@@ -34,7 +34,7 @@ export default async function RecentArticles({ limit = 3 }) {
             return (
               <Link
                 key={article.id}
-                href={`/articles/${article.id}`}
+                href={`/articles/${article.slug}`}
                 scroll={true}
                 className="group flex items-center gap-3"
               >

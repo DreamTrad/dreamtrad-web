@@ -1,37 +1,36 @@
-// app/articles/[id]/page.js
+// app/(site)articles/[id]/page.js
+
 import { createStaticClient } from "@/lib/supabase/static";
 import Link from "next/link";
 import Image from "next/image";
-import fs from "fs";
-import path from "path";
 import { notFound } from "next/navigation";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 
-export const revalidate = 60;
+export const revalidate = 60 * 60;
 
 export async function generateStaticParams() {
   const supabase = createStaticClient();
 
   const { data } = await supabase
     .from("articles")
-    .select("id")
+    .select("slug")
     .eq("is_visible", true);
 
   return (
     data?.map((article) => ({
-      id: article.id,
+      slug: article.slug,
     })) || []
   );
 }
 
 export async function generateMetadata({ params }) {
-  const id = (await params).id;
+  const slug = (await params).slug;
   const supabase = createStaticClient();
 
   const { data: article } = await supabase
     .from("articles")
-    .select("id, title, excerpt, is_visible")
-    .eq("id", id)
+    .select("slug, title, excerpt, is_visible")
+    .eq("slug", slug)
     .single();
 
   if (!article || !article.is_visible) {
@@ -45,7 +44,7 @@ export async function generateMetadata({ params }) {
   }
 
   const baseUrl = "https://dreamtrad.fr";
-  const articleUrl = `${baseUrl}/articles/${article.id}`;
+  const articleUrl = `${baseUrl}/articles/${article.slug}`;
   const imageUrl = `${baseUrl}/articles-content/${article.id}/cover.webp`;
 
   return {
@@ -81,32 +80,18 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ArticlePage({ params }) {
-  const id = (await params).id;
+  const slug = (await params).slug;
   const supabase = createStaticClient();
 
   const { data: article } = await supabase
     .from("articles")
     .select("*")
-    .eq("id", id)
+    .eq("slug", slug)
     .single();
 
   if (!article || !article.is_visible) return notFound();
 
-  const markdownPath = path.join(
-    process.cwd(),
-    "src/data/articles",
-    `${article.id}.md`,
-  );
-
-  let markdownContent = "";
-
-  try {
-    markdownContent = fs.readFileSync(markdownPath, "utf8");
-  } catch (err) {
-    console.error("Markdown introuvable :", err);
-  }
-
-  const coverImage = `/articles-content/${article.id}/cover.webp`;
+  const coverImage = `/articles-content/${article.slug}/cover.webp`;
 
   return (
     <div className="relative mx-auto max-w-4xl p-2">
@@ -137,7 +122,7 @@ export default async function ArticlePage({ params }) {
         </p>
 
         <MarkdownSection
-          content={markdownContent}
+          content={article.content || ""}
           imageClassName="mx-auto block"
         />
 

@@ -31,7 +31,7 @@ export default async function sitemap() {
 
   const { data: articles, error } = await supabase
     .from("articles")
-    .select("id, date")
+    .select("slug, date")
     .eq("is_visible", true);
 
   if (error) {
@@ -40,7 +40,7 @@ export default async function sitemap() {
 
   const articleEntries =
     articles?.map((article) => ({
-      url: `${SITE_URL}/articles/${article.id}`,
+      url: `${SITE_URL}/articles/${article.slug}`,
       lastModified: article.date
         ? new Date(article.date)
         : new Date(),

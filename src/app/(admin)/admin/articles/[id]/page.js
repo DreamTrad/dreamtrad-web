@@ -69,6 +69,7 @@ export default function ArticleAdminPage() {
         date: draft.date,
         tags: draft.tags,
         excerpt: draft.excerpt,
+        content: draft.content,
         is_visible: draft.is_visible,
       })
       .eq("id", id);
@@ -232,6 +233,17 @@ export default function ArticleAdminPage() {
             onChange={(e) => updateField("excerpt", e.target.value)}
             className="bg-bg-secondary w-full rounded p-2"
             rows={4}
+          />
+        </div>
+
+        {/* Content */}
+        <div>
+          <label className="text-sm">Contenu (Markdown)</label>
+          <textarea
+            value={draft.content || ""}
+            onChange={(e) => updateField("content", e.target.value)}
+            className="bg-bg-secondary w-full rounded p-2 font-mono h-400"
+            rows={14}
           />
         </div>
 

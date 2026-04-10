@@ -1,8 +1,9 @@
-// app/articles/page.js
+// app/(site)articles/page.js
+
 import { createClient } from "@/lib/supabase/server";
 import ArticleCard from "@/components/ArticleCard";
 
-export const revalidate = 60;
+export const revalidate = 60 * 60;
 
 export const metadata = {
   title: "Articles",
@@ -15,7 +16,7 @@ export default async function ArticleListPage() {
 
   const { data: articles, error } = await supabase
     .from("articles")
-    .select("id, title, authors, date, tags, excerpt, is_visible")
+    .select("id, slug, title, authors, date, tags, excerpt, is_visible")
     .order("date", { ascending: false })
     .eq("is_visible", true);
 

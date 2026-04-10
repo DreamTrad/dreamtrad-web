@@ -7,6 +7,7 @@ import { useState } from "react";
 
 export default function ArticleCard({
   id,
+  slug,
   title,
   authors,
   date,
@@ -16,7 +17,7 @@ export default function ArticleCard({
   isAdmin = false,
 }) {
   const coverImage = `/articles-content/${id}/cover.webp`;
-  const linkref = `/articles/${id}`;
+  const linkref = `/articles/${slug}`;
 
   const [visible, setVisible] = useState(is_visible || false);
 
