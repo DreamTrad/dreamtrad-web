@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
 import CreateMemberModal from "./CreateMemberModal";
 import TeamMemberAdminCard from "./TeamMemberAdminCard";
+import PageEditor from "@/components/PageEditor";
 
 export default function TeamAdminPage() {
   const [members, setMembers] = useState([]);
@@ -22,7 +23,17 @@ export default function TeamAdminPage() {
   const otherMembers = members.filter((m) => !m.is_important);
 
   return (
-    <>
+    <div className="mx-auto max-w-6xl p-6">
+      {/* Page editor block */}
+      <div className="mb-10">
+        <h1 className="text-accent mb-4 text-2xl font-bold">
+          Contenu de la page équipe
+        </h1>
+
+        <PageEditor slug="equipe" file="infobox" />
+      </div>
+
+      {/* Header */}
       <div className="mb-6 flex items-center justify-between">
         <h1 className="text-xl font-bold">Gestion de l’équipe</h1>
 
@@ -64,6 +75,7 @@ export default function TeamAdminPage() {
         </div>
       </div>
 
+      {/* Modal */}
       {isOpen && (
         <CreateMemberModal
           onClose={() => setIsOpen(false)}
@@ -73,6 +85,6 @@ export default function TeamAdminPage() {
           }}
         />
       )}
-    </>
+    </div>
   );
 }

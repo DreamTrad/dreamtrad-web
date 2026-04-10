@@ -74,7 +74,7 @@ export default async function TeamPage() {
   const { data: page, error: pageError } = await supabase
     .from("pages")
     .select("content, title")
-    .eq("slug", "/")
+    .eq("slug", "equipe")
     .eq("file", "infobox")
     .single();
 
