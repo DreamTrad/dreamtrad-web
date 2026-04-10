@@ -27,6 +27,13 @@ export default function AdminSidebar({ projects, role }) {
             </Link>
 
             <Link
+              href="/admin/vndb-fr"
+              className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
+            >
+              VNDB-FR
+            </Link>
+
+            <Link
               href="/admin/equipe"
               className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
             >
