@@ -20,6 +20,13 @@ export default function AdminSidebar({ projects, role }) {
         {(role === "admin" || role === "super_admin") && (
           <>
             <Link
+              href="/admin/recrutement"
+              className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
+            >
+              Recrutement
+            </Link>
+
+            <Link
               href="/admin/equipe"
               className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
             >

@@ -1,5 +1,5 @@
 import { supabase } from "@/lib/supabase/client";
-import RecruitmentForm from "./RecruitmentForm";
+import RecruitmentForm from "@/components/RecruitmentForm";
 
 export default function RecruitmentsSection({ recruitments }) {
   const save = async (type, data) => {

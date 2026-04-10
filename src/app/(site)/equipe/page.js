@@ -1,5 +1,6 @@
-// app/equipe/page.js
-import TeamMemberCard from "@/app/(site)/equipe/TeamMemberCard";
+// app/(site)/equipe/page.js
+
+import TeamMemberCard from "./TeamMemberCard";
 import InfoBox from "@/components/ui/InfoBox";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import { createClient } from "@/lib/supabase/server";

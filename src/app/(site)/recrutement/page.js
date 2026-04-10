@@ -1,10 +1,11 @@
-// app/recrutement/page.js
+// app/(site)recrutement/page.js
+
 import { createClient } from "@/lib/supabase/server";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import InfoBox from "@/components/ui/InfoBox";
 import RecruitmentCard from "@/components/RecruitmentCard";
 
-export const revalidate = 60 * 60 * 24;
+export const revalidate = 60 * 60;
 
 export const metadata = {
   title: "Recrutement",

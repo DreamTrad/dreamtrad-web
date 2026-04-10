@@ -1,8 +1,9 @@
-// app/mentions-legales/page.js
+// app/(site)mentions-legales/page.js
+
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import { createClient } from "@/lib/supabase/server";
 
-export const revalidate = 60 * 60 * 24; 
+export const revalidate = 60 * 60 * 24;
 
 export const metadata = {
   title: "Mentions légales",
