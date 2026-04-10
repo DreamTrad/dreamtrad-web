@@ -11,7 +11,8 @@ export default function AdminRecruitmentPage() {
   const [project, setProject] = useState([]);
   const [other, setOther] = useState([]);
   const [site, setSite] = useState([]);
-  const [pairedProjects, setPairedProjects] = useState([]);
+  const [projectsList, setProjectsList] = useState([]);
+  const [selectedProjectId, setSelectedProjectId] = useState("");
 
   const fetchData = async () => {
     const { data: projectData } = await supabase
@@ -28,26 +29,34 @@ export default function AdminRecruitmentPage() {
       .from("site_recruitments")
       .select("*");
 
-    const projects = (projectData || []).sort((a, b) =>
-      (a.projects?.title || "").localeCompare(b.projects?.title || ""),
-    );
+    const { data: allProjects } = await supabase
+      .from("projects")
+      .select("id, title")
+      .order("title");
 
-    const others = otherData || [];
-
-    const paired = projects.map((p) => ({
-      project: p,
-      other: others.find((o) => o.projects?.id === p.projects?.id),
-    }));
-
-    setProject(projects);
-    setOther(others);
+    setProject(projectData || []);
+    setOther(otherData || []);
     setSite(siteData || []);
-    setPairedProjects(paired);
+    setProjectsList(allProjects || []);
+
+    if (allProjects?.length && !selectedProjectId) {
+      setSelectedProjectId(String(allProjects[0].id));
+    }
   };
 
   useEffect(() => {
     fetchData();
   }, []);
+
+  const filteredProjects = selectedProjectId
+    ? project.filter(
+        (p) => String(p.projects?.id) === String(selectedProjectId),
+      )
+    : [];
+
+  const filteredOther = selectedProjectId
+    ? other.filter((o) => String(o.projects?.id) === String(selectedProjectId))
+    : [];
 
   const saveProject = async (data) => {
     const { data: result, error } = await supabase
@@ -91,17 +100,13 @@ export default function AdminRecruitmentPage() {
 
   return (
     <div className="mx-auto max-w-6xl p-6">
-      {/* INFBOX */}
       <div className="mb-10">
-        <h1 className="text-accent mb-4 text-2xl font-bold">
-          Infobox recrutement
-        </h1>
-
+        <h1 className="mb-4 text-2xl font-bold">Infobox recrutement</h1>
         <PageEditor slug="recrutement" file="infobox" />
       </div>
 
-      {/* SITE RECRUITMENTS */}
-      <h2 className="mt-10 mb-4 text-lg font-bold">Site & autres projets</h2>
+      {/* SITE */}
+      <h2 className="mb-4 text-lg font-bold">Site & autres projets</h2>
 
       <div className="grid gap-6 lg:grid-cols-2">
         {site.map((item) => (
@@ -114,29 +119,53 @@ export default function AdminRecruitmentPage() {
         ))}
       </div>
 
-      {/* PROJECT RECRUITMENTS */}
+      {/* PROJECTS */}
       <h2 className="mt-10 mb-4 text-lg font-bold">Projets de traduction</h2>
 
-      <div className="grid gap-6">
-        {pairedProjects.map(({ project, other }) => (
-          <div key={project.id} className="grid grid-cols-2 gap-4">
-            <RecruitmentForm
-              label={project.projects?.title || project.title}
-              data={project}
-              onSave={saveProject}
-            />
+      {/* SELECT */}
+      <div className="mt-8 mb-8 flex items-center gap-4">
+        <span className="font-bold">Afficher le recrutement du projet :</span>
 
-            {other && (
+        <select
+          className="bg-bg-secondary rounded border p-2"
+          value={selectedProjectId}
+          onChange={(e) => setSelectedProjectId(e.target.value)}
+        >
+          {projectsList.map((p) => (
+            <option key={p.id} value={String(p.id)}>
+              {p.title}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="grid gap-6">
+        {filteredProjects.map((projectItem) => {
+          const otherItem = filteredOther.find(
+            (o) => o.projects?.id === projectItem.projects?.id,
+          );
+
+          return (
+            <div key={projectItem.id} className="grid grid-cols-2 gap-4">
               <RecruitmentForm
-                label={
-                  other.title || project.projects?.title + " : Recrutement site"
-                }
-                data={other}
+                label={projectItem.projects?.title || projectItem.title}
+                data={projectItem}
                 onSave={saveProject}
               />
-            )}
-          </div>
-        ))}
+
+              {otherItem && (
+                <RecruitmentForm
+                  label={
+                    otherItem.title ||
+                    projectItem.projects?.title + " : Aide pour le site"
+                  }
+                  data={otherItem}
+                  onSave={saveProject}
+                />
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
