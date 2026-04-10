@@ -5,6 +5,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
 import PageEditor from "@/components/PageEditor";
+import UpdateVndbButton from "./UpdateVndbButton";
 
 // Manage array fields (links, patchfr)
 
@@ -243,17 +244,21 @@ export default function AdminVndbfrPage() {
           value={selectedId}
           onChange={setSelectedId}
         />
+
+        <div className="ml-auto">
+          <UpdateVndbButton />
+        </div>
       </div>
 
       {/* FORM CARD */}
       <div className="bg-bg-secondary border-hover-tertiary space-y-4 rounded-xl border p-6">
         <label className="flex items-center gap-2">
-            <span className="mb-1 font-bold">Titre</span>
-        <input
-          className="bg-bg-tertiary border-hover-tertiary text-text-secondary w-full rounded border p-2"
-          value={form.title || ""}
-          onChange={(e) => updateField("title", e.target.value)}
-        />
+          <span className="mb-1 font-bold">Titre</span>
+          <input
+            className="bg-bg-tertiary border-hover-tertiary text-text-secondary w-full rounded border p-2"
+            value={form.title || ""}
+            onChange={(e) => updateField("title", e.target.value)}
+          />
         </label>
 
         <div className="flex items-center gap-6">
@@ -271,7 +276,7 @@ export default function AdminVndbfrPage() {
               ))}
             </select>
           </label>
-          <label className="flex items-center gap-2">
+          <label className="flex items-center gap-2 ml-auto">
             <span>Visible sur le site</span>
             <input
               type="checkbox"

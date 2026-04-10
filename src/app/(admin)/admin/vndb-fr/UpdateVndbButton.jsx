@@ -31,14 +31,12 @@ export default function UpdateVndbButton() {
         disabled={loading}
         className="bg-accent rounded px-4 py-2 text-white"
       >
-        {loading ? "Mise à jour..." : "Mettre à jour VNDB"}
+        {loading ? "Mise à jour..." : "Mettre à jour les votes et scores VNDB"}
       </button>
 
       {result && (
         <div className="text-sm">
-          {result.updated
-            ? `${result.updated} entrées mises à jour`
-            : "Erreur"}
+          {result.updated ? `${result.updated} entrées mises à jour` : "Erreur"}
         </div>
       )}
     </div>
