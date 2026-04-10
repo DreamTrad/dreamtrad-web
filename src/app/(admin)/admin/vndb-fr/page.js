@@ -132,6 +132,9 @@ export default function AdminVndbfrPage() {
   const [form, setForm] = useState(null);
   const [saving, setSaving] = useState(false);
 
+  const [initialForm, setInitialForm] = useState(null);
+  const [isDirty, setIsDirty] = useState(false);
+
   useEffect(() => {
     const fetchData = async () => {
       const { data: entries } = await supabase
@@ -160,36 +163,60 @@ export default function AdminVndbfrPage() {
     const entry = entries.find((e) => e.id === selectedId);
     if (!entry) return;
 
-    setForm({
+    const clean = {
       ...entry,
       genres: entry.genres || [],
       platforms: entry.platforms || [],
-      duration: entry.duration || durations[0] || "",
-    });
-  }, [selectedId, entries, durations]);
+      patchfr: entry.patchfr || [],
+      links: entry.links || [],
+    };
+
+    setForm(clean);
+    setInitialForm(clean);
+    setIsDirty(false);
+  }, [selectedId, entries]);
+
+  const checkDirty = (newForm) => {
+    return JSON.stringify(newForm) !== JSON.stringify(initialForm);
+  };
 
   const updateField = (key, value) => {
-    setForm((prev) => ({ ...prev, [key]: value }));
+    const updated = { ...form, [key]: value };
+    setForm(updated);
+    setIsDirty(checkDirty(updated));
   };
 
   const save = async () => {
     setSaving(true);
 
-    const { error } = await supabase
+    const { data, error } = await supabase
       .from("vndbfrentries")
       .update({
         title: form.title,
-        description: form.description,
-        genres: form.genres,
         duration: form.duration,
-        plateforms: form.platforms,
-        links: form.links,
+        genres: form.genres,
+        platforms: form.platforms,
         patchfr: form.patchfr,
+        links: form.links,
+        description: form.description,
         is_visible: form.is_visible,
       })
-      .eq("id", form.id);
+      .eq("id", form.id)
+      .select()
+      .single();
 
     setSaving(false);
+
+    if (!error && data) {
+      setForm(data);
+      setInitialForm(data);
+      setIsDirty(false);
+    }
+  };
+
+  const reset = () => {
+    setForm(initialForm);
+    setIsDirty(false);
   };
 
   if (!form) return null;
@@ -208,7 +235,7 @@ export default function AdminVndbfrPage() {
 
       {/* SELECT */}
       {/* SELECT BAR */}
-      <div className="mb-8 flex items-top gap-4">
+      <div className="items-top mb-8 flex gap-4">
         <span className="font-bold">Sélectionner une entrée :</span>
 
         <SearchableSelect
@@ -220,11 +247,14 @@ export default function AdminVndbfrPage() {
 
       {/* FORM CARD */}
       <div className="bg-bg-secondary border-hover-tertiary space-y-4 rounded-xl border p-6">
+        <label className="flex items-center gap-2">
+            <span className="mb-1 font-bold">Titre</span>
         <input
           className="bg-bg-tertiary border-hover-tertiary text-text-secondary w-full rounded border p-2"
           value={form.title || ""}
           onChange={(e) => updateField("title", e.target.value)}
         />
+        </label>
 
         <div className="flex items-center gap-6">
           <label className="flex items-center gap-2">
@@ -283,13 +313,24 @@ export default function AdminVndbfrPage() {
           onChange={(e) => updateField("description", e.target.value)}
         />
 
-        <button
-          onClick={save}
-          disabled={saving}
-          className="bg-accent hover:bg-accent/80 rounded px-4 py-2 text-white transition"
-        >
-          {saving ? "Saving..." : "Save"}
-        </button>
+        {isDirty && (
+          <div className="flex gap-2">
+            <button
+              onClick={save}
+              disabled={saving}
+              className="bg-success rounded px-4 py-2 text-white transition hover:bg-green-600 active:scale-95"
+            >
+              {saving ? "Enregistrement..." : "Enregistrer"}
+            </button>
+
+            <button
+              onClick={reset}
+              className="bg-warning rounded px-4 py-2 text-white transition hover:bg-yellow-500 active:scale-95"
+            >
+              Reset
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
