@@ -33,6 +33,7 @@ export default function ContactClient() {
 
     if (!validateCaptcha(form.captcha)) {
       setStatus("CAPTCHA incorrect");
+      setForm((prev) => ({ ...prev, captcha: "" }));
       return;
     }
 
@@ -58,6 +59,7 @@ export default function ContactClient() {
           captcha: "",
         });
         loadCaptchaEnginge(6);
+        setForm((prev) => ({ ...prev, captcha: "" }));
       })
       .catch(() => setStatus("Erreur, réessayez plus tard"));
   };
@@ -72,6 +74,7 @@ export default function ContactClient() {
             type="text"
             placeholder="Nom"
             className="bg-bg-secondary mb-2 w-full rounded-md p-2"
+            name="name"
             value={form.name}
             onChange={handleChange}
             required
@@ -81,6 +84,7 @@ export default function ContactClient() {
             type="email"
             placeholder="Adresse mail"
             className="bg-bg-secondary mb-2 w-full rounded-md p-2"
+            name="email"
             value={form.email}
             onChange={handleChange}
             required
@@ -90,6 +94,7 @@ export default function ContactClient() {
             type="text"
             placeholder="Sujet du mail"
             className="bg-bg-secondary mb-2 w-full rounded-md p-2"
+            name="title"
             value={form.title}
             onChange={handleChange}
             required
@@ -99,6 +104,7 @@ export default function ContactClient() {
             placeholder="Message"
             rows="5"
             className="bg-bg-secondary mb-2 w-full rounded-md p-2"
+            name="message"
             value={form.message}
             onChange={handleChange}
             required
@@ -110,6 +116,7 @@ export default function ContactClient() {
             type="text"
             placeholder="Entrez le code"
             className="bg-bg-secondary mt-2 w-full rounded-md p-2"
+            name="captcha"
             value={form.captcha}
             onChange={handleChange}
             required
