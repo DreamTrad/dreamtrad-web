@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useMemo } from "react";
+import { supabase } from "@/lib/supabase/client";
 import DiscoverCard from "@/app/(site)/vndb-fr/VndbfrCard";
 
 /* ---------------- MultiDropdown ---------------- */
@@ -59,59 +60,56 @@ function MultiDropdown({ label, options, selected, setSelected }) {
 
 /* ---------------- Page Client ---------------- */
 
-export default function VndbfrClient({ initialData, markdownContent }) {
+export default function VndbfrClient() {
+  const [dataEntries, setDataEntries] = useState([]);
+  const [dataGenres, setDataGenres] = useState([]);
+  const [dataDurations, setDataDurations] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedGenres, setSelectedGenres] = useState([]);
-  const [selectedDurees, setSelectedDurees] = useState([]);
+  const [selectedDuration, setSelectedDuration] = useState([]);
   const [traductionFilter, setTraductionFilter] = useState("");
   const [vndbLinkFilter, setVndbLinkFilter] = useState("");
   const [sortOption, setSortOption] = useState("titre-asc");
 
-  const data = initialData ?? [];
+  useEffect(() => {
+    const fetchAll = async () => {
+      const { data: entries } = await supabase
+        .from("vndbfrentries")
+        .select("*")
+        .eq("is_visible", true)
+        .order("title", { ascending: true });
 
-  const genres = useMemo(
-    () =>
-      Array.from(
-        new Set(
-          data.flatMap((p) =>
-            Array.isArray(p.genre)
-              ? p.genre
-              : p.genre
-                ? p.genre.split(",").map((g) => g.trim())
-                : [],
-          ),
-        ),
-      ).sort(),
-    [data],
-  );
+      const { data: genres } = await supabase.rpc("get_genres");
+      const { data: durations } = await supabase.rpc("get_durations");
 
-  const durees = useMemo(
-    () => Array.from(new Set(data.map((p) => p.duree).filter(Boolean))).sort(),
-    [data],
-  );
+      setDataEntries(entries || []);
+      setDataGenres(genres || []);
+      setDataDurations(durations || []);
+    };
+
+    fetchAll();
+  }, []);
+
+  /* ---------------- FILTER ---------------- */
 
   const filtered = useMemo(() => {
-    return data.filter((p) => {
-      const nameMatch = p.titre
+    return dataEntries.filter((p) => {
+      const nameMatch = p.title
         .toLowerCase()
         .includes(searchTerm.toLowerCase());
 
-      const genresP = Array.isArray(p.genre)
-        ? p.genre
-        : p.genre
-          ? p.genre.split(",").map((g) => g.trim())
-          : [];
+      const genresP = p.genres || [];
 
-      const dureeMatch =
-        selectedDurees.length === 0 || selectedDurees.includes(p.duree);
+      const durationMatch =
+        selectedDuration.length === 0 || selectedDuration.includes(p.duration);
 
       const genreMatch =
         selectedGenres.length === 0 ||
         selectedGenres.some((g) => genresP.includes(g));
 
       const hasFanTrad =
-        Array.isArray(p.patch_fr) &&
-        p.patch_fr.some((l) => l.startsWith("fr:"));
+        Array.isArray(p.patchfr) &&
+        p.patchfr.some((l) => l.startsWith("fr:"));
 
       const tradMatch =
         traductionFilter === ""
@@ -121,8 +119,7 @@ export default function VndbfrClient({ initialData, markdownContent }) {
             : hasFanTrad;
 
       const hasVndbLink =
-        Array.isArray(p.lien_jeu) &&
-        p.lien_jeu.some((l) => l.includes("vndb.org"));
+        Array.isArray(p.links) && p.links.some((l) => l.includes("vndb.org"));
 
       const vndbMatch =
         vndbLinkFilter === ""
@@ -131,32 +128,34 @@ export default function VndbfrClient({ initialData, markdownContent }) {
             ? hasVndbLink
             : !hasVndbLink;
 
-      return nameMatch && genreMatch && dureeMatch && tradMatch && vndbMatch;
+      return nameMatch && genreMatch && durationMatch && tradMatch && vndbMatch;
     });
   }, [
-    data,
+    dataEntries,
     searchTerm,
     selectedGenres,
-    selectedDurees,
+    selectedDuration,
     traductionFilter,
     vndbLinkFilter,
   ]);
+
+  /* ---------------- SORT ---------------- */
 
   const sorted = useMemo(() => {
     return [...filtered].sort((a, b) => {
       switch (sortOption) {
         case "titre-asc":
-          return a.titre.localeCompare(b.titre);
+          return a.title.localeCompare(b.title);
         case "titre-desc":
-          return b.titre.localeCompare(a.titre);
+          return b.title.localeCompare(a.title);
         case "note-asc":
-          return (a.note_vndb || 0) - (b.note_vndb || 0);
+          return (a.vndb_rating || 0) - (b.vndb_rating || 0);
         case "note-desc":
-          return (b.note_vndb || 0) - (a.note_vndb || 0);
+          return (b.vndb_rating || 0) - (a.vndb_rating || 0);
         case "popularite-asc":
-          return (a.popularite_vndb || 9999) - (b.popularite_vndb || 9999);
+          return (a.vndb_votes || 0) - (b.vndb_votes || 0);
         case "popularite-desc":
-          return (b.popularite_vndb || 9999) - (a.popularite_vndb || 9999);
+          return (b.vndb_votes || 0) - (a.vndb_votes || 0);
         default:
           return 0;
       }
@@ -177,16 +176,16 @@ export default function VndbfrClient({ initialData, markdownContent }) {
 
         <MultiDropdown
           label="Sélectionner des genres"
-          options={genres}
+          options={dataGenres}
           selected={selectedGenres}
           setSelected={setSelectedGenres}
         />
 
         <MultiDropdown
           label="Sélectionner des durées"
-          options={durees}
-          selected={selectedDurees}
-          setSelected={setSelectedDurees}
+          options={dataDurations}
+          selected={selectedDuration}
+          setSelected={setSelectedDuration}
         />
 
         <select
@@ -215,13 +214,13 @@ export default function VndbfrClient({ initialData, markdownContent }) {
           onChange={(e) => setSortOption(e.target.value)}
         >
           <option value="titre-asc" className="font-secondary">
-            Titre (A → Z)
+            Titre A→Z
           </option>
-          <option value="titre-desc">Titre (Z → A)</option>
-          <option value="note-asc">Note VNDB (faible → fort)</option>
-          <option value="note-desc">Note VNDB (fort → faible)</option>
-          <option value="popularite-asc">Popularité (meilleure → pire)</option>
-          <option value="popularite-desc">Popularité (pire → meilleure)</option>
+          <option value="titre-desc">Titre Z→A</option>
+          <option value="note-asc">Note VNDB ↓</option>
+          <option value="note-desc">Note VNDB ↑</option>
+          <option value="popularite-asc">Popularité ↓</option>
+          <option value="popularite-desc">Popularité ↑</option>
         </select>
       </div>
 

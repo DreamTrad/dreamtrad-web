@@ -5,17 +5,22 @@ import ReactMarkdown from "react-markdown";
 
 export default function DiscoverCard({
   id,
-  titre,
-  image,
-  genre = [],
-  duree,
-  note_vndb,
-  popularite_vndb,
-  plateforme = [],
-  lien_jeu = [],
+  title,
+  genres = [],
+  duration,
+  vndb_rating,
+  vndb_votes,
+  platforms = [],
+  links = [],
   patch_fr = [],
   description,
 }) {
+
+  const safeGenres = Array.isArray(genres) ? genres : [];
+  const safePlatforms = Array.isArray(platforms) ? platforms : [];
+  const safeLinks = Array.isArray(links) ? links : [];
+  const safePatchFr = Array.isArray(patch_fr) ? patch_fr : [];
+
   const internalPatch = patch_fr.find((p) => p.startsWith("fr:/"));
   const internalPath = internalPatch
     ? `/jeux/${internalPatch.split("/")[2]}/`
@@ -29,33 +34,33 @@ export default function DiscoverCard({
           <div className="mb-2 flex items-center justify-between">
             <Link href={internalPath} className="group">
               <h3 className="group-hover:text-accent text-2xl font-bold transition">
-                {titre}
+                {title}
               </h3>
             </Link>
           </div>
         ) : (
-          <h3 className="text-2xl font-bold">{titre}</h3>
+          <h3 className="text-2xl font-bold">{title}</h3>
         )}
 
         {/* Première ligne : durée / genres / plateformes */}
         <div className="text-text-secondary flex flex-wrap items-center gap-4 text-sm">
-          {duree && (
+          {duration && (
             <span>
-              <span className="label-secondary">Durée :</span> {duree}
+              <span className="label-secondary">Durée :</span> {duration}
             </span>
           )}
 
-          {plateforme.length > 0 && (
+          {safePlatforms.length > 0 && (
             <div className="flex items-center gap-2">
               <span className="label-secondary">Plateformes :</span>
-              <PlatformIcons platforms={plateforme} />
+              <PlatformIcons platforms={safePlatforms} />
             </div>
           )}
 
-          {genre.length > 0 && (
+          {safeGenres.length > 0 && (
             <span>
               <span className="label-secondary">Genres :</span>{" "}
-              {genre.join(", ")}
+              {safeGenres.join(", ")}
             </span>
           )}
         </div>
@@ -64,31 +69,31 @@ export default function DiscoverCard({
         <div className="text-text-secondary flex flex-wrap items-center justify-between gap-6 text-sm">
           {/* Note et popularité */}
           <div className="flex items-center gap-4">
-            {note_vndb && (
+            {vndb_rating && (
               <span>
                 <span className="label-secondary">Note VNDB :</span>{" "}
-                {parseFloat(note_vndb).toFixed(2)}
+                {(vndb_rating / 10).toFixed(1)}
               </span>
             )}
-            {popularite_vndb && (
+            {vndb_votes && (
               <span>
                 <span className="label-secondary">TOP popularité VNDB :</span>{" "}
-                {popularite_vndb}
+                {vndb_votes}
               </span>
             )}
           </div>
 
           {/* Liens */}
-          {lien_jeu.length + patch_fr.length > 0 && (
+          {safeLinks.length + safePatchFr.length > 0 && (
             <div className="bg-bg-tertiary border-hover-secondary flex flex-wrap items-center gap-3 rounded-xl border p-2">
               <span className="text-accent text-xs font-semibold tracking-wide uppercase">
                 Liens
               </span>
               <div className="flex flex-wrap gap-2">
-                {lien_jeu.map((url, idx) => (
+                {safeLinks.map((url, idx) => (
                   <LinkWithIcon key={idx} url={url} />
                 ))}
-                {patch_fr.map((patch, idx) => (
+                {safePatchFr.map((patch, idx) => (
                   <LinkWithIcon key={idx} url={patch} />
                 ))}
               </div>
@@ -101,8 +106,8 @@ export default function DiscoverCard({
       <div className="flex grow flex-col gap-6 p-6 md:flex-row">
         <div className="flex flex-2 items-center justify-center">
           <img
-            src={image}
-            alt={`Affiche de ${titre}`}
+            src={`poster/${id}.webp`}
+            alt={`Affiche de ${title}`}
             className="h-100 w-full rounded-md object-contain"
           />
         </div>

@@ -1,7 +1,6 @@
-// app/vndb-fr/page.js
-import fs from "fs";
-import path from "path";
-import DiscoverClient from "./VndbfrClient";
+// app/(site)/vndb-fr/page.js
+
+import VndbfrClient from "./VndbfrClient";
 import { createClient } from "@/lib/supabase/server";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import InfoBox from "@/components/ui/InfoBox";
@@ -27,14 +26,6 @@ export async function generateMetadata(_, parent) {
 }
 
 export default async function VndbfrPage() {
-  // Read JSON
-  let jsonData = [];
-  try {
-    const jsonPath = path.join(process.cwd(), "src/data/json/vn_fr_list.json");
-    jsonData = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
-  } catch (err) {
-    console.error("Erreur lecture vn_fr_list.json :", err);
-  }
 
   const supabase = await createClient();
 
@@ -54,7 +45,7 @@ export default async function VndbfrPage() {
   <InfoBox title={page?.title || ""} icon="📚">
     <MarkdownSection content={page?.content || ""} />
   </InfoBox>
-  <DiscoverClient initialData={jsonData} />;
+  <VndbfrClient/>;
   </div>
   )
 }
