@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-export default function GameHeader({ id, title }) {
+export default function GameHeader({ id, title, hasGuide }) {
   const pathname = usePathname();
   const [logoError, setLogoError] = useState(false);
 
@@ -19,7 +19,7 @@ export default function GameHeader({ id, title }) {
 
   const categories = [
     { key: "general", name: "Le jeu", enabled: true },
-    { key: "guide", name: "Guide", enabled: false }, // replace false with your condition
+    { key: "guide", name: "Guide", enabled: hasGuide },
     { key: "patchfr", name: "Patch français", enabled: true },
   ];
 

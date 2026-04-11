@@ -99,9 +99,21 @@ export default async function GameLayout({ children, params }) {
 
     const hasInstallation = !!pagesInstallation?.length;
 
+  const { data: pageGuideData } = await supabase
+    .from("pages")
+    .select("slug, file, title, description, content")
+    .eq("project_id", id)
+    .eq("type", "guide")
+    .eq("is_visible", true)
+    .order("position", { ascending: true })
+    .limit(1)
+    .single();
+
+  const hasGuide = !!pageGuideData;
+
   return (
     <div className="flex min-h-screen flex-col">
-      <GameHeader id={project.id} title={project.title} />
+      <GameHeader id={project.id} title={project.title} hasGuide={hasGuide} />
       <GameClient
         gameId={id}
         hasPatch={hasPatch}
