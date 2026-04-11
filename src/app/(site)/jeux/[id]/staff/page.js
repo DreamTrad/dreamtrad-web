@@ -21,8 +21,6 @@ export async function generateMetadata({ params }) {
     redirect("/");
   }
 
-  console.log("Project data for metadata:", data);
-
   const image = `/jeux/${data.id}/cover.webp`;
 
   return {

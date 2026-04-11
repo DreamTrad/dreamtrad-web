@@ -43,7 +43,6 @@ export default function PageEditor({
   };
 
   const save = async () => {
-    console.log("Saving:", draft);
     const { data, error } = await supabase
       .from("pages")
       .update({
@@ -55,7 +54,7 @@ export default function PageEditor({
       .eq("file", file);
 
     if (error) {
-        console.log("result:", data, error);
+        console.error("error:", error);
       return;
     }
 

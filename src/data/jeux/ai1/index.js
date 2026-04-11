@@ -18,15 +18,10 @@ export const game = {
             },
           ],
         },
-        { id: "staff", name: "Staff", staff: ["kotaro-uchikoshi"] },
       ],
     },
     patchfr: {
       sections: [
-        {
-          id: "telechargement",
-          file: "patchfr/informations",
-        },
         {
           id: "installation",
           platforms: [

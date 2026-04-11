@@ -129,10 +129,6 @@ export const game = {
     patchfr: {
       sections: [
         {
-          id: "telechargement",
-          file: "patchfr/informations",
-        },
-        {
           id: "installation",
           name: "Installation",
           platforms: [

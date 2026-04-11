@@ -26,7 +26,7 @@ export default async function MentionsLegalesPage() {
 
   const { data: page, error: pageError } = await supabase
     .from("pages")
-    .select("content")
+    .select("title, content")
     .eq("slug", "mentions-legales")
     .eq("file", "page")
     .single();
@@ -37,7 +37,7 @@ export default async function MentionsLegalesPage() {
 
   return (
     <div className="border-bg-secondary bg-bg-tertiary mx-auto mt-8 mb-8 max-w-4xl rounded-xl border p-8 shadow-md">
-      <MarkdownSection content={page?.content || ""} />
+      <MarkdownSection mainTitle={page?.title} content={page?.content || ""} />
     </div>
   );
 }

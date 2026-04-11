@@ -27,16 +27,16 @@ export default async function GamePage({ params }) {
   }
 
   const { data: presentation, pageError } = await supabase
-        .from("pages")
-        .select("content")
-        .eq("project_id", project.id)
-        .eq("file", "presentation")
-        .single();
+    .from("pages")
+    .select("title, content")
+    .eq("project_id", project.id)
+    .eq("file", "presentation")
+    .single();
 
-      if (pageError) {
-        console.error(pageError);
-        redirect("/");
-      }
+  if (pageError) {
+    console.error(pageError);
+    redirect("/");
+  }
 
   const presentationCat = game.categories.general.sections.find(
     (s) => s.id === "presentation",
@@ -45,7 +45,7 @@ export default async function GamePage({ params }) {
   return (
     <div className="mx-auto max-w-7xl space-y-12 px-4 pb-20">
       <div className="bg-bg-secondary/60 rounded-2xl p-6 shadow-sm backdrop-blur-sm md:p-8">
-        <MarkdownSection content={presentation?.content || ""} />
+        <MarkdownSection mainTitle={presentation?.title} content={presentation?.content || ""} />
       </div>
 
       <GameEmbeds embeds={presentationCat.embeds} />

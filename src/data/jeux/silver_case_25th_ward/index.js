@@ -6,7 +6,6 @@ export const game = {
       sections: [
         {
           id: "presentation",
-          file: "general/presentation",
           embeds: [
             {
               type: "youtube",
@@ -17,16 +16,6 @@ export const game = {
               id: "697650",
             },
           ],
-        },
-      ],
-    },
-
-    patchfr: {
-      name: "Patch FR",
-      sections: [
-        {
-          id: "telechargement",
-          file: "patchfr/informations",
         },
       ],
     },

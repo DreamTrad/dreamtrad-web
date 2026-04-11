@@ -62,7 +62,6 @@ export default function AdminGamesPage() {
         `)
         .eq("user_id", user.id);
 
-      console.log("Fetched games:", { data, error });
       if (data) {
         const formatted = data
           .map((p) => p.projects)

@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 
-import { games } from "@/data/jeux";
 import DownloadClient from "./DownloadClient";
 import ImageCarousel from "./ImageCarousel";
 import MarkdownSection from "@/components/ui/MarkdownSection";
@@ -11,24 +10,38 @@ import { createClient } from "@/lib/supabase/server";
 
 export async function generateMetadata({ params }) {
   const id = (await params).id;
-  const game = games.find((g) => g.id === id);
-  if (!game) return {};
+
+  const supabase = await createClient();
+
+    const { data: project, error } = await supabase
+      .from("projects")
+      .select("title")
+      .eq("id", id)
+      .eq("is_visible", true)
+      .single();
+
+    if (error) {
+      console.error("Error fetching project:", error);
+      return {};
+    }
+
+    if (!project) return {};
 
   const image = `/jeux/${id}/cover.webp`;
 
   return {
-    title: `Téléchargement patch fr | ${game.name}`,
-    description: `Télécharger les différents patchs de ${game.name}`,
+    title: `Téléchargement patch fr | ${project.title}`,
+    description: `Télécharger les différents patchs de ${project.title}`,
     openGraph: {
-      title: `Téléchargement patch fr | ${game.name}`,
-      description: `Télécharger les différents patchs de ${game.name}`,
+      title: `Téléchargement patch fr | ${project.title}`,
+      description: `Télécharger les différents patchs de ${project.title}`,
       url: `/jeux/${id}/patchfr/telechargement`,
       images: [
         {
           url: image,
           width: 1200,
           height: 630,
-          alt: game.name,
+          alt: project.title,
         },
       ],
     },
@@ -78,23 +91,22 @@ export default async function DownloadPage({ params }) {
     console.error("Error fetching patches:", patchesError);
   }
 
-  let content = "Informations indisponibles.";
+  const { data: infopatch, pageError } = await supabase
+    .from("pages")
+    .select("title, content")
+    .eq("project_id", project.id)
+    .eq("file", "infopatch")
+    .single();
 
-  try {
-    const markdownPath = path.join(
-      process.cwd(),
-      "src/data/jeux",
-      id,
-      "patchfr",
-      "informations.md",
-    );
-    content = fs.readFileSync(markdownPath, "utf8");
-  } catch {}
+  if (pageError) {
+    console.error(pageError);
+    redirect("/");
+  }
 
   return (
     <div className="mx-auto max-w-7xl space-y-12 px-4 pb-20">
       <div className="bg-bg-secondary/60 rounded-2xl p-6 shadow-sm backdrop-blur-sm md:p-8">
-        <MarkdownSection content={content} />
+        <MarkdownSection mainTitle={infopatch?.title} content={infopatch?.content || ""} />
       </div>
 
       {project?.show_progress && (
