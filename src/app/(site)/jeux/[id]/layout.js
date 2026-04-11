@@ -107,8 +107,6 @@ export default async function GameLayout({ children, params }) {
     .eq("is_visible", true)
     .order("position", { ascending: true })
 
-  console.log("pageGuideData", pageGuideData);
-
   const hasGuide = !!pageGuideData?.length;
 
   return (
