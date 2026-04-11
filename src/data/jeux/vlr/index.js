@@ -4,24 +4,6 @@ export const game = {
   id: "vlr",
   name: "Zero Escape - Virtue's Last Reward",
   categories: {
-    general: {
-      sections: [
-        {
-          id: "presentation",
-          embeds: [
-            {
-              type: "youtube",
-              id: "IVpBgMDD5MM",
-            },
-            {
-              type: "steam",
-              id: "477740",
-            },
-          ],
-        },
-      ],
-    },
-
     guide: {
       sections: [
         { id: "sommaire", name: "Sommaire", file: "guide/sommaire" },

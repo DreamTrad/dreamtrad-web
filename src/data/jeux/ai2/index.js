@@ -4,24 +4,6 @@ export const game = {
   id: "ai2",
   name: "AI: The Somnium Files - Nirvana Initiative",
   categories: {
-    general: {
-      sections: [
-        {
-          id: "presentation",
-          embeds: [
-            {
-              type: "youtube",
-              id: "Zf0-IF2-sZg",
-            },
-            {
-              type: "steam",
-              id: "1449200",
-            },
-          ],
-        },
-      ],
-    },
-
     guide: {
       name: "Guide",
       sections: [

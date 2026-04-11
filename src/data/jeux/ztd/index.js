@@ -4,24 +4,6 @@ export const game = {
   id: "ztd",
   name: "Zero Escape - Zero Time Dilemma",
   categories: {
-    general: {
-      sections: [
-        {
-          id: "presentation",
-          embeds: [
-            {
-              type: "youtube",
-              id: "woAgPkS5IIc",
-            },
-            {
-              type: "steam",
-              id: "311240",
-            },
-          ],
-        },
-      ],
-    },
-
     guide: {
       sections: [
         { id: "succes", name: "Succès", data: succes },

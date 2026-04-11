@@ -4,23 +4,6 @@ export const game = {
   id: "999",
   name: "Zero Escape - 9 Hours, 9 Persons, 9 Doors",
   categories: {
-    general: {
-      sections: [
-        {
-          id: "presentation",
-          embeds: [
-            {
-              type: "youtube",
-              id: "tmatwxj-jFg",
-            },
-            {
-              type: "steam",
-              id: "477740",
-            },
-          ],
-        },
-      ],
-    },
     guide: {
       sections: [
         { id: "sommaire", name: "Sommaire", file: "guide/sommaire" },

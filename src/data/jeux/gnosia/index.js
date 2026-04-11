@@ -4,24 +4,6 @@ export const game = {
   id: "gnosia",
   name: "GNOSIA",
   categories: {
-    general: {
-      sections: [
-        {
-          id: "presentation",
-          embeds: [
-            {
-              type: "youtube",
-              id: "UC0VZV5IAGo",
-            },
-            {
-              type: "steam",
-              id: "1608290",
-            },
-          ],
-        },
-      ],
-    },
-
     guide: {
       sections: [
         { id: "sommaire", name: "Sommaire", file: "guide/sommaire" },

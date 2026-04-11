@@ -38,9 +38,14 @@ export default async function GamePage({ params }) {
     redirect("/");
   }
 
-  const presentationCat = game.categories.general.sections.find(
-    (s) => s.id === "presentation",
-  );
+  const { data: embeds, embedsError } = await supabase
+    .from("widgets")
+    .select("widget_type, embed_id")
+    .eq("project", project.id);
+
+  if (embedsError) {
+    console.error(embedsError);
+  }
 
   return (
     <div className="mx-auto max-w-7xl space-y-12 px-4 pb-20">
@@ -48,7 +53,7 @@ export default async function GamePage({ params }) {
         <MarkdownSection mainTitle={presentation?.title} content={presentation?.content || ""} />
       </div>
 
-      <GameEmbeds embeds={presentationCat.embeds} />
+      <GameEmbeds embeds={embeds} />
     </div>
   );
 }

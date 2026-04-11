@@ -3,23 +3,6 @@ export const game = {
   id: "ai1",
   name: "AI: The Somnium Files",
   categories: {
-    general: {
-      sections: [
-        {
-          id: "presentation",
-          embeds: [
-            {
-              type: "youtube",
-              id: "1H4f1eBeStU",
-            },
-            {
-              type: "steam",
-              id: "948740",
-            },
-          ],
-        },
-      ],
-    },
     patchfr: {
       sections: [
         {

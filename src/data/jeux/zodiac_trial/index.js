@@ -3,24 +3,6 @@ export const game = {
   id: "zodiac_trial",
   name: "Shuffled Deck - The Zodiac Trial",
   categories: {
-    general: {
-      sections: [
-        {
-          id: "presentation",
-          embeds: [
-            {
-              type: "youtube",
-              id: "8EgEAGqiJ70",
-            },
-            {
-              type: "steam",
-              id: "1513120",
-            },
-          ],
-        },
-      ],
-    },
-
     guide: {
       sections: [{ id: "fins", name: "Fins", file: "guide/fins" }],
     },
