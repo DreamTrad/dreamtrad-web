@@ -31,14 +31,29 @@ export default async function HomePage() {
     console.error("Supabase page error:", pageError);
   }
 
-  const { data: projects, error } = await supabase
+  const { data: projects, projectsError } = await supabase
     .from("projects")
     .select("id, title, progress")
     .eq("show_progress", true)
     .order("title");
 
-  if (error) {
-    console.error("Supabase error:", error);
+  if (projectsError) {
+    console.error("Supabase error:", projectsError);
+  }
+
+  const { data: patches, patchError } = await supabase.from("patches").select(`
+            id,
+            project_id,
+            name,
+            link,
+            projects!patches_project_id_fkey (
+              title
+            )
+          `);
+
+  if (patchError) {
+    console.error("Fetch patches error:", patchError);
+    return;
   }
 
   return (
@@ -46,18 +61,14 @@ export default async function HomePage() {
       <div className="mx-auto grid flex-1 grid-cols-1 gap-6 px-5 py-8 lg:grid-cols-3">
         {/* Main column */}
         <div className="flex flex-col gap-6 lg:col-span-2">
-          <InfoBox
-            title={page?.title || ""}
-            icon="✨"
-            className="mt-2"
-          >
+          <InfoBox title={page?.title || ""} icon="✨" className="mt-2">
             <MarkdownSection
               content={page?.content || ""}
               className="text-justify leading-relaxed"
             />
           </InfoBox>
 
-          <AvailablePatches />
+          <AvailablePatches patches={patches} />
           <h2 className="mt-6 text-center text-lg font-semibold">
             Avancements des projets
           </h2>

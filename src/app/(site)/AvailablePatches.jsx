@@ -1,58 +1,27 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { supabase } from "@/lib/supabase/client";
 
-export default function AvailablePatches() {
-  const [available, setAvailable] = useState([]);
+export default function AvailablePatches({ patches }) {
   const [index, setIndex] = useState(0);
 
-  useEffect(() => {
-    const fetchPatches = async () => {
-      const { data, error } = await supabase.from("patches").select(`
-          id,
-          project_id,
-          name,
-          link,
-          projects!patches_project_id_fkey (
-            title
-          )
-        `);
+  const available = useMemo(() => {
+    const grouped = patches.reduce((acc, p) => {
+      if (!acc[p.project_id]) acc[p.project_id] = [];
+      acc[p.project_id].push(p);
+      return acc;
+    }, {});
 
-      if (error) {
-        console.error("Fetch patches error:", error);
-        return;
-      }
-
-      if (!data?.length) return;
-
-      // group by project_id
-      const grouped = data.reduce((acc, p) => {
-        if (!acc[p.project_id]) {
-          acc[p.project_id] = [];
-        }
-        acc[p.project_id].push(p);
-        return acc;
-      }, {});
-
-      // format for UI
-      const formatted = Object.entries(grouped).map(
-        ([project_id, platforms]) => ({
-          id: project_id,
-          name: platforms[0]?.projects?.title || project_id,
-          image: `/jeux/${project_id}/cover.webp`,
-          platforms,
-          link: `/jeux/${project_id}/patchfr/telechargement`,
-        }),
-      );
-
-      setAvailable(formatted);
-    };
-
-    fetchPatches();
-  }, []);
+    return Object.entries(grouped).map(([project_id, platforms]) => ({
+      id: project_id,
+      name: platforms[0]?.projects?.title || project_id,
+      image: `/jeux/${project_id}/cover.webp`,
+      platforms,
+      link: `/jeux/${project_id}/patchfr/telechargement`,
+    }));
+  }, [patches]);
 
   // Auto-slide
   useEffect(() => {
@@ -70,14 +39,12 @@ export default function AvailablePatches() {
   const goPrev = () =>
     setIndex((i) => (i - 1 + available.length) % available.length);
 
-  // Helper
   const cleanPlatformName = (name) => name.split("(")[0].trim();
 
   return (
     <div className="flex w-full flex-col items-center gap-4">
       <h2 className="text-center text-lg font-semibold">Patchs disponibles</h2>
 
-      {/* Carousel container */}
       <div className="relative w-full max-w-3xl overflow-hidden rounded-xl">
         <div
           className="flex transition-transform duration-700"

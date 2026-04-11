@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useEffect, useMemo } from "react";
-import { supabase } from "@/lib/supabase/client";
 import DiscoverCard from "@/app/(site)/vndb-fr/VndbfrCard";
 
 /* ---------------- MultiDropdown ---------------- */
@@ -60,10 +59,7 @@ function MultiDropdown({ label, options, selected, setSelected }) {
 
 /* ---------------- Page Client ---------------- */
 
-export default function VndbfrClient() {
-  const [dataEntries, setDataEntries] = useState([]);
-  const [dataGenres, setDataGenres] = useState([]);
-  const [dataDurations, setDataDurations] = useState([]);
+export default function VndbfrClient( { entries, genres, durations }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedGenres, setSelectedGenres] = useState([]);
   const [selectedDuration, setSelectedDuration] = useState([]);
@@ -71,29 +67,10 @@ export default function VndbfrClient() {
   const [vndbLinkFilter, setVndbLinkFilter] = useState("");
   const [sortOption, setSortOption] = useState("titre-asc");
 
-  useEffect(() => {
-    const fetchAll = async () => {
-      const { data: entries } = await supabase
-        .from("vndbfrentries")
-        .select("*")
-        .eq("is_visible", true)
-        .order("title", { ascending: true });
-
-      const { data: genres } = await supabase.rpc("get_genres");
-      const { data: durations } = await supabase.rpc("get_durations");
-
-      setDataEntries(entries || []);
-      setDataGenres(genres || []);
-      setDataDurations(durations || []);
-    };
-
-    fetchAll();
-  }, []);
-
   /* ---------------- FILTER ---------------- */
 
   const filtered = useMemo(() => {
-    return dataEntries.filter((p) => {
+    return entries.filter((p) => {
       const nameMatch = p.title
         .toLowerCase()
         .includes(searchTerm.toLowerCase());
@@ -131,7 +108,7 @@ export default function VndbfrClient() {
       return nameMatch && genreMatch && durationMatch && tradMatch && vndbMatch;
     });
   }, [
-    dataEntries,
+    entries,
     searchTerm,
     selectedGenres,
     selectedDuration,
@@ -176,14 +153,14 @@ export default function VndbfrClient() {
 
         <MultiDropdown
           label="Sélectionner des genres"
-          options={dataGenres}
+          options={genres}
           selected={selectedGenres}
           setSelected={setSelectedGenres}
         />
 
         <MultiDropdown
           label="Sélectionner des durées"
-          options={dataDurations}
+          options={durations}
           selected={selectedDuration}
           setSelected={setSelectedDuration}
         />
