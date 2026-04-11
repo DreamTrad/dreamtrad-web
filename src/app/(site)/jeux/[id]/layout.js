@@ -90,6 +90,15 @@ export default async function GameLayout({ children, params }) {
     (item) => item.staffs?.is_visible
   );
 
+  const { data: pagesInstallation } = await supabase
+    .from("pages")
+    .select("file, title, content")
+    .eq("type", "installation")
+    .eq("project_id", id)
+    .eq("is_visible", true);
+
+    const hasInstallation = !!pagesInstallation?.length;
+
   return (
     <div className="flex min-h-screen flex-col">
       <GameHeader id={project.id} title={project.title} />
@@ -97,6 +106,7 @@ export default async function GameLayout({ children, params }) {
         gameId={id}
         hasPatch={hasPatch}
         hasStaff={!!hasStaff}
+        hasInstallation={hasInstallation}
       >
         {children}
       </GameClient>

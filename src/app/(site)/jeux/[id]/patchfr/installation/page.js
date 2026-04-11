@@ -1,31 +1,43 @@
-// app/jeux/[id]/patchfr/installation/page.js
+// app/(site)/jeux/[id]/patchfr/installation/page.js
+
 import fs from "fs";
 import path from "path";
 import PlateformsTabs from "./PlateformsTabs";
-import { games } from "@/data/jeux";
+import { createClient } from "@/lib/supabase/server";
 
 export const revalidate = 60 * 60;
 
 export async function generateMetadata({ params }) {
-  const gameId = (await params).id;
-  const image = `/jeux/${gameId}/cover.webp`;
+  const id = (await params).id;
+  const image = `/jeux/${id}/cover.webp`;
 
-  const game = games.find(g => g.id === gameId);
-  if (!game) return {};
+  const supabase = await createClient();
+
+  const { data: project, error } = await supabase
+    .from("projects")
+    .select("title")
+    .eq("id", id)
+    .limit(1)
+    .single();
+
+  if (error) {
+    console.error("Error fetching project:", error);
+    return {};
+  }
 
   return {
-    title: `Installation patch fr | ${game.name}`,
-    description: `Guide d'installation pour le patch français de ${game.name}.`,
+    title: `Installation patch fr | ${project.title}`,
+    description: `Guide d'installation pour le patch français de ${project.title}.`,
     openGraph: {
-      title: `Installation patch fr | ${game.name}`,
-      description: `Guide d'installation pour le patch français de ${game.name}.`,
-      url: `/jeux/${gameId}/patchfr/installation`,
+      title: `Installation patch fr | ${project.title}`,
+      description: `Guide d'installation pour le patch français de ${project.title}.`,
+      url: `/jeux/${id}/patchfr/installation`,
       images: [
         {
           url: image,
           width: 1200,
           height: 630,
-          alt: game.name,
+          alt: project.title,
         },
       ],
     }
@@ -33,31 +45,20 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function InstallationPage({ params }) {
-  const gameId = (await params).id;
-  const game = games.find((g) => g.id === gameId);
-  if (!game) return null;
+  const id = (await params).id;
 
-  const section = game.categories.patchfr.sections.find(
-    (s) => s.id === "installation",
-  );
+  const supabase = await createClient();
 
-  if (!section) return null;
+  const { data: pagesInstallation, error } = await supabase
+    .from("pages")
+    .select("file, title, content")
+    .eq("type", "installation")
+    .eq("project_id", id)
+    .eq("is_visible", true);
 
-  const contents = {};
-
-  for (const platform of section.platforms) {
-    try {
-      const filePath = path.join(
-        process.cwd(),
-        "src/data/jeux",
-        gameId,
-        `${platform.file}.md`,
-      );
-      contents[platform.id] = fs.readFileSync(filePath, "utf-8");
-    } catch {
-      contents[platform.id] = "Contenu introuvable.";
-    }
+  if (error) {
+    console.error("Error fetching project:", error);
   }
 
-  return <PlateformsTabs platforms={section.platforms} contents={contents} />;
+  return <PlateformsTabs pagesInstallation={pagesInstallation} />;
 }

@@ -14,7 +14,7 @@ function resolveHref({ gameId, category, sectionId }) {
   return `/jeux/${gameId}/${category}/${sectionId}`;
 }
 
-export default function GameSidebar({ gameId, hasPatch, hasStaff, onLinkClick }) {
+export default function GameSidebar({ gameId, hasPatch, hasStaff, hasInstallation, onLinkClick }) {
   const pathname = usePathname();
   const parts = pathname.split("/").filter(Boolean);
 
@@ -26,7 +26,6 @@ export default function GameSidebar({ gameId, hasPatch, hasStaff, onLinkClick })
     category = parts[2];
   }
 
-  // Define sections manually
   let sections = [];
 
   if (category === "general") {
@@ -43,7 +42,7 @@ export default function GameSidebar({ gameId, hasPatch, hasStaff, onLinkClick })
         name: hasPatch ? "Téléchargement" : "Informations patch",
         enabled: true,
       },
-      { id: "installation", name: "Installation", enabled: false }, // replace with condition
+      { id: "installation", name: "Installation", enabled: hasInstallation },
       { id: "equipe", name: "Équipe", enabled: true },
     ];
   }

@@ -6,29 +6,5 @@ export const game = {
       name: "Guide",
       sections: [{ id: "solution", name: "Solution", file: "guide/solution" }],
     },
-    patchfr: {
-      sections: [
-        {
-          id: "installation",
-          platforms: [
-            {
-              id: "windows",
-              name: "Windows",
-              file: "patchfr/installation/windows",
-            },
-            {
-              id: "steamdeck",
-              name: "Steam Deck/Linux",
-              file: "patchfr/installation/steamdeck",
-            },
-            {
-              id: "manuellement",
-              name: "Manuellement",
-              file: "patchfr/installation/manuellement",
-            },
-          ],
-        },
-      ],
-    },
   },
 };

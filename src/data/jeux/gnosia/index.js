@@ -17,24 +17,5 @@ export const game = {
         { id: "succes", name: "Succès", data: succes },
       ],
     },
-    patchfr: {
-      sections: [
-        {
-          id: "installation",
-          platforms: [
-            {
-              id: "windows",
-              name: "Windows",
-              file: "patchfr/installation/windows",
-            },
-            {
-              id: "steamdeck",
-              name: "Steam Deck/Linux",
-              file: "patchfr/installation/steamdeck",
-            },
-          ],
-        },
-      ],
-    },
   },
 };

@@ -17,7 +17,6 @@ export default function GameHeader({ id, title }) {
         : "text-text hover:bg-hover hover:text-accent-secondary"
     }`;
 
-  // Define categories manually with fixed order
   const categories = [
     { key: "general", name: "Le jeu", enabled: true },
     { key: "guide", name: "Guide", enabled: false }, // replace false with your condition
