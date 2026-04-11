@@ -79,16 +79,16 @@ export default async function GameLayout({ children, params }) {
   // Staff check
   const { data: staffData } = await supabase
     .from("staff_projects")
-    .select(`
+    .select(
+      `
       staffs (
         is_visible
       )
-    `)
+    `,
+    )
     .eq("project_id", id);
 
-  const hasStaff = staffData?.some(
-    (item) => item.staffs?.is_visible
-  );
+  const hasStaff = staffData?.some((item) => item.staffs?.is_visible);
 
   const { data: pagesInstallation } = await supabase
     .from("pages")
@@ -97,7 +97,7 @@ export default async function GameLayout({ children, params }) {
     .eq("project_id", id)
     .eq("is_visible", true);
 
-    const hasInstallation = !!pagesInstallation?.length;
+  const hasInstallation = !!pagesInstallation?.length;
 
   const { data: pageGuideData } = await supabase
     .from("pages")
@@ -105,7 +105,7 @@ export default async function GameLayout({ children, params }) {
     .eq("project_id", id)
     .eq("type", "guide")
     .eq("is_visible", true)
-    .order("position", { ascending: true })
+    .order("position", { ascending: true });
 
   const hasGuide = !!pageGuideData?.length;
 

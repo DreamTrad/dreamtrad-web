@@ -1,4 +1,5 @@
 // app/(site)/jeux/[id]/guide/[content]/[child]/page.js
+
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import { createClient } from "@/lib/supabase/server";
 
@@ -13,20 +14,20 @@ export async function generateMetadata({ params }) {
   const supabase = await createClient();
 
   const { data: pageData } = await supabase
-      .from("pages")
-      .select("title, description")
-      .eq("file", child)
-      .eq("slug", `${id}/guide/${content}`)
-      .eq("project_id", id)
-      .eq("type", "guide")
-      .limit(1)
-      .single();
+    .from("pages")
+    .select("title, description")
+    .eq("file", child)
+    .eq("slug", `${id}/guide/${content}`)
+    .eq("project_id", id)
+    .eq("type", "guide")
+    .limit(1)
+    .single();
 
-      const { data: projectData } = await supabase
-      .from("projects")
-      .select("title")
-      .eq("id", id)
-      .single();
+  const { data: projectData } = await supabase
+    .from("projects")
+    .select("title")
+    .eq("id", id)
+    .single();
 
   const image = `/jeux/${id}/cover.webp`;
 
@@ -62,20 +63,22 @@ export default async function GuideChildContentPage({ params }) {
   const supabase = await createClient();
 
   const { data: pageData } = await supabase
-      .from("pages")
-      .select("title, content")
-      .eq("file", child)
-      .eq("slug", `${id}/guide/${content}`)
-      .eq("project_id", id)
-      .eq("type", "guide")
-      .limit(1)
-      .single();
-
+    .from("pages")
+    .select("title, content")
+    .eq("file", child)
+    .eq("slug", `${id}/guide/${content}`)
+    .eq("project_id", id)
+    .eq("type", "guide")
+    .limit(1)
+    .single();
 
   return (
     <div className="mx-auto max-w-7xl px-4 pb-20">
       <div className="bg-bg-secondary/60 rounded-2xl p-6 shadow-sm backdrop-blur-sm md:p-8">
-        <MarkdownSection mainTitle={pageData.title} content={pageData.content} />
+        <MarkdownSection
+          mainTitle={pageData.title}
+          content={pageData.content}
+        />
       </div>
     </div>
   );

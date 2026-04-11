@@ -6,7 +6,6 @@ import { createClient } from "@/lib/supabase/server";
 export const dynamicParams = true;
 export const revalidate = 60 * 60;
 
-
 export async function generateMetadata({ params }) {
   const id = (await params).id;
   const content = (await params).content;
@@ -22,7 +21,7 @@ export async function generateMetadata({ params }) {
     .limit(1)
     .single();
 
-    const { data: projectData } = await supabase
+  const { data: projectData } = await supabase
     .from("projects")
     .select("title")
     .eq("id", id)
@@ -69,11 +68,13 @@ export default async function GuideContentPage({ params }) {
     .limit(1)
     .single();
 
-
   return (
     <div className="mx-auto max-w-7xl px-4 pb-20">
       <div className="bg-bg-secondary/60 rounded-2xl p-6 shadow-sm backdrop-blur-sm md:p-8">
-        <MarkdownSection mainTitle={pageData.title} content={pageData.content} />
+        <MarkdownSection
+          mainTitle={pageData.title}
+          content={pageData.content}
+        />
       </div>
     </div>
   );

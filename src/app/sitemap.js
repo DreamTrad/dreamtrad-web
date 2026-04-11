@@ -1,6 +1,5 @@
 // app/sitemap.js
 
-import { games } from "@/data/jeux";
 import { createClient } from "@supabase/supabase-js";
 
 const SITE_URL = "https://dreamtrad.fr";
@@ -29,14 +28,10 @@ export default async function sitemap() {
     lastModified: new Date(),
   }));
 
-  const { data: articles, error } = await supabase
+  const { data: articles } = await supabase
     .from("articles")
     .select("slug, date")
     .eq("is_visible", true);
-
-  if (error) {
-    console.error("Erreur sitemap articles:", error);
-  }
 
   const articleEntries =
     articles?.map((article) => ({
@@ -46,40 +41,30 @@ export default async function sitemap() {
         : new Date(),
     })) || [];
 
-  const gameEntries = games.map((game) => ({
+  const { data: projects } = await supabase
+    .from("projects")
+    .select("id")
+    .eq("is_visible", true);
+
+  const gameEntries = projects.map((game) => ({
     url: `${SITE_URL}/jeux/${game.id}`,
     lastModified: new Date(),
   }));
 
   const guideEntries = [];
 
-  for (const game of games) {
-    const sections = game.categories?.guide?.sections ?? [];
+  const { data: guideData } = await supabase
+    .from("pages")
+    .select("slug, file")
+    .eq("type", "guide")
+    .eq("is_visible", true)
 
-    for (const section of sections) {
+    for (const guidePage of guideData) {
       guideEntries.push({
-        url: `${SITE_URL}/jeux/${game.id}/guide/${section.id}`,
+        url: `${SITE_URL}/jeux/${guidePage.slug}/${guidePage.file}`,
         lastModified: new Date(),
       });
     }
-  }
-
-  const guideChildEntries = [];
-
-  for (const game of games) {
-    const sections = game.categories?.guide?.sections ?? [];
-
-    for (const section of sections) {
-      const children = section.children ?? [];
-
-      for (const child of children) {
-        guideChildEntries.push({
-          url: `${SITE_URL}/jeux/${game.id}/guide/${section.id}/${child.id}`,
-          lastModified: new Date(),
-        });
-      }
-    }
-  }
 
   const succesEntries = [];
 
@@ -98,30 +83,26 @@ export default async function sitemap() {
 
   const staffEntries = [];
 
-  for (const game of games) {
-    const hasStaff = game.categories?.general?.sections?.find(
-      (s) => s.id === "staff",
-    )?.staff;
+  const { data: staffData } = await supabase
+    .from("staff_projects")
+    .select(`
+      project_id,
+      staffs!inner (
+        is_visible
+      )
+    `)
+    .eq("staffs.is_visible", true);
 
-    if (!hasStaff || hasStaff.length === 0) continue;
-
+  for (const staff of staffData) {
     staffEntries.push({
-      url: `${SITE_URL}/jeux/${game.id}/staff`,
+      url: `${SITE_URL}/jeux/${staff.project_id}/staff`,
       lastModified: new Date(),
     });
   }
 
   const patchfrTeamEntries = [];
 
-  for (const game of games) {
-    const hasTeamSection = game.categories?.patchfr?.sections?.some(
-      (s) => s.id === "equipe",
-    );
-
-    if (!hasTeamSection) {
-      continue;
-    }
-
+  for (const game of projects) {
     patchfrTeamEntries.push({
       url: `${SITE_URL}/jeux/${game.id}/patchfr/equipe`,
       lastModified: new Date(),
@@ -130,28 +111,22 @@ export default async function sitemap() {
 
   const patchfrInstallationEntries = [];
 
-  for (const game of games) {
-    const hasInstallationSection = game.categories?.patchfr?.sections?.some(
-      (s) => s.id === "installation",
-    );
+  const { data: installationData } = await supabase
+    .from("pages")
+    .select("project_id")
+    .eq("type", "installation")
+    .eq("is_visible", true);
 
-    if (!hasInstallationSection) continue;
-
+  for (const game of installationData) {
     patchfrInstallationEntries.push({
-      url: `${SITE_URL}/jeux/${game.id}/patchfr/installation`,
+      url: `${SITE_URL}/jeux/${game.project_id}/patchfr/installation`,
       lastModified: new Date(),
     });
   }
 
   const patchfrDownloadEntries = [];
 
-  for (const game of games) {
-    const hasDownloadSection = game.categories?.patchfr?.sections?.some(
-      (s) => s.id === "telechargement",
-    );
-
-    if (!hasDownloadSection) continue;
-
+  for (const game of projects) {
     patchfrDownloadEntries.push({
       url: `${SITE_URL}/jeux/${game.id}/patchfr/telechargement`,
       lastModified: new Date(),
