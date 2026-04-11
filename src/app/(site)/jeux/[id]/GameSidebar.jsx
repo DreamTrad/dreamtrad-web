@@ -109,7 +109,7 @@ export default function GameSidebar({
       if (p.slug === baseSlug) {
         groups[p.file] = {
           id: p.file,
-          name: p.title,
+          name: p.alias || p.title
         };
         return;
       }
@@ -127,7 +127,7 @@ export default function GameSidebar({
 
         groups[groupKey].children.push({
           id: p.file,
-          name: p.title,
+          name: p.alias || p.title
         });
       }
     });

@@ -101,7 +101,7 @@ export default async function GameLayout({ children, params }) {
 
   const { data: pageGuideData } = await supabase
     .from("pages")
-    .select("slug, file, title")
+    .select("slug, file, title, alias")
     .eq("project_id", id)
     .eq("type", "guide")
     .eq("is_visible", true)
