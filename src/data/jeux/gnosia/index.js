@@ -1,17 +1,13 @@
 import { succes } from "./guide/succes";
-import { team } from "./patchfr/team";
 
 export const game = {
   id: "gnosia",
   name: "GNOSIA",
   categories: {
     general: {
-      name: "Le Jeu",
       sections: [
         {
           id: "presentation",
-          name: "Présentation",
-          file: "general/presentation",
           embeds: [
             {
               type: "youtube",
@@ -23,12 +19,10 @@ export const game = {
             },
           ],
         },
-        // { id: "staff", name: "Staff", staff: [] },
       ],
     },
 
     guide: {
-      name: "Guide",
       sections: [
         { id: "sommaire", name: "Sommaire", file: "guide/sommaire" },
         { id: "notes", name: "Débloquer les notes", file: "guide/notes" },
@@ -42,16 +36,13 @@ export const game = {
       ],
     },
     patchfr: {
-      name: "Patch FR",
       sections: [
         {
           id: "telechargement",
-          name: "Télechargement",
           file: "patchfr/informations",
         },
         {
           id: "installation",
-          name: "Installation",
           platforms: [
             {
               id: "windows",
@@ -63,10 +54,8 @@ export const game = {
               name: "Steam Deck/Linux",
               file: "patchfr/installation/steamdeck",
             },
-            // { id: "manuellement", name: "Manuellement", file: "patchfr/installation/manuellement" },
           ],
         },
-        { id: "equipe", name: "Équipe", data: team },
       ],
     },
   },

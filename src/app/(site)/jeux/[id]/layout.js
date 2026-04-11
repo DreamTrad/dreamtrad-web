@@ -67,10 +67,39 @@ export default async function GameLayout({ children, params }) {
     return {};
   }
 
+  // Patch check
+  const { data: patchData } = await supabase
+    .from("patches")
+    .select("project_id")
+    .eq("project_id", id)
+    .limit(1);
+
+  const hasPatch = !!patchData?.length;
+
+  // Staff check
+  const { data: staffData } = await supabase
+    .from("staff_projects")
+    .select(`
+      staffs (
+        is_visible
+      )
+    `)
+    .eq("project_id", id);
+
+  const hasStaff = staffData?.some(
+    (item) => item.staffs?.is_visible
+  );
+
   return (
     <div className="flex min-h-screen flex-col">
-      <GameHeader project={project} />
-      <GameClient gameId={id}>{children}</GameClient>
+      <GameHeader id={project.id} title={project.title} />
+      <GameClient
+        gameId={id}
+        hasPatch={hasPatch}
+        hasStaff={!!hasStaff}
+      >
+        {children}
+      </GameClient>
     </div>
   );
 }

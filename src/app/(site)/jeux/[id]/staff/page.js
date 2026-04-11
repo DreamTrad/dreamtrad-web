@@ -1,31 +1,42 @@
 // app/jeux/[id]/staff/page.js
-import { games } from "@/data/jeux";
 import StaffCard from "./StaffCard";
 import { redirect } from "next/navigation";
-import fs from "fs";
-import path from "path";
+import { createClient } from "@/lib/supabase/server";
 
 export const revalidate = 3600;
 
 export async function generateMetadata({ params }) {
   const id = (await params).id;
-  const game = games.find((g) => g.id === id);
-  if (!game) return {};
 
-  const image = `/jeux/${id}/cover.webp`;
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("projects")
+    .select("id, title")
+    .eq("id", id)
+    .single();
+
+  if (error) {
+    console.error("Error fetching staff:", error);
+    redirect("/");
+  }
+
+  console.log("Project data for metadata:", data);
+
+  const image = `/jeux/${data.id}/cover.webp`;
 
   return {
-    title: `Staff | ${game.name}`, // combine "Staff" + layout title
-    description: `Découvrez les personnes qui se cachent derrière ${game.name}.`,
+    title: `Staff | ${data.title}`, // combine "Staff" + layout title
+    description: `Découvrez les personnes qui se cachent derrière ${data.title}.`,
     openGraph: {
-      title: `Staff | ${game.name}`,
-      description: `Découvrez les personnes qui se cachent derrière ${game.name}.`,
+      title: `Staff | ${data.title}`,
+      description: `Découvrez les personnes qui se cachent derrière ${data.title}.`,
       images: [
         {
           url: image,
           width: 1200,
           height: 630,
-          alt: `${game.name} staff`,
+          alt: `${data.title} staff`,
         },
       ],
     },
@@ -36,24 +47,30 @@ export async function generateMetadata({ params }) {
   };
 }
 
-
 export default async function StaffPage({ params }) {
   const id = (await params).id;
 
-  const game = games.find((g) => g.id === id);
-  if (!game) redirect("/");
+  const supabase = await createClient();
 
-  const staffIds = game.categories.general.sections.find(
-    (s) => s.id === "staff",
-  )?.staff;
+  const { data, error } = await supabase
+    .from("staff_projects")
+    .select(
+      `
+            staffs (
+              *
+            )
+          `,
+    )
+    .eq("project_id", id);
 
-  if (!staffIds) redirect("/");
+  if (error) {
+    console.error("Error fetching staff:", error);
+    redirect("/");
+  }
 
-  const staffPath = path.join(process.cwd(), "src/data/json/vn_staff.json");
-
-  const staffList = JSON.parse(fs.readFileSync(staffPath, "utf8"));
-
-  const filtered = staffList.filter((s) => staffIds.includes(s.id));
+  const staffs = data
+    .map((item) => item.staffs)
+    .filter((s) => s && s.is_visible);
 
   return (
     <div className="pb-20">
@@ -63,7 +80,7 @@ export default async function StaffPage({ params }) {
         </h1>
 
         <div className="flex flex-col items-center gap-10">
-          {filtered.map((member, idx) => (
+          {staffs.map((member, idx) => (
             <StaffCard key={member.id} {...member} imageRight={idx % 2 === 1} />
           ))}
         </div>

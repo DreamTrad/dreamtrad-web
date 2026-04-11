@@ -1,16 +1,11 @@
-import { team } from "./patchfr/team";
-
 export const game = {
   id: "crimson_debt",
   name: "Shuffled Deck - The Crimson Debt",
   categories: {
     general: {
-      name: "Le Jeu",
       sections: [
         {
           id: "presentation",
-          name: "Présentation",
-          file: "general/presentation",
           embeds: [
             {
               type: "itch",
@@ -18,7 +13,6 @@ export const game = {
             },
           ],
         },
-        // { id: "staff", name: "Staff", staff: [] },
       ],
     },
 
@@ -27,16 +21,13 @@ export const game = {
       sections: [{ id: "solution", name: "Solution", file: "guide/solution" }],
     },
     patchfr: {
-      name: "Patch FR",
       sections: [
         {
           id: "telechargement",
-          name: "Informations patch",
           file: "patchfr/informations",
         },
         {
           id: "installation",
-          name: "Installation",
           platforms: [
             {
               id: "windows",
@@ -55,7 +46,6 @@ export const game = {
             },
           ],
         },
-        { id: "equipe", name: "Équipe", data: team },
       ],
     },
   },

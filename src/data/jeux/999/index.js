@@ -1,18 +1,13 @@
-import { characters } from "./general/characters";
 import { succes } from "./guide/succes";
-import { team } from "./patchfr/team";
 
 export const game = {
   id: "999",
   name: "Zero Escape - 9 Hours, 9 Persons, 9 Doors",
   categories: {
     general: {
-      name: "Le Jeu",
       sections: [
         {
           id: "presentation",
-          name: "Présentation",
-          file: "general/presentation",
           embeds: [
             {
               type: "youtube",
@@ -24,19 +19,11 @@ export const game = {
             },
           ],
         },
-        {
-          id: "staff",
-          name: "Staff",
-          staff: ["kotaro-uchikoshi", "jiro-ishii"],
-        },
-        // { id: "characters", name: "Personnages", data: characters },
       ],
     },
     guide: {
-      name: "Guide",
       sections: [
         { id: "sommaire", name: "Sommaire", file: "guide/sommaire" },
-        // { id: "flux", name: "Flux" },
         {
           id: "echappatoires",
           name: "Échappatoires",
@@ -119,22 +106,17 @@ export const game = {
             },
           ],
         },
-        // { id: "enigme_final", name: "Énigme finale", file: "guide/enigme_finale" },
         { id: "fins", name: "Fins", file: "guide/fins" },
         { id: "succes", name: "Succès", data: succes },
       ],
     },
     patchfr: {
-      name: "Patch FR",
       sections: [
         {
           id: "telechargement",
-          name: "Télechargement",
-          file: "patchfr/informations",
         },
         {
           id: "installation",
-          name: "Installation",
           platforms: [
             {
               id: "windows",
@@ -158,7 +140,6 @@ export const game = {
             },
           ],
         },
-        { id: "equipe", name: "Équipe", data: team },
       ],
     },
   },

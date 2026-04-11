@@ -1,17 +1,13 @@
 import { succes } from "./guide/succes";
-import { team } from "./patchfr/team";
 
 export const game = {
   id: "vlr",
   name: "Zero Escape - Virtue's Last Reward",
   categories: {
     general: {
-      name: "Le Jeu",
       sections: [
         {
           id: "presentation",
-          name: "Présentation",
-          file: "general/presentation",
           embeds: [
             {
               type: "youtube",
@@ -23,15 +19,12 @@ export const game = {
             },
           ],
         },
-        { id: "staff", name: "Staff", staff: ["kotaro-uchikoshi"] },
       ],
     },
 
     guide: {
-      name: "Guide",
       sections: [
         { id: "sommaire", name: "Sommaire", file: "guide/sommaire" },
-        // { id: "flux", name: "Flux" },
         {
           id: "echappatoires",
           name: "Échappatoires",
@@ -134,11 +127,9 @@ export const game = {
       ],
     },
     patchfr: {
-      name: "Patch FR",
       sections: [
         {
           id: "telechargement",
-          name: "Télechargement",
           file: "patchfr/informations",
         },
         {
@@ -167,7 +158,6 @@ export const game = {
             },
           ],
         },
-        { id: "equipe", name: "Équipe", data: team },
       ],
     },
   },

@@ -3,15 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { games } from "@/data/jeux";
 
-export default function GameHeader({ project }) {
-  const game = games.find((g) => g.id === project.id);
+export default function GameHeader({ id, title }) {
   const pathname = usePathname();
   const [logoError, setLogoError] = useState(false);
 
-
-  const logoPath = `/jeux/${project.id}/logo.webp`;
+  const logoPath = `/jeux/${id}/logo.webp`;
 
   const linkClass = (active) =>
     `px-4 py-2 text-base font-semibold rounded-xl transition-colors ${
@@ -20,43 +17,56 @@ export default function GameHeader({ project }) {
         : "text-text hover:bg-hover hover:text-accent-secondary"
     }`;
 
+  // Define categories manually with fixed order
+  const categories = [
+    { key: "general", name: "Le jeu", enabled: true },
+    { key: "guide", name: "Guide", enabled: false }, // replace false with your condition
+    { key: "patchfr", name: "Patch français", enabled: true },
+  ];
+
   return (
     <header className="bg-bg-secondary border-bg-tertiary w-full border-b shadow-lg">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-4">
-        {/* Logo / Nom */}
+        {/* Logo / Name */}
         <div className="flex w-full justify-center sm:w-auto sm:justify-start">
           {!logoError ? (
             <img
               src={logoPath}
-              alt={`Logo ${project.title}`}
+              alt={`Logo ${title}`}
               className="h-24 object-contain"
               onError={() => setLogoError(true)}
             />
           ) : (
-            <h2 className="text-text text-3xl font-bold">{project.title}</h2>
+            <h2 className="text-text text-3xl font-bold">{title}</h2>
           )}
         </div>
 
         {/* Menu */}
         <nav className="flex flex-1 flex-wrap justify-center gap-2 sm:justify-end">
-          {Object.entries(game.categories).map(([key, category]) => {
-            let href = `/jeux/${project.id}/${key}`;
+          {categories
+            .filter((cat) => cat.enabled)
+            .map((category) => {
+              let href = `/jeux/${id}/${category.key}`;
 
-            if (key === "general") {
-              href = `/jeux/${project.id}`;
-            }
+              if (category.key === "general") {
+                href = `/jeux/${id}`;
+              }
 
-            const active =
-              key === "general"
-                ? pathname === `/jeux/${project.id}`
-                : pathname.startsWith(`/jeux/${project.id}/${key}`);
+              const active =
+                category.key === "general"
+                  ? pathname === `/jeux/${id}`
+                  : pathname.startsWith(`/jeux/${id}/${category.key}`);
 
-            return (
-              <Link key={key} href={href} className={linkClass(active)}>
-                {category.name}
-              </Link>
-            );
-          })}
+              return (
+                <Link
+                  key={category.key}
+                  href={href}
+                  className={linkClass(active)}
+                >
+                  {category.name}
+                </Link>
+              );
+            })}
         </nav>
       </div>
     </header>
