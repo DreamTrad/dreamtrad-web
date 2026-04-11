@@ -3,7 +3,7 @@
 import { useState } from "react";
 import GameSidebar from "./GameSidebar";
 
-export default function GameClient({ gameId, hasPatch,  hasStaff, hasInstallation, children }) {
+export default function GameClient({ gameId, hasPatch,  hasStaff, hasInstallation, pageGuideData, children }) {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   return (
@@ -26,6 +26,7 @@ export default function GameClient({ gameId, hasPatch,  hasStaff, hasInstallatio
             hasPatch={hasPatch}
             hasStaff={hasStaff}
             hasInstallation={hasInstallation}
+            pageGuideData={pageGuideData}
             onLinkClick={() => {
               if (window.innerWidth < 768) {
                 setSidebarOpen(false);

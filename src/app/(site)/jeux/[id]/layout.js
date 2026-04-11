@@ -101,15 +101,15 @@ export default async function GameLayout({ children, params }) {
 
   const { data: pageGuideData } = await supabase
     .from("pages")
-    .select("slug, file, title, description, content")
+    .select("slug, file, title")
     .eq("project_id", id)
     .eq("type", "guide")
     .eq("is_visible", true)
     .order("position", { ascending: true })
-    .limit(1)
-    .single();
 
-  const hasGuide = !!pageGuideData;
+  console.log("pageGuideData", pageGuideData);
+
+  const hasGuide = !!pageGuideData?.length;
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -118,6 +118,7 @@ export default async function GameLayout({ children, params }) {
         gameId={id}
         hasPatch={hasPatch}
         hasStaff={!!hasStaff}
+        pageGuideData={pageGuideData}
         hasInstallation={hasInstallation}
       >
         {children}
