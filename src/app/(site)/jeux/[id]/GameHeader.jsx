@@ -54,7 +54,8 @@ export default function GameHeader({ id, title }) {
 
               const active =
                 category.key === "general"
-                  ? pathname === `/jeux/${id}`
+                  ? pathname === `/jeux/${id}` ||
+                    pathname === `/jeux/${id}/staff`
                   : pathname.startsWith(`/jeux/${id}/${category.key}`);
 
               return (
