@@ -1,14 +1,25 @@
-// app/jeux/[id]/guide/page.js
+// app/(site)/jeux/[id]/guide/page.js
+
 import { games } from "@/data/jeux";
 import { redirect, notFound } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
 
+export const dynamicParams = true;
 export const revalidate = 60 * 60;
 
 export default async function GuideIndexPage({ params }) {
   const id = (await params).id;
 
+  const supabase = await createClient();
+
+  const { data: project, projectError } = await supabase
+    .from("projects")
+    .select("id, categories")
+    .eq("id", id)
+    .eq("is_visible", true)
+    .single();
+
   const game = games.find((g) => g.id === id);
-  if (!game) notFound();
 
   const guide = game.categories.guide;
   if (!guide || guide.sections.length === 0) notFound();

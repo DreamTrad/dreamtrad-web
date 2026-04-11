@@ -1,4 +1,4 @@
-// app/jeux/[id]/patchfr/equipe/page.js
+// app/(site)/jeux/[id]/patchfr/equipe/page.js
 
 import TeamRoleCategory from "./TeamRoleCategory";
 import { createClient } from "@/lib/supabase/server";

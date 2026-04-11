@@ -1,7 +1,5 @@
 // app/(site)/jeux/[id]/patchfr/installation/page.js
 
-import fs from "fs";
-import path from "path";
 import PlateformsTabs from "./PlateformsTabs";
 import { createClient } from "@/lib/supabase/server";
 
@@ -54,7 +52,8 @@ export default async function InstallationPage({ params }) {
     .select("file, title, content")
     .eq("type", "installation")
     .eq("project_id", id)
-    .eq("is_visible", true);
+    .eq("is_visible", true)
+    .order("position", { ascending: true });
 
   if (error) {
     console.error("Error fetching project:", error);

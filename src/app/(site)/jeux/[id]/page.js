@@ -1,6 +1,5 @@
 // app/(site)/jeux/[id]/page.js
 
-import { games } from "@/data/jeux";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import GameEmbeds from "./GameEmbeds";
 import { createClient } from "@/lib/supabase/server";
@@ -10,7 +9,6 @@ export const revalidate = 60 * 60; // 1 heure
 
 export default async function GamePage({ params }) {
   const id = (await params).id;
-  const game = games.find((g) => g.id === id);
 
   const supabase = await createClient();
 

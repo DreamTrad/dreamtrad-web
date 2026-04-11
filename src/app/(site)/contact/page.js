@@ -1,4 +1,5 @@
 // app/(site)contact/page.js
+
 import InfoBox from "@/components/ui/InfoBox";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import ContactClient from "./ContactClient";

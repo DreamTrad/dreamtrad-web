@@ -1,4 +1,4 @@
-// app/jeux/[id]/patchfr/page.js
+// app/(site)/jeux/[id]/patchfr/page.js
 
 import { redirect } from "next/navigation";
 
