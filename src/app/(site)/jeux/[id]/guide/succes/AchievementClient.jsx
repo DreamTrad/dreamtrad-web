@@ -6,7 +6,7 @@ import AchievementCard from "./AchievementCard";
 const baseImagePath = (gameId) =>
   `/jeux/${gameId}/guide/succes`;
 
-export default function SuccesClient({ sectionData, gameId }) {
+export default function AchievementClient({ achievementData, gameId }) {
   const [revealAll, setRevealAll] = useState(false);
   const imageBase = baseImagePath(gameId);
 
@@ -22,15 +22,15 @@ export default function SuccesClient({ sectionData, gameId }) {
       )}
 
       <div className="grid gap-4">
-        {sectionData?.map((succ) => (
+        {achievementData?.map((achievement) => (
           <AchievementCard
-            key={succ.id}
-            image={`${imageBase}/${succ.id}.webp`}
-            titleEn={succ.titleEn}
-            titleFr={succ.titleFr}
-            description={succ.descriptionFr}
-            resolution={succ.resolution}
-            hidden={succ.hidden && !revealAll}
+            key={achievement.id}
+            image={`${imageBase}/${achievement.id}.webp`}
+            titleEn={achievement.title_og}
+            titleFr={achievement.title_fr}
+            description={achievement.description_fr}
+            resolution={achievement.resolution}
+            hidden={achievement.hidden && !revealAll}
           />
         ))}
       </div>

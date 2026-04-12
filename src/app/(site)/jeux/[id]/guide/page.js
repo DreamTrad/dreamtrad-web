@@ -22,6 +22,17 @@ export default async function GuideIndexPage({ params }) {
     .single();
 
   if (!pageData) {
+    const { data: achievementData } = await supabase
+      .from("achievements")
+      .select("id")
+      .eq("project_id", id)
+      .not("description_fr", "is", null)
+      .neq("description_fr", "")
+      .limit(1)
+      .single();
+    if (achievementData) {
+      redirect(`/jeux/${id}/guide/succes`);
+    }
     redirect(`/jeux/${id}`);
   }
 

@@ -63,6 +63,7 @@ export default function GameSidebar({
   hasStaff,
   hasInstallation,
   pageGuideData,
+  hasAchievements,
   onLinkClick,
 }) {
   const pathname = usePathname();
@@ -133,6 +134,13 @@ export default function GameSidebar({
     });
 
     sections = Object.values(groups);
+
+    if (hasAchievements) {
+    sections.push({
+      id: "succes",
+      name: "Succès",
+    });
+  }
   }
 
   sections = sections.filter((s) => s.enabled ?? true);

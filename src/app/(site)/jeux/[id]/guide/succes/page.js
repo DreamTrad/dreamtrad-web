@@ -1,36 +1,25 @@
-// app/jeux/[id]/guide/succes/page.js
-import { games } from "@/data/jeux";
-import SuccesClient from "./SuccesClient";
+// app/(site)/jeux/[id]/guide/succes/page.js
 
+import AchievementClient from "./AchievementClient";
+import { createClient } from "@/lib/supabase/server";
+
+export const dynamicParams = true;
 export const revalidate = 60 * 60;
-
-export async function generateStaticParams() {
-  return games
-    .filter(
-      (g) =>
-        g.categories?.guide?.sections?.some(
-          (s) => s.id === "succes"
-        )
-    )
-    .map((g) => ({
-      id: g.id,
-    }));
-}
 
 export async function generateMetadata({ params }) {
   const id = (await params).id;
-  const game = games.find((g) => g.id === id);
-  if (!game) return {};
 
-  const section = game.categories?.guide?.sections?.find(
-    (s) => s.id === "succes"
-  );
-  if (!section) return {};
+  const supabase = await createClient();
 
-  const title = `Succès | ${game.name}`;
-  const description = `Consultez la liste complète des succès pour ${game.name}.`;
-  const image = `/jeux/${id}/cover.webp`; // conserve l'image actuelle
+  const { data: projectData } = await supabase
+    .from("projects")
+    .select("title")
+    .eq("id", id)
+    .single();
 
+  const title = `Succès | ${projectData.title}`;
+  const description = `Consultez la liste complète des succès pour ${projectData.title}.`;
+  const image = `/jeux/${id}/cover.webp`;
   return {
     title,
     description,
@@ -42,7 +31,7 @@ export async function generateMetadata({ params }) {
           url: image,
           width: 1200,
           height: 630,
-          alt: game.name,
+          alt: projectData.title,
         },
       ],
     },
@@ -57,16 +46,29 @@ export async function generateMetadata({ params }) {
 
 export default async function SuccesPage({ params }) {
   const id = (await params).id;
-  const game = games.find((g) => g.id === id);
-  if (!game) return <div>Jeu introuvable</div>;
 
-  const section = game.categories.guide.sections.find((s) => s.id === "succes");
-  if (!section) return <div>Section Succès introuvable</div>;
+  const supabase = await createClient();
+
+  const { data: achievementData } = await supabase
+    .from("achievements")
+    .select("id, title_og, title_fr, description_fr, resolution, hidden")
+    .eq("project_id", id)
+    .not("description_fr", "is", null)
+    .neq("description_fr", "")
+    .order("id", { ascending: true })
+
+  const { data: projectData } = await supabase
+    .from("projects")
+    .select("title")
+    .eq("id", id)
+    .single();
 
   return (
     <div className="mx-auto max-w-7xl">
-      <h1 className="text-text mb-10 text-4xl font-extrabold tracking-tight">Les succès de {game.name}</h1>
-      <SuccesClient sectionData={section.data} gameId={id} />
+      <h1 className="text-text mb-10 text-4xl font-extrabold tracking-tight">
+        Les succès de {projectData.title}
+      </h1>
+      <AchievementClient achievementData={achievementData} gameId={id} />
     </div>
   );
 }

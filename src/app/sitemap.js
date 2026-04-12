@@ -66,16 +66,17 @@ export default async function sitemap() {
       });
     }
 
-  const succesEntries = [];
+  const achievementEntries = [];
+  const { data: achievementData } = await supabase
+    .from("projects")
+    .select("id, achievements!inner(id)")
+    .not("achievements.description_fr", "is", null)
+    .neq("achievements.description_fr", "");
 
-  for (const game of games) {
-    const hasSucces = game.categories?.guide?.sections?.some(
-      (s) => s.id === "succes",
-    );
+  const projectIds = [...new Set(data.map(p => p.id))];
 
-    if (!hasSucces) continue;
-
-    succesEntries.push({
+  for (const game of projectIds) {
+    achievementEntries.push({
       url: `${SITE_URL}/jeux/${game.id}/guide/succes`,
       lastModified: new Date(),
     });
@@ -139,7 +140,7 @@ export default async function sitemap() {
     ...gameEntries,
     ...guideEntries,
     ...guideChildEntries,
-    ...succesEntries,
+    ...achievementEntries,
     ...staffEntries,
     ...patchfrTeamEntries,
     ...patchfrInstallationEntries,

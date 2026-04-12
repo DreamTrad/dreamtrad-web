@@ -72,9 +72,8 @@ export default async function GameLayout({ children, params }) {
     .from("patches")
     .select("project_id")
     .eq("project_id", id)
-    .limit(1);
-
-  const hasPatch = !!patchData?.length;
+    .limit(1)
+    .single();
 
   // Staff check
   const { data: staffData } = await supabase
@@ -86,7 +85,8 @@ export default async function GameLayout({ children, params }) {
       )
     `,
     )
-    .eq("project_id", id);
+    .eq("project_id", id)
+    .limit(1);
 
   const hasStaff = staffData?.some((item) => item.staffs?.is_visible);
 
@@ -95,9 +95,18 @@ export default async function GameLayout({ children, params }) {
     .select("file, title, content")
     .eq("type", "installation")
     .eq("project_id", id)
-    .eq("is_visible", true);
+    .eq("is_visible", true)
+    .limit(1)
+    .single()
 
-  const hasInstallation = !!pagesInstallation?.length;
+  const { data: achievementData } = await supabase
+    .from("achievements")
+    .select("id")
+    .eq("project_id", id)
+    .not("description_fr", "is", null)
+    .neq("description_fr", "")
+    .limit(1)
+    .single();
 
   const { data: pageGuideData } = await supabase
     .from("pages")
@@ -107,17 +116,19 @@ export default async function GameLayout({ children, params }) {
     .eq("is_visible", true)
     .order("position", { ascending: true });
 
-  const hasGuide = !!pageGuideData?.length;
+  const hasGuide = !!pageGuideData?.length || !!achievementData;
+
 
   return (
     <div className="flex min-h-screen flex-col">
       <GameHeader id={project.id} title={project.title} hasGuide={hasGuide} />
       <GameClient
         gameId={id}
-        hasPatch={hasPatch}
+        hasPatch={!!patchData}
         hasStaff={!!hasStaff}
         pageGuideData={pageGuideData}
-        hasInstallation={hasInstallation}
+        hasInstallation={!!pagesInstallation}
+        hasAchievements={!!achievementData}
       >
         {children}
       </GameClient>
