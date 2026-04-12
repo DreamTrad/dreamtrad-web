@@ -3,6 +3,7 @@
 import TeamRoleCategory from "./TeamRoleCategory";
 import { createClient } from "@/lib/supabase/server";
 
+export const dynamicParams = true;
 export const revalidate = 60 * 60;
 
 export async function generateMetadata({ params }) {

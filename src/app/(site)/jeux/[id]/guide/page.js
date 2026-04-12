@@ -1,6 +1,6 @@
 // app/(site)/jeux/[id]/guide/page.js
 
-import { redirect, notFound } from "next/navigation";
+import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 
 export const dynamicParams = true;

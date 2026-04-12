@@ -1,27 +1,25 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function AvailablePatches({ patches }) {
   const [index, setIndex] = useState(0);
 
-  const available = useMemo(() => {
-    const grouped = patches.reduce((acc, p) => {
-      if (!acc[p.project_id]) acc[p.project_id] = [];
-      acc[p.project_id].push(p);
-      return acc;
-    }, {});
+  const grouped = (patches ?? []).reduce((acc, p) => {
+    if (!acc[p.project_id]) acc[p.project_id] = [];
+    acc[p.project_id].push(p);
+    return acc;
+  }, {});
 
-    return Object.entries(grouped).map(([project_id, platforms]) => ({
-      id: project_id,
-      name: platforms[0]?.projects?.title || project_id,
-      image: `/jeux/${project_id}/cover.webp`,
-      platforms,
-      link: `/jeux/${project_id}/patchfr/telechargement`,
-    }));
-  }, [patches]);
+  const available = Object.entries(grouped).map(([project_id, platforms]) => ({
+    id: project_id,
+    name: platforms[0]?.projects?.title || project_id,
+    image: `/jeux/${project_id}/cover.webp`,
+    platforms,
+    link: `/jeux/${project_id}/patchfr/telechargement`,
+  }));
 
   // Auto-slide
   useEffect(() => {
@@ -62,7 +60,7 @@ export default function AvailablePatches({ patches }) {
                   fill
                   sizes="(max-width: 768px) 100vw, 44vw"
                   className="object-cover"
-                  priority
+                  priority={index === 0}
                 />
               </div>
 

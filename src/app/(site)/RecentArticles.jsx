@@ -8,9 +8,9 @@ export default async function RecentArticles({ limit = 3 }) {
   const { data: articles, error } = await supabase
     .from("articles")
     .select("id, slug, title, date")
+    .eq("is_visible", true)
     .order("date", { ascending: false })
-    .limit(limit)
-    .eq("is_visible", true);
+    .limit(limit);
 
   if (error) {
     console.error("Erreur Supabase articles :", error);
@@ -30,6 +30,9 @@ export default async function RecentArticles({ limit = 3 }) {
         ) : (
           articles.map((article) => {
             const coverImage = `/articles-content/${article.id}/cover.webp`;
+            const formattedDate = article.date
+              ? new Date(article.date).toLocaleDateString("fr-FR")
+              : "";
 
             return (
               <Link
@@ -38,21 +41,21 @@ export default async function RecentArticles({ limit = 3 }) {
                 scroll={true}
                 className="group flex items-center gap-3"
               >
-                <Image
-                  src={coverImage}
-                  alt={article.title}
-                  width={80}
-                  height={80}
-                  className="h-20 w-20 shrink-0 rounded-md object-cover shadow-sm transition group-hover:opacity-90"
-                />
+                <div className="relative h-20 w-20 shrink-0">
+                  <Image
+                    src={coverImage}
+                    alt={article.title}
+                    fill
+                    loading="lazy"
+                    className="rounded-md object-cover shadow-sm transition group-hover:opacity-90"
+                  />
+                </div>
 
                 <div className="flex flex-1 flex-col">
                   <h3 className="text-text group-hover:text-accent line-clamp-2 text-sm font-bold">
                     {article.title}
                   </h3>
-                  <p className="text-text-tertiary text-xs">
-                    {new Date(article.date).toLocaleDateString("fr-FR")}
-                  </p>
+                  <p className="text-text-tertiary text-xs">{formattedDate}</p>
                 </div>
               </Link>
             );

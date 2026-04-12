@@ -1,4 +1,5 @@
 // app/(site)/layout.js
+
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
@@ -11,7 +12,7 @@ const schemaOrg = {
   inLanguage: "fr-FR",
 };
 
-const image = `/dreamtrad-cover.png`;
+const image = "/dreamtrad-cover.png";
 
 export const metadata = {
   metadataBase: new URL("https://dreamtrad.fr"),
@@ -21,7 +22,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "./",
+    canonical: "/",
   },
 
   title: {
@@ -44,17 +45,16 @@ export const metadata = {
     card: "summary_large_image",
     images: [image],
   },
+  other: {
+    "application/ld+json": JSON.stringify(schemaOrg),
+  },
 };
 
 export default function SiteLayout({ children }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
-      />
       <Header />
-      <main className="flex-1">{children}</main>
+      <main id="main-content" className="flex-1">{children}</main>
       <Footer />
     </>
   );

@@ -20,28 +20,20 @@ export const metadata = {
 export default async function HomePage() {
   const supabase = await createClient();
 
-  const { data: page, error: pageError } = await supabase
+  const { data: page } = await supabase
     .from("pages")
     .select("content, title")
     .eq("slug", "/")
     .eq("file", "infobox")
     .single();
 
-  if (pageError) {
-    console.error("Supabase page error:", pageError);
-  }
-
-  const { data: projects, projectsError } = await supabase
+  const { data: projects } = await supabase
     .from("projects")
     .select("id, title, progress")
     .eq("show_progress", true)
     .order("title");
 
-  if (projectsError) {
-    console.error("Supabase error:", projectsError);
-  }
-
-  const { data: patches, patchError } = await supabase.from("patches").select(`
+  const { data: patches } = await supabase.from("patches").select(`
             id,
             project_id,
             name,
@@ -50,11 +42,6 @@ export default async function HomePage() {
               title
             )
           `);
-
-  if (patchError) {
-    console.error("Fetch patches error:", patchError);
-    return;
-  }
 
   return (
     <div className="bg-bg-primary flex min-h-screen flex-col text-white">
@@ -78,7 +65,6 @@ export default async function HomePage() {
                 key={project.id}
                 id={project.id}
                 title={project.title}
-                image={project.image}
                 progress={project.progress}
               />
             ))}

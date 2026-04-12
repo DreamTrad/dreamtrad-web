@@ -36,74 +36,73 @@ export default function ArticleCard({
   return (
     <div className="group bg-bg-tertiary border-hover-tertiary flex flex-col overflow-hidden rounded-lg border shadow-md transition-shadow hover:shadow-xl">
       <Link href={isAdmin ? `/admin/articles/${id}` : linkref}>
+        {/* Image */}
+        <Image
+          src={coverImage}
+          alt={title}
+          width={400}
+          height={200}
+          className="h-48 w-full object-cover"
+        />
 
-      {/* Image */}
-      <Image
-        src={coverImage}
-        alt={title}
-        width={400}
-        height={200}
-        className="h-48 w-full object-cover"
-      />
+        {/* Infos */}
+        <div className="flex grow flex-col gap-2 p-4">
+          <h2 className="text-text group-hover:text-accent text-xl font-bold transition-colors">
+            {title}
+          </h2>
 
-      {/* Infos */}
-      <div className="flex grow flex-col gap-2 p-4">
-        <h2 className="text-text text-xl font-bold transition-colors group-hover:text-accent">
-          {title}
-        </h2>
+          <p className="text-text text-sm">
+           {Array.isArray(authors) ? authors.join(", ") : authors || ""} —{" "}
+            {new Date(date).toLocaleDateString("fr-FR")}
+          </p>
 
-        <p className="text-text text-sm">
-          {Array.isArray(authors) ? authors.join(", ") : authors} —{" "}
-          {new Date(date).toLocaleDateString("fr-FR")}
-        </p>
+          {excerpt && <p className="text-text grow text-sm">{excerpt}</p>}
 
-        {excerpt && <p className="text-text grow text-sm">{excerpt}</p>}
-
-        {tags.length > 0 && (
-          <div className="mt-2 flex flex-wrap gap-2">
-            {tags.map((tag, idx) => (
-              <span
-                key={idx}
-                className="bg-bg-secondary text-text-secondary rounded px-2 py-1 text-xs"
-              >
-                #{tag}
-              </span>
-            ))}
-          </div>
-        )}
+          {tags.length > 0 && (
+            <div className="mt-2 flex flex-wrap gap-2">
+              {tags.map((tag, idx) => (
+                <span
+                  key={idx}
+                  className="bg-bg-secondary text-text-secondary rounded px-2 py-1 text-xs"
+                >
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
-        </Link>
-        {/* ADMIN */}
-        {isAdmin && (
-          <div className="mt-auto flex flex-col gap-3 p-4">
-            {/* Checkbox */}
-            <div className="flex gap-2">
-              <span className="text-sm">Visible sur le site</span>
-              <input
-                type="checkbox"
-                checked={visible}
-                onChange={(e) => toggleVisible(e.target.checked)}
-              />
-            </div>
-
-            {/* Actions */}
-            <div className="flex justify-between gap-2">
-              <button
-                onClick={deleteArticle}
-                className="bg-error rounded px-3 py-1 text-sm text-white"
-              >
-                Supprimer
-              </button>
-
-              <Link
-                href={`/admin/articles/${id}`}
-                className="bg-accent rounded px-3 py-1 text-sm text-white"
-              >
-                Modifier
-              </Link>
-            </div>
+      </Link>
+      {/* ADMIN */}
+      {isAdmin && (
+        <div className="mt-auto flex flex-col gap-3 p-4">
+          {/* Checkbox */}
+          <div className="flex gap-2">
+            <span className="text-sm">Visible sur le site</span>
+            <input
+              type="checkbox"
+              checked={visible}
+              onChange={(e) => toggleVisible(e.target.checked)}
+            />
           </div>
-        )}
-      </div>
+
+          {/* Actions */}
+          <div className="flex justify-between gap-2">
+            <button
+              onClick={deleteArticle}
+              className="bg-error rounded px-3 py-1 text-sm text-white"
+            >
+              Supprimer
+            </button>
+
+            <Link
+              href={`/admin/articles/${id}`}
+              className="bg-accent rounded px-3 py-1 text-sm text-white"
+            >
+              Modifier
+            </Link>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }

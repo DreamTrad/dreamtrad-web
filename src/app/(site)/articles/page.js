@@ -14,15 +14,11 @@ export const metadata = {
 export default async function ArticleListPage() {
   const supabase = await createClient();
 
-  const { data: articles, error } = await supabase
+  const { data: articles } = await supabase
     .from("articles")
-    .select("id, slug, title, authors, date, tags, excerpt, is_visible")
-    .order("date", { ascending: false })
-    .eq("is_visible", true);
-
-  if (error) {
-    console.error("Supabase error:", JSON.stringify(error, null, 2));
-  }
+    .select("id, slug, title, authors, date, tags, excerpt")
+    .eq("is_visible", true)
+    .order("date", { ascending: false });
 
   return (
     <div className="mx-auto max-w-6xl p-8">
