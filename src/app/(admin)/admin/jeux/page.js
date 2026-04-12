@@ -46,47 +46,30 @@ export default function AdminGamesPage() {
     if (isAdmin) {
       const { data } = await supabase
         .from("projects")
-        .select("id, title, is_visible")
+        .select("id, title, is_visible, sheet_table, drive")
         .order("title");
 
       if (data) setGames(data);
     } else {
       const { data, error } = await supabase
         .from("project_users")
-        .select(`
+        .select(
+          `
           projects (
             id,
             title,
             is_visible
           )
-        `)
+        `,
+        )
         .eq("user_id", user.id);
 
       if (data) {
-        const formatted = data
-          .map((p) => p.projects)
-          .filter(Boolean);
+        const formatted = data.map((p) => p.projects).filter(Boolean);
 
         setGames(formatted);
       }
     }
-  };
-
-  const toggleVisibility = async (id, value) => {
-    const confirmMessage = value
-      ? "Rendre ce projet visible sur le site ?"
-      : "Masquer ce projet du site ?";
-
-    if (!confirm(confirmMessage)) return;
-
-    setGames((prev) =>
-      prev.map((g) => (g.id === id ? { ...g, is_visible: value } : g)),
-    );
-
-    await supabase
-      .from("projects")
-      .update({ is_visible: value })
-      .eq("id", id);
   };
 
   if (!user || !role) {
@@ -95,15 +78,13 @@ export default function AdminGamesPage() {
 
   return (
     <div className="bg-bg-primary text-text-primary min-h-screen p-10">
-      <h1 className="mb-8 text-center text-3xl font-bold">
-        Gestion des jeux
-      </h1>
+      <h1 className="mb-8 text-center text-3xl font-bold">Gestion des jeux</h1>
 
       <div className="grid grid-cols-[repeat(auto-fit,350px)] justify-center gap-8">
         {games.map((game) => (
           <div
             key={game.id}
-            className="group bg-bg-secondary overflow-hidden rounded-2xl shadow-lg transition-shadow hover:shadow-xl"
+            className="group bg-bg-secondary flex h-full flex-col overflow-hidden rounded-2xl shadow-lg transition-shadow hover:shadow-xl"
           >
             <Link href={`/admin/jeux/${game.id}`}>
               <div className="aspect-video cursor-pointer overflow-hidden">
@@ -115,32 +96,38 @@ export default function AdminGamesPage() {
               </div>
             </Link>
 
-            <div className="flex flex-col gap-3 p-4 text-center">
+            <div className="flex grow flex-col gap-3 p-4 text-center">
               <h2 className="text-text-primary group-hover:text-accent text-lg font-semibold transition-colors">
                 {game.title}
               </h2>
 
               {isAdmin && (
-                <label className="flex items-center justify-center gap-2 text-sm">
-                  <span>Visible sur le site</span>
-                  <input
-                    type="checkbox"
-                    checked={game.is_visible || false}
-                    onChange={(e) =>
-                      toggleVisibility(game.id, e.target.checked)
-                    }
-                  />
-                </label>
+                <div className="mt-auto flex justify-center gap-2">
+                  {game.sheet_table && (
+                    <a
+                      href={game.sheet_table}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-accent hover:bg-accent/80 rounded px-3 py-1 text-center text-white transition"
+                    >
+                      Table du projet
+                    </a>
+                  )}
+
+                  {game.drive && (
+                    <a
+                      href={game.drive}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-accent hover:bg-accent/80 rounded px-3 py-1 text-center text-white transition"
+                    >
+                      Drive du projet
+                    </a>
+                  )}
+                </div>
               )}
 
               <div className="flex justify-center gap-2">
-                <Link
-                  href={`/admin/jeux/${game.id}`}
-                  className="bg-accent rounded px-3 py-1 text-xs text-white"
-                >
-                  Modifier
-                </Link>
-
                 {isSuperAdmin && (
                   <button
                     onClick={async () => {
