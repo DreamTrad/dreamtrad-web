@@ -7,7 +7,6 @@ import { notFound } from "next/navigation";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 
 export const revalidate = 60 * 60;
-export const dynamicParams = true;
 
 export async function generateMetadata({ params }) {
   const slug = (await params).slug;
