@@ -8,6 +8,25 @@ import PageEditor from "@/components/PageEditor";
 import UpdateVndbButton from "./UpdateVndbButton";
 
 // Manage array fields (links, patchfr)
+const slugify = (text) => {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s]/g, "")
+    .replace(/\s+/g, "_");
+};
+
+const makeUniqueId = (base, existingIds) => {
+  let id = base;
+  let i = 1;
+
+  while (existingIds.includes(id)) {
+    id = `${base}_${i}`;
+    i++;
+  }
+
+  return id;
+};
 
 function ListEditor({ label, value = [], onChange }) {
   const updateItem = (index, val) => {
@@ -123,6 +142,10 @@ function MultiSelect({ label, options, value, onChange }) {
 }
 
 export default function AdminVndbfrPage() {
+  const [createOpen, setCreateOpen] = useState(false);
+  const [newTitle, setNewTitle] = useState("");
+  const [creating, setCreating] = useState(false);
+
   const [entries, setEntries] = useState([]);
   const [selectedId, setSelectedId] = useState(null);
 
@@ -135,6 +158,43 @@ export default function AdminVndbfrPage() {
 
   const [initialForm, setInitialForm] = useState(null);
   const [isDirty, setIsDirty] = useState(false);
+
+  const createEntry = async () => {
+    if (!newTitle.trim()) return;
+
+    setCreating(true);
+
+    const baseId = slugify(newTitle);
+    const existingIds = entries.map((e) => e.id);
+    const id = makeUniqueId(baseId, existingIds);
+
+    const { data, error } = await supabase
+      .from("vndbfrentries")
+      .insert({
+        id,
+        title: newTitle,
+        genres: [],
+        platforms: [],
+        patchfr: [],
+        links: [],
+        description: "",
+        is_visible: false,
+      })
+      .select()
+      .single();
+
+    setCreating(false);
+
+    if (!error && data) {
+      const updated = [data, ...entries];
+      setEntries(updated);
+
+      setSelectedId(data.id);
+
+      setNewTitle("");
+      setCreateOpen(false);
+    }
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -234,6 +294,38 @@ export default function AdminVndbfrPage() {
 
       {/* ENTRÉES */}
 
+      {createOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/60">
+          <div className="bg-bg-secondary border-hover-tertiary w-full max-w-md rounded-xl border p-6">
+            <h2 className="mb-4 text-lg font-bold">Créer une entrée</h2>
+
+            <input
+              className="bg-bg-tertiary border-hover-tertiary text-text-secondary mb-4 w-full rounded border p-2"
+              placeholder="Titre"
+              value={newTitle}
+              onChange={(e) => setNewTitle(e.target.value)}
+            />
+
+            <div className="flex justify-end gap-2">
+              <button
+                onClick={() => setCreateOpen(false)}
+                className="bg-warning rounded px-3 py-2 text-white"
+              >
+                Annuler
+              </button>
+
+              <button
+                onClick={createEntry}
+                disabled={creating}
+                className="bg-success rounded px-3 py-2 text-white"
+              >
+                {creating ? "Création..." : "Créer"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* SELECT */}
       {/* SELECT BAR */}
       <div className="items-top mb-8 flex gap-4">
@@ -244,9 +336,16 @@ export default function AdminVndbfrPage() {
           value={selectedId}
           onChange={setSelectedId}
         />
-
-        <div className="ml-auto">
-          <UpdateVndbButton />
+        <div className="ml-auto flex-col space-y-4 p-6">
+          <div className="mt-auto">
+            <UpdateVndbButton />
+          </div>
+          <button
+            onClick={() => setCreateOpen(true)}
+            className="bg-accent mb-auto w-full rounded px-3 py-2 text-sm text-white"
+          >
+            + Nouvelle entrée
+          </button>
         </div>
       </div>
 
@@ -276,7 +375,7 @@ export default function AdminVndbfrPage() {
               ))}
             </select>
           </label>
-          <label className="flex items-center gap-2 ml-auto">
+          <label className="ml-auto flex items-center gap-2">
             <span>Visible sur le site</span>
             <input
               type="checkbox"
