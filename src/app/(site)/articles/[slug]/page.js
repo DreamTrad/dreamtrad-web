@@ -67,7 +67,7 @@ export async function generateMetadata({ params }) {
 
 export default async function ArticlePage({ params }) {
   const slug = (await params).slug;
-  const supabase = createStaticClient();
+  const supabase = await createClient();
 
   const { data: article } = await supabase
     .from("articles")

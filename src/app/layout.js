@@ -17,8 +17,8 @@ const orbitron = Orbitron({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr" className={`${montserrat.variable} ${orbitron.variable}`}>
-      <body className="text-text flex min-h-screen flex-col">
+    <html lang="fr" suppressHydrationWarning className={`${montserrat.variable} ${orbitron.variable}`}>
+      <body className="text-text flex min-h-screen flex-col antialiased">
         {children}
       </body>
     </html>

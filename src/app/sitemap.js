@@ -67,17 +67,19 @@ export default async function sitemap() {
     }
 
   const achievementEntries = [];
+
   const { data: achievementData } = await supabase
     .from("projects")
-    .select("id, achievements!inner(id)")
+    .select("id, achievements!inner(description_fr)")
     .not("achievements.description_fr", "is", null)
     .neq("achievements.description_fr", "");
 
-  const projectIds = [...new Set(data.map(p => p.id))];
+  // remove duplicates
+  const projectIds = [...new Set(achievementData.map(p => p.id))];
 
-  for (const game of projectIds) {
+  for (const projectId of projectIds) {
     achievementEntries.push({
-      url: `${SITE_URL}/jeux/${game.id}/guide/succes`,
+      url: `${SITE_URL}/jeux/${projectId}/guide/succes`,
       lastModified: new Date(),
     });
   }
@@ -139,7 +141,6 @@ export default async function sitemap() {
     ...articleEntries,
     ...gameEntries,
     ...guideEntries,
-    ...guideChildEntries,
     ...achievementEntries,
     ...staffEntries,
     ...patchfrTeamEntries,

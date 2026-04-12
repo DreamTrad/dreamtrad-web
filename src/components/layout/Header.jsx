@@ -26,7 +26,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="bg-bg-secondary text-text-secondary relative flex h-16 items-center">
+    <header className="bg-bg-secondary text-text-secondary sticky top-0 z-50 flex h-16 items-center pt-[env(safe-area-inset-top)]">
       <nav className="relative flex h-full w-full items-center justify-center px-20">
         {/* Logo */}
         <Link
@@ -65,7 +65,7 @@ export default function Header() {
 
       {/* Menu mobile */}
       {open && (
-        <ul className="bg-bg-tertiary absolute top-full left-0 z-50 flex w-full flex-col shadow-lg">
+        <ul className="bg-bg-tertiary fixed left-0 top-16 z-50 flex w-full flex-col shadow-lg pt-[env(safe-area-inset-top)]">
           {mainMenu.map((item) => (
             <li key={item.name}>
               <NavLink to={item.to} onClick={() => setOpen(false)} fullWidth>
