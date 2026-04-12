@@ -7,7 +7,6 @@ import MarkdownSection from "@/components/ui/MarkdownSection";
 import ProjectProgressCard from "@/components/ProjectProgressCard";
 import { createClient } from "@/lib/supabase/server";
 
-export const dynamicParams = true;
 export const revalidate = 60;
 
 export async function generateMetadata({ params }) {
