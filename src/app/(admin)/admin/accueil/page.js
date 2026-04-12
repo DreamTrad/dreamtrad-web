@@ -1,12 +1,8 @@
-"use client";
+// app/admin/accueil/page.js
 
-import { supabase } from "@/lib/supabase/client";
-import { useParams } from "next/navigation";
 import PageEditor from "@/components/PageEditor";
-import WidgetsEditor from "./WidgetsEditor";
 
 export default function AdminPage() {
-  const { id } = useParams();
 
   return (
     <div className="mx-auto max-w-6xl p-6">
@@ -19,15 +15,13 @@ export default function AdminPage() {
         {/* INFOBOX */}
         <div className="mb-10">
           <PageEditor
-            title="Présentation du jeu"
-            slug={id}
-            file="presentation"
+            title="Infobox de la page"
+            slug="/"
+            file="infobox"
             editTitle
             editContent
           />
         </div>
-
-        <WidgetsEditor projectId={id}/>
       </div>
     </div>
   );

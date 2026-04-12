@@ -30,7 +30,16 @@ export default function TeamAdminPage() {
           Contenu de la page équipe
         </h1>
 
-        <PageEditor slug="equipe" file="infobox" />
+        {/* INFOBOX */}
+        <div className="mb-10">
+          <PageEditor
+            title="Infobox de la page"
+            slug="equipe"
+            file="infobox"
+            editTitle
+            editContent
+          />
+        </div>
       </div>
 
       {/* Header */}

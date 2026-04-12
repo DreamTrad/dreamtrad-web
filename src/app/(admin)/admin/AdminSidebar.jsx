@@ -12,7 +12,7 @@ export default function AdminSidebar({ projects, role }) {
 
       <nav className="mt-2 flex flex-col gap-2">
         <Link
-          href="/admin"
+          href="/admin/accueil"
           className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
         >
           Accueil
@@ -46,6 +46,12 @@ export default function AdminSidebar({ projects, role }) {
             >
               Articles
             </Link>
+            <Link
+                href="/admin/jeux"
+                className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
+              >
+                Tous les projets
+              </Link>
           </>
         )}
 
@@ -61,12 +67,7 @@ export default function AdminSidebar({ projects, role }) {
 
           {open && (
             <div className="mt-1 ml-3 flex flex-col gap-1 border-l border-white/10 pl-2">
-              <Link
-                href="/admin/jeux"
-                className="hover:bg-hover rounded px-2 py-1 text-xs"
-              >
-                Tous les projets
-              </Link>
+
 
               {projects.map((project) => (
                 <Link

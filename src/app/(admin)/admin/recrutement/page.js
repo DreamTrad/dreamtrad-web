@@ -101,8 +101,16 @@ export default function AdminRecruitmentPage() {
   return (
     <div className="mx-auto max-w-6xl p-6">
       <div className="mb-10">
-        <h1 className="mb-4 text-2xl font-bold">Infobox recrutement</h1>
-        <PageEditor slug="recrutement" file="infobox" />
+        {/* INFOBOX */}
+              <div className="mb-10">
+                <PageEditor
+                  title="Infobox de la page"
+                  slug="recrutement"
+                  file="infobox"
+                  editTitle
+                  editContent
+                />
+              </div>
       </div>
 
       {/* SITE */}

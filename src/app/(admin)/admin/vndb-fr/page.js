@@ -287,9 +287,13 @@ export default function AdminVndbfrPage() {
       <h1 className="mb-6 text-2xl font-bold">Admin VNDB-FR</h1>
       {/* INFOBOX */}
       <div className="mb-10">
-        <h1 className="text-accent mb-4 text-2xl font-bold">Infobox vndb-fr</h1>
-
-        <PageEditor slug="vndb-fr" file="infobox" />
+        <PageEditor
+          title="Infobox de la page"
+          slug="vndb-fr"
+          file="infobox"
+          editTitle
+          editContent
+        />
       </div>
 
       {/* ENTRÉES */}

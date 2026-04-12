@@ -3,7 +3,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase/client";
 
 export default function AdminPage() {
@@ -21,5 +21,5 @@ export default function AdminPage() {
     checkAuth();
   }, [router]);
 
-  return <div>Admin</div>;
+  redirect(`/admin/jeux`);
 }

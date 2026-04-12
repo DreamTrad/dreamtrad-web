@@ -11,7 +11,7 @@ export default function AdminGameGuidePage() {
 
   return (
     <>
-    
+      <h2 className="p-6">Ça sera dev un plus tard…</h2>
     </>
   );
 }
