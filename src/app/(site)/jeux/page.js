@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 
-export const revalidate = 60 * 60; // 1 heure
+export const revalidate = 3600; // 1 heure
 
 export const metadata = {
   title: "Liste des jeux",

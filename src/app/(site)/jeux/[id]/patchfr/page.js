@@ -2,7 +2,7 @@
 
 import { redirect } from "next/navigation";
 
-export const revalidate = 60 * 60;
+export const revalidate = 3600;
 
 export default async function PatchFrIndexPage({ params }) {
   const id = (await params).id;

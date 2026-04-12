@@ -5,7 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import InfoBox from "@/components/ui/InfoBox";
 
-export const revalidate = 60 * 60 * 24;
+export const revalidate = 86400;
 
 export async function generateMetadata(_, parent) {
   const parentMetadata = await parent;

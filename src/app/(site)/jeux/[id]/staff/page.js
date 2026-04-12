@@ -3,7 +3,7 @@ import StaffCard from "./StaffCard";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 
-export const revalidate = 60 * 60 * 24;
+export const revalidate = 86400;
 
 export async function generateMetadata({ params }) {
   const id = (await params).id;

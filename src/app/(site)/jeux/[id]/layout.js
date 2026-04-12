@@ -4,7 +4,7 @@ import GameHeader from "./GameHeader";
 import GameClient from "./GameClient";
 import { createClient } from "@/lib/supabase/server";
 
-export const revalidate = 60 * 60; // 1 heure
+export const revalidate = 3600; // 1 heure
 
 export async function generateMetadata({ params }) {
   const id = (await params).id;

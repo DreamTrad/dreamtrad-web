@@ -5,7 +5,7 @@ import MarkdownSection from "@/components/ui/MarkdownSection";
 import InfoBox from "@/components/ui/InfoBox";
 import RecruitmentCard from "@/components/RecruitmentCard";
 
-export const revalidate = 60 * 60;
+export const revalidate = 3600;
 
 export const metadata = {
   title: "Recrutement",

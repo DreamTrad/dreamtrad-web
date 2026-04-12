@@ -3,7 +3,7 @@
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import { createClient } from "@/lib/supabase/server";
 
-export const revalidate = 60 * 60;
+export const revalidate = 3600;
 
 export async function generateMetadata({ params }) {
   const id = (await params).id;

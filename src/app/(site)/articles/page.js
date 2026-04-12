@@ -3,7 +3,7 @@
 import { createClient } from "@/lib/supabase/server";
 import ArticleCard from "@/components/ArticleCard";
 
-export const revalidate = 60 * 60;
+export const revalidate = 3600;
 
 export const metadata = {
   title: "Articles",
