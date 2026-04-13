@@ -25,6 +25,7 @@ export async function POST(req) {
     .from("images")
     .upload(path, webpBuffer, {
       upsert: true,
+      cacheControl: "31536000",
       contentType: "image/webp",
     });
 

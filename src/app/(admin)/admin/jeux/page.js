@@ -52,7 +52,7 @@ export default function AdminGamesPage() {
 
       if (data) setGames(data);
     } else {
-      const { data, error } = await supabase
+      const { data } = await supabase
         .from("project_users")
         .select(
           `

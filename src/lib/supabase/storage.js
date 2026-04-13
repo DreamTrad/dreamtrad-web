@@ -1,9 +1,2 @@
-import { supabase } from "@/lib/supabase/client";
-
-export function getImageUrl(path) {
-  const { data } = supabase.storage
-    .from("images")
-    .getPublicUrl(path);
-
-  return data.publicUrl;
-}
+export const getImageUrl = (path) =>
+  `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/images/${path}`;
