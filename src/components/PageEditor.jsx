@@ -1,13 +1,12 @@
 "use client";
 
-import ReactMarkdown from "react-markdown";
 
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 
-function MarkdownEditor({ value, onChange, renderMarkdown }) {
-  const [mode, setMode] = useState("edit");
+function MarkdownEditor({ value, onChange }) {
+  const [mode, setMode] = useState("preview");
 
   const insert = (before, after = "") => {
     const text = value || "";

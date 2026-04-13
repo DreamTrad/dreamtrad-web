@@ -11,14 +11,14 @@ export default function AdminSidebar({ projects, role }) {
       <h2 className="text-accent text-xl font-bold tracking-wide">Admin</h2>
 
       <nav className="mt-2 flex flex-col gap-2">
-        <Link
-          href="/admin/accueil"
-          className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
-        >
-          Accueil
-        </Link>
         {(role === "admin" || role === "super_admin") && (
           <>
+            <Link
+              href="/admin/accueil"
+              className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
+            >
+              Accueil
+            </Link>
             <Link
               href="/admin/recrutement"
               className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
@@ -46,14 +46,14 @@ export default function AdminSidebar({ projects, role }) {
             >
               Articles
             </Link>
-            <Link
-                href="/admin/jeux"
-                className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
-              >
-                Tous les projets
-              </Link>
           </>
         )}
+        <Link
+          href="/admin/jeux"
+          className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
+        >
+          Tous les projets
+        </Link>
 
         {/* Projets */}
         <div>
@@ -67,8 +67,6 @@ export default function AdminSidebar({ projects, role }) {
 
           {open && (
             <div className="mt-1 ml-3 flex flex-col gap-1 border-l border-white/10 pl-2">
-
-
               {projects.map((project) => (
                 <Link
                   className="hover:bg-hover rounded px-2 py-1 text-xs"
