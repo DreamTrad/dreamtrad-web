@@ -45,6 +45,14 @@ function MarkdownEditor({ value, onChange, renderMarkdown }) {
               >
                 Italique
               </button>
+
+               <button
+                type="button"
+                onClick={() => insert("\n:::spoiler[le spoil]\n\n:::\n")}
+                className="rounded bg-bg-secondary px-3 py-1"
+              >
+                Spoiler
+              </button>
             </>
           )}
         </div>
