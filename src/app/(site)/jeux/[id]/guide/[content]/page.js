@@ -2,6 +2,7 @@
 
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import { createStaticClient } from "@/lib/supabase/public";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export const revalidate = 3600;
 
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }) {
     .eq("id", id)
     .single();
 
-  const image = `/jeux/${id}/cover.webp`;
+  const image = getImageUrl(`/jeux/${id}/cover.webp`);
 
   return {
     title: `${pageData.title} | ${projectData.title}`,

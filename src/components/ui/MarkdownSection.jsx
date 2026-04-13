@@ -5,7 +5,7 @@ import remarkGfm from "remark-gfm";
 import remarkDirective from "remark-directive";
 import remarkCustomSpoiler from "@/lib/remarkCustomSpoiler";
 import Spoiler from "./Spoiler.client";
-
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export default function MarkdownSection({
   content,
@@ -17,9 +17,7 @@ export default function MarkdownSection({
     <div
       className={`prose prose-invert break-anywhere max-w-none wrap-break-word ${className} prose-p:text-justify prose-a:no-underline prose-a:font-bold`}
     >
-      {mainTitle && (
-        <h1 className="mb-6 text-3xl font-bold">{mainTitle}</h1>
-      )}
+      {mainTitle && <h1 className="mb-6 text-3xl font-bold">{mainTitle}</h1>}
 
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkDirective, remarkCustomSpoiler]}
@@ -34,12 +32,14 @@ export default function MarkdownSection({
               />
             </div>
           ),
-          img: (props) => (
+          img: ({ src, alt, ...props }) => (
             <img
-              {...props}
+              src={getImageUrl(src)}
+              alt={alt}
               loading="lazy"
               decoding="async"
               className={imageClassName || undefined}
+              {...props}
             />
           ),
           a: ({ href, children, ...props }) =>

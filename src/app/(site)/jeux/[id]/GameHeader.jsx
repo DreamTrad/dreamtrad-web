@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export default function GameHeader({ id, title, hasGuide }) {
   const pathname = usePathname();
   const [logoError, setLogoError] = useState(false);
 
-  const logoPath = `/jeux/${id}/logo.webp`;
+  const logoPath = getImageUrl(`/jeux/${id}/logo.webp`);
 
   const linkClass = (active) =>
     `px-4 py-2 text-base font-semibold rounded-xl transition-colors ${

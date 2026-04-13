@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { supabase } from "@/lib/supabase/client";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export default function GameHeader({ id, title, isAdmin }) {
   const pathname = usePathname();
@@ -23,7 +24,7 @@ export default function GameHeader({ id, title, isAdmin }) {
     await supabase.from("projects").update({ is_visible: value }).eq("id", id);
   };
 
-  const logoPath = `/jeux/${id}/logo.webp`;
+  const logoPath = getImageUrl(`/jeux/${id}/logo.webp`);
 
   const linkClass = (active) =>
     `px-4 py-2 text-base font-semibold rounded-xl transition-colors ${

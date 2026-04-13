@@ -3,18 +3,19 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export default function TeamMemberAdminCard({ member, onUpdated }) {
   const [draft, setDraft] = useState(member);
   const [original, setOriginal] = useState(member);
   const [isDirty, setIsDirty] = useState(false);
 
-  const [imgSrc, setImgSrc] = useState(`/team/${member.id}.webp`);
+  const [imgSrc, setImgSrc] = useState(getImageUrl(`/team/${member.id}.webp`));
 
   useEffect(() => {
     setDraft(member);
     setOriginal(member);
-    setImgSrc(`/team/${member.id}.webp`);
+    setImgSrc(getImageUrl(`/team/${member.id}.webp`));
   }, [member]);
 
   useEffect(() => {
@@ -81,7 +82,7 @@ export default function TeamMemberAdminCard({ member, onUpdated }) {
               width={80}
               height={80}
               className="border-bg-secondary h-full w-full rounded-lg border object-cover"
-              onError={() => setImgSrc("/team/default_avatar.webp")}
+              onError={() => setImgSrc(getImageUrl("/team/default_avatar.webp"))}
             />
           </div>
 

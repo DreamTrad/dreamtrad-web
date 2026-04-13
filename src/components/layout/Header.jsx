@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import NavLink from "../ui/NavLink";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 const mainMenu = [
   { name: "Accueil", to: "/" },
@@ -34,7 +35,7 @@ export default function Header() {
           className="absolute left-4 flex h-full items-center gap-2"
         >
           <img
-            src="/dreamtrad-logo-title.webp"
+            src={getImageUrl("/dreamtrad-logo-title.webp")}
             alt="DreamTrad"
             className="h-10 object-contain"
           />

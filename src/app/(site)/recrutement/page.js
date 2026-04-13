@@ -1,6 +1,7 @@
 // app/(site)recrutement/page.js
 
 import { createStaticClient } from "@/lib/supabase/public";
+import { getImageUrl } from "@/lib/supabase/storage";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import InfoBox from "@/components/ui/InfoBox";
 import RecruitmentCard from "@/components/RecruitmentCard";
@@ -18,7 +19,7 @@ export const metadata = {
     url: "/recrutement",
     images: [
       {
-        url: "/dreamtrad-logo-title.webp",
+        url: getImageUrl("/dreamtrad-logo-title.webp"),
         width: 1200,
         height: 630,
         alt: "DreamTrad",
@@ -83,7 +84,7 @@ export default async function RecruitmentPage() {
       roles: item.roles,
       contact: item.contact,
       description: item.description,
-      image: `/poster/${item.projects?.id}.webp`,
+      image: getImageUrl(`/poster/${item.projects?.id}.webp`),
     })),
     ...(siteRecruitments || []),
   ];

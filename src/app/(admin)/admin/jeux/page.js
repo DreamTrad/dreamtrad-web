@@ -4,6 +4,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export default function AdminGamesPage() {
   const [games, setGames] = useState([]);
@@ -89,7 +90,7 @@ export default function AdminGamesPage() {
             <Link href={`/admin/jeux/${game.id}`}>
               <div className="aspect-video cursor-pointer overflow-hidden">
                 <img
-                  src={`/jeux/${game.id}/cover.webp`}
+                  src={getImageUrl(`/jeux/${game.id}/cover.webp`)}
                   alt={game.title}
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />

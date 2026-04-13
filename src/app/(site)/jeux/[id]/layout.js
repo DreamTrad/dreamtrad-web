@@ -3,6 +3,7 @@
 import GameHeader from "./GameHeader";
 import GameClient from "./GameClient";
 import { createStaticClient } from "@/lib/supabase/public";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export const revalidate = 3600; // 1 heure
 
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }) {
 
   if (!project) return {};
 
-  const image = `/jeux/${id}/cover.webp`;
+  const image = getImageUrl(`/jeux/${id}/cover.webp`);
 
   return {
     title: project.title,

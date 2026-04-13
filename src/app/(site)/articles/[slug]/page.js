@@ -1,6 +1,7 @@
 // app/(site)articles/[slug]/page.js
 
 import { createStaticClient } from "@/lib/supabase/public";
+import { getImageUrl } from "@/lib/supabase/storage";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }) {
 
   const baseUrl = "https://dreamtrad.fr";
   const articleUrl = `${baseUrl}/articles/${article.slug}`;
-  const imageUrl = `${baseUrl}/articles-content/${article.id}/cover.webp`;
+  const imageUrl = getImageUrl(`articles-content/${article.id}/cover.webp`);
 
   return {
     metadataBase: new URL(baseUrl),
@@ -76,7 +77,7 @@ export default async function ArticlePage({ params }) {
 
   if (!article || !article.is_visible) return notFound();
 
-  const coverImage = `/articles-content/${article.slug}/cover.webp`;
+  const coverImage = getImageUrl(`/articles-content/${article.slug}/cover.webp`);
 
   return (
     <div className="relative mx-auto max-w-4xl p-2">

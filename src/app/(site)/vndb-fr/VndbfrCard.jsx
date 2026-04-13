@@ -2,6 +2,7 @@ import Link from "next/link";
 import LinkWithIcon from "@/components/ui/LinkWithIcon";
 import PlatformIcons from "./PlatformIcons";
 import ReactMarkdown from "react-markdown";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export default function DiscoverCard({
   id,
@@ -106,7 +107,7 @@ export default function DiscoverCard({
       <div className="flex grow flex-col gap-6 p-6 md:flex-row">
         <div className="flex flex-2 items-center justify-center">
           <img
-            src={`poster/${id}.webp`}
+            src={getImageUrl(`poster/${id}.webp`)}
             alt={`Affiche de ${title}`}
             className="h-100 w-full rounded-md object-contain"
           />

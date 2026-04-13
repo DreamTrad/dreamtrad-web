@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { createStaticClient } from "@/lib/supabase/public";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export const revalidate = 3600; // 1 heure
 
@@ -49,7 +50,7 @@ export default async function GamesListPage() {
           >
             <div className="aspect-video overflow-hidden">
               <img
-                src={`/jeux/${project.id}/cover.webp`}
+                src={getImageUrl(`/jeux/${project.id}/cover.webp`)}
                 alt={project.title}
                 className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
               />

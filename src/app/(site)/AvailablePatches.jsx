@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { getImageUrl } from "@/lib/supabase/storage";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -16,7 +18,7 @@ export default function AvailablePatches({ patches }) {
   const available = Object.entries(grouped).map(([project_id, platforms]) => ({
     id: project_id,
     name: platforms[0]?.projects?.title || project_id,
-    image: `/jeux/${project_id}/cover.webp`,
+    image: getImageUrl(`jeux/${project_id}/cover.webp`),
     platforms,
     link: `/jeux/${project_id}/patchfr/telechargement`,
   }));

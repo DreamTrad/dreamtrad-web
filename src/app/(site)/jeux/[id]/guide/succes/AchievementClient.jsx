@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import AchievementCard from "./AchievementCard";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 const baseImagePath = (gameId) =>
   `/jeux/${gameId}/guide/succes`;
@@ -25,7 +26,7 @@ export default function AchievementClient({ achievementData, gameId }) {
         {achievementData?.map((achievement) => (
           <AchievementCard
             key={achievement.id}
-            image={`${imageBase}/${achievement.id}.webp`}
+            image={getImageUrl(`${imageBase}/${achievement.id}.webp`)}
             titleEn={achievement.title_og}
             titleFr={achievement.title_fr}
             description={achievement.description_fr}

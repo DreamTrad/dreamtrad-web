@@ -2,6 +2,7 @@
 import StaffCard from "./StaffCard";
 import { redirect } from "next/navigation";
 import { createStaticClient } from "@/lib/supabase/public";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export const revalidate = 86400;
 
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }) {
     redirect("/");
   }
 
-  const image = `/jeux/${data.id}/cover.webp`;
+  const image = getImageUrl(`/jeux/${data.id}/cover.webp`);
 
   return {
     title: `Staff | ${data.title}`, // combine "Staff" + layout title

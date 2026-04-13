@@ -1,25 +1,26 @@
 import Link from "next/link";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 // Custom internal-site icon
-const localSiteIcon = "/dreamtrad-logo-rond.png";
+const localSiteIcon = getImageUrl("/dreamtrad-logo-rond.png");
 
 const iconMap = [
-  { match: ["apps.apple.com"], icon: "/icons/website/apple.svg", label: "App Store" },
-  { match: ["discord.gg", "discord.com"], icon: "/icons/website/discord.svg", label: "Discord" },
-  { match: ["bsky.app"], icon: "/icons/website/bluesky.svg", label: "Bluesky" },
-  { match: ["github.com"], icon: "/icons/website/github.svg", label: "GitHub" },
-  { match: ["instagram.com"], icon: "/icons/website/instagram.svg", label: "Instagram" },
-  { match: ["itch.io"], icon: "/icons/website/itchio.svg", label: "Itch.io" },
-  { match: ["nintendo.com"], icon: "/icons/website/nintendo.ico", label: "Nintendo" },
-  { match: ["store.steampowered.com"], icon: "/icons/website/steam.svg", label: "Steam" },
-  { match: ["twitch.tv"], icon: "/icons/website/twitch.svg", label: "Twitch" },
-  { match: ["vndb.org"], icon: "/icons/website/vndb.ico", label: "VNDB" },
-  { match: ["xbox.com"], icon: "/icons/website/xbox.svg", label: "Xbox" },
-  { match: ["playstation.com"], icon: "/icons/website/playstation.svg", label: "PlayStation" },
-  { match: ["play.google.com"], icon: "/icons/website/googleplay.svg", label: "Google Play" },
-  { match: ["twitter.com", "x.com"], icon: "/icons/website/xitter.svg", label: "X / Twitter" },
-  { match: ["youtube.com", "youtu.be"], icon: "/icons/website/youtube.svg", label: "YouTube" },
-  { match: ["gog.com"], icon: "/icons/website/gog.svg", label: "GOG" },
+  { match: ["apps.apple.com"], icon: getImageUrl("/icons/website/apple.svg"), label: "App Store" },
+  { match: ["discord.gg", "discord.com"], icon: getImageUrl("/icons/website/discord.svg"), label: "Discord" },
+  { match: ["bsky.app"], icon: getImageUrl("/icons/website/bluesky.svg"), label: "Bluesky" },
+  { match: ["github.com"], icon: getImageUrl("/icons/website/github.svg"), label: "GitHub" },
+  { match: ["instagram.com"], icon: getImageUrl("/icons/website/instagram.svg"), label: "Instagram" },
+  { match: ["itch.io"], icon: getImageUrl("/icons/website/itchio.svg"), label: "Itch.io" },
+  { match: ["nintendo.com"], icon: getImageUrl("/icons/website/nintendo.ico"), label: "Nintendo" },
+  { match: ["store.steampowered.com"], icon: getImageUrl("/icons/website/steam.svg"), label: "Steam" },
+  { match: ["twitch.tv"], icon: getImageUrl("/icons/website/twitch.svg"), label: "Twitch" },
+  { match: ["vndb.org"], icon: getImageUrl("/icons/website/vndb.ico"), label: "VNDB" },
+  { match: ["xbox.com"], icon: getImageUrl("/icons/website/xbox.svg"), label: "Xbox" },
+  { match: ["playstation.com"], icon: getImageUrl("/icons/website/playstation.svg"), label: "PlayStation" },
+  { match: ["play.google.com"], icon: getImageUrl("/icons/website/googleplay.svg"), label: "Google Play" },
+  { match: ["twitter.com", "x.com"], icon: getImageUrl("/icons/website/xitter.svg"), label: "X / Twitter" },
+  { match: ["youtube.com", "youtu.be"], icon: getImageUrl("/icons/website/youtube.svg"), label: "YouTube" },
+  { match: ["gog.com"], icon: getImageUrl("/icons/website/gog.svg"), label: "GOG" },
 ];
 
 export default function LinkWithIcon({ url }) {
@@ -31,7 +32,7 @@ export default function LinkWithIcon({ url }) {
 
   if (url.startsWith("fr:")) {
     normalizedUrl = url.replace(/^fr:/, "");
-    selected = { icon: "/icons/website/flag_fr.svg", label: "Patch FR" };
+    selected = { icon: getImageUrl("/icons/website/flag_fr.svg"), label: "Patch FR" };
     isInternal = true;
   } else if (url.startsWith("/")) {
     selected = { icon: localSiteIcon, label: "DreamTrad" };
@@ -45,7 +46,7 @@ export default function LinkWithIcon({ url }) {
     if (!selected) {
       const origin = new URL(normalizedUrl).origin;
       selected = {
-        icon: "/icons/website/globe.svg",
+        icon: getImageUrl("/icons/website/globe.svg"),
         label: origin.replace(/^https?:\/\//, ""),
       };
     }

@@ -1,4 +1,5 @@
 import MarkdownSection from "@/components/ui/MarkdownSection";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export default function StaffCard({ id, name, text, imageRight = false }) {
   return (
@@ -11,7 +12,7 @@ export default function StaffCard({ id, name, text, imageRight = false }) {
         className={`flex flex-2 items-center justify-center ${imageRight ? "md:order-3" : "md:order-1"} order-1`}
       >
         <img
-          src={`/staff/${id}.webp`}
+          src={getImageUrl(`/staff/${id}.webp`)}
           alt={`Photo de ${name}`}
           className="mb-4 w-full max-w-xs rounded-md object-contain md:mb-0"
         />

@@ -5,6 +5,12 @@ const nextConfig = {
   // Configure `pageExtensions` to include markdown and MDX files
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   // Optionally, add any other Next.js config below
+  images: {
+    remotePatterns: [{
+      protocol: "https",
+      hostname: "hakgdmvyshpddpujhzmi.supabase.co",
+    }],
+  },
 }
 
 const withMDX = createMDX({

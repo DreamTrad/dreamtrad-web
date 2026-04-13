@@ -1,5 +1,6 @@
 import Image from "next/image";
 import LinkWithIcon from "../../../components/ui/LinkWithIcon";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export default function TeamMemberCard({
   id,
@@ -15,7 +16,7 @@ export default function TeamMemberCard({
         {/* Avatar + Infos */}
         <div className="flex min-w-0 flex-1 items-center gap-4">
           <Image
-            src={`/team/${id}.webp`}
+            src={getImageUrl(`/team/${id}.webp`)}
             alt={name}
             width={80}
             height={80}

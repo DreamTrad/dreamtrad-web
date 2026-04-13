@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export default function DiscordWidget({ inviteUrl }) {
   const [serverData, setServerData] = useState(null);
@@ -39,7 +40,7 @@ export default function DiscordWidget({ inviteUrl }) {
 
   const iconUrl = serverData.icon
     ? `https://cdn.discordapp.com/icons/${serverData.id}/${serverData.icon}.png`
-    : "/icons/website/discord.svg";
+    : getImageUrl("/icons/website/discord.svg");
 
   return (
     <div className="border-hover-secondary bg-bg-tertiary flex flex-col items-center space-y-4 rounded-xl border p-6 text-center">
@@ -79,7 +80,7 @@ export default function DiscordWidget({ inviteUrl }) {
           className="bg-accent-tertiary text-text inline-flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2 font-semibold shadow transition hover:opacity-90 hover:shadow-lg"
         >
           <Image
-            src="/icons/website/discord.svg"
+            src={getImageUrl("/icons/website/discord.svg")}
             alt=""
             width={20}
             height={20}

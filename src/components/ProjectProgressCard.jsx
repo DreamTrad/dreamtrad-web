@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export default function ProjectProgressCard({ id, title, progress}) {
   const bars = [
@@ -14,7 +15,7 @@ export default function ProjectProgressCard({ id, title, progress}) {
     <div className="bg-bg-secondary flex items-start rounded-xl p-6 shadow-lg">
       {/* Image alignée avec les barres */}
       <div className="mr-6 h-full w-32 shrink-0 overflow-hidden rounded-md">
-        <img src={`/poster/${id}.webp`} alt={title} className="h-full w-auto object-cover" />
+        <img src={getImageUrl(`/poster/${id}.webp`)} alt={title} className="h-full w-auto object-cover" />
       </div>
 
       {/* Contenu */}

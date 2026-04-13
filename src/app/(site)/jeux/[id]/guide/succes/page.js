@@ -2,6 +2,7 @@
 
 import AchievementClient from "./AchievementClient";
 import { createStaticClient } from "@/lib/supabase/public";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export const revalidate = 3600;
 
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }) {
 
   const title = `Succès | ${projectData.title}`;
   const description = `Consultez la liste complète des succès pour ${projectData.title}.`;
-  const image = `/jeux/${id}/cover.webp`;
+  const image = getImageUrl(`/jeux/${id}/cover.webp`);
   return {
     title,
     description,

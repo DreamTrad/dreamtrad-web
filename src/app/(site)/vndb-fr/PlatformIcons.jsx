@@ -1,9 +1,11 @@
+import { getImageUrl } from "@/lib/supabase/storage";
+
 export default function PlatformIcons({ platforms = [] }) {
   return (
     <div className="mt-2 flex items-center gap-2">
       {platforms.map((platform, idx) => {
         const key = platform.toLowerCase();
-        const src = `/icons/platforms/${key}.svg`;
+        const src = getImageUrl(`/icons/platforms/${key}.svg`);
 
         return (
           <div key={key} className="group relative">

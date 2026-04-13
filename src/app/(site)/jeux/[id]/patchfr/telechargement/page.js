@@ -6,6 +6,7 @@ import ImageCarousel from "./ImageCarousel";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import ProjectProgressCard from "@/components/ProjectProgressCard";
 import { createStaticClient } from "@/lib/supabase/public";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export const revalidate = 60;
 
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }) {
 
     if (!project) return {};
 
-  const image = `/jeux/${id}/cover.webp`;
+  const image = getImageUrl(`/jeux/${id}/cover.webp`);
 
   return {
     title: `Téléchargement patch fr | ${project.title}`,
@@ -65,7 +66,7 @@ export default async function DownloadPage({ params }) {
   let i = 1;
 
   while (true) {
-    const file = `image${i}.webp`;
+    const file = getImageUrl(`image${i}.webp`);
     if (!fs.existsSync(path.join(galleryPath, file))) break;
     images.push(`/jeux/${id}/patchfr/gallery/${file}`);
     i++;
@@ -115,7 +116,7 @@ export default async function DownloadPage({ params }) {
           <ProjectProgressCard
             id={project.id}
             title={project.title}
-            image={`/poster/${project.id}.webp`}
+            image={getImageUrl(`/poster/${project.id}.webp`)}
             progress={project.progress}
           />
         </div>

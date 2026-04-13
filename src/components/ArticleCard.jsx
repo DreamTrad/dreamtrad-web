@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export default function ArticleCard({
   id,
@@ -12,7 +13,7 @@ export default function ArticleCard({
 
   isAdmin = false,
 }) {
-  const coverImage = `/articles-content/${id}/cover.webp`;
+  const coverImage = getImageUrl(`/articles-content/${id}/cover.webp`);
   const linkref = `/articles/${slug}`;
 
   return (

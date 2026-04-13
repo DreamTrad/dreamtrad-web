@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { createStaticClient } from "@/lib/supabase/public";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export default async function RecentArticles({ limit = 3 }) {
   const supabase = createStaticClient();
@@ -29,7 +30,7 @@ export default async function RecentArticles({ limit = 3 }) {
           </p>
         ) : (
           articles.map((article) => {
-            const coverImage = `/articles-content/${article.id}/cover.webp`;
+            const coverImage = getImageUrl(`/articles-content/${article.id}/cover.webp`);
             const formattedDate = article.date
               ? new Date(article.date).toLocaleDateString("fr-FR")
               : "";
