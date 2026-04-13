@@ -9,6 +9,7 @@ import GameProgress from "./GameProgress";
 import RecruitmentsSection from "./RecruitmentsSection";
 import PatchesSection from "./PatchesSection";
 import RolesSection from "./RolesSection";
+import PageEditor from "@/components/PageEditor";
 
 export default function AdminGamePatchfrPage() {
   const { id } = useParams();
@@ -68,12 +69,19 @@ export default function AdminGamePatchfrPage() {
 
         <GameProgress game={game} />
 
-        <PatchesSection projectId={id} />
-
         <RecruitmentsSection
           recruitments={recruitments}
           setRecruitments={setRecruitments}
         />
+
+        <PageEditor
+        slug={`${id}/patchfr/telechargement`}
+        file="infopatch"
+        title="Info patch"
+        editTitle
+        editContent />
+
+        <PatchesSection projectId={id} />
 
         <RolesSection projectId={id} />
       </div>
