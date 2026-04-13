@@ -1,6 +1,6 @@
 // app/(site)recrutement/page.js
 
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import InfoBox from "@/components/ui/InfoBox";
 import RecruitmentCard from "@/components/RecruitmentCard";
@@ -28,7 +28,7 @@ export const metadata = {
 };
 
 export default async function RecruitmentPage() {
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: page, error: pageError } = await supabase
     .from("pages")

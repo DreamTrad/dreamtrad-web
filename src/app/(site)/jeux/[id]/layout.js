@@ -2,14 +2,14 @@
 
 import GameHeader from "./GameHeader";
 import GameClient from "./GameClient";
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 
 export const revalidate = 3600; // 1 heure
 
 export async function generateMetadata({ params }) {
   const id = (await params).id;
 
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: project, error } = await supabase
     .from("projects")
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }) {
 export default async function GameLayout({ children, params }) {
   const id = (await params).id;
 
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: project, error } = await supabase
     .from("projects")

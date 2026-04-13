@@ -1,14 +1,14 @@
 // app/(site)/jeux/[id]/guide/page.js
 
 import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 
 export const revalidate = 3600;
 
 export default async function GuideIndexPage({ params }) {
   const id = (await params).id;
 
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: pageData } = await supabase
     .from("pages")

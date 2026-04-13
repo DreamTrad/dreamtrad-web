@@ -1,7 +1,7 @@
 // app/(site)mentions-legales/page.js
 
 import MarkdownSection from "@/components/ui/MarkdownSection";
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 
 export const revalidate = 86400;
 
@@ -22,7 +22,7 @@ export const metadata = {
 };
 
 export default async function MentionsLegalesPage() {
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: page, error: pageError } = await supabase
     .from("pages")

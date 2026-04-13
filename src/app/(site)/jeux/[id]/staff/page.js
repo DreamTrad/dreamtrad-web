@@ -1,14 +1,14 @@
 // app/jeux/[id]/staff/page.js
 import StaffCard from "./StaffCard";
 import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 
 export const revalidate = 86400;
 
 export async function generateMetadata({ params }) {
   const id = (await params).id;
 
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data, error } = await supabase
     .from("projects")
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }) {
 export default async function StaffPage({ params }) {
   const id = (await params).id;
 
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data, error } = await supabase
     .from("staff_projects")

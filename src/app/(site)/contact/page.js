@@ -3,7 +3,7 @@
 import InfoBox from "@/components/ui/InfoBox";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import ContactClient from "./ContactClient";
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 
 export const revalidate = 86400;
 
@@ -31,7 +31,7 @@ export const metadata = {
 };
 
 export default async function ContactPage() {
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: page, error: pageError } = await supabase
     .from("pages")

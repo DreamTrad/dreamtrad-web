@@ -1,7 +1,7 @@
 // app/(site)/jeux/[id]/guide/[content]/[child]/page.js
 
 import MarkdownSection from "@/components/ui/MarkdownSection";
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 
 export const revalidate = 3600;
 
@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
   const content = (await params).content;
   const child = (await params).child;
 
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: pageData } = await supabase
     .from("pages")
@@ -59,7 +59,7 @@ export default async function GuideChildContentPage({ params }) {
   const content = (await params).content;
   const child = (await params).child;
 
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: pageData } = await supabase
     .from("pages")

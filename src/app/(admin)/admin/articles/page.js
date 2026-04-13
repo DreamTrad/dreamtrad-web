@@ -1,10 +1,9 @@
 // src\app\(admin)\admin\articles\page.js
-import { createClient } from "@/lib/supabase/server";
+import { supabase } from "@/lib/supabase/client";
 import ArticleCard from "@/components/ArticleCard";
 
 
 export default async function ArticleListAdminPage() {
-  const supabase = await createClient();
 
   const { data: articles, error } = await supabase
     .from("articles")

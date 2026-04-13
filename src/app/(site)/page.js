@@ -9,7 +9,7 @@ import ProjectProgressCard from "@/components/ProjectProgressCard";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import InfoBox from "@/components/ui/InfoBox";
 import chibiAiba from "@/assets/chibi/chibi-aiba.webp";
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 
 export const revalidate = 3600;
 
@@ -18,7 +18,7 @@ export const metadata = {
 };
 
 export default async function HomePage() {
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: page } = await supabase
     .from("pages")

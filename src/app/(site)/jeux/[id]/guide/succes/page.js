@@ -1,14 +1,14 @@
 // app/(site)/jeux/[id]/guide/succes/page.js
 
 import AchievementClient from "./AchievementClient";
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 
 export const revalidate = 3600;
 
 export async function generateMetadata({ params }) {
   const id = (await params).id;
 
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: projectData } = await supabase
     .from("projects")
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }) {
 export default async function SuccesPage({ params }) {
   const id = (await params).id;
 
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: achievementData } = await supabase
     .from("achievements")

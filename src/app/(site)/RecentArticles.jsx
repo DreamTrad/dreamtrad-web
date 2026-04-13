@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 
 export default async function RecentArticles({ limit = 3 }) {
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: articles, error } = await supabase
     .from("articles")

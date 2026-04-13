@@ -1,7 +1,7 @@
 // app/(site)/jeux/[id]/patchfr/equipe/page.js
 
 import TeamRoleCategory from "./TeamRoleCategory";
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 
 export const revalidate = 3600;
 
@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
   const id = (await params).id;
   const image = `/jeux/${id}/cover.webp`;
 
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: game } = await supabase
     .from("projects")
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }) {
 export default async function TeamRoleSection({ params }) {
   const id = (await params).id;
 
-   const supabase = await createClient();
+   const supabase = createStaticClient();
 
   const { data } = await supabase
     .from("project_roles")

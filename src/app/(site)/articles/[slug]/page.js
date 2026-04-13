@@ -1,6 +1,6 @@
 // app/(site)articles/[slug]/page.js
 
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -10,7 +10,7 @@ export const revalidate = 3600;
 
 export async function generateMetadata({ params }) {
   const slug = (await params).slug;
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: article } = await supabase
     .from("articles")
@@ -66,7 +66,7 @@ export async function generateMetadata({ params }) {
 
 export default async function ArticlePage({ params }) {
   const slug = (await params).slug;
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: article } = await supabase
     .from("articles")

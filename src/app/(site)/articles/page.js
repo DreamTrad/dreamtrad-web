@@ -1,6 +1,6 @@
 // app/(site)/articles/page.js
 
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 import ArticleCard from "@/components/ArticleCard";
 
 export const revalidate = 3600;
@@ -12,7 +12,7 @@ export const metadata = {
 };
 
 export default async function ArticleListPage() {
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: articles } = await supabase
     .from("articles")

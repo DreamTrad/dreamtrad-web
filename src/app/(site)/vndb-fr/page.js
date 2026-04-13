@@ -1,7 +1,7 @@
 // app/(site)/vndb-fr/page.js
 
 import VndbfrClient from "./VndbfrClient";
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import InfoBox from "@/components/ui/InfoBox";
 
@@ -26,7 +26,7 @@ export async function generateMetadata(_, parent) {
 }
 
 export default async function VndbfrPage() {
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: page, error: pageError } = await supabase
     .from("pages")

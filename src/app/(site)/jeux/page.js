@@ -1,7 +1,7 @@
 // app/(site)/jeux/page.js
 
 import Link from "next/link";
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 
 export const revalidate = 3600; // 1 heure
 
@@ -24,7 +24,7 @@ export const metadata = {
 };
 
 export default async function GamesListPage() {
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: projects, error } = await supabase
     .from("projects")

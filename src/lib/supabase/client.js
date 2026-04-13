@@ -1,5 +1,3 @@
-// lib/supabase.js
-
 import { createBrowserClient } from "@supabase/ssr";
 
 export const supabase = createBrowserClient(

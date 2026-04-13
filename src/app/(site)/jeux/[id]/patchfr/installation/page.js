@@ -1,7 +1,7 @@
 // app/(site)/jeux/[id]/patchfr/installation/page.js
 
 import PlateformsTabs from "./PlateformsTabs";
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 
 export const revalidate = 3600;
 
@@ -9,7 +9,7 @@ export async function generateMetadata({ params }) {
   const id = (await params).id;
   const image = `/jeux/${id}/cover.webp`;
 
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: project, error } = await supabase
     .from("projects")
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }) {
 export default async function InstallationPage({ params }) {
   const id = (await params).id;
 
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: pagesInstallation, error } = await supabase
     .from("pages")

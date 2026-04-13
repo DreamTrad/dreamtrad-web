@@ -4,6 +4,7 @@ import { supabase } from "@/lib/supabase/client";
 import { useParams } from "next/navigation";
 import PageEditor from "@/components/PageEditor";
 import WidgetsEditor from "./WidgetsEditor";
+import ProjectStaffManager from "./ProjectStaffManager";
 
 export default function AdminPage() {
   const { id } = useParams();
@@ -28,6 +29,10 @@ export default function AdminPage() {
         </div>
 
         <WidgetsEditor projectId={id}/>
+
+        <div className="mt-10">
+          <ProjectStaffManager projectId={id} />
+        </div>
       </div>
     </div>
   );

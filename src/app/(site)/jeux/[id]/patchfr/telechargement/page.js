@@ -5,14 +5,14 @@ import DownloadClient from "./DownloadClient";
 import ImageCarousel from "./ImageCarousel";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import ProjectProgressCard from "@/components/ProjectProgressCard";
-import { createClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/public";
 
 export const revalidate = 60;
 
 export async function generateMetadata({ params }) {
   const id = (await params).id;
 
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
     const { data: project, error } = await supabase
       .from("projects")
@@ -71,7 +71,7 @@ export default async function DownloadPage({ params }) {
     i++;
   }
 
-  const supabase = await createClient();
+  const supabase = createStaticClient();
 
   const { data: project, error } = await supabase
     .from("projects")
