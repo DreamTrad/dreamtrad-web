@@ -1,7 +1,83 @@
 "use client";
 
+import ReactMarkdown from "react-markdown";
+
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
+import MarkdownSection from "@/components/ui/MarkdownSection";
+
+function MarkdownEditor({ value, onChange, renderMarkdown }) {
+  const [mode, setMode] = useState("edit");
+
+  const insert = (before, after = "") => {
+    const text = value || "";
+    const newText = text + `\n${before}${after}`;
+    onChange(newText);
+  };
+
+  return (
+    <div className="flex flex-col gap-4">
+      {/* Header */}
+      <div className="flex items-center justify-between">
+        <div className="flex gap-2">
+          {mode === "edit" && (
+            <>
+              <button
+                type="button"
+                onClick={() => insert("## ")}
+                className="rounded bg-bg-secondary px-3 py-1"
+              >
+                H2
+              </button>
+
+              <button
+                type="button"
+                onClick={() => insert("**gras**")}
+                className="rounded bg-bg-secondary px-3 py-1"
+              >
+                Gras
+              </button>
+
+              <button
+                type="button"
+                onClick={() => insert("*italique*")}
+                className="rounded bg-bg-secondary px-3 py-1"
+              >
+                Italique
+              </button>
+            </>
+          )}
+        </div>
+
+        {/* Toggle */}
+        <button
+          type="button"
+          onClick={() =>
+            setMode((prev) => (prev === "edit" ? "preview" : "edit"))
+          }
+          className="rounded bg-accent px-4 py-1 text-white"
+        >
+          {mode === "edit" ? "Preview" : "Éditer"}
+        </button>
+      </div>
+
+      {/* Content */}
+      {mode === "edit" ? (
+        <textarea
+          value={value || ""}
+          onChange={(e) => onChange(e.target.value)}
+          className="bg-bg-secondary w-full rounded p-2 font-mono"
+          rows={16}
+        />
+      ) : (
+        <div className="bg-bg-secondary rounded p-4">
+          <MarkdownSection content={value || ""} />
+        </div>
+      )}
+    </div>
+  );
+}
+
 
 export default function PageEditor({
   title = "Édition de la page",
@@ -27,9 +103,7 @@ export default function PageEditor({
     if (!draft || !original) return;
 
     const fields = getEditableFields();
-    const hasChanged = fields.some(
-      (field) => draft[field] !== original[field]
-    );
+    const hasChanged = fields.some((field) => draft[field] !== original[field]);
 
     setIsDirty(hasChanged);
   }, [draft, original]);
@@ -127,11 +201,9 @@ export default function PageEditor({
       {editContent && (
         <div>
           <label className="text-sm">Contenu (Markdown)</label>
-          <textarea
-            value={draft.content || ""}
-            onChange={(e) => updateField("content", e.target.value)}
-            className="bg-bg-secondary w-full rounded p-2 font-mono"
-            rows={14}
+          <MarkdownEditor
+            value={draft.content}
+            onChange={(val) => updateField("content", val)}
           />
         </div>
       )}
@@ -142,9 +214,7 @@ export default function PageEditor({
           <input
             type="checkbox"
             checked={draft.is_visible || false}
-            onChange={(e) =>
-              updateField("is_visible", e.target.checked)
-            }
+            onChange={(e) => updateField("is_visible", e.target.checked)}
           />
           <label className="text-sm">Visible</label>
         </div>
