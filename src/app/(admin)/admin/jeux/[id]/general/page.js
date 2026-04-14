@@ -9,27 +9,16 @@ import ProjectStaffManager from "./ProjectStaffManager";
 function ImageBlock({ title, path, className }) {
   return (
     <div className="bg-bg-secondary rounded-xl p-4">
-      <h3 className="text-sm font-medium mb-3">{title}</h3>
+      <h3 className="mb-3 text-sm font-medium">{title}</h3>
 
       <div className="group relative overflow-hidden rounded-lg">
         <StorageImageEditor imagePath={path}>
           {({ imageUrl, openFilePicker, loading }) => (
-            <>
-              <img
-                src={imageUrl}
-                onClick={openFilePicker}
-                className={`w-full cursor-pointer object-cover ${className}`}
-              />
-
-              <div
-                onClick={openFilePicker}
-                className="bg-black/60 absolute inset-0 flex items-center justify-center opacity-0 transition group-hover:opacity-100 cursor-pointer"
-              >
-                <span className="text-sm text-white">
-                  {loading ? "Upload..." : "Changer"}
-                </span>
-              </div>
-            </>
+            <img
+              src={imageUrl}
+              onClick={openFilePicker}
+              className={`w-full cursor-pointer object-cover ${className}`}
+            />
           )}
         </StorageImageEditor>
       </div>
@@ -48,9 +37,8 @@ export default function AdminPage() {
       </h1>
 
       {/* IMAGES */}
-      <div className="bg-bg-tertiary rounded-2xl p-6 mb-10">
+      <div className="bg-bg-tertiary mb-10 rounded-2xl p-6">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-
           {/* Poster */}
           <ImageBlock
             title="Poster du jeu"
@@ -72,7 +60,6 @@ export default function AdminPage() {
               className="h-65"
             />
           </div>
-
         </div>
       </div>
 

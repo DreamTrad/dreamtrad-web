@@ -5,7 +5,9 @@ import { getImageUrl } from "@/lib/supabase/storage";
 
 export default function StorageImageEditor({
   imagePath,
-  children,
+  className = "",
+  imgClassName = "",
+  overlay = true,
 }) {
   const inputRef = useRef(null);
   const [loading, setLoading] = useState(false);
@@ -43,12 +45,22 @@ export default function StorageImageEditor({
   };
 
   return (
-    <>
-      {children({
-        imageUrl,
-        openFilePicker,
-        loading,
-      })}
+    <div
+      onClick={openFilePicker}
+      className={`group relative cursor-pointer overflow-hidden ${className}`}
+    >
+      <img
+        src={imageUrl}
+        className={`w-full h-full object-cover ${imgClassName}`}
+      />
+
+      {overlay && (
+        <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition group-hover:opacity-100">
+          <span className="text-sm text-white">
+            {loading ? "Upload..." : "Changer"}
+          </span>
+        </div>
+      )}
 
       <input
         ref={inputRef}
@@ -57,6 +69,6 @@ export default function StorageImageEditor({
         className="hidden"
         onChange={handleUpload}
       />
-    </>
+    </div>
   );
 }

@@ -6,6 +6,7 @@ import { useEffect, useMemo, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
 import PageEditor from "@/components/PageEditor";
 import UpdateVndbButton from "./UpdateVndbButton";
+import StorageImageEditor from "@/components/StorageImageEditor";
 
 // Manage array fields (links, patchfr)
 const slugify = (text) => {
@@ -355,39 +356,56 @@ export default function AdminVndbfrPage() {
 
       {/* FORM CARD */}
       <div className="bg-bg-secondary border-hover-tertiary space-y-4 rounded-xl border p-6">
-        <label className="flex items-center gap-2">
-          <span className="mb-1 font-bold">Titre</span>
-          <input
-            className="bg-bg-tertiary border-hover-tertiary text-text-secondary w-full rounded border p-2"
-            value={form.title || ""}
-            onChange={(e) => updateField("title", e.target.value)}
-          />
-        </label>
+        <div className="flex gap-6">
+  {/* Image */}
+  <div className="w-40 shrink-0">
+    <StorageImageEditor
+      imagePath={`poster/${form.id}.webp`}
+      className="aspect-3/4 rounded-lg"
+      imgClassName="object-contain"
+    />
+  </div>
 
-        <div className="flex items-center gap-6">
-          <label className="flex items-center gap-2">
-            <span className="mb-1 font-bold">Durée</span>
-            <select
-              className="bg-bg-tertiary border-hover-tertiary text-text-secondary rounded border p-2"
-              value={form.duration || durations[0] || ""}
-              onChange={(e) => updateField("duration", e.target.value)}
-            >
-              {durations.map((d) => (
-                <option key={d} value={d}>
-                  {d}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="ml-auto flex items-center gap-2">
-            <span>Visible sur le site</span>
-            <input
-              type="checkbox"
-              checked={form.is_visible || false}
-              onChange={(e) => updateField("is_visible", e.target.checked)}
-            />
-          </label>
-        </div>
+  {/* Right side */}
+  <div className="flex flex-1 flex-col gap-4">
+    {/* Title */}
+    <label className="flex flex-col gap-1">
+      <span className="font-bold">Titre</span>
+      <input
+        className="bg-bg-tertiary border-hover-tertiary text-text-secondary w-full rounded border p-2"
+        value={form.title || ""}
+        onChange={(e) => updateField("title", e.target.value)}
+      />
+    </label>
+
+    {/* Duration + Visible */}
+    <div className="flex items-center gap-6">
+      <label className="flex items-center gap-2">
+        <span className="font-bold">Durée</span>
+        <select
+          className="bg-bg-tertiary border-hover-tertiary text-text-secondary rounded border p-2"
+          value={form.duration || durations[0] || ""}
+          onChange={(e) => updateField("duration", e.target.value)}
+        >
+          {durations.map((d) => (
+            <option key={d} value={d}>
+              {d}
+            </option>
+          ))}
+        </select>
+      </label>
+
+      <label className="ml-auto flex items-center gap-2">
+        <span>Visible sur le site</span>
+        <input
+          type="checkbox"
+          checked={form.is_visible || false}
+          onChange={(e) => updateField("is_visible", e.target.checked)}
+        />
+      </label>
+    </div>
+  </div>
+</div>
 
         <MultiSelect
           label="Genres"

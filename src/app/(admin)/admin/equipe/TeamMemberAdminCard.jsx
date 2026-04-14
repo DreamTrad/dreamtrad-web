@@ -72,25 +72,14 @@ export default function TeamMemberAdminCard({ member, onUpdated }) {
       {/* Header */}
       <div className="flex items-start justify-between gap-4">
         <div className="flex gap-4">
-          <div className="group relative w-20 h-20 aspect-square">
+          <div className="group relative aspect-square h-20 w-20">
             <StorageImageEditor imagePath={`/team/${member.id}.webp`}>
-              {({ imageUrl, openFilePicker, loading }) => (
-                <>
-                  <img
-                    src={imageUrl}
-                    onClick={openFilePicker}
-                    className="border-bg-secondary h-full w-full cursor-pointer rounded-lg border object-cover"
-                  />
-
-                  <div
-                    onClick={openFilePicker}
-                    className="absolute inset-0 flex cursor-pointer items-center justify-center rounded-lg bg-black/60 opacity-0 transition group-hover:opacity-100"
-                  >
-                    <span className="text-xs text-white">
-                      {loading ? "Upload..." : "Changer"}
-                    </span>
-                  </div>
-                </>
+              {({ imageUrl, openFilePicker }) => (
+                <img
+                  src={imageUrl}
+                  onClick={openFilePicker}
+                  className="border-bg-secondary h-full w-full cursor-pointer rounded-lg border object-cover"
+                />
               )}
             </StorageImageEditor>
           </div>

@@ -157,12 +157,24 @@ export default function ArticleAdminPage() {
           </div>
         </div>
 
-        <div>
-          <StorageImageEditor
-            title="Image principale de l’article"
-            imagePath={`/articles-content/${id}/cover.webp`}
-            previewClassName="mb-6 w-full rounded-lg shadow-md"
-          />
+        <div className="bg-bg-secondary rounded-xl p-4">
+          <h3 className="mb-3 text-sm font-medium">
+            Image principale de l’article
+          </h3>
+
+          <div className="group relative overflow-hidden rounded-lg">
+            <StorageImageEditor
+              imagePath={`/articles-content/${id}/cover.webp`}
+            >
+              {({ imageUrl, openFilePicker }) => (
+                  <img
+                    src={imageUrl}
+                    onClick={openFilePicker}
+                    className="mb-6 w-full cursor-pointer rounded-lg"
+                  />
+              )}
+            </StorageImageEditor>
+          </div>
         </div>
 
         {/* Middle row */}
