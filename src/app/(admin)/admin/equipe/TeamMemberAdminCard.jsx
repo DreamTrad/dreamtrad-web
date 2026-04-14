@@ -3,19 +3,16 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
-import { getImageUrl } from "@/lib/supabase/storage";
+import StorageImageEditor from "@/components/StorageImageEditor";
 
 export default function TeamMemberAdminCard({ member, onUpdated }) {
   const [draft, setDraft] = useState(member);
   const [original, setOriginal] = useState(member);
   const [isDirty, setIsDirty] = useState(false);
 
-  const [imgSrc, setImgSrc] = useState(getImageUrl(`/team/${member.id}.webp`));
-
   useEffect(() => {
     setDraft(member);
     setOriginal(member);
-    setImgSrc(getImageUrl(`/team/${member.id}.webp`));
   }, [member]);
 
   useEffect(() => {
@@ -75,17 +72,28 @@ export default function TeamMemberAdminCard({ member, onUpdated }) {
       {/* Header */}
       <div className="flex items-start justify-between gap-4">
         <div className="flex gap-4">
-          <div className="h-20 w-20 shrink-0">
-            <Image
-              src={imgSrc}
-              alt={draft.name}
-              width={80}
-              height={80}
-              className="border-bg-secondary h-full w-full rounded-lg border object-cover"
-              onError={() => setImgSrc(getImageUrl("/team/default_avatar.webp"))}
-            />
-          </div>
+          <div className="group relative w-20 h-20 aspect-square">
+            <StorageImageEditor imagePath={`/team/${member.id}.webp`}>
+              {({ imageUrl, openFilePicker, loading }) => (
+                <>
+                  <img
+                    src={imageUrl}
+                    onClick={openFilePicker}
+                    className="border-bg-secondary h-full w-full cursor-pointer rounded-lg border object-cover"
+                  />
 
+                  <div
+                    onClick={openFilePicker}
+                    className="absolute inset-0 flex cursor-pointer items-center justify-center rounded-lg bg-black/60 opacity-0 transition group-hover:opacity-100"
+                  >
+                    <span className="text-xs text-white">
+                      {loading ? "Upload..." : "Changer"}
+                    </span>
+                  </div>
+                </>
+              )}
+            </StorageImageEditor>
+          </div>
           <div>
             <div className="flex gap-6">
               <div className="text-text-tertiary text-xs">{draft.id}</div>
@@ -163,7 +171,7 @@ export default function TeamMemberAdminCard({ member, onUpdated }) {
       </div>
 
       {/* Actions */}
-      <div className="flex justify-between gap-2 mt-auto">
+      <div className="mt-auto flex justify-between gap-2">
         <button
           onClick={async () => {
             if (!confirm("Supprimer ce membre ?")) return;

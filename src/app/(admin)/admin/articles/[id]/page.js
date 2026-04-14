@@ -4,6 +4,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
 import { useParams } from "next/navigation";
+import StorageImageEditor from "@/components/StorageImageEditor";
 
 export default function ArticleAdminPage() {
   const params = useParams();
@@ -156,6 +157,14 @@ export default function ArticleAdminPage() {
           </div>
         </div>
 
+        <div>
+          <StorageImageEditor
+            title="Image principale de l’article"
+            imagePath={`/articles-content/${id}/cover.webp`}
+            previewClassName="mb-6 w-full rounded-lg shadow-md"
+          />
+        </div>
+
         {/* Middle row */}
         <div className="grid grid-cols-3 gap-6">
           {/* Date */}
@@ -242,7 +251,7 @@ export default function ArticleAdminPage() {
           <textarea
             value={draft.content || ""}
             onChange={(e) => updateField("content", e.target.value)}
-            className="bg-bg-secondary w-full rounded p-2 font-mono h-400"
+            className="bg-bg-secondary h-400 w-full rounded p-2 font-mono"
             rows={14}
           />
         </div>

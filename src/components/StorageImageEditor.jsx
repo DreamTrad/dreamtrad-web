@@ -5,15 +5,17 @@ import { getImageUrl } from "@/lib/supabase/storage";
 
 export default function StorageImageEditor({
   imagePath,
-  title,
-  className = "",
-  previewClassName = "h-48",
+  children,
 }) {
   const inputRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const [refreshKey, setRefreshKey] = useState(Date.now());
 
   const imageUrl = getImageUrl(imagePath) + `?t=${refreshKey}`;
+
+  const openFilePicker = () => {
+    if (!loading) inputRef.current?.click();
+  };
 
   const handleUpload = async (e) => {
     const file = e.target.files?.[0];
@@ -41,35 +43,20 @@ export default function StorageImageEditor({
   };
 
   return (
-  <div className={`flex flex-col gap-4 ${className}`}>
-    {/* Title + button row */}
-    {(title || true) && (
-      <div className="flex gap-2">
-        {title && <h2 className="text-lg font-bold">{title}</h2>}
+    <>
+      {children({
+        imageUrl,
+        openFilePicker,
+        loading,
+      })}
 
-        <button
-          onClick={() => inputRef.current?.click()}
-          disabled={loading}
-          className="bg-accent hover:bg-accent-secondary rounded-md px-4 py-2 text-sm text-white transition disabled:opacity-50"
-        >
-          {loading ? "Upload..." : "Changer l’image"}
-        </button>
-      </div>
-    )}
-
-    {/* Preview */}
-    <div className="relative w-full overflow-hidden rounded-lg">
-      <img src={imageUrl} className={previewClassName} />
-    </div>
-
-    {/* Hidden input */}
-    <input
-      ref={inputRef}
-      type="file"
-      accept="image/*"
-      className="hidden"
-      onChange={handleUpload}
-    />
-  </div>
-);
+      <input
+        ref={inputRef}
+        type="file"
+        accept="image/*"
+        className="hidden"
+        onChange={handleUpload}
+      />
+    </>
+  );
 }
