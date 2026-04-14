@@ -46,6 +46,12 @@ export default function AdminSidebar({ projects, role }) {
             >
               Articles
             </Link>
+            <Link
+              href="/admin/staff"
+              className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
+            >
+              Staff
+            </Link>
           </>
         )}
         <Link

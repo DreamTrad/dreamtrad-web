@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 
-function MarkdownEditor({ value, onChange }) {
+export function MarkdownEditor({ value, onChange }) {
   const [mode, setMode] = useState("preview");
 
   const insert = (before, after = "") => {
