@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
 import { useParams } from "next/navigation";
 import StorageImageEditor from "@/components/StorageImageEditor";
+import MarkdownEditor from "@/components/MarkdownEditor";
 
 export default function ArticleAdminPage() {
   const params = useParams();
@@ -259,12 +260,9 @@ export default function ArticleAdminPage() {
 
         {/* Content */}
         <div>
-          <label className="text-sm">Contenu (Markdown)</label>
-          <textarea
-            value={draft.content || ""}
-            onChange={(e) => updateField("content", e.target.value)}
-            className="bg-bg-secondary h-400 w-full rounded p-2 font-mono"
-            rows={14}
+          <MarkdownEditor
+            value={draft.content}
+            onChange={(val) => updateField("content", val)}
           />
         </div>
 

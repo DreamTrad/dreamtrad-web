@@ -59,9 +59,9 @@ export default function AdminStaffCard({ member, onUpdated }) {
   return (
     <div className="bg-bg-tertiary border-bg-secondary flex flex-col gap-4 rounded-xl border p-6">
       {/* HEADER */}
-      <div className="flex items-start gap-4">
+      <div className="flex items-start gap-4 mb-15">
         {/* IMAGE */}
-        <div className="h-20 w-20 shrink-0">
+        <div className="h-40 w-40">
           <StorageImageEditor
             imagePath={`staff/${draft.id}.webp`}
             previewClassName="h-full w-full rounded-lg object-cover"
@@ -100,12 +100,12 @@ export default function AdminStaffCard({ member, onUpdated }) {
 
       {/* ACTIONS */}
       <div className="flex justify-between gap-2">
-        <button
+        {/* <button
           onClick={remove}
           className="bg-error rounded px-4 py-2 text-sm text-white"
         >
           Supprimer
-        </button>
+        </button> */}
         {isDirty && (
           <div className="flex gap-2">
             <button
