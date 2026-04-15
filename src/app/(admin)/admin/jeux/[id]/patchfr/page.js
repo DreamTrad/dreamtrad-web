@@ -10,6 +10,7 @@ import RecruitmentsSection from "./RecruitmentsSection";
 import PatchesSection from "./PatchesSection";
 import RolesSection from "./RolesSection";
 import PageEditor from "@/components/PageEditor";
+import GalleryManager from "../patchfr/GalleryManager";
 
 export default function AdminGamePatchfrPage() {
   const { id } = useParams();
@@ -82,6 +83,8 @@ export default function AdminGamePatchfrPage() {
         editContent />
 
         <PatchesSection projectId={id} />
+
+        <GalleryManager projectId={id} />
 
         <RolesSection projectId={id} />
       </div>

@@ -1,6 +1,3 @@
-import fs from "fs";
-import path from "path";
-
 import DownloadClient from "./DownloadClient";
 import ImageCarousel from "./ImageCarousel";
 import MarkdownSection from "@/components/ui/MarkdownSection";
@@ -53,26 +50,8 @@ export async function generateMetadata({ params }) {
 export default async function DownloadPage({ params }) {
   const id = (await params).id;
 
-  const galleryPath = path.join(
-    process.cwd(),
-    "public",
-    "jeux",
-    id,
-    "patchfr",
-    "gallery",
-  );
-
-  const images = [];
-  let i = 1;
-
-  while (true) {
-    const file = getImageUrl(`image${i}.webp`);
-    if (!fs.existsSync(path.join(galleryPath, file))) break;
-    images.push(`/jeux/${id}/patchfr/gallery/${file}`);
-    i++;
-  }
-
   const supabase = createStaticClient();
+
 
   const { data: project, error } = await supabase
     .from("projects")
@@ -80,30 +59,38 @@ export default async function DownloadPage({ params }) {
     .eq("id", id)
     .single();
 
-  if (error) {
-    console.error("Error fetching project:", error);
-  }
+    if (error) {
+      console.error("Error fetching project:", error);
+    }
 
-  const { data: patches, error: patchesError } = await supabase
+    const { data: patches, error: patchesError } = await supabase
     .from("patches")
     .select("id, name, link")
     .eq("project_id", id);
 
-  if (patchesError) {
-    console.error("Error fetching patches:", patchesError);
-  }
+    if (patchesError) {
+      console.error("Error fetching patches:", patchesError);
+    }
 
-  const { data: infopatch, pageError } = await supabase
+    const { data: infopatch, pageError } = await supabase
     .from("pages")
     .select("title, content")
     .eq("project_id", project.id)
     .eq("file", "infopatch")
     .single();
 
-  if (pageError) {
-    console.error(pageError);
-    redirect("/");
-  }
+    if (pageError) {
+      console.error(pageError);
+      redirect("/");
+    }
+
+    const { data: images } = await supabase
+    .from("gallery_images")
+    .select("name")
+    .eq("project_id", id)
+    .order("position");
+
+    const urls = images.map((img) => getImageUrl(`/jeux/${id}/patchfr/gallery/${img.name}.webp`));
 
   return (
     <div className="mx-auto max-w-7xl space-y-12 px-4 pb-20">
@@ -124,7 +111,7 @@ export default async function DownloadPage({ params }) {
 
       <DownloadClient patches={patches} />
 
-      {images.length > 0 && <ImageCarousel images={images} interval={15000} />}
+      {images.length > 0 && <ImageCarousel images={urls} interval={15000} />}
     </div>
   );
 }
