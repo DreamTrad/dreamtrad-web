@@ -6,6 +6,7 @@ import { supabase } from "@/lib/supabase/client";
 import { useParams } from "next/navigation";
 import StorageImageEditor from "@/components/StorageImageEditor";
 import MarkdownEditor from "@/components/MarkdownEditor";
+import ArticleImagesManager from "./ArticleImagesManager";
 
 export default function ArticleAdminPage() {
   const params = useParams();
@@ -168,11 +169,11 @@ export default function ArticleAdminPage() {
               imagePath={`/articles-content/${id}/cover.webp`}
             >
               {({ imageUrl, openFilePicker }) => (
-                  <img
-                    src={imageUrl}
-                    onClick={openFilePicker}
-                    className="mb-6 w-full cursor-pointer rounded-lg"
-                  />
+                <img
+                  src={imageUrl}
+                  onClick={openFilePicker}
+                  className="mb-6 w-full cursor-pointer rounded-lg"
+                />
               )}
             </StorageImageEditor>
           </div>
@@ -283,6 +284,8 @@ export default function ArticleAdminPage() {
             </button>
           </div>
         )}
+
+        <ArticleImagesManager articleId={id} />
       </div>
     </div>
   );

@@ -10,7 +10,8 @@ import RecruitmentsSection from "./RecruitmentsSection";
 import PatchesSection from "./PatchesSection";
 import RolesSection from "./RolesSection";
 import PageEditor from "@/components/PageEditor";
-import GalleryManager from "../patchfr/GalleryManager";
+import GalleryManager from "./GalleryManager";
+import PlatformTabsEditor from "./PlatformTabsEditor";
 
 export default function AdminGamePatchfrPage() {
   const { id } = useParams();
@@ -83,6 +84,8 @@ export default function AdminGamePatchfrPage() {
         editContent />
 
         <PatchesSection projectId={id} />
+
+        <PlatformTabsEditor slug={`${id}/patchfr/installation`} />
 
         <GalleryManager projectId={id} />
 

@@ -8,7 +8,7 @@ import MarkdownEditor from "./MarkdownEditor";
 
 
 export default function PageEditor({
-  title = "Édition de la page",
+  title,
   slug,
   file,
 
@@ -99,8 +99,9 @@ export default function PageEditor({
 
   return (
     <div className="bg-bg-tertiary border-bg-secondary flex flex-col gap-6 rounded-xl border p-6">
-      <h1 className="text-center text-lg font-bold">{title}</h1>
-
+      {title && (
+        <h1 className="text-center text-lg font-bold">{title}</h1>
+      )}
       {/* Title */}
       {editTitle && (
         <div>
