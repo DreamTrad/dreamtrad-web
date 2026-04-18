@@ -2,10 +2,6 @@ import os
 import json
 
 from supabase import Client, create_client
-from dotenv import load_dotenv
-
-load_dotenv(".env.local")
-
 
 SUPABASE_URL: str | None = os.getenv("NEXT_PUBLIC_SUPABASE_URL")
 SUPABASE_KEY: str | None = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
