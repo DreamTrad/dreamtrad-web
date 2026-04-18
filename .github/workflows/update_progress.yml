@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: "0 2 * * 1"
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 permissions:
   contents: write
 
@@ -32,18 +29,3 @@ jobs:
         run: python -m tools.get_project_progress
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-
-      - name: Configure Git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Commit and push changes to main
-        run: |
-          git add src/data/json/progress.json
-          if git diff --cached --quiet; then
-            echo "No changes detected, skipping commit."
-          else
-            git commit -m "Auto update progress.json from Google Sheet"
-            git push origin main
-          fi
