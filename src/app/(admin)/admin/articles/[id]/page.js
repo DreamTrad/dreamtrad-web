@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import StorageImageEditor from "@/components/StorageImageEditor";
 import MarkdownEditor from "@/components/MarkdownEditor";
 import ArticleImagesManager from "./ArticleImagesManager";
@@ -16,6 +16,8 @@ export default function ArticleAdminPage() {
   const [draft, setDraft] = useState(null);
   const [original, setOriginal] = useState(null);
   const [isDirty, setIsDirty] = useState(false);
+
+  const router = useRouter();
 
   useEffect(() => {
     fetchArticle();
@@ -93,7 +95,7 @@ export default function ArticleAdminPage() {
       <div className="mb-4 flex items-center justify-between">
         {/* Left */}
         <button
-          onClick={() => window.history.back()}
+          onClick={() => router.push(`/admin/articles`)}
           className="bg-bg-secondary rounded px-4 py-2 text-sm"
         >
           ← Retour

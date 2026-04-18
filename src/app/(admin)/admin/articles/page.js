@@ -1,10 +1,9 @@
 // src\app\(admin)\admin\articles\page.js
 import { supabase } from "@/lib/supabase/client";
 import ArticleCard from "@/components/ArticleCard";
-
+import CreateArticleModal from "./CreateArticleModal";
 
 export default async function ArticleListAdminPage() {
-
   const { data: articles, error } = await supabase
     .from("articles")
     .select("id, title, authors, date, tags, excerpt, is_visible")
@@ -16,9 +15,11 @@ export default async function ArticleListAdminPage() {
 
   return (
     <div className="mx-auto max-w-6xl p-8">
-      <h1 className="text-accent mb-8 text-center text-3xl font-bold">
-        Nos Articles
-      </h1>
+      <div className="mb-8 flex items-center justify-between">
+        <h1 className="text-accent text-3xl font-bold">Nos Articles</h1>
+
+        <CreateArticleModal/>
+      </div>
 
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
         {articles?.map((article) => (
