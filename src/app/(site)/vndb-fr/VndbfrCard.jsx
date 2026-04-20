@@ -13,16 +13,16 @@ export default function DiscoverCard({
   vndb_votes,
   platforms = [],
   links = [],
-  patch_fr = [],
+  patchfr = [],
   description,
 }) {
 
   const safeGenres = Array.isArray(genres) ? genres : [];
   const safePlatforms = Array.isArray(platforms) ? platforms : [];
   const safeLinks = Array.isArray(links) ? links : [];
-  const safePatchFr = Array.isArray(patch_fr) ? patch_fr : [];
+  const safePatchFr = Array.isArray(patchfr) ? patchfr : [];
 
-  const internalPatch = patch_fr.find((p) => p.startsWith("fr:/"));
+  const internalPatch = patchfr.find((p) => p.startsWith("fr:/"));
   const internalPath = internalPatch
     ? `/jeux/${internalPatch.split("/")[2]}/`
     : null;
