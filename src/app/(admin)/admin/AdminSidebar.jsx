@@ -52,6 +52,12 @@ export default function AdminSidebar({ projects, role }) {
             >
               Staff
             </Link>
+            <Link
+              href="/admin/mentions-legales"
+              className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
+            >
+              Mentions légales
+            </Link>
           </>
         )}
         <Link
