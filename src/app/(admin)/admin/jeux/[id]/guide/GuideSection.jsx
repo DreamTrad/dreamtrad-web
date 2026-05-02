@@ -56,6 +56,7 @@ export default function GuideSection({
                 allSections={allSections}
                 moveItem={moveItem}
                 createFolder={createFolder}
+                gameId={gameId}
                 toggleVisibility={toggleVisibility}
               />
             ))}

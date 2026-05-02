@@ -24,13 +24,6 @@ export default function SortableItem({
     transition,
   };
 
-  const parts = item.slug.split("/");
-  const folder = parts.length === 3 ? parts[2] : null;
-
-  const href = folder
-    ? `/admin/jeux/${gameId}/guide/${folder}/${item.file}`
-    : `/admin/jeux/${gameId}/guide/${item.file}`;
-
   return (
     <>
       <div
@@ -74,7 +67,7 @@ export default function SortableItem({
 
         {/* RIGHT */}
         <Link
-          href={href}
+          href={`/admin/jeux/${gameId}/guide/${item.id}`}
           className="bg-accent rounded px-2 py-1 text-xs text-white"
         >
           Ouvrir
