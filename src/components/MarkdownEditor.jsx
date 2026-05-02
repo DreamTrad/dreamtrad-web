@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 
 export default function MarkdownEditor({
@@ -11,10 +11,17 @@ export default function MarkdownEditor({
 }) {
   const [mode, setMode] = useState(initialMode);
   const [localValue, setLocalValue] = useState(value || "");
+  const textareaRef = useRef(null);
 
   useEffect(() => {
     setLocalValue(value || "");
   }, [value]);
+
+  useEffect(() => {
+  if (mode === "edit") {
+    autoResize();
+    }
+  }, [localValue, mode]);
 
   const update = (val) => {
     setLocalValue(val);
@@ -23,6 +30,19 @@ export default function MarkdownEditor({
 
   const insert = (text) => {
     update((localValue || "") + "\n" + text);
+  };
+
+  const autoResize = () => {
+    const el = textareaRef.current;
+    if (!el) return;
+
+    const scrollPos = window.scrollY;
+
+    el.style.height = "auto";
+    el.style.height = el.scrollHeight + "px";
+
+    // restore scroll position to avoid page jump
+    window.scrollTo(0, scrollPos);
   };
 
   return (
@@ -87,9 +107,15 @@ export default function MarkdownEditor({
       {/* CONTENT */}
       {mode === "edit" ? (
         <textarea
+          ref={textareaRef}
           value={localValue}
           onChange={(e) => update(e.target.value)}
-          className="bg-bg-secondary min-h-62.5 w-full rounded p-3 font-mono"
+          onInput={autoResize}
+          className="bg-bg-secondary w-full resize-none overflow-hidden rounded p-3 font-mono"
+          style={{
+            minHeight: "200px",
+            willChange: "height",
+          }}
         />
       ) : (
         <div className="bg-bg-secondary rounded p-4">
