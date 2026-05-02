@@ -3,7 +3,7 @@
 import { redirect } from "next/navigation";
 import { createStaticClient } from "@/lib/supabase/public";
 
-export const revalidate = 3600;
+export const revalidate = 21600; // 6 hours
 
 export default async function GuideIndexPage({ params }) {
   const id = (await params).id;

@@ -5,7 +5,7 @@ import MarkdownSection from "@/components/ui/MarkdownSection";
 import ContactClient from "./ContactClient";
 import { createStaticClient } from "@/lib/supabase/public";
 
-export const revalidate = 86400;
+export const revalidate = 86400; // 24 hours
 
 export const metadata = {
   title: "Contact",

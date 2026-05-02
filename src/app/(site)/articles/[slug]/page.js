@@ -7,7 +7,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 
-export const revalidate = 3600;
+export const revalidate = 3600; // 1 hour
 
 export async function generateMetadata({ params }) {
   const slug = (await params).slug;

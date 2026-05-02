@@ -3,7 +3,7 @@
 import { createStaticClient } from "@/lib/supabase/public";
 import ArticleCard from "@/components/ArticleCard";
 
-export const revalidate = 3600;
+export const revalidate = 3600; // 1 hour
 
 export const metadata = {
   title: "Articles",

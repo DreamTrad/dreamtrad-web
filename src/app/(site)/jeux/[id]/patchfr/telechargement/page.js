@@ -5,7 +5,7 @@ import ProjectProgressCard from "@/components/ProjectProgressCard";
 import { createStaticClient } from "@/lib/supabase/public";
 import { getImageUrl } from "@/lib/supabase/storage";
 
-export const revalidate = 60;
+export const revalidate = 900; // 15 minutes
 
 export async function generateMetadata({ params }) {
   const id = (await params).id;
