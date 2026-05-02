@@ -4,8 +4,6 @@ import AchievementClient from "./AchievementClient";
 import { createStaticClient } from "@/lib/supabase/public";
 import { getImageUrl } from "@/lib/supabase/storage";
 
-export const revalidate = 86400; // 24 hours
-
 export async function generateMetadata({ params }) {
   const id = (await params).id;
 

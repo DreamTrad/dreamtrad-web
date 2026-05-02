@@ -28,6 +28,18 @@ export default function SuccesAdminPage() {
     setIsDirty(false);
   };
 
+  const publish = async () => {
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        path: `/jeux/${id}/guide/succes`,
+      }),
+    });
+  };
+
   // -------------------------
   // CREATE NEW ACHIEVEMENT
   // -------------------------
@@ -66,7 +78,12 @@ export default function SuccesAdminPage() {
           ← Retour
         </button>
         <h1 className="text-xl font-bold">Gestion des succès</h1>
-
+        <button
+          onClick={publish}
+          className="bg-success rounded px-4 py-2 text-white"
+        >
+          Publier les mises à jour
+        </button>
         <button
           onClick={createAchievement}
           className="bg-accent rounded px-4 py-2 text-white"

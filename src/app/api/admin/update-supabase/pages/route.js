@@ -1,15 +1,12 @@
 // app/api/admin/update-supabase/pages/route.js
 
 import { revalidatePath } from "next/cache";
-import { createClient } from "@supabase/supabase-js";
+import { createStaticClient } from "@/lib/supabase/public";
 
 export async function POST(req) {
   const body = await req.json();
 
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_ROLE_KEY,
-  );
+  const supabase = createStaticClient();
 
   const { slug, file, type, data } = body;
 
