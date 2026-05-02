@@ -1,16 +1,14 @@
 "use client";
 
-
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
 import MarkdownEditor from "./MarkdownEditor";
-
-
 
 export default function PageEditor({
   title,
   slug,
   file,
+  type,
 
   // Fields control (default: false)
   editTitle = false,
@@ -70,20 +68,24 @@ export default function PageEditor({
   const save = async () => {
     const fields = getEditableFields();
 
-    // Build dynamic update object
     const updateData = {};
     fields.forEach((field) => {
       updateData[field] = draft[field];
     });
 
-    const { error } = await supabase
-      .from("pages")
-      .update(updateData)
-      .eq("slug", slug)
-      .eq("file", file);
+    const res = await fetch("/api/admin/update-supabase/pages", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        slug,
+        file,
+        type,
+        data: updateData,
+      }),
+    });
 
-    if (error) {
-      console.error("error:", error);
+    if (!res.ok) {
+      console.error("Save failed");
       return;
     }
 

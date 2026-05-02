@@ -18,6 +18,7 @@ export default function MentionsLegalesAdminPage() {
             title="Mentions légales"
             slug="mentions-legales"
             file="page"
+            type="page"
             editContent
           />
         </div>

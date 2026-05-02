@@ -18,6 +18,7 @@ export default function AdminPage() {
             title="Infobox de la page"
             slug="/"
             file="infobox"
+            type="infobox"
             editTitle
             editContent
           />

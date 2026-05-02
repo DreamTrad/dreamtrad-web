@@ -151,6 +151,7 @@ export default function PlatformTabsEditor({ slug }) {
           <PageEditor
             slug={activePage.slug}
             file={activePage.file}
+            type="installation"
             editTitle
             editContent
           />

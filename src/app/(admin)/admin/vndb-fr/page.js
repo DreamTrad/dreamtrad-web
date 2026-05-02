@@ -292,6 +292,7 @@ export default function AdminVndbfrPage() {
           title="Infobox de la page"
           slug="vndb-fr"
           file="infobox"
+          type="infobox"
           editTitle
           editContent
         />

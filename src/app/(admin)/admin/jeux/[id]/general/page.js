@@ -69,6 +69,7 @@ export default function AdminPage() {
           title="Présentation du jeu"
           slug={id}
           file="presentation"
+          type="presentation"
           editTitle
           editContent
         />

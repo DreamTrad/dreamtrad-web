@@ -107,6 +107,7 @@ export default function AdminRecruitmentPage() {
                   title="Infobox de la page"
                   slug="recrutement"
                   file="infobox"
+                  type="infobox"
                   editTitle
                   editContent
                 />

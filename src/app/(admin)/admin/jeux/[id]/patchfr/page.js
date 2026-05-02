@@ -79,6 +79,7 @@ export default function AdminGamePatchfrPage() {
         <PageEditor
         slug={`${id}/patchfr/telechargement`}
         file="infopatch"
+        type="infopatch"
         title="Info patch"
         editTitle
         editContent />

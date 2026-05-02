@@ -36,6 +36,7 @@ export default function TeamAdminPage() {
             title="Infobox de la page"
             slug="equipe"
             file="infobox"
+            type="infobox"
             editTitle
             editContent
           />
