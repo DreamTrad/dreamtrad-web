@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
 import StorageImageEditor from "@/components/StorageImageEditor";
 
-export default function GuideImagesManager({ articleId }) {
+export default function GuideImagesManager({ pageId, gameId }) {
   const [images, setImages] = useState([]);
   const [newName, setNewName] = useState("");
 
@@ -12,7 +12,7 @@ export default function GuideImagesManager({ articleId }) {
     const { data } = await supabase
       .from("page_images")
       .select("*")
-      .eq("article_id", articleId)
+      .eq("page_id", pageId)
       .order("created_at");
 
     setImages(data || []);
@@ -20,14 +20,14 @@ export default function GuideImagesManager({ articleId }) {
 
   useEffect(() => {
     fetchImages();
-  }, [articleId]);
+  }, [pageId]);
 
   const addImage = async () => {
     const cleanName = newName.toLowerCase().replace(/[^a-z0-9_-]/g, "_");
     if (!cleanName.trim()) return;
 
-    await supabase.from("article_images").insert({
-      article_id: articleId,
+    await supabase.from("page_images").insert({
+      page_id: pageId,
       name: cleanName.trim(),
     });
 
@@ -36,19 +36,19 @@ export default function GuideImagesManager({ articleId }) {
   };
 
   const removeImage = async (id) => {
-    await supabase.from("article_images").delete().eq("id", id);
+    await supabase.from("page_images").delete().eq("id", id);
     fetchImages();
   };
 
   const copyName = (name) => {
     navigator.clipboard.writeText(
-      `![](/articles-content/${articleId}/${name}.webp)`,
+      `![](/jeux/${gameId}/guide/${pageId}/${name}.webp)`,
     );
   };
 
   return (
     <div className="bg-bg-tertiary flex flex-col gap-4 rounded-xl p-6">
-      <h2 className="text-lg font-bold">Images de l’article</h2>
+      <h2 className="text-lg font-bold">Images du guide</h2>
 
       {/* ADD */}
       <div className="flex gap-2">
@@ -70,7 +70,7 @@ export default function GuideImagesManager({ articleId }) {
       {/* GRID */}
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
         {images.map((img) => {
-          const path = `articles-content/${articleId}/${img.name}.webp`;
+          const path = `jeux/${gameId}/guide/${pageId}/${img.name}.webp`;
 
           return (
             <div

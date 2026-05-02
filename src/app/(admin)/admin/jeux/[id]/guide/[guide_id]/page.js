@@ -165,7 +165,7 @@ export default function GuideEditAdminPage() {
             rows={4}
           />
         </div>
-
+        <GuideImagesManager pageId={guide_id} gameId={gameId} />
         {/* CONTENT */}
         <div>
           <MarkdownEditor
