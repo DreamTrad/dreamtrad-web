@@ -55,7 +55,7 @@ export default function StorageImageEditor({
       />
 
       {overlay && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition group-hover:opacity-100">
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 transition group-hover:opacity-100">
           <span className="text-sm text-white">
             {loading ? "Upload..." : "Changer"}
           </span>

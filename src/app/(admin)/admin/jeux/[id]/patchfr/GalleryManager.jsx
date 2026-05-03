@@ -87,24 +87,24 @@ export default function GalleryManager({ projectId }) {
 
             {/* DELETE */}
             <button
-              onClick={() => removeImage(img.id)}
-              className="bg-error absolute top-1 right-1 rounded px-2 py-1 text-xs text-white opacity-0 group-hover:opacity-100"
+              onClick={() => {removeImage(img.id); console.log("delete clicked");}}
+              className="pointer-events-auto bg-error absolute top-1 right-1 rounded px-2 py-1 text-xs text-white opacity-0 group-hover:opacity-100"
             >
               ✕
             </button>
 
             {/* ORDER CONTROLS */}
-            <div className="absolute inset-0 flex items-center justify-between px-2 opacity-0 transition group-hover:opacity-100">
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-between px-2 opacity-0 transition group-hover:opacity-100">
               <button
                 onClick={() => moveUp(index)}
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-lg text-white shadow-lg backdrop-blur hover:bg-black"
+                className="pointer-events-auto flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-lg text-white shadow-lg backdrop-blur hover:bg-black"
               >
                 ←
               </button>
 
               <button
                 onClick={() => moveDown(index)}
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-lg text-white shadow-lg backdrop-blur hover:bg-black"
+                className="pointer-events-auto flex h-10 w-10 items-center justify-center rounded-full bg-black/70 text-lg text-white shadow-lg backdrop-blur hover:bg-black"
               >
                 →
               </button>
