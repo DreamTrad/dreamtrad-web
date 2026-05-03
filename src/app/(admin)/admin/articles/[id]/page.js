@@ -81,6 +81,17 @@ export default function ArticleAdminPage() {
 
     setOriginal(draft);
     setIsDirty(false);
+    await publish();
+  };
+
+  const publish = async () => {
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        paths: [`/`, `/arctiles`, `/articles/${id}`],
+      }),
+    });
   };
 
   const reset = () => {
@@ -139,6 +150,7 @@ export default function ArticleAdminPage() {
 
       <div className="bg-bg-tertiary border-bg-secondary flex flex-col gap-6 rounded-xl border p-6">
         {/* Top row */}
+
         <div className="flex items-start justify-between gap-6">
           {/* Title */}
           <div className="flex-1">
