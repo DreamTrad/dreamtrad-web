@@ -54,29 +54,6 @@ export default function MarkdownEditor({
         {/* TOOLBAR */}
         {mode === "edit" ? (
           <div className="flex gap-2">
-            <button
-              type="button"
-              onClick={() => insert("## Titre")}
-              className="rounded bg-bg-secondary px-3 py-1 text-sm"
-            >
-              H2
-            </button>
-
-            <button
-              type="button"
-              onClick={() => insert("**gras**")}
-              className="rounded bg-bg-secondary px-3 py-1 text-sm"
-            >
-              Gras
-            </button>
-
-            <button
-              type="button"
-              onClick={() => insert("*italique*")}
-              className="rounded bg-bg-secondary px-3 py-1 text-sm"
-            >
-              Italique
-            </button>
 
             <button
               type="button"
