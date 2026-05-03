@@ -31,11 +31,9 @@ export default function SuccesAdminPage() {
   const publish = async () => {
     await fetch("/api/admin/revalidate", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        path: `/jeux/${id}/guide/succes`,
+        paths: [`/jeux/${id}/guide/succes`, `/jeux/${id}`],
       }),
     });
   };

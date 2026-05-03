@@ -36,6 +36,7 @@ export default function RoleCategoryEditor({
       .eq("role", role);
 
     refresh();
+    await publish();
   };
 
   const addExisting = async () => {
@@ -51,6 +52,7 @@ export default function RoleCategoryEditor({
     setNewMemberId("");
     setExistingComment("");
     refresh();
+    await publish();
   };
 
   const createAndAdd = async () => {
@@ -77,6 +79,17 @@ export default function RoleCategoryEditor({
     setNewName("");
     setCreateComment("");
     refresh();
+    await publish();
+  };
+
+  const publish = async () => {
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        paths: [`/jeux/${projectId}/patchfr/equipe`],
+      }),
+    });
   };
 
   // Sort existing items by member name

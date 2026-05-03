@@ -5,13 +5,20 @@ import { revalidatePath } from "next/cache";
 export async function POST(req) {
   const body = await req.json();
 
-  const { path } = body;
+  const { path, paths } = body;
 
-  if (!path) {
-    return Response.json({ error: "Missing path" }, { status: 400 });
+  if (!path && !paths) {
+    return Response.json(
+      { error: "Missing path or paths" },
+      { status: 400 }
+    );
   }
 
-  revalidatePath(path);
+  const list = paths || [path];
+
+  for (const p of list) {
+    revalidatePath(p);
+  }
 
   return Response.json({ ok: true });
 }

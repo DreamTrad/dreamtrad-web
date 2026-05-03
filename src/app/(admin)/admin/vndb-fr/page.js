@@ -2,7 +2,7 @@
 
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
 import PageEditor from "@/components/PageEditor";
 import UpdateVndbButton from "./UpdateVndbButton";
@@ -274,6 +274,19 @@ export default function AdminVndbfrPage() {
       setInitialForm(data);
       setIsDirty(false);
     }
+    await publish();
+  };
+
+  const publish = async () => {
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        path: `/vndb-fr`,
+      }),
+    });
   };
 
   const reset = () => {

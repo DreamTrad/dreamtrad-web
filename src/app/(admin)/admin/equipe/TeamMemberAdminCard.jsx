@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
 import StorageImageEditor from "@/components/StorageImageEditor";
@@ -61,11 +60,34 @@ export default function TeamMemberAdminCard({ member, onUpdated }) {
     setOriginal(draft);
     setIsDirty(false);
     onUpdated?.();
+    await publish();
   };
 
   const reset = () => {
     setDraft(original);
   };
+
+  const publish = async () => {
+    const { data } = await supabase
+      .from("staff_projects")
+      .select("project_id")
+      .eq("staff_id", draft.id);
+
+    const projectIds = data?.map((p) => p.project_id) || [];
+
+    const paths = [
+      "/equipe",
+      ...projectIds.map((id) => `/jeux/${id}/patchfr/equipe`),
+    ];
+
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ paths }),
+    });
+  };
+
+
 
   return (
     <div className="bg-bg-tertiary border-bg-secondary flex flex-col gap-6 rounded-xl border p-6 shadow-md">
@@ -167,6 +189,7 @@ export default function TeamMemberAdminCard({ member, onUpdated }) {
 
             await supabase.from("members").delete().eq("id", original.id);
             onUpdated?.();
+            await publish();
           }}
           className="bg-error rounded px-4 py-2 text-sm text-white"
         >
