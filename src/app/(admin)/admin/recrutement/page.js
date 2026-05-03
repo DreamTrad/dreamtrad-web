@@ -75,6 +75,7 @@ export default function AdminRecruitmentPage() {
     if (error) return null;
 
     await fetchData();
+    await publish();
     return result;
   };
 
@@ -95,7 +96,20 @@ export default function AdminRecruitmentPage() {
     if (error) return null;
 
     await fetchData();
+    await publish();
     return result;
+  };
+
+  const publish = async () => {
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        path: `/recrutement`,
+      }),
+    });
   };
 
   return (
