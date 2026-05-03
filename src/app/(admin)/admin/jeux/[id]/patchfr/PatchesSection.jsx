@@ -48,10 +48,21 @@ export default function PatchesSection({ projectId }) {
       return;
     }
 
+    await publish();
     // sync initial state
     setInitialPatches((prev) =>
       prev.map((p) => (p.id === patch.id ? { ...p, link: patch.link } : p)),
     );
+  };
+
+  const publish = async () => {
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        paths: `/jeux/${id}/patchfr/telechargement`
+      }),
+    });
   };
 
   const reset = (patch) => {

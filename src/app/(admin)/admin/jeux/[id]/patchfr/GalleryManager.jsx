@@ -27,12 +27,13 @@ export default function GalleryManager({ projectId }) {
       name: `${projectId}_${Date.now()}`,
       position: images.length,
     });
-
+    await publish();
     fetchImages();
   };
 
   const removeImage = async (id) => {
     await supabase.from("gallery_images").delete().eq("id", id);
+    await publish();
     fetchImages();
   };
 
@@ -59,6 +60,7 @@ export default function GalleryManager({ projectId }) {
       return;
     }
 
+    await publish();
     fetchImages();
   };
 
@@ -70,6 +72,16 @@ export default function GalleryManager({ projectId }) {
   const moveDown = (index) => {
     if (index === images.length - 1) return;
     swapPositions(images[index], images[index + 1]);
+  };
+
+  const publish = async () => {
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        paths: `/jeux/${id}/patchfr/telechargement`
+      }),
+    });
   };
 
   return (
