@@ -48,6 +48,7 @@ export default function ProjectStaffManager({ projectId }) {
 
     setSelected("");
     fetchData();
+    await publish();
   };
 
   const removeStaff = async (staffId) => {
@@ -58,6 +59,17 @@ export default function ProjectStaffManager({ projectId }) {
       .eq("staff_id", staffId);
 
     fetchData();
+    await publish();
+  };
+
+  const publish = async () => {
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        paths: [`/jeux/${projectId}/staff`, `/jeux/${projectId}`],
+      }),
+    });
   };
 
   return (

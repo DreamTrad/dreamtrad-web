@@ -45,7 +45,7 @@ export default function StaffAdminPage() {
     const base = slugify(newName);
     const id = makeUniqueId(
       base,
-      staffs.map((s) => s.id)
+      staffs.map((s) => s.id),
     );
 
     await supabase.from("staffs").insert({
@@ -61,7 +61,6 @@ export default function StaffAdminPage() {
 
   return (
     <div className="mx-auto max-w-5xl p-6">
-
       {/* HEADER */}
       <div className="mb-6 flex items-center justify-between">
         <h1 className="text-xl font-bold">Staff</h1>

@@ -47,6 +47,7 @@ export default function AdminStaffCard({ member, onUpdated }) {
     setInitial(draft);
     setIsDirty(false);
     onUpdated?.();
+    await publish();
   };
 
   const remove = async () => {
@@ -54,12 +55,30 @@ export default function AdminStaffCard({ member, onUpdated }) {
 
     await supabase.from("staffs").delete().eq("id", draft.id);
     onUpdated?.();
+    await publish();
+  };
+
+  const publish = async () => {
+    const { data } = await supabase
+      .from("staff_projects")
+      .select("project_id")
+      .eq("staff_id", staffId);
+
+    const paths = [
+      ...new Set((data || []).map((p) => `/jeux/${p.project_id}/staff`)),
+    ];
+
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ paths }),
+    });
   };
 
   return (
     <div className="bg-bg-tertiary border-bg-secondary flex flex-col gap-4 rounded-xl border p-6">
       {/* HEADER */}
-      <div className="flex items-start gap-4 mb-15">
+      <div className="mb-15 flex items-start gap-4">
         {/* IMAGE */}
         <div className="h-40 w-40">
           <StorageImageEditor
