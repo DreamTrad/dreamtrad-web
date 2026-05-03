@@ -86,7 +86,7 @@ export default function AdminGamePatchfrPage() {
 
         <PatchesSection projectId={id} />
 
-        <PlatformTabsEditor slug={`${id}/patchfr/installation`} />
+        <PlatformTabsEditor projectId={id} slug={`${id}/patchfr/installation`} />
 
         <GalleryManager projectId={id} />
 

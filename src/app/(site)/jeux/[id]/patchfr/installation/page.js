@@ -4,8 +4,6 @@ import PlateformsTabs from "./PlateformsTabs";
 import { createStaticClient } from "@/lib/supabase/public";
 import { getImageUrl } from "@/lib/supabase/storage";
 
-export const revalidate = 3600; // 1 hour
-
 export async function generateMetadata({ params }) {
   const id = (await params).id;
   const image = getImageUrl(`/jeux/${id}/cover.webp`);

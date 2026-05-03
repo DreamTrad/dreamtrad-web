@@ -5,7 +5,7 @@ import { supabase } from "@/lib/supabase/client";
 import PageEditor from "@/components/PageEditor";
 import PageImagesManager from "@/components/PageImagesManager";
 
-export default function PlatformTabsEditor({ slug }) {
+export default function PlatformTabsEditor({ projectId, slug }) {
   const [pages, setPages] = useState([]);
   const [activePage, setActivePage] = useState(null);
 
@@ -34,7 +34,8 @@ export default function PlatformTabsEditor({ slug }) {
       .eq("slug", page.slug)
       .eq("file", page.file);
 
-    fetchPages();
+      fetchPages();
+      await publish();
   };
 
   const removeTab = async (page) => {
@@ -47,6 +48,7 @@ export default function PlatformTabsEditor({ slug }) {
       .eq("file", page.file);
 
     fetchPages();
+    await publishOnDelete();
   };
 
   const slugify = (text) =>
@@ -89,7 +91,25 @@ export default function PlatformTabsEditor({ slug }) {
     fetchPages();
   };
 
-  if (!pages.length) return null;
+  const publish = async () => {
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        paths: `/jeux/${slug}`
+      }),
+    });
+  };
+
+  const publishOnDelete = async () => {
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        paths: [`/jeux/${slug}`, `/jeux/${projectId}`]
+      }),
+    });
+  };
 
   const getButtonClass = (p) =>
     `flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium transition ${
