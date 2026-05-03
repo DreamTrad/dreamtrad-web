@@ -20,6 +20,18 @@ export default function AdminSidebar({ projects, role }) {
               Accueil
             </Link>
             <Link
+              href="/admin/contact"
+              className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
+            >
+              Contact
+            </Link>
+            <Link
+              href="/admin/mentions-legales"
+              className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
+            >
+              Mentions légales
+            </Link>
+            <Link
               href="/admin/recrutement"
               className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
             >
@@ -51,12 +63,6 @@ export default function AdminSidebar({ projects, role }) {
               className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
             >
               Staff
-            </Link>
-            <Link
-              href="/admin/mentions-legales"
-              className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
-            >
-              Mentions légales
             </Link>
           </>
         )}
