@@ -54,6 +54,7 @@ export default function GuideEditAdminPage() {
       })
       .eq("id", guide_id);
 
+    await publishOnUpdate();
     setOriginal(draft);
     setIsDirty(false);
   };
@@ -66,7 +67,35 @@ export default function GuideEditAdminPage() {
     if (!confirm("Supprimer cette page ?")) return;
 
     await supabase.from("pages").delete().eq("id", guide_id);
+    await publishOnDelete();
     router.push(`/admin/jeux/${gameId}/guide`);
+  };
+
+  const publishOnUpdate = async () => {
+    const paths = [
+      `/jeux/${gameId}`,
+      `/jeux/${id}/guide`,
+      `/jeux/${draft.slug}/${draft.file}`,
+      `/jeux/${original.slug}/${original.file}`,
+    ];
+
+    const uniquePaths = [...new Set(paths)];
+
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ paths: uniquePaths }),
+    });
+  };
+
+  const publishOnDelete = async () => {
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        paths: [`/jeux/${gameId}`, `/jeux/${original.slug}/${original.file}`],
+      }),
+    });
   };
 
   if (!draft) return <div className="p-6">Chargement...</div>;
@@ -109,12 +138,9 @@ export default function GuideEditAdminPage() {
         </div>
       </div>
 
-      <h1 className="text-accent mb-6 text-2xl font-bold">
-        Modifier le guide
-      </h1>
+      <h1 className="text-accent mb-6 text-2xl font-bold">Modifier le guide</h1>
 
       <div className="bg-bg-tertiary border-bg-secondary flex flex-col gap-6 rounded-xl border p-6">
-
         {/* TITLE */}
         <div>
           <label className="text-sm">Titre</label>

@@ -33,7 +33,7 @@ export default function SuccesAdminPage() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        paths: [`/jeux/${id}/guide/succes`, `/jeux/${id}`],
+        paths: [`/jeux/${id}/guide/succes`, `/jeux/${id}`, `/jeux/${id}/guide`],
       }),
     });
   };

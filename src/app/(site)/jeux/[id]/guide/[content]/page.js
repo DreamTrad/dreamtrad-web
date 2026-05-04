@@ -4,8 +4,6 @@ import MarkdownSection from "@/components/ui/MarkdownSection";
 import { createStaticClient } from "@/lib/supabase/public";
 import { getImageUrl } from "@/lib/supabase/storage";
 
-export const revalidate = 21600; // 6 hours
-
 export async function generateMetadata({ params }) {
   const id = (await params).id;
   const content = (await params).content;

@@ -74,9 +74,7 @@ export default function GuideAdminPage() {
   const save = async () => {
     for (const section of sections) {
       const baseSlug =
-        section.id === "root"
-          ? `${id}/guide`
-          : `${id}/guide/${section.id}`;
+        section.id === "root" ? `${id}/guide` : `${id}/guide/${section.id}`;
 
       for (let i = 0; i < section.children.length; i++) {
         const item = section.children[i];
@@ -88,7 +86,7 @@ export default function GuideAdminPage() {
           .eq("slug", baseSlug);
       }
     }
-
+    await revalidate([`/jeux/${id}`]);
     setIsDirty(false);
     fetchPages();
   };
@@ -103,21 +101,24 @@ export default function GuideAdminPage() {
       prev.map((section) => ({
         ...section,
         children: section.children.map((child) =>
-          child.file === item.file ? { ...child, is_visible: newValue } : child
+          child.file === item.file ? { ...child, is_visible: newValue } : child,
         ),
-      }))
+      })),
     );
 
     await supabase
       .from("pages")
       .update({ is_visible: newValue })
       .eq("file", item.file);
+
+    await revalidate([`/jeux/${id}`, `/jeux/${id}/guide` `/jeux/${item.slug}/${item.file}`]);
   };
 
   // -----------------------
   // MOVE
   // -----------------------
   const moveItem = async (item, folder) => {
+    const oldSlug = item.slug;
     const newSlug = folder ? `${id}/guide/${folder}` : `${id}/guide`;
 
     await supabase
@@ -125,12 +126,34 @@ export default function GuideAdminPage() {
       .update({ slug: newSlug })
       .eq("file", item.file);
 
+    const paths = [`/jeux/${id}`];
+
+    // section changed
+    if (oldSlug !== newSlug) {
+      paths.push(
+        `/jeux/${oldSlug}/${item.file}`,
+        `/jeux/${newSlug}/${item.file}`,
+      );
+    }
+
+    await revalidate(paths);
+
     fetchPages();
   };
 
   const createFolderAndMove = async (item, folderName) => {
     const folder = folderName.toLowerCase().replace(/\s/g, "_");
     await moveItem(item, folder);
+  };
+
+  const revalidate = async (paths) => {
+    const uniquePaths = [...new Set(paths)];
+
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ paths: uniquePaths }),
+    });
   };
 
   return (
@@ -146,7 +169,7 @@ export default function GuideAdminPage() {
       </div>
 
       {/* -------- GUIDE BLOCK -------- */}
-      <div className="bg-bg-tertiary border-bg-secondary rounded-xl border p-6 flex flex-col gap-6">
+      <div className="bg-bg-tertiary border-bg-secondary flex flex-col gap-6 rounded-xl border p-6">
         {/* HEADER */}
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-semibold">Guide</h2>
