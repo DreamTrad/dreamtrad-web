@@ -1,9 +1,4 @@
-import { createClient } from "@supabase/supabase-js";
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY // server only
-);
+import { createClient } from "@/lib/supabase/server";
 
 // extract vndb id from url
 function extractVndbId(url) {
@@ -26,7 +21,32 @@ async function fetchVnStats(id) {
   return json.results?.[0] || null;
 }
 
-export async function POST() {
+export async function POST(req) {
+  // 1. AUTH CHECK (same logic as admin layout)
+  const supabase = await createClient();
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    return Response.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  // 2. OPTIONAL: role check (recommended)
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("role")
+    .eq("id", user?.id)
+    .single();
+
+  const role = profile?.role;
+
+  if (!(role === "admin" || role === "super_admin")) {
+    return Response.json({ error: "Forbidden" }, { status: 403 });
+  }
+
+  // 3. business logic (use service role ONLY here)
   const { data: entries, error } = await supabase
     .from("vndbfrentries")
     .select("id, links");
@@ -59,7 +79,6 @@ export async function POST() {
 
       updated++;
 
-      // throttle (important)
       await new Promise((r) => setTimeout(r, 300));
     } catch (e) {
       console.error("VNDB error:", e);

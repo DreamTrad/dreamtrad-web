@@ -1,21 +1,20 @@
 // app/api/admin/revalidate/route.js
 
 import { revalidatePath } from "next/cache";
-import { createClient } from "@/lib/supabase/server";
 
 export async function POST(req) {
+  // -------------------------
+  // AUTH CHECK (must be first)
+  // -------------------------
+  const auth = req.headers.get("authorization");
 
-  // 1. AUTH CHECK (same logic as admin layout)
-  const supabaseAdmin = await createClient();
-
-  const {
-    data: { user },
-  } = await supabaseAdmin.auth.getUser();
-
-  if (!user) {
+  if (auth !== `Bearer ${process.env.REVALIDATE_SECRET}`) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
 
+  // -------------------------
+  // BODY PARSING
+  // -------------------------
   const body = await req.json();
 
   const { path, paths } = body;

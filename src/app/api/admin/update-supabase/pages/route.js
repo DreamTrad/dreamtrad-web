@@ -2,8 +2,21 @@
 
 import { revalidatePath } from "next/cache";
 import { createStaticClient } from "@/lib/supabase/public";
+import { createClient } from "@/lib/supabase/server";
 
 export async function POST(req) {
+
+  // 1. AUTH CHECK (same logic as admin layout)
+  const supabaseAdmin = await createClient();
+
+  const {
+    data: { user },
+  } = await supabaseAdmin.auth.getUser();
+
+  if (!user) {
+    return Response.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   const body = await req.json();
 
   const supabase = createStaticClient();

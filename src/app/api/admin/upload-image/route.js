@@ -2,9 +2,22 @@
 
 import sharp from "sharp";
 import { NextResponse } from "next/server";
-import { createClient } from "@supabase/supabase-js";
+import { createStaticClient } from "@lib/supabase/public";
+import { createClient } from "@/lib/supabase/server";
 
 export async function POST(req) {
+
+  // 1. AUTH CHECK (same logic as admin layout)
+  const supabaseAdmin = await createClient();
+
+  const {
+    data: { user },
+  } = await supabaseAdmin.auth.getUser();
+
+  if (!user) {
+    return Response.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   const formData = await req.formData();
   const file = formData.get("file");
   const path = formData.get("path");
@@ -16,10 +29,7 @@ export async function POST(req) {
     .webp({ quality: 75, effort: 4 })
     .toBuffer();
 
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_ROLE_KEY
-  );
+  const supabase = createStaticClient();
 
   const { error } = await supabase.storage
     .from("images")
