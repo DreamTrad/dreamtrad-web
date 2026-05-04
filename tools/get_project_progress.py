@@ -1,10 +1,13 @@
 import os
 import json
+from postgrest import APIResponse
+import requests
 
 from supabase import Client, create_client
 
 SUPABASE_URL: str | None = os.getenv("NEXT_PUBLIC_SUPABASE_URL")
 SUPABASE_KEY: str | None = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
+NEXT_API_TOKEN: str | None = os.getenv("REVALIDATE_SECRET")
 
 if not SUPABASE_URL or not SUPABASE_KEY:
     print("Supabase credentials not found in environment variables, exiting.")
@@ -50,6 +53,8 @@ if not rows:
     exit(1)
 print(f"Fetched {len(rows)} rows from worksheet")
 
+updated_projects: list[str] = []
+
 for row_id, row in enumerate(rows):
     if row_id == 0:
         continue
@@ -65,6 +70,7 @@ for row_id, row in enumerate(rows):
     relecture = int(row[12].replace("%", ""))
 
     print(f"Updating project '{project_id}'")
+    updated_projects.append(project_id)
 
     supabase.table("projects").update(
     {
@@ -77,5 +83,50 @@ for row_id, row in enumerate(rows):
         }
     }
     ).eq("id", project_id).execute()
+
+
+def revalidate(paths: list[str]) -> None:
+    res = requests.post(
+        "https://dreamtrad.fr/api/github/revalidate",
+        json={"paths": paths},
+        headers={
+            "Authorization": f"Bearer {NEXT_API_TOKEN}",
+            "Content-Type": "application/json",
+        },
+        timeout=10,
+    )
+
+    if res.status_code != 200:
+        print("Revalidate failed:", res.text)
+    else:
+        print("Revalidate success")
+
+# -------------------------
+# CALL AFTER UPDATE
+# -------------------------
+
+print("Revalidating pages...")
+
+paths: list[str] = ["/", "/jeux"]
+
+print("Fetching show_progress flags...")
+
+res: APIResponse = supabase.table("projects") \
+    .select("id") \
+    .eq("show_progress", True) \
+    .in_("id", updated_projects) \
+    .execute()
+
+paths: list[str] = ["/", "/jeux"]
+
+if not res.data:
+    print("No projects found for revalidation")
+
+for project in res.data:
+    pid = str(project.get("id"))
+    paths.append(f"/")
+    paths.append(f"/jeux/{pid}/patchfr/telechargement")
+
+revalidate(paths)
 
 print("=== Script finished successfully ===")

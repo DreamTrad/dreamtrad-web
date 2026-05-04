@@ -11,8 +11,6 @@ import InfoBox from "@/components/ui/InfoBox";
 import chibiAiba from "@/assets/chibi/chibi-aiba.webp";
 import { createStaticClient } from "@/lib/supabase/public";
 
-export const revalidate = 86400; // 24 hours
-
 export const metadata = {
   title: "Accueil | Dreamtrad",
 };
