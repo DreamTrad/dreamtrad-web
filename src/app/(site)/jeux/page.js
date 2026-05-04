@@ -4,8 +4,6 @@ import Link from "next/link";
 import { createStaticClient } from "@/lib/supabase/public";
 import { getImageUrl } from "@/lib/supabase/storage";
 
-export const revalidate = 3600; // 1 hour
-
 export const metadata = {
   title: "Liste des jeux",
   description:

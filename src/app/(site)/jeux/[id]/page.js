@@ -4,8 +4,6 @@ import MarkdownSection from "@/components/ui/MarkdownSection";
 import GameEmbeds from "./GameEmbeds";
 import { createStaticClient } from "@/lib/supabase/public";
 
-export const revalidate = 3600; // 1 hour
-
 export default async function GamePage({ params }) {
   const id = (await params).id;
 

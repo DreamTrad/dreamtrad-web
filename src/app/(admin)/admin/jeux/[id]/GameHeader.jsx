@@ -3,26 +3,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { supabase } from "@/lib/supabase/client";
 import { getImageUrl } from "@/lib/supabase/storage";
 
-export default function GameHeader({ id, title, isAdmin }) {
+export default function GameHeader({ id, title }) {
   const pathname = usePathname();
   const [logoError, setLogoError] = useState(false);
-
-  const toggleVisibility = async (id, value) => {
-    const confirmMessage = value
-      ? "Rendre ce projet visible sur le site ?"
-      : "Masquer ce projet du site ?";
-
-    if (!confirm(confirmMessage)) return;
-
-    setGames((prev) =>
-      prev.map((g) => (g.id === id ? { ...g, is_visible: value } : g)),
-    );
-
-    await supabase.from("projects").update({ is_visible: value }).eq("id", id);
-  };
 
   const logoPath = getImageUrl(`/jeux/${id}/logo.webp`);
 
@@ -55,15 +40,6 @@ export default function GameHeader({ id, title, isAdmin }) {
             <h2 className="text-text text-3xl font-bold">{title}</h2>
           )}
         </div>
-
-        {/* <label className="flex items-center justify-center gap-2 text-sm">
-          <span>Visible sur le site</span>
-          <input
-            type="checkbox"
-            checked={game.is_visible || false}
-            onChange={(e) => toggleVisibility(game.id, e.target.checked)}
-          />
-        </label> */}
 
         {/* Menu */}
         <nav className="flex flex-1 flex-wrap justify-center gap-2 sm:justify-end">

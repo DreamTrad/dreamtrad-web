@@ -51,6 +51,53 @@ export default function AdminGamePatchfrPage() {
     setRecruitments({ project, other });
   };
 
+  // -------------------------
+  // REVALIDATE HELPERS
+  // -------------------------
+  const getGamePaths = async (id) => {
+    const paths = [
+      `/jeux`,
+      `/jeux/${id}`,
+      `/jeux/${id}/patchfr/equipe`,
+      `/jeux/${id}/patchfr/telechargement`,
+      `/jeux/${id}/patchfr/installation`,
+      `/jeux/${id}/guide`,
+      `/jeux/${id}/guide/succes`,
+      `/jeux/${id}/staff`,
+    ];
+
+    // fetch guide pages
+    const { data: guides } = await supabase
+      .from("pages")
+      .select("slug, file")
+      .eq("project_id", id)
+      .eq("type", "guide")
+      .eq("is_visible", true);
+
+    for (const g of guides || []) {
+      paths.push(`/jeux/${g.slug}/${g.file}`);
+    }
+
+    return paths;
+  };
+
+  const publish = async (paths) => {
+    const uniquePaths = [...new Set(paths)];
+
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        paths: uniquePaths,
+      }),
+    });
+  };
+
+  // -------------------------
+  // UPDATE GAME FIELD
+  // -------------------------
   const updateGameField = async (field, value) => {
     setGame((prev) => ({ ...prev, [field]: value }));
 
@@ -58,6 +105,17 @@ export default function AdminGamePatchfrPage() {
       .from("projects")
       .update({ [field]: value })
       .eq("id", id);
+
+    // -------------------------
+    // REVALIDATE LOGIC
+    // -------------------------
+    if (field === "show_progress") {
+      await publish([`/`, `/jeux/${id}/patchfr/telechargement`]);
+    }
+
+    if (field === "is_visible") {
+      await publish(await getGamePaths(id));
+    }
   };
 
   if (!game || !recruitments.project || !recruitments.other) {
@@ -65,33 +123,32 @@ export default function AdminGamePatchfrPage() {
   }
 
   return (
-    <>
-      <div className="mx-auto flex max-w-5xl flex-col gap-6 p-6">
-        <GameToggles game={game} onChange={updateGameField} />
+    <div className="mx-auto flex max-w-5xl flex-col gap-6 p-6">
+      <GameToggles game={game} onChange={updateGameField} />
 
-        <GameProgress game={game} />
+      <GameProgress game={game} />
 
-        <RecruitmentsSection
-          recruitments={recruitments}
-          setRecruitments={setRecruitments}
-        />
+      <RecruitmentsSection
+        recruitments={recruitments}
+        setRecruitments={setRecruitments}
+      />
 
-        <PageEditor
+      <PageEditor
         slug={`${id}/patchfr/telechargement`}
         file="infopatch"
         type="infopatch"
         title="Info patch"
         editTitle
-        editContent />
+        editContent
+      />
 
-        <PatchesSection projectId={id} />
+      <PatchesSection projectId={id} />
 
-        <PlatformTabsEditor projectId={id} slug={`${id}/patchfr/installation`} />
+      <PlatformTabsEditor projectId={id} slug={`${id}/patchfr/installation`} />
 
-        <GalleryManager projectId={id} />
+      <GalleryManager projectId={id} />
 
-        <RolesSection projectId={id} />
-      </div>
-    </>
+      <RolesSection projectId={id} />
+    </div>
   );
 }
