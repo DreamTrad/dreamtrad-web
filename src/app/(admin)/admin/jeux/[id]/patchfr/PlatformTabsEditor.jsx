@@ -48,7 +48,7 @@ export default function PlatformTabsEditor({ projectId, slug }) {
       .eq("file", page.file);
 
     fetchPages();
-    await publishOnDelete();
+    await publish();
   };
 
   const slugify = (text) =>
@@ -96,17 +96,7 @@ export default function PlatformTabsEditor({ projectId, slug }) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        paths: `/jeux/${slug}`
-      }),
-    });
-  };
-
-  const publishOnDelete = async () => {
-    await fetch("/api/admin/revalidate", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        paths: [`/jeux/${slug}`, `/jeux/${projectId}`]
+        paths: [`/jeux/${slug}`, `/jeux/${projectId}`, "/sitemap.xml"]
       }),
     });
   };

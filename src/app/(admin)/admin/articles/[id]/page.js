@@ -89,7 +89,7 @@ export default function ArticleAdminPage() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        paths: [`/`, `/arctiles`, `/articles/${id}`],
+        paths: [`/`, `/articles`, `/articles/${id}`, "/sitemap.xml],
       }),
     });
   };

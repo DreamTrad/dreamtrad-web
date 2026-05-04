@@ -9,8 +9,6 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 );
 
-export const revalidate = 3600; // 1 hour
-
 export default async function sitemap() {
   const staticPages = [
     "",

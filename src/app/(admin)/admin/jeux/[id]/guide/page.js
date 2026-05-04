@@ -111,7 +111,12 @@ export default function GuideAdminPage() {
       .update({ is_visible: newValue })
       .eq("file", item.file);
 
-    await revalidate([`/jeux/${id}`, `/jeux/${id}/guide` `/jeux/${item.slug}/${item.file}`]);
+    await revalidate([
+      `/jeux/${id}`,
+      `/jeux/${id}/guide`,
+      `/jeux/${item.slug}/${item.file}`,
+      "/sitemap.xml",
+    ]);
   };
 
   // -----------------------
@@ -133,6 +138,7 @@ export default function GuideAdminPage() {
       paths.push(
         `/jeux/${oldSlug}/${item.file}`,
         `/jeux/${newSlug}/${item.file}`,
+        "/sitemap.xml",
       );
     }
 

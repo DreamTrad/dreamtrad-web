@@ -67,7 +67,7 @@ export default function ProjectStaffManager({ projectId }) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        paths: [`/jeux/${projectId}/staff`, `/jeux/${projectId}`],
+        paths: [`/jeux/${projectId}/staff`, `/jeux/${projectId}`, "/sitemap.xml"],
       }),
     });
   };

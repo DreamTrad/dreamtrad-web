@@ -64,6 +64,7 @@ export default function AdminGamePatchfrPage() {
       `/jeux/${id}/guide`,
       `/jeux/${id}/guide/succes`,
       `/jeux/${id}/staff`,
+      "/sitemap.xml",
     ];
 
     // fetch guide pages
