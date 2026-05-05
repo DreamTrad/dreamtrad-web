@@ -28,10 +28,8 @@ export async function POST(request) {
     .eq("id", user?.id)
     .single();
 
-  const role = profile?.role;
-
-  if (!(role === "admin" || role === "super_admin")) {
-    return Response.json({ error: "Forbidden" }, { status: 403 });
+  if (!["admin", "super_admin"].includes(profile?.role)) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }
 
   try {
