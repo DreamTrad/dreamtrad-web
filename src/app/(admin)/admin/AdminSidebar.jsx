@@ -11,7 +11,7 @@ export default function AdminSidebar({ projects, role }) {
       <h2 className="text-accent text-xl font-bold tracking-wide">Admin</h2>
 
       <nav className="mt-2 flex flex-col gap-2">
-        {(role === "admin" || role === "super_admin") && (
+        {role === "super_admin" && (
           <>
             <Link
               href="/admin/utilisateurs"
@@ -19,6 +19,10 @@ export default function AdminSidebar({ projects, role }) {
             >
               Utilisateurs
             </Link>
+          </>
+        )}
+        {(role === "admin" || role === "super_admin") && (
+          <>
             <Link
               href="/admin/accueil"
               className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
