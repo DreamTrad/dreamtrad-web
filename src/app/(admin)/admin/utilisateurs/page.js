@@ -2,6 +2,7 @@
 
 import InviteUserForm from "./InviteUserForm";
 import UsersManager from "./UsersManager";
+import ProjectUsersManager from "./ProjectUsersManager";
 
 export default function UtilisateursAdminPage() {
   return (
@@ -15,6 +16,10 @@ export default function UtilisateursAdminPage() {
       </div>
 
       <UsersManager />
+
+      <div className="my-10">
+        <ProjectUsersManager />
+      </div>
     </div>
   );
 }
