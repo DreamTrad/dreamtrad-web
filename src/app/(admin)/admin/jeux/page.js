@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase/client";
 import { getImageUrl } from "@/lib/supabase/storage";
+import CreateProjectModal from "./CreateProjectModal";
 
 export default function AdminGamesPage() {
   const [games, setGames] = useState([]);
@@ -79,7 +80,11 @@ export default function AdminGamesPage() {
 
   return (
     <div className="bg-bg-primary text-text-primary min-h-screen p-10">
-      <h1 className="mb-8 text-center text-3xl font-bold">Gestion des jeux</h1>
+      <div className="mb-8 flex items-center justify-between">
+        <h1 className="text-center text-3xl font-bold">Gestion des jeux</h1>
+
+        {isAdmin && <CreateProjectModal />}
+      </div>
 
       <div className="grid grid-cols-[repeat(auto-fit,350px)] justify-center gap-8">
         {games.map((game) => (

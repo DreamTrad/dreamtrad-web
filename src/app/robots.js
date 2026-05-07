@@ -8,7 +8,9 @@ export default function robots() {
         disallow: [
           "/api/",
           "/_next/",
-          "/admin",
+          "/admin/",
+          "/login",
+          "/auth/",
         ],
       },
     ],
