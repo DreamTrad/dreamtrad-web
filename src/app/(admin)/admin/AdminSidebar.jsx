@@ -19,6 +19,12 @@ export default function AdminSidebar({ projects, role }) {
             >
               Utilisateurs
             </Link>
+            <Link
+              href="/admin/drive"
+              className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
+            >
+              Drive
+            </Link>
           </>
         )}
         {(role === "admin" || role === "super_admin") && (
