@@ -3,9 +3,10 @@
 import { useState } from "react";
 import TransfersManager from "./TransfersManager";
 import DriveExplorer from "./DriveExplorer";
+import ProjectDriveSettings from "./ProjectDriveSettings";
 
 export default function DrivePage() {
-  const [tab, setTab] = useState("transfers");
+  const [tab, setTab] = useState("patches");
 
   return (
     <div className="mx-auto max-w-6xl p-6">
@@ -15,6 +16,16 @@ export default function DrivePage() {
 
       {/* Tabs */}
       <div className="mb-6 flex gap-2">
+        <button
+          onClick={() => setTab("patches")}
+          className={`rounded px-4 py-2 text-sm ${
+            tab === "patches"
+              ? "bg-accent text-white"
+              : "bg-bg-secondary"
+          }`}
+        >
+          Lien des drive projets
+        </button>
         <button
           onClick={() => setTab("transfers")}
           className={`rounded px-4 py-2 text-sm ${
@@ -39,6 +50,7 @@ export default function DrivePage() {
       </div>
 
       {/* Content */}
+      {tab === "patches" && <ProjectDriveSettings />}
       {tab === "transfers" && <TransfersManager />}
       {tab === "drive" && <DriveExplorer />}
     </div>

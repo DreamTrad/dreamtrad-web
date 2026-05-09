@@ -19,16 +19,16 @@ export default function AdminSidebar({ projects, role }) {
             >
               Utilisateurs
             </Link>
+          </>
+        )}
+        {(role === "admin" || role === "super_admin") && (
+          <>
             <Link
               href="/admin/drive"
               className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
             >
               Drive
             </Link>
-          </>
-        )}
-        {(role === "admin" || role === "super_admin") && (
-          <>
             <Link
               href="/admin/accueil"
               className="hover:bg-hover rounded-lg px-3 py-2 text-sm transition"
