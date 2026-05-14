@@ -3,6 +3,8 @@
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import { createStaticClient } from "@/lib/supabase/public";
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Mentions légales",
   description: "Mentions légales du site.",

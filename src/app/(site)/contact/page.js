@@ -5,6 +5,8 @@ import MarkdownSection from "@/components/ui/MarkdownSection";
 import ContactClient from "./ContactClient";
 import { createStaticClient } from "@/lib/supabase/public";
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Contact",
   description:

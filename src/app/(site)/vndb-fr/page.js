@@ -5,6 +5,8 @@ import { createStaticClient } from "@/lib/supabase/public";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import InfoBox from "@/components/ui/InfoBox";
 
+export const dynamic = "force-static";
+
 export async function generateMetadata(_, parent) {
   const parentMetadata = await parent;
 

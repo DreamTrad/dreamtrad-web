@@ -7,6 +7,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 
+export const dynamic = "force-static";
+
 export async function generateMetadata({ params }) {
   const slug = (await params).slug;
   const supabase = createStaticClient();

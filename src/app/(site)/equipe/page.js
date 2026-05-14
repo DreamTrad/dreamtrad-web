@@ -5,6 +5,8 @@ import InfoBox from "@/components/ui/InfoBox";
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import { createStaticClient } from "@/lib/supabase/public";
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Équipe",
   description:

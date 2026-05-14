@@ -3,6 +3,8 @@
 import { redirect } from "next/navigation";
 import { createStaticClient } from "@/lib/supabase/public";
 
+export const dynamic = "force-static";
+
 export default async function GuideIndexPage({ params }) {
   const id = (await params).id;
 

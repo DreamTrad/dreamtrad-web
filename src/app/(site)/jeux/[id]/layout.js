@@ -5,6 +5,8 @@ import GameClient from "./GameClient";
 import { createStaticClient } from "@/lib/supabase/public";
 import { getImageUrl } from "@/lib/supabase/storage";
 
+export const dynamic = "force-static";
+
 export async function generateMetadata({ params }) {
   const id = (await params).id;
 

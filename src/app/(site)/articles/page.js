@@ -9,6 +9,8 @@ export const metadata = {
     "Articles sur nos projets, sur la traduction, ou sur les visual Novel.",
 };
 
+export const dynamic = "force-static";
+
 export default async function ArticleListPage() {
   const supabase = createStaticClient();
 

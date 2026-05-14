@@ -4,6 +4,8 @@ import MarkdownSection from "@/components/ui/MarkdownSection";
 import { createStaticClient } from "@/lib/supabase/public";
 import { getImageUrl } from "@/lib/supabase/storage";
 
+export const dynamic = "force-static";
+
 export async function generateMetadata({ params }) {
   const id = (await params).id;
   const content = (await params).content;

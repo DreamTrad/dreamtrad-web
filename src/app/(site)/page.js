@@ -15,6 +15,8 @@ export const metadata = {
   title: "Accueil | Dreamtrad",
 };
 
+export const dynamic = "force-static";
+
 export default async function HomePage() {
   const supabase = createStaticClient();
 

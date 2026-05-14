@@ -6,6 +6,8 @@ import MarkdownSection from "@/components/ui/MarkdownSection";
 import InfoBox from "@/components/ui/InfoBox";
 import RecruitmentCard from "@/components/RecruitmentCard";
 
+export const dynamic = "force-static";
+
 export const metadata = {
   title: "Recrutement",
   description:

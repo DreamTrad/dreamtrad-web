@@ -4,6 +4,8 @@ import MarkdownSection from "@/components/ui/MarkdownSection";
 import GameEmbeds from "./GameEmbeds";
 import { createStaticClient } from "@/lib/supabase/public";
 
+export const dynamic = "force-static";
+
 export default async function GamePage({ params }) {
   const id = (await params).id;
 
