@@ -9,6 +9,8 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 );
 
+export const dynamic = "force-static";
+
 export default async function sitemap() {
   const staticPages = [
     "",
