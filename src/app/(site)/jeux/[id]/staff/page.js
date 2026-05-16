@@ -6,6 +6,25 @@ import { getImageUrl } from "@/lib/supabase/storage";
 
 export const dynamic = "force-static";
 
+export async function generateStaticParams() {
+  const supabase = createStaticClient();
+
+  const { data: projects } = await supabase
+    .from("projects")
+    .select("id")
+    .eq("is_visible", true);
+
+  const { data } = await supabase.from("staff_projects").select("project_id");
+
+  const visibleProjectIds = new Set(projects.map((p) => p.id));
+
+  return [
+    ...new Set(
+      data.map((s) => s.project_id).filter((id) => visibleProjectIds.has(id)),
+    ),
+  ];
+}
+
 export async function generateMetadata({ params }) {
   const id = (await params).id;
 

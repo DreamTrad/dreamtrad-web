@@ -9,6 +9,19 @@ import MarkdownSection from "@/components/ui/MarkdownSection";
 
 export const dynamic = "force-static";
 
+export async function generateStaticParams() {
+  const supabase = createStaticClient();
+
+  const { data } = await supabase
+    .from("articles")
+    .select("slug")
+    .eq("is_visible", true);
+
+  return data.map((a) => ({
+    slug: a.slug,
+  }));
+}
+
 export async function generateMetadata({ params }) {
   const slug = (await params).slug;
   const supabase = createStaticClient();
