@@ -12,20 +12,54 @@ export default function GuideAdminPage() {
 
   const [sections, setSections] = useState([]);
   const [isDirty, setIsDirty] = useState(false);
+  const [showAchievements, setShowAchievements] = useState(false);
 
   useEffect(() => {
     fetchPages();
   }, [id]);
 
   const fetchPages = async () => {
-    const { data } = await supabase
-      .from("pages")
-      .select("*")
-      .eq("project_id", id)
-      .eq("type", "guide")
-      .order("position", { ascending: true });
+    const [{ data: pages }, { data: project }] = await Promise.all([
+      supabase
+        .from("pages")
+        .select("*")
+        .eq("project_id", id)
+        .eq("type", "guide")
+        .order("position", { ascending: true }),
 
-    setSections(buildGuideSections(data || [], id));
+      supabase
+        .from("projects")
+        .select("show_achievements")
+        .eq("id", id)
+        .single(),
+    ]);
+
+    setSections(buildGuideSections(pages || [], id));
+    setShowAchievements(project?.show_achievements ?? false);
+  };
+
+  const toggleAchievements = async () => {
+    const newValue = !showAchievements;
+
+    setShowAchievements(newValue);
+
+    await supabase
+      .from("projects")
+      .update({ show_achievements: newValue })
+      .eq("id", id);
+
+    await fetch("/api/admin/revalidate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        paths: [
+          `/jeux/${id}/guide/succes`,
+          `/jeux/${id}`,
+          `/jeux/${id}/guide`,
+          "/sitemap.xml",
+        ],
+      }),
+    });
   };
 
   // -----------------------
@@ -165,13 +199,22 @@ export default function GuideAdminPage() {
   return (
     <div className="flex flex-col gap-6 p-6">
       {/* -------- SUCCESS BUTTON -------- */}
-      <div>
+      <div className="flex items-center gap-6">
         <button
           onClick={() => router.push(`/admin/jeux/${id}/guide/succes`)}
           className="bg-accent rounded px-4 py-2 text-white"
         >
           Gérer les succès
         </button>
+
+        <label className="flex items-center gap-2 text-sm">
+          <input
+            type="checkbox"
+            checked={showAchievements}
+            onChange={toggleAchievements}
+          />
+          Page des succès visible sur le site
+        </label>
       </div>
 
       {/* -------- GUIDE BLOCK -------- */}
