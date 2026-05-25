@@ -129,15 +129,18 @@ export default function GameSidebar({
 
     const groups = {};
 
+    const roots = [];
+
     guideData.forEach((p) => {
       const parts = p.slug.split("/");
 
       if (p.slug === baseSlug) {
-        groups[p.file] = {
+        roots.push({
           id: p.file,
           name: p.alias || p.title,
-        };
-
+          file: p.file,
+          position: p.position ?? 0,
+        });
         return;
       }
 
@@ -149,17 +152,29 @@ export default function GameSidebar({
             id: groupKey,
             name: groupKey.replace(/_/g, " "),
             children: [],
+            position: 9999,
           };
         }
 
         groups[groupKey].children.push({
           id: p.file,
           name: p.alias || p.title,
+          file: p.file,
+          position: p.position ?? 0,
         });
       }
     });
 
-    sections = Object.values(groups);
+    const sortedRoots = roots.sort((a, b) => a.position - b.position);
+
+    const sortedGroups = Object.values(groups)
+      .map((g) => ({
+        ...g,
+        children: g.children.sort((a, b) => a.position - b.position),
+      }))
+      .sort((a, b) => (a.position ?? 9999) - (b.position ?? 9999));
+
+    sections = [...sortedRoots, ...sortedGroups];
 
     if (hasAchievements) {
       sections.push({

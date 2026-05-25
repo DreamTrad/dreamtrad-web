@@ -6,6 +6,25 @@ import { getImageUrl } from "@/lib/supabase/storage";
 
 export const dynamic = "force-static";
 
+export async function generateStaticParams() {
+  const supabase = createStaticClient();
+
+  const { data } = await supabase
+    .from("pages")
+    .select("project_id")
+    .eq("type", "installation")
+    .eq("is_visible", true);
+
+  if (!data) return [];
+
+  // unique project ids
+  const uniqueIds = [...new Set(data.map((p) => p.project_id))];
+
+  return uniqueIds.map((id) => ({
+    id: String(id),
+  }));
+}
+
 export async function generateMetadata({ params }) {
   const id = (await params).id;
   const image = getImageUrl(`/jeux/${id}/cover.webp`);

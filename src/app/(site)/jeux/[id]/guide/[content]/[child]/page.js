@@ -6,6 +6,33 @@ import { getImageUrl } from "@/lib/supabase/storage";
 
 export const dynamic = "force-static";
 
+export async function generateStaticParams() {
+  const supabase = createStaticClient();
+
+  const { data } = await supabase
+    .from("pages")
+    .select("project_id, slug, file")
+    .eq("type", "guide")
+    .eq("is_visible", true);
+
+  return (data ?? [])
+    .filter((p) => {
+      if (!p.slug || !p.file || !p.project_id) return false;
+
+      const parts = p.slug.split("/");
+      return parts.length >= 3 && parts[2];
+    })
+    .map((p) => {
+      const parts = p.slug.split("/");
+
+      return {
+        id: String(p.project_id),
+        content: parts[2],
+        child: p.file,
+      };
+    });
+}
+
 export async function generateMetadata({ params }) {
   const id = (await params).id;
   const content = (await params).content;

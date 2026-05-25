@@ -9,20 +9,18 @@ export const dynamic = "force-static";
 export async function generateStaticParams() {
   const supabase = createStaticClient();
 
-  const { data: projects } = await supabase
-    .from("projects")
-    .select("id")
-    .eq("is_visible", true);
+  const [{ data: projects }, { data }] = await Promise.all([
+    supabase.from("projects").select("id").eq("is_visible", true),
+    supabase.from("staff_projects").select("project_id"),
+  ]);
 
-  const { data } = await supabase.from("staff_projects").select("project_id");
+  const visibleProjectIds = new Set(projects?.map((p) => p.id) ?? []);
 
-  const visibleProjectIds = new Set(projects.map((p) => p.id));
-
-  return [
-    ...new Set(
-      data.map((s) => s.project_id).filter((id) => visibleProjectIds.has(id)),
-    ),
-  ];
+  return [...new Set(data?.map((s) => s.project_id) ?? [])]
+    .filter((id) => visibleProjectIds.has(id))
+    .map((id) => ({
+      id: String(id),
+    }));
 }
 
 export async function generateMetadata({ params }) {
