@@ -1,11 +1,19 @@
 // app/sitemap.js
 
-import { games } from "@/data/jeux";
-import articles from "@/data/json/articles.json";
+import { createClient } from "@supabase/supabase-js";
 
 const SITE_URL = "https://dreamtrad.fr";
 
-export default function sitemap() {
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+);
+
+export const dynamic = "force-static";
+
+export default async function sitemap() {
+  const NOW = new Date(0);
+
   const staticPages = [
     "",
     "/jeux",
@@ -17,138 +25,142 @@ export default function sitemap() {
     "/vndb-fr",
   ];
 
-  const staticEntries = staticPages.map((path) => ({
-    url: `${SITE_URL}${path}`,
-    lastModified: new Date(),
-  }));
+  const [
+    { data: articles },
+    { data: projects },
+    { data: pages },
+    { data: staffProjects },
+  ] = await Promise.all([
+    supabase.from("articles").select("slug, updated_at").eq("is_visible", true),
+    supabase
+      .from("projects")
+      .select("id, show_achievements, updated_at")
+      .eq("is_visible", true),
+    supabase
+      .from("pages")
+      .select("slug, file, type, project_id, updated_at")
+      .eq("is_visible", true),
+    supabase.from("staff_projects").select("project_id"),
+  ]);
 
-  const articleEntries = articles.map((article) => ({
-    url: `${SITE_URL}/articles/${article.slug}`,
-    lastModified: article.date ? new Date(article.date) : new Date(),
-  }));
+  const pageUpdatedAt = new Map(pages.map((p) => [p.slug, p.updated_at]));
 
-  const gameEntries = games.map((game) => ({
+  const latestProjectUpdatedAt = projects.reduce((latest, project) => {
+    if (!project.updated_at) return latest;
+
+    const date = new Date(project.updated_at);
+
+    return date > latest ? date : latest;
+  }, NOW);
+
+  const latestArticleUpdatedAt = articles.reduce((latest, article) => {
+    if (!article.updated_at) return latest;
+
+    const date = new Date(article.updated_at);
+
+    return date > latest ? date : latest;
+  }, NOW);
+
+  const staticEntries = staticPages.map((path) => {
+    if (path === "/jeux") {
+      return {
+        url: `${SITE_URL}${path}`,
+        lastModified: latestProjectUpdatedAt,
+      };
+    }
+
+    if (path === "/articles") {
+      return {
+        url: `${SITE_URL}${path}`,
+        lastModified: latestArticleUpdatedAt,
+      };
+    }
+
+    const slug = path === "" ? "/" : path.slice(1);
+
+    return {
+      url: `${SITE_URL}${path}`,
+      lastModified: new Date(pageUpdatedAt.get(slug) ?? NOW),
+    };
+  });
+
+  const articleEntries =
+    articles?.map((article) => ({
+      url: `${SITE_URL}/articles/${article.slug}`,
+      lastModified: article.updated_at ? new Date(article.updated_at) : NOW,
+    })) || [];
+
+  const gameEntries = projects.map((game) => ({
     url: `${SITE_URL}/jeux/${game.id}`,
-    lastModified: new Date(),
+    lastModified: game.updated_at ? new Date(game.updated_at) : NOW,
   }));
+
+  const guidePages = [];
+  const installationPages = [];
+  const otherPages = [];
+
+  for (const p of pages) {
+    if (p.type === "guide") {
+      guidePages.push(p);
+    } else if (p.type === "installation") {
+      installationPages.push(p);
+    } else {
+      otherPages.push(p);
+    }
+  }
 
   const guideEntries = [];
 
-  for (const game of games) {
-    const sections = game.categories?.guide?.sections ?? [];
-
-    for (const section of sections) {
-      guideEntries.push({
-        url: `${SITE_URL}/jeux/${game.id}/guide/${section.id}`,
-        lastModified: new Date(),
-      });
-    }
-  }
-
-  const guideChildEntries = [];
-
-  for (const game of games) {
-    const sections = game.categories?.guide?.sections ?? [];
-
-    for (const section of sections) {
-      const children = section.children ?? [];
-
-      for (const child of children) {
-        guideChildEntries.push({
-          url: `${SITE_URL}/jeux/${game.id}/guide/${section.id}/${child.id}`,
-          lastModified: new Date(),
-        });
-      }
-    }
-  }
-
-  const succesEntries = [];
-
-  for (const game of games) {
-    const hasSucces = game.categories?.guide?.sections?.some(
-      (s) => s.id === "succes",
-    );
-
-    if (!hasSucces) continue;
-
-    succesEntries.push({
-      url: `${SITE_URL}/jeux/${game.id}/guide/succes`,
-      lastModified: new Date(),
+  for (const guidePage of guidePages) {
+    guideEntries.push({
+      url: `${SITE_URL}/jeux/${guidePage.slug}/${guidePage.file}`,
+      lastModified: guidePage.updated_at ? new Date(guidePage.updated_at) : NOW,
     });
   }
 
-  const staffEntries = [];
+  const achievementEntries = projects
+    .filter((p) => p.show_achievements && p.updated_at)
+    .map((p) => ({
+      url: `${SITE_URL}/jeux/${p.id}/guide/succes`,
+      lastModified: new Date(p.updated_at),
+    }));
 
-  for (const game of games) {
-    const hasStaff = game.categories?.general?.sections?.find(
-      (s) => s.id === "staff",
-    )?.staff;
+  const projectUpdatedAt = new Map(projects.map((p) => [p.id, p.updated_at]));
 
-    if (!hasStaff || hasStaff.length === 0) continue;
+  const staffEntries = staffProjects
+    .map((s) => s.project_id)
+    .filter((id) => projectUpdatedAt.has(id))
+    .map((id) => ({
+      url: `${SITE_URL}/jeux/${id}/staff`,
+      lastModified: projectUpdatedAt.get(id)
+        ? new Date(projectUpdatedAt.get(id))
+        : NOW,
+    }));
 
-    staffEntries.push({
-      url: `${SITE_URL}/jeux/${game.id}/staff`,
-      lastModified: new Date(),
-    });
-  }
-
-  const patchfrTeamEntries = [];
-
-  for (const game of games) {
-    const hasTeamSection = game.categories?.patchfr?.sections?.some(
-      (s) => s.id === "equipe",
-    );
-
-    if (!hasTeamSection) {
-      continue;
-    }
-
-    patchfrTeamEntries.push({
+  const patchfrEntries = projects.flatMap((game) => [
+    {
       url: `${SITE_URL}/jeux/${game.id}/patchfr/equipe`,
-      lastModified: new Date(),
-    });
-  }
-
-  const patchfrInstallationEntries = [];
-
-  for (const game of games) {
-    const hasInstallationSection = game.categories?.patchfr?.sections?.some(
-      (s) => s.id === "installation",
-    );
-
-    if (!hasInstallationSection) continue;
-
-    patchfrInstallationEntries.push({
-      url: `${SITE_URL}/jeux/${game.id}/patchfr/installation`,
-      lastModified: new Date(),
-    });
-  }
-
-  const patchfrDownloadEntries = [];
-
-  for (const game of games) {
-    const hasDownloadSection = game.categories?.patchfr?.sections?.some(
-      (s) => s.id === "telechargement",
-    );
-
-    if (!hasDownloadSection) continue;
-
-    patchfrDownloadEntries.push({
+      lastModified: game.updated_at ? new Date(game.updated_at) : NOW,
+    },
+    {
       url: `${SITE_URL}/jeux/${game.id}/patchfr/telechargement`,
-      lastModified: new Date(),
-    });
-  }
+      lastModified: game.updated_at ? new Date(game.updated_at) : NOW,
+    },
+  ]);
+
+  const patchfrInstallationEntries = installationPages.map((page) => ({
+    url: `${SITE_URL}/jeux/${page.project_id}/patchfr/installation`,
+    lastModified: page.updated_at ? new Date(page.updated_at) : NOW,
+  }));
 
   return [
     ...staticEntries,
     ...articleEntries,
     ...gameEntries,
     ...guideEntries,
-    ...guideChildEntries,
-    ...succesEntries,
+    ...achievementEntries,
     ...staffEntries,
-    ...patchfrTeamEntries,
+    ...patchfrEntries,
     ...patchfrInstallationEntries,
-    ...patchfrDownloadEntries,
   ];
 }

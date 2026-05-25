@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getImageUrl } from "@/lib/supabase/storage";
 
 export default function Footer() {
   return (
@@ -68,7 +69,7 @@ export default function Footer() {
           <div className="flex gap-4">
             <a href="https://discord.gg/gsuAz4DK4p" target="_blank" rel="noreferrer">
               <img
-                src="/icons/website/discord.svg"
+                src={getImageUrl("/icons/website/discord.svg")}
                 alt="Discord"
                 className="h-6 w-6 hover:opacity-80"
               />
@@ -79,7 +80,7 @@ export default function Footer() {
               rel="noreferrer"
             >
               <img
-                src="/icons/website/github.svg"
+                src={getImageUrl("/icons/website/github.svg")}
                 alt="GitHub"
                 className="h-6 w-6 hover:opacity-80"
               />
@@ -90,7 +91,7 @@ export default function Footer() {
               rel="noreferrer"
             >
               <img
-                src="/icons/website/xitter.svg"
+                src={getImageUrl("/icons/website/xitter.svg")}
                 alt="X/Twitter"
                 className="h-6 w-6 hover:opacity-80"
               />
@@ -101,7 +102,7 @@ export default function Footer() {
               rel="noreferrer"
             >
               <img
-                src="/icons/website/bluesky.svg"
+                src={getImageUrl("/icons/website/bluesky.svg")}
                 alt="Bluesky"
                 className="h-6 w-6 hover:opacity-80"
               />

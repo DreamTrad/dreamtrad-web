@@ -1,0 +1,143 @@
+// app/(site)articles/[slug]/page.js
+
+import { createStaticClient } from "@/lib/supabase/public";
+import { getImageUrl } from "@/lib/supabase/storage";
+import Link from "next/link";
+import Image from "next/image";
+import { notFound } from "next/navigation";
+import MarkdownSection from "@/components/ui/MarkdownSection";
+
+export const dynamic = "force-static";
+
+export async function generateStaticParams() {
+  const supabase = createStaticClient();
+
+  const { data } = await supabase
+    .from("articles")
+    .select("slug")
+    .eq("is_visible", true);
+
+  return data.map((a) => ({
+    slug: a.slug,
+  }));
+}
+
+export async function generateMetadata({ params }) {
+  const slug = (await params).slug;
+  const supabase = createStaticClient();
+
+  const { data: article } = await supabase
+    .from("articles")
+    .select("slug, title, excerpt, is_visible")
+    .eq("slug", slug)
+    .single();
+
+  if (!article || !article.is_visible) {
+    return {
+      title: "Article introuvable",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
+  }
+
+  const baseUrl = "https://dreamtrad.fr";
+  const articleUrl = `${baseUrl}/articles/${article.slug}`;
+  const imageUrl = getImageUrl(`articles-content/${article.id}/cover.webp`);
+
+  return {
+    metadataBase: new URL(baseUrl),
+
+    title: article.title,
+    description: article.excerpt || "",
+
+    alternates: {
+      canonical: articleUrl,
+    },
+
+    openGraph: {
+      type: "article",
+      url: articleUrl,
+      title: article.title,
+      description: article.excerpt || "",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 675,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt || "",
+      images: [imageUrl],
+    },
+  };
+}
+
+export default async function ArticlePage({ params }) {
+  const slug = (await params).slug;
+  const supabase = createStaticClient();
+
+  const { data: article } = await supabase
+    .from("articles")
+    .select("*")
+    .eq("slug", slug)
+    .single();
+
+  if (!article || !article.is_visible) return notFound();
+
+  const coverImage = getImageUrl(`/articles-content/${article.slug}/cover.webp`);
+
+  return (
+    <div className="relative mx-auto max-w-4xl p-2">
+      <Link
+        href="/articles"
+        className="text-accent mb-6 inline-block hover:underline"
+      >
+        ← Retour aux articles
+      </Link>
+
+      <div className="bg-bg-tertiary border-bg-secondary rounded-xl border p-6 shadow-lg">
+        <Image
+          src={coverImage}
+          alt={article.title}
+          width={1200}
+          height={675}
+          className="mb-6 w-full rounded-lg shadow-md"
+          priority
+        />
+
+        <h1 className="text-text mb-4 text-3xl font-bold">
+          {article.title}
+        </h1>
+
+        <p className="text-text-tertiary mb-6">
+          {article.authors?.join(", ")} —{" "}
+          {new Date(article.date).toLocaleDateString("fr-FR")}
+        </p>
+
+        <MarkdownSection
+          content={article.content || ""}
+          imageClassName="mx-auto block"
+        />
+
+        {article.tags?.length > 0 && (
+          <div className="mt-6 flex flex-wrap gap-2">
+            {article.tags.map((tag, idx) => (
+              <span
+                key={idx}
+                className="bg-bg-secondary text-text-secondary rounded px-2 py-1 text-xs"
+              >
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

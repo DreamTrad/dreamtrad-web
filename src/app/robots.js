@@ -5,9 +5,15 @@ export default function robots() {
       {
         userAgent: "*",
         allow: "/",
+        disallow: [
+          "/api/",
+          "/_next/",
+          "/admin/",
+          "/login",
+          "/auth/",
+        ],
       },
     ],
     sitemap: "https://dreamtrad.fr/sitemap.xml",
   };
 }
-``

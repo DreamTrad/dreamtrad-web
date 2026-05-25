@@ -4,12 +4,6 @@ on:
   schedule:
     - cron: "0 2 * * 1"
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
-permissions:
-  contents: write
-
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -17,7 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: develop
           persist-credentials: true
 
       - name: Set up Python
@@ -26,24 +20,12 @@ jobs:
           python-version: "3.13"
 
       - name: Install dependencies
-        run: pip install gspread oauth2client
+        run: pip install gspread oauth2client supabase
 
       - name: Run update script
         run: python -m tools.get_project_progress
         env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-
-      - name: Configure Git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Commit and push changes to main
-        run: |
-          git add src/data/json/progress.json
-          if git diff --cached --quiet; then
-            echo "No changes detected, skipping commit."
-          else
-            git commit -m "Auto update progress.json from Google Sheet"
-            git push origin main
-          fi
+          REVALIDATE_SECRET: ${{ secrets.REVALIDATE_SECRET }}

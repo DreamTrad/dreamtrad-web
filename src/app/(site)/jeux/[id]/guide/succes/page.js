@@ -1,0 +1,89 @@
+// app/(site)/jeux/[id]/guide/succes/page.js
+
+import AchievementClient from "./AchievementClient";
+import { createStaticClient } from "@/lib/supabase/public";
+import { getImageUrl } from "@/lib/supabase/storage";
+
+export const dynamic = "force-static";
+
+export async function generateStaticParams() {
+
+  const supabase = createStaticClient();
+
+  const { data } = await supabase
+    .from("projects")
+    .select("id")
+    .eq("is_visible", true)
+    .eq("show_achievements", true);
+
+  return data.map((p) => ({
+    id: p.id.toString(),
+  }));
+}
+
+export async function generateMetadata({ params }) {
+  const id = (await params).id;
+
+  const supabase = createStaticClient();
+
+  const { data: projectData } = await supabase
+    .from("projects")
+    .select("title")
+    .eq("id", id)
+    .single();
+
+  const title = `Succès | ${projectData.title}`;
+  const description = `Consultez la liste complète des succès pour ${projectData.title}.`;
+  const image = getImageUrl(`/jeux/${id}/cover.webp`);
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: projectData.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
+  };
+}
+
+export default async function SuccesPage({ params }) {
+  const id = (await params).id;
+
+  const supabase = createStaticClient();
+
+  const { data: achievementData } = await supabase
+    .from("achievements")
+    .select("id, title_og, title_fr, description_fr, resolution, hidden")
+    .eq("project_id", id)
+    .not("description_fr", "is", null)
+    .neq("description_fr", "")
+    .order("id", { ascending: true })
+
+  const { data: projectData } = await supabase
+    .from("projects")
+    .select("title")
+    .eq("id", id)
+    .single();
+
+  return (
+    <div className="mx-auto max-w-7xl">
+      <h1 className="text-text mb-10 text-4xl font-extrabold tracking-tight">
+        Les succès de {projectData.title}
+      </h1>
+      <AchievementClient achievementData={achievementData} gameId={id} />
+    </div>
+  );
+}
