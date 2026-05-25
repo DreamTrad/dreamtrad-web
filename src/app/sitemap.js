@@ -15,7 +15,7 @@ export default async function sitemap() {
   const NOW = new Date(0);
 
   const staticPages = [
-    "/",
+    "",
     "/jeux",
     "/articles",
     "/contact",
@@ -45,8 +45,38 @@ export default async function sitemap() {
 
   const pageUpdatedAt = new Map(pages.map((p) => [p.slug, p.updated_at]));
 
+  const latestProjectUpdatedAt = projects.reduce((latest, project) => {
+    if (!project.updated_at) return latest;
+
+    const date = new Date(project.updated_at);
+
+    return date > latest ? date : latest;
+  }, NOW);
+
+  const latestArticleUpdatedAt = articles.reduce((latest, article) => {
+    if (!article.updated_at) return latest;
+
+    const date = new Date(article.updated_at);
+
+    return date > latest ? date : latest;
+  }, NOW);
+
   const staticEntries = staticPages.map((path) => {
-    const slug = path === "" ? "accueil" : path.slice(1);
+    if (path === "/jeux") {
+      return {
+        url: `${SITE_URL}${path}`,
+        lastModified: latestProjectUpdatedAt,
+      };
+    }
+
+    if (path === "/articles") {
+      return {
+        url: `${SITE_URL}${path}`,
+        lastModified: latestArticleUpdatedAt,
+      };
+    }
+
+    const slug = path === "" ? "/" : path.slice(1);
 
     return {
       url: `${SITE_URL}${path}`,
