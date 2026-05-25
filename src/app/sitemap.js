@@ -119,22 +119,23 @@ export default async function sitemap() {
   }
 
   const achievementEntries = projects
-    .filter((p) => p.show_achievements)
+    .filter((p) => p.show_achievements && p.updated_at)
     .map((p) => ({
       url: `${SITE_URL}/jeux/${p.id}/guide/succes`,
-      lastModified: NOW,
+      lastModified: new Date(p.updated_at),
     }));
 
-  const visibleProjectIds = new Set(projects.map((p) => p.id));
-  const staffByProject = new Set(
-    staffProjects
-      .map((s) => s.project_id)
-      .filter((id) => visibleProjectIds.has(id)),
-  );
-  const staffEntries = [...staffByProject].map((id) => ({
-    url: `${SITE_URL}/jeux/${id}/staff`,
-    lastModified: NOW,
-  }));
+  const projectUpdatedAt = new Map(projects.map((p) => [p.id, p.updated_at]));
+
+  const staffEntries = staffProjects
+    .map((s) => s.project_id)
+    .filter((id) => projectUpdatedAt.has(id))
+    .map((id) => ({
+      url: `${SITE_URL}/jeux/${id}/staff`,
+      lastModified: projectUpdatedAt.get(id)
+        ? new Date(projectUpdatedAt.get(id))
+        : NOW,
+    }));
 
   const patchfrEntries = projects.flatMap((game) => [
     {
