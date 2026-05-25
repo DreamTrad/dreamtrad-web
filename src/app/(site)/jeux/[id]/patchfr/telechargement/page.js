@@ -7,6 +7,20 @@ import { getImageUrl } from "@/lib/supabase/storage";
 
 export const dynamic = "force-static";
 
+export async function generateStaticParams() {
+
+  const supabase = createStaticClient();
+
+  const { data } = await supabase
+    .from("projects")
+    .select("id")
+    .eq("is_visible", true);
+
+  return data.map((p) => ({
+    id: p.id.toString(),
+  }));
+}
+
 export async function generateMetadata({ params }) {
   const id = (await params).id;
 
