@@ -15,7 +15,7 @@ export default async function sitemap() {
   const NOW = new Date(0);
 
   const staticPages = [
-    "",
+    "/",
     "/jeux",
     "/articles",
     "/contact",
@@ -31,32 +31,38 @@ export default async function sitemap() {
     { data: pages },
     { data: staffProjects },
   ] = await Promise.all([
-    supabase.from("articles").select("slug, date").eq("is_visible", true),
+    supabase.from("articles").select("slug, updated_at").eq("is_visible", true),
     supabase
       .from("projects")
-      .select("id, show_achievements")
+      .select("id, show_achievements, updated_at")
       .eq("is_visible", true),
     supabase
       .from("pages")
-      .select("slug, file, type, project_id")
+      .select("slug, file, type, project_id, updated_at")
       .eq("is_visible", true),
     supabase.from("staff_projects").select("project_id"),
   ]);
 
-  const staticEntries = staticPages.map((path) => ({
-    url: `${SITE_URL}${path}`,
-    lastModified: NOW,
-  }));
+  const pageUpdatedAt = new Map(pages.map((p) => [p.slug, p.updated_at]));
+
+  const staticEntries = staticPages.map((path) => {
+    const slug = path === "" ? "accueil" : path.slice(1);
+
+    return {
+      url: `${SITE_URL}${path}`,
+      lastModified: new Date(pageUpdatedAt.get(slug) ?? NOW),
+    };
+  });
 
   const articleEntries =
     articles?.map((article) => ({
       url: `${SITE_URL}/articles/${article.slug}`,
-      lastModified: article.date ? new Date(article.date) : NOW,
+      lastModified: article.updated_at ? new Date(article.updated_at) : NOW,
     })) || [];
 
   const gameEntries = projects.map((game) => ({
     url: `${SITE_URL}/jeux/${game.id}`,
-    lastModified: NOW,
+    lastModified: game.updated_at ? new Date(game.updated_at) : NOW,
   }));
 
   const guidePages = [];
@@ -78,7 +84,7 @@ export default async function sitemap() {
   for (const guidePage of guidePages) {
     guideEntries.push({
       url: `${SITE_URL}/jeux/${guidePage.slug}/${guidePage.file}`,
-      lastModified: NOW,
+      lastModified: guidePage.updated_at ? new Date(guidePage.updated_at) : NOW,
     });
   }
 
@@ -97,27 +103,23 @@ export default async function sitemap() {
   );
   const staffEntries = [...staffByProject].map((id) => ({
     url: `${SITE_URL}/jeux/${id}/staff`,
-    lastModified: new Date(0),
+    lastModified: NOW,
   }));
 
   const patchfrEntries = projects.flatMap((game) => [
     {
       url: `${SITE_URL}/jeux/${game.id}/patchfr/equipe`,
-      lastModified: NOW,
+      lastModified: game.updated_at ? new Date(game.updated_at) : NOW,
     },
     {
       url: `${SITE_URL}/jeux/${game.id}/patchfr/telechargement`,
-      lastModified: NOW,
+      lastModified: game.updated_at ? new Date(game.updated_at) : NOW,
     },
   ]);
 
-  const installationProjectIds = new Set(
-    installationPages.map((p) => p.project_id),
-  );
-
-  const patchfrInstallationEntries = [...installationProjectIds].map((id) => ({
-    url: `${SITE_URL}/jeux/${id}/patchfr/installation`,
-    lastModified: NOW,
+  const patchfrInstallationEntries = installationPages.map((page) => ({
+    url: `${SITE_URL}/jeux/${page.project_id}/patchfr/installation`,
+    lastModified: page.updated_at ? new Date(page.updated_at) : NOW,
   }));
 
   return [
