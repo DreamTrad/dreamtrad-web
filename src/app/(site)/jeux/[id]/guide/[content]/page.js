@@ -3,6 +3,7 @@
 import MarkdownSection from "@/components/ui/MarkdownSection";
 import { createStaticClient } from "@/lib/supabase/public";
 import { getImageUrl } from "@/lib/supabase/storage";
+import { notFound } from "next/navigation";
 
 export const dynamic = "force-static";
 
@@ -27,20 +28,23 @@ export async function generateMetadata({ params }) {
 
   const supabase = createStaticClient();
 
-  const { data: pageData } = await supabase
+  const { data: pageData, error: pageError } = await supabase
     .from("pages")
     .select("title, description")
     .eq("file", content)
     .eq("project_id", id)
     .eq("type", "guide")
-    .limit(1)
-    .single();
+    .maybeSingle();
 
-  const { data: projectData } = await supabase
+  const { data: projectData, error: projectError } = await supabase
     .from("projects")
     .select("title")
     .eq("id", id)
-    .single();
+    .maybeSingle();
+
+  if (pageError || projectError || !pageData || !projectData) {
+    notFound();
+  }
 
   const image = getImageUrl(`/jeux/${id}/cover.webp`);
 
@@ -74,14 +78,17 @@ export default async function GuideContentPage({ params }) {
 
   const supabase = createStaticClient();
 
-  const { data: pageData } = await supabase
+  const { data: pageData, error } = await supabase
     .from("pages")
     .select("title, content")
     .eq("file", content)
     .eq("project_id", id)
     .eq("type", "guide")
-    .limit(1)
-    .single();
+    .maybeSingle();
+
+  if (error || !pageData) {
+    notFound();
+  }
 
   return (
     <div className="mx-auto max-w-7xl px-4 pb-20">

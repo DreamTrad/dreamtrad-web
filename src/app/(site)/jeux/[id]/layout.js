@@ -4,6 +4,7 @@ import GameHeader from "./GameHeader";
 import GameClient from "./GameClient";
 import { createStaticClient } from "@/lib/supabase/public";
 import { getImageUrl } from "@/lib/supabase/storage";
+import { notFound } from "next/navigation";
 
 export const dynamic = "force-static";
 
@@ -17,14 +18,9 @@ export async function generateMetadata({ params }) {
     .select("title")
     .eq("id", id)
     .eq("is_visible", true)
-    .single();
+    .maybeSingle();
 
-  if (error) {
-    console.error("Error fetching project:", error);
-    return {};
-  }
-
-  if (!project) return {};
+  if (error || !project) return {};
 
   const image = getImageUrl(`/jeux/${id}/cover.webp`);
 
@@ -60,11 +56,10 @@ export default async function GameLayout({ children, params }) {
     .select("*")
     .eq("id", id)
     .eq("is_visible", true)
-    .single();
+    .maybeSingle();
 
-  if (error) {
-    console.error("Error fetching project:", error);
-    return {};
+  if (error || !project) {
+    notFound();
   }
 
   // Patch check
