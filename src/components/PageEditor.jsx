@@ -20,6 +20,8 @@ export default function PageEditor({
   const [draft, setDraft] = useState(null);
   const [original, setOriginal] = useState(null);
   const [isDirty, setIsDirty] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
+  const [saveError, setSaveError] = useState("");
 
   useEffect(() => {
     fetchPage();
@@ -73,28 +75,43 @@ export default function PageEditor({
       updateData[field] = draft[field];
     });
 
-    const res = await fetch("/api/admin/update-supabase/pages", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        slug,
-        file,
-        type,
-        data: updateData,
-      }),
-    });
+    setIsSaving(true);
+    setSaveError("");
 
-    if (!res.ok) {
-      console.error("Save failed");
-      return;
+    try {
+      const res = await fetch("/api/admin/update-supabase/pages", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          slug,
+          file,
+          type,
+          data: updateData,
+        }),
+      });
+      const result = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        setSaveError(
+          typeof result.error === "string"
+            ? result.error
+            : result.error?.message || "La sauvegarde a échoué.",
+        );
+        return;
+      }
+
+      setOriginal(draft);
+      setIsDirty(false);
+    } catch (error) {
+      setSaveError(error.message || "Impossible de contacter le serveur.");
+    } finally {
+      setIsSaving(false);
     }
-
-    setOriginal(draft);
-    setIsDirty(false);
   };
 
   const reset = () => {
     setDraft(original);
+    setSaveError("");
   };
 
   if (!draft) return <div className="p-6">Chargement...</div>;
@@ -164,6 +181,11 @@ export default function PageEditor({
       )}
 
       {/* Actions */}
+      {saveError && (
+        <p role="alert" className="text-sm text-red-600">
+          {saveError}
+        </p>
+      )}
       {isDirty && (
         <div className="flex justify-end gap-2">
           <button
@@ -174,9 +196,10 @@ export default function PageEditor({
           </button>
           <button
             onClick={save}
+            disabled={isSaving}
             className="bg-success rounded px-4 py-2 text-white"
           >
-            Enregistrer
+            {isSaving ? "Enregistrement..." : "Enregistrer"}
           </button>
         </div>
       )}
