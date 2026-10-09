@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { supabase } from "@/lib/supabase/client";
 import StorageImageEditor from "@/components/StorageImageEditor";
 
 export default function PageImagesManager({ slug, file, ignoreFile = false }) {
   const [images, setImages] = useState([]);
   const [newName, setNewName] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [loadError, setLoadError] = useState("");
 
   // Build folder path properly
   const pathFolder = ignoreFile
@@ -14,18 +15,26 @@ export default function PageImagesManager({ slug, file, ignoreFile = false }) {
     : `${slug}/${file}`;
 
   const fetchImages = async () => {
-    let query = supabase
-      .from("page_images")
-      .select("*")
-      .eq("slug", slug)
-      .order("created_at");
+    setIsLoading(true);
+    setLoadError("");
 
-    if (!ignoreFile) {
-      query = query.eq("file", file);
+    try {
+      const params = new URLSearchParams({ slug, file });
+
+      const response = await fetch(`/api/admin/page-images?${params}`);
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.error || "Impossible de charger les images.");
+      }
+
+      setImages(result.images || []);
+    } catch (error) {
+      setImages([]);
+      setLoadError(error.message || "Impossible de charger les images.");
+    } finally {
+      setIsLoading(false);
     }
-
-    const { data } = await query;
-    setImages(data || []);
   };
 
   useEffect(() => {
@@ -43,19 +52,36 @@ export default function PageImagesManager({ slug, file, ignoreFile = false }) {
 
     if (!cleanName) return;
 
-    await supabase.from("page_images").insert({
-      slug,
-      file: ignoreFile ? null : file,
-      name: cleanName,
+    const response = await fetch("/api/admin/page-images", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ slug, file, name: cleanName }),
     });
 
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      setLoadError(result.error || "Impossible d’ajouter l’image.");
+      return;
+    }
+
     setNewName("");
-    fetchImages();
+    await fetchImages();
   };
 
   const removeImage = async (id) => {
-    await supabase.from("page_images").delete().eq("id", id);
-    fetchImages();
+    const response = await fetch("/api/admin/page-images", {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+    });
+    const result = await response.json().catch(() => ({}));
+
+    if (!response.ok) {
+      setLoadError(result.error || "Impossible de supprimer l’image.");
+      return;
+    }
+
+    await fetchImages();
   };
 
   const copyName = (name) => {
@@ -124,6 +150,11 @@ export default function PageImagesManager({ slug, file, ignoreFile = false }) {
           );
         })}
       </div>
+      {isLoading && <p className="text-sm text-text-secondary">Chargement des images...</p>}
+      {loadError && <p role="alert" className="text-sm text-error">{loadError}</p>}
+      {!isLoading && !loadError && images.length === 0 && (
+        <p className="text-sm text-text-secondary">Aucune image disponible pour cette page.</p>
+      )}
     </div>
   );
 }
