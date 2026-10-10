@@ -27,8 +27,8 @@ export default function GalleryManager({ projectId }) {
       name: `${projectId}_${Date.now()}`,
       position: images.length,
     });
+    await fetchImages();
     await publish();
-    fetchImages();
   };
 
   const removeImage = async (id) => {
@@ -79,7 +79,7 @@ export default function GalleryManager({ projectId }) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        paths: `/jeux/${id}/patchfr/telechargement`
+        paths: [`/jeux/${projectId}/patchfr/telechargement`],
       }),
     });
   };
