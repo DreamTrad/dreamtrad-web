@@ -21,6 +21,16 @@ export default function RecruitmentsSection({ recruitments }) {
     return null;
   }
 
+  const response = await fetch("/api/admin/revalidate", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ path: "/recrutement" }),
+  });
+
+  if (!response.ok) {
+    console.error("Recruitment page revalidation failed:", response.status);
+  }
+
   return result;
 };
 

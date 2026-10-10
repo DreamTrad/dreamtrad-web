@@ -80,6 +80,7 @@ export default function PlatformTabsEditor({ projectId, slug }) {
     await supabase.from("pages").insert({
       slug,
       file,
+      project_id: projectId,
       type: "installation",
       title: newTabName,
       content: "",
@@ -96,7 +97,8 @@ export default function PlatformTabsEditor({ projectId, slug }) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        paths: [`/jeux/${slug}`, `/jeux/${projectId}`, "/sitemap.xml"]
+        paths: [`/jeux/${slug}`, `/jeux/${projectId}`, "/sitemap.xml"],
+        layoutPaths: [`/jeux/${projectId}`],
       }),
     });
   };
