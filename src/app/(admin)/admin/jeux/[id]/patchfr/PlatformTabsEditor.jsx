@@ -80,6 +80,7 @@ export default function PlatformTabsEditor({ projectId, slug }) {
     await supabase.from("pages").insert({
       slug,
       file,
+      project_id: projectId,
       type: "installation",
       title: newTabName,
       content: "",
