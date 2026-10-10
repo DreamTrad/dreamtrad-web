@@ -18,9 +18,9 @@ export async function POST(req) {
 
   const body = await req.json();
 
-  const { path, paths } = body;
+  const { path, paths, layoutPaths } = body;
 
-  if (!path && !paths) {
+  if (!path && !paths && !layoutPaths) {
     return Response.json(
       { error: "Missing path or paths" },
       { status: 400 }
@@ -34,6 +34,10 @@ export async function POST(req) {
   // -------------------------
   for (const p of list) {
     revalidatePath(p);
+  }
+
+  for (const p of layoutPaths || []) {
+    revalidatePath(p, "layout");
   }
 
   return Response.json({ ok: true });
