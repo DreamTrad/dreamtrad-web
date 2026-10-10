@@ -12,6 +12,8 @@ export default function GuideEditAdminPage() {
   const [draft, setDraft] = useState(null);
   const [original, setOriginal] = useState(null);
   const [isDirty, setIsDirty] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
+  const [saveError, setSaveError] = useState("");
 
   const router = useRouter();
 
@@ -38,25 +40,40 @@ export default function GuideEditAdminPage() {
   };
 
   const updateField = (field, value) => {
+    setSaveError("");
     setDraft((prev) => ({ ...prev, [field]: value }));
   };
 
   const save = async () => {
-    await supabase
-      .from("pages")
-      .update({
-        title: draft.title,
-        description: draft.description,
-        content: draft.content,
-        file: draft.file,
-        alias: draft.alias,
-        is_visible: draft.is_visible,
-      })
-      .eq("id", guide_id);
+    if (isSaving) return;
 
-    await publishOnUpdate();
-    setOriginal(draft);
-    setIsDirty(false);
+    setIsSaving(true);
+    setSaveError("");
+
+    try {
+      const { error } = await supabase
+        .from("pages")
+        .update({
+          title: draft.title,
+          description: draft.description,
+          content: draft.content,
+          file: draft.file,
+          alias: draft.alias,
+          is_visible: draft.is_visible,
+        })
+        .eq("id", guide_id);
+
+      if (error) throw error;
+
+      await publishOnUpdate();
+      setOriginal(draft);
+      setIsDirty(false);
+    } catch (error) {
+      console.error("Error saving guide:", error);
+      setSaveError("L’enregistrement du guide a échoué. Réessaie.");
+    } finally {
+      setIsSaving(false);
+    }
   };
 
   const reset = () => {
@@ -74,18 +91,23 @@ export default function GuideEditAdminPage() {
   const publishOnUpdate = async () => {
     const paths = [
       `/jeux/${gameId}`,
-      `/jeux/${id}/guide`,
+      `/jeux/${gameId}/guide`,
       `/jeux/${draft.slug}/${draft.file}`,
       `/jeux/${original.slug}/${original.file}`,
     ];
 
     const uniquePaths = [...new Set(paths)];
 
-    await fetch("/api/admin/revalidate", {
+    const response = await fetch("/api/admin/revalidate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ paths: uniquePaths }),
+      body: JSON.stringify({
+        paths: uniquePaths,
+        layoutPaths: [`/jeux/${gameId}`],
+      }),
     });
+
+    if (!response.ok) throw new Error("Guide revalidation failed");
   };
 
   const publishOnDelete = async () => {
@@ -129,9 +151,10 @@ export default function GuideEditAdminPage() {
               </button>
               <button
                 onClick={save}
-                className="bg-success rounded px-4 py-2 text-sm text-white"
+                disabled={isSaving}
+                className="bg-success rounded px-4 py-2 text-sm text-white disabled:opacity-60"
               >
-                Enregistrer
+                {isSaving ? "Enregistrement..." : "Enregistrer"}
               </button>
             </>
           )}
@@ -139,6 +162,8 @@ export default function GuideEditAdminPage() {
       </div>
 
       <h1 className="text-accent mb-6 text-2xl font-bold">Modifier le guide</h1>
+
+      {saveError && <p className="text-error mb-4" role="alert">{saveError}</p>}
 
       <div className="bg-bg-tertiary border-bg-secondary flex flex-col gap-6 rounded-xl border p-6">
         {/* TITLE */}
@@ -211,9 +236,10 @@ export default function GuideEditAdminPage() {
             </button>
             <button
               onClick={save}
-              className="bg-success rounded px-4 py-2 text-white"
+              disabled={isSaving}
+              className="bg-success rounded px-4 py-2 text-white disabled:opacity-60"
             >
-              Valider
+              {isSaving ? "Enregistrement..." : "Valider"}
             </button>
           </div>
         )}
